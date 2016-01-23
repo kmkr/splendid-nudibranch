@@ -1,10 +1,15 @@
 import React from 'react';
 
-//import snFetch from '../../fetch';
+import snFetch from '../../fetch';
 
 function getFiles(fileList) {
     for (const file of fileList) {
-        console.log(file);
+        const data = new FormData();
+        data.append('file', file);
+
+        snFetch.post('/photos', {
+            body: data
+        });
     }
 }
 
