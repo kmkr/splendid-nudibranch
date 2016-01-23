@@ -1,8 +1,9 @@
 module.exports = {
     context: __dirname,
     entry: './scripts/index.js',
+    devtool: 'eval-source-map',
     output: {
-        path: `${__dirname}/dist`,
+        path: `${__dirname}/../server/static/scripts`,
         filename: 'bundle.js'
     },
     module: {
@@ -10,7 +11,10 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                query: {
+                  presets: ['es2015', 'react']
+                }
             },
             {
                 test: /\.js$/,
