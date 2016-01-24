@@ -8,10 +8,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "aws-sdk": "^2.2.32",
     "body-parser": "^1.14.2",
     "compression": "^1.6.1",
     "express": "^4.13.3",
     "morgan": "^1.6.1",
+    "multer": "^1.1.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6"
   },

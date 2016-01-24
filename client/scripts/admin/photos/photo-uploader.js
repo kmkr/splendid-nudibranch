@@ -7,9 +7,7 @@ function getFiles(fileList) {
         const data = new FormData();
         data.append('file', file);
 
-        snFetch.post('/photos', {
-            body: data
-        });
+        snFetch.post('/photos', data);
     }
 }
 
