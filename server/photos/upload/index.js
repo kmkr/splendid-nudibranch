@@ -22,10 +22,10 @@ export default file => {
                 }
 
                 return Promise.all([
-                    upload('small', results[0].buffer),
-                    upload('medium', results[1].buffer),
-                    upload('large', results[2].buffer),
-                    upload('original', file.buffer)
+                    upload('s', results[0].buffer),
+                    upload('m', results[1].buffer),
+                    upload('l', results[2].buffer),
+                    upload('o', file.buffer)
                 ]);
             })
             .then(responses => {

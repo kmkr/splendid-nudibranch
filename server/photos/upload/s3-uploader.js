@@ -1,12 +1,11 @@
 import AWS from 'aws-sdk';
 
+const bucket = process.env.SN_S3_BUCKET_NAME;
 function generateParams(buffer, name, mimetype) {
-    const bucket = process.env.SN_S3_BUCKET_NAME;
-
     return {
         ACL: 'public-read',
         Bucket: bucket,
-        Key: `photos/${name}`,
+        Key: `${name}`,
         Body: buffer,
         CacheControl: 'public, max-age',
         ContentType: mimetype,
@@ -30,7 +29,7 @@ export default {
                 }
 
                 return resolve({
-                    url: `https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/${params.Key}`
+                    uri: `/${bucket}/${params.Key}`
                 });
             });
         });
