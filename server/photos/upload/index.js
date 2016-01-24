@@ -16,7 +16,7 @@ export default file => {
             })
             .then(results => {
                 function upload(size, buffer) {
-                    const name = `${id}/${size}/${file.originalname}`;
+                    const name = `${id}/${size}_${file.originalname}`;
                     const mimetype = file.mimetype;
                     return s3Uploader.upload(buffer, name, mimetype);
                 }
