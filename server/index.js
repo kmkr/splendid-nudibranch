@@ -7,6 +7,7 @@ import photoRouter from './photos';
 
 const app = express();
 
+app.set('port', (process.env.PORT || 3000));
 app.use(logger());
 app.use(bodyParser.json());
 app.use(compression());
@@ -18,8 +19,7 @@ app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+app.listen(app.get('port'), () => {
+    console.log(`Listening on port ${app.get('port')}`);
 });
 
