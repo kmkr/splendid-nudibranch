@@ -31,10 +31,10 @@ export default file => {
             .then(responses => {
                 resolve(
                     {
-                        small: responses[0].url,
-                        medium: responses[1].url,
-                        large: responses[2].url,
-                        original: responses[3].url
+                        s: responses[0].uri,
+                        m: responses[1].uri,
+                        l: responses[2].uri,
+                        o: responses[3].uri
                     }
                 );
             })
