@@ -1,14 +1,12 @@
 import AWS from 'aws-sdk';
 
-import idGenerator from './id-generator';
-
 function generateParams(buffer, name, mimetype) {
     const bucket = process.env.SN_S3_BUCKET_NAME;
 
     return {
         ACL: 'public-read',
         Bucket: bucket,
-        Key: `photos/${idGenerator()}/${name}`,
+        Key: `photos/${name}`,
         Body: buffer,
         CacheControl: 'public, max-age',
         ContentType: mimetype,
@@ -26,10 +24,8 @@ export default {
             const params = generateParams(buffer, name, mimetype);
 
             console.log('[s3-uploader] Putting', params);
-            s3.putObject(params, (err, data) => {
-                console.log('Callback!');
+            s3.putObject(params, (err) => {
                 if (err) {
-                    console.log(err);
                     return reject(err);
                 }
 

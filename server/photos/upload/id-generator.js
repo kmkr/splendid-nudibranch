@@ -4,4 +4,4 @@ function s4() {
     .substring(1);
 }
 
-export default () => `${s4()}-${s4()}-${s4()}-${s4()}`;
+export default () => `${s4()}-${s4()}`;

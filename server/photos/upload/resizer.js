@@ -1,4 +1,4 @@
-var gm = require('gm');
+import gm from 'gm';
 
 export default (filePath, width) => {
     return new Promise((resolve, reject) => {
@@ -22,4 +22,4 @@ export default (filePath, width) => {
             });
     });
 
-}
+};
