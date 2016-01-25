@@ -22,14 +22,14 @@ export default {
         return new Promise((resolve, reject) => {
             const params = generateParams(buffer, name, mimetype);
 
-            console.log('[s3-uploader] Putting', params);
+            console.log('[s3-uploader] Putting %s', name);
             s3.putObject(params, (err) => {
                 if (err) {
                     return reject(err);
                 }
 
                 return resolve({
-                    uri: `/${bucket}/${params.Key}`
+                    uri: `/${params.Key}`
                 });
             });
         });

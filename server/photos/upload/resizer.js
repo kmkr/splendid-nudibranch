@@ -2,7 +2,7 @@ import gm from 'gm';
 
 export default (filePath, width) => {
     return new Promise((resolve, reject) => {
-        console.log('[resizer.js] Resizing file %s', filePath);
+        console.log('[resizer.js] Resizing file %s to %s', filePath, width);
         gm(filePath)
             .resize(width)
             .autoOrient()

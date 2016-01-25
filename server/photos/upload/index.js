@@ -2,6 +2,7 @@ import idGenerator from './id-generator';
 import s3Uploader from './s3-uploader';
 import resizer from './resizer';
 import tempFileWriter from './temp-file-writer';
+import db from '../../db';
 
 export default file => {
     return new Promise((resolve, reject) => {
@@ -28,15 +29,14 @@ export default file => {
                     upload('o', file.buffer)
                 ]);
             })
-            .then(responses => {
-                resolve(
-                    {
-                        s: responses[0].uri,
-                        m: responses[1].uri,
-                        l: responses[2].uri,
-                        o: responses[3].uri
-                    }
-                );
+            .then(() => {
+                console.log('[upload/index] Uploaded %s', file.originalname);
+                const photo = {
+                    key: id,
+                    name: file.originalname
+                };
+
+                return db.insertPhoto(photo).then(() => resolve(photo));
             })
             .catch(err => reject(err));
     });
