@@ -12,7 +12,12 @@ const getDb = new Promise((resolve, reject) => {
 });
 
 export default {
-    insertPhoto(photo) {
+    insertPhoto(_photo) {
+        const now = new Date();
+        const photo = Object.assign({}, photo, {
+            created_at: now,
+            updated_at: now
+        });
         return new Promise((resolve, reject) => {
             return getDb.then(db => {
                 return db.collection('photos')
