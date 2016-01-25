@@ -7,7 +7,6 @@ import photoRouter from './photos';
 
 const app = express();
 
-app.set('port', (process.env.PORT || 3000));
 app.use(logger());
 app.use(bodyParser.json());
 app.use(compression());
