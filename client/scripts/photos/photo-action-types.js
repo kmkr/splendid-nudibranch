@@ -1,0 +1,5 @@
+export default {
+    REQUEST: 'REQUEST_PHOTOS',
+    RECEIVE: 'RECEIVE_PHOTOS',
+    FETCH_ERROR: 'FETCH_ERROR_PHOTOS'
+};

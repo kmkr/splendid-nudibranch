@@ -14,7 +14,7 @@ const getDb = new Promise((resolve, reject) => {
 export default {
     insertPhoto(_photo) {
         const now = new Date();
-        const photo = Object.assign({}, photo, {
+        const photo = Object.assign({}, _photo, {
             created_at: now,
             updated_at: now
         });

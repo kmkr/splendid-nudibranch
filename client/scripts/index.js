@@ -1,9 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {createStore, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
+import thunk from 'redux-thunk';
+import createLogger from 'redux-logger';
 
-import PhotoUploader from './admin/photos/photo-uploader';
+import App from './app';
+import rootReducer from './reducers/root-reducer';
+
+const logger = createLogger({
+    predicate: () => true,
+    collapsed: true
+});
+
+const store = applyMiddleware(thunk, logger)(createStore)(rootReducer);
 
 ReactDOM.render(
-    <PhotoUploader />,
+    <Provider store={store}>
+        <App />
+    </Provider>,
     document.getElementById('app')
 );

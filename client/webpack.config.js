@@ -1,7 +1,7 @@
 module.exports = {
     context: __dirname,
     entry: './scripts/index.js',
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     output: {
         path: `${__dirname}/../server/static/scripts`,
         filename: 'bundle.js'
