@@ -6,10 +6,9 @@ import compression from 'compression';
 import photoRouter from './photos';
 
 const app = express();
-
+app.use(compression());
 app.use(logger());
 app.use(bodyParser.json());
-app.use(compression());
 app.use('/static', express.static(`${__dirname}/static`));
 
 app.use('/photos', photoRouter);
