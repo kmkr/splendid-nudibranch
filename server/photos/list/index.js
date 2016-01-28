@@ -1,6 +1,5 @@
 import db from '../../db';
-
-const base = `${process.env.SN_S3_BASE}/${process.env.SN_S3_BUCKET_NAME}`;
+import base from '../base';
 
 export default () => {
     return new Promise((resolve, reject) => {

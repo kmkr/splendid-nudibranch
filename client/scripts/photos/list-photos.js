@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 const ListPhotos = ({photos}) => (
     <div>
         {photos.map(photo => (
-            <img src={photo.small} />
+            <img key={photo.name} src={photo.small} />
         ))}
     </div>
 );

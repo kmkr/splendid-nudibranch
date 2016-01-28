@@ -3,6 +3,7 @@ import s3Uploader from './s3-uploader';
 import resizer from './resizer';
 import tempFileWriter from './temp-file-writer';
 import db from '../../db';
+import base from '../base';
 
 export default file => {
     return new Promise((resolve, reject) => {
@@ -32,6 +33,7 @@ export default file => {
             .then(() => {
                 console.log('[upload/index] Uploaded %s', file.originalname);
                 const photo = {
+                    base,
                     key: id,
                     name: file.originalname
                 };

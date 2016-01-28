@@ -1,6 +1,15 @@
 import actionTypes from './photo-action-types';
+import photoUploadActionTypes from '../admin/photos/upload-photo-action-types';
 import reducerFactory from '../reducers/fetch-reducer-factory';
 
-const asyncReducer = reducerFactory({actionTypes, initialDataValue: []});
+const reducer = reducerFactory({actionTypes, initialDataValue: []});
 
-export default (state, action) => asyncReducer(state, action);
+export default (state, action) => {
+    switch (action.type) {
+    case photoUploadActionTypes.RECEIVE:
+        const data = [...state.data, action.data];
+        return Object.assign({}, state, {data});
+    default:
+        return reducer(state, action);
+    }
+};

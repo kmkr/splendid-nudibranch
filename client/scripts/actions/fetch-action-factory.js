@@ -8,7 +8,8 @@ export default ({
     options = {},
     responseHandler = defaultResponseHandler,
     errorHandler,
-    objectKey
+    objectKey,
+    method = 'get'
 }) => {
     const requestAction = () => (
         {type: actionTypes.REQUEST}
@@ -32,7 +33,7 @@ export default ({
 
     return dispatch => {
         dispatch(requestAction());
-        return snFetch.get(url, options)
+        return snFetch[method](url, options)
             .then(response => response.text())
             .then(text => {
                 try {

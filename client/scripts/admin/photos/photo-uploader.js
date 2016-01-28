@@ -1,25 +1,32 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
-import snFetch from '../../fetch';
-
-function getFiles(fileList) {
-    for (const file of fileList) {
+function toFormData(fileList) {
+    return fileList.map(file => {
         const data = new FormData();
         data.append('file', file);
+        return data;
+    });
+}
 
-        snFetch.post('/photos', data);
+class PhotoUploader extends React.Component {
+
+    onAddPhoto({target}) {
+        const formDataList = toFormData(Array.from(target.files || []));
+        formDataList.map(formData => this.props.onAddPhoto(formData));
+    }
+
+    render() {
+        return (
+            <input
+                type="file"
+                multiple
+                onChange={e => this.onAddPhoto(e)} />
+        );
     }
 }
 
-function filesAdded({target}) {
-    getFiles(Array.from(target.files || []));
-}
-
-const PhotoUploader = () => (
-    <input
-        type="file"
-        multiple
-        onChange={filesAdded} />
-);
+PhotoUploader.propTypes = {
+    onAddPhoto: PropTypes.func.isRequired
+};
 
 export default PhotoUploader;
