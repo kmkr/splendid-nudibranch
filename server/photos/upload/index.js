@@ -3,43 +3,49 @@ import s3Uploader from './s3-uploader';
 import resizer from './resizer';
 import tempFileWriter from './temp-file-writer';
 import db from '../../db';
-import base from '../base';
+import {base, resizeTo} from '../constants';
+
+function resizeToMultiple(path) {
+    return resizeTo.map(r => (
+        resizer(path, r.width)
+    ));
+}
+
+function upload(id, file, resizedResults) {
+    const mimetype = file.mimetype;
+
+    function upl(prefix, buffer) {
+        const name = `${id}/${prefix}_${file.originalname}`;
+        return s3Uploader.upload(buffer, name, mimetype);
+    }
+
+    return [
+        upl('o', file.buffer),
+        ...resizeTo.map((r, index) => (
+            upl(r.shortName, resizedResults[index].buffer)
+        ))
+    ];
+}
+
+function insertToDb(id, file) {
+    const photo = {
+        base,
+        key: id,
+        name: file.originalname
+    };
+
+    return db.insertPhoto(photo).then(() => photo);
+}
 
 export default file => {
-    return new Promise((resolve, reject) => {
-        const id = idGenerator();
-        tempFileWriter(file)
-            .then(result => {
-                return Promise.all([
-                    resizer(result.path, 300),
-                    resizer(result.path, 800),
-                    resizer(result.path, 1400)
-                ]);
-            })
-            .then(results => {
-                function upload(size, buffer) {
-                    const name = `${id}/${size}_${file.originalname}`;
-                    const mimetype = file.mimetype;
-                    return s3Uploader.upload(buffer, name, mimetype);
-                }
-
-                return Promise.all([
-                    upload('s', results[0].buffer),
-                    upload('m', results[1].buffer),
-                    upload('l', results[2].buffer),
-                    upload('o', file.buffer)
-                ]);
-            })
-            .then(() => {
-                console.log('[upload/index] Uploaded %s', file.originalname);
-                const photo = {
-                    base,
-                    key: id,
-                    name: file.originalname
-                };
-
-                return db.insertPhoto(photo).then(() => resolve(photo));
-            })
-            .catch(err => reject(err));
-    });
+    const id = idGenerator();
+    return tempFileWriter(file)
+        .then(({path}) => Promise.all(resizeToMultiple(path)))
+        .then(resizedResults => Promise.all(upload(id, file, resizedResults)))
+        .then(() => insertToDb(id, file))
+        .then(photo => {
+            console.log('[upload/index] Uploaded %s', file.originalname);
+            console.log('[upload/index] DB insert %o', photo);
+            return photo;
+        });
 };

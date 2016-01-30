@@ -1,5 +1,5 @@
 import db from '../../db';
-import base from '../base';
+import {base} from '../constants';
 
 export default () => {
     return new Promise((resolve, reject) => {
