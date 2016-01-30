@@ -7,7 +7,7 @@ import photoRouter from './photos';
 
 const app = express();
 app.use(compression());
-app.use(logger());
+app.use(logger('combined'));
 app.use(bodyParser.json());
 app.use('/static', express.static(`${__dirname}/static`));
 
