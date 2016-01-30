@@ -3,7 +3,8 @@ import s3Uploader from './s3-uploader';
 import resizer from './resizer';
 import tempFileWriter from './temp-file-writer';
 import db from '../../db';
-import {base, resizeTo} from '../constants';
+import {base} from '../constants';
+import {resizeTo} from '../../../common/constants';
 
 function resizeToMultiple(path) {
     return resizeTo.map(r => (

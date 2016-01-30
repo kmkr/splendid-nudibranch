@@ -1,9 +1,6 @@
 import actionTypes from './upload-photo-action-types';
 import fetchActionFactory from '../../actions/fetch-action-factory';
-
-function buildUrl(base, key, name, size) {
-    return `${base}/${key}/${size}_${name}`;
-}
+import photoDataConversion from '../../photos/photo-data-conversion';
 
 export function uploadPhoto(photo) {
     return fetchActionFactory({
@@ -11,10 +8,6 @@ export function uploadPhoto(photo) {
         url: '/photos',
         method: 'post',
         options: photo,
-        responseHandler: ({data}) => ({
-            small: buildUrl(data.base, data.key, data.name, 's'),
-            medium: buildUrl(data.base, data.key, data.name, 'm'),
-            large: buildUrl(data.base, data.key, data.name, 'l')
-        })
+        responseHandler: ({data}) => photoDataConversion(data, data.base)
     });
 }
