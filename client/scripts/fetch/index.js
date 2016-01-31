@@ -23,51 +23,41 @@ function fetchWithHeaders(url, additionalRequestOptions = {}, credentials = fals
 }
 
 export default {
-    get(url, additionalRequestOptions = {}) {
-        const requestOptions = Object.assign({
+    get(url, requestOptions = {}) {
+        return fetchWithHeaders(url, Object.assign({
             method: 'GET'
-        }, additionalRequestOptions);
-        return fetchWithHeaders(url, requestOptions);
+        }, requestOptions));
     },
-    getJSON(url, additionalRequestOptions = {}) {
-        const requestOptions = Object.assign({}, additionalRequestOptions);
-        requestOptions.headers = Object.assign({}, additionalRequestOptions.headers, {
-            accept: 'application/json'
-        });
-        return this.get(url, requestOptions).then(response => response.json());
-    },
-    post(url, body, options = {}) {
-        const requestOptions = Object.assign({
+    post(url, body, requestOptions = {}) {
+        return fetchWithHeaders(url, Object.assign({
             method: 'POST',
             body
-        }, options);
-
-        return fetchWithHeaders(url, requestOptions, true);
+        }, requestOptions), true);
     },
-    delete(url, options = {}) {
-        const requestOptions = Object.assign({
+    delete(url, requestOptions = {}) {
+        return fetchWithHeaders(url, Object.assign({
             method: 'DELETE'
-        }, options);
-
-        return fetchWithHeaders(url, requestOptions, true);
+        }, requestOptions), true);
     },
-    putJSON(url, body, options = {}) {
+    putJSON(url, body, additionalRequestOptions = {}) {
         const requestOptions = Object.assign({
             method: 'PUT',
-            body: JSON.stringify(body),
-            headers: {
-                'content-type': 'application/json'
-            }
-        }, options);
+            body: JSON.stringify(body)
+        }, additionalRequestOptions);
+
+        requestOptions.headers = Object.assign({}, additionalRequestOptions.headers, {
+            'content-type': 'application/json'
+        });
 
         return fetchWithHeaders(url, requestOptions, true);
     },
-    postJSON(url, body, options = {}) {
-        const requestOptions = Object.assign({}, options, {
-            headers: {
-                'content-type': 'application/json'
-            },
+    postJSON(url, body, additionalRequestOptions = {}) {
+        const requestOptions = Object.assign({}, additionalRequestOptions, {
             body: JSON.stringify(body)
+        });
+
+        requestOptions.headers = Object.assign({}, additionalRequestOptions.headers, {
+            'content-type': 'application/json'
         });
 
         return this.post(url, body, requestOptions);
