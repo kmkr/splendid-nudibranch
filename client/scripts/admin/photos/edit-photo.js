@@ -27,7 +27,7 @@ class EditPhoto extends Component {
                 <button
                     disabled={this.state.description === photo.description || !this.state.description}
                     onClick={onUpdateClick.bind(this, photo, {description: this.state.description})}>
-                    Update photo
+                    Update
                 </button>
 
                 <button onClick={onDeleteClick.bind(this, photo)}>
