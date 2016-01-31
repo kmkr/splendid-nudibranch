@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server/index.js",
   "scripts": {
-    "start": "npm run package && npm run start:server",
+    "start": "NODE_ENV=produtction && npm run package && npm run start:server",
     "start:server": "babel-node --presets es2015 server/index.js",
     "start:client": "webpack --watch --config client/webpack.config.js",
     "package": "webpack -p --config client/webpack.config.js",
