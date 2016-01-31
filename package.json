@@ -10,8 +10,8 @@
     "lint": "eslint .",
     "test": "npm run test:client ; npm run test:server",
     "test:client": "karma start client/karma.conf.js",
-    "test:server": "mocha -R spec --compilers js:babel-register server/**/*_test.js",
-    "test:server:watch": "mocha -w -R spec --compilers js:babel-register server/**/*_test.js"
+    "test:server": "mocha -w -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\"",
+    "test:server:watch": "mocha -w -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\""
   },
   "dependencies": {
     "aws-sdk": "^2.2.32",

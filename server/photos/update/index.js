@@ -1,7 +1,7 @@
 import db from '../../db';
-import photoToClientFormatter from '../photo-to-client-formatter';
+import * as photoDataFormatter from '../photo-data-formatter';
 
 export default (key, newValues) => {
     return db.updatePhoto(key, newValues)
-        .then(updatedPhoto => photoToClientFormatter(updatedPhoto));
+        .then(updatedPhoto => photoDataFormatter.dbToClient(updatedPhoto));
 };

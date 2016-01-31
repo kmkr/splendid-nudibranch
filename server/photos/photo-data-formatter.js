@@ -7,10 +7,10 @@ function mapOne(photoFromDb) {
         name
     };
 }
-export default (arg) => {
+export function dbToClient(arg) {
     if (arg.constructor === Array) {
         return arg.map(mapOne);
     }
 
     return mapOne(arg);
-};
+}
