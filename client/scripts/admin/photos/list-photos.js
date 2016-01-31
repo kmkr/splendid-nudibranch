@@ -1,14 +1,14 @@
 import React, {PropTypes} from 'react';
 
 const ListPhotos = ({photos, onDeleteClick}) => (
-    <div>
+    <div className="row">
         {photos.map(photo => (
-            <span key={photo.key}>
+            <div className="col-lg-6" key={photo.key}>
                 <img src={photo.small} />
                 <button onClick={onDeleteClick.bind(this, photo)}>
                     Del
                 </button>
-            </span>
+            </div>
         ))}
     </div>
 );
