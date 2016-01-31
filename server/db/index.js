@@ -26,7 +26,7 @@ export default {
                             return reject(err);
                         }
 
-                        console.log('[db/index] Inserted photo %o', photo);
+                        console.log('[db/index] Inserted photo');
                         return resolve(result);
                     });
             });
@@ -48,6 +48,11 @@ export default {
                     });
             });
         });
-
+    },
+    deletePhoto(key) {
+        return getDb.then(db => {
+            return db.collection('photos')
+                .deleteOne({key});
+        });
     }
 };

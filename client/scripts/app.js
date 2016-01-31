@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import PhotoUploader from './admin/photos/photo-uploader';
 import {uploadPhoto} from './admin/photos/upload-photo-actions';
+import {deletePhoto} from './admin/photos/delete-photo-actions';
 import ListPhotos from './photos/list-photos';
 import {fetchPhotos} from './photos/photo-actions';
 
@@ -15,11 +16,17 @@ class App extends Component {
         this.props.dispatch(uploadPhoto(photo));
     }
 
+    onDeleteClick(photo) {
+        this.props.dispatch(deletePhoto(photo));
+    }
+
     render() {
         return (
             <div>
                 <PhotoUploader onAddPhoto={this.onAddPhoto.bind(this)} />
-                <ListPhotos photos={this.props.photos.data} />
+                <ListPhotos
+                    photos={this.props.photos.data}
+                    onDeleteClick={this.onDeleteClick.bind(this)} />
             </div>
         );
     }

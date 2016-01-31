@@ -17,7 +17,11 @@ describe('photo-data-conversion', () => {
         expect(photoDataConversion(photoFromServer, base).small).to.equal(expected);
     });
 
-    it('should contain correct amount of keys', () => {
-        expect(photoDataConversion(photoFromServer, base)).to.have.all.keys(['small', 'medium', 'large']);
+    it('should contain size keys', () => {
+        expect(photoDataConversion(photoFromServer, base)).to.have.any.keys(['small', 'medium', 'large']);
+    });
+
+    it('should include key', () => {
+        expect(photoDataConversion(photoFromServer, base)).to.have.property('key', '1234-5678');
     });
 });

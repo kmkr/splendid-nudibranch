@@ -14,5 +14,7 @@ export default (photoFromServer, base) => (
                 current.shortName
             )
         })
-    ), {})
+    ), {
+        key: photoFromServer.key
+    })
 );

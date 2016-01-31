@@ -1,5 +1,5 @@
 import idGenerator from './id-generator';
-import s3Uploader from './s3-uploader';
+import s3Uploader from '../s3/s3-uploader';
 import resizer from './resizer';
 import tempFileWriter from './temp-file-writer';
 import db from '../../db';
@@ -43,10 +43,5 @@ export default file => {
     return tempFileWriter(file)
         .then(({path}) => Promise.all(resizeToMultiple(path)))
         .then(resizedResults => Promise.all(upload(id, file, resizedResults)))
-        .then(() => insertToDb(id, file))
-        .then(photo => {
-            console.log('[upload/index] Uploaded %s', file.originalname);
-            console.log('[upload/index] DB insert %o', photo);
-            return photo;
-        });
+        .then(() => insertToDb(id, file));
 };

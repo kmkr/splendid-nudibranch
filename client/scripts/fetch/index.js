@@ -109,6 +109,13 @@ export default {
 
         return fetchWithHeaders(url, requestOptions);
     },
+    delete(url, options = {}) {
+        const requestOptions = Object.assign({
+            method: 'DELETE'
+        }, options);
+
+        return fetchWithHeaders(url, requestOptions);
+    },
     postJSON(url, body, options = {}) {
         const requestOptions = Object.assign({}, options, {
             headers: {
