@@ -6,7 +6,7 @@ export function fetchPhotos() {
     return fetchActionFactory({
         actionTypes,
         url: '/photos',
-        responseHandler: (response) => (
+        responseHandler: response => (
             response.data.photos.map(photo => photoDataConversion(photo, response.data.base))
         )
     });

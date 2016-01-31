@@ -4,6 +4,7 @@ import multer from 'multer';
 import photoUploadHandler from './upload';
 import getPhotosHandler from './list';
 import deletePhotoHandler from './delete';
+import updatePhotoHandler from './update';
 
 const router = express.Router();
 const upload = multer();
@@ -18,6 +19,12 @@ router.get('/', (req, res) => {
 
 router.post('/', upload.single('file'), (req, res) => {
     photoUploadHandler(req.file)
+        .then(response => res.json(response))
+        .catch(error => res.status(500).json({error}));
+});
+
+router.put('/:id', (req, res) => {
+    updatePhotoHandler(req.params.id, req.body)
         .then(response => res.json(response))
         .catch(error => res.status(500).json({error}));
 });

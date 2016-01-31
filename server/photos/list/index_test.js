@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 describe('photos/list', function () {
 
-    function getListPhotos(getPhotosPromise) {
+    function getListPhotos(dbPromise) {
         const constantsStub = sinon.stub().returns({
             base: '/my/base'
         });
@@ -14,7 +14,7 @@ describe('photos/list', function () {
         const dbStub = sinon.stub().returns({
             default: {
                 getPhotos() {
-                    return getPhotosPromise;
+                    return dbPromise;
                 }
             }
         });
@@ -26,11 +26,16 @@ describe('photos/list', function () {
     }
 
     it('should resolve', function () {
-        const stubbedPhotos = ['photo1', 'photo2'];
-        const photos = getListPhotos(Promise.resolve(stubbedPhotos)).default();
+        const stubbedDbPhotos = [{
+            base: '/my-base',
+            description: 'description',
+            key: '1234-5678',
+            name: 'A name'
+        }];
+        const photos = getListPhotos(Promise.resolve(stubbedDbPhotos)).default();
         return Promise.all([
             expect(photos).to.eventually.have.property('base', '/my/base'),
-            expect(photos).to.eventually.have.property('photos').that.equals(stubbedPhotos)
+            expect(photos).to.eventually.have.property('photos').that.eql(stubbedDbPhotos)
         ]);
     });
 

@@ -32,19 +32,16 @@ export default {
             });
         });
     },
-    getPhotos() {
+    getPhotos(filter = {}) {
         return new Promise((resolve, reject) => {
             return getDb.then(db => {
                 return db.collection('photos')
-                    .find({}).toArray((err, photos) => {
+                    .find(filter).toArray((err, photos) => {
                         if (err) {
                             return reject(err);
                         }
 
-                        return resolve(photos.map(({key, name}) => ({
-                            key,
-                            name
-                        })));
+                        return resolve(photos);
                     });
             });
         });
@@ -53,6 +50,22 @@ export default {
         return getDb.then(db => {
             return db.collection('photos')
                 .deleteOne({key});
+        });
+    },
+    updatePhoto(key, newValues) {
+        return new Promise((resolve, reject) => {
+            getDb.then(db => {
+                db.collection('photos')
+                    .updateOne({key}, {$set: newValues}, err => {
+                        if (err) {
+                            return reject(err);
+                        }
+
+                        return resolve(
+                            this.getPhotos({key}).then(photos => photos[0])
+                        );
+                    });
+            });
         });
     }
 };

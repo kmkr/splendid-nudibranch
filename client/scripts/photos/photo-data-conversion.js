@@ -15,6 +15,7 @@ export default (photoFromServer, base) => (
             )
         })
     ), {
-        key: photoFromServer.key
+        key: photoFromServer.key,
+        description: photoFromServer.description
     })
 );

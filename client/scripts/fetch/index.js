@@ -13,15 +13,13 @@ function fetchWithHeaders(url, additionalRequestOptions = {}, credentials = fals
 
     Object.assign(requestOptions, additionalRequestOptions);
 
-    const promise = fetch(url, requestOptions).then(response => {
+    return fetch(url, requestOptions).then(response => {
         if (response.status >= 400) {
             return Promise.reject(new Error(response.statusText));
         }
 
         return response;
     });
-
-    return promise;
 }
 
 export default {
@@ -49,6 +47,17 @@ export default {
     delete(url, options = {}) {
         const requestOptions = Object.assign({
             method: 'DELETE'
+        }, options);
+
+        return fetchWithHeaders(url, requestOptions, true);
+    },
+    putJSON(url, body, options = {}) {
+        const requestOptions = Object.assign({
+            method: 'PUT',
+            body: JSON.stringify(body),
+            headers: {
+                'content-type': 'application/json'
+            }
         }, options);
 
         return fetchWithHeaders(url, requestOptions, true);

@@ -1,13 +1,17 @@
 import React, {PropTypes} from 'react';
 
-const ListPhotos = ({photos, onDeleteClick}) => (
-    <div className="row">
+import './list-photos.scss';
+import EditPhoto from './edit-photo';
+
+const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
+    <div className="list-photos row">
         {photos.map(photo => (
             <div className="col-lg-6" key={photo.key}>
                 <img src={photo.small} />
-                <button onClick={onDeleteClick.bind(this, photo)}>
-                    Del
-                </button>
+                <EditPhoto
+                    onDeleteClick={onDeleteClick}
+                    onUpdateClick={onUpdateClick}
+                    photo={photo} />
             </div>
         ))}
     </div>
@@ -15,7 +19,8 @@ const ListPhotos = ({photos, onDeleteClick}) => (
 
 ListPhotos.propTypes = {
     photos: PropTypes.array.isRequired,
-    onDeleteClick: PropTypes.func.isRequired
+    onDeleteClick: PropTypes.func.isRequired,
+    onUpdateClick: PropTypes.func.isRequired
 };
 
 export default ListPhotos;
