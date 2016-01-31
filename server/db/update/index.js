@@ -9,5 +9,4 @@ export default (db, filter, newValues) => {
                 return resolve(data);
             });
     });
-}
-
+};

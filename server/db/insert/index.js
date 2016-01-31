@@ -15,4 +15,4 @@ export default (db, _photo) => {
             return resolve(result);
         });
     });
-}
+};

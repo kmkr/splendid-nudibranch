@@ -7,6 +7,6 @@ export default (db, filter) => {
                 }
 
                 return resolve(data);
-            })
+            });
     });
-}
+};

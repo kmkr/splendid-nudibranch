@@ -8,16 +8,16 @@ describe('photo-data-formatter', function () {
     beforeEach(function () {
         dbPhoto = {
             _id: {
-                '$oid': '56ae16af4ce08fa00c297107'
+                $oid: '56ae16af4ce08fa00c297107'
             },
             base: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev',
             key: 'dc23-3470',
             name: 'Ubuntu-Natty-Wallpaper.png',
             created_at: {
-                '$date': '2016-01-31T14:14:07.720Z'
+                $date: '2016-01-31T14:14:07.720Z'
             },
             updated_at: {
-                '$date': '2016-01-31T14:14:07.720Z'
+                $date: '2016-01-31T14:14:07.720Z'
             },
             description: 'Delfin :)'
         };
