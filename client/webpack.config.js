@@ -1,10 +1,13 @@
 module.exports = {
     context: __dirname,
-    entry: './scripts/index.js',
+    entry: {
+        bundle: './scripts/index.js',
+        adminBundle: './scripts/admin/index.js'
+    },
     devtool: 'source-map',
     output: {
         path: `${__dirname}/../server/static/scripts`,
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     module: {
         loaders: [

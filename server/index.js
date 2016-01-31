@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
 });
 
+app.get('/admin', (req, res) => {
+    res.sendFile(`${__dirname}/index-admin.html`);
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
