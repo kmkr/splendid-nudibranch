@@ -8,7 +8,9 @@
     "start:client": "webpack --watch --config client/webpack.config.js",
     "package": "webpack -p --config client/webpack.config.js",
     "lint": "eslint .",
-    "test:client": "karma start"
+    "test": "npm run test:client ; npm run test:server",
+    "test:client": "karma start client/karma.conf.js",
+    "test:server": "mocha -R landing --compilers js:babel-register server/**/*_test.js"
   },
   "dependencies": {
     "aws-sdk": "^2.2.32",
@@ -38,6 +40,7 @@
     "webpack": "^1.12.11"
   },
   "devDependencies": {
+    "babel-register": "^6.4.3",
     "chai": "^3.5.0",
     "karma": "^0.13.19",
     "karma-mocha": "^0.2.1",
