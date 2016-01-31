@@ -9,7 +9,7 @@ import './polyfills';
 import rootReducer from './reducers/root-reducer';
 
 const logger = createLogger({
-    predicate: () => true,
+    predicate: () => __DEV__,
     collapsed: true
 });
 

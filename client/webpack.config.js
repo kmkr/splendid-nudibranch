@@ -1,3 +1,6 @@
+const webpack = require('webpack');
+const env = process.env.NODE_ENV;
+
 module.exports = {
     context: __dirname,
     entry: {
@@ -33,5 +36,10 @@ module.exports = {
                 loaders: ['style', 'css', 'sass']
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            __DEV__: JSON.stringify(env !== 'production')
+        })
+    ]
 };
