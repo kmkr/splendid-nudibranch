@@ -1,11 +1,14 @@
 import React, {PropTypes} from 'react';
 
 const ListPhotos = ({photos}) => (
-    <div>
+    <div className="row">
         {photos.map(photo => (
-            <img
+            <div
                 key={photo.key}
-                src={photo.small} />
+                className="col-md-4">
+                <img src={photo.small} />
+                <p>{photo.description}</p>
+            </div>
         ))}
     </div>
 );
