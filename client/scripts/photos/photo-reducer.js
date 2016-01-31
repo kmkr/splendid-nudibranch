@@ -1,4 +1,4 @@
-import actionTypes from './photo-action-types';
+import getPhotosActionTypes from './photo-action-types';
 import {
     deletePhotoActionTypes,
     updatePhotoActionTypes,
@@ -6,7 +6,10 @@ import {
 } from '../admin/photos/edit-photo-action-types';
 import reducerFactory from '../reducers/fetch-reducer-factory';
 
-const reducer = reducerFactory({actionTypes, initialDataValue: []});
+const getPhotosReducer = reducerFactory({
+    actionTypes: getPhotosActionTypes,
+    initialDataValue: []
+});
 
 export default (state, action) => {
     switch (action.type) {
@@ -25,6 +28,6 @@ export default (state, action) => {
             data: state.data.filter(elem => elem.key !== action.data.key)
         });
     default:
-        return reducer(state, action);
+        return getPhotosReducer(state, action);
     }
 };
