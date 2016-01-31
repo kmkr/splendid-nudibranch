@@ -10,8 +10,8 @@
     "lint": "eslint .",
     "test": "npm run test:client ; npm run test:server",
     "test:client": "karma start client/karma.conf.js",
-    "test:server": "mocha -R landing --compilers js:babel-register server/**/*_test.js",
-    "test:server:watch": "mocha -w -R landing --compilers js:babel-register server/**/*_test.js"
+    "test:server": "mocha -R spec --compilers js:babel-register server/**/*_test.js",
+    "test:server:watch": "mocha -w -R spec --compilers js:babel-register server/**/*_test.js"
   },
   "dependencies": {
     "aws-sdk": "^2.2.32",
@@ -46,6 +46,7 @@
     "chai-as-promised": "^5.2.0",
     "karma": "^0.13.19",
     "karma-mocha": "^0.2.1",
+    "karma-mocha-reporter": "^1.1.5",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",

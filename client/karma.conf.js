@@ -2,6 +2,7 @@ module.exports = function (config) {
     config.set({
         browsers: ['PhantomJS'],
         frameworks: ['mocha'],
+        reporters: ['mocha'],
         files: [
             './scripts/polyfills.js',
             '**/*_test.js'
