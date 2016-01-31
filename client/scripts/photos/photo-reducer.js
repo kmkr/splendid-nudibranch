@@ -1,14 +1,16 @@
 import actionTypes from './photo-action-types';
-import photoUploadActionTypes from '../admin/photos/upload-photo-action-types';
-import updatePhotoActionTypes from '../admin/photos/update-photo-action-types';
-import deletePhotoActionTypes from '../admin/photos/delete-photo-action-types';
+import {
+    deletePhotoActionTypes,
+    updatePhotoActionTypes,
+    uploadPhotoActionTypes
+} from '../admin/photos/edit-photo-action-types';
 import reducerFactory from '../reducers/fetch-reducer-factory';
 
 const reducer = reducerFactory({actionTypes, initialDataValue: []});
 
 export default (state, action) => {
     switch (action.type) {
-    case photoUploadActionTypes.RECEIVE:
+    case uploadPhotoActionTypes.RECEIVE:
         const data = [...state.data, action.data];
         return Object.assign({}, state, {data});
     case updatePhotoActionTypes.RECEIVE:

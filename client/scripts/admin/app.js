@@ -2,10 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import PhotoUploader from './photos/photo-uploader';
-import {updatePhoto} from './photos/update-photo-actions';
-import {uploadPhoto} from './photos/upload-photo-actions';
-import {deletePhoto} from './photos/delete-photo-actions';
 import ListPhotos from './photos/list-photos';
+import {updatePhoto, uploadPhoto, deletePhoto} from './photos/edit-photo-actions';
 import {fetchPhotos} from '../photos/photo-actions';
 
 class App extends Component {
