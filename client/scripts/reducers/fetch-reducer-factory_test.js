@@ -19,7 +19,7 @@ describe('fetch-reducer-factory', () => {
         };
         const state = reducer(undefined, action);
 
-        expect(state.isFetching).to.equal(true);
+        expect(state).to.have.property('isFetching', true);
         expect(state.error).to.be.undefined;
         expect(state.data).to.eql([]);
     });
