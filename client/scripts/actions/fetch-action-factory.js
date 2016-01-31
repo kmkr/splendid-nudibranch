@@ -11,12 +11,12 @@ export default ({
     objectKey,
     method = 'get'
 }) => {
-    const requestAction = () => (
-        {type: actionTypes.REQUEST}
-    );
-
     const receiveAction = data => (
-        {type: actionTypes.RECEIVE, data, objectKey}
+        {
+            type: actionTypes.RECEIVE,
+            data,
+            objectKey
+        }
     );
 
     const errorAction = error => {
@@ -32,7 +32,9 @@ export default ({
     };
 
     return dispatch => {
-        dispatch(requestAction());
+        dispatch({
+            type: actionTypes.REQUEST
+        });
         return snFetch[method](url, options)
             .then(response => response.text())
             .then(text => {
