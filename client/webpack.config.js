@@ -7,7 +7,7 @@ module.exports = {
         'bundle': './scripts/index.js',
         'admin-bundle': './scripts/admin/index.js'
     },
-    devtool: 'source-map',
+    devtool: env !== 'production' ? 'source-map' : false,
     output: {
         path: `${__dirname}/../server/static/scripts`,
         filename: '[name].js'
@@ -39,7 +39,8 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            __DEV__: JSON.stringify(env !== 'production')
+            '__DEV__': JSON.stringify(env !== 'production'),
+            'process.env.NODE_ENV': JSON.stringify(env || 'development')
         })
     ]
 };
