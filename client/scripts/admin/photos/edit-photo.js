@@ -25,7 +25,7 @@ class EditPhoto extends Component {
                     onChange={this.descriptionUpdated.bind(this)}></textarea>
 
                 <button
-                    disabled={this.state.description === photo.description}
+                    disabled={this.state.description === photo.description || !this.state.description}
                     onClick={onUpdateClick.bind(this, photo, {description: this.state.description})}>
                     Update photo
                 </button>
