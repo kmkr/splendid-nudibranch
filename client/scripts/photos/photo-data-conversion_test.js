@@ -1,6 +1,5 @@
-import chai from 'chai';
+import {expect} from 'chai';
 import photoDataConversion from './photo-data-conversion';
-chai.should();
 
 describe('photo-data-conversion', () => {
     let base, photoFromServer;
@@ -15,10 +14,10 @@ describe('photo-data-conversion', () => {
 
     it('should convert', () => {
         const expected = `${base}/${photoFromServer.key}/s_${photoFromServer.name}`;
-        photoDataConversion(photoFromServer, base).small.should.equal(expected);
+        expect(photoDataConversion(photoFromServer, base).small).to.equal(expected);
     });
 
     it('should contain correct amount of keys', () => {
-        photoDataConversion(photoFromServer, base).should.have.all.keys(['small', 'medium', 'large']);
+        expect(photoDataConversion(photoFromServer, base)).to.have.all.keys(['small', 'medium', 'large']);
     });
 });
