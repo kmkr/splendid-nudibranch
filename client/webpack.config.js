@@ -1,8 +1,8 @@
 module.exports = {
     context: __dirname,
     entry: {
-        bundle: './scripts/index.js',
-        adminBundle: './scripts/admin/index.js'
+        'bundle': './scripts/index.js',
+        'admin-bundle': './scripts/admin/index.js'
     },
     devtool: 'source-map',
     output: {
