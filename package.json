@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "server/index.js",
   "scripts": {
-    "start": "NODE_ENV=produtction && npm run package && npm run start:server",
+    "start": "NODE_ENV=production && npm run package && npm run start:server",
     "start:server": "babel-node --presets es2015 server/index.js",
     "start:client": "webpack --watch --config client/webpack.config.js",
+    "build": "npm run lint && npm run test",
     "package": "webpack -p --config client/webpack.config.js",
     "lint": "eslint .",
     "test": "npm run test:client ; npm run test:server",
-    "test:client": "karma start client/karma.conf.js",
-    "test:server": "mocha -w -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\"",
+    "test:client": "karma start client/karma.conf.js --single-run",
+    "test:client:watch": "karma start client/karma.conf.js",
+    "test:server": "mocha -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\"",
     "test:server:watch": "mocha -w -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\""
   },
   "dependencies": {
