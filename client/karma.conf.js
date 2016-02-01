@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = function (config) {
     config.set({
         browsers: ['PhantomJS'],
@@ -29,7 +31,16 @@ module.exports = function (config) {
                         loader: 'eslint-loader'
                     }
                 ]
-            }
+            },
+            plugins: [
+                new webpack.ProvidePlugin({
+                    Promise: 'exports?global.Promise!es6-promise',
+                    fetch: 'exports?self.fetch!whatwg-fetch'
+                })
+            ]
+        },
+        webpackServer: {
+            noInfo: true
         }
     });
 };
