@@ -32,6 +32,12 @@ describe('fetch-action-factory', () => {
         getStub.restore();
     });
 
+    it('should delegate to fetch', () => {
+        fetchAction(dispatchSpy);
+
+        expect(getStub).to.have.been.calledWith('/url', {});
+    });
+
     it('should dispatch request event', () => {
         fetchAction(dispatchSpy);
 
@@ -39,4 +45,5 @@ describe('fetch-action-factory', () => {
             type: actionTypes.REQUEST
         });
     });
+
 });
