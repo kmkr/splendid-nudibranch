@@ -12,7 +12,7 @@ export function uploadPhoto(photo) {
         url: '/photos',
         method: 'post',
         options: photo,
-        responseHandler: ({data}) => photoDataConversion(data, data.base)
+        responseHandler: data => photoDataConversion(data, data.base)
     });
 }
 
@@ -22,7 +22,7 @@ export function updatePhoto(photo, newValues) {
         url: `/photos/${photo.key}`,
         method: 'putJSON',
         options: newValues,
-        responseHandler: (data) => photoDataConversion(data, data.base)
+        responseHandler: data => photoDataConversion(data, data.base)
     });
 }
 
