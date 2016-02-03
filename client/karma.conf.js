@@ -29,8 +29,38 @@ module.exports = function (config) {
                         test: /\.js$/,
                         exclude: /node_modules/,
                         loader: 'eslint-loader'
+                    },
+                    {
+                        test: /\.scss$/,
+                        loaders: ['style', 'css', 'sass']
+                    },
+                    // Enzyme related workaround, https://github.com/airbnb/enzyme/issues/47
+                    {
+                        test: /\.json$/,
+                        loader: 'json'
                     }
+                ],
+                // Workaround due to Enzyme and Sinon
+                // https://github.com/airbnb/enzyme/issues/47
+                // https://github.com/webpack/webpack/issues/304
+                noParse: [
+                    /node_modules\/sinon\//
                 ]
+            },
+            // Enzyme related workaround, https://github.com/airbnb/enzyme/issues/47
+            externals: {
+                'jsdom': 'window',
+                'react/lib/ExecutionEnvironment': true,
+                'react/lib/ReactContext': 'window',
+                'text-encoding': 'window'
+            },
+            // Workaround due to Enzyme and Sinon
+            // https://github.com/airbnb/enzyme/issues/47
+            // https://github.com/webpack/webpack/issues/304
+            resolve: {
+                alias: {
+                    sinon: 'sinon/pkg/sinon'
+                }
             },
             plugins: [
                 new webpack.ProvidePlugin({

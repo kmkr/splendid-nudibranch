@@ -1,7 +1,7 @@
 import chai, {expect} from 'chai';
 import snFetch from '../fetch';
 import fetchActionFactory from './fetch-action-factory';
-import sinon from 'imports?define=>false,require=>false!sinon/pkg/sinon.js';
+import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 chai.use(sinonChai);
 
