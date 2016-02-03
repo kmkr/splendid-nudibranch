@@ -1,6 +1,6 @@
 import snFetch from '../fetch';
 
-const defaultResponseHandler = response => response.data;
+const defaultResponseHandler = response => response;
 
 export default ({
     actionTypes,
@@ -8,55 +8,41 @@ export default ({
     options = {},
     responseHandler = defaultResponseHandler,
     errorHandler,
-    objectKey,
     method = 'get'
 }) => {
-    const receiveAction = data => (
-        {
-            type: actionTypes.RECEIVE,
-            data,
-            objectKey
-        }
-    );
-
-    const errorAction = error => {
-        //remoteLogErrorHandler(error);
-        return {
-            type: actionTypes.FETCH_ERROR,
-            error: {
-                message: error.message,
-                stack: error, //errorParser(error),
-                raw: error
-            }
-        };
-    };
-
     return dispatch => {
         dispatch({
             type: actionTypes.REQUEST
         });
         return snFetch[method](url, options)
-            .then(response => response.text())
-            .then(text => {
-                try {
-                    return JSON.parse(text);
-                } catch (e) {
-                    return text;
-                }
-            })
+            .then(response => response.json())
             .then(content => {
-                dispatch(receiveAction((responseHandler({data: content}))));
+                dispatch({
+                    type: actionTypes.RECEIVE,
+                    data: responseHandler(content)
+                });
             })
             .catch(error => {
                 if (typeof errorHandler === 'function') {
                     const handled = errorHandler(error);
                     if (handled) {
-                        dispatch(receiveAction(handled));
+                        dispatch({
+                            type: actionTypes.RECEIVE,
+                            data: responseHandler(handled)
+                        });
                         return;
                     }
                 }
 
-                dispatch(errorAction(error));
+                // todo: send error to backend
+                dispatch({
+                    type: actionTypes.FETCH_ERROR,
+                    error: {
+                        message: error.message,
+                        stack: error, //todo: parse error
+                        raw: error
+                    }
+                });
             });
     };
 };
