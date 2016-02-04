@@ -9,7 +9,7 @@ chai.use(sinonChai);
 
 import ListPhotos from './list-photos';
 
-describe('Admin <ListPhotos />', () => {
+describe('<ListPhotos /> (admin)', () => {
     let props, wrapper;
 
     beforeEach(() => {
