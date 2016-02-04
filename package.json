@@ -16,6 +16,7 @@
     "test:server:watch": "mocha -w -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\""
   },
   "dependencies": {
+    "array.from": "^1.0.0",
     "aws-sdk": "^2.2.32",
     "babel-cli": "^6.4.0",
     "babel-core": "^6.4.0",
