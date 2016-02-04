@@ -30,7 +30,7 @@ describe('<EditPhoto />', () => {
 
     describe('update button', () => {
         it('should be disabled', () => {
-            expect(btn('Update')).to.have.attr('disabled', 'disabled');
+            expect(btn('Update')).to.be.disabled();
         });
 
         it('should delegate on click', () => {
@@ -51,7 +51,7 @@ describe('<EditPhoto />', () => {
             });
 
             it('should not be disabled', () => {
-                expect(btn('Update', wrapper)).not.to.have.attr('disabled');
+                expect(btn('Update', wrapper)).not.to.be.disabled();
             });
         });
     });
