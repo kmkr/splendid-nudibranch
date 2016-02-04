@@ -11,8 +11,7 @@ class App extends Component {
 
     render() {
         return (
-            <ListPhotos
-                photos={this.props.photos.data} />
+            <ListPhotos photos={this.props.photos.data} />
         );
     }
 }
