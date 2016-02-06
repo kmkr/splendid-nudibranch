@@ -11,18 +11,31 @@ const getPhotosReducer = reducerFactory({
     initialDataValue: []
 });
 
+function photo(state, action) {
+    switch (action.type) {
+    case uploadPhotoActionTypes.RECEIVE:
+        return Object.assign({}, action.data);
+    case updatePhotoActionTypes.RECEIVE:
+        if (action.data.key !== state.key) {
+            return state;
+        }
+
+        return Object.assign({}, state, action.data);
+    default:
+        return state;
+    }
+}
+
 export default (state, action) => {
     switch (action.type) {
     case uploadPhotoActionTypes.RECEIVE:
-        const data = [...state.data, action.data];
-        return Object.assign({}, state, {data});
+        return Object.assign({}, state, {
+            data: [...state.data, photo(undefined, action)]
+        });
     case updatePhotoActionTypes.RECEIVE:
-        const updatedKey = action.data.key;
-        const elem = state.data.find(elem => elem.key === updatedKey);
-        const index = state.data.indexOf(elem);
-        const newData = [...state.data];
-        newData[index] = action.data;
-        return Object.assign({}, state, {data: newData});
+        return Object.assign({}, state, {
+            data: state.data.map(p => photo(p, action))
+        });
     case deletePhotoActionTypes.RECEIVE:
         return Object.assign({}, state, {
             data: state.data.filter(elem => elem.key !== action.data.key)
