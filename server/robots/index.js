@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     res.send(`
 User-agent: *
 Disallow: /admin
-`  );
+`);
 });
 
 export default router;

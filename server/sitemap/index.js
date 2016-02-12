@@ -3,7 +3,7 @@ import sm from 'sitemap';
 
 const router = express.Router();
 
-let sitemap = sm.createSitemap({
+const sitemap = sm.createSitemap({
     hostname: 'http://splendid-nudibran.ch', //todo
     cacheTime: 600000,
     urls: [
