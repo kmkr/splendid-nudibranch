@@ -11,8 +11,8 @@ router.get('/', (req, res) => {
         .catch(err => res.stats(500).json({err}));
 });
 
-router.post('/', (req, res) => {
-    newTagHandler(req)
+router.post('/:id', (req, res) => {
+    newTagHandler(req.params.id, req.body)
         .then(response => res.json(response))
         .catch(err => res.status(500).json({err}));
 });

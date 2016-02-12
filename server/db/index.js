@@ -2,9 +2,8 @@ import {MongoClient} from 'mongodb';
 
 import getCollection from './get';
 import insertToCollection from './insert';
-
-import destroyPhoto from './photos/destroy';
-import updatePhoto from './photos/update';
+import destroyFromCollection from './destroy';
+import updateOneInCollection from './update';
 
 const url = process.env.SN_DB_URL;
 const getDb = new Promise((resolve, reject) => {
@@ -25,11 +24,11 @@ export default {
         return getDb.then(db => getCollection(db, 'photos', filter));
     },
     deletePhoto(key) {
-        return getDb.then(db => destroyPhoto(db, {key}));
+        return getDb.then(db => destroyFromCollection(db, 'photos', {key}));
     },
     updatePhoto(key, newValues) {
         return getDb
-            .then(db => updatePhoto(db, {key}, newValues))
+            .then(db => updateOneInCollection(db, 'photos', {key}, newValues))
             .then(() => this.getPhotos({key}))
             .then(photos => photos[0]);
     },
@@ -38,5 +37,8 @@ export default {
     },
     insertTag(tag) {
         return getDb.then(db => insertToCollection(db, 'tags', tag));
+    },
+    updateTag(tagName, newValues) {
+        return getDb.then(db => updateOneInCollection(db, 'tags', {name: tagName}, newValues));
     }
 };

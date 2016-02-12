@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import PhotoUploader from './photos/photo-uploader';
 import ListPhotos from './photos/list-photos';
 import {updatePhoto, uploadPhoto, deletePhoto} from './photos/edit-photo-actions';
+import {setTagsForPhoto} from './tags/edit-tags-actions';
 import {fetchPhotos} from '../photos/photo-actions';
 
 class App extends Component {
@@ -19,8 +20,9 @@ class App extends Component {
         this.props.dispatch(deletePhoto(photo));
     }
 
-    onUpdateClick(photo, updatedValues) {
+    onUpdateClick(photo, updatedValues, updatedTags) {
         this.props.dispatch(updatePhoto(photo, updatedValues));
+        this.props.dispatch(setTagsForPhoto(photo, updatedTags));
     }
 
     render() {

@@ -1,7 +1,7 @@
-export default (db, filter, newValues) => {
+export default (db, collectionName, filter) => {
     return new Promise((resolve, reject) => {
-        db.collection('photos')
-            .updateOne(filter, {$set: Object.assign(newValues, {updated_at: new Date()})}, (err, data) => {
+        db.collection(collectionName)
+            .deleteOne(filter, (err, data) => {
                 if (err) {
                     return reject(err);
                 }
