@@ -4,12 +4,16 @@ import sm from 'sitemap';
 const router = express.Router();
 
 let sitemap = sm.createSitemap({
-    hostname: 'http://splendid-nudibran.ch', todo
+    hostname: 'http://splendid-nudibran.ch', //todo
     cacheTime: 600000,
     urls: [
-        {url: '//',  changefreq: 'daily', priority: 0.3}
+        {
+            url: '//',
+            changefreq: 'daily',
+            priority: 0.3
+        }
     ]
-})
+});
 
 router.get('/', (req, res) => {
     sitemap.toXML(function (err, xml) {
