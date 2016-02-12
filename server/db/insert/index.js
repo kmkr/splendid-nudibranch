@@ -1,17 +1,17 @@
-export default (db, _photo) => {
+export default (db, collectionName, _item) => {
     const now = new Date();
-    const photo = Object.assign({}, _photo, {
+    const item = Object.assign({}, _item, {
         created_at: now,
         updated_at: now
     });
 
     return new Promise((resolve, reject) => {
-        return db.collection('photos').insert(photo, (err, result) => {
+        return db.collection(collectionName).insert(item, (err, result) => {
             if (err) {
                 return reject(err);
             }
 
-            console.log('[db/index] Inserted photo');
+            console.log(`[db/index] Inserted item to collection ${collectionName}`);
             return resolve(result);
         });
     });

@@ -1,9 +1,10 @@
 import {MongoClient} from 'mongodb';
 
-import destroy from './destroy';
-import get from './get';
-import insert from './insert';
-import update from './update';
+import getCollection from './get';
+import insertToCollection from './insert';
+
+import destroyPhoto from './photos/destroy';
+import updatePhoto from './photos/update';
 
 const url = process.env.SN_DB_URL;
 const getDb = new Promise((resolve, reject) => {
@@ -18,18 +19,24 @@ const getDb = new Promise((resolve, reject) => {
 
 export default {
     insertPhoto(photo) {
-        return getDb.then(db => insert(db, photo));
+        return getDb.then(db => insertToCollection(db, 'photos', photo));
     },
     getPhotos(filter = {}) {
-        return getDb.then(db => get(db, filter));
+        return getDb.then(db => getCollection(db, 'photos', filter));
     },
     deletePhoto(key) {
-        return getDb.then(db => destroy(db, {key}));
+        return getDb.then(db => destroyPhoto(db, {key}));
     },
     updatePhoto(key, newValues) {
         return getDb
-            .then(db => update(db, {key}, newValues))
+            .then(db => updatePhoto(db, {key}, newValues))
             .then(() => this.getPhotos({key}))
             .then(photos => photos[0]);
+    },
+    getTags(filter = {}) {
+        return getDb.then(db => getCollection(db, 'tags', filter));
+    },
+    insertTag(tag) {
+        return getDb.then(db => insertToCollection(db, 'tags', tag));
     }
 };
