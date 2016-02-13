@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import AddTag from '../tags/add-tag';
+import './edit-photo.scss';
 
 class EditPhoto extends Component {
     constructor(props) {
@@ -45,18 +46,20 @@ class EditPhoto extends Component {
         const {photo, onDeleteClick} = this.props;
 
         return (
-            <div>
+            <div className="edit-photo">
                 <textarea
                     placeholder="Photo description"
                     value={this.state.description}
                     onChange={this.descriptionUpdated.bind(this)}></textarea>
 
-                <ul>
-                    {photo.tags.sort().map(tag => <li key={tag}>{tag}</li>)}
-                    {this.state.newTags.map(tag => <li key={tag}>{tag} (unsaved)</li>)}
-                </ul>
-                <AddTag
-                    onAdd={this.tagAdded.bind(this)} />
+                <div className="tags">
+                    {photo.tags.sort().map(tag => <span className="saved" key={tag}>{tag}</span>)}
+                    {this.state.newTags.map(tag => <span className="unsaved" key={tag}>{tag}</span>)}
+
+                    <AddTag
+                        onAdd={this.tagAdded.bind(this)} />
+                </div>
+
                 <button
                     disabled={this.isDisabled()}
                     onClick={this.update.bind(this)}>

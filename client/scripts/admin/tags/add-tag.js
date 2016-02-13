@@ -34,6 +34,7 @@ class AddTag extends Component {
     render() {
         return (
             <input
+                placeholder="Add a tag"
                 value={this.state.tagInput}
                 onBlur={this.onBlur.bind(this)}
                 onChange={this.onChange.bind(this)} />
