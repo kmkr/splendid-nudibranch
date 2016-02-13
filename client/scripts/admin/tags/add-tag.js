@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-class EditTags extends Component {
+class AddTag extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -8,15 +8,8 @@ class EditTags extends Component {
         };
     }
 
-    // todo: tar ikke hensyn til parent state. flytt denne opp
-    exists(tagName) {
-        return this.props.tags.some(tag => tag === tagName);
-    }
-
     save(tagName) {
-        if (!this.exists(tagName) && tagName.length > 2) {
-            this.props.onAdd(tagName);
-        }
+        this.props.onAdd(tagName);
         this.setState({
             tagInput: ''
         });
@@ -40,19 +33,16 @@ class EditTags extends Component {
 
     render() {
         return (
-            <div>
-                <input
-                    value={this.state.tagInput}
-                    onBlur={this.onBlur.bind(this)}
-                    onChange={this.onChange.bind(this)} />
-            </div>
+            <input
+                value={this.state.tagInput}
+                onBlur={this.onBlur.bind(this)}
+                onChange={this.onChange.bind(this)} />
         );
     }
 }
 
-EditTags.propTypes = {
-    onAdd: PropTypes.func.isRequired,
-    tags: PropTypes.array.isRequired
+AddTag.propTypes = {
+    onAdd: PropTypes.func.isRequired
 };
 
-export default EditTags;
+export default AddTag;

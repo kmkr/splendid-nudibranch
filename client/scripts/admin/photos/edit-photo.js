@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import EditTags from '../tags/edit-tags';
+import AddTag from '../tags/add-tag';
 
 class EditPhoto extends Component {
     constructor(props) {
@@ -17,6 +17,10 @@ class EditPhoto extends Component {
     }
 
     tagAdded(newTag) {
+        if (this.props.photo.tags.includes(newTag) || newTag.length < 2) {
+            return;
+        }
+
         this.setState({
             newTags: [...this.state.newTags, newTag].sort()
         });
@@ -51,9 +55,8 @@ class EditPhoto extends Component {
                     {photo.tags.sort().map(tag => <li key={tag}>{tag}</li>)}
                     {this.state.newTags.map(tag => <li key={tag}>{tag} (unsaved)</li>)}
                 </ul>
-                <EditTags
-                    onAdd={this.tagAdded.bind(this)}
-                    tags={photo.tags} />
+                <AddTag
+                    onAdd={this.tagAdded.bind(this)} />
                 <button
                     disabled={this.isDisabled()}
                     onClick={this.update.bind(this)}>
