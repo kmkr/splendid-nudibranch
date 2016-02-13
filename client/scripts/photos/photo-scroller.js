@@ -53,6 +53,7 @@ class PhotoScroller extends Component {
     render() {
         return (<ListPhotos
             photos={this.props.photos}
+            photoSize="large"
             visibleStart={this.state.visibleStart}
             visibleEnd={this.state.visibleEnd} />
         );

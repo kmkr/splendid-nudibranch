@@ -30,6 +30,7 @@ class App extends Component {
             <div>
                 <PhotoUploader onAddPhoto={this.onAddPhoto.bind(this)} />
                 <ListPhotos
+                    photoSize="small"
                     photos={this.props.photos.data}
                     onDeleteClick={this.onDeleteClick.bind(this)}
                     onUpdateClick={this.onUpdateClick.bind(this)} />
