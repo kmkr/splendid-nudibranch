@@ -7,8 +7,15 @@ class EditPhoto extends Component {
         super(props);
         this.state = {
             newTags: [],
+            title: props.photo.title || '',
             description: props.photo.description || ''
         };
+    }
+
+    titleUpdated(e) {
+        this.setState({
+            title: e.target.value
+        });
     }
 
     descriptionUpdated(e) {
@@ -29,14 +36,18 @@ class EditPhoto extends Component {
 
     isDisabled() {
         const {photo} = this.props;
-        const photoClean = this.state.description === photo.description || !this.state.description;
+        const descriptionClean = this.state.description === photo.description || !this.state.description;
+        const titleClean = this.state.title === photo.title || !this.state.title;
         const tagsClean = this.state.newTags.length === 0;
 
-        return photoClean && tagsClean;
+        return descriptionClean && titleClean && tagsClean;
     }
 
     update() {
-        this.props.onUpdateClick(this.props.photo, {description: this.state.description}, this.state.newTags);
+        this.props.onUpdateClick(this.props.photo, {
+            title: this.state.title,
+            description: this.state.description
+        }, this.state.newTags);
         this.setState({
             newTags: []
         });
@@ -47,6 +58,10 @@ class EditPhoto extends Component {
 
         return (
             <div className="edit-photo">
+                <input
+                    placeholder="Title"
+                    value={this.state.title}
+                    onChange={this.titleUpdated.bind(this)} />
                 <textarea
                     placeholder="Photo description"
                     value={this.state.description}
