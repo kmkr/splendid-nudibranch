@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Collage from './collage';
-import ListPhotos from './photos/list-photos';
+import PhotoScroller from './photos/photo-scroller';
 import {fetchPhotos} from './photos/photo-actions';
 
 class App extends Component {
@@ -31,7 +31,7 @@ class App extends Component {
         return (
             this.state.page === 'collage' ?
                 <Collage /> :
-                <ListPhotos photos={this.props.photos.data} />
+                <PhotoScroller photos={this.props.photos.data} />
         );
     }
 }
