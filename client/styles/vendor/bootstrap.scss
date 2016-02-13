@@ -6,45 +6,27 @@ $grid-breakpoints: (
   xl: 1800px
 );
 
-$container-max-widths: (
-  sm: 576px,
-  md: 720px,
-  lg: 940px,
-  xl: 1700px
-);
-
 $enable-flex: true;
 $enable-hover-media-query: false;
 $grid-columns:               12;
 $grid-gutter-width:          1.875rem;
 $enable-grid-classes: true;
 
-$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:           $font-family-sans-serif !default;
+$font-family-base:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root:             16px !default;
 $font-size-base:             1rem !default;
 $line-height:                1.5 !default;
-$gray-dark:                 #373a3c !default;
-$gray-light:                #818a91 !default;
-$body-color:                 $gray-dark;
+$body-color:                 #373a3c !default;
 $body-bg:                    #fff !default;
-$abbr-border-color:           $gray-light !default;
-$dt-font-weight:              bold !default;
-$brand-primary:             #0275d8 !default;
 $link-decoration:            none !default;
-$link-color:                 $brand-primary !default;
+$link-color:                 #0274d8 !default;
 $link-hover-color:           darken($link-color, 15%) !default;
 $link-hover-decoration:      underline !default;
 
 $table-cell-padding:            .75rem !default;
 $table-sm-cell-padding:         .3rem !default;
 $table-bg:                      transparent !default;
-
-$text-muted:                  $gray-light !default;
 
 @import "mixins/hover";
 @import "mixins/tab-focus";
