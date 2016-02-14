@@ -12,7 +12,7 @@ const upload = multer();
 
 export default indexHtml => {
     router.get('/', (req, res) => {
-        if (req.accepts('html')) {
+        if (req.get('accept') !== 'application/json') {
             return res.sendFile(indexHtml);
         }
         getPhotosHandler()
