@@ -6,6 +6,7 @@ import Search from './search';
 import PhotoScroller from './photos/photo-scroller';
 import {fetchPhotos} from './photos/photo-actions';
 import {popHistory, pushHistory, setHistory} from './history/history-actions';
+import {selectTag} from './selected-tags/selected-tags-actions';
 import {currentPage, PAGES} from './pages';
 
 class App extends Component {
@@ -26,10 +27,17 @@ class App extends Component {
         this.props.dispatch(pushHistory(PAGES.PHOTOS));
     }
 
+    onSelectTag(tagName) {
+        this.props.dispatch(selectTag(tagName));
+    }
+
     render() {
         return (
             <div>
-                <Search photos={this.props.photos.data} />
+                <Search
+                    selectedTags={this.props.selectedTags}
+                    photos={this.props.photos.data}
+                    onSelect={this.onSelectTag.bind(this)} />
                 <div className="col-sm-offset-2">
                     {this.props.history.url === PAGES.PHOTOS.url ?
                         <PhotoScroller photos={this.props.photos.data} /> :
@@ -44,7 +52,8 @@ class App extends Component {
 function select(state) {
     return {
         photos: state.photos,
-        history: state.history
+        history: state.history,
+        selectedTags: state.selectedTags
     };
 }
 

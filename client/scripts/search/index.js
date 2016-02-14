@@ -41,6 +41,9 @@ class Search extends Component {
     render() {
         return (
             <div id="search">
+                {this.props.selectedTags.map(tagName => (
+                    <span key={tagName}>{tagName}</span>
+                ))}
                 <input
                     type="search"
                     onKeyUp={this.keyUp.bind(this)}
@@ -48,7 +51,12 @@ class Search extends Component {
 
                 <div className="search-result-wrapper">
                     <ul className="search-result">
-                        {this.state.matching.map(m => <li style={{color: '#000'}} key={m}>{m}</li>)}
+                        {this.state.matching.map(tagName => (
+                            <li
+                                style={{color: '#000'}}
+                                onClick={() => this.props.onSelect(tagName)}
+                                key={tagName}>{tagName}</li>
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -57,6 +65,8 @@ class Search extends Component {
 }
 
 Search.propTypes = {
+    onSelect: PropTypes.func.isRequired,
+    selectedTags: PropTypes.array.isRequired,
     photos: PropTypes.array.isRequired
 };
 
