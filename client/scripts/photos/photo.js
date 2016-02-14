@@ -8,7 +8,7 @@ function photoSizeToColClass(photoSize) {
     case 'medium':
         return 'col-sm-7';
     case 'large':
-        return 'col-sm-12';
+        return 'col-sm-14';
     default:
         throw new Error(`Unsupported photo size ${photoSize}`);
     }
