@@ -8,18 +8,20 @@ import tagRouter from './tags';
 import sitemapRouter from './sitemap';
 import robotsRouter from './robots';
 
+const indexHtml = `${__dirname}/index.html`;
+
 const app = express();
 app.use(compression());
 app.use(logger('combined'));
 app.use(bodyParser.json());
 app.use('/static', express.static(`${__dirname}/static`));
-app.use('/photos', photoRouter);
+app.use('/photos', photoRouter(indexHtml));
 app.use('/tags', tagRouter);
 app.use('/sitemap.xml', sitemapRouter);
 app.use('/robots.txt', robotsRouter);
 
 app.get('/', (req, res) => {
-    res.sendFile(`${__dirname}/index.html`);
+    res.sendFile(indexHtml);
 });
 
 app.get('/admin', (req, res) => {
