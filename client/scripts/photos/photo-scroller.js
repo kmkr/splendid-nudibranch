@@ -31,6 +31,7 @@ class PhotoScroller extends Component {
 
     componentWillMount() {
         throttle('scroll', 'optimizedScroll');
+        throttle('resize', 'optimizedScroll');
         window.addEventListener('optimizedScroll', () => {
             const photoListWrapper = document.getElementById('photo-list-wrapper');
             const {pageYOffset} = window;
