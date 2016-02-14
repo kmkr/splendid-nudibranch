@@ -1,17 +1,26 @@
 export const resizeTo = [
     {
+        name: 'xsmall',
+        shortName: 'xs',
+        width: 500
+    },
+    {
         name: 'small',
         shortName: 's',
-        width: 300
+        width: 1000
     },
     {
         name: 'medium',
         shortName: 'm',
-        width: 800
+        width: 1400
     },
     {
         name: 'large',
         shortName: 'l',
-        width: 1400
+        width: 1900
     }
 ];
+
+export const getPhotoSizeForWidth = width => {
+    return resizeTo.filter(rt => rt.width > width)[0];
+};

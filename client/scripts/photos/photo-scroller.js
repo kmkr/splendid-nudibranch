@@ -1,38 +1,10 @@
 import React, {Component, PropTypes} from 'react';
 
 import ListPhotos from './list-photos';
-
-const throttle = (type, name, obj) => {
-    obj = obj || window;
-    let running = false;
-    const func = () => {
-        if (running) {
-            return;
-        }
-        running = true;
-        requestAnimationFrame(() => {
-            obj.dispatchEvent(new CustomEvent(name));
-            running = false;
-        });
-    };
-    obj.addEventListener(type, func);
-};
+import {getPhotoSizeForWidth} from '../../../common/constants';
+import throttle from './throttler';
 
 const SHOW_PHOTOS = 2;
-const WIDTH_MAP = {
-    SIZE_1: {
-        name: 'small',
-        weight: 1
-    },
-    SIZE_2: {
-        name: 'medium',
-        weight: 2
-    },
-    SIZE_3: {
-        name: 'large',
-        weight: 3
-    }
-};
 
 class PhotoScroller extends Component {
     constructor(props) {
@@ -47,15 +19,8 @@ class PhotoScroller extends Component {
     componentWillMount() {
         throttle('scroll', 'optimizedScroll');
         throttle('resize', 'optimizedResize');
-        window.addEventListener('optimizedScroll', this.updateVisiblePhotos);
-        window.addEventListener('optimizedResize', () => {
-            if (this.getPhotoSize().weight > this.state.photoSize.weight) {
-                this.setState({
-                    photoSize: this.getPhotoSize()
-                });
-            }
-            this.updateVisiblePhotos();
-        });
+        window.addEventListener('optimizedScroll', this.onScroll);
+        window.addEventListener('optimizedResize', this.onResize);
     }
 
     componentWillReceiveProps(props) {
@@ -65,21 +30,17 @@ class PhotoScroller extends Component {
         });
     }
 
-    getPhotoSize() {
-        const {innerWidth} = window;
-
-        if (innerWidth > 1024) {
-            return WIDTH_MAP.SIZE_3;
-        }
-
-        if (innerWidth > 768) {
-            return WIDTH_MAP.SIZE_2;
-        }
-
-        return WIDTH_MAP.SIZE_1;
+    componentWillUnmount() {
+        window.removeEventListener('optimizedScroll', this.onScroll);
+        window.removeEventListener('optimizedResize', this.onResize);
     }
 
-    updateVisiblePhotos() {
+    getPhotoSize() {
+        const {innerWidth} = window;
+        return getPhotoSizeForWidth(innerWidth);
+    }
+
+    onScroll() {
         const photoListWrapper = document.getElementById('photo-list-wrapper');
         const {pageYOffset} = window;
         const threshold = 200;
@@ -89,6 +50,15 @@ class PhotoScroller extends Component {
                 visibleEnd: this.state.visibleEnd + 1
             });
         }
+    }
+
+    onResize() {
+        if (this.getPhotoSize().width > this.state.photoSize.width) {
+            this.setState({
+                photoSize: this.getPhotoSize()
+            });
+        }
+        this.onScroll();
     }
 
     render() {
