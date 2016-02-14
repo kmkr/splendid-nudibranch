@@ -22,5 +22,5 @@ export const resizeTo = [
 ];
 
 export const getPhotoSizeForWidth = width => {
-    return resizeTo.filter(rt => rt.width > width)[0];
+    return resizeTo.filter(rt => rt.width > width)[0] || resizeTo[resizeTo.length - 1];
 };
