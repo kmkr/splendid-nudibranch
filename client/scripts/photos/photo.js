@@ -34,6 +34,7 @@ class Photo extends Component {
                     style={{opacity: this.state.loaded ? 1 : 0}}
                     onLoad={this.loaded.bind(this)}
                     src={photo[photoSize]} />
+                <p>{photo.title}</p>
                 <p>{photo.description}</p>
             </div>
         );
