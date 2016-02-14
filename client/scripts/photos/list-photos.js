@@ -1,19 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import {resizeTo} from '../../../common/constants';
 
-function photoSizeToColClass(photoSize) {
-    switch (photoSize) {
-    case 'small':
-        return 'col-sm-4';
-    case 'medium':
-        return 'col-sm-7';
-    case 'large':
-        return 'col-sm-12';
-    default:
-        throw new Error(`Unsupported photo size ${photoSize}`);
-
-    }
-}
+import Photo from './photo';
 
 class ListPhotos extends Component {
 
@@ -29,18 +16,15 @@ class ListPhotos extends Component {
     render() {
         const {photos, photoSize} = this.props;
 
-        const colClass = photoSizeToColClass(photoSize);
         return (
             <div className="row">
                 {photos.map((photo, index) => (
                     this.isVisible(index) ? (
-                        <div
+                        <Photo
                             key={photo.key}
-                            className={colClass}>
-                                <img src={photo[photoSize]} />
-                                <p>{photo.description}</p>
-                        </div>
-                    ) : null
+                            photo={photo}
+                            photoSize={photoSize} />
+                        ) : null
                 ))}
 
                 <div id="photo-list-wrapper"></div>
@@ -51,7 +35,7 @@ class ListPhotos extends Component {
 
 ListPhotos.propTypes = {
     photos: PropTypes.array.isRequired,
-    photoSize: PropTypes.oneOf(resizeTo.map(r => r.name)).isRequired,
+    photoSize: PropTypes.string.isRequired,
     visibleStart: PropTypes.number,
     visibleEnd: PropTypes.number
 };

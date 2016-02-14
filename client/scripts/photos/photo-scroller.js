@@ -34,10 +34,10 @@ class PhotoScroller extends Component {
         window.addEventListener('optimizedScroll', () => {
             const photoListWrapper = document.getElementById('photo-list-wrapper');
             const {pageYOffset} = window;
-            if (pageYOffset > photoListWrapper.offsetHeight) {
+            if ((pageYOffset + 200) > photoListWrapper.offsetHeight) {
                 this.setState({
                     visibleStart: 0,
-                    visibleEnd: this.state.visibleEnd + 2
+                    visibleEnd: this.state.visibleEnd + 1
                 });
             }
         });
