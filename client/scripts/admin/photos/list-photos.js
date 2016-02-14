@@ -6,7 +6,7 @@ import EditPhoto from './edit-photo';
 const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
     <div className="list-photos row">
         {photos.map(photo => (
-            <div className="col-lg-6" key={photo.key}>
+            <div className="col-md-6" key={photo.key}>
                 <img src={photo.small} />
                 <EditPhoto
                     onDeleteClick={onDeleteClick}
