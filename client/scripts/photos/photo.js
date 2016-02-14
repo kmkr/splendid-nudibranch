@@ -1,19 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {resizeTo} from '../../../common/constants';
 
-function photoSizeToColClass(photoSize) {
-    switch (photoSize) {
-    case 'small':
-        return 'col-sm-4';
-    case 'medium':
-        return 'col-sm-7';
-    case 'large':
-        return 'col-sm-14';
-    default:
-        throw new Error(`Unsupported photo size ${photoSize}`);
-    }
-}
-
 class Photo extends Component {
     constructor(props) {
         super(props);
@@ -29,7 +16,7 @@ class Photo extends Component {
     render() {
         const {photoSize, photo} = this.props;
         return (
-            <div className={photoSizeToColClass(photoSize)}>
+            <div className="col-sm-offset-2 col-sm-12">
                 <img
                     style={{opacity: this.state.loaded ? 1 : 0}}
                     onLoad={this.loaded.bind(this)}
