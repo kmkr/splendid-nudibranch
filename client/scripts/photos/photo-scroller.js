@@ -14,6 +14,8 @@ class PhotoScroller extends Component {
             visibleStart: 0,
             visibleEnd: Math.min(this.props.photos.length, SHOW_PHOTOS)
         };
+        this.onScroll = this.onScroll.bind(this);
+        this.onResize = this.onResize.bind(this);
     }
 
     componentWillMount() {
