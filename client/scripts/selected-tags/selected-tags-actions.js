@@ -6,3 +6,10 @@ export function selectTag(tagName) {
         data: tagName
     };
 }
+
+export function unselectTag(tagName) {
+    return {
+        type: actionTypes.UNSELECT_TAG,
+        data: tagName
+    };
+}

@@ -42,7 +42,9 @@ class Search extends Component {
         return (
             <div id="search">
                 {this.props.selectedTags.map(tagName => (
-                    <span key={tagName}>{tagName}</span>
+                    <span
+                        key={tagName}
+                        onClick={() => this.props.onDelete(tagName)}>{tagName}</span>
                 ))}
                 <input
                     type="search"
@@ -66,6 +68,7 @@ class Search extends Component {
 
 Search.propTypes = {
     onSelect: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
     selectedTags: PropTypes.array.isRequired,
     photos: PropTypes.array.isRequired
 };

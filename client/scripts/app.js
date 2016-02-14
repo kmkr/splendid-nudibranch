@@ -6,7 +6,7 @@ import Search from './search';
 import PhotoScroller from './photos/photo-scroller';
 import {fetchPhotos} from './photos/photo-actions';
 import {popHistory, pushHistory, setHistory} from './history/history-actions';
-import {selectTag} from './selected-tags/selected-tags-actions';
+import {selectTag, unselectTag} from './selected-tags/selected-tags-actions';
 import {currentPage, PAGES} from './pages';
 
 class App extends Component {
@@ -31,12 +31,17 @@ class App extends Component {
         this.props.dispatch(selectTag(tagName));
     }
 
+    onUnselectTag(tagName) {
+        this.props.dispatch(unselectTag(tagName));
+    }
+
     render() {
         return (
             <div>
                 <Search
                     selectedTags={this.props.selectedTags}
                     photos={this.props.photos.data}
+                    onDelete={this.onUnselectTag.bind(this)}
                     onSelect={this.onSelectTag.bind(this)} />
                 <div className="col-sm-offset-2">
                     {this.props.history.url === PAGES.PHOTOS.url ?
