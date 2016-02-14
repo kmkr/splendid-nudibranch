@@ -32,9 +32,11 @@ class App extends Component {
         return (
             <div>
                 <Search photos={this.props.photos.data} />
-                {this.state.page === 'collage' ?
-                    <Collage /> :
-                    <PhotoScroller photos={this.props.photos.data} />}
+                <div className="col-sm-offset-2">
+                    {this.state.page === 'collage' ?
+                        <Collage /> :
+                        <PhotoScroller photos={this.props.photos.data} />}
+                </div>
             </div>
         );
     }
