@@ -1,21 +1,2 @@
 @import "vendor/bootstrap";
 
-#logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    background-color: #000;
-    z-index: 10;
-    color: #fff;
-}
-
-img {
-    -webkit-transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -ms-transition: opacity .5s ease-in-out;
-    -o-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
-    max-width: 100%;
-}

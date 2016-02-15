@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Search from '../search';
 import PhotoScroller from '../photos/photo-scroller';
 import {selectTag, unselectTag} from '../selected-tags/selected-tags-actions';
+import './photo-page.scss';
 
 class PhotoPage extends Component {
 
@@ -17,8 +18,8 @@ class PhotoPage extends Component {
 
     render() {
         return (
-            <div>
-                <div id="logo">Splendid Nudibranch</div>
+            <div id="photo-page">
+                <div className="logo">Splendid Nudibranch</div>
                 <Search
                     selectedTags={this.props.selectedTags}
                     photos={this.props.photos.data}
