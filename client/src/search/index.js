@@ -1,41 +1,46 @@
 import React, {Component, PropTypes} from 'react';
 import './search.scss';
 
+import {getMatchingTags, getUniqueTags} from './search-service';
+
 class Search extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             searchInput: '',
+            searchOpen: false,
             matching: []
         };
     }
 
-    getTags() {
-        return this.props.photos.map(p => p.tags)
-            .reduce((a, b) => a.concat(b), [])
-            .sort()
-            .filter((el, i, a) => {
-                if (i === a.indexOf(el)) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            });
-    }
-
     onChange(e) {
         const value = e.target.value;
-        let matching = [];
 
-        if (value.length > 0) {
-            matching = this.getTags().filter(t => t.match(value));
-        }
+        const matching = getMatchingTags({
+            tags: getUniqueTags(this.props.photos),
+            exclude: this.props.selectedTags,
+            matchWith: value
+        });
 
         this.setState({
             searchInput: value,
             matching
         });
+    }
+
+    toggleSearch() {
+        this.setState({
+            searchOpen: !this.state.searchOpen
+        });
+    }
+
+    onSelect(tagName) {
+        this.setState({
+            searchInput: '',
+            matching: []
+        });
+        this.props.onSelect(tagName);
     }
 
     render() {
@@ -44,19 +49,25 @@ class Search extends Component {
                 {this.props.selectedTags.map(tagName => (
                     <span
                         key={tagName}
-                        onClick={() => this.props.onDelete(tagName)}>{tagName}</span>
+                        onClick={this.props.onDelete.bind(this, tagName)}>{tagName}</span>
                 ))}
-                <input
-                    type="search"
-                    onChange={this.onChange.bind(this)}
-                    placeholder="Search for year, species and places" />
+
+                <div style={{position: 'relative'}}>
+                    <div className="icon"
+                        onClick={this.toggleSearch.bind(this)}>Ikon</div>
+                    <input
+                        type="search"
+                        className={this.state.searchOpen ? 'opened' : 'closed'}
+                        onChange={this.onChange.bind(this)}
+                        value={this.state.searchInput}
+                        placeholder="Search for year, species and places" />
+                </div>
 
                 <div className="search-result-wrapper">
                     <ul className="search-result">
                         {this.state.matching.map(tagName => (
                             <li
-                                style={{color: '#000'}}
-                                onClick={() => this.props.onSelect(tagName)}
+                                onClick={this.onSelect.bind(this, tagName)}
                                 key={tagName}>{tagName}</li>
                         ))}
                     </ul>
