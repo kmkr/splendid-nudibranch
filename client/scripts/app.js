@@ -1,19 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Collage from './collage';
-import Search from './search';
-import PhotoScroller from './photos/photo-scroller';
+import CollagePage from './pages/collage-page';
+
+import PhotoPage from './pages/photo-page';
 import {fetchPhotos} from './photos/photo-actions';
-import {popHistory, pushHistory, setHistory} from './history/history-actions';
-import {selectTag, unselectTag} from './selected-tags/selected-tags-actions';
-import {currentPage, PAGES} from './pages';
+import {popHistory, setHistory} from './history/history-actions';
+
+import {currentPage, PAGES} from './pages/constants';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentWillMount() {
         this.props.dispatch(fetchPhotos());
         this.props.dispatch(setHistory(currentPage()));
@@ -22,43 +18,18 @@ class App extends Component {
         });
     }
 
-    onCollageLinkClick(e) {
-        e.preventDefault();
-        this.props.dispatch(pushHistory(PAGES.PHOTOS));
-    }
-
-    onSelectTag(tagName) {
-        this.props.dispatch(selectTag(tagName));
-    }
-
-    onUnselectTag(tagName) {
-        this.props.dispatch(unselectTag(tagName));
-    }
-
     render() {
         return (
-            <div>
-                <Search
-                    selectedTags={this.props.selectedTags}
-                    photos={this.props.photos.data}
-                    onDelete={this.onUnselectTag.bind(this)}
-                    onSelect={this.onSelectTag.bind(this)} />
-                <div className="col-sm-offset-2">
-                    {this.props.history.url === PAGES.PHOTOS.url ?
-                        <PhotoScroller photos={this.props.photos.data} /> :
-                        <Collage onLinkClick={this.onCollageLinkClick.bind(this)} />
-                    }
-                </div>
-            </div>
+            this.props.history.url === PAGES.PHOTOS.url ?
+                <PhotoPage /> :
+                <CollagePage />
         );
     }
 }
 
 function select(state) {
     return {
-        photos: state.photos,
-        history: state.history,
-        selectedTags: state.selectedTags
+        history: state.history
     };
 }
 
