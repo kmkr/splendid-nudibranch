@@ -24,7 +24,7 @@ class Search extends Component {
             });
     }
 
-    keyUp(e) {
+    onChange(e) {
         const value = e.target.value;
         let matching = [];
 
@@ -48,7 +48,7 @@ class Search extends Component {
                 ))}
                 <input
                     type="search"
-                    onKeyUp={this.keyUp.bind(this)}
+                    onChange={this.onChange.bind(this)}
                     placeholder="Search for year, species and places" />
 
                 <div className="search-result-wrapper">
