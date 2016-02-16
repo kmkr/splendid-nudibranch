@@ -54,9 +54,6 @@ class Search extends Component {
         default:
 
         }
-        if (e.keyCode === backspace && this.state.searchInput === '') {
-        }
-
     }
 
     toggleSearch(val) {
