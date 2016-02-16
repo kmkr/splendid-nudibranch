@@ -2,11 +2,16 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Search from '../search';
+import {fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
 import {selectTag, unselectTag} from '../selected-tags/selected-tags-actions';
-import './photo-page.scss';
+import './photo-section.scss';
 
 class PhotoPage extends Component {
+
+    componentWillMount() {
+        this.props.dispatch(fetchPhotos());
+    }
 
     onSelectTag(tagName) {
         this.props.dispatch(selectTag(tagName));
@@ -18,7 +23,7 @@ class PhotoPage extends Component {
 
     render() {
         return (
-            <div id="photo-page">
+            <div id="photo-section">
                 <div className="logo">Splendid Nudibranch</div>
                 <Search
                     selectedTags={this.props.selectedTags}

@@ -1,28 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import CollagePage from './pages/collage-page';
+import CollageSection from './sections/collage-section';
 
-import PhotoPage from './pages/photo-page';
-import {fetchPhotos} from './photos/photo-actions';
-import {popHistory, setHistory} from './history/history-actions';
-
-import {currentPage, PAGES} from './pages/constants';
+import PhotoSection from './sections/photo-section';
+import {setHistory} from './history/history-actions';
+import {currentPage} from './sections/constants';
 
 class App extends Component {
     componentWillMount() {
-        this.props.dispatch(fetchPhotos());
         this.props.dispatch(setHistory(currentPage()));
-        window.addEventListener('popstate', () => {
-            this.props.dispatch(popHistory(currentPage()));
-        });
     }
 
     render() {
         return (
-            this.props.history.url === PAGES.PHOTOS.url ?
-                <PhotoPage /> :
-                <CollagePage />
+            <div>
+                <CollageSection />
+                <PhotoSection />
+            </div>
         );
     }
 }

@@ -8,13 +8,6 @@ export function pushHistory(page) {
     };
 }
 
-export function popHistory(page) {
-    return {
-        type: actionTypes.POP_HISTORY,
-        data: page
-    };
-}
-
 export function setHistory(page) {
     return {
         type: actionTypes.SET_HISTORY,
