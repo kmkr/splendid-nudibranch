@@ -32,9 +32,31 @@ class Search extends Component {
 
     onKeyUp(e) {
         const backspace = 8;
-        if (e.keyCode === backspace && this.state.searchInput === '') {
-            console.log('todo: remove tag');
+        const arrowDown = 40;
+        const arrowUp = 38;
+
+        switch (e.keyCode) {
+        case backspace:
+            if (this.props.selectedTags.length && this.state.searchInput === '') {
+                console.log('todo: remove tag');
+            }
+            break;
+        case arrowDown:
+            if (this.state.matching.length) {
+                console.log('todo: focus element');
+            }
+            break;
+        case arrowUp:
+            if (this.state.matching.length) {
+                console.log('todo: focus element');
+            }
+            break;
+        default:
+
         }
+        if (e.keyCode === backspace && this.state.searchInput === '') {
+        }
+
     }
 
     toggleSearch(val) {
