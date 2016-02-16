@@ -30,10 +30,13 @@ class Search extends Component {
         });
     }
 
-    toggleSearch() {
+    toggleSearch(val) {
+        if (typeof val === 'undefined') {
+            val = !this.state.searchOpen;
+        }
         const wasOff = !this.state.searchOpen;
         this.setState({
-            searchOpen: !this.state.searchOpen
+            searchOpen: val
         });
 
         if (wasOff) {
@@ -64,7 +67,7 @@ class Search extends Component {
         */
         setTimeout(() => {
             if (ReactDOM.findDOMNode(this.refs.searchInput) !== document.activeElement) {
-                this.toggleSearch();
+                this.toggleSearch(false);
             }
         }, 300);
     }
