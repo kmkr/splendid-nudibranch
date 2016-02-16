@@ -7,7 +7,7 @@ import {selectTag, unselectTag} from '../selected-tags/selected-tags-actions';
 import Search from '../search';
 import './photo-section.scss';
 
-class PhotoPage extends Component {
+class PhotoSection extends Component {
 
     constructor(props) {
         super(props);
@@ -74,4 +74,4 @@ function select(state) {
 }
 
 
-export default connect(select)(PhotoPage);
+export default connect(select)(PhotoSection);

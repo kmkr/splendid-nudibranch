@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import Collage from '../collage';
 import './collage-section.scss';
 
-class CollagePage extends Component {
+class CollageSection extends Component {
     render() {
         return (
             <div
@@ -22,4 +22,4 @@ function select(state) {
     };
 }
 
-export default connect(select)(CollagePage);
+export default connect(select)(CollageSection);
