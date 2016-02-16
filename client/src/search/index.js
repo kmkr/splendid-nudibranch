@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import ReactDOM from 'react-dom';
 import './search.scss';
 
 import {getMatchingTags, getUniqueTags} from './search-service';
@@ -30,9 +31,18 @@ class Search extends Component {
     }
 
     toggleSearch() {
+        const wasOff = !this.state.searchOpen;
         this.setState({
             searchOpen: !this.state.searchOpen
         });
+
+        if (wasOff) {
+            this.focusInput();
+        }
+    }
+
+    focusInput() {
+        ReactDOM.findDOMNode(this.refs.searchInput).focus();
     }
 
     onSelect(tagName) {
@@ -41,6 +51,22 @@ class Search extends Component {
             matching: []
         });
         this.props.onSelect(tagName);
+        this.focusInput();
+    }
+
+    onBlur() {
+        /*
+            Goal: hide search when the user is finished searching.
+
+            Since a part of the search is to select search results, blur fires too fast. Therefore,
+            as a workaround, onSelect sets focus back to the field and this method waits a bit to
+            see whether the searchInput still has focus.
+        */
+        setTimeout(() => {
+            if (ReactDOM.findDOMNode(this.refs.searchInput) !== document.activeElement) {
+                this.toggleSearch();
+            }
+        }, 300);
     }
 
     render() {
@@ -57,8 +83,10 @@ class Search extends Component {
                         onClick={this.toggleSearch.bind(this)}>Ikon</div>
                     <input
                         type="search"
+                        ref="searchInput"
                         className={this.state.searchOpen ? 'opened' : 'closed'}
                         onChange={this.onChange.bind(this)}
+                        onBlur={this.onBlur.bind(this)}
                         value={this.state.searchInput}
                         placeholder="Search for year, species and places" />
                 </div>
