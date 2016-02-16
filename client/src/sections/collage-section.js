@@ -2,11 +2,14 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Collage from '../collage';
+import './collage-section.scss';
 
 class CollagePage extends Component {
     render() {
         return (
-            <div style={{height: `${this.props.scroll.innerHeight}px`}}>
+            <div
+                id="collage-section"
+                style={{height: `${this.props.scroll.innerHeight}px`}}>
                 <Collage />
             </div>
         );

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Collage = () => (
     <div>
-        Collage inc
+        <div>Collage inc</div>
         <a href="#photo-section">All photos</a>
     </div>
 );
