@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import CollageSection from './sections/collage-section';
-
+import DeepWaterSection from './sections/deep-water-section';
 import PhotoSection from './sections/photo-section';
 import {setHistory} from './history/history-actions';
 import {currentPage} from './sections/constants';
@@ -38,6 +38,7 @@ class App extends Component {
             <div>
                 <CollageSection />
                 <PhotoSection />
+                <DeepWaterSection />
             </div>
         );
     }
