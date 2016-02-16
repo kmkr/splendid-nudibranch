@@ -44,9 +44,8 @@ class PhotoScroller extends Component {
 
     onScroll() {
         const photoListWrapper = document.getElementById('photo-list-wrapper');
-        const {pageYOffset} = window;
-        const threshold = 200;
-        if ((pageYOffset + threshold) > photoListWrapper.offsetHeight) {
+        const {innerHeight, pageYOffset} = window;
+        if ((pageYOffset + innerHeight) > photoListWrapper.offsetHeight) {
             this.setState({
                 visibleStart: 0,
                 visibleEnd: this.state.visibleEnd + 1
