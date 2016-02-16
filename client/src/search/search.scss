@@ -1,14 +1,15 @@
 #search {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1px;
     width: 300px;
     z-index: 10;
 
     input {
         height: 50px;
-        transition: all .5s;
+        transition: right .5s, width .5s;
         position: absolute;
+        right: 5px;
 
         &.opened {
             right: 50px;
@@ -16,8 +17,8 @@
         }
 
         &.closed {
-            right: 0;
             width: 0;
+            right: 10px;
         }
     }
 
