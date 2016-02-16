@@ -30,6 +30,13 @@ class Search extends Component {
         });
     }
 
+    onKeyUp(e) {
+        const backspace = 8;
+        if (e.keyCode === backspace && this.state.searchInput === '') {
+            console.log('todo: remove tag');
+        }
+    }
+
     toggleSearch(val) {
         if (typeof val === 'undefined') {
             val = !this.state.searchOpen;
@@ -58,15 +65,8 @@ class Search extends Component {
     }
 
     onBlur() {
-        /*
-            Goal: hide search when the user is finished searching.
-
-            Since a part of the search is to select search results, blur fires too fast. Therefore,
-            as a workaround, onSelect sets focus back to the field and this method waits a bit to
-            see whether the searchInput still has focus.
-        */
         setTimeout(() => {
-            if (ReactDOM.findDOMNode(this.refs.searchInput) !== document.activeElement) {
+            if (this.props.selectedTags.length === 0) {
                 this.toggleSearch(false);
             }
         }, 300);
@@ -75,22 +75,29 @@ class Search extends Component {
     render() {
         return (
             <div id="search">
-                {this.props.selectedTags.map(tagName => (
-                    <span
-                        key={tagName}
-                        onClick={this.props.onDelete.bind(this, tagName)}>{tagName}</span>
-                ))}
+                <div>
+                    <div className={`expandable ${this.state.searchOpen ? 'opened' : 'closed'}`}>
 
-                <div className="icon"
-                    onClick={this.toggleSearch.bind(this)}>Ikon</div>
-                <input
-                    type="search"
-                    ref="searchInput"
-                    className={this.state.searchOpen ? 'opened' : 'closed'}
-                    onChange={this.onChange.bind(this)}
-                    onBlur={this.onBlur.bind(this)}
-                    value={this.state.searchInput}
-                    placeholder="Search for year, species and places" />
+                        {this.props.selectedTags.map(tagName => (
+                            <span
+                                key={tagName}
+                                className="tag"
+                                onClick={this.props.onDelete.bind(this, tagName)}>{tagName}</span>
+                        ))}
+
+                        <input
+                            type="search"
+                            ref="searchInput"
+                            onChange={this.onChange.bind(this)}
+                            onKeyUp={this.onKeyUp.bind(this)}
+                            onBlur={this.onBlur.bind(this)}
+                            value={this.state.searchInput}
+                            placeholder="Search for year, species and places" />
+                    </div>
+
+                    <div className="icon"
+                        onClick={this.toggleSearch.bind(this)}>Ikon</div>
+                </div>
 
                 <div className="search-result-wrapper">
                     <ul className="search-result">
