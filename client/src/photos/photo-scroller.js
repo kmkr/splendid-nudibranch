@@ -2,72 +2,44 @@ import React, {Component, PropTypes} from 'react';
 
 import ListPhotos from './list-photos';
 import {getPhotoSizeForWidth} from '../../../common/constants';
-import throttle from './throttler';
 
-const SHOW_PHOTOS = 2;
+const SHOW_PHOTOS = 3;
 
 class PhotoScroller extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            photoSize: this.getPhotoSize(),
+            photoSize: getPhotoSizeForWidth(this.props.scroll.innerWidth),
             visibleStart: 0,
-            visibleEnd: Math.min(this.props.photos.length, SHOW_PHOTOS)
+            visibleEnd: SHOW_PHOTOS
         };
-        this.onScroll = this.onScroll.bind(this);
-        this.onResize = this.onResize.bind(this);
-    }
-
-    componentWillMount() {
-        throttle('scroll', 'optimizedScroll');
-        throttle('resize', 'optimizedResize');
-        window.addEventListener('optimizedScroll', this.onScroll);
-        window.addEventListener('optimizedResize', this.onResize);
     }
 
     componentWillReceiveProps(props) {
-        this.setState({
-            visibleStart: 0,
-            visibleEnd: Math.min(props.photos.length, SHOW_PHOTOS)
-        });
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('optimizedScroll', this.onScroll);
-        window.removeEventListener('optimizedResize', this.onResize);
-    }
-
-    getPhotoSize() {
-        const {innerWidth} = window;
-        return getPhotoSizeForWidth(innerWidth);
-    }
-
-    onScroll() {
+        const state = {};
+        const photoSize = getPhotoSizeForWidth(props.scroll.innerWidth);
+        if (photoSize.width > this.state.photoSize.width) {
+            state.photoSize = photoSize;
+        }
         const photoListWrapper = document.getElementById('photo-list-wrapper');
-        const {innerHeight, pageYOffset} = window;
-        if ((pageYOffset + innerHeight) > photoListWrapper.offsetHeight) {
-            this.setState({
-                visibleStart: 0,
-                visibleEnd: this.state.visibleEnd + 1
-            });
+        const {innerHeight, pageYOffset} = props.scroll;
+        if ((pageYOffset + innerHeight) > photoListWrapper.offsetTop) {
+            state.visibleEnd = Math.max(SHOW_PHOTOS,
+                Math.min(props.photos.length, this.state.visibleEnd + 1));
         }
-    }
 
-    onResize() {
-        if (this.getPhotoSize().width > this.state.photoSize.width) {
-            this.setState({
-                photoSize: this.getPhotoSize()
-            });
-        }
-        this.onScroll();
+        this.setState(state);
     }
 
     render() {
-        return (<ListPhotos
-            photos={this.props.photos}
-            photoSize={this.state.photoSize.name}
-            visibleStart={this.state.visibleStart}
-            visibleEnd={this.state.visibleEnd} />
+        return (
+            <div id="photo-scroller">
+                <ListPhotos
+                    photos={this.props.photos}
+                    photoSize={this.state.photoSize.name}
+                    visibleStart={this.state.visibleStart}
+                    visibleEnd={this.state.visibleEnd} />
+            </div>
         );
     }
 }

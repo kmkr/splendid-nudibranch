@@ -1,9 +1,7 @@
 #search {
-    position: absolute;
-    top: 0;
-    right: 1px;
     width: 300px;
-    z-index: 10;
+    position: absolute;
+    right: 0;
 
     input {
         height: 50px;
@@ -25,9 +23,8 @@
     .icon {
         width: 50px;
         height: 50px;
-        float: right;
         background-color: #000;
-        z-index: 100;
+        z-index: 20;
         position: absolute;
         right: 0;
         color: #fff;
@@ -41,7 +38,6 @@
             position: absolute;
             left: 0;
             right: 0;
-            z-index: 20;
             list-style-type: none;
             margin: 0;
             padding: 0;

@@ -78,18 +78,16 @@ class Search extends Component {
                         onClick={this.props.onDelete.bind(this, tagName)}>{tagName}</span>
                 ))}
 
-                <div style={{position: 'relative'}}>
-                    <div className="icon"
-                        onClick={this.toggleSearch.bind(this)}>Ikon</div>
-                    <input
-                        type="search"
-                        ref="searchInput"
-                        className={this.state.searchOpen ? 'opened' : 'closed'}
-                        onChange={this.onChange.bind(this)}
-                        onBlur={this.onBlur.bind(this)}
-                        value={this.state.searchInput}
-                        placeholder="Search for year, species and places" />
-                </div>
+                <div className="icon"
+                    onClick={this.toggleSearch.bind(this)}>Ikon</div>
+                <input
+                    type="search"
+                    ref="searchInput"
+                    className={this.state.searchOpen ? 'opened' : 'closed'}
+                    onChange={this.onChange.bind(this)}
+                    onBlur={this.onBlur.bind(this)}
+                    value={this.state.searchInput}
+                    placeholder="Search for year, species and places" />
 
                 <div className="search-result-wrapper">
                     <ul className="search-result">

@@ -1,0 +1,4 @@
+export default {
+    UPDATE_POSITION: 'UPDATE_POSITION',
+    UPDATE_SIZE: 'UPDATE_SIZE'
+};

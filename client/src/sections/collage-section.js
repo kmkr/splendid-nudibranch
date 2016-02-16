@@ -6,13 +6,17 @@ import Collage from '../collage';
 class CollagePage extends Component {
     render() {
         return (
-            <Collage />
+            <div style={{height: `${this.props.scroll.innerHeight}px`}}>
+                <Collage />
+            </div>
         );
     }
 }
 
-function select() {
-    return {};
+function select(state) {
+    return {
+        scroll: state.scroll
+    };
 }
 
 export default connect(select)(CollagePage);

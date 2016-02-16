@@ -1,16 +1,35 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Search from '../search';
 import {fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
 import {selectTag, unselectTag} from '../selected-tags/selected-tags-actions';
+import Search from '../search';
 import './photo-section.scss';
 
 class PhotoPage extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            fixed: false
+        };
+    }
+
     componentWillMount() {
         this.props.dispatch(fetchPhotos());
+    }
+
+    componentWillReceiveProps({scroll}) {
+        if (scroll.pageYOffset > scroll.innerHeight) {
+            this.setState({
+                fixed: true
+            });
+        } else {
+            this.setState({
+                fixed: false
+            });
+        }
     }
 
     onSelectTag(tagName) {
@@ -24,14 +43,22 @@ class PhotoPage extends Component {
     render() {
         return (
             <div id="photo-section">
-                <div className="logo">Splendid Nudibranch</div>
-                <Search
-                    selectedTags={this.props.selectedTags}
-                    photos={this.props.photos.data}
-                    onDelete={this.onUnselectTag.bind(this)}
-                    onSelect={this.onSelectTag.bind(this)} />
+                <div
+                    id="search-wrapper"
+                    className={this.state.fixed ? 'fixed' : ''}
+                    style={{
+                        top: this.state.fixed ? 0 : `${this.props.scroll.innerHeight}px`
+                    }}>
+                    <Search
+                        selectedTags={this.props.selectedTags}
+                        photos={this.props.photos.data}
+                        onDelete={this.onUnselectTag.bind(this)}
+                        onSelect={this.onSelectTag.bind(this)} />
+                </div>
                 <div className="col-sm-offset-2">
-                    <PhotoScroller photos={this.props.photos.data} />
+                    <PhotoScroller
+                        photos={this.props.photos.data}
+                        scroll={this.props.scroll} />
                 </div>
             </div>
         );
@@ -41,7 +68,8 @@ class PhotoPage extends Component {
 function select(state) {
     return {
         photos: state.photos,
-        selectedTags: state.selectedTags
+        selectedTags: state.selectedTags,
+        scroll: state.scroll
     };
 }
 

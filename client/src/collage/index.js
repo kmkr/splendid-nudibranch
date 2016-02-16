@@ -1,14 +1,10 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 
-const Collage = ({onLinkClick}) => (
+const Collage = () => (
     <div>
         Collage inc
-        <a href="/photos" onClick={onLinkClick}>All photos</a>
+        <a href="#photo-section">All photos</a>
     </div>
 );
-
-Collage.propTypes = {
-    onLinkClick: PropTypes.func.isRequired
-};
 
 export default Collage;

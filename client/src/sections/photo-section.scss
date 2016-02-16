@@ -1,15 +1,14 @@
 #photo-section {
-    .logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 100px;
-        background-color: #000;
+    #search-wrapper {
         z-index: 10;
-        color: #fff;
-    }
+        right: 0;
+        left: 0;
+        position: absolute;
 
+        &.fixed {
+            position: fixed;
+        }
+    }
     img {
         -webkit-transition: opacity .5s ease-in-out;
         -moz-transition: opacity .5s ease-in-out;
