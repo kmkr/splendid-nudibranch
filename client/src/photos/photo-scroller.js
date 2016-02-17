@@ -34,6 +34,7 @@ class PhotoScroller extends Component {
     render() {
         return (
             <div id="photo-scroller">
+                {this.props.scroll.innerWidth}
                 <ListPhotos
                     photos={this.props.photos}
                     photoSize={this.state.photoSize.name}
