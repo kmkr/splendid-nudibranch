@@ -16,6 +16,8 @@
         background-color: #cde69c;
         transition: right .5s, width .5s;
         position: absolute;
+        overflow: hidden;
+        height: 50px;
 
         &.opened {
             right: 50px;
@@ -25,6 +27,10 @@
         &.closed {
             width: 0;
             right: 10px;
+
+            inpuat {
+                width: 0;
+            }
         }
     }
 
