@@ -11,13 +11,17 @@ class Search extends Component {
         this.state = {
             searchInput: '',
             searchOpen: false,
-            matching: []
+            matching: [],
+            focusMatchingTag: -1
         };
     }
 
     onChange(e) {
         const value = e.target.value;
+        this.updateMatching(value);
+    }
 
+    updateMatching(value) {
         const matching = getMatchingTags({
             tags: getUniqueTags(this.props.photos),
             exclude: this.props.selectedTags,
@@ -26,7 +30,8 @@ class Search extends Component {
 
         this.setState({
             searchInput: value,
-            matching
+            matching,
+            focusMatchingTag: -1
         });
     }
 
@@ -34,22 +39,33 @@ class Search extends Component {
         const backspace = 8;
         const arrowDown = 40;
         const arrowUp = 38;
+        const enter = 13;
 
         switch (e.keyCode) {
         case backspace:
-            if (this.props.selectedTags.length && this.state.searchInput === '') {
+            if (this.props.selectedTags.length && !this.state.searchInput) {
                 this.props.onDelete(this.props.selectedTags[this.props.selectedTags.length - 1]);
             }
             break;
         case arrowDown:
             if (this.state.matching.length) {
-                console.log('todo: focus element');
+                this.setState({
+                    focusMatchingTag: Math.min(this.state.matching.length - 1, this.state.focusMatchingTag + 1)
+                });
             }
             break;
         case arrowUp:
             if (this.state.matching.length) {
-                console.log('todo: focus element');
+                this.setState({
+                    focusMatchingTag: Math.max(-1, this.state.focusMatchingTag - 1)
+                });
             }
+            break;
+        case enter:
+            if (this.state.focusMatchingTag > -1) {
+                this.props.onSelect(this.state.matching[this.state.focusMatchingTag]);
+            }
+            this.updateMatching();
             break;
         default:
 
@@ -120,9 +136,10 @@ class Search extends Component {
 
                 <div className="search-result-wrapper">
                     <ul className="search-result">
-                        {this.state.matching.map(tagName => (
+                        {this.state.matching.map((tagName, index) => (
                             <li
                                 onClick={this.onSelect.bind(this, tagName)}
+                                className={this.state.focusMatchingTag === index ? 'selected' : ''}
                                 key={tagName}>{tagName}</li>
                         ))}
                     </ul>
