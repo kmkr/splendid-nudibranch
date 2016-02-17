@@ -1,4 +1,4 @@
-import './vendor/vendor.scss';
+import './app.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Wrapper from './wrapper';

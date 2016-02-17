@@ -8,7 +8,7 @@ import {setHistory} from './history/history-actions';
 import {currentPage} from './sections/constants';
 import throttle from './scroll/throttler';
 import {updatePosition, updateSize} from './scroll/scroll-actions';
-import './app.scss';
+
 
 class App extends Component {
     componentWillMount() {
