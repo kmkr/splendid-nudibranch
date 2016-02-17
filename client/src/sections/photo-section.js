@@ -55,7 +55,7 @@ class PhotoSection extends Component {
                         onDelete={this.onUnselectTag.bind(this)}
                         onSelect={this.onSelectTag.bind(this)} />
                 </div>
-                <div className="col-sm-offset-2">
+                <div>
                     <PhotoScroller
                         photos={this.props.photos.data}
                         scroll={this.props.scroll} />
