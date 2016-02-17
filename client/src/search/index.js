@@ -38,7 +38,7 @@ class Search extends Component {
         switch (e.keyCode) {
         case backspace:
             if (this.props.selectedTags.length && this.state.searchInput === '') {
-                console.log('todo: remove tag');
+                this.props.onDelete(this.props.selectedTags[this.props.selectedTags.length - 1]);
             }
             break;
         case arrowDown:
