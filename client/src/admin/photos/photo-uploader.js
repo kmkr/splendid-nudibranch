@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import arrayFrom from 'array.from';
 
 function toFormData(fileList) {
     return fileList.map(file => {
@@ -12,7 +11,7 @@ function toFormData(fileList) {
 class PhotoUploader extends React.Component {
 
     onAddPhoto({target}) {
-        const formDataList = toFormData(arrayFrom(target.files || []));
+        const formDataList = toFormData(Array.from(target.files || []));
         formDataList.map(formData => this.props.onAddPhoto(formData));
     }
 
