@@ -40,6 +40,7 @@ class Search extends Component {
         const arrowDown = 40;
         const arrowUp = 38;
         const enter = 13;
+        const esc = 27;
 
         switch (e.keyCode) {
         case backspace:
@@ -67,22 +68,27 @@ class Search extends Component {
             }
             this.updateMatching();
             break;
+        case esc:
+            if (this.props.selectedTags.length === 0) {
+                this.toggleSearch(false);
+            }
+            break;
         default:
 
         }
     }
 
     toggleSearch(val) {
-        if (typeof val === 'undefined') {
-            val = !this.state.searchOpen;
-        }
-        const wasOff = !this.state.searchOpen;
         this.setState({
             searchOpen: val
         });
 
-        if (wasOff) {
+        this.updateMatching();
+
+        if (val) {
             this.focusInput();
+        } else {
+            ReactDOM.findDOMNode(this.refs.searchInput).blur();
         }
     }
 
@@ -104,7 +110,7 @@ class Search extends Component {
             if (this.props.selectedTags.length === 0) {
                 this.toggleSearch(false);
             }
-        }, 300);
+        }, 400);
     }
 
     render() {
@@ -131,7 +137,7 @@ class Search extends Component {
                     </div>
 
                     <div className="icon"
-                        onClick={this.toggleSearch.bind(this)}>Ikon</div>
+                        onClick={this.toggleSearch.bind(this, !this.state.searchOpen)}>Ikon</div>
                 </div>
 
                 <div className="search-result-wrapper">

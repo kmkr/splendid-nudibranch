@@ -18,10 +18,11 @@
         position: absolute;
         overflow: hidden;
         height: 50px;
+        display: flex;
 
         &.opened {
             right: 50px;
-            width: 250px;
+            width: 350px;
         }
 
         &.closed {
@@ -39,6 +40,7 @@
         background: transparent;
         outline: 0;
         border: 0;
+        flex-grow: 1;
     }
 
     .icon {
