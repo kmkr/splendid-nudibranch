@@ -5,6 +5,7 @@ import tempFileWriter from './temp-file-writer';
 import db from '../../db';
 import {base} from '../constants';
 import {resizeTo} from '../../../common/constants';
+import * as photoDataFormatter from '../photo-data-formatter';
 
 function resizeToMultiple(path) {
     return resizeTo.map(r => (
@@ -43,5 +44,6 @@ export default file => {
     return tempFileWriter(file)
         .then(({path}) => Promise.all(resizeToMultiple(path)))
         .then(resizedResults => Promise.all(upload(id, file, resizedResults)))
-        .then(() => insertToDb(id, file));
+        .then(() => insertToDb(id, file))
+        .then(photo => photoDataFormatter.dbToClient(photo, []));
 };
