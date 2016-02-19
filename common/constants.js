@@ -2,7 +2,7 @@ export const resizeTo = [
     {
         name: 'thumb',
         shortName: 'thumb',
-        width: 250
+        width: 220
     },
     {
         name: 'xsmall',

@@ -1,9 +1,24 @@
 .list-photos {
+
+    .entry {
+        margin-bottom: 40px;
+        display: flex;
+    }
+
     textarea, input {
         width: 100%;
     }
 
-    > div {
-        margin-bottom: 40px;
+    .thumb {
+        flex-basis: 250px;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .form {
+        flex-grow: 1;
     }
 }
