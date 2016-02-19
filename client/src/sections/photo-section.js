@@ -40,6 +40,17 @@ class PhotoSection extends Component {
         this.props.dispatch(unselectTag(tagName));
     }
 
+    photosBySelectedTags() {
+        const {photos, selectedTags} = this.props;
+        if (selectedTags.length === 0) {
+            return photos.data;
+        }
+
+        return photos.data.filter(photo => (
+            photo.tags.some(tag => selectedTags.indexOf(tag) > -1)
+        ));
+    }
+
     render() {
         return (
             <div id="photo-section">
@@ -57,7 +68,7 @@ class PhotoSection extends Component {
                 </div>
                 <div>
                     <PhotoScroller
-                        photos={this.props.photos.data}
+                        photos={this.photosBySelectedTags()}
                         scroll={this.props.scroll} />
                 </div>
             </div>
