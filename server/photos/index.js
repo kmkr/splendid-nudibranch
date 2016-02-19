@@ -13,8 +13,9 @@ const upload = multer();
 router.get('/', (req, res) => {
     getPhotosHandler()
         .then(response => res.json(response))
-        .catch(err => {
-            console.log(err);
+        .catch(error => {
+            console.log(error);
+            return res.status(500).json({error});
         });
 });
 
