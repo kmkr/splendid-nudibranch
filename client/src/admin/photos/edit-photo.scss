@@ -21,6 +21,17 @@
             background-color: #d9534f;
             border-color: #d43f3a;
         }
+
+        @keyframes animate-inprogress {0% { background-position: 0 0; } 100% { background-position: 60px 0; } }
+
+        &.active {
+            background-size: 30px 30px !important;
+            background-image: linear-gradient(135deg, rgba(0, 0, 0, .05) 25%,
+                transparent 25%,
+                transparent 50%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, .05) 75%,
+                transparent 75%, transparent) !important;
+            animation: animate-inprogress 3s linear infinite;
+        }
     }
     .tags {
         > span {

@@ -79,13 +79,15 @@ class EditPhoto extends Component {
 
                 <div className="col-sm-4">
                     <button
-                        disabled={this.isDisabled()}
+                        disabled={photo.deleting || photo.updating}
+                        className={photo.updating ? 'active' : ''}
                         onClick={this.update.bind(this)}>
                         Update
                     </button>
 
                     <button
-                        className="danger"
+                        className={`danger ${photo.deleting ? 'active' : ''}`}
+                        disabled={photo.deleting || photo.updating}
                         onClick={onDeleteClick.bind(this, photo)}>
                         Delete
                     </button>

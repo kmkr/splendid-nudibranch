@@ -1,5 +1,6 @@
 import snFetch from '../fetch';
 
+const defaultRequestHandler = () => null;
 const defaultResponseHandler = response => response;
 
 export default ({
@@ -7,12 +8,14 @@ export default ({
     url,
     options = {},
     responseHandler = defaultResponseHandler,
+    requestHandler = defaultRequestHandler,
     errorHandler,
     method = 'get'
 }) => {
     return dispatch => {
         dispatch({
-            type: actionTypes.REQUEST
+            type: actionTypes.REQUEST,
+            data: requestHandler()
         });
         return snFetch[method](url, options)
             .then(response => response.json())

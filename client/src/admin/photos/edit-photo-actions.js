@@ -22,6 +22,7 @@ export function updatePhoto(photo, newValues) {
         url: `/photos/${photo.key}`,
         method: 'putJSON',
         options: newValues,
+        requestHandler: () => ({key: photo.key}),
         responseHandler: data => photoDataConversion(data, data.base)
     });
 }
@@ -30,6 +31,8 @@ export function deletePhoto(photo) {
     return fetchActionFactory({
         actionTypes: deletePhotoActionTypes,
         url: `/photos/${photo.key}`,
-        method: 'delete'
+        method: 'delete',
+        requestHandler: () => ({key: photo.key}),
+        responseHandler: () => ({key: photo.key})
     });
 }
