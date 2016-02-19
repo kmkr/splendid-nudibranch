@@ -65,8 +65,8 @@ class Search extends Component {
         case enter:
             if (this.state.focusMatchingTag > -1) {
                 this.props.onSelect(this.state.matching[this.state.focusMatchingTag]);
+                this.updateMatching();
             }
-            this.updateMatching();
             break;
         case esc:
             if (this.props.selectedTags.length === 0) {
