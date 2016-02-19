@@ -78,6 +78,10 @@ class Search extends Component {
         }
     }
 
+    getInputDom() {
+        return ReactDOM.findDOMNode(this.refs.searchInput);
+    }
+
     toggleSearch(val) {
         this.setState({
             searchOpen: val
@@ -86,14 +90,10 @@ class Search extends Component {
         this.updateMatching();
 
         if (val) {
-            this.focusInput();
+            this.getInputDom().focus();
         } else {
-            ReactDOM.findDOMNode(this.refs.searchInput).blur();
+            this.getInputDom().blur();
         }
-    }
-
-    focusInput() {
-        ReactDOM.findDOMNode(this.refs.searchInput).focus();
     }
 
     onSelect(tagName) {
@@ -102,7 +102,7 @@ class Search extends Component {
             matching: []
         });
         this.props.onSelect(tagName);
-        this.focusInput();
+        this.getInputDom().focus();
     }
 
     onBlur() {
