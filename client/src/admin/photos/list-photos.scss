@@ -1,5 +1,9 @@
 .list-photos {
-    textarea {
+    textarea, input {
         width: 100%;
+    }
+
+    > div {
+        margin-bottom: 40px;
     }
 }

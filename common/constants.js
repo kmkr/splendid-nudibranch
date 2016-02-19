@@ -1,5 +1,10 @@
 export const resizeTo = [
     {
+        name: 'thumb',
+        shortName: 'thumb',
+        width: 250
+    },
+    {
         name: 'xsmall',
         shortName: 'xs',
         width: 500

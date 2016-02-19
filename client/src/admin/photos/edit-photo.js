@@ -57,33 +57,39 @@ class EditPhoto extends Component {
         const {photo, onDeleteClick} = this.props;
 
         return (
-            <div className="edit-photo">
-                <input
-                    placeholder="Title"
-                    value={this.state.title}
-                    onChange={this.titleUpdated.bind(this)} />
-                <textarea
-                    placeholder="Photo description"
-                    value={this.state.description}
-                    onChange={this.descriptionUpdated.bind(this)}></textarea>
+            <div className="edit-photo row">
+                <div className="col-sm-10">
+                    <input
+                        placeholder="Title"
+                        value={this.state.title}
+                        onChange={this.titleUpdated.bind(this)} />
+                    <textarea
+                        placeholder="Photo description"
+                        value={this.state.description}
+                        onChange={this.descriptionUpdated.bind(this)}></textarea>
 
-                <div className="tags">
-                    {photo.tags.sort().map(tag => <span className="saved" key={tag}>{tag}</span>)}
-                    {this.state.newTags.map(tag => <span className="unsaved" key={tag}>{tag}</span>)}
+                    <div className="tags">
+                        <AddTag
+                            onAdd={this.tagAdded.bind(this)} />
 
-                    <AddTag
-                        onAdd={this.tagAdded.bind(this)} />
+                        {photo.tags.sort().map(tag => <span className="saved" key={tag}>{tag}</span>)}
+                        {this.state.newTags.map(tag => <span className="unsaved" key={tag}>{tag}</span>)}
+                    </div>
                 </div>
 
-                <button
-                    disabled={this.isDisabled()}
-                    onClick={this.update.bind(this)}>
-                    Update
-                </button>
+                <div className="col-sm-4">
+                    <button
+                        disabled={this.isDisabled()}
+                        onClick={this.update.bind(this)}>
+                        Update
+                    </button>
 
-                <button onClick={onDeleteClick.bind(this, photo)}>
-                    Delete
-                </button>
+                    <button
+                        className="danger"
+                        onClick={onDeleteClick.bind(this, photo)}>
+                        Delete
+                    </button>
+                </div>
             </div>
         );
     }

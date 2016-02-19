@@ -27,12 +27,17 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <PhotoUploader onAddPhoto={this.onAddPhoto.bind(this)} />
-                <ListPhotos
-                    photos={this.props.photos.data}
-                    onDeleteClick={this.onDeleteClick.bind(this)}
-                    onUpdateClick={this.onUpdateClick.bind(this)} />
+            <div className="row">
+                <div className="col-lg-push-2 col-lg-10">
+                    <h1>Upload photos</h1>
+                    <PhotoUploader onAddPhoto={this.onAddPhoto.bind(this)} />
+                    <hr />
+                    <h1>Edit photos</h1>
+                    <ListPhotos
+                        photos={this.props.photos.data}
+                        onDeleteClick={this.onDeleteClick.bind(this)}
+                        onUpdateClick={this.onUpdateClick.bind(this)} />
+                </div>
             </div>
         );
     }

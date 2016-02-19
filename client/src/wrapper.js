@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 
+import './app.scss';
 import './polyfills';
 import rootReducer from './reducers/root-reducer';
 

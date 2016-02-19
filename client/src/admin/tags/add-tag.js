@@ -31,12 +31,21 @@ class AddTag extends Component {
         }
     }
 
+    onKeyUp(e) {
+        const enter = 13;
+
+        if (e.keyCode === enter) {
+            this.save(e.target.value);
+        }
+    }
+
     render() {
         return (
             <input
                 placeholder="Add a tag"
                 value={this.state.tagInput}
                 onBlur={this.onBlur.bind(this)}
+                onKeyUp={this.onKeyUp.bind(this)}
                 onChange={this.onChange.bind(this)} />
         );
     }

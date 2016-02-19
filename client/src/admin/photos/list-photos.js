@@ -4,14 +4,18 @@ import './list-photos.scss';
 import EditPhoto from './edit-photo';
 
 const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
-    <div className="list-photos row">
+    <div className="list-photos">
         {photos.map(photo => (
-            <div className="col-md-7" key={photo.key}>
-                <img src={photo.small} />
-                <EditPhoto
-                    onDeleteClick={onDeleteClick}
-                    onUpdateClick={onUpdateClick}
-                    photo={photo} />
+            <div key={photo.key} className="row">
+                <div className="col-sm-5 col-md-3">
+                    <img src={photo.thumb} />
+                </div>
+                <div className="col-sm-9 col-md-11">
+                    <EditPhoto
+                        onDeleteClick={onDeleteClick}
+                        onUpdateClick={onUpdateClick}
+                        photo={photo} />
+                </div>
             </div>
         ))}
     </div>
