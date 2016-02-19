@@ -6,7 +6,7 @@ $grid-breakpoints: (
   xl: 1500px
 );
 
-$enable-flex: true;
+$enable-flex: false;
 $enable-hover-media-query: false;
 $grid-columns:               14;
 $grid-gutter-width:          1.875rem;
@@ -28,10 +28,11 @@ $table-cell-padding:            .75rem !default;
 $table-sm-cell-padding:         .3rem !default;
 $table-bg:                      transparent !default;
 
+@import "mixins/clearfix";
 @import "mixins/hover";
 @import "mixins/tab-focus";
-@import "mixins/reboot";
 @import "mixins/breakpoint";
 @import "mixins/grid-framework";
 @import "mixins/grid";
+@import "reboot";
 @import "grid";
