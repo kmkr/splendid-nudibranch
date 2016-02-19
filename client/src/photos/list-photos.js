@@ -27,7 +27,6 @@ class ListPhotos extends Component {
                         ) : null
                 ))}
 
-                <div id="photo-list-wrapper"></div>
             </div>
         );
     }

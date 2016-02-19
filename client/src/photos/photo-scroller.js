@@ -23,6 +23,7 @@ class PhotoScroller extends Component {
         }
         const photoListWrapper = document.getElementById('photo-list-wrapper');
         const {innerHeight, pageYOffset} = props.scroll;
+        console.log(photoListWrapper.offsetTop);
         if ((pageYOffset + innerHeight) > photoListWrapper.offsetTop) {
             state.visibleEnd = Math.max(SHOW_PHOTOS,
                 Math.min(props.photos.length, this.state.visibleEnd + 1));
@@ -40,6 +41,8 @@ class PhotoScroller extends Component {
                     photoSize={this.state.photoSize.name}
                     visibleStart={this.state.visibleStart}
                     visibleEnd={this.state.visibleEnd} />
+
+                <div id="photo-list-wrapper"></div>
             </div>
         );
     }
