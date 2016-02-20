@@ -116,15 +116,17 @@ class Search extends Component {
     render() {
         return (
             <div id="search">
-                <div>
+                <div className="search">
                     <div className={`expandable ${this.state.searchOpen ? 'opened' : 'closed'}`}>
 
-                        {this.props.selectedTags.map(tagName => (
-                            <span
-                                key={tagName}
-                                className="tag"
-                                onClick={this.props.onDelete.bind(this, tagName)}>{tagName}</span>
-                        ))}
+                        <div className="tags">
+                            {this.props.selectedTags.map(tagName => (
+                                <span
+                                    key={tagName}
+                                    className="tag"
+                                    onClick={this.props.onDelete.bind(this, tagName)}>{tagName}</span>
+                            ))}
+                        </div>
 
                         <input
                             type="search"
