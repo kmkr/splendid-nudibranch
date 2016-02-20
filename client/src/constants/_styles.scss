@@ -5,3 +5,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1500px
 );
+
+$font-size-root:             16px !default;
+$font-size-base:             1rem !default;
+$font-size-large:            $font-size-root * 1.8;

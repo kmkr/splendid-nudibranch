@@ -1,6 +1,12 @@
+@import '../constants/styles';
+
 .photo {
     .title {
+        text-align: center;
         font-family: 'Bentham', serif;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        font-size: $font-size-large;
     }
 
     .description {
