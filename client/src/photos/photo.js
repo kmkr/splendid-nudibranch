@@ -18,7 +18,7 @@ class Photo extends Component {
     render() {
         const {photoSize, photo} = this.props;
         return (
-            <div className="photo col-xs-14">
+            <div className="photo col-xs-14 col-md-12 col-md-offset-1">
                 <img
                     style={{opacity: this.state.loaded ? 1 : 0}}
                     onLoad={this.loaded.bind(this)}
