@@ -1,16 +1,17 @@
 @import '../constants/styles';
 
 .photo {
+    text-align: center;
+
     .title {
-        text-align: center;
         font-family: 'Bentham', serif;
-        margin-bottom: 5px;
+        margin-bottom: 0;
         margin-top: 20px;
         font-size: $font-size-large;
     }
 
     .description {
-
+        margin-top: 5px;
     }
 
     hr {
