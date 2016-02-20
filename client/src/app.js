@@ -9,7 +9,6 @@ import {currentPage} from './sections/constants';
 import throttle from './scroll/throttler';
 import {updatePosition, updateSize} from './scroll/scroll-actions';
 
-
 class App extends Component {
     componentWillMount() {
         throttle('scroll', 'optimizedScroll');
