@@ -3,7 +3,7 @@ import smoothScroll from 'smooth-scroll';
 
 function onClick(e) {
     e.preventDefault();
-    smoothScroll.animateScroll('#photo-section');
+    smoothScroll.animateScroll('#photo-section', null, {updateURL: false});
 }
 
 const Collage = () => (

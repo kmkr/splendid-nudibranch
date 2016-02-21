@@ -6,7 +6,7 @@ import './deep-water-section.scss';
 
 function onClick(e) {
     e.preventDefault();
-    smoothScroll.animateScroll('#app');
+    smoothScroll.animateScroll('#app', null, {updateURL: false});
 }
 
 class DeepWaterSection extends Component {
