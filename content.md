@@ -128,3 +128,11 @@ Title	Silky Shark
 Tags	shark egypt 2014 red-sea elphinstone
 Latin	Carcharhinus falciformis
 Desc	At the end of our dive Elphinstone the last of us in the water were blessed with a visit by this beautiful silky shark. Once abundant in the world's oceans, now overfished and in some places depleted. Commercial fishing of tuna, the silkys favored prey, make it the shark second most commonly taken as bycatch.
+
+
+PC230491.jpg
+
+Title	Orangutan Crab
+Tags
+Latin	Achaeus japonicus
+Desc	This type of crab is typically found on bubble coral just hanging out, waiting waiting for plankton to get stick in its reddish fur, which it then picks off as snack food for the day.
