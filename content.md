@@ -70,6 +70,22 @@ Tags	stargazer anilao 2014 philippines
 Desc	???
 
 
+DSC04006.jpg
+
+Title	Frost Princess
+Latin	Hypselodoris bullocki
+Tags	nudibranch anilao 2014 philippines
+Desc	?
+
+
+DSC04854.jpg
+
+Title	?
+Latin	?
+Tags	nudibranch anilao 2014 philippines
+Desc	Nudibranch have external gills, hence the name which translates to "naked gill". And unlike many other sea slugs, they don't have a shell. They shed their shell after their larval stage and have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most use the toxic metabolites from what they eat for their own defense. Their brightly colored bodies are beautiful, but rather than using it for vanity they use it to show potential predators that they are poisonous.
+
+
 Title	DSC04061.jpg
 Latin	Izucaris masudai
 Tags	shrimp anilao 2014 philippines
@@ -135,4 +151,12 @@ PC230491.jpg
 Title	Orangutan Crab
 Tags
 Latin	Achaeus japonicus
-Desc	This type of crab is typically found on bubble coral just hanging out, waiting waiting for plankton to get stick in its reddish fur, which it then picks off as snack food for the day.
+Desc	This type of crab is frequently found on bubble coral just hanging out, waiting waiting for plankton to get stick in its reddish fur, which it then picks off as snack food for the day.
+
+
+DSC05829.jpg
+
+Title	Red Sea Visibility
+Tags
+Latin	-
+Desc
