@@ -42,8 +42,16 @@ DSC01782.jpg
 
 Title	Blackfin Barracuda
 Latin	Sphyraena qenie
-Tags	philippines 2013 apo-reef barracuda
+Tags	philippines 2014 apo-reef barracuda
 Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like body of pure muscle makes it extremely fast. A fascinating fish commonly seen schooling.
+
+
+DSC02648.jpg
+
+Title	?
+Latin	?
+Tags	nudibranch philippines 2014 anilao
+Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste from chemicals dissolved in the water. Most nudibranchs can retracted their rhinophores to protect these vital organs against other fish.
 
 
 DSC03330.jpg
@@ -69,6 +77,29 @@ Latin	Uranoscopus chinensis
 Tags	stargazer anilao 2014 philippines
 Desc	???
 
+DSC03660.jpg
+
+Title	?
+Latin	?
+Tags	nudibranch anilao 2014 philippines
+Desc	Noe om rhinophores
+
+
+DSC03699.jpg
+
+Title	?
+Latin	?
+Tags	nudibranch anilao 2014 philippines
+Desc	?
+
+
+DSC03808.jpg
+
+Title
+Latin
+Tags	nudibranch anilao 2014 philippines
+Desc	Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals.
+
 
 DSC04006.jpg
 
@@ -83,7 +114,12 @@ DSC04854.jpg
 Title	?
 Latin	?
 Tags	nudibranch anilao 2014 philippines
-Desc	Nudibranch have external gills, hence the name which translates to "naked gill". And unlike many other sea slugs, they don't have a shell. They shed their shell after their larval stage and have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most use the toxic metabolites from what they eat for their own defense. Their brightly colored bodies are beautiful, but rather than using it for vanity they use it to show potential predators that they are poisonous.
+Desc	Unlike many other sea slugs, nudibranchs lack a shell. As a larva they have, but they shed it when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most use the toxic metabolites from what they eat for their own defence.
+
+
+
+
+Nudibranch have external gills, hence the name which translates to "naked gill".
 
 
 Title	DSC04061.jpg
