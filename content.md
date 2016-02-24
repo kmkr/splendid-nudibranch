@@ -51,7 +51,7 @@ DSC02648.jpg
 Title	?
 Latin	?
 Tags	nudibranch philippines 2014 anilao
-Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste from chemicals dissolved in the water. Most nudibranchs can retracted their rhinophores to protect these vital organs against other fish.
+Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Most nudibranchs can retracted their rhinophores to protect these vital organs against other fish.
 
 
 DSC03330.jpg
