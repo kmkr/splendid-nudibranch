@@ -8,7 +8,7 @@ Desc	While sea anemones are poisonous to most fish, the clownfish is immune to t
 
 DSC00266.jpg
 
-Title	Western Clown Clownfish
+Title	Western Clown Anemonefish
 Tags	anemonefish clownfish philippines 2013 anemone dauin
 Latin	Amphiprion ocellaris
 Desc	Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Each anemone with a clownfish population has a strict hierarchy where juveniles begin at the bottom and may easily be victims to agression, and possibly eviction, from more mature clownfish.
@@ -19,7 +19,7 @@ DSC00974.jpg
 Title	Garden Eels
 Tags	eel philippines 2013 dauin
 Latin	?
-Desc	Sometimes mistaken for swaying seagrass, these small eels can live in colonies of over thousand individuals where each one lives in its own burrow in the sand which it rarely leave.
+Desc	Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over thousand individuals. Each eel has its own burrow in the sand which it rarely leaves.
 
 
 DSC00792.jpg
@@ -48,8 +48,8 @@ Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like
 
 DSC02648.jpg
 
-Title	?
-Latin	?
+Title	Nudibranch
+Latin	Nembrotha chamberlaini
 Tags	nudibranch philippines 2014 anilao
 Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Most nudibranchs can retracted their rhinophores to protect these vital organs against other fish.
 
@@ -67,7 +67,7 @@ DSC03425.jpg
 Title	Bobbit Worm
 Latin	Eunice aphroditois
 Tags	worm anilao 2014 philippines
-Desc	The bobbit can grow up to three meters, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Only small parts of the body is exposed, just enought to ambush surprised fish. This worm is quite rare, shy, and mysterious as well. Not much is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish. The bobbit was one of my reasons to go to Anilao.
+Desc	The bobbit is my favorite worm. It can grow up to three meters, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Only small parts of the body is exposed, just enought to ambush surprised fish. This worm is quite rare, shy, and mysterious as well. Not much is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish. The bobbit was one of my reasons to go to Anilao.
 
 
 DSC03448.jpg
@@ -75,35 +75,35 @@ DSC03448.jpg
 Title	Reticulate Stargazer
 Latin	Uranoscopus chinensis
 Tags	stargazer anilao 2014 philippines
-Desc	???
+Desc	Hiding under the sand or mud, this one waits for passing fish before it jumps upwards while it creates a vacuum to suck in the prey. Its mouth and eyes are placed on top of the body, and compared to its total length, the eyes are quite small.
 
 DSC03660.jpg
 
-Title	?
-Latin	?
+Title	Nudibranch
+Latin	Nembrotha chamberlaini
 Tags	nudibranch anilao 2014 philippines
 Desc	Noe om rhinophores
 
 
 DSC03699.jpg
 
-Title	?
-Latin	?
+Title	Nudibranch
+Latin	Chromodoris magnifica
 Tags	nudibranch anilao 2014 philippines
 Desc	?
 
 
 DSC03808.jpg
 
-Title
-Latin
+Title	Nudibranch
+Latin	Hypselodoris infucata
 Tags	nudibranch anilao 2014 philippines
 Desc	Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals.
 
 
 DSC04006.jpg
 
-Title	Frost Princess
+Title	Nudibranch
 Latin	Hypselodoris bullocki
 Tags	nudibranch anilao 2014 philippines
 Desc	?
@@ -122,10 +122,12 @@ Desc	Unlike many other sea slugs, nudibranchs lack a shell. As a larva they have
 Nudibranch have external gills, hence the name which translates to "naked gill".
 
 
-Title	DSC04061.jpg
+DSC04061.jpg
+
+Title	Leopard Anemone Shrimp
 Latin	Izucaris masudai
 Tags	shrimp anilao 2014 philippines
-Desc	?
+Desc	This beautiful shrimp is rare, and there is little information about it. The single one goal for the dive I took this photo was to find this shrimp. The dive guide I dove with had seen it on a previous dive and knew approximately where to find it, but it's only two centimeter long and well camouflaged.
 
 
 DSC02484.jpg
@@ -137,7 +139,7 @@ Desc	On a tiny island just outside Mindoro lives an old parrot named Klara. She 
 
 DSC04913.jpg
 
-Title	The Space Traveller
+Title	Glass Anemone Shrimp
 Tags	anilao philippines 2014
 Latin	Periclimenes brevicarpalis
 Desc	???
