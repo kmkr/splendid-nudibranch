@@ -16,7 +16,8 @@
     "before": false,
     "beforeEach": false,
     "describe": false,
-    "it": false
+    "it": false,
+    "Promise"
   },
   "parser": "babel-eslint",
   "plugins": [

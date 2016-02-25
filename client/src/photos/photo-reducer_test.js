@@ -86,7 +86,7 @@ describe('photo-reducer', () => {
     });
 
     describe('on delete action', () => {
-        let action, origState, reduced;
+        let origState, reduced;
 
         beforeEach(() => {
             origState = {
@@ -96,7 +96,7 @@ describe('photo-reducer', () => {
                     {key: '3'}
                 ]
             };
-            action = {
+            const action = {
                 type: deletePhotoActionTypes.RECEIVE,
                 data: {
                     key: 'my key'

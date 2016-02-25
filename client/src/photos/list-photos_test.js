@@ -7,10 +7,10 @@ chai.use(chaiEnzyme());
 import ListPhotos from './list-photos';
 
 describe('<ListPhotos />', () => {
-    let photos, wrapper;
+    let wrapper;
 
     beforeEach(() => {
-        photos = [{
+        const photos = [{
             key: 'key',
             small: '/small',
             description: 'Photo description'

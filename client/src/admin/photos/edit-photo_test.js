@@ -42,11 +42,11 @@ describe('<EditPhoto />', () => {
         });
 
         describe('with changed state', () => {
-            let textarea, wrapper;
+            let wrapper;
 
             beforeEach(() => {
                 wrapper = wrap();
-                textarea = wrapper.find('textarea');
+                const textarea = wrapper.find('textarea');
                 textarea.simulate('change', {target: {value: 'Content'}});
             });
 

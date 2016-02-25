@@ -10,10 +10,10 @@ chai.use(sinonChai);
 import ListPhotos from './list-photos';
 
 describe('<ListPhotos /> (admin)', () => {
-    let props, wrapper;
+    let wrapper;
 
     beforeEach(() => {
-        props = {
+        const props = {
             photos: [{
                 key: 'key',
                 small: '/small',
