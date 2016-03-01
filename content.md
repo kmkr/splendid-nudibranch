@@ -14,20 +14,20 @@ Latin	Amphiprion ocellaris
 Desc	Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Each anemone with a clownfish population has a strict hierarchy where juveniles begin at the bottom and may easily be victims to agression, and possibly eviction, from more mature clownfish.
 
 
-DSC00974.jpg
-
-Title	Garden Eels
-Tags	eel philippines 2013 dauin
-Latin	?
-Desc	Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over thousand individuals. Each eel has its own burrow in the sand which it rarely leaves.
-
-
 DSC00792.jpg
 
 Title	Fuchsia Flatworm
 Latin	Pseudoceros ferrugineus
 Tags	philippines 2014 pandan-island worm
 Desc	Flatworms lack circulatory and respiratory organs, oxygen is instead taken up through the entire body. They have the same bright colors as nudibranchs and approximately the same length but is a completely different animal. It's easy to distinguish the two animals as flatworms lack the antennas/rhinophores, move faster and are (duh) flat.
+
+
+DSC00974.jpg
+
+Title	Garden Eels
+Tags	eel philippines 2013 dauin
+Latin	?
+Desc	Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over thousand individuals. Each eel has its own burrow in the sand which it rarely leaves.
 
 
 DSC01151.jpg
@@ -44,6 +44,14 @@ Title	Blackfin Barracuda
 Latin	Sphyraena qenie
 Tags	philippines 2014 apo-reef barracuda
 Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like body of pure muscle makes it extremely fast. A fascinating fish commonly seen schooling.
+
+
+DSC02544.jpg
+
+Title	Fire Urchin
+Latin	Astropyga radiata
+Tags	philippines 2014 anilao urchin
+Desc	Often found in shallow areas, this type of urchin sometimes gather in large aggregations and carpet the sandy floor. Having iridescent blue dots, radiant bodies and long moving spines, they certainly brighten up the muddy bays of Anilao.
 
 
 DSC02648.jpg
