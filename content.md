@@ -3,7 +3,7 @@ DSC00259.jpg
 Title	Western Clown Anemonefish
 Latin	Amphiprion ocellaris
 Tags	anemonefish clownfish philippines 2013 anemone dauin
-Desc	While sea anemones are poisonous to most fish, the clownfish is immune to their stinging tentacles. Together, they form a symbiotic relationship where the clownfish gets protection from predators and anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
+Desc	Sea anemones are, to most fish, poisonous. The clownfish however is immune to their stinging tentacles and they form a symbiotic relationship where the clownfish receive protection from predators and the anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
 
 
 DSC00266.jpg
@@ -11,7 +11,7 @@ DSC00266.jpg
 Title	Western Clown Anemonefish
 Tags	anemonefish clownfish philippines 2013 anemone dauin
 Latin	Amphiprion ocellaris
-Desc	Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Each anemone with a clownfish population has a strict hierarchy where juveniles begin at the bottom and may easily be victims to agression, and possibly eviction, from more mature clownfish.
+Desc	Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish population there is a strict hierarchy where juveniles begin at the bottom and may easily be victims to agression, and possibly eviction from the anemone, by more mature clownfish.
 
 
 DSC00792.jpg
@@ -19,7 +19,7 @@ DSC00792.jpg
 Title	Fuchsia Flatworm
 Latin	Pseudoceros ferrugineus
 Tags	philippines 2014 pandan-island worm
-Desc	Flatworms lack circulatory and respiratory organs, oxygen is instead taken up through the entire body. They have the same bright colors as nudibranchs and approximately the same length but is a completely different animal. It's easy to distinguish the two animals as flatworms lack the antennas/rhinophores, move faster and are (duh) flat.
+Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They have the same bright colors as nudibranchs and approximately the same length but is a completely different animal. It's easy to distinguish the two animals as flatworms lack the antennas/rhinophores, generally move faster and are (duh) flat.
 
 
 DSC00974.jpg
@@ -130,6 +130,14 @@ Desc	Unlike many other sea slugs, nudibranchs lack a shell. As a larva they have
 Nudibranch have external gills, hence the name which translates to "naked gill".
 
 
+DSC03769.jpg
+
+Title	Giant Frogfish
+Latin	Antennarius commerson
+Tags	anilao frogfish 2014 philippines
+Desc	The plump body of a frogfish is uncommon in the world of fish, but their large variation of colors make up for it. In two weeks, the fish can change its own color to match the environment. Frogfishes use their pelvic fins (the ones below the body) to walk along the sea floor, but they generally do not move very much. Their pectoral fins (one on each side) is used for stability.
+
+
 DSC04061.jpg
 
 Title	Leopard Anemone Shrimp
@@ -143,6 +151,11 @@ DSC02484.jpg
 Title	Klara of Pandan Island
 Tags	philippines pandan-island 2014 parrot
 Desc	On a tiny island just outside Mindoro lives an old parrot named Klara. She is watched over by the owners of the island. I didn't like it at first, but over time I learned there was more to it than just keeping a parrot as a pet. In fact, the story is very touching but too long to write here. Ask me one time if you want to hear it.
+
+
+DSC02931.jpg (mangler lokalt)
+
+Title
 
 
 DSC04913.jpg
@@ -195,7 +208,7 @@ Desc	At the end of our dive Elphinstone the last of us in the water were blessed
 PC230491.jpg
 
 Title	Orangutan Crab
-Tags
+Tags	philippines 2013 crab dauin
 Latin	Achaeus japonicus
 Desc	This type of crab is frequently found on bubble coral just hanging out, waiting waiting for plankton to get stick in its reddish fur, which it then picks off as snack food for the day.
 
