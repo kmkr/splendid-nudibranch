@@ -166,6 +166,14 @@ Latin	Periclimenes brevicarpalis
 Desc	???
 
 
+DSC05829.jpg
+
+Title	Red Sea Visibility
+Tags
+Latin	-
+Desc
+
+
 DSC06145.jpg
 
 Title	St. Johns Cave Systems
@@ -197,6 +205,14 @@ Latin	Balistoides viridescens
 Desc	Scattered throughout the world's seas, the triggerfish is usually a solitary fish. They are territorial and can be nasty to intruders, both fish and divers. Be respectful and watch its signals, an erect dorsal spine means stay away.
 
 
+DSC07475.jpg
+
+Title	Red Sea Corals
+Tags
+Latin
+Desc	Water temperatures in the Red Sea peaks at 35. Most reefs bleach and die off in such conditions, the Red Sea corals linger on. They are remarkably resilient to high temperatures. Scientists are trying to figure out the key to this crucial ability, with hope of some day be able to salvage reefs currently suffering from rising sea temperatures in other parts of the world.
+
+
 DSC07737.jpg
 
 Title	Silky Shark
@@ -213,9 +229,3 @@ Latin	Achaeus japonicus
 Desc	This type of crab is frequently found on bubble coral just hanging out, waiting waiting for plankton to get stick in its reddish fur, which it then picks off as snack food for the day.
 
 
-DSC05829.jpg
-
-Title	Red Sea Visibility
-Tags
-Latin	-
-Desc
