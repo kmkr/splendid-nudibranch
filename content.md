@@ -229,3 +229,12 @@ Latin	Achaeus japonicus
 Desc	This type of crab is frequently found on bubble coral just hanging out, waiting waiting for plankton to get stick in its reddish fur, which it then picks off as snack food for the day.
 
 
+
+AUSTRALIA
+
+Kris Krister 276.jpg
+
+Title	Dwarf Minke Whale
+Tags	australia 2010 great-barrier-reef whale
+Latin	Undescribed (Balaenoptera acutorostrata subspecies)
+Desc	The whales circled us and came closer and closer, and I got the feeling they observed us just as we did to them. As they moved closer we could spot their fine details, their uniqueness and beauty. The marks on their skin are used to distinguish them from each other and is one of the keys to count the number of individuals. When the distance closed to a few meters, one of the whales finally opened his eye. I felt the eye was one of innocence, with history and with stories of the unknown. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
