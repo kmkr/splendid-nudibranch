@@ -221,6 +221,14 @@ Latin	Carcharhinus falciformis
 Desc	At the end of our dive Elphinstone the last of us in the water were blessed with a visit by this beautiful silky shark. Once abundant in the world's oceans, now overfished and in some places depleted. Commercial fishing of tuna, the silkys favored prey, make it the shark second most commonly taken as bycatch.
 
 
+DSC08755.jpg
+
+Title	Juvenile Blacktip Reef Shark
+Tags	malaysia 2015 shark
+Latin	Carcharhinus melanopterus
+Desc	Patrolling the shallows, half a dozen or so juvenile blacktips were practicing the skill of hunting in the shallow, safe, nursing grounds.
+
+
 PC230491.jpg
 
 Title	Orangutan Crab
