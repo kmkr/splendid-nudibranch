@@ -51,7 +51,23 @@ DSC02544.jpg
 Title	Fire Urchin
 Latin	Astropyga radiata
 Tags	philippines 2014 anilao urchin
-Desc	Often found in shallow areas, this type of urchin sometimes gather in large aggregations and carpet the sandy floor. Having iridescent blue dots, radiant bodies and long moving spines, they certainly brighten up the muddy bays of Anilao.
+Desc	Often found in shallow areas, this type of urchin sometimes carpet the sandy floor in large aggregations. Having iridescent blue dots, radiant bodies and long moving spines, they certainly brighten up the muddy bays of Anilao.
+
+
+DSC02569.jpg
+
+Title	Tube Dwelling Anemone
+Latin
+Tags	philippines anilao 2014 anemone
+Desc
+
+
+DSC02594.jpg
+
+Title	Juvenile Boxfish
+Latin
+Tags	philippines 2014 anilao
+Desc	The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. It's very photogenic.
 
 
 DSC02648.jpg
@@ -75,7 +91,7 @@ DSC03425.jpg
 Title	Bobbit Worm
 Latin	Eunice aphroditois
 Tags	worm anilao 2014 philippines
-Desc	The bobbit is my favorite worm. It can grow up to three meters, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Only small parts of the body is exposed, just enought to ambush surprised fish. This worm is quite rare, shy, and mysterious as well. Not much is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish. The bobbit was one of my reasons to go to Anilao.
+Desc	The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Only small parts of the body is exposed, just enought to ambush surprised fish. This worm is quite rare, shy, and mysterious as well. Not much is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish. The bobbit was one of my reasons to go to Anilao.
 
 
 DSC03448.jpg
@@ -83,7 +99,7 @@ DSC03448.jpg
 Title	Reticulate Stargazer
 Latin	Uranoscopus chinensis
 Tags	stargazer anilao 2014 philippines
-Desc	Hiding under the sand or mud, this one waits for passing fish before it jumps upwards while it creates a vacuum to suck in the prey. Its mouth and eyes are placed on top of the body, and compared to its total length, the eyes are quite small.
+Desc	Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site had become a large battlefield for the tiny creatures living there. The starfish were many and moving fast, climbing over animals and any obstructing ground they collided into, stopping only to devour the delicious molluscs their tube feet got attached to. Countless squids dancing around in the dark, moving just outside the beam of our lights while concurrently exploiting it for the ongoing hunt. A stargazer landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. The stargazer waits for passing fish before it jumps upwards while it creates a vacuum to suck in the prey
 
 DSC03660.jpg
 
@@ -158,6 +174,30 @@ DSC02931.jpg (mangler lokalt)
 Title
 
 
+DSC04244.jpg
+
+Title	Longhorn Cowfish
+Tags	philippines anilao 2014 boxfish
+Latin	Lactoria cornuta
+Desc	Lacking pelvic fins, this one is a very slow swimmer. It's defence? The horns make the fish difficult to eat, and it's also poisonous.
+
+
+DSC04554.jpg
+
+Title	The Last Dive in Anilao
+Tags	philippines anilao 2014
+Latin	-
+Desc
+
+
+DSC04665.jpg
+
+Title	Devil Scorpionfish
+Tags	philippines anilao 2014
+Latin	Scorpaenopsis diabolus
+Desc
+
+
 DSC04913.jpg
 
 Title	Glass Anemone Shrimp
@@ -195,6 +235,22 @@ Title	The Dugongs of Marsha Shouna
 Tags	egypt 2014 marsha-shouna red-sea
 Latin	Dugong dugon
 Desc	The word "dugong" means lady of the sea, they are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The dugong is herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries entirely gone due to hunting,  bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few. The 100 km coastline along Marsa Alam have now only seven dugongs left.
+
+
+DSC06743.jpg
+
+Title	Green Turtle
+Tags	egypt 2014 marsha-shouna red-sea
+Latin	Chelonia mydas
+Desc	It's speculated that green turtles need between 20 - 50 years to reach sexual maturity, and a turtle's life is not easy so very few reach adulthood. Once, the estimate was one percent. It dropped to one thousandth. Now I've heard speculations of much less. Previously suffering from unrestricted exploitation by humans, turtles are now having more like a global protection status. However, their slow reproductive rate, combined with increased development in coastal areas make the species very vulnerable. Many turtles are also lost due to accidental catch by fishermen.
+
+
+DSC07195.jpg
+
+Title	Common Lionfish
+Tags	egypt 2014 red-sea
+Latin	Pterois miles
+Desc	The only known species to blow water at prey in effort to disorient them, or get attention, and then devour it by a swift move using their extremely quick reflexes.
 
 
 DSC07389.jpg
