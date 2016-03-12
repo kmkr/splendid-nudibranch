@@ -19,7 +19,7 @@ describe('fetch-reducer-factory', () => {
         };
         const state = reducer(undefined, action);
 
-        expect(state).to.have.property('isFetching', true);
+        expect(state).to.have.property('ongoingRequest', true);
         expect(state.error).to.be.undefined;
         expect(state.data).to.eql([]);
     });
@@ -31,7 +31,7 @@ describe('fetch-reducer-factory', () => {
         };
         const state = reducer(undefined, action);
 
-        expect(state.isFetching).to.equal(false);
+        expect(state.ongoingRequest).to.equal(false);
         expect(state.error).to.be.undefined;
         expect(state.data).to.eql([{foo: 'bar'}]);
     });
@@ -43,7 +43,7 @@ describe('fetch-reducer-factory', () => {
         };
         const state = reducer(undefined, action);
 
-        expect(state.isFetching).to.equal(false);
+        expect(state.ongoingRequest).to.equal(false);
         expect(state.error).to.equal('An error');
         expect(state.data).to.eql([]);
     });
