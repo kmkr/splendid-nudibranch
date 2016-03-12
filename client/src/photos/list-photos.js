@@ -14,7 +14,7 @@ class ListPhotos extends Component {
     }
 
     render() {
-        const {photos, photoSize} = this.props;
+        const {photos, innerHeight, photoSize} = this.props;
 
         return (
             <div className="row">
@@ -23,6 +23,7 @@ class ListPhotos extends Component {
                         <Photo
                             key={photo.key}
                             photo={photo}
+                            innerHeight={innerHeight}
                             photoSize={photoSize} />
                         ) : null
                 ))}
@@ -35,6 +36,7 @@ class ListPhotos extends Component {
 ListPhotos.propTypes = {
     photos: PropTypes.array.isRequired,
     photoSize: PropTypes.string.isRequired,
+    innerHeight: PropTypes.number.isRequired,
     visibleStart: PropTypes.number,
     visibleEnd: PropTypes.number
 };

@@ -38,6 +38,7 @@ class PhotoScroller extends Component {
                 <ListPhotos
                     photos={this.props.photos}
                     photoSize={this.state.photoSize.name}
+                    innerHeight={this.props.scroll.innerHeight}
                     visibleStart={this.state.visibleStart}
                     visibleEnd={this.state.visibleEnd} />
 
