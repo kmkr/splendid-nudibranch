@@ -67,7 +67,7 @@ DSC02594.jpg
 Title	Juvenile Boxfish
 Latin
 Tags	philippines 2014 anilao
-Desc	The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. It's very photogenic.
+Desc	The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps.
 
 
 DSC02648.jpg
@@ -75,7 +75,13 @@ DSC02648.jpg
 Title	Nudibranch
 Latin	Nembrotha chamberlaini
 Tags	nudibranch philippines 2014 anilao
-Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Most nudibranchs can retracted their rhinophores to protect these vital organs against other fish.
+Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Most nudibranchs can retracted these vital organs as protection against other fish.
+
+
+DSC02713.jpg
+
+Title	??
+Latin	Pontonides unciger
 
 
 DSC03330.jpg
@@ -83,7 +89,7 @@ DSC03330.jpg
 Title	Coleman Shrimp
 Latin	Periclimenes colemani
 Tags	anilao 2014 coleman-shrimp fire-urchin sea-urchin shrimp philippines
-Desc	Man and wife living on a toxic fire urchin. The largest of them is the female, swollen by the same poisonous tentacles that protect them against predators.
+Desc	Man and wife living on a toxic fire urchin. The largest of them is the female.
 
 
 DSC03425.jpg
@@ -159,7 +165,7 @@ DSC04061.jpg
 Title	Leopard Anemone Shrimp
 Latin	Izucaris masudai
 Tags	shrimp anilao 2014 philippines
-Desc	This beautiful shrimp is rare, and there is little information about it. The single one goal for the dive I took this photo was to find this shrimp. The dive guide I dove with had seen it on a previous dive and knew approximately where to find it, but it's only two centimeter long and well camouflaged.
+Desc	The single one goal for the dive I took this photo was to find this beautiful, rare shrimp. The dive guide I dove with had seen it on a previous dive and knew approximately where to find it, but it's only two centimeter long and well camouflaged.
 
 
 DSC02484.jpg
@@ -179,7 +185,7 @@ DSC04244.jpg
 Title	Longhorn Cowfish
 Tags	philippines anilao 2014 boxfish
 Latin	Lactoria cornuta
-Desc	Lacking pelvic fins, this one is a very slow swimmer. It's defence? The horns make the fish difficult to eat, and it's also poisonous.
+Desc	Lacking pelvic fins, this one is a very slow swimmer. It's defence is having horns, which are difficult to eat. and it's also poisonous.
 
 
 DSC04554.jpg
@@ -242,7 +248,7 @@ DSC06743.jpg
 Title	Green Turtle
 Tags	egypt 2014 marsha-shouna red-sea
 Latin	Chelonia mydas
-Desc	It's speculated that green turtles need between 20 - 50 years to reach sexual maturity, and a turtle's life is not easy so very few reach adulthood. Once, the estimate was one percent. It dropped to one thousandth. Now I've heard speculations of much less. Previously suffering from unrestricted exploitation by humans, turtles are now having more like a global protection status. However, their slow reproductive rate, combined with increased development in coastal areas make the species very vulnerable. Many turtles are also lost due to accidental catch by fishermen.
+Desc	It's believed that green turtles need between 20 - 50 years to reach sexual maturity, and a turtle's life is not easy so very few reach adulthood. Once, the estimate was one percent. It dropped to one thousandth. Now I've heard speculations of much less. Previously suffering from unrestricted exploitation by humans, turtles are now having more like a global protection status. However, their slow reproductive rate, combined with increased development in coastal areas make the species very vulnerable. Many turtles are also lost due to accidental catch by fishermen.
 
 
 DSC07195.jpg
@@ -250,7 +256,11 @@ DSC07195.jpg
 Title	Common Lionfish
 Tags	egypt 2014 red-sea
 Latin	Pterois miles
-Desc	The only known species to blow water at prey in effort to disorient them, or get attention, and then devour it by a swift move using their extremely quick reflexes.
+Desc	?
+
+
+Senere til en Red Lionfish:
+Desc	The red lionfish is the only known species to blow water at prey in effort to disorient them, or get attention, and then devour it by a swift move using their extremely quick reflexes.
 
 
 DSC07389.jpg
@@ -258,7 +268,7 @@ DSC07389.jpg
 Title	Titan Triggerfish
 Tags	triggerfish egypt 2014 red-sea
 Latin	Balistoides viridescens
-Desc	Scattered throughout the world's seas, the triggerfish is usually a solitary fish. They are territorial and can be nasty to intruders, both fish and divers. Be respectful and watch its signals, an erect dorsal spine means stay away.
+Desc	Scattered throughout the world's seas, the triggerfish is usually a solitary fish. It's territorial and can be nasty to intruders, both fish and divers. Be respectful and watch its signals, an erect dorsal spine means stay away. Swim away in a horizontal line to avoid it's vertical, cone shaped territory boundary.
 
 
 DSC07475.jpg
@@ -282,7 +292,7 @@ DSC08755.jpg
 Title	Juvenile Blacktip Reef Shark
 Tags	malaysia 2015 shark
 Latin	Carcharhinus melanopterus
-Desc	Patrolling the shallows, half a dozen or so juvenile blacktips were practicing the skill of hunting in the shallow, safe, nursing grounds.
+Desc	Patrolling the shallows, half a dozen or so juvenile blacktips were using the safe nursing grounds just outside a small beach on Perhentians to practice the skill of hunting.
 
 
 PC230491.jpg
@@ -301,4 +311,12 @@ Kris Krister 276.jpg
 Title	Dwarf Minke Whale
 Tags	australia 2010 great-barrier-reef whale
 Latin	Undescribed (Balaenoptera acutorostrata subspecies)
-Desc	The whales circled us and came closer and closer, and I got the feeling they observed us just as we did to them. As they moved closer we could spot their fine details, their uniqueness and beauty. The marks on their skin are used to distinguish them from each other and is one of the keys to count the number of individuals. When the distance closed to a few meters, one of the whales finally opened his eye. I felt the eye was one of innocence, with history and with stories of the unknown. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
+Desc	The group of whales circled us and gradually came closer for each round. As they moved closer we could spot their fine details, their uniqueness and beauty. The marks on their skin are used to distinguish them from each other and is one of the keys to count the number of individuals. When the distance closed to a few meters, one of the whales opened one the eyes. An eye filled with stories of the unknown deep waters. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
+
+
+Kris Krister 412.jpg
+
+Title	Potato Cod
+Tags	australia 2013 great-barrier-reef cod
+Latin	Epinephelus tukula
+Desc	A large, friendly and curious fellow. The potato cods, or groupers, are few, but they are territorial and can be found more or less the same places all the time, hanging around to get cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
