@@ -80,13 +80,15 @@ Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of t
 
 DSC02713.jpg
 
-Title	??
+Title	Wire Coral Shrimp
 Latin	Pontonides unciger
+Tags	anilao 2014 shrimp philippines
+Desc	Lives exclusively on the black coral whip, usually in pairs. I couldn't find more than one shrimp, but they are very well camouflaged and only one centimeter long so maybe this shrimp didn't live alone after all. You may wonder why the whip is called black coral when it's bright green. Its inner skeleton is black and the flesh varies in color. P. Unciger shrimps adept by changing their own color to match the coral's color.
 
 
 DSC03330.jpg
 
-Title	Coleman Shrimp
+Title	Coleman's Shrimp
 Latin	Periclimenes colemani
 Tags	anilao 2014 coleman-shrimp fire-urchin sea-urchin shrimp philippines
 Desc	Man and wife living on a toxic fire urchin. The largest of them is the female.
