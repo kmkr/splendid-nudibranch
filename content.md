@@ -146,7 +146,12 @@ DSC04006.jpg
 Title	Nudibranch
 Latin	Hypselodoris bullocki
 Tags	nudibranch anilao 2014 philippines
-Desc	?
+Desc	Nudibranch have external gills, hence the name which translates to "naked gill".
+
+
+
+
+"The eyes in nudibranchs are simple and able to discern little more than light and dark.[9] The eyes are set into the body, are about a quarter of a millimeter in diameter, and consist of a lens and five photoreceptors"
 
 
 DSC04854.jpg
@@ -159,7 +164,6 @@ Desc	Unlike many other sea slugs, nudibranchs lack a shell. As a larva they have
 
 
 
-Nudibranch have external gills, hence the name which translates to "naked gill".
 
 
 DSC03769.jpg
@@ -329,4 +333,4 @@ Kris Krister 412.jpg
 Title	Potato Cod
 Tags	australia 2013 great-barrier-reef cod
 Latin	Epinephelus tukula
-Desc	A large, friendly and curious fellow. The potato cods, or groupers, are few, but they are territorial and can be found more or less the same places all the time, hanging around to get cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
+Desc	A large, friendly and curious fellow. The potato cods are rare, but they are territorial so they are quite easy to find once first located. They really seem to just hang around to get cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
