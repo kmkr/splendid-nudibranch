@@ -86,6 +86,14 @@ Tags	anilao 2014 shrimp philippines
 Desc	Lives exclusively on the black coral whip, usually in pairs. I couldn't find more than one shrimp, but they are very well camouflaged and only one centimeter long so maybe this shrimp didn't live alone after all. You may wonder why the whip is called black coral when it's bright green. Its inner skeleton is black and the flesh varies in color. P. Unciger shrimps adept by changing their own color to match the coral's color.
 
 
+DSC02955.jpg
+
+Title	The Chromodoris Genus
+Latin	Chromodoris annae
+Tags	anilao 2014 nudibranch philippines
+Desc
+
+
 DSC02971.jpg
 
 Title	Porcelain Crab
@@ -208,6 +216,14 @@ Title	The Last Dive in Anilao
 Tags	philippines anilao 2014
 Latin	-
 Desc
+
+
+DSC04577.jpg
+
+Title	Magnificent Sea Anemone with Pink Skunk Clownfish
+Tags	philippines anilao 2014 anemone
+Latin	Heteractis magnifica with Amphiprion perideraion
+Desc	The previous name for this anemone was the Ritteri Anemone. The new name is Heteractis magnifica, or Magnificent Sea Anemone, perhaps updated because it's too beautiful for a dull name. The anemone can entirely retract it's tentacles and it's column, here in purple color, will be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself. Did I mention it's an awesome animal?
 
 
 DSC04665.jpg
