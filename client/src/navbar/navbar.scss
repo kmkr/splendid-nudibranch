@@ -1,0 +1,11 @@
+nav {
+    text-align: center;
+    height: 50px;
+    background-color: #fff;
+
+    > span {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}
