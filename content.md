@@ -51,15 +51,15 @@ DSC02544.jpg
 Title	Fire Urchin
 Latin	Astropyga radiata
 Tags	philippines 2014 anilao urchin
-Desc	Often found in shallow areas, this type of urchin sometimes carpet the sandy floor in large aggregations. Having iridescent blue dots, radiant bodies and long moving spines, they certainly brighten up the muddy bays of Anilao.
+Desc	Often found in shallow areas, this type of urchin sometimes carpet the sandy floor in large aggregations. Having iridescent blue dots, radiant bodies and long spines, they contribute to brighten up the muddy coast of Anilao.
 
 
 DSC02569.jpg
 
 Title	Tube Dwelling Anemone
-Latin
+Latin	Cerianthus sp. (not confirmed)
 Tags	philippines anilao 2014 anemone
-Desc
+Desc	Not a true anemone only superficially similar, this animal construct a tube in the sand in which they live in. It's entire body, including more than 200 tapering tentacles,  can be retracted inside the tube for protection. To some animals this creature is a favored meal.
 
 
 DSC02594.jpg
