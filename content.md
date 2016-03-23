@@ -14,6 +14,16 @@ Latin	Amphiprion ocellaris
 Desc	Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish population there is a strict hierarchy where juveniles begin at the bottom and may easily be victims to agression, and possibly eviction from the anemone, by more mature clownfish.
 
 
+DSC00571.jpg
+
+Title
+Tags	nudibranch philippines 2013 dauin
+Latin	chromodoris annae
+Desc
+
+
+DSC00792.jpg
+
 DSC00792.jpg
 
 Title	Fuchsia Flatworm
