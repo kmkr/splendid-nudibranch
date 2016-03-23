@@ -3,7 +3,7 @@ import {resizeTo} from '../../../common/constants';
 
 import './photo.scss';
 
-const SOME_SPACE_FOR_TITLE_AND_DESCRIPTION = 100;
+const GIVE_ME_SOME_SLACK = 50;
 
 class Photo extends Component {
     constructor(props) {
@@ -21,17 +21,21 @@ class Photo extends Component {
         const {innerHeight, photoSize, photo} = this.props;
         const style = {
             opacity: this.state.loaded ? 1 : 0,
-            maxHeight: innerHeight - SOME_SPACE_FOR_TITLE_AND_DESCRIPTION
+            maxHeight: innerHeight - GIVE_ME_SOME_SLACK
         };
         return (
-            <div className="photo col-xs-14 col-md-12 col-md-offset-1">
-                <img
-                    style={style}
-                    onLoad={this.loaded.bind(this)}
-                    src={photo[photoSize]} />
-                <p className="title">{photo.title}</p>
-                <hr />
-                <p className="description">{photo.description}</p>
+            <div className="row">
+                <div className="photo col-xs-14 col-xl-10">
+                    <img
+                        style={style}
+                        onLoad={this.loaded.bind(this)}
+                        src={photo[photoSize]} />
+                </div>
+                <div className="text col-xl-4">
+                    <p className="title">{photo.title}</p>
+                    <hr />
+                    <p className="description">{photo.description}</p>
+                </div>
             </div>
         );
     }

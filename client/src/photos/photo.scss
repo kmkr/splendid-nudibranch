@@ -1,8 +1,7 @@
 @import '../constants/styles';
 
 .photo {
-    text-align: center;
-
+    margin-bottom: 200px;
     .title {
         font-family: 'Bentham', serif;
         margin-bottom: 0;
@@ -18,4 +17,10 @@
         width: 60px;
         height: 1px;
     }
+}
+
+.text {
+    text-align: center;
+    // todo: kun på desktop:
+    margin-top: 100px;
 }

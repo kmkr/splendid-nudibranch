@@ -17,7 +17,7 @@ class ListPhotos extends Component {
         const {photos, innerHeight, photoSize} = this.props;
 
         return (
-            <div className="row">
+            <div>
                 {photos.map((photo, index) => (
                     this.isVisible(index) ? (
                         <Photo
