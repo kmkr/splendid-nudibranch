@@ -5,7 +5,6 @@ import {fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
 import {selectTag, unselectTag} from '../selected-tags/selected-tags-actions';
 import Search from '../search';
-import Navbar from '../navbar';
 import './photo-section.scss';
 
 class PhotoSection extends Component {
@@ -56,18 +55,16 @@ class PhotoSection extends Component {
         return (
             <div id="photo-section">
                 <div
-                    id="navbar-wrapper"
+                    id="search-wrapper"
                     className={this.state.fixed ? 'fixed' : ''}
                     style={{
                         top: this.state.fixed ? 0 : `${this.props.scroll.innerHeight}px`
                     }}>
-                    <Navbar>
-                        <Search
-                            selectedTags={this.props.selectedTags}
-                            photos={this.props.photos.data}
-                            onDelete={this.onUnselectTag.bind(this)}
-                            onSelect={this.onSelectTag.bind(this)} />
-                    </Navbar>
+                    <Search
+                        selectedTags={this.props.selectedTags}
+                        photos={this.props.photos.data}
+                        onDelete={this.onUnselectTag.bind(this)}
+                        onSelect={this.onSelectTag.bind(this)} />
                 </div>
                 <div>
                     <PhotoScroller

@@ -2,8 +2,9 @@
 @import "../vendor/bootstrap/mixins/breakpoint";
 
 #search {
-    float: right;
     width: 100%;
+    position: absolute;
+    right: 0;
 
     .icon {
         color: #fff;
