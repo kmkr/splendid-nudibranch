@@ -27,7 +27,7 @@ DSC00792.jpg
 Title	White Eyed Moray
 Tags	philippines 2014 pandan-island eel
 Latin	Gymnothorax thyrsoideus
-Desc	Moray eels are shy creatures, mostly seen only by their head. Most of the long slender body is hidden inside crevices, in which it retreats if you come too near.
+Desc	Moray eels are shy creatures, mostly seen peeking out from rocks and coral formations. Most of the long slender body is hidden inside crevices, in which it retreats if you come too near.
 
 DSC00792.jpg
 
@@ -66,7 +66,7 @@ DSC01782.jpg
 Title	Blackfin Barracuda
 Latin	Sphyraena qenie
 Tags	philippines 2014 apo-reef barracuda
-Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like body of pure muscle makes it extremely fast. A fascinating fish commonly seen schooling.
+Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like body - almost pure muscle - makes it extremely fast. A fascinating fish commonly seen schooling.
 
 
 DSC02484.jpg
@@ -126,10 +126,18 @@ Desc
 
 DSC02971.jpg
 
-Title	Porcelain Crab
-Latin	Porcellanella triloba (not confirmed)
+Title	Swimming Crab
+Latin	Carupa sp. (Porcellanella triloba?) (not confirmed)
 Tags	anilao 2014 crab philippines
 Desc
+
+
+DSC02984.jpg
+
+Title	Painted Frogfish
+Latin	Antennarius pictus
+Tags	anilao 2014 frogfish philippines
+Desc	The benthic zone, a fancy name for the sea floor, is where the frogfish lives. He lives a solitary lifestyle - after mating the frogfish pair do not tolerate each other and the male will sometimes eat the female if she stays around.
 
 
 DSC03330.jpg
