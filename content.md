@@ -24,6 +24,11 @@ Desc
 
 DSC00792.jpg
 
+Title	White Eyed Moray
+Tags	philippines 2014 pandan-island eel
+Latin	Gymnothorax thyrsoideus
+Desc	Moray eels are shy creatures, mostly seen only by their head. Most of the long slender body is hidden inside crevices, in which it retreats if you come too near.
+
 DSC00792.jpg
 
 Title	Fuchsia Flatworm
