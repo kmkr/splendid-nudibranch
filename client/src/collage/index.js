@@ -1,16 +1,24 @@
-import React from 'react';
-import smoothScroll from 'smooth-scroll';
+import React, {PropTypes} from 'react';
 
-function onClick(e) {
+function delegate(e, delegatee, ...rest) {
     e.preventDefault();
-    smoothScroll.animateScroll('#photo-section', null, {updateURL: false});
+    delegatee(...rest);
 }
 
-const Collage = () => (
+const Collage = ({itemClicked, photoLinkClicked}) => (
     <div>
-        <div>Collage inc</div>
-        <a href="#" onClick={onClick}>All photos</a>
+        <div>
+            <a href="#" onClick={e => delegate(e, itemClicked, 'ea89-63b3')}>
+                <img src="/static/images/collage/1/DSC01725.jpg" />
+            </a>
+        </div>
+        <a href="#" onClick={e => delegate(e, photoLinkClicked)}>All photos</a>
     </div>
 );
+
+Collage.propTypes = {
+    itemClicked: PropTypes.func.isRequired,
+    photoLinkClicked: PropTypes.func.isRequired
+};
 
 export default Collage;

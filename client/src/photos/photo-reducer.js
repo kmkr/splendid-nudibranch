@@ -4,6 +4,7 @@ import {
     updatePhotoActionTypes,
     uploadPhotoActionTypes
 } from '../admin/photos/edit-photo-action-types';
+import collageActionTypes from '../collage/collage-action-types';
 
 import {setTagsForPhotoActionTypes} from '../admin/tags/edit-tags-action-types';
 import reducerFactory from '../reducers/fetch-reducer-factory';
@@ -48,6 +49,19 @@ function photo(state, action) {
     }
 }
 
+function placeItemWithNameFirst(photos, key) {
+    const matches = photos.filter(elem => elem.key === key);
+    if (matches.length) {
+        const photo = matches[0];
+        return [
+            photo,
+            ...photos.filter(elem => elem.key !== key)
+        ];
+    }
+
+    return photos;
+}
+
 export default (state, action) => {
     switch (action.type) {
     case uploadPhotoActionTypes.RECEIVE:
@@ -64,6 +78,10 @@ export default (state, action) => {
     case deletePhotoActionTypes.RECEIVE:
         return Object.assign({}, state, {
             data: state.data.filter(elem => elem.key !== action.data.key)
+        });
+    case collageActionTypes.ITEM_SELECTED:
+        return Object.assign({}, state, {
+            data: placeItemWithNameFirst(state.data, action.data.key)
         });
     default:
         return getPhotosReducer(state, action);
