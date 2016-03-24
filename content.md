@@ -53,12 +53,27 @@ Tags	shark philippines 2013 malapascua
 Desc	Malapascua is known for its legendary thresher sharks usually found in deep waters. However, when the sun starts to rise they ascend to the cleaning stations on the sloaps of Monad Shoal. Diving starts 05.00 am.
 
 
+DSC01725.jpg
+
+Title
+Latin	Chromodoris sp.
+Tags	philippines 2014 pandan-island nudibranch
+Desc
+
+
 DSC01782.jpg
 
 Title	Blackfin Barracuda
 Latin	Sphyraena qenie
 Tags	philippines 2014 apo-reef barracuda
 Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like body of pure muscle makes it extremely fast. A fascinating fish commonly seen schooling.
+
+
+DSC02484.jpg
+
+Title	Klara of Pandan Island
+Tags	philippines pandan-island 2014 parrot
+Desc	On a tiny island just outside Mindoro lives an old parrot named Klara. She is watched over by the owners of the island. I didn't like it at first, but over time I learned there was more to it than just keeping a parrot as a pet. In fact, the story is very touching but too long to write here. Ask me one time if you want to hear it.
 
 
 DSC02544.jpg
@@ -204,12 +219,6 @@ Latin	Izucaris masudai
 Tags	shrimp anilao 2014 philippines
 Desc	The single one goal for the dive I took this photo was to find this beautiful, rare shrimp. The dive guide I dove with had seen it on a previous dive and knew approximately where to find it, but it's only two centimeter long and well camouflaged.
 
-
-DSC02484.jpg
-
-Title	Klara of Pandan Island
-Tags	philippines pandan-island 2014 parrot
-Desc	On a tiny island just outside Mindoro lives an old parrot named Klara. She is watched over by the owners of the island. I didn't like it at first, but over time I learned there was more to it than just keeping a parrot as a pet. In fact, the story is very touching but too long to write here. Ask me one time if you want to hear it.
 
 
 DSC02931.jpg (mangler lokalt)
