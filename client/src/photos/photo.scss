@@ -2,6 +2,11 @@
 
 .photo {
     margin-bottom: 200px;
+    // bootstrap override
+    // todo: kun på desktop:
+    padding-left: 0;
+    padding-right: 0;
+    //
     .title {
         font-family: 'Bentham', serif;
         margin-bottom: 0;
@@ -23,4 +28,5 @@
     text-align: center;
     // todo: kun på desktop:
     margin-top: 100px;
+    //
 }
