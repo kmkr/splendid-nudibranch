@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     getTagsHandler()
         .then(response => res.json(response))
-        .catch(err => res.stats(500).json({err}));
+        .catch(err => res.status(500).json({err}));
 });
 
 router.post('/:id', (req, res) => {

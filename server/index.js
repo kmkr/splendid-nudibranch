@@ -6,6 +6,7 @@ import compression from 'compression';
 import photoRouter from './photos';
 import tagRouter from './tags';
 import sitemapRouter from './sitemap';
+import statsRouter from './statistics';
 import robotsRouter from './robots';
 
 const indexHtml = `${__dirname}/index.html`;
@@ -27,6 +28,7 @@ app.use(bodyParser.json());
 app.use('/static', express.static(`${__dirname}/static`));
 app.use('/photos', photoRouter);
 app.use('/tags', tagRouter);
+app.use('/stats', statsRouter);
 app.use('/sitemap.xml', sitemapRouter);
 app.use('/robots.txt', robotsRouter);
 

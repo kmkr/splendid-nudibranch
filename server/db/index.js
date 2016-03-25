@@ -40,5 +40,8 @@ export default {
     },
     updateTag(tagName, newValues) {
         return getDb.then(db => updateOneInCollection(db, 'tags', {name: tagName}, newValues));
+    },
+    storeStatistic(statistic) {
+        return getDb.then(db => insertToCollection(db, 'statistics', statistic));
     }
 };

@@ -9,6 +9,7 @@ import {setHistory} from './history/history-actions';
 import {currentPage} from './sections/constants';
 import throttle from './scroll/throttler';
 import {updatePosition, updateSize} from './scroll/scroll-actions';
+import {postStats} from './statistics';
 
 class App extends Component {
     componentWillMount() {
@@ -26,6 +27,8 @@ class App extends Component {
     componentDidMount() {
         this.props.dispatch(updatePosition());
         this.props.dispatch(updateSize());
+
+        setTimeout(postStats, 2000);
     }
 
     componentWillUnmount() {
