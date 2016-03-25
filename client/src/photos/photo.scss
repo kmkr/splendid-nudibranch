@@ -1,32 +1,49 @@
 @import '../constants/styles';
+@import "../vendor/bootstrap/mixins/breakpoint";
 
-.photo {
+.photo-wrapper {
     margin-bottom: 200px;
-    // bootstrap override
-    // todo: kun på desktop:
-    padding-left: 0;
-    padding-right: 0;
-    //
-    .title {
-        font-family: 'Bentham', serif;
-        margin-bottom: 0;
-        margin-top: 20px;
-        font-size: $font-size-large;
+
+    @include media-breakpoint-up(xl) {
+        display: flex;
     }
 
-    .description {
-        margin-top: 5px;
+    .photo {
+
+        @include media-breakpoint-up(xl) {
+            max-width: 80%;
+            float: left;
+        }
+
+        .title {
+            font-family: 'Bentham', serif;
+            margin-bottom: 0;
+            margin-top: 20px;
+            font-size: $font-size-large;
+        }
+
+        .description {
+            margin-top: 5px;
+        }
+
+        hr {
+            width: 60px;
+            height: 1px;
+        }
     }
 
-    hr {
-        width: 60px;
-        height: 1px;
-    }
-}
+    .text {
+        text-align: center;
 
-.text {
-    text-align: center;
-    // todo: kun på desktop:
-    margin-top: 100px;
-    //
+        @include media-breakpoint-up(xl) {
+            margin-top: 100px;
+            width: 20%;
+            flex-grow: 1;
+            padding: $grid-gutter-width / 2;
+            float: left;
+            .text-wrapper {
+                display: inline-block; // for å unngå at HR tar 100%
+            }
+        }
+    }
 }

@@ -24,17 +24,19 @@ class Photo extends Component {
             maxHeight: innerHeight - GIVE_ME_SOME_SLACK
         };
         return (
-            <div className="row">
-                <div className="photo col-xs-14 col-xl-10">
+            <div className="row photo-wrapper">
+                <div className="photo">
                     <img
                         style={style}
                         onLoad={this.loaded.bind(this)}
                         src={photo[photoSize]} />
                 </div>
-                <div className="text col-xl-4">
-                    <p className="title">{photo.title}</p>
-                    <hr />
-                    <p className="description">{photo.description}</p>
+                <div className="text">
+                    <div className="text-wrapper">
+                        <p className="title">{photo.title}</p>
+                        <hr />
+                        <p className="description">{photo.description}</p>
+                    </div>
                 </div>
             </div>
         );
