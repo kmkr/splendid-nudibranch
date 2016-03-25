@@ -1,6 +1,6 @@
 import idGenerator from './id-generator';
 import s3Uploader from '../s3/s3-uploader';
-import resizer from './resizer';
+import {resize, size as getSize} from './gm';
 import tempFileWriter from './temp-file-writer';
 import db from '../../db';
 import {base} from '../constants';
@@ -8,9 +8,7 @@ import {resizeTo} from '../../../common/constants';
 import * as photoDataFormatter from '../photo-data-formatter';
 
 function resizeToMultiple(path) {
-    return resizeTo.map(r => (
-        resizer(path, r.width)
-    ));
+    return resizeTo.map(r => resize(path, r.width));
 }
 
 function upload(id, file, resizedResults) {
@@ -29,21 +27,26 @@ function upload(id, file, resizedResults) {
     ];
 }
 
-function insertToDb(id, file) {
-    const photo = {
+function insertToDb(id, file, additionalData) {
+    const photo = Object.assign({
         base,
         key: id,
         name: file.originalname
-    };
+    }, additionalData);
 
     return db.insertPhoto(photo).then(() => photo);
 }
 
 export default file => {
     const id = idGenerator();
+    let tempFilePath;
     return tempFileWriter(file)
-        .then(({path}) => Promise.all(resizeToMultiple(path)))
+        .then(({path}) => {
+            tempFilePath = path;
+            return Promise.all(resizeToMultiple(tempFilePath));
+        })
         .then(resizedResults => Promise.all(upload(id, file, resizedResults)))
-        .then(() => insertToDb(id, file))
+        .then(() => getSize(tempFilePath))
+        .then(size => insertToDb(id, file, size))
         .then(photo => photoDataFormatter.dbToClient(photo, []));
 };

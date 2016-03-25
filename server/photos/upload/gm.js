@@ -1,6 +1,6 @@
 import gm from 'gm';
 
-export default (filePath, size) => {
+export function resize(filePath, size) {
     return new Promise((resolve, reject) => {
         console.log('[resizer.js] Resizing file %s to %s', filePath, size);
         gm(filePath)
@@ -22,4 +22,16 @@ export default (filePath, size) => {
             });
     });
 
-};
+}
+
+export function size(filePath) {
+    return new Promise((resolve, reject) => {
+        gm(filePath).size((err, value) => {
+            if (err) {
+                return reject(err);
+            }
+
+            return resolve(value);
+        });
+    });
+}
