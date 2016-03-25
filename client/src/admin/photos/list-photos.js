@@ -6,8 +6,10 @@ import EditPhoto from './edit-photo';
 const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
     <div className="list-photos">
         {photos.map(photo => (
-            <div className="entry">
-                <div key={photo.key} className="thumb">
+            <div
+                key={photo.key}
+                className="entry">
+                <div className="thumb">
                     <img src={photo.thumb} />
                 </div>
                 <div className="form">
