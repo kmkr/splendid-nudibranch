@@ -126,10 +126,10 @@ Desc
 
 DSC02971.jpg
 
-Title	Swimming Crab
-Latin	Carupa sp. (Porcellanella triloba?) (not confirmed)
+Title	Harlequin Swimming Crab
+Latin	Lissocarcinus laevis
 Tags	anilao 2014 crab philippines
-Desc
+Desc	This cool crab is part of a family that, with the help of a pair of broad paddle-like legs, can swim. It's around one centimeter long and can be seen around tube anemones.
 
 
 DSC02984.jpg
@@ -137,7 +137,15 @@ DSC02984.jpg
 Title	Painted Frogfish
 Latin	Antennarius pictus
 Tags	anilao 2014 frogfish philippines
-Desc	The benthic zone, a fancy name for the sea floor, is where the frogfish lives. He lives a solitary lifestyle - after mating the frogfish pair do not tolerate each other and the male will sometimes eat the female if she stays around.
+Desc	The benthic zone, a fancy name for the sea floor, is where the frogfish lives. Mostly alone, expect for mating. They do not tolerate each other more than that, and the male will sometimes eat the female if she stays around too long. A solitary lifestyle.
+
+
+DSC03281.jpg
+
+Title
+Latin	Goniobranchus kuniei
+Tags	anilao 2014 nudibranch philippines
+Desc	Taxonomy of nudibranchs is a
 
 
 DSC03330.jpg
