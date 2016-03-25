@@ -13,6 +13,7 @@
         @include media-breakpoint-up(xl) {
             max-width: 80%;
             float: left;
+            flex-grow: 1;
         }
 
         .title {
@@ -38,11 +39,12 @@
         @include media-breakpoint-up(xl) {
             margin-top: 100px;
             width: 20%;
+            min-width: 420px;
             flex-grow: 1;
             padding: $grid-gutter-width / 2;
             float: left;
             .text-wrapper {
-                max-width: 280px;
+                max-width: 320px;
                 display: inline-block; // for å unngå at HR tar 100%
             }
         }
