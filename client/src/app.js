@@ -31,11 +31,6 @@ class App extends Component {
         setTimeout(postStats, 2000);
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('optimizedScroll', this.onScroll);
-        window.removeEventListener('optimizedResize', this.onResize);
-    }
-
     render() {
         return (
             <div>
