@@ -9,16 +9,10 @@
     }
 
     .photo {
-
         @include media-breakpoint-up(xl) {
             max-width: 80%;
             float: left;
             flex-grow: 1;
-        }
-
-        hr {
-            width: 60px;
-            height: 1px;
         }
     }
 
