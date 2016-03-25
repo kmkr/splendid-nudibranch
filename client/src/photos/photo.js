@@ -3,7 +3,7 @@ import {resizeTo} from '../../../common/constants';
 
 import './photo.scss';
 
-const GIVE_ME_SOME_SLACK = 50;
+const GIVE_ME_SOME_SLACK = 0;
 
 class Photo extends Component {
     constructor(props) {
