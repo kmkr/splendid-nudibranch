@@ -18,6 +18,8 @@ export default (photoFromServer, base) => (
         key: photoFromServer.key,
         title: photoFromServer.title,
         description: photoFromServer.description,
+        latin: photoFromServer.latin,
+        location: photoFromServer.location,
         tags: photoFromServer.tags
     })
 );
