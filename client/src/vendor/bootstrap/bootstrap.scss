@@ -1,20 +1,20 @@
 @import '../../constants/styles';
 
-$enable-flex: false;
-$enable-hover-media-query: false;
-$grid-columns:               14;
+$enable-flex:                   false;
+$enable-hover-media-query:      false;
+$grid-columns:                  14;
 
-$enable-grid-classes: true;
+$enable-grid-classes:           true;
 
-$font-family-base:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-base:              "Raleway", sans-serif;
 
-$line-height:                1.5 !default;
-$body-color:                 #373a3c !default;
-$body-bg:                    #fff !default;
-$link-decoration:            none !default;
-$link-color:                 #0274d8 !default;
-$link-hover-color:           darken($link-color, 15%) !default;
-$link-hover-decoration:      underline !default;
+$line-height:                   1.5 !default;
+$body-color:                    #373a3c !default;
+$body-bg:                       #fff !default;
+$link-decoration:               none !default;
+$link-color:                    #0274d8 !default;
+$link-hover-color:              darken($link-color, 15%) !default;
+$link-hover-decoration:         underline !default;
 
 $table-cell-padding:            .75rem !default;
 $table-sm-cell-padding:         .3rem !default;
