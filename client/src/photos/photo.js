@@ -34,7 +34,6 @@ class Photo extends Component {
                 <div className="text">
                     <div className="text-wrapper">
                         <p className="title">{photo.title}</p>
-                        <hr />
                         <p className="description">{photo.description}</p>
                     </div>
                 </div>

@@ -16,17 +16,6 @@
             flex-grow: 1;
         }
 
-        .title {
-            font-family: 'Bentham', serif;
-            margin-bottom: 0;
-            margin-top: 20px;
-            font-size: $font-size-large;
-        }
-
-        .description {
-            margin-top: 5px;
-        }
-
         hr {
             width: 60px;
             height: 1px;
@@ -35,6 +24,24 @@
 
     .text {
         text-align: center;
+
+        .text-wrapper {
+            text-align: left;
+        }
+
+        .title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: $font-size-large;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 50px;
+        }
+
+        .description, .location {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
 
         @include media-breakpoint-up(xl) {
             margin-top: 100px;
