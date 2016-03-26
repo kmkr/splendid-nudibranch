@@ -1,8 +1,14 @@
+const interceptors = [];
+
 function fetchWithHeaders(url, additionalRequestOptions = {}, credentials = false) {
+    const headers = Object.assign(
+        {accept: 'application/json'},
+        additionalRequestOptions.headers || {},
+        ...interceptors.map(interceptor => interceptor())
+    );
+
     const requestOptions = {
-        headers: Object.assign({
-            accept: 'application/json'
-        }, additionalRequestOptions.headers || {})
+        headers
     };
 
     if (credentials) {
@@ -23,6 +29,9 @@ function fetchWithHeaders(url, additionalRequestOptions = {}, credentials = fals
 }
 
 export default {
+    addHeaderRequestInterceptor(interceptor) {
+        interceptors.push(interceptor);
+    },
     get(url, requestOptions = {}) {
         return fetchWithHeaders(url, Object.assign({
             method: 'GET'
