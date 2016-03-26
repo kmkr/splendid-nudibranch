@@ -7,6 +7,8 @@ import {selectTag, unselectTag} from '../selected-tags/selected-tags-actions';
 import Search from '../search';
 import './photo-section.scss';
 
+const margin = 100;
+
 class PhotoSection extends Component {
 
     constructor(props) {
@@ -21,7 +23,7 @@ class PhotoSection extends Component {
     }
 
     componentWillReceiveProps({scroll}) {
-        if (scroll.pageYOffset > scroll.innerHeight) {
+        if (scroll.pageYOffset > (scroll.innerHeight + margin)) {
             this.setState({
                 fixed: true
             });
@@ -52,24 +54,27 @@ class PhotoSection extends Component {
     }
 
     render() {
+        const {scroll, selectedTags, photos} = this.props;
         return (
-            <div id="photo-section">
+            <div
+                id="photo-section"
+                style={{marginTop: `${margin}px`}}>
                 <div
                     id="search-wrapper"
                     className={this.state.fixed ? 'fixed' : ''}
                     style={{
-                        top: this.state.fixed ? 0 : `${this.props.scroll.innerHeight}px`
+                        top: this.state.fixed ? 0 : `${scroll.innerHeight + margin}px`
                     }}>
                     <Search
-                        selectedTags={this.props.selectedTags}
-                        photos={this.props.photos.data}
+                        selectedTags={selectedTags}
+                        photos={photos.data}
                         onDelete={this.onUnselectTag.bind(this)}
                         onSelect={this.onSelectTag.bind(this)} />
                 </div>
                 <div>
                     <PhotoScroller
                         photos={this.photosBySelectedTags()}
-                        scroll={this.props.scroll} />
+                        scroll={scroll} />
                 </div>
             </div>
         );
