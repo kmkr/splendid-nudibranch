@@ -1,5 +1,9 @@
  #small-collage {
     background-color: #000;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -webkit-flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,11 +11,15 @@
 
     p {
         text-align: center;
+        -webkit-flex-shrink: 0;
+        -webkit-flex-basis: 100%;
         flex-shrink: 0;
         flex-basis: 100%;
     }
 
     img {
+        -webkit-flex-shrink: 0;
+        -webkit-flex-basis: 60%;
         flex-shrink: 0;
         flex-basis: 60%;
         width: 60%;

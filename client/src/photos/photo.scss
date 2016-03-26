@@ -5,6 +5,7 @@
     margin-bottom: 200px;
 
     @include media-breakpoint-up(xl) {
+        display: -webkit-flex;
         display: flex;
     }
 
@@ -43,6 +44,7 @@
             margin-top: 100px;
             width: 20%;
             min-width: 420px;
+            -webkit-flex-grow: 1;
             flex-grow: 1;
             padding: $grid-gutter-width / 2;
             float: left;
@@ -52,6 +54,7 @@
             }
 
             &.portrait {
+                -webkit-align-self: center;
                 align-self: center;
                 // Approx way of aligning center of description to the center of the image
                 margin-top: -100px;
