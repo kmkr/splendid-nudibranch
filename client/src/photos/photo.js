@@ -31,9 +31,9 @@ class Photo extends Component {
                         onLoad={this.loaded.bind(this)}
                         src={photo[photoSize]} />
                 </div>
-                <div className="text">
+                <div className={`text  ${photo.layout}`}>
                     <div className="text-wrapper">
-                        <p className="title">{photo.title} ({photo.layout})</p>
+                        <p className="title">{photo.title}</p>
                         <p className="latin">{photo.latin}</p>
                         <p className="description">{photo.description}</p>
                     </div>
