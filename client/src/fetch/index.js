@@ -21,7 +21,7 @@ function fetchWithHeaders(url, additionalRequestOptions = {}, credentials = fals
 
     return fetch(url, requestOptions).then(response => {
         if (response.status >= 400) {
-            return Promise.reject(new Error(response.statusText));
+            return Promise.reject(response);
         }
 
         return response;

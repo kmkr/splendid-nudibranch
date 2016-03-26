@@ -38,14 +38,20 @@ export default ({
                 }
 
                 // todo: send error to backend
-                dispatch({
+                const toDispatch = {
                     type: actionTypes.FETCH_ERROR,
                     error: {
-                        message: error.message,
-                        stack: error, //todo: parse error
-                        raw: error
+                        message: error.statusText,
+                        type: error.status
                     }
-                });
+                };
+                error.json()
+                    .then(data => {
+                        dispatch(Object.assign(toDispatch, {data}));
+                    })
+                    .catch(() => {
+                        dispatch(toDispatch);
+                    });
             });
     };
 };

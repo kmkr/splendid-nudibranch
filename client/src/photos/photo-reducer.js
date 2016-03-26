@@ -31,13 +31,20 @@ function photo(state, action) {
             return state;
         }
 
-        return Object.assign({}, state, {updating: true});
+        return Object.assign({}, state, {updating: true, error: false});
     case updatePhotoActionTypes.RECEIVE:
         if (action.data.key !== state.key) {
             return state;
         }
 
         return Object.assign({}, state, {updating: false}, action.data);
+    case setTagsForPhotoActionTypes.FETCH_ERROR:
+    case updatePhotoActionTypes.FETCH_ERROR:
+        if (action.data.key !== state.key) {
+            return state;
+        }
+
+        return Object.assign({}, state, {deleting: false, updating: false, error: true}, action.data);
     case deletePhotoActionTypes.REQUEST:
         if (action.data.key !== state.key) {
             return state;
@@ -69,9 +76,12 @@ export default (state, action) => {
             data: [...state.data, photo(undefined, action)]
         });
     case setTagsForPhotoActionTypes.RECEIVE:
+    case setTagsForPhotoActionTypes.FETCH_ERROR:
     case updatePhotoActionTypes.REQUEST:
     case updatePhotoActionTypes.RECEIVE:
+    case updatePhotoActionTypes.FETCH_ERROR:
     case deletePhotoActionTypes.REQUEST:
+    case deletePhotoActionTypes.FETCH_ERROR:
         return Object.assign({}, state, {
             data: state.data.map(p => photo(p, action))
         });

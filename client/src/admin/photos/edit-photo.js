@@ -100,6 +100,8 @@ class EditPhoto extends Component {
                         onClick={onDeleteClick.bind(this, photo)}>
                         Delete
                     </button>
+
+                    {photo.error && <p style={{color: 'red'}}>Something bad happened!</p>}
                 </div>
             </div>
         );
