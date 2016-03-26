@@ -1,4 +1,4 @@
-$padding: 5px;
+$padding: 8px;
 #two-x-two-collage {
     padding-top: $padding;
     padding-right: $padding;
@@ -6,6 +6,7 @@ $padding: 5px;
         cursor: pointer;
         padding-right: $padding;
         padding-left: $padding;
+        margin-bottom: $padding / 2; // Otherwise the gap between the two rows of images gets too small
         max-width: 50%;
         display: inline-block;
         overflow: hidden;
