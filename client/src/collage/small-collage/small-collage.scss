@@ -1,0 +1,19 @@
+ #small-collage {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    p {
+        text-align: center;
+        flex-shrink: 0;
+        flex-basis: 100%;
+    }
+
+    img {
+        flex-shrink: 0;
+        flex-basis: 60%;
+        width: 60%;
+    }
+}

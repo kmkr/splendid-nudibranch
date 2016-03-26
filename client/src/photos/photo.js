@@ -24,7 +24,7 @@ class Photo extends Component {
             maxHeight: innerHeight - GIVE_ME_SOME_SLACK
         };
         return (
-            <div className="row photo-wrapper">
+            <div className="photo-wrapper">
                 <div className="photo">
                     <img
                         style={style}
