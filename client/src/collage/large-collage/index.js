@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-import TwoXTwoCollage from './two-x-two-collage';
+import TwoXTwoCollage from './two-x-two';
 import {getCollage} from './collages';
 
 import './large-collage.scss';
