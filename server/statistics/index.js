@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/', (req, res) => {
     newStatEntryHandler(req)
-        .then(response => res.status(204).end())
+        .then(() => res.status(204).end())
         .catch(err => res.status(500).json({err}));
 });
 
