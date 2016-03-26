@@ -1,0 +1,13 @@
+$padding: 5px;
+#two-x-two-collage {
+    padding-top: $padding;
+    padding-right: $padding;
+    .cropper {
+        cursor: pointer;
+        padding-right: $padding;
+        padding-left: $padding;
+        max-width: 50%;
+        display: inline-block;
+        overflow: hidden;
+    }
+}
