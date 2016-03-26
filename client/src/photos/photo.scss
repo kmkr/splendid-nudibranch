@@ -27,11 +27,12 @@
             font-size: $font-size-large;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 0px; // Otherwise latin name comes too close
         }
 
         .latin {
             font-size: $font-size-small;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .description, .latin {
