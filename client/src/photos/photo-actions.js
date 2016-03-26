@@ -1,5 +1,4 @@
 import actionTypes from './photo-action-types';
-import fetchActionFactory from '../actions/fetch-action-factory';
 import photoDataConversion from './photo-data-conversion';
 
 function shuffle(o) {
@@ -14,11 +13,9 @@ function shuffle(o) {
 }
 
 export function fetchPhotos() {
-    return fetchActionFactory({
-        actionTypes,
-        url: '/photos',
-        responseHandler: data => (
-            shuffle(data.photos.map(photo => photoDataConversion(photo, data.base)))
-        )
-    });
+    const {photos, base} = window.sn.data;
+    return {
+        type: actionTypes.SET_PHOTOS,
+        data: shuffle(photos.map(photo => photoDataConversion(photo, base)))
+    };
 }

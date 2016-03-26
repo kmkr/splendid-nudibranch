@@ -10,7 +10,7 @@ import sitemapRouter from './sitemap';
 import statsRouter from './statistics';
 import robotsRouter from './robots';
 
-const indexHtml = `${__dirname}/index.html`;
+import {adminIndex, index} from './index.html.js';
 
 function verifyEnv() {
     const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
@@ -35,11 +35,11 @@ app.use('/sitemap.xml', sitemapRouter);
 app.use('/robots.txt', robotsRouter);
 
 app.get('/', (req, res) => {
-    res.sendFile(indexHtml);
+    index().then(content => res.send(content));
 });
 
 app.get('/admin', (req, res) => {
-    res.sendFile(`${__dirname}/index-admin.html`);
+    adminIndex().then(content => res.send(content));
 });
 
 const port = process.env.PORT || 3000;

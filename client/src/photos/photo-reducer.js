@@ -7,12 +7,6 @@ import {
 import collageActionTypes from '../collage/collage-action-types';
 
 import {setTagsForPhotoActionTypes} from '../admin/tags/edit-tags-action-types';
-import reducerFactory from '../reducers/fetch-reducer-factory';
-
-const getPhotosReducer = reducerFactory({
-    actionTypes: getPhotosActionTypes,
-    initialDataValue: []
-});
 
 function photo(state, action) {
     switch (action.type) {
@@ -69,8 +63,16 @@ function placeItemWithNameFirst(photos, key) {
     return photos;
 }
 
-export default (state, action) => {
+const initialState = {
+    data: []
+};
+
+export default (state = initialState, action) => {
     switch (action.type) {
+    case getPhotosActionTypes.SET_PHOTOS:
+        return Object.assign({}, state, {
+            data: [...action.data]
+        });
     case uploadPhotoActionTypes.RECEIVE:
         return Object.assign({}, state, {
             data: [...state.data, photo(undefined, action)]
@@ -94,6 +96,6 @@ export default (state, action) => {
             data: placeItemWithNameFirst(state.data, action.data.key)
         });
     default:
-        return getPhotosReducer(state, action);
+        return state;
     }
 };
