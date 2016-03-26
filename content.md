@@ -4,7 +4,7 @@ Title	Western Clown Anemonefish
 Latin	Amphiprion ocellaris
 Loc		Dumaguete, The Philippines
 Tags	anemonefish clownfish 2013 anemone
-Desc	Sea anemones are, to most fish, poisonous. The clownfish however is immune to their stinging tentacles and they form a symbiotic relationship where the clownfish receive protection from predators and the anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
+Desc	Sea anemones are, to most fish, poisonous. The clownfish however is immune to their stinging tentacles and form a symbiotic relationship with the anemone where the clownfish receive protection from predators and the anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
 
 
 DSC00266.jpg
@@ -18,7 +18,7 @@ Desc	Clownfish hatch near the surface and travel deeper to search for a host ane
 
 DSC00571.jpg
 
-Title
+Title	Nudibranch
 Loc		Dumaguete, The Philippines
 Tags	nudibranch 2013
 Latin	chromodoris annae
@@ -40,7 +40,7 @@ Title	Fuchsia Flatworm
 Loc		Dumaguete, The Philippines
 Latin	Pseudoceros ferrugineus
 Tags	2013 worm
-Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They have the same bright colors as nudibranchs and approximately the same length but is a completely different animal. It's easy to distinguish the two animals as flatworms lack the antennas/rhinophores, generally move faster and are (duh) flat.
+Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are only superficially similar to nudibranchs. It's easy to distinguish them by the lack of antennas/rhinophores, generally move faster and are (duh) flat. They are also less evolved than nudibranchs are.
 
 
 DSC00974.jpg
@@ -76,7 +76,7 @@ Title	Blackfin Barracuda
 Loc		Apo Reef, The Philippines
 Latin	Sphyraena qenie
 Tags	2014 barracuda
-Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like body - almost pure muscle - makes it extremely fast. A fascinating fish commonly seen schooling.
+Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like body of almost pure muscle makes it extremely fast. A fascinating fish commonly seen schooling.
 
 
 DSC02484.jpg
@@ -84,7 +84,7 @@ DSC02484.jpg
 Title	Klara of Pandan Island
 Loc		Pandan Island, The Philippines
 Tags	2014 parrot
-Desc	On a tiny island just outside Mindoro lives an old parrot named Klara. She is watched over by the owners of the island. I didn't like it at first, but over time I learned there was more to it than just keeping a parrot as a pet. In fact, the story is very touching but too long to write here. Ask me one time if you want to hear it.
+Desc	On a tiny island just outside Mindoro in the Philippines lives an old parrot named Klara. She is watched over by the owners of the island. I didn't like it at first, but over time I learned there was more to it than just keeping a parrot as a pet. In fact, the story is very touching but too long to write here. Ask me one time if you want to hear it.
 
 
 DSC02544.jpg
@@ -120,7 +120,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Nembrotha chamberlaini
 Tags	nudibranch 2014
-Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Most nudibranchs can retracted these vital organs as protection against other fish.
+Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Many species of nudibranchs can retracted these vital organs as protection against other fish.
 
 
 DSC02713.jpg
@@ -174,7 +174,7 @@ Title
 Loc		Anilao, The Philippines
 Latin	Goniobranchus kuniei
 Tags	2014 nudibranch
-Desc	Taxonomy of nudibranchs is a
+Desc
 
 
 DSC03330.jpg
@@ -210,7 +210,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Nembrotha chamberlaini
 Tags	nudibranch 2014
-Desc	Noe om rhinophores
+Desc	The eyes in nudibranchs are inside the body with only about a quarter of a millimeter in diameter. These simple eyes are only coarsly able to discern differences in light intensity.
 
 
 DSC03699.jpg
@@ -219,16 +219,16 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Chromodoris magnifica
 Tags	nudibranch 2014
-Desc	?
+Desc
 
 
 DSC03734.jpg
 
-Title	?
+Title	White Eyed Moray
 Loc		Anilao, The Philippines
-Latin
+Latin	Gymnothorax thyrsoideus
 Tags	eel 2014
-Desc	?
+Desc
 
 
 DSC03769.jpg
@@ -246,7 +246,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Hypselodoris infucata
 Tags	nudibranch 2014
-Desc	Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals.
+Desc	Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to a hard shell, which many other molluscs have instead.
 
 
 DSC03814.jpg
@@ -264,19 +264,14 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Hypselodoris bullocki
 Tags	nudibranch 2014
-Desc	Nudibranch have external gills, hence the name which translates to "naked gill".
-
-
-
-
-"The eyes in nudibranchs are simple and able to discern little more than light and dark.[9] The eyes are set into the body, are about a quarter of a millimeter in diameter, and consist of a lens and five photoreceptors"
+Desc	Nudibranch have external gills (yellow rosette on the back), hence the name that translates to "naked gill".
 
 
 DSC04020.jpg
 
 Title	Nudibranch
 Loc		Anilao, The Philippines
-Latin
+Latin	Tambja marosa
 Tags	nudibranch 2014
 Desc
 
@@ -287,14 +282,14 @@ Title	Leopard Anemone Shrimp
 Loc		Anilao, The Philippines
 Latin	Izucaris masudai
 Tags	shrimp 2014
-Desc	The single one goal for the dive I took this photo was to find this beautiful, rare shrimp. The dive guide I dove with had seen it on a previous dive and knew approximately where to find it, but it's only two centimeter long and well camouflaged.
+Desc	The single goal for the dive where this photo was taken was to find this rare, beautiful shrimp. We knew approximately where to find it, but it's only two centimeter long and well camouflaged on the wire coral.
 
 
 DSC04078.jpg
 
 Title	Nudibranch
 Loc		Anilao, The Philippines
-Latin
+Latin	Miamira alleni
 Tags	nudibranch 2014
 Desc
 
@@ -303,7 +298,7 @@ DSC04200.jpg
 
 Title	Nudibranch
 Loc		Anilao, The Philippines
-Latin
+Latin	Phyllidiopsis shireenae
 Tags	nudibranch 2014
 Desc
 
@@ -312,7 +307,7 @@ DSC04214.jpg
 
 Title	Nudibranch
 Loc		Anilao, The Philippines
-Latin
+Latin	Chromodoris tinctoria
 Tags	nudibranch 2014
 Desc
 
@@ -332,12 +327,12 @@ Title	Longhorn Cowfish
 Loc		Anilao, The Philippines
 Tags	2014 boxfish cowfish
 Latin	Lactoria cornuta
-Desc	??
+Desc
 
 
 DSC04554.jpg
 
-Title	???
+Title
 Loc		Anilao, The Philippines
 Tags	2014
 Latin	-
@@ -377,7 +372,7 @@ Title	?
 Loc		Anilao, The Philippines
 Latin	?
 Tags	nudibranch 2014
-Desc	Unlike many other sea slugs, nudibranchs lack a shell. As a larva they have, but they shed it when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most use the toxic metabolites from what they eat for their own defence.
+Desc	Unlike many other sea slugs, nudibranchs lack a shell. As a larva they do have one but it's shed when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most use the toxic metabolites from what they eat for their own defence.
 
 
 DSC04884.jpg
@@ -395,7 +390,7 @@ Title	Glass Anemone Shrimp
 Loc		Anilao, The Philippines
 Tags	2014 shrimp
 Latin	Periclimenes brevicarpalis
-Desc	???
+Desc
 
 
 DSC05075.jpg
@@ -581,8 +576,7 @@ Desc	At the end of our dive Elphinstone the last of us in the water were blessed
 
 DSC07841.jpg
 
-
-Title	?
+Title
 Loc		egypt
 Tags	2015
 Latin
@@ -591,7 +585,7 @@ Desc
 
 DSC07858.jpg
 
-Title	?
+Title
 Loc		egypt
 Tags	2015
 Latin
@@ -609,7 +603,7 @@ Desc	Patrolling the shallows, half a dozen or so juvenile blacktips were using t
 
 DSC09129.jpg
 
-Title	?
+Title
 Loc		Perhentian Besar, Malaysia
 Tags	2015
 Latin
@@ -618,7 +612,7 @@ Desc
 
 IMG_3351.jpg
 
-Title	?
+Title
 Loc		Yucatán, Mexico
 Tags	2011
 Latin
@@ -641,4 +635,3 @@ Loc		Cod Hole, Great Barrier Reef, Australia
 Tags	2013 cod
 Latin	Epinephelus tukula
 Desc	A large, friendly and curious fellow. The potato cods are rare, but they are territorial so they are quite easy to find once first located. They really seem to just hang around to get cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
-
