@@ -11,7 +11,7 @@ const Photo = ({onPhotoLoad, photo, photoSize}) => {
         maxHeight: innerHeight - GIVE_ME_SOME_SLACK
     };
     return (
-        <div className="photo-wrapper">
+        <div id={`photo-${photo.key}`} className="photo-wrapper">
             <div className="photo">
                 <TransitionImage
                     onLoad={onPhotoLoad}

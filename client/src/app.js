@@ -5,10 +5,9 @@ import CollageSection from './sections/collage-section';
 import DeepWaterSection from './sections/deep-water-section';
 import MidWaterSection from './sections/mid-water-section';
 import PhotoSection from './sections/photo-section';
-import {setHistory} from './history/history-actions';
-import {currentPage} from './sections/constants';
 import throttle from './scroll/throttler';
 import {updatePosition, updateSize} from './scroll/scroll-actions';
+import HashchangeHandler from './history/hashchange-handler';
 
 class App extends Component {
     componentWillMount() {
@@ -20,7 +19,6 @@ class App extends Component {
         window.addEventListener('optimizedResize', () => (
             this.props.dispatch(updateSize())
         ));
-        this.props.dispatch(setHistory(currentPage()));
     }
 
     componentDidMount() {
@@ -35,15 +33,10 @@ class App extends Component {
                 <PhotoSection />
                 <MidWaterSection />
                 <DeepWaterSection />
+                <HashchangeHandler />
             </div>
         );
     }
 }
 
-function select(state) {
-    return {
-        history: state.history
-    };
-}
-
-export default connect(select)(App);
+export default connect()(App);

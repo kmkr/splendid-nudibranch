@@ -3,7 +3,6 @@ $padding: 8px;
     padding-top: $padding;
     padding-right: $padding;
     .cropper {
-        cursor: pointer;
         padding-right: $padding;
         padding-left: $padding;
         margin-bottom: $padding / 2; // Otherwise the gap between the two rows of images gets too small

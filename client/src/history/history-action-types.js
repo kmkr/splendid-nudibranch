@@ -1,5 +1,0 @@
-export default {
-    PUSH_HISTORY: 'PUSH_HISTORY',
-    POP_HISTORY: 'POP_HISTORY',
-    SET_HISTORY: 'SET_HISTORY'
-};

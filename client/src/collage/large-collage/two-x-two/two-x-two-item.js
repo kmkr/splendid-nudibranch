@@ -2,12 +2,7 @@ import React, {PropTypes} from 'react';
 
 import TransitionImage from '../../../transition-image';
 
-function delegate(e, delegatee, ...rest) {
-    e.preventDefault();
-    delegatee(...rest);
-}
-
-const TwoXTwoItem = ({itemClicked, collageItem, scroll}) => {
+const TwoXTwoItem = ({collageItem, scroll}) => {
     let imgStyle;
 
     if (scroll.innerWidth < 1700) {
@@ -22,16 +17,16 @@ const TwoXTwoItem = ({itemClicked, collageItem, scroll}) => {
         };
     }
     return (
-        <TransitionImage
-            onClick={e => delegate(e, itemClicked, collageItem.key)}
-            style={imgStyle}
-            src={collageItem.url} />
+        <a href={`/#photos/${collageItem.key}`}>
+            <TransitionImage
+                style={imgStyle}
+                src={collageItem.url} />
+        </a>
     );
 };
 
 TwoXTwoItem.propTypes = {
     collageItem: PropTypes.object.isRequired,
-    itemClicked: PropTypes.func.isRequired,
     scroll: PropTypes.object.isRequired
 };
 

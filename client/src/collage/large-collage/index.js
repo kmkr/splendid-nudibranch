@@ -5,12 +5,7 @@ import {getCollage} from './collages';
 
 import './large-collage.scss';
 
-function delegate(e, delegatee, ...rest) {
-    e.preventDefault();
-    delegatee(...rest);
-}
-
-const LargeCollage = ({scroll, itemClicked, photoLinkClicked}) => {
+const LargeCollage = ({scroll}) => {
     const {innerHeight} = scroll;
 
     const wrapperStyle = {
@@ -24,11 +19,10 @@ const LargeCollage = ({scroll, itemClicked, photoLinkClicked}) => {
             <div id="large-collage">
                 {collage.type === '2x2' ? <TwoXTwoCollage
                     collage={collage}
-                    scroll={scroll}
-                    itemClicked={itemClicked} /> : null}
+                    scroll={scroll} /> : null}
 
                 <div className="link-wrapper">
-                    <a href="#" onClick={e => delegate(e, photoLinkClicked)}>The Splendid Nudibranch</a>
+                    <a href="/#photos">The Splendid Nudibranch</a>
                 </div>
             </div>
         </div>
@@ -36,9 +30,7 @@ const LargeCollage = ({scroll, itemClicked, photoLinkClicked}) => {
 };
 
 LargeCollage.propTypes = {
-    scroll: PropTypes.object.isRequired,
-    itemClicked: PropTypes.func.isRequired,
-    photoLinkClicked: PropTypes.func.isRequired
+    scroll: PropTypes.object.isRequired
 };
 
 export default LargeCollage;

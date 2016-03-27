@@ -4,7 +4,6 @@ import {
     updatePhotoActionTypes,
     uploadPhotoActionTypes
 } from '../admin/photos/edit-photo-action-types';
-import collageActionTypes from '../collage/collage-action-types';
 
 import {setTagsForPhotoActionTypes} from '../admin/tags/edit-tags-action-types';
 
@@ -73,6 +72,10 @@ export default (state = initialState, action) => {
         return Object.assign({}, state, {
             data: [...action.data]
         });
+    case getPhotosActionTypes.SELECT_PHOTO:
+        return Object.assign({}, state, {
+            data: placeItemWithNameFirst(state.data, action.data.key)
+        });
     case uploadPhotoActionTypes.RECEIVE:
         return Object.assign({}, state, {
             data: [...state.data, photo(undefined, action)]
@@ -90,10 +93,6 @@ export default (state = initialState, action) => {
     case deletePhotoActionTypes.RECEIVE:
         return Object.assign({}, state, {
             data: state.data.filter(elem => elem.key !== action.data.key)
-        });
-    case collageActionTypes.ITEM_SELECTED:
-        return Object.assign({}, state, {
-            data: placeItemWithNameFirst(state.data, action.data.key)
         });
     default:
         return state;

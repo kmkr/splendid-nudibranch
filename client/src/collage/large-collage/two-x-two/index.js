@@ -4,7 +4,7 @@ import TransitionImage from '../../../transition-image';
 import TwoXTwoItem from './two-x-two-item';
 import './two-x-two-collage.scss';
 
-const TwoXTwoCollage = ({collage, scroll, itemClicked}) => {
+const TwoXTwoCollage = ({collage, scroll}) => {
     const {innerHeight, innerWidth} = scroll;
 
     const SOME_SLACK = 50;
@@ -31,8 +31,7 @@ const TwoXTwoCollage = ({collage, scroll, itemClicked}) => {
                     style={cropStyle}>
                     <TwoXTwoItem
                         collageItem={item}
-                        scroll={scroll}
-                        itemClicked={itemClicked} />
+                        scroll={scroll} />
                 </div>
             ))}
             <TransitionImage
@@ -44,8 +43,7 @@ const TwoXTwoCollage = ({collage, scroll, itemClicked}) => {
 
 TwoXTwoCollage.propTypes = {
     collage: PropTypes.object.isRequired,
-    scroll: PropTypes.object.isRequired,
-    itemClicked: PropTypes.func.isRequired
+    scroll: PropTypes.object.isRequired
 };
 
 export default TwoXTwoCollage;

@@ -19,3 +19,13 @@ export function fetchPhotos() {
         data: shuffle(photos.map(photo => photoDataConversion(photo, base)))
     };
 }
+
+export function selectPhoto(key) {
+    return {
+        type: actionTypes.SELECT_PHOTO,
+        data: {
+            key
+        }
+    };
+}
+
