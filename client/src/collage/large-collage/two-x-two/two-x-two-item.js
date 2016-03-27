@@ -1,44 +1,33 @@
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
+
+import TransitionImage from '../../../transition-image';
 
 function delegate(e, delegatee, ...rest) {
     e.preventDefault();
     delegatee(...rest);
 }
 
+const TwoXTwoItem = ({itemClicked, collageItem, scroll}) => {
+    let imgStyle;
 
-class TwoXTwoItem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {loaded: false};
+    if (scroll.innerWidth < 1700) {
+        imgStyle = {
+            width: '800px',
+            marginTop: '-70px'
+        };
+    } else {
+        imgStyle = {
+            width: '1000px',
+            marginTop: '-150px'
+        };
     }
-
-    render() {
-        const {itemClicked, collageItem, scroll} = this.props;
-        let imgStyle;
-
-        if (scroll.innerWidth < 1700) {
-            imgStyle = {
-                width: '800px',
-                marginTop: '-70px'
-            };
-        } else {
-            imgStyle = {
-                width: '1000px',
-                marginTop: '-150px'
-            };
-        }
-        return (
-            <img
-                onClick={e => delegate(e, itemClicked, collageItem.key)}
-                onLoad={() => this.setState({loaded: true})}
-                style={{
-                    opacity: this.state.loaded ? 1 : 0,
-                    ...imgStyle
-                }}
-                src={collageItem.url} />
-        );
-    }
-}
+    return (
+        <TransitionImage
+            onClick={e => delegate(e, itemClicked, collageItem.key)}
+            style={imgStyle}
+            src={collageItem.url} />
+    );
+};
 
 TwoXTwoItem.propTypes = {
     collageItem: PropTypes.object.isRequired,
