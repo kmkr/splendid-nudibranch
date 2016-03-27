@@ -11,12 +11,10 @@ function send(content = {}) {
     }
 
     const {innerHeight, innerWidth} = window;
-    const ua = navigator.userAgent;
 
     snFetch.postJSON('/stats', {
         innerWidth,
         innerHeight,
-        ua,
         ...content
     });
 }
