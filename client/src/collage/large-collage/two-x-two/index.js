@@ -7,17 +7,18 @@ import './two-x-two-collage.scss';
 const TwoXTwoCollage = ({collage, scroll, itemClicked}) => {
     const {innerHeight, innerWidth} = scroll;
 
+    const SOME_SLACK = 50;
     const cropStyle = {
-        height: `${innerHeight / 2 - 30}px`
+        height: `${innerHeight / 2 - SOME_SLACK}px`
     };
 
     const logoSize = 250;
-    const padding = 10;
+    const padding = 8; // From .SCSS
     const logoStyle = {
         position: 'absolute',
         width: `${logoSize}px`,
         height: `${logoSize}px`,
-        top: `${(innerHeight / 2) - (logoSize / 2) - (padding * 2)}px`,
+        top: `${(innerHeight / 2) - (logoSize / 2) - (padding * 2) - (SOME_SLACK / 2)}px`,
         left: `${(innerWidth / 2) - (logoSize / 2) - padding}px`
     };
 
