@@ -2,7 +2,7 @@ import debounce from 'debounce';
 
 import snFetch from '../fetch';
 
-const DELAY = 3000;
+const DELAY = 4000;
 
 function send(content = {}) {
     const {navigator, doNotTrack} = window;
