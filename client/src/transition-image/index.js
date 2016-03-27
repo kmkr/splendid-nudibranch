@@ -18,17 +18,22 @@ class TransitionImage extends Component {
                     ...this.props.style,
                     opacity: this.state.loaded ? 1 : 0
                 }}
-                onLoad={() => this.setState({loaded: true})} />
+                onLoad={() => {
+                    this.setState({loaded: true});
+                    this.props.onLoad();
+                }} />
         );
     }
 }
 
 TransitionImage.propTypes = {
-    style: PropTypes.object
+    style: PropTypes.object,
+    onLoad: PropTypes.func
 };
 
 TransitionImage.defaultProps = {
-    style: {}
+    style: {},
+    onLoad: () => {}
 };
 
 export default TransitionImage;

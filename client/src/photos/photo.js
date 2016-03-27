@@ -6,7 +6,7 @@ import './photo.scss';
 
 const GIVE_ME_SOME_SLACK = 0;
 
-const Photo = ({photo, photoSize}) => {
+const Photo = ({onPhotoLoad, photo, photoSize}) => {
     const style = {
         maxHeight: innerHeight - GIVE_ME_SOME_SLACK
     };
@@ -14,6 +14,7 @@ const Photo = ({photo, photoSize}) => {
         <div className="photo-wrapper">
             <div className="photo">
                 <TransitionImage
+                    onLoad={onPhotoLoad}
                     style={style}
                     src={photo[photoSize]} />
             </div>
@@ -30,7 +31,8 @@ const Photo = ({photo, photoSize}) => {
 
 Photo.propTypes = {
     photo: PropTypes.object.isRequired,
-    photoSize: PropTypes.oneOf(resizeTo.map(r => r.name)).isRequired
+    photoSize: PropTypes.oneOf(resizeTo.map(r => r.name)).isRequired,
+    onPhotoLoad: PropTypes.func.isRequired
 };
 
 export default Photo;

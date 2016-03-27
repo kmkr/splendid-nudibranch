@@ -1,5 +1,9 @@
 import db from '../../db';
 
 export default (req) => {
-    return db.storeStatistic(req.body);
+    const ip = req.get('X-Forwarded-For');
+    return db.storeStatistic({
+        origin: ip,
+        ...req.body
+    });
 };

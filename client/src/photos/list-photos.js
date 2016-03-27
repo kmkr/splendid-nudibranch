@@ -1,8 +1,16 @@
 import React, {Component, PropTypes} from 'react';
 
 import Photo from './photo';
+import {postStats} from '../statistics';
+
+let photosLoaded = 0;
 
 class ListPhotos extends Component {
+
+    incrementAndPost() {
+        photosLoaded++;
+        postStats({photosLoaded});
+    }
 
     isVisible(index) {
         const {photos, visibleStart} = this.props;
@@ -22,6 +30,7 @@ class ListPhotos extends Component {
                     this.isVisible(index) ? (
                         <Photo
                             key={photo.key}
+                            onPhotoLoad={this.incrementAndPost}
                             photo={photo}
                             photoSize={photoSize} />
                         ) : null

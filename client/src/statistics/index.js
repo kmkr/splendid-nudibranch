@@ -1,6 +1,10 @@
+import debounce from 'debounce';
+
 import snFetch from '../fetch';
 
-export function postStats() {
+const DELAY = 3000;
+
+function send(content = {}) {
     const {navigator, doNotTrack} = window;
     if (navigator.doNotTrack || navigator.msDoNotTrack || doNotTrack) {
         return;
@@ -10,6 +14,11 @@ export function postStats() {
     const ua = navigator.userAgent;
 
     snFetch.postJSON('/stats', {
-        innerWidth, innerHeight, ua
+        innerWidth,
+        innerHeight,
+        ua,
+        ...content
     });
 }
+
+export const postStats = debounce(send, DELAY);
