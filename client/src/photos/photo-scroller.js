@@ -3,7 +3,7 @@ import React, {Component, PropTypes} from 'react';
 import ListPhotos from './list-photos';
 import {getPhotoSizeForWidth} from '../../../common/constants';
 
-const SHOW_PHOTOS = 3;
+const SHOW_PHOTOS = 2;
 
 class PhotoScroller extends Component {
     constructor(props) {
