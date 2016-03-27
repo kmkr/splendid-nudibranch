@@ -23,5 +23,6 @@
         flex-shrink: 0;
         flex-basis: 60%;
         width: 60%;
+        max-height: 65%; // Avoid massive logo on landscape tablets
     }
 }
