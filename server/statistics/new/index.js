@@ -1,7 +1,7 @@
 import db from '../../db';
 
 export default (req) => {
-    const origin = req.get('X-Forwarded-For');
+    const origin = req.ip();
     const ua = req.get('User-Agent');
     return db.storeStatistic({
         origin,
