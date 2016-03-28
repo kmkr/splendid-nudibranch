@@ -8,9 +8,8 @@ class HashchangeHandler extends Component {
     constructor(props) {
         super(props);
 
-        // For å unngå situasjoner der man ved oppstart av applikasjonen prøver å scrolle til et
-        // bilde, men receiveProps kjører når scroll-props sendes inn og tror at det er brukeren som
-        // scroller og oppdaterer URL mens løsningen holderp å å scroller til et konkret bilde.
+        // Dette sørger for at URL ikke oppdateres mens scrolling til et bilde pågår ved oppstart av
+        // applikasjonen.
 
         this.booted = false;
     }
