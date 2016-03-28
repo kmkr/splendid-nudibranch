@@ -14,7 +14,6 @@ const Photo = ({onPhotoLoad, photo, photoSize}) => {
     return (
         <div className="photo-wrapper">
             <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
-            <p style={{fontSize: '30px'}}>{photo.key}</p>
             <div className="photo">
                 <TransitionImage
                     onLoad={onPhotoLoad}
