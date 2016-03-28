@@ -22,7 +22,7 @@ class ListPhotos extends Component {
     }
 
     render() {
-        const {photos, photoSize} = this.props;
+        const {innerHeight, photos, photoSize} = this.props;
 
         return (
             <div>
@@ -31,6 +31,7 @@ class ListPhotos extends Component {
                         <Photo
                             key={photo.key}
                             onPhotoLoad={this.incrementAndPost}
+                            innerHeight={innerHeight}
                             photo={photo}
                             photoSize={photoSize} />
                         ) : null
