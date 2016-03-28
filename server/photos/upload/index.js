@@ -1,4 +1,4 @@
-import idGenerator from './id-generator';
+import idGenerator from '../../../common/id-generator';
 import s3Uploader from '../s3/s3-uploader';
 import {resize, size as getSize} from './gm';
 import tempFileWriter from './temp-file-writer';

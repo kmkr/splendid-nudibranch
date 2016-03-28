@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {resizeTo} from '../../../common/constants';
 import TransitionImage from '../transition-image';
+import Anchor from '../anchor';
 
 import './photo.scss';
 
@@ -11,7 +12,9 @@ const Photo = ({onPhotoLoad, photo, photoSize}) => {
         maxHeight: innerHeight - GIVE_ME_SOME_SLACK
     };
     return (
-        <div id={`photo-${photo.key}`} className="photo-wrapper">
+        <div className="photo-wrapper">
+            <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
+            <p style={{fontSize: '30px'}}>{photo.key}</p>
             <div className="photo">
                 <TransitionImage
                     onLoad={onPhotoLoad}

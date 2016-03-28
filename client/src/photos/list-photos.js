@@ -6,7 +6,6 @@ import {postStats} from '../statistics';
 let photosLoaded = 0;
 
 class ListPhotos extends Component {
-
     incrementAndPost() {
         photosLoaded++;
         postStats({photosLoaded});
@@ -18,6 +17,7 @@ class ListPhotos extends Component {
         if (!visibleEnd) {
             visibleEnd = photos.length;
         }
+
         return index >= visibleStart && index < visibleEnd;
     }
 

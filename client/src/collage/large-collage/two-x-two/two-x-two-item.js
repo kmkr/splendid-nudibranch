@@ -1,8 +1,11 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 
+import {selectPhoto} from '../../../photos/photo-actions';
+import SmoothScrollLink from '../../../history/smooth-scroll-link';
 import TransitionImage from '../../../transition-image';
 
-const TwoXTwoItem = ({collageItem, scroll}) => {
+const TwoXTwoItem = ({collageItem, dispatch, scroll}) => {
     let imgStyle;
 
     if (scroll.innerWidth < 1700) {
@@ -17,11 +20,16 @@ const TwoXTwoItem = ({collageItem, scroll}) => {
         };
     }
     return (
-        <a href={`/#photos/${collageItem.key}`}>
+        <SmoothScrollLink
+            onClick={() => {
+                dispatch(selectPhoto(collageItem.key));
+            }}
+            href={`#photos/${collageItem.key}`}
+            selector={`#photo-${collageItem.key}`}>
             <TransitionImage
                 style={imgStyle}
                 src={collageItem.url} />
-        </a>
+        </SmoothScrollLink>
     );
 };
 
@@ -30,4 +38,4 @@ TwoXTwoItem.propTypes = {
     scroll: PropTypes.object.isRequired
 };
 
-export default TwoXTwoItem;
+export default connect()(TwoXTwoItem);

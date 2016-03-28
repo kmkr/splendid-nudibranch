@@ -1,19 +1,18 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import smoothScroll from 'smooth-scroll';
+import SmoothScrollLink from '../history/smooth-scroll-link';
 
 import './deep-water-section.scss';
-
-function onClick(e) {
-    e.preventDefault();
-    smoothScroll.animateScroll('#app', null, {updateURL: false});
-}
 
 class DeepWaterSection extends Component {
     render() {
         return (
             <div id="deep-water-section">
-                <a href="#" onClick={onClick}>Go to top</a>
+                <SmoothScrollLink
+                    name="/"
+                    selector="#app"
+                    href="#">Go to top
+                </SmoothScrollLink>
             </div>
         );
     }

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import idGenerator from './id-generator';
+import idGenerator from '../../../common/id-generator';
 
 export default (file) => {
     const temp = '/tmp';

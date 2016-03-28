@@ -1,37 +1,70 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import smoothScroll from 'smooth-scroll';
 import {selectPhoto} from '../photos/photo-actions';
 
 class HashchangeHandler extends Component {
+    constructor(props) {
+        super(props);
 
-    componentDidMount() {
-        window.addEventListener('hashchange', ({newURL}) => (
-            this.handleHashchange(newURL)
-        ));
+        // For å unngå situasjoner der man ved oppstart av applikasjonen prøver å scrolle til et
+        // bilde, men receiveProps kjører når scroll-props sendes inn og tror at det er brukeren som
+        // scroller og oppdaterer URL mens løsningen holderp å å scroller til et konkret bilde.
 
-        // The rest of the components are not yet necessarily mounted.
-        setTimeout(() => {
-            this.handleHashchange(window.location.hash);
-        }, 800);
+        this.booted = false;
     }
 
-    handleHashchange(newURL) {
-        if (!newURL) {
+    componentDidMount() {
+        const hash = window.location.hash;
+        if (!hash) {
+            this.booted = true;
             return;
         }
 
         const {dispatch} = this.props;
-        const hash = newURL.split('#')[1];
-        const segments = hash.split('/');
+        const hashSegments = hash.split('#')[1].split('/');
 
-        if (/photos/.test(segments[0]) && segments[1]) {
-            dispatch(selectPhoto(segments[1]));
-            smoothScroll.animateScroll(`#photo-${segments[1]}`, null, {updateURL: false});
-        } else if (/photos/.test(segments[0])) {
-            smoothScroll.animateScroll('#photo-section', null, {updateURL: false});
+        if (/photos/.test(hashSegments[0]) && hashSegments[1]) {
+            dispatch(selectPhoto(hashSegments[1]));
+
+            // Må vente på at anchors oppdateres
+            setTimeout(() => {
+                smoothScroll.animateScroll(`#photo-${hashSegments[1]}`, null, {
+                    updateURL: false,
+                    callback: () => this.booted = true
+                });
+            }, 500);
         }
+    }
+
+    componentWillReceiveProps({anchors, scroll}) {
+        // Just opened the page
+        if (!this.booted) {
+            return;
+        }
+
+        const currentOffset = scroll.pageYOffset;
+
+        // Somewhere on the collage, moving upwards
+        if (this.lastOffset > currentOffset && currentOffset < scroll.innerHeight) {
+            if ('/' !== window.location.hash) {
+                history.replaceState(null, null, '/');
+            }
+        } else {
+            const matching = (anchors
+                .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.innerHeight / 1.8)))
+                .reverse())[0];
+
+            if (matching) {
+                const newHash = `#${matching.name}`;
+                if (newHash !== window.location.hash) {
+                    history.replaceState(null, null, newHash);
+                }
+            }
+        }
+
+        this.lastOffset = currentOffset;
     }
 
     render() {
@@ -41,6 +74,7 @@ class HashchangeHandler extends Component {
 
 function select(state) {
     return {
+        anchors: state.anchors,
         scroll: state.scroll
     };
 }
