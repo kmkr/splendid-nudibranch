@@ -20,13 +20,21 @@ class EditPhoto extends Component {
         });
     }
 
-    tagAdded(newTag) {
-        if (this.props.photo.tags.includes(newTag) || newTag.length < 2) {
-            return;
+    tagAdded(newTags) {
+        if (newTags.constructor !== Array) {
+            newTags = [newTags];
         }
 
+
         this.setState({
-            newTags: [...this.state.newTags, newTag].sort()
+            newTags: [
+                ...this.state.newTags,
+                ...newTags.filter(t => (
+                    !this.props.photo.tags.includes(t) &&
+                    !this.state.newTags.includes(t) &&
+                    t.length > 2
+                ))
+            ].sort()
         });
     }
 

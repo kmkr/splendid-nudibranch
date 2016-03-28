@@ -9,7 +9,7 @@ class AddTag extends Component {
     }
 
     save(tagName) {
-        this.props.onAdd(tagName);
+        this.props.onAdd(tagName.split(' '));
         this.setState({
             tagInput: ''
         });
