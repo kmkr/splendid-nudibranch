@@ -43,6 +43,10 @@ class HashchangeHandler extends Component {
             return;
         }
 
+        if (!window.history.replaceState) {
+            return;
+        }
+
         const currentOffset = scroll.pageYOffset;
 
         // Somewhere on the collage, moving upwards
