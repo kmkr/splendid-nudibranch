@@ -17,6 +17,10 @@ function noStopWords(elem) {
     return stopWords.some(sw => sw.test(elem));
 }
 
+function onlyUnique(value, index, ary) {
+    return ary.indexOf(value) === index;
+}
+
 function getKeywords(photos) {
     return [
         'diving',
@@ -24,11 +28,14 @@ function getKeywords(photos) {
         'underwater',
         'photography',
         ...photos
+            .map(p => p.location),
+        ...photos
             .map(p => p.tags)
             .reduce((a, b) => a.concat(b), [])
             .filter(noStopWords)
-        ...photos
-    ].join(', ');
+    ]
+    .filter(onlyUnique)
+    .join(', ');
 }
 
 export function index() {
