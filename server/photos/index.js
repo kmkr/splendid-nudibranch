@@ -2,7 +2,7 @@ import express from 'express';
 import multer from 'multer';
 
 import photoUploadHandler from './upload';
-import {list} from './cached-photos';
+import getPhotosHandler from './list';
 import deletePhotoHandler from './delete';
 import updatePhotoHandler from './update';
 import * as cache from '../cache';
@@ -11,13 +11,13 @@ const router = express.Router();
 const upload = multer();
 
 router.get('/', (req, res) => {
-    return list()
+    return getPhotosHandler()
         .then(response => res.json(response))
         .catch(error => res.status(500).json({error}));
 });
 
 router.post('/', upload.single('file'), (req, res) => {
-    cache.clear('photos');
+    cache.clear();
 
     photoUploadHandler(req.file)
         .then(response => res.json(response))
@@ -25,7 +25,7 @@ router.post('/', upload.single('file'), (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    cache.clear('photos');
+    cache.clear();
 
     updatePhotoHandler(req.params.id, req.body)
         .then(response => res.json(response))
@@ -33,7 +33,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-    cache.clear('photos');
+    cache.clear();
 
     deletePhotoHandler(req.params.id)
         .then(response => res.json(response))
