@@ -1,0 +1,1 @@
+- Merge stats ved å sende ID på hver request og update basert på ID dersom ID ikke finnes fra før.
