@@ -2,7 +2,5 @@
 - interaksjon ved enden av siden uten filter aktivt
 - interaksjon ved enden av siden når man har et filter aktivt
 - filter tags
-- ikon for søk
 - logofont som svg
-- Merge stats ved å sende ID på hver request og update basert på ID dersom ID ikke finnes fra før.
 - Sett og-tags i index.html.
