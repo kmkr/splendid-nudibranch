@@ -10,7 +10,6 @@ class PhotoScroller extends Component {
         super(props);
         this.state = {
             photoSize: getPhotoSizeForWidth(this.props.scroll.innerWidth),
-            visibleStart: 0,
             visibleEnd: SHOW_PHOTOS
         };
     }
@@ -35,10 +34,10 @@ class PhotoScroller extends Component {
         return (
             <div id="photo-scroller">
                 <ListPhotos
+                    onPhotoLoad={this.props.onPhotoLoad}
                     photos={this.props.photos}
                     photoSize={this.state.photoSize.name}
                     innerHeight={this.props.scroll.innerHeight}
-                    visibleStart={this.state.visibleStart}
                     visibleEnd={this.state.visibleEnd} />
 
                 <div id="photo-list-wrapper"></div>
@@ -48,7 +47,9 @@ class PhotoScroller extends Component {
 }
 
 PhotoScroller.propTypes = {
-    photos: PropTypes.array.isRequired
+    onPhotoLoad: PropTypes.func.isRequired,
+    photos: PropTypes.array.isRequired,
+    scroll: PropTypes.object.isRequired
 };
 
 export default PhotoScroller;

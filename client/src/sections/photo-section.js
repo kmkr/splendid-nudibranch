@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {fetchPhotos} from '../photos/photo-actions';
+import {photoLoaded, fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
 import {selectTag, unselectTag} from '../selected-tags/selected-tags-actions';
 import Search from '../search';
@@ -42,6 +42,10 @@ class PhotoSection extends Component {
         this.props.dispatch(unselectTag(tagName));
     }
 
+    onPhotoLoad({key}) {
+        this.props.dispatch(photoLoaded(key));
+    }
+
     photosBySelectedTags() {
         const {photos, selectedTags} = this.props;
         if (selectedTags.length === 0) {
@@ -73,6 +77,7 @@ class PhotoSection extends Component {
                 </div>
                 <div>
                     <PhotoScroller
+                        onPhotoLoad={this.onPhotoLoad.bind(this)}
                         photos={this.photosBySelectedTags()}
                         scroll={scroll} />
                 </div>

@@ -29,7 +29,7 @@ class Photo extends Component {
                     <TransitionImage
                         onLoad={() => {
                             this.setState({showText: true});
-                            onPhotoLoad();
+                            onPhotoLoad(photo);
                         }}
                         style={style}
                         src={photo[photoSize]} />

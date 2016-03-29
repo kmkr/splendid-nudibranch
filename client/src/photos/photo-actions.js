@@ -29,3 +29,11 @@ export function selectPhoto(key) {
     };
 }
 
+export function photoLoaded(key) {
+    return {
+        type: actionTypes.PHOTO_LOADED,
+        data: {
+            key
+        }
+    };
+}

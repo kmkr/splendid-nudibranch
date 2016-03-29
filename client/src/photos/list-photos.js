@@ -6,19 +6,21 @@ import {postStats} from '../statistics';
 let photosLoaded = 0;
 
 class ListPhotos extends Component {
-    incrementAndPost() {
+    photoLoaded(photo) {
+        const {onPhotoLoad} = this.props;
         photosLoaded++;
         postStats({photosLoaded});
+        onPhotoLoad({key: photo.key});
     }
 
     isVisible(index) {
-        const {photos, visibleStart} = this.props;
+        const {photos} = this.props;
         let {visibleEnd} = this.props;
         if (!visibleEnd) {
             visibleEnd = photos.length;
         }
 
-        return index >= visibleStart && index < visibleEnd;
+        return index < visibleEnd;
     }
 
     render() {
@@ -30,7 +32,7 @@ class ListPhotos extends Component {
                     this.isVisible(index) ? (
                         <Photo
                             key={photo.key}
-                            onPhotoLoad={this.incrementAndPost}
+                            onPhotoLoad={this.photoLoaded.bind(this)}
                             innerHeight={innerHeight}
                             photo={photo}
                             photoSize={photoSize} />
@@ -43,15 +45,11 @@ class ListPhotos extends Component {
 }
 
 ListPhotos.propTypes = {
+    onPhotoLoad: PropTypes.func.isRequired,
     photos: PropTypes.array.isRequired,
     photoSize: PropTypes.string.isRequired,
     innerHeight: PropTypes.number.isRequired,
-    visibleStart: PropTypes.number,
     visibleEnd: PropTypes.number
-};
-
-ListPhotos.defaultProps = {
-    visibleStart: 0
 };
 
 export default ListPhotos;

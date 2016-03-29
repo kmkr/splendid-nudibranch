@@ -19,6 +19,15 @@ function photo(state, action) {
         return Object.assign({}, state, {
             tags: [...state.tags, ...newTagsForPhoto]
         });
+    case getPhotosActionTypes.PHOTO_LOADED:
+        if (action.data.key !== state.key) {
+            return state;
+        }
+
+        return {
+            ...state,
+            loaded: true
+        };
     case updatePhotoActionTypes.REQUEST:
         if (action.data.key !== state.key) {
             return state;
@@ -80,6 +89,7 @@ export default (state = initialState, action) => {
         return Object.assign({}, state, {
             data: [...state.data, photo(undefined, action)]
         });
+    case getPhotosActionTypes.PHOTO_LOADED:
     case setTagsForPhotoActionTypes.RECEIVE:
     case setTagsForPhotoActionTypes.FETCH_ERROR:
     case updatePhotoActionTypes.REQUEST:
