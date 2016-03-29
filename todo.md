@@ -4,3 +4,4 @@
 - filter tags
 - logofont som svg
 - Sett og-tags i index.html.
+- Fiks i de tilfellene skjermhøyden er høyere enn ett bilde til å starte (da lastes ikke resten av bildene)
