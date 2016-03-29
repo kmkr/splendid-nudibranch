@@ -42,6 +42,15 @@ export default {
         return getDb.then(db => updateOneInCollection(db, 'tags', {name: tagName}, newValues));
     },
     storeStatistic(statistic) {
-        return getDb.then(db => insertToCollection(db, 'statistics', statistic));
+        return getDb.then(db => {
+            return getCollection(db, 'statistics', {id: statistic.id})
+                .then(statistics => {
+                    if (statistics.length) {
+                        return updateOneInCollection(db, 'statistics', {id: statistic.id}, statistic);
+                    }
+
+                    return insertToCollection(db, 'statistics', statistic);
+                });
+        });
     }
 };

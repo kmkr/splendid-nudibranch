@@ -1,4 +1,4 @@
-import idGenerator from '../../../common/id-generator';
+import * as idGenerator from '../../../common/id-generator';
 import s3Uploader from '../s3/s3-uploader';
 import {resize, size as getSize} from './gm';
 import tempFileWriter from './temp-file-writer';
@@ -39,7 +39,7 @@ function insertToDb(id, file, additionalData) {
 }
 
 export default file => {
-    const id = idGenerator();
+    const id = idGenerator.id();
     let tempFilePath;
     return tempFileWriter(file)
         .then(({path}) => {

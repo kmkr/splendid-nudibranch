@@ -4,4 +4,10 @@ function s4() {
     .substring(1);
 }
 
-export default () => `${s4()}-${s4()}`;
+export function id() {
+    return `${s4()}-${s4()}`;
+}
+
+export function uid() {
+    return `${s4()}${s4()}-${s4()}${s4()}`;
+}

@@ -2,14 +2,14 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 
 import {registerAnchor, unregisterAnchor, updateAnchor} from './anchor-actions';
-import idGenerator from '../../../common/id-generator';
+import * as idGenerator from '../../../common/id-generator';
 
 class Anchor extends Component {
     constructor(props) {
         super(props);
         this.registeredOffsetTop = 0;
         this.state = {
-            id: idGenerator()
+            id: idGenerator.id()
         };
     }
 
