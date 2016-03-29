@@ -63,7 +63,7 @@ class PhotoSection extends Component {
             <div
                 id="photo-section"
                 style={{marginTop: `${margin}px`}}>
-                <div
+                {false && <div
                     id="search-wrapper"
                     className={this.state.fixed ? 'fixed' : ''}
                     style={{
@@ -75,6 +75,7 @@ class PhotoSection extends Component {
                         onDelete={this.onUnselectTag.bind(this)}
                         onSelect={this.onSelectTag.bind(this)} />
                 </div>
+                }
                 <div>
                     <PhotoScroller
                         onPhotoLoad={this.onPhotoLoad.bind(this)}
