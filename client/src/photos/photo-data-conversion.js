@@ -17,16 +17,15 @@ function getLayout(width, height) {
 }
 
 export default (photoFromServer, base) => (
-    resizeTo.reduce((prev, current) => (
-        Object.assign(prev, {
-            [current.name]: buildUrl(
-                base,
-                photoFromServer.key,
-                photoFromServer.name,
-                current.shortName
-            )
-        })
-    ), {
+    resizeTo.reduce((prev, current) => ({
+        ...prev,
+        [current.name]: buildUrl(
+            base,
+            photoFromServer.key,
+            photoFromServer.name,
+            current.shortName
+        )
+    }), {
         key: photoFromServer.key,
         title: photoFromServer.title,
         description: photoFromServer.description,

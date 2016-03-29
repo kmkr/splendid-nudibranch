@@ -47,7 +47,10 @@ export default ({
                 };
                 error.json()
                     .then(data => {
-                        dispatch(Object.assign(toDispatch, {data}));
+                        dispatch({
+                            ...toDispatch,
+                            ...data
+                        });
                     })
                     .catch(() => {
                         dispatch(toDispatch);

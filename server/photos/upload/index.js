@@ -28,11 +28,12 @@ function upload(id, file, resizedResults) {
 }
 
 function insertToDb(id, file, additionalData) {
-    const photo = Object.assign({
+    const photo = {
         base,
         key: id,
-        name: file.originalname
-    }, additionalData);
+        name: file.originalname,
+        ...additionalData
+    };
 
     return db.insertPhoto(photo).then(() => photo);
 }

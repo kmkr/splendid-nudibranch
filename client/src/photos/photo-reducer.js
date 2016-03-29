@@ -10,15 +10,16 @@ import {setTagsForPhotoActionTypes} from '../admin/tags/edit-tags-action-types';
 function photo(state, action) {
     switch (action.type) {
     case uploadPhotoActionTypes.RECEIVE:
-        return Object.assign({}, action.data);
+        return {...action.data};
     case setTagsForPhotoActionTypes.RECEIVE:
         const newTagsForPhoto = action.data
             .filter(t => t.photoKey === state.key)
             .map(t => t.name);
 
-        return Object.assign({}, state, {
+        return {
+            ...state,
             tags: [...state.tags, ...newTagsForPhoto]
-        });
+        };
     case getPhotosActionTypes.PHOTO_LOADED:
         if (action.data.key !== state.key) {
             return state;
@@ -33,26 +34,43 @@ function photo(state, action) {
             return state;
         }
 
-        return Object.assign({}, state, {updating: true, error: false});
+        return {
+            ...state,
+            updating: true,
+            error: false
+        };
     case updatePhotoActionTypes.RECEIVE:
         if (action.data.key !== state.key) {
             return state;
         }
 
-        return Object.assign({}, state, {updating: false}, action.data);
+        return {
+            ...state,
+            updating: false,
+            ...action.data
+        };
     case setTagsForPhotoActionTypes.FETCH_ERROR:
     case updatePhotoActionTypes.FETCH_ERROR:
         if (action.data.key !== state.key) {
             return state;
         }
 
-        return Object.assign({}, state, {deleting: false, updating: false, error: true}, action.data);
+        return {
+            ...state,
+            deleting: false,
+            updating: false,
+            error: true,
+            ...action.data
+        };
     case deletePhotoActionTypes.REQUEST:
         if (action.data.key !== state.key) {
             return state;
         }
 
-        return Object.assign({}, state, {deleting: true});
+        return {
+            ...state,
+            deleting: true
+        };
     default:
         return state;
     }
@@ -78,17 +96,20 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
     case getPhotosActionTypes.SET_PHOTOS:
-        return Object.assign({}, state, {
+        return {
+            ...state,
             data: [...action.data]
-        });
+        };
     case getPhotosActionTypes.SELECT_PHOTO:
-        return Object.assign({}, state, {
+        return {
+            ...state,
             data: placeItemWithNameFirst(state.data, action.data.key)
-        });
+        };
     case uploadPhotoActionTypes.RECEIVE:
-        return Object.assign({}, state, {
+        return {
+            ...state,
             data: [...state.data, photo(undefined, action)]
-        });
+        };
     case getPhotosActionTypes.PHOTO_LOADED:
     case setTagsForPhotoActionTypes.RECEIVE:
     case setTagsForPhotoActionTypes.FETCH_ERROR:
@@ -97,13 +118,15 @@ export default (state = initialState, action) => {
     case updatePhotoActionTypes.FETCH_ERROR:
     case deletePhotoActionTypes.REQUEST:
     case deletePhotoActionTypes.FETCH_ERROR:
-        return Object.assign({}, state, {
+        return {
+            ...state,
             data: state.data.map(p => photo(p, action))
-        });
+        };
     case deletePhotoActionTypes.RECEIVE:
-        return Object.assign({}, state, {
+        return {
+            ...state,
             data: state.data.filter(elem => elem.key !== action.data.key)
-        });
+        };
     default:
         return state;
     }

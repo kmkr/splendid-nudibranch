@@ -6,7 +6,8 @@ export const s3 = new AWS.S3({
 });
 
 export function generateParams(opts) {
-    return Object.assign({
-        Bucket: bucket
-    }, opts);
+    return {
+        Bucket: bucket,
+        ...opts
+    };
 }
