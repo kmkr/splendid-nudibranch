@@ -14,7 +14,7 @@ export function updateSize() {
         type: actionTypes.UPDATE_SIZE,
         data: {
             innerWidth: window.innerWidth,
-            innerHeight: window.innerHeight
+            innerHeight: screen.availHeight * 0.9
         }
     };
 }
