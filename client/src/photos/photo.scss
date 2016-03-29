@@ -2,7 +2,7 @@
 @import "../vendor/bootstrap/mixins/breakpoint";
 
 .photo-wrapper {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 
     @include media-breakpoint-up(xl) {
         display: -webkit-flex;
@@ -21,11 +21,26 @@
 
         .text-wrapper {
             text-align: left;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: 75px;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-top: 50px;
+            }
+
         }
 
         .title {
             font-weight: 700;
+            line-height: 1.2;
             font-size: $font-size-large;
+            @include media-breakpoint-down(lg) {
+                font-size: 20px;
+            }
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 0px; // Otherwise latin name comes too close
@@ -33,7 +48,7 @@
 
         .latin {
             font-size: $font-size-small;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .description, .latin {
