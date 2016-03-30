@@ -12,6 +12,6 @@ export default (type, name, obj) => {
             obj.dispatchEvent(new CustomEvent(name));
             running = false;
         });
-    }, 100);
+    }, 300);
     obj.addEventListener(type, func);
 };
