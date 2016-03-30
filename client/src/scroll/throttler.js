@@ -1,7 +1,9 @@
+import debounce from 'debounce';
+
 export default (type, name, obj) => {
     obj = obj || window;
     let running = false;
-    const func = () => {
+    const func = debounce(() => {
         if (running) {
             return;
         }
@@ -10,6 +12,6 @@ export default (type, name, obj) => {
             obj.dispatchEvent(new CustomEvent(name));
             running = false;
         });
-    };
+    }, 100);
     obj.addEventListener(type, func);
 };
