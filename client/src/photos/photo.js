@@ -11,33 +11,27 @@ class Photo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showText: false
+            showComponent: false
         };
     }
 
     render() {
         const {innerHeight, onPhotoLoad, photo, photoSize} = this.props;
 
-        const style = {
-            maxHeight: innerHeight - GIVE_ME_SOME_SLACK
-        };
-
         return (
-            <div className="photo-wrapper">
+            <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''}`}>
                 <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
                 <div className="photo">
                     <TransitionImage
                         onLoad={() => {
-                            this.setState({showText: true});
+                            this.setState({showComponent: true});
                             onPhotoLoad(photo);
                         }}
-                        style={style}
+                        style={{maxHeight: innerHeight - GIVE_ME_SOME_SLACK}}
                         src={photo[photoSize]} />
                 </div>
-                <div
-                    style={{opacity: this.state.showText ? 1 : 0}}
-                    className={`text ${photo.layout}`}>
-                    <div className="text-wrapper">
+                <div className={`text ${photo.layout}`}>
+                    <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
                         <p className="title">{photo.title}</p>
                         <p className="latin">{photo.latin}</p>
                         <p className="description">{photo.description}</p>
