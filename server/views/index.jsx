@@ -1,8 +1,11 @@
 import React from 'react';
 import Layout from './layouts/default';
 
-const Index = ({data, keywords}) => (
-    <Layout keywords={keywords}>
+const Index = ({data, keywords, selectedPhotoKey}) => (
+    <Layout
+        data={data}
+        keywords={keywords}
+        selectedPhotoKey={selectedPhotoKey}>
         <div>
             <div id="app">
                 <div className="spinner" />

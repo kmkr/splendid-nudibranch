@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from './layouts/default';
 
 const Index = ({data, keywords}) => (
-    <Layout keywords={keywords}>
+    <Layout data={data} keywords={keywords}>
         <div>
             <div id="app">
                 <div className="spinner" />

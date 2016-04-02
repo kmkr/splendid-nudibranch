@@ -4,7 +4,7 @@ import {
     uploadPhotoActionTypes
 } from './edit-photo-action-types';
 import fetchActionFactory from '../../actions/fetch-action-factory';
-import photoDataConversion from '../../photos/photo-data-conversion';
+import {serverToClient} from '../../../../common/photo-data-conversion';
 
 export function uploadPhoto(photo) {
     return fetchActionFactory({
@@ -12,7 +12,7 @@ export function uploadPhoto(photo) {
         url: '/photos',
         method: 'post',
         options: photo,
-        responseHandler: data => photoDataConversion(data, window.sn.data.base)
+        responseHandler: data => serverToClient(data, window.sn.data.base)
     });
 }
 
@@ -23,7 +23,7 @@ export function updatePhoto(photo, newValues) {
         method: 'putJSON',
         options: newValues,
         requestHandler: () => ({key: photo.key}),
-        responseHandler: data => photoDataConversion(data, window.sn.data.base)
+        responseHandler: data => serverToClient(data, window.sn.data.base)
     });
 }
 

@@ -33,28 +33,29 @@ app.use(bodyParser.json());
 app.use(auth);
 app.use('/static', express.static(`${__dirname}/static`));
 
+function photoIndex(res, selectedPhotoKey) {
+    return (
+        Promise.all([
+            viewDataService.getPhotoData(),
+            viewDataService.getKeywords()
+        ]).then(([photoData, keywords]) => res.render('index', {
+            data: photoData,
+            selectedPhotoKey,
+            keywords
+        }))
+    );
+}
+
 app.get('/', (req, res) => {
-    Promise.all([
-        viewDataService.getPhotoData(),
-        viewDataService.getKeywords()
-    ]).then(([photoData, keywords]) => res.render('index', {
-        data: photoData,
-        keywords
-    }));
+    photoIndex(res);
 });
 
-app.get('/photos/:id', (req, res) => {
-    Promise.all([
-        viewDataService.getPhotoData(),
-        viewDataService.getKeywords()
-    ]).then(([photoData, keywords]) => res.render('index', {
-        data: photoData,
-        keywords
-    }));
+app.get('/photos/:key', (req, res) => {
+    photoIndex(res, req.params.key);
 });
 
 app.get('/admin', (req, res) => {
-    viewDataService.getPhotos()
+    viewDataService.getPhotoData()
         .then(photoData => res.render('index-admin', {
             data: photoData
         }));

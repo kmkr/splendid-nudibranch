@@ -1,5 +1,5 @@
 import actionTypes from './photo-action-types';
-import photoDataConversion from './photo-data-conversion';
+import {serverToClient} from '../../../common/photo-data-conversion';
 
 function shuffle(o) {
     for (let i = o.length; i; i -= 1) {
@@ -16,7 +16,7 @@ export function fetchPhotos() {
     const {photos, base} = window.sn.data;
     return {
         type: actionTypes.SET_PHOTOS,
-        data: shuffle(photos.map(photo => photoDataConversion(photo, base)))
+        data: shuffle(photos.map(photo => serverToClient(photo, base)))
     };
 }
 
