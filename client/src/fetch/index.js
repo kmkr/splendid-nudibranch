@@ -4,7 +4,12 @@ function fetchWithHeaders(url, additionalRequestOptions = {}) {
     const headers = {
         accept: 'application/json',
         ...(additionalRequestOptions.headers || {}),
-        ...interceptors.map(interceptor => interceptor())
+        ...interceptors.reduce((a, b) => (
+            {
+                ...a(),
+                ...b()
+            }
+        ), () => {})
     };
 
     delete additionalRequestOptions.headers;
