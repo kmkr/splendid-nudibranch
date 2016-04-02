@@ -3,6 +3,6 @@
 - interaksjon ved enden av siden når man har et filter aktivt
 - filter tags
 - logofont som svg
-- Sett og-tags i index.html.
 - Fiks i de tilfellene skjermhøyden er høyere enn ett bilde til å starte (da lastes ikke resten av bildene)
 - Fiks når skjerm er så høy at collage blir feil
+- Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
