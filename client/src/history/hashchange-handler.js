@@ -48,15 +48,16 @@ class HashchangeHandler extends Component {
         }
 
         const currentOffset = scroll.pageYOffset;
+        const SLACK_FACTOR = 1.8;
 
         // Somewhere on the collage, moving upwards
-        if (this.lastOffset > currentOffset && currentOffset < scroll.innerHeight) {
+        if (this.lastOffset > currentOffset && currentOffset < (scroll.innerHeight / SLACK_FACTOR)) {
             if ('/' !== window.location.hash) {
                 history.replaceState(null, null, '/');
             }
         } else {
             const matching = (anchors
-                .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.innerHeight / 1.8)))
+                .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.innerHeight / SLACK_FACTOR)))
                 .reverse())[0];
 
             if (matching) {
