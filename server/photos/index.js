@@ -2,19 +2,12 @@ import express from 'express';
 import multer from 'multer';
 
 import photoUploadHandler from './upload';
-import getPhotosHandler from './list';
 import deletePhotoHandler from './delete';
 import updatePhotoHandler from './update';
 import * as cache from '../cache';
 
 const router = express.Router();
 const upload = multer();
-
-router.get('/', (req, res) => {
-    return getPhotosHandler()
-        .then(response => res.json(response))
-        .catch(error => res.status(500).json({error}));
-});
 
 router.post('/', upload.single('file'), (req, res) => {
     cache.clear();

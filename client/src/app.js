@@ -7,7 +7,7 @@ import MidWaterSection from './sections/mid-water-section';
 import PhotoSection from './sections/photo-section';
 import throttle from './scroll/throttler';
 import {updatePosition, updateSize} from './scroll/scroll-actions';
-import HashchangeHandler from './history/hashchange-handler';
+import UrlUpdater from './history/url-updater';
 
 class App extends Component {
     componentWillMount() {
@@ -33,7 +33,7 @@ class App extends Component {
                 <PhotoSection />
                 <MidWaterSection />
                 <DeepWaterSection />
-                <HashchangeHandler />
+                <UrlUpdater />
             </div>
         );
     }

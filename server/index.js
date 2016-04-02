@@ -28,19 +28,24 @@ app.use(logger('combined'));
 app.use(bodyParser.json());
 app.use(auth);
 app.use('/static', express.static(`${__dirname}/static`));
-app.use('/photos', photoRouter);
-app.use('/tags', tagRouter);
-app.use('/stats', statsRouter);
-app.use('/sitemap.xml', sitemapRouter);
-app.use('/robots.txt', robotsRouter);
 
 app.get('/', (req, res) => {
+    index().then(content => res.send(content));
+});
+
+app.get('/photos/:id', (req, res) => {
     index().then(content => res.send(content));
 });
 
 app.get('/admin', (req, res) => {
     adminIndex().then(content => res.send(content));
 });
+app.use('/photos', photoRouter);
+app.use('/tags', tagRouter);
+app.use('/stats', statsRouter);
+app.use('/sitemap.xml', sitemapRouter);
+app.use('/robots.txt', robotsRouter);
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

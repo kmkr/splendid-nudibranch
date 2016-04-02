@@ -15,25 +15,23 @@ class HashchangeHandler extends Component {
     }
 
     componentDidMount() {
-        const hash = window.location.hash;
-        if (!hash) {
-            this.booted = true;
-            return;
-        }
-
+        const pathname = window.location.pathname;
         const {dispatch} = this.props;
-        const hashSegments = hash.split('#')[1].split('/');
+        const pathSegments = pathname.split('/');
 
-        if (/photos/.test(hashSegments[0]) && hashSegments[1]) {
-            dispatch(selectPhoto(hashSegments[1]));
+        if (/photos/.test(pathSegments[1]) && pathSegments[2]) {
+            const photoKey = pathSegments[2];
+            dispatch(selectPhoto(photoKey));
 
             // Må vente på at anchors oppdateres
             setTimeout(() => {
-                smoothScroll.animateScroll(`#photo-${hashSegments[1]}`, null, {
+                smoothScroll.animateScroll(`#photo-${photoKey}`, null, {
                     updateURL: false,
                     callback: () => this.booted = true
                 });
             }, 500);
+        } else {
+            this.booted = true;
         }
     }
 
@@ -52,7 +50,7 @@ class HashchangeHandler extends Component {
 
         // Somewhere on the collage, moving upwards
         if (this.lastOffset > currentOffset && currentOffset < (scroll.innerHeight / SLACK_FACTOR)) {
-            if ('/' !== window.location.hash) {
+            if ('/' !== window.location.path) {
                 history.replaceState(null, null, '/');
             }
         } else {
@@ -61,9 +59,9 @@ class HashchangeHandler extends Component {
                 .reverse())[0];
 
             if (matching) {
-                const newHash = `#${matching.name}`;
-                if (newHash !== window.location.hash) {
-                    history.replaceState(null, null, newHash);
+                const newPath = `/${matching.name}`;
+                if (newPath !== window.location.path) {
+                    history.replaceState(null, null, newPath);
                 }
             }
         }
