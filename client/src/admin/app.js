@@ -45,14 +45,16 @@ class App extends Component {
             <div className="row">
                 <div className="col-lg-push-2 col-lg-10">
                     <Authenticator onSetToken={this.onSetToken.bind(this)} />
-                    <h1>Upload photos</h1>
-                    <PhotoUploader onAddPhoto={this.onAddPhoto.bind(this)} />
-                    <hr />
-                    <h1>Edit photos</h1>
-                    <ListPhotos
-                        photos={this.props.photos.data}
-                        onDeleteClick={this.onDeleteClick.bind(this)}
-                        onUpdateClick={this.onUpdateClick.bind(this)} />
+                    <div style={{opacity: this.state.token ? 1 : 0.2}}>
+                        <h1>Upload photos</h1>
+                        <PhotoUploader onAddPhoto={this.onAddPhoto.bind(this)} />
+                        <hr />
+                        <h1>Edit photos</h1>
+                        <ListPhotos
+                            photos={this.props.photos.data}
+                            onDeleteClick={this.onDeleteClick.bind(this)}
+                            onUpdateClick={this.onUpdateClick.bind(this)} />
+                    </div>
                 </div>
             </div>
         );
