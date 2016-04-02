@@ -39,19 +39,12 @@ function getKeywords(photos) {
 }
 
 export function index() {
-    if (cache.get('index.html')) {
-        return Promise.resolve(cache.get('index.html'));
-    }
-
-    return listPhotos()
-        .then(data => (
-            content
+    return Promise.resolve(cache.get('photos') || listPhotos())
+        .then(data => {
+            cache.put('photos', data);
+            return content
                 .replace('${data}', JSON.stringify(data))
-                .replace('${keywords}', getKeywords(data.photos))
-        ))
-        .then(content => {
-            cache.put('index.html', content);
-            return content;
+                .replace('${keywords}', getKeywords(data.photos));
         });
 }
 
