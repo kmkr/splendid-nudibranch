@@ -35,6 +35,7 @@
     "eslint-plugin-react": "^4.2.3",
     "exports-loader": "^0.6.3",
     "express": "^4.13.4",
+    "express-react-views": "^0.10.0",
     "gm": "^1.21.1",
     "mongodb": "^2.1.11",
     "morgan": "^1.7.0",

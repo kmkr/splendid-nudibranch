@@ -9,8 +9,7 @@ import tagRouter from './tags';
 import sitemapRouter from './sitemap';
 import statsRouter from './statistics';
 import robotsRouter from './robots';
-
-import {adminIndex, index} from './index.html.js';
+import * as viewDataService from './views/services/view-data-service';
 
 function verifyEnv() {
     const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
@@ -25,27 +24,46 @@ verifyEnv();
 const app = express();
 app.use(compression());
 app.use(logger('combined'));
+app.set('views', `${__dirname}/views`);
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine({
+    transformViews: true
+}));
 app.use(bodyParser.json());
 app.use(auth);
 app.use('/static', express.static(`${__dirname}/static`));
 
 app.get('/', (req, res) => {
-    index().then(content => res.send(content));
+    Promise.all([
+        viewDataService.getPhotoData(),
+        viewDataService.getKeywords()
+    ]).then(([photoData, keywords]) => res.render('index', {
+        data: photoData,
+        keywords
+    }));
 });
 
 app.get('/photos/:id', (req, res) => {
-    index().then(content => res.send(content));
+    Promise.all([
+        viewDataService.getPhotoData(),
+        viewDataService.getKeywords()
+    ]).then(([photoData, keywords]) => res.render('index', {
+        data: photoData,
+        keywords
+    }));
 });
 
 app.get('/admin', (req, res) => {
-    adminIndex().then(content => res.send(content));
+    viewDataService.getPhotos()
+        .then(photoData => res.render('index-admin', {
+            data: photoData
+        }));
 });
 app.use('/photos', photoRouter);
 app.use('/tags', tagRouter);
 app.use('/stats', statsRouter);
 app.use('/sitemap.xml', sitemapRouter);
 app.use('/robots.txt', robotsRouter);
-
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

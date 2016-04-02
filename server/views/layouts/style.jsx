@@ -1,14 +1,7 @@
-<!doctype html>
+import React from 'react';
 
-<html>
-    <head>
-        <title>The Splendid Nudibranch</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="keywords" content="${keywords}" />
-        <meta name="description" content="Author: Kris-Mikael Krister, Illustrator: Hilde D. Johannessen" />
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Quicksand' rel='stylesheet' type='text/css'>
-        <style>
+const Style = () => (
+    <style dangerouslySetInnerHTML={{__html: `
         .spinner {
             width: 40px;
             height: 40px;
@@ -43,17 +36,7 @@
                 opacity: 0;
             }
         }
-        </style>
-    </head>
-    <body class="container-fluid">
-        <div id="app">
-            <div class="spinner"></div>
-        </div>
-        <script type="text/javascript">
-            window.sn = {
-                data: ${data}
-            };
-        </script>
-        <script type="text/javascript" src="/static/scripts/bundle.js" charset="utf-8"></script>
-    </body>
-</html>
+    `}} />
+);
+
+export default Style;
