@@ -4,7 +4,7 @@ Title	Western Clown Anemonefish
 Latin	Amphiprion ocellaris
 Loc		Dumaguete, The Philippines
 Tags	anemonefish clownfish 2013 anemone
-Desc	Sea anemones are, to most fish, poisonous. The clownfish however is immune to their stinging tentacles and form a symbiotic relationship with the anemone where the clownfish receive protection from predators and the anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
+Desc	Sea anemones are to most fish poisonous. The clownfish however is immune to their stinging tentacles and form a symbiotic relationship with the anemone where the clownfish receive protection from predators, and the anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
 
 
 DSC00266.jpg
@@ -13,7 +13,7 @@ Title	Western Clown Anemonefish
 Loc		Dumaguete, The Philippines
 Tags	anemonefish clownfish 2013 anemone
 Latin	Amphiprion ocellaris
-Desc	Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish population there is a strict hierarchy where juveniles begin at the bottom and may easily be victims to agression, and possibly eviction from the anemone, by more mature clownfish.
+Desc	Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish population there is a strict hierarchy where juveniles begin at the bottom and have to gradually move upwards by proving their abilities to the rest of the population. In that period they may be victims to agression, and possibly eviction from the anemone by more mature clownfish.
 
 
 DSC00571.jpg
@@ -31,7 +31,7 @@ Title	White Eyed Moray
 Loc		Dumaguete, The Philippines
 Tags	2013 eel
 Latin	Gymnothorax thyrsoideus
-Desc	Moray eels are shy creatures, mostly seen peeking out from rocks and coral formations. Most of the long slender body is hidden inside crevices, in which it retreats if you come too near.
+Desc	Moray eels are shy creatures mostly seen peeking out from rocks and coral formations, only their heads exposed. Most of the long slender body is hidden inside crevices, in which it retreats if you come too near.
 
 
 DSC00792.jpg
@@ -40,7 +40,7 @@ Title	Fuchsia Flatworm
 Loc		Dumaguete, The Philippines
 Latin	Pseudoceros ferrugineus
 Tags	2013 worm
-Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are only superficially similar to nudibranchs. It's easy to distinguish them by the lack of antennas/rhinophores, generally move faster and are (duh) flat. They are also less evolved than nudibranchs are.
+Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, generally move faster and are (duh) flat. They are also less evolved than nudibranchs.
 
 
 DSC00974.jpg
@@ -102,7 +102,7 @@ Title	Tube Dwelling Anemone
 Loc		Anilao, The Philippines
 Latin	Cerianthus sp. (not confirmed)
 Tags	2014 anemone
-Desc	Not a true anemone only superficially similar, this animal construct a tube in the sand in which they live in. It's entire body, including more than 200 tapering tentacles,  can be retracted inside the tube for protection. To some animals this creature is a favored meal.
+Desc	Not a true anemone, this animal construct a tube in the sand in which they live in. It's entire body, including more than 200 tapering tentacles,  can be retracted inside the tube for protection. This creature is a favored meal to some types of nudibranchs.
 
 
 DSC02594.jpg
@@ -111,7 +111,7 @@ Title	Juvenile Boxfish
 Loc		Anilao, The Philippines
 Latin
 Tags	2014 boxfish
-Desc	The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps.
+Desc	The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. The boxfish is a type of animal that is consistently cute its entire lifetime, not just in the juvenile stage.
 
 
 DSC02648.jpg
@@ -120,7 +120,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Nembrotha chamberlaini
 Tags	nudibranch 2014
-Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, the rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Many species of nudibranchs can retracted these vital organs as protection against other fish.
+Desc	Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, called rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Many species of nudibranchs can retracted these vital organs as protection against other fish.
 
 
 DSC02713.jpg
@@ -129,7 +129,7 @@ Title	Wire Coral Shrimp
 Loc		Anilao, The Philippines
 Latin	Pontonides unciger
 Tags	2014 shrimp
-Desc	Lives exclusively on the black coral whip, usually in pairs. I couldn't find more than one shrimp, but they are very well camouflaged and only one centimeter long so maybe this shrimp didn't live alone after all. You may wonder why the whip is called black coral when it's bright green. Its inner skeleton is black and the flesh varies in color. P. Unciger shrimps adept by changing their own color to match the coral's color.
+Desc	Lives exclusively on the black coral whip, usually in pairs. I couldn't find more than one shrimp, but they are very well camouflaged and only one centimeter long so maybe this shrimp didn't live alone after all. You may wonder why the whip is called black coral when it's bright green. The reason is due to its black inner skeleton while the flesh varies in color. P. Unciger shrimps adept by changing their own color to match the coral's color.
 
 
 DSC02931.jpg
@@ -156,7 +156,7 @@ Title	Harlequin Swimming Crab
 Loc		Anilao, The Philippines
 Latin	Lissocarcinus laevis
 Tags	2014 crab
-Desc	This cool crab is part of a family that, with the help of a pair of broad paddle-like legs, can swim. It's around one centimeter long and can be seen around tube anemones.
+Desc	This cool crab, decorated with awesome symmetric spots, is part of a family that, with the help of a pair of broad paddle-like legs, can swim. It's around one centimeter long and can be seen around tube anemones.
 
 
 DSC02984.jpg
@@ -165,7 +165,7 @@ Title	Painted Frogfish
 Loc		Anilao, The Philippines
 Latin	Antennarius pictus
 Tags	2014 frogfish
-Desc	The benthic zone, a fancy name for the sea floor, is where the frogfish lives. Mostly alone, expect for mating. They do not tolerate each other more than that, and the male will sometimes eat the female if she stays around too long. A solitary lifestyle.
+Desc	The social activity of this fish is rather limited, and it lives alone most of the time expect for mating. It's a solitary type, and the male will sometimes eat the female if she stays around too long after mating.
 
 
 DSC03281.jpg
@@ -183,7 +183,7 @@ Title	Coleman's Shrimp
 Loc		Anilao, The Philippines
 Latin	Periclimenes colemani
 Tags	2014 shrimp urchin
-Desc	Man and wife living on a toxic fire urchin. The largest of them is the female.
+Desc	Man and wife living on a toxic fire urchin. The pair clears a little patch on the urchin with their claws, just enough so they can move freely around on the urchin collecting small pieces of food. The largest of them is always the female.
 
 
 DSC03425.jpg
@@ -201,7 +201,7 @@ Title	Reticulate Stargazer
 Loc		Anilao, The Philippines
 Latin	Uranoscopus chinensis
 Tags	stargazer 2014
-Desc	Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site had become a large battlefield for the tiny creatures living there. The starfish were many and moving fast, climbing over animals and any obstructing ground they collided into, stopping only to devour the delicious molluscs their tube feet got attached to. Countless squids dancing around in the dark, moving just outside the beam of our lights while concurrently exploiting it for the ongoing hunt. A stargazer landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. The stargazer waits for passing fish before it jumps upwards while it creates a vacuum to suck in the prey
+Desc	Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site is turned into a large scale battlefield for the tiny creatures living there. The starfish were many and moving fast, climbing over animals and any obstructing ground they collided into, stopping only to devour the delicious molluscs their tube feet got attached to. Countless squids dancing around in the dark, moving just outside the beam of our lights while concurrently exploiting it for the ongoing hunt. A stargazer landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. The stargazer waits for passing fish before it jumps upwards while it creates a vacuum to suck in the prey.
 
 
 DSC03660.jpg
@@ -210,7 +210,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Nembrotha chamberlaini
 Tags	nudibranch 2014
-Desc	The eyes in nudibranchs are inside the body with only about a quarter of a millimeter in diameter. These simple eyes are only coarsly able to discern differences in light intensity.
+Desc	Nudibranch's eyes are located inside the body with only about a quarter of a millimeter in diameter. These simple eyes are only coarsly able to discern differences in light intensity.
 
 
 DSC03699.jpg
@@ -246,7 +246,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Hypselodoris infucata
 Tags	nudibranch 2014
-Desc	Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to a hard shell, which many other molluscs have instead.
+Desc	Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which many other molluscs use as their primary defence.
 
 
 DSC03814.jpg
@@ -264,7 +264,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Hypselodoris bullocki
 Tags	nudibranch 2014
-Desc	Nudibranch have external gills (yellow rosette on the back), hence the name that translates to "naked gill".
+Desc	Nudibranch have external gills (yellow rosette on the back), hence its name that translates to "naked gill".
 
 
 DSC04020.jpg
@@ -282,7 +282,7 @@ Title	Leopard Anemone Shrimp
 Loc		Anilao, The Philippines
 Latin	Izucaris masudai
 Tags	shrimp 2014
-Desc	The single goal for the dive where this photo was taken was to find this rare, beautiful shrimp. We knew approximately where to find it, but it's only two centimeter long and well camouflaged on the wire coral.
+Desc	The single goal for the dive where this photo was taken was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew only approximately where to find it, and its small length of only two centimeters combined with a camouflaged body made it quite a challenge.
 
 
 DSC04078.jpg
@@ -345,7 +345,7 @@ Title	Magnificent Sea Anemone
 Loc		Anilao, The Philippines
 Tags	2014 anemone
 Latin	Heteractis magnifica with Amphiprion perideraion
-Desc	The previous name for this anemone was the Ritteri Anemone. The new name is Heteractis magnifica, or Magnificent Sea Anemone, perhaps updated because it's too beautiful for a dull name. The anemone can entirely retract it's tentacles and it's column, here in purple color, will be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself. Did I mention it's an awesome animal?
+Desc	The previous name for this anemone was the Ritteri Anemone. The new name is Heteractis magnifica, or "Magnificent Sea Anemone", perhaps updated because it's too beautiful for the old dull name. The anemone can entirely retract it's tentacles and it's column, here in purple color, will be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself. Did I mention it's an awesome animal?
 
 
 DSC04665.jpg
@@ -461,7 +461,7 @@ Title	The Dugongs of Marsha Shouna
 Loc		Marsa Alam, Egypt
 Tags	2014 dugong
 Latin	Dugong dugon
-Desc	The word "dugong" means lady of the sea, they are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The dugong is herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries entirely gone due to hunting,  bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few. The 100 km coastline along Marsa Alam have now only seven dugongs left.
+Desc	The word "dugong" means lady of the sea, they are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The dugong is herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are depleted entirely due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam have now only seven dugongs left.
 
 
 DSC06687.jpg
@@ -527,7 +527,7 @@ Title	Titan Triggerfish
 Loc		Egypt
 Tags	triggerfish 2015
 Latin	Balistoides viridescens
-Desc	Scattered throughout the world's seas, the triggerfish is usually a solitary fish. It's territorial and can be nasty to intruders, both fish and divers. Be respectful and watch its signals, an erect dorsal spine means stay away. Swim away in a horizontal line to avoid it's vertical, cone shaped territory boundary.
+Desc	Scattered throughout the world's seas, the triggerfish is usually a solitary fish. It's territorial and can be nasty to intruders if there are eggs to watch over. Be respectful and watch its signals, an erect dorsal spine means stay away.
 
 
 DSC07475.jpg
@@ -536,7 +536,7 @@ Title	Red Sea Corals
 Loc		Egypt
 Tags	2015
 Latin
-Desc	Water temperatures in the Red Sea peaks at 35. Most reefs bleach and die off in such conditions, the Red Sea corals linger on. They are remarkably resilient to high temperatures. Scientists are trying to figure out the key to this crucial ability, with hope of some day be able to salvage reefs currently suffering from rising sea temperatures in other parts of the world.
+Desc	Water temperatures in the Red Sea peaks at 35 degrees celcius. Most reefs bleach and die off in such conditions while the Red Sea corals linger on. They are remarkably resilient to high temperatures. Scientists are trying to figure out the key to this crucial ability, with hope of some day be able to salvage reefs currently suffering from rising sea temperatures in other parts of the world.
 
 
 DSC07567.jpg
@@ -625,7 +625,7 @@ Title	Dwarf Minke Whale
 Loc		Ribbon Reefs, Great Barrier Reef, Australia
 Tags	2010 whale
 Latin	Undescribed (Balaenoptera acutorostrata subspecies)
-Desc	The group of whales circled us and gradually came closer for each round. As they moved closer we could spot their fine details, their uniqueness and beauty. The marks on their skin are used to distinguish them from each other and is one of the keys to count the number of individuals. When the distance closed to a few meters, one of the whales opened one the eyes. An eye filled with stories of the unknown deep waters. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
+Desc	The group of whales circled us and gradually came closer for each round. As they moved closer we could spot their fine details, their uniqueness and beauty. Scientists in Australia use the spots on their skin to distinguish them from each other and is the primary elements to count the number of individuals. When the distance between us and the whales closed to only a few meters apart, one of the whales opened his eyes. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
 
 
 Kris Krister 412.jpg
@@ -634,4 +634,4 @@ Title	Potato Cod
 Loc		Cod Hole, Great Barrier Reef, Australia
 Tags	2013 cod
 Latin	Epinephelus tukula
-Desc	A large, friendly and curious fellow. The potato cods are rare, but they are territorial so they are quite easy to find once first located. They really seem to just hang around to get cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
+Desc	A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once the first person locates them. They really seem to just hang around to get cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
