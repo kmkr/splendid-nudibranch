@@ -6,8 +6,7 @@ const Style = () => (
             width: 40px;
             height: 40px;
             background-color: #333;
-            position: relative;
-            left: 50%;
+            margin: 0 auto;
 
             border-radius: 100%;
             -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
