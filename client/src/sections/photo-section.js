@@ -23,7 +23,7 @@ class PhotoSection extends Component {
     }
 
     componentWillReceiveProps({scroll}) {
-        if (scroll.pageYOffset > (scroll.innerHeight + margin)) {
+        if (scroll.pageYOffset > (scroll.availHeight + margin)) {
             this.setState({
                 fixed: true
             });
@@ -67,7 +67,7 @@ class PhotoSection extends Component {
                     id="search-wrapper"
                     className={this.state.fixed ? 'fixed' : ''}
                     style={{
-                        top: this.state.fixed ? 0 : `${scroll.innerHeight + margin}px`
+                        top: this.state.fixed ? 0 : `${scroll.availHeight + margin}px`
                     }}>
                     <Search
                         selectedTags={selectedTags}

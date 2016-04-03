@@ -10,7 +10,7 @@ const TwoXTwoItem = ({collageItem, dispatch, scroll}) => {
 
     if (scroll.innerWidth < 1700) {
         imgStyle = {
-            width: '800px',
+            width: '850px',
             marginTop: '-70px'
         };
     } else {

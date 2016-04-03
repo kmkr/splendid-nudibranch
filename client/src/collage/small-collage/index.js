@@ -4,7 +4,7 @@ import './small-collage.scss';
 
 const SmallCollage = ({scroll}) => {
     const style = {
-        height: `${scroll.innerHeight}px`
+        height: `${scroll.availHeight}px`
     };
     return (
         <div

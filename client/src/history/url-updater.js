@@ -46,17 +46,13 @@ class HashchangeHandler extends Component {
         }
 
         const currentOffset = scroll.pageYOffset;
-        const SLACK_FACTOR = 1.8;
 
-        // Somewhere on the collage, moving upwards
-        if (this.lastOffset > currentOffset && currentOffset < (scroll.innerHeight / SLACK_FACTOR)) {
+        if (this.isMovingUpwards() && this.isSomwhereOnTheCollage()) {
             if ('/' !== window.location.pathname) {
                 history.replaceState(null, null, '/');
             }
         } else {
-            const matching = (anchors
-                .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.innerHeight / SLACK_FACTOR)))
-                .reverse())[0];
+            const matching = this.getNearestAnchor(anchors);
 
             if (matching) {
                 const newPath = `/${matching.name}`;
@@ -67,6 +63,25 @@ class HashchangeHandler extends Component {
         }
 
         this.lastOffset = currentOffset;
+    }
+
+    getNearestAnchor(sortedAnchors) {
+        const SLACK_FACTOR = 1.8;
+        const currentOffset = this.props.scroll.pageYOffset;
+
+        return (sortedAnchors
+            .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.innerHeight / SLACK_FACTOR)))
+            .reverse())[0];
+    }
+
+    isSomwhereOnTheCollage() {
+        const currentOffset = this.props.scroll.pageYOffset;
+        return currentOffset < scroll.innerHeight;
+    }
+
+    isMovingUpwards() {
+        const currentOffset = this.props.scroll.pageYOffset;
+        return this.lastOffset > currentOffset;
     }
 
     render() {

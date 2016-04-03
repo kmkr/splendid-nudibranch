@@ -6,10 +6,10 @@ import {getCollage} from './collages';
 import './large-collage.scss';
 
 const LargeCollage = ({scroll}) => {
-    const {innerHeight} = scroll;
+    const {availHeight} = scroll;
 
     const wrapperStyle = {
-        height: `${innerHeight}px`
+        height: `${availHeight}px`
     };
 
     const collage = getCollage();

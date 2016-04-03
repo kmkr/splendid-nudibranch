@@ -13,12 +13,13 @@ function send(content = {}) {
         return;
     }
 
-    const {innerHeight, innerWidth} = window;
+    const {availHeight, innerWidth, innerHeight} = window;
 
     snFetch.postJSON('/stats', {
         id: uid,
         innerWidth,
         innerHeight,
+        availHeight,
         ...content
     });
 }

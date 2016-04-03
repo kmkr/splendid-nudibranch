@@ -16,7 +16,7 @@ class Photo extends Component {
     }
 
     render() {
-        const {innerHeight, onPhotoLoad, photo, photoSize} = this.props;
+        const {availHeight, onPhotoLoad, photo, photoSize} = this.props;
 
         return (
             <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''}`}>
@@ -27,7 +27,7 @@ class Photo extends Component {
                             this.setState({showComponent: true});
                             onPhotoLoad(photo);
                         }}
-                        style={{maxHeight: innerHeight - GIVE_ME_SOME_SLACK}}
+                        style={{maxHeight: availHeight - GIVE_ME_SOME_SLACK}}
                         src={photo[photoSize]} />
                 </div>
                 <div className={`text ${photo.layout}`}>
@@ -43,7 +43,7 @@ class Photo extends Component {
 }
 
 Photo.propTypes = {
-    innerHeight: PropTypes.number.isRequired,
+    availHeight: PropTypes.number.isRequired,
     photo: PropTypes.object.isRequired,
     photoSize: PropTypes.oneOf(resizeTo.map(r => r.name)).isRequired,
     onPhotoLoad: PropTypes.func.isRequired

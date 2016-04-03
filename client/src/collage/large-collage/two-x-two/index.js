@@ -5,11 +5,11 @@ import TwoXTwoItem from './two-x-two-item';
 import './two-x-two-collage.scss';
 
 const TwoXTwoCollage = ({collage, scroll}) => {
-    const {innerHeight, innerWidth} = scroll;
+    const {availHeight, innerWidth} = scroll;
 
     const SOME_SLACK = 50;
     const cropStyle = {
-        height: `${innerHeight / 2 - SOME_SLACK}px`
+        height: `${availHeight / 2 - SOME_SLACK}px`
     };
 
     const logoSize = 250;
@@ -18,7 +18,7 @@ const TwoXTwoCollage = ({collage, scroll}) => {
         position: 'absolute',
         width: `${logoSize}px`,
         height: `${logoSize}px`,
-        top: `${(innerHeight / 2) - (logoSize / 2) - (padding * 2) - (SOME_SLACK / 2)}px`,
+        top: `${(availHeight / 2) - (logoSize / 2) - (padding * 2) - (SOME_SLACK / 2)}px`,
         left: `${(innerWidth / 2) - (logoSize / 2) - padding}px`
     };
 
