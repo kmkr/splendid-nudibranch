@@ -50,7 +50,7 @@ class HashchangeHandler extends Component {
 
         // Somewhere on the collage, moving upwards
         if (this.lastOffset > currentOffset && currentOffset < (scroll.innerHeight / SLACK_FACTOR)) {
-            if ('/' !== window.location.path) {
+            if ('/' !== window.location.pathname) {
                 history.replaceState(null, null, '/');
             }
         } else {
@@ -60,7 +60,7 @@ class HashchangeHandler extends Component {
 
             if (matching) {
                 const newPath = `/${matching.name}`;
-                if (newPath !== window.location.path) {
+                if (newPath !== window.location.pathname) {
                     history.replaceState(null, null, newPath);
                 }
             }
