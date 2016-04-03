@@ -3,14 +3,14 @@ import React, {Component, PropTypes} from 'react';
 import ListPhotos from './list-photos';
 import {getPhotoSizeForWidth} from '../../../common/constants';
 
-const SHOW_PHOTOS = 1;
+const LOAD_AT_A_TIME = 2;
 
 class PhotoScroller extends Component {
     constructor(props) {
         super(props);
         this.state = {
             photoSize: getPhotoSizeForWidth(this.props.scroll.innerWidth),
-            visibleEnd: SHOW_PHOTOS
+            visibleEnd: LOAD_AT_A_TIME
         };
     }
 
@@ -25,7 +25,7 @@ class PhotoScroller extends Component {
         if ((pageYOffset + innerHeight) > photoListWrapper.offsetTop) {
             state.visibleEnd = Math.min(
                 props.photos.filter(p => p.loaded).length + 1,
-                Math.max(SHOW_PHOTOS, Math.min(props.photos.length, this.state.visibleEnd + 1))
+                Math.max(LOAD_AT_A_TIME, Math.min(props.photos.length, this.state.visibleEnd + LOAD_AT_A_TIME))
             );
         }
 
