@@ -19,12 +19,9 @@ function upload(id, file, resizedResults) {
         return s3Uploader.upload(buffer, name, mimetype);
     }
 
-    return [
-        upl('o', file.buffer),
-        ...resizeTo.map((r, index) => (
-            upl(r.shortName, resizedResults[index].buffer)
-        ))
-    ];
+    return resizeTo.map((r, index) => (
+        upl(r.shortName, resizedResults[index].buffer)
+    ));
 }
 
 function insertToDb(id, file, additionalData) {
