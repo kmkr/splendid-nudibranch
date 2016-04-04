@@ -1,6 +1,6 @@
 import * as idGenerator from '../../../common/id-generator';
 import s3Uploader from '../s3/s3-uploader';
-import {resize, size as getSize} from './gm';
+import {resize, metadata as getMetadata} from './gm';
 import tempFileWriter from './temp-file-writer';
 import db from '../../db';
 import {base} from '../constants';
@@ -44,7 +44,7 @@ export default file => {
             return Promise.all(resizeToMultiple(tempFilePath));
         })
         .then(resizedResults => Promise.all(upload(id, file, resizedResults)))
-        .then(() => getSize(tempFilePath))
-        .then(size => insertToDb(id, file, size))
+        .then(() => getMetadata(tempFilePath))
+        .then(metadata => insertToDb(id, file, metadata))
         .then(photo => photoDataFormatter.dbToClient(photo, []));
 };

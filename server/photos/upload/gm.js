@@ -24,14 +24,15 @@ export function resize(filePath, size) {
 
 }
 
-export function size(filePath) {
+export function metadata(filePath) {
     return new Promise((resolve, reject) => {
-        gm(filePath).size((err, value) => {
+        gm(filePath).identify((err, value) => {
             if (err) {
                 return reject(err);
             }
 
-            return resolve(value);
+            console.log(value);
+            return resolve(value.size);
         });
     });
 }
