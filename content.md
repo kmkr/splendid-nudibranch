@@ -134,9 +134,9 @@ Desc	Lives exclusively on the black coral whip, usually in pairs. I couldn't fin
 
 DSC02931.jpg
 
-Title	?
+Title	Shortfin Lionfish
 Loc		Anilao, The Philippines
-Latin	?
+Latin	Dendrochirus brachypterus
 Tags	2014 scorpionfish lionfish
 Desc
 
@@ -426,7 +426,7 @@ Title	Elphinstone Anthias
 Loc		Elphinestone Reef, Egypt
 Tags	2014 anthias
 Latin	Anthiinae (family)
-Desc
+Desc	Participating in a huge feeding aggregation, the massive amount of anthias make some of the visually dramatic scenes on the reef. Anthias live in harems consisting of one dominant male, a few lesser males, juveniles and a cluster of females. All anthias are hermaphordites and begin life as female.
 
 
 DSC06497.jpg
@@ -514,10 +514,10 @@ Desc
 
 DSC07289.jpg
 
-Title	?
+Title	Crescent-tail Bigeye
 Loc		egypt
 Tags	2015
-Latin
+Latin	Priacanthus hamrur
 Desc
 
 
@@ -548,7 +548,7 @@ Latin
 Desc
 
 
-DSC07673.jpg
+DSC07673.jpg (litt for blåfarget?)
 
 Title	?
 Loc		egypt
@@ -559,10 +559,10 @@ Desc
 
 DSC07724.jpg
 
-Title	?
+Title	Bluecheek Butterflyfish
 Loc		egypt
 Tags	2015
-Latin
+Latin	Chaetodon semilarvatus
 Desc
 
 DSC07737.jpg
@@ -576,11 +576,11 @@ Desc	At the end of our dive Elphinstone the last of us in the water were blessed
 
 DSC07841.jpg
 
-Title
+Title	Bluecheek Butterflyfish
 Loc		egypt
 Tags	2015
-Latin
-Desc
+Latin	Chaetodon semilarvatus
+Desc	Endemic to the Red Sea and Gulf of Aden, the bluecheek butterflyfish is one of the few species of fish that have long-term mates.
 
 
 DSC07858.jpg
@@ -598,7 +598,7 @@ Title	Juvenile Blacktip Reef Shark
 Loc		Perhentian Besar, Malaysia
 Tags	2015 shark
 Latin	Carcharhinus melanopterus
-Desc	Patrolling the shallows, half a dozen or so juvenile blacktips were using the safe nursing grounds just outside a small beach on Perhentians to practice the skill of hunting.
+Desc	Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds just outside a small beach on Perhentians to practice the skill of hunting.
 
 
 DSC09129.jpg
