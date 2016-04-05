@@ -3,7 +3,6 @@
 - interaksjon ved enden av siden når man har et filter aktivt
 - filter tags
 - logofont som svg
-- Fiks i de tilfellene skjermhøyden er høyere enn to bilder til å starte (da lastes ikke resten av bildene)
 - Fiks når skjerm er så høy at collage blir feil
 - Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
 - Lagre når bildet ble tatt

@@ -46,13 +46,19 @@ class HashchangeHandler extends Component {
         }
 
         const currentOffset = scroll.pageYOffset;
+        const isSomwhereOnTheCollage = currentOffset < scroll.availHeight;
+        const isMovingUpwards = this.lastOffset > currentOffset;
 
-        if (this.isMovingUpwards() && this.isSomwhereOnTheCollage()) {
-            if ('/' !== window.location.pathname) {
+        if (isMovingUpwards && isSomwhereOnTheCollage) {
+            const newPath = '/';
+            if (newPath !== window.location.pathname) {
                 history.replaceState(null, null, '/');
             }
         } else {
-            const matching = this.getNearestAnchor(anchors);
+            const SLACK_FACTOR = 1.8;
+            const matching = (anchors
+                .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.availHeight / SLACK_FACTOR)))
+                .reverse())[0];
 
             if (matching) {
                 const newPath = `/${matching.name}`;
@@ -63,25 +69,6 @@ class HashchangeHandler extends Component {
         }
 
         this.lastOffset = currentOffset;
-    }
-
-    getNearestAnchor(sortedAnchors) {
-        const SLACK_FACTOR = 1.8;
-        const currentOffset = this.props.scroll.pageYOffset;
-
-        return (sortedAnchors
-            .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.innerHeight / SLACK_FACTOR)))
-            .reverse())[0];
-    }
-
-    isSomwhereOnTheCollage() {
-        const currentOffset = this.props.scroll.pageYOffset;
-        return currentOffset < scroll.innerHeight;
-    }
-
-    isMovingUpwards() {
-        const currentOffset = this.props.scroll.pageYOffset;
-        return this.lastOffset > currentOffset;
     }
 
     render() {
