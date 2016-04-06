@@ -6,3 +6,5 @@
 - Fiks når skjerm er så høy at collage blir feil
 - Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
 - Lagre når bildet ble tatt
+- Søk
+- Fjern findDOMNode fra search/index.js
