@@ -612,11 +612,11 @@ Desc	Patrolling the shallows, half a dozen or so juvenile blacktips are using th
 
 IMG_3351.jpg
 
-Title
+Title	The Cenotes of Yucatán
 Loc		Yucatán, Mexico
 Tags	2011
 Latin
-Desc
+Desc	The eastern parts of Mexico is highly fertile with dense jungle and a magnificent flora. Underground cave systems filled with water act as the area’s principal source of water. For us, access to these underground labyrinths are through sinkholes called cenotes and diving in the area is superior, truly a fantastic experience.
 
 
 Kris Krister 276.jpg
