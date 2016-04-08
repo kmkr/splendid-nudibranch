@@ -170,7 +170,7 @@ Desc	The social activity of this fish is rather limited, and it lives alone most
 
 DSC03281.jpg
 
-Title
+Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Goniobranchus kuniei
 Tags	2014 nudibranch
@@ -285,13 +285,13 @@ Tags	shrimp 2014
 Desc	The single goal for the dive where this photo was taken was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew only approximately where to find it, and its small length of only two centimeters combined with a camouflaged body made it quite a challenge.
 
 
-DSC04078.jpg
+DSC04078.jpg (vurder å snu noen grader mot høyre)
 
 Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Miamira alleni
 Tags	nudibranch 2014
-Desc
+Desc	What looks like a piece of coral is actually a slug slowly moving on the reef.
 
 
 DSC04200.jpg
