@@ -598,16 +598,16 @@ Title	Juvenile Blacktip Reef Shark
 Loc		Perhentian Besar, Malaysia
 Tags	2015 shark
 Latin	Carcharhinus melanopterus
-Desc	Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds just outside a small beach on Perhentians to practice the skill of hunting.
+Desc	Each day these and many more juvenile sharks hanged around just outside the beach. They didn't seem to bother me too much and let me swim with them while they were trying to catch a meal.
 
 
 DSC09129.jpg
 
-Title
+Title	Juvenile Blacktip Reef Shark
 Loc		Perhentian Besar, Malaysia
 Tags	2015
-Latin
-Desc
+Latin	Carcharhinus melanopterus
+Desc	Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds just outside a small beach on Perhentians to practice the skill of hunting.
 
 
 IMG_3351.jpg
