@@ -285,7 +285,7 @@ Tags	shrimp 2014
 Desc	The single goal for the dive where this photo was taken was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew only approximately where to find it, and its small length of only two centimeters combined with a camouflaged body made it quite a challenge.
 
 
-DSC04078.jpg (vurder å snu noen grader mot høyre)
+DSC04078.jpg
 
 Title	Nudibranch
 Loc		Anilao, The Philippines
@@ -548,7 +548,7 @@ Latin
 Desc
 
 
-DSC07673.jpg (litt for blåfarget?)
+DSC07673.jpg
 
 Title	?
 Loc		egypt
@@ -610,12 +610,21 @@ Latin	Carcharhinus melanopterus
 Desc	Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds just outside a small beach on Perhentians to practice the skill of hunting.
 
 
+DSC09919.jpg
+
+Title	Great Spider Crab
+Loc		Sandefjord, Norway
+Tags	2016 crab
+Latin	Hyas araneus
+
+
+
 IMG_3351.jpg
 
 Title	The Cenotes of Yucatán
 Loc		Yucatán, Mexico
 Tags	2011
-Latin
+Latin	-
 Desc	The eastern parts of Mexico is highly fertile with dense jungle and a magnificent flora. Underground cave systems filled with water act as the area’s principal source of water. For us, access to these underground labyrinths are through sinkholes called cenotes and diving in the area is superior, truly a fantastic experience.
 
 
