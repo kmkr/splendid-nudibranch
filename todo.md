@@ -7,4 +7,5 @@
 - Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
 - Bruk beacon api
 - Søk
-- Fjern findDOMNode fra search/index.js
+- Fjern findDOMNode fra `search/index.js`
+- Oppdater bilde-størrelser i `constants.js`
