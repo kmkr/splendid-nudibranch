@@ -24,6 +24,11 @@ export function resize(filePath, size) {
 
 }
 
+function parseDate(exifDate) {
+    //2016:04:09 21:11:45 to 2016-04-09 21:11:45
+    return new Date(exifDate.replace(':', '-'));
+}
+
 export function metadata(filePath) {
     return new Promise((resolve, reject) => {
         gm(filePath).identify((err, value) => {
@@ -32,7 +37,10 @@ export function metadata(filePath) {
             }
 
             console.log(value);
-            return resolve(value.size);
+            return resolve({
+                ...value.size,
+                shot_at: parseDate(value['Profile-EXIF']['Date Time Original'])
+            });
         });
     });
 }
