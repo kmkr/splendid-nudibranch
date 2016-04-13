@@ -35,6 +35,9 @@ export default {
     getTags(filter = {}) {
         return getDb.then(db => getCollection(db, 'tags', filter));
     },
+    getCollages(filter = {}) {
+        return getDb.then(db => getCollection(db, 'collages', filter));
+    },
     insertTag(tag) {
         return getDb.then(db => insertToCollection(db, 'tags', tag));
     },

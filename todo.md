@@ -9,3 +9,5 @@
 - Søk
 - Fjern findDOMNode fra `search/index.js`
 - Oppdater bilde-størrelser i `constants.js`
+- Vurder større bilde for mobil så man kan zoome med bedre kvalitet
+- Refactor server/db til å ha "getFromCollection"
