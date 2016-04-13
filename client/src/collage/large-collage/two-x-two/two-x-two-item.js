@@ -5,20 +5,23 @@ import {selectPhoto} from '../../../photos/photo-actions';
 import SmoothScrollLink from '../../../history/smooth-scroll-link';
 import TransitionImage from '../../../transition-image';
 
-const TwoXTwoItem = ({collageItem, dispatch, scroll}) => {
-    let imgStyle;
-
-    if (scroll.innerWidth < 1700) {
-        imgStyle = {
-            width: '850px',
-            marginTop: `${collageItem.styles.top}px`
-        };
-    } else {
-        imgStyle = {
+function getImgStyle(innerWidth, styles) {
+    if (innerWidth > 1700) {
+        return {
             width: '1000px',
-            marginTop: `${2 * collageItem.styles.top}px`
+            marginTop: `${styles.wide.top || 0}px`,
+            marginLeft: `${styles.wide.left || 0}px`
         };
     }
+
+    return {
+        width: '850px',
+        marginTop: `${styles.medium.top || 0}px`,
+        marginLeft: `${styles.medium.left || 0}px`
+    };
+}
+
+const TwoXTwoItem = ({collageItem, dispatch, scroll}) => {
     return (
         <SmoothScrollLink
             onClick={() => {
@@ -27,7 +30,7 @@ const TwoXTwoItem = ({collageItem, dispatch, scroll}) => {
             href={`#photos/${collageItem.key}`}
             selector={`#photo-${collageItem.key}`}>
             <TransitionImage
-                style={imgStyle}
+                style={getImgStyle(scroll.innerWidth, collageItem.styles)}
                 src={collageItem.url} />
         </SmoothScrollLink>
     );
