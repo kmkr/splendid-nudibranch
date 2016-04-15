@@ -12,7 +12,7 @@ export function uploadPhoto(photo) {
         url: '/photos',
         method: 'post',
         options: photo,
-        responseHandler: data => serverToClient(data, window.sn.photoData.base)
+        responseHandler: data => serverToClient(data, window.sn.data.photoData.base)
     });
 }
 
@@ -23,7 +23,7 @@ export function updatePhoto(photo, newValues) {
         method: 'putJSON',
         options: newValues,
         requestHandler: () => ({key: photo.key}),
-        responseHandler: data => serverToClient(data, window.sn.photoData.base)
+        responseHandler: data => serverToClient(data, window.sn.data.photoData.base)
     });
 }
 

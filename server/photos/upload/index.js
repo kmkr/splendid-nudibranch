@@ -32,7 +32,7 @@ function insertToDb(id, file, additionalData) {
         ...additionalData
     };
 
-    return db.insertPhoto(photo).then(() => photo);
+    return db.insert('photos', photo).then(() => photo);
 }
 
 export default file => {

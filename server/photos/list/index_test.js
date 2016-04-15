@@ -13,7 +13,7 @@ describe('photos/list', function () {
 
         const dbStub = sinon.stub().returns({
             default: {
-                getPhotos() {
+                list() {
                     return dbPromise;
                 }
             }

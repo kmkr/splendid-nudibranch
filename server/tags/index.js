@@ -1,13 +1,13 @@
 import express from 'express';
 
 import newTagHandler from './new';
-import getTagsHandler from './list';
+import db from '../db';
 import * as cache from '../cache';
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    getTagsHandler()
+    db.list('tags')
         .then(response => res.json(response))
         .catch(err => res.status(500).json({err}));
 });

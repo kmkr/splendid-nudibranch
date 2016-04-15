@@ -17,42 +17,30 @@ const getDb = new Promise((resolve, reject) => {
 });
 
 export default {
-    insertPhoto(photo) {
-        return getDb.then(db => insertToCollection(db, 'photos', photo));
+    insert(collectionName, data) {
+        return getDb.then(db => insertToCollection(db, collectionName, data));
     },
-    getPhotos(filter = {}) {
-        return getDb.then(db => getCollection(db, 'photos', filter));
+    list(collectionName, filter) {
+        return getDb.then(db => getCollection(db, collectionName, filter));
     },
-    deletePhoto(key) {
-        return getDb.then(db => destroyFromCollection(db, 'photos', {key}));
+    delete(collectionName, filter) {
+        return getDb.then(db => destroyFromCollection(db, collectionName, filter));
     },
-    updatePhoto(key, newValues) {
+    update(collectionName, filter, newValues) {
         return getDb
-            .then(db => updateOneInCollection(db, 'photos', {key}, newValues))
-            .then(() => this.getPhotos({key}))
-            .then(photos => photos[0]);
+            .then(db => updateOneInCollection(db, collectionName, filter, newValues))
+            .then(() => this.list(collectionName, filter))
+            .then(data => data[0]);
     },
-    getTags(filter = {}) {
-        return getDb.then(db => getCollection(db, 'tags', filter));
-    },
-    getCollages(filter = {}) {
-        return getDb.then(db => getCollection(db, 'collages', filter));
-    },
-    insertTag(tag) {
-        return getDb.then(db => insertToCollection(db, 'tags', tag));
-    },
-    updateTag(tagName, newValues) {
-        return getDb.then(db => updateOneInCollection(db, 'tags', {name: tagName}, newValues));
-    },
-    storeStatistic(statistic) {
+    updateWithInsertFallback(collectionName, filter, data) {
         return getDb.then(db => {
-            return getCollection(db, 'statistics', {id: statistic.id})
-                .then(statistics => {
-                    if (statistics.length) {
-                        return updateOneInCollection(db, 'statistics', {id: statistic.id}, statistic);
+            return getCollection(db, collectionName, filter)
+                .then(collection => {
+                    if (collection.length) {
+                        return updateOneInCollection(db, collectionName, filter, data);
                     }
 
-                    return insertToCollection(db, 'statistics', statistic);
+                    return insertToCollection(db, collectionName, data);
                 });
         });
     }

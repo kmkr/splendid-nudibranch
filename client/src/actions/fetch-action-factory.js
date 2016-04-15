@@ -26,6 +26,7 @@ export default ({
                 });
             })
             .catch(error => {
+                debugger;
                 if (typeof errorHandler === 'function') {
                     const handled = errorHandler(error);
                     if (handled) {
