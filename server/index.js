@@ -60,7 +60,9 @@ app.get('/photos/:key', (req, res) => {
 app.get('/admin', (req, res) => {
     viewDataService.getPhotoData()
         .then(photoData => res.render('index-admin', {
-            data: photoData
+            data: {
+                photoData
+            }
         }));
 });
 app.use('/photos', photoRouter);
