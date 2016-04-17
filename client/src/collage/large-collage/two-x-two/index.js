@@ -25,9 +25,9 @@ const TwoXTwoCollage = ({collage, scroll}) => {
     return (
         <div id="two-x-two-collage">
             {collage.items.map(item => (
-                <div className="crop-wrapper">
+                <div key={item.key}
+                     className="crop-wrapper">
                     <div
-                        key={item.key}
                         className="cropper"
                         style={cropStyle}>
                         <TwoXTwoItem
