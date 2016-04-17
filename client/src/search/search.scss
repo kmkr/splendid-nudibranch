@@ -45,7 +45,7 @@
     }
 
     // liten skjerm
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         background-color: #000;
 
         .expandable {
