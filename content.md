@@ -63,7 +63,7 @@ Desc	Malapascua is known for its legendary thresher sharks usually found in deep
 
 DSC01725.jpg
 
-Title
+Title	Nudibranch
 Loc		Malapascua, The Philippines
 Latin	Chromodoris sp.
 Tags	2013 nudibranch
@@ -143,7 +143,7 @@ Desc
 
 DSC02955.jpg
 
-Title	The Chromodoris Genus
+Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Chromodoris annae
 Tags	2014 nudibranch
@@ -625,7 +625,7 @@ Title	The Cenotes of Yucatán
 Loc		Yucatán, Mexico
 Tags	2011
 Latin	-
-Desc	The eastern parts of Mexico is highly fertile with dense jungle and a magnificent flora. Underground cave systems filled with water act as the area’s principal source of water. For us, access to these underground labyrinths are through sinkholes called cenotes and diving in the area is superior, truly a fantastic experience.
+Desc	The eastern parts of Mexico is highly fertile with dense jungle and a magnificent flora. Underground cave systems filled with water act as the area’s principal source of water. For us, access to these underground labyrinths are through sinkholes called cenotes. Diving in the area is otherworldly, a fantastic experience.
 
 
 Kris Krister 276.jpg
