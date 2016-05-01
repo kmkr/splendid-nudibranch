@@ -9,6 +9,7 @@ import PhotoSection from './sections/photo-section';
 import throttle from './scroll/throttler';
 import {updatePosition, updateSize} from './scroll/scroll-actions';
 import UrlUpdater from './history/url-updater';
+import KeyUpScroller from './history/key-up-scroller';
 
 class App extends Component {
     componentWillMount() {
@@ -36,6 +37,7 @@ class App extends Component {
                 <MidWaterSection />
                 <DeepWaterSection />
                 <UrlUpdater />
+                <KeyUpScroller />
             </div>
         );
     }
