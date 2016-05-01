@@ -16,6 +16,7 @@ class Anchor extends Component {
     componentDidMount() {
         this.props.dispatch(registerAnchor({
             id: this.state.id,
+            domId: this.props.id,
             name: this.props.name,
             position: {
                 offsetTop: this.anchor.offsetTop
@@ -53,6 +54,7 @@ class Anchor extends Component {
 }
 
 Anchor.propTypes = {
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
 };
 

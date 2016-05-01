@@ -46,25 +46,16 @@ class HashchangeHandler extends Component {
         }
 
         const currentOffset = scroll.pageYOffset;
-        const isSomwhereOnTheCollage = currentOffset < scroll.availHeight;
-        const isMovingUpwards = this.lastOffset > currentOffset;
 
-        if (isMovingUpwards && isSomwhereOnTheCollage) {
-            const newPath = '/';
+        const SLACK_FACTOR = 1.8;
+        const matching = (anchors
+            .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.availHeight / SLACK_FACTOR)))
+            .reverse())[0];
+
+        if (matching) {
+            const newPath = `/${matching.name}`;
             if (newPath !== window.location.pathname) {
-                history.replaceState(null, null, '/');
-            }
-        } else {
-            const SLACK_FACTOR = 1.8;
-            const matching = (anchors
-                .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.availHeight / SLACK_FACTOR)))
-                .reverse())[0];
-
-            if (matching) {
-                const newPath = `/${matching.name}`;
-                if (newPath !== window.location.pathname) {
-                    history.replaceState(null, null, newPath);
-                }
+                history.replaceState(null, null, newPath);
             }
         }
 

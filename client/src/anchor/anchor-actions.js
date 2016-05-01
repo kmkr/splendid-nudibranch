@@ -1,10 +1,10 @@
 import actionTypes from './anchor-action-types';
 
-export function registerAnchor({id, name, position}) {
+export function registerAnchor({id, domId, name, position}) {
     return {
         type: actionTypes.REGISTER_ANCHOR,
         data: {
-            id, name, position
+            id, domId, name, position
         }
     };
 }
