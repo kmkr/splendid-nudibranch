@@ -7,7 +7,7 @@ export const resizeTo = [
     {
         name: 'xsmall',
         shortName: 'xs',
-        width: 500
+        width: 600
     },
     {
         name: 'small',
