@@ -10,3 +10,4 @@
 - Søk
 - Fjern findDOMNode fra `search/index.js`
 - Oppdater bilde-størrelser i `constants.js`
+- Bruk srcset i stedet for å endre bildestørrelser ved resize
