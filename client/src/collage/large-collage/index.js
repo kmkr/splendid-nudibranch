@@ -22,7 +22,7 @@ const LargeCollage = ({scroll}) => {
                     scroll={scroll} /> : null}
 
                 <div className="link-wrapper">
-                    <a href="#photos">The Splendid Nudibranch</a>
+                    <p>The Splendid Nudibranch</p>
                 </div>
             </div>
         </div>
