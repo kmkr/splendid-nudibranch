@@ -41,7 +41,7 @@ class Photo extends Component {
                         sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 80vw"
                         src={photo.sizes.large.url}/>
                 </div>
-                <div className={`text ${photo.layout}`}>
+                <div className="text">
                     <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
                         <p className="title">{photo.title}</p>
                         <p className="latin">{photo.latin}</p>

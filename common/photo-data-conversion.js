@@ -4,18 +4,6 @@ function buildUrl(base, key, name, size) {
     return `${base}/${key}/${size}_${name}`;
 }
 
-function getLayout(width, height) {
-    if (width === height) {
-        return 'square';
-    }
-
-    if (width > height) {
-        return 'landscape';
-    }
-
-    return 'portrait';
-}
-
 export function serverToClient(photoFromServer, base) {
     return {
         key: photoFromServer.key,
@@ -24,9 +12,6 @@ export function serverToClient(photoFromServer, base) {
         latin: photoFromServer.latin,
         location: photoFromServer.location,
         tags: photoFromServer.tags,
-        width: photoFromServer.width,
-        height: photoFromServer.height,
-        layout: getLayout(photoFromServer.width, photoFromServer.height),
         sizes: resizeTo.reduce((prev, current) => ({
             ...prev,
             [current.name]: {

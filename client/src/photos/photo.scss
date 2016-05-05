@@ -3,6 +3,14 @@
 
 .photo-wrapper {
     margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+        max-width: 70%;
+    }
+
     &.loading {
         margin: 0;
         height: 0;
@@ -12,29 +20,15 @@
         }
     }
 
-    @include media-breakpoint-up(xl) {
-        display: -webkit-flex;
-        display: flex;
-    }
-
     .photo {
-        @include media-breakpoint-up(xl) {
-            max-width: 80%;
-            float: left;
-        }
     }
 
     .text {
-        text-align: center;
-
         .text-wrapper {
             text-align: left;
-
-            @include media-breakpoint-down(lg) {
-                margin-top: 75px;
-                padding-left: 10%;
-                padding-right: 10%;
-            }
+            margin-top: 75px;
+            padding-left: 10%;
+            padding-right: 10%;
 
             @include media-breakpoint-down(md) {
                 margin-top: 50px;
@@ -63,25 +57,5 @@
             font-weight: 400;
         }
 
-        @include media-breakpoint-up(xl) {
-            margin-top: 100px;
-            width: 20%;
-            min-width: 420px;
-            -webkit-flex-grow: 1;
-            flex-grow: 1;
-            padding: $grid-gutter-width / 2;
-            float: left;
-            .text-wrapper {
-                max-width: 320px;
-                display: inline-block; // for å unngå at HR tar 100%
-            }
-
-            &.portrait {
-                -webkit-align-self: center;
-                align-self: center;
-                // Approx way of aligning center of description to the center of the image
-                margin-top: -100px;
-            }
-        }
     }
 }

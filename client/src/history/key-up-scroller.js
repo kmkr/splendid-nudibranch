@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import smoothScroll from 'smooth-scroll';
 
-const UP_KEYS = [33/* pgup */, 37/* arrow left */, 38/* arrow up */];
-const DOWN_KEYS = [32/* space */, 34/* pgdn */, 39/* arrow right */, 40/* arrow down */];
+const UP_KEYS = [33/* pgup */, 37/* arrow left *//* 38 arrow up */];
+const DOWN_KEYS = [32/* space */, 34/* pgdn */, 39/* arrow right *//*, 40 arrow down */];
 
 class KeyUpScroller extends Component {
     componentWillMount() {

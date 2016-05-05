@@ -5,7 +5,7 @@ function tagsForKey(key, tagsFromDb) {
 }
 
 function mapOne(photoFromDb, tagsFromDb) {
-    const {title, description, latin, location, key, name, width, height, resize} = photoFromDb;
+    const {title, description, latin, location, key, name, resize} = photoFromDb;
     return {
         title,
         description,
@@ -13,8 +13,6 @@ function mapOne(photoFromDb, tagsFromDb) {
         location,
         key,
         name,
-        width,
-        height,
         resize,
         tags: tagsForKey(key, tagsFromDb)
     };
