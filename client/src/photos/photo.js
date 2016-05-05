@@ -1,11 +1,19 @@
 import React, {Component, PropTypes} from 'react';
-import {resizeTo} from '../../../common/constants';
 import TransitionImage from '../transition-image';
 import Anchor from '../anchor';
 
 import './photo.scss';
 
 const GIVE_ME_SOME_SLACK = 0;
+
+function buildSrcSet(sizes) {
+    return Object.keys(sizes)
+        .map(key => {
+            const size = sizes[key];
+            return `${size.url} ${size.width}w`;
+        })
+        .join(', ');
+}
 
 class Photo extends Component {
     constructor(props) {
@@ -16,7 +24,8 @@ class Photo extends Component {
     }
 
     render() {
-        const {availHeight, onPhotoLoad, photo, photoSize} = this.props;
+        const {availHeight, onPhotoLoad, photo} = this.props;
+        const srcSet = buildSrcSet(photo.sizes);
 
         return (
             <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''}`}>
@@ -28,7 +37,9 @@ class Photo extends Component {
                             onPhotoLoad(photo);
                         }}
                         style={{maxHeight: availHeight - GIVE_ME_SOME_SLACK}}
-                        src={photo[photoSize]} />
+                        srcSet={srcSet}
+                        sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 80vw"
+                        src={photo.sizes.large.url}/>
                 </div>
                 <div className={`text ${photo.layout}`}>
                     <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
@@ -45,7 +56,6 @@ class Photo extends Component {
 Photo.propTypes = {
     availHeight: PropTypes.number.isRequired,
     photo: PropTypes.object.isRequired,
-    photoSize: PropTypes.oneOf(resizeTo.map(r => r.name)).isRequired,
     onPhotoLoad: PropTypes.func.isRequired
 };
 

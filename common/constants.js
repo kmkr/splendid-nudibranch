@@ -7,7 +7,7 @@ export const resizeTo = [
     {
         name: 'xsmall',
         shortName: 'xs',
-        width: 600
+        width: 500
     },
     {
         name: 'small',
@@ -25,9 +25,5 @@ export const resizeTo = [
         width: 1900
     }
 ];
-
-export const getPhotoSizeForWidth = width => {
-    return resizeTo.filter(rt => rt.width > width)[0] || resizeTo[resizeTo.length - 1];
-};
 
 export const description = 'Photos of sea critters, slender sharks, beautiful shrimps, lots of fish and splendid nudibranchs';

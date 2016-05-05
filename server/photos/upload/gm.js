@@ -1,6 +1,6 @@
 import gm from 'gm';
 
-export function resize(filePath, size) {
+export function resize(filePath, size, sizeLabel) {
     return new Promise((resolve, reject) => {
         console.log('[resizer.js] Resizing file %s to %s', filePath, size);
         gm(filePath)
@@ -15,8 +15,12 @@ export function resize(filePath, size) {
                     buf = Buffer.concat([buf, data]);
                 });
                 stdout.on('end', () => {
-                    return resolve({
-                        buffer: buf
+                    gm(buf).identify((err, value) => {
+                        return resolve({
+                            sizeLabel,
+                            ...value.size,
+                            buffer: buf
+                        });
                     });
                 });
             });

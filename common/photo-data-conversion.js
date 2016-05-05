@@ -17,25 +17,28 @@ function getLayout(width, height) {
 }
 
 export function serverToClient(photoFromServer, base) {
-    return (
-        resizeTo.reduce((prev, current) => ({
+    return {
+        key: photoFromServer.key,
+        title: photoFromServer.title,
+        description: photoFromServer.description,
+        latin: photoFromServer.latin,
+        location: photoFromServer.location,
+        tags: photoFromServer.tags,
+        width: photoFromServer.width,
+        height: photoFromServer.height,
+        layout: getLayout(photoFromServer.width, photoFromServer.height),
+        sizes: resizeTo.reduce((prev, current) => ({
             ...prev,
-            [current.name]: buildUrl(
-                base,
-                photoFromServer.key,
-                photoFromServer.name,
-                current.shortName
-            )
-        }), {
-            key: photoFromServer.key,
-            title: photoFromServer.title,
-            description: photoFromServer.description,
-            latin: photoFromServer.latin,
-            location: photoFromServer.location,
-            tags: photoFromServer.tags,
-            width: photoFromServer.width,
-            height: photoFromServer.height,
-            layout: getLayout(photoFromServer.width, photoFromServer.height)
-        })
-    );
+            [current.name]: {
+                url: buildUrl(
+                    base,
+                    photoFromServer.key,
+                    photoFromServer.name,
+                    current.shortName
+                ),
+                width: photoFromServer.resize[current.name].width,
+                height: photoFromServer.resize[current.name].height
+            }
+        }), {})
+    };
 }

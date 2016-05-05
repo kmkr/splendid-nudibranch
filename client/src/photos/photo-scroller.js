@@ -1,7 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
 import ListPhotos from './list-photos';
-import {getPhotoSizeForWidth} from '../../../common/constants';
 
 const LOAD_AT_START = Math.ceil(window.innerHeight / 1000);
 const LOAD_AT_A_TIME = 2;
@@ -10,17 +9,12 @@ class PhotoScroller extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            photoSize: getPhotoSizeForWidth(this.props.scroll.innerWidth),
             visibleEnd: LOAD_AT_START
         };
     }
 
     componentWillReceiveProps(props) {
         const state = {};
-        const photoSize = getPhotoSizeForWidth(props.scroll.innerWidth);
-        if (photoSize.width > this.state.photoSize.width) {
-            state.photoSize = photoSize;
-        }
         const photoListWrapper = this.refs['photo-list-wrapper'];
         const {innerHeight, pageYOffset} = props.scroll;
         const SOME_BUFFER = innerHeight / 2;
@@ -40,7 +34,6 @@ class PhotoScroller extends Component {
                 <ListPhotos
                     onPhotoLoad={this.props.onPhotoLoad}
                     photos={this.props.photos}
-                    photoSize={this.state.photoSize.name}
                     availHeight={this.props.scroll.availHeight}
                     visibleEnd={this.state.visibleEnd} />
 

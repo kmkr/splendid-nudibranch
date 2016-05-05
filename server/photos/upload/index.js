@@ -8,7 +8,7 @@ import {resizeTo} from '../../../common/constants';
 import * as photoDataFormatter from '../photo-data-formatter';
 
 function resizeToMultiple(path) {
-    return resizeTo.map(r => resize(path, r.width));
+    return resizeTo.map(r => resize(path, r.width, r.name));
 }
 
 function upload(id, file, resizedResults) {
@@ -32,6 +32,8 @@ function insertToDb(id, file, additionalData) {
         ...additionalData
     };
 
+    console.log('Inserting photo:');
+    console.log(photo);
     return db.insert('photos', photo).then(() => photo);
 }
 
@@ -43,8 +45,26 @@ export default file => {
             tempFilePath = path;
             return Promise.all(resizeToMultiple(tempFilePath));
         })
-        .then(resizedResults => Promise.all(upload(id, file, resizedResults)))
-        .then(() => getMetadata(tempFilePath))
+        .then(resizedResults => {
+            Promise.all(upload(id, file, resizedResults));
+            return resizedResults.map(({sizeLabel, width, height}) => ({
+                sizeLabel, width, height
+            })).reduce((prevVal, nextVal) => {
+                prevVal[nextVal.sizeLabel] = {
+                    height: nextVal.height,
+                    width: nextVal.width
+                };
+
+                return prevVal;
+            }, {});
+        })
+        .then(resize => {
+            return getMetadata(tempFilePath)
+                .then(md => ({
+                    resize,
+                    ...md
+                }));
+        })
         .then(metadata => insertToDb(id, file, metadata))
         .then(photo => photoDataFormatter.dbToClient(photo, []));
 };

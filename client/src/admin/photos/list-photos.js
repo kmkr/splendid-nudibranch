@@ -10,7 +10,7 @@ const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
                 key={photo.key}
                 className="entry">
                 <div className="thumb">
-                    <img src={photo.thumb} />
+                    <img src={photo.sizes.thumb.url} />
                 </div>
                 <div className="form">
                     <EditPhoto
