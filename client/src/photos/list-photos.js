@@ -1,11 +1,16 @@
 import React, {Component, PropTypes} from 'react';
 
 import Photo from './photo';
-import {postStats} from '../statistics';
+import {postStats, beaconStats} from '../statistics';
 
 let photosLoaded = 0;
 
 class ListPhotos extends Component {
+    componentWillMount() {
+        window.addEventListener('unload', () => {
+            beaconStats({photosLoaded});
+        });
+    }
     photoLoaded(photo) {
         const {onPhotoLoad} = this.props;
         photosLoaded++;

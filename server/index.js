@@ -30,6 +30,7 @@ app.engine('jsx', require('express-react-views').createEngine({
     transformViews: true
 }));
 app.use(bodyParser.json());
+app.use(bodyParser.text());
 app.use(auth);
 app.use('/static', express.static(`${__dirname}/static`));
 
