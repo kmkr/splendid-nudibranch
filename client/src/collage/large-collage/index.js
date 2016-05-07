@@ -6,10 +6,10 @@ import {getCollage} from './collages';
 import './large-collage.scss';
 
 const LargeCollage = ({scroll}) => {
-    const {availHeight} = scroll;
+    const {innerHeight} = scroll;
 
     const wrapperStyle = {
-        height: `${availHeight}px`
+        height: `${innerHeight}px`
     };
 
     const collage = getCollage();
@@ -20,10 +20,6 @@ const LargeCollage = ({scroll}) => {
                 {collage.type === '2x2' ? <TwoXTwoCollage
                     collage={collage}
                     scroll={scroll} /> : null}
-
-                <div className="link-wrapper">
-                    <p>The Splendid Nudibranch</p>
-                </div>
             </div>
         </div>
     );

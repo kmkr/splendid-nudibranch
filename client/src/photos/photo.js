@@ -4,7 +4,7 @@ import Anchor from '../anchor';
 
 import './photo.scss';
 
-const GIVE_ME_SOME_SLACK = 0;
+const GIVE_ME_SOME_SLACK_FACTOR = 0.85;
 
 function buildSrcSet(sizes) {
     return Object.keys(sizes)
@@ -36,7 +36,7 @@ class Photo extends Component {
                             this.setState({showComponent: true});
                             onPhotoLoad(photo);
                         }}
-                        style={{maxHeight: availHeight - GIVE_ME_SOME_SLACK}}
+                        style={{maxHeight: `${availHeight * GIVE_ME_SOME_SLACK_FACTOR}px`}}
                         srcSet={srcSet}
                         sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 80vw"
                         src={photo.sizes.large.url}/>

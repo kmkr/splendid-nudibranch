@@ -15,7 +15,7 @@ export function updateSize() {
         data: {
             innerWidth: window.innerWidth,
             innerHeight: window.innerHeight,
-            availHeight: screen.availHeight * 0.9
+            availHeight: screen.availHeight
         }
     };
 }
