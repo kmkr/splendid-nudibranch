@@ -40,7 +40,7 @@ Title	Fuchsia Flatworm
 Loc		Dumaguete, The Philippines
 Latin	Pseudoceros ferrugineus
 Tags	2013 worm
-Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, generally move faster and are (duh) flat. They are also less evolved than nudibranchs.
+Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, that they generally move faster and are (duh) flat. They are also less evolved than nudibranchs.
 
 
 DSC00974.jpg
@@ -406,9 +406,9 @@ DSC05829.jpg
 
 Title	Red Sea Visibility
 Loc		Egypt
-Tags
+Tags	2014
 Latin	-
-Desc
+Desc	The Red Sea is surrounded by deserts and with few connected rivers the visibility gets exceptional.
 
 
 DSC06145.jpg
