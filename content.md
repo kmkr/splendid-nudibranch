@@ -291,7 +291,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Miamira alleni
 Tags	nudibranch 2014
-Desc	What looks like a piece of coral is actually a slug slowly moving on the reef.
+Desc	What looks like a piece of coral is actually a slug.
 
 
 DSC04200.jpg
@@ -314,11 +314,11 @@ Desc
 
 DSC04222.jpg
 
-Title
+Title	Graeffe's sea cucumber
 Loc		Anilao, The Philippines
-Latin
+Latin	Pearsonothuria graeffei
 Tags	sea-cucumber 2014
-Desc
+Desc	The sea cucumbers are scavengers, mostly seen crawling around the sea floor. However, they gametes float around in the water column and a vertical positioning is thought to increase the chance of successful reproduction for both male and female.
 
 
 DSC04244.jpg
@@ -327,7 +327,7 @@ Title	Longhorn Cowfish
 Loc		Anilao, The Philippines
 Tags	2014 boxfish cowfish
 Latin	Lactoria cornuta
-Desc
+Desc	The cowfish is a peaceful fish and it's horns function is as defence - to make the fish hard to swallow for its reef predators. The cowfish is, sadly, a common target for the aquarium industry due to their adorable looks.
 
 
 DSC04554.jpg
