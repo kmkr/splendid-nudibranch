@@ -9,8 +9,6 @@ Hilde:
 KM:
 
 - Fiks når skjerm er så høy at collage blir feil (årsaken er høyde på bildet som settes i `two-x-two/index.js`)
-- Bytt ut smooth-scroll med https://github.com/callmecavs/jump.js/ (mindre)
-- Legg til RAF-polyfill: https://gist.github.com/paulirish/1579671
 
 Søk
 - Filter tags
