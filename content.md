@@ -368,9 +368,9 @@ Desc
 
 DSC04854.jpg
 
-Title	?
+Title	Nudibranch
 Loc		Anilao, The Philippines
-Latin	?
+Latin	Janolus sp.
 Tags	nudibranch 2014
 Desc	Unlike many other sea slugs, nudibranchs lack a shell. As a larva they do have one but it's shed when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most use the toxic metabolites from what they eat for their own defence.
 
@@ -431,19 +431,19 @@ Desc	Participating in a huge feeding aggregation, the massive amount of anthias 
 
 DSC06497.jpg
 
-Title
+Title	Giant Moray Eel
 Loc		Egypt
 Tags	2014
-Latin
-Desc
+Latin	Gymnothorax javanicus
+Desc	Born as male and turns into female later in life, this eel can grow up to three meters long.
 
 
 DSC06519.jpg
 
-Title
+Title	Bluespotted ribbontail ray
 Loc		Egypt
 Tags	2014
-Latin
+Latin	Taeniura lymma
 Desc
 
 
