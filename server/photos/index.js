@@ -33,7 +33,10 @@ router.delete('/:id', (req, res) => {
             cache.clear();
             return res.json(response);
         })
-        .catch(error => res.status(500).json({error}));
+        .catch(error => {
+            console.log(error);
+            res.status(500).json({error});
+        });
 });
 
 export default router;
