@@ -40,7 +40,7 @@ Title	Fuchsia Flatworm
 Loc		Dumaguete, The Philippines
 Latin	Pseudoceros ferrugineus
 Tags	2013 worm
-Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, that they generally move faster and are (duh) flat. They are also less evolved than nudibranchs.
+Desc	Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, that they generally move faster and are (duh) flat.
 
 
 DSC00974.jpg
@@ -74,7 +74,7 @@ DSC01782.jpg
 
 Title	Blackfin Barracuda
 Loc		Apo Reef, The Philippines
-Latin	Sphyraena qenie
+Latin	Sphyraena genie
 Tags	2014 barracuda
 Desc	A streamlined predator, very powerful with fearsome teeth. Its torpedo like body of almost pure muscle makes it extremely fast. A fascinating fish commonly seen schooling.
 
@@ -466,20 +466,20 @@ Desc	The word "dugong" means lady of the sea, they are believed to be inspiratio
 
 DSC06687.jpg
 
-Title
+Title	Spinner Dolphin
 Loc		Egypt
 Tags	2014 dolphin
-Latin
-Desc
+Latin	Stenella longirostris
+Desc	When I hear the signals and clicks of dolphins on dives I instantly change focus from finding small stuff, finding snails or whatever I'm up to at the moment, and instead scout for the source of these fascinating whistles. I know the dolphins are around, but they are fast swimmers so not necessarily for long. Sounds travel efficiently in water, so it's difficult to say how close they actually are. Most often I will not find them, but sometimes I do, and some of these encounters I believe are the dolphins finding me more than the other way around. They are curious, playful and intelligent creatures.
 
 
 DSC06693.jpg
 
-Title
+Title	Spinner Dolphin
 Loc		Egypt
 Tags	2014 dolphin
-Latin
-Desc
+Latin	Stenella longirostris
+Desc	Dolphins use echolocation to "see" the environment, similar to a sonar or radar. They send out bursts of clicking sounds, and based on the frequency of the return signal, and how much time the signal used to return, the dolphin can estimate what kind of objects are nearby.
 
 DSC06743.jpg
 
@@ -505,11 +505,11 @@ Desc	The red lionfish is the only known species to blow water at prey in effort 
 
 DSC07252.jpg
 
-Title	?
+Title	Moon jellyfish
 Loc		egypt
 Tags	2015
-Latin
-Desc
+Latin	Aurelia aurita
+Desc	The short tentacles around the bell of the moon jelly are poisonous to small marine animals, which the jelly sometimes eat. A complete meal is ensured by using a layer of mucus covering the creature to catch plankton.
 
 
 DSC07289.jpg
@@ -541,19 +541,20 @@ Desc	Water temperatures in the Red Sea peaks at 35 degrees celcius. Most reefs b
 
 DSC07567.jpg
 
-Title	?
+Title	Blackfin barracuda
 Loc		egypt
 Tags	2015
-Latin
-Desc
+Latin	Sphyraena genie
+Desc	Barracudas aggregate in schools as a protection against larger predators.
+
 
 
 DSC07673.jpg
 
-Title	?
+Title	Two-banded anemonefish
 Loc		egypt
 Tags	2015
-Latin
+Latin	Amphiprion bicinctus
 Desc
 
 
