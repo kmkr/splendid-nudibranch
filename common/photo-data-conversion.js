@@ -6,6 +6,7 @@ function buildUrl(base, key, name, size) {
 
 export function serverToClient(photoFromServer, base) {
     return {
+        name: photoFromServer.name,
         key: photoFromServer.key,
         title: photoFromServer.title,
         description: photoFromServer.description,

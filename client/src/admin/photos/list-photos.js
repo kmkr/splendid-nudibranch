@@ -7,16 +7,18 @@ const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
     <div className="list-photos">
         {photos.map(photo => (
             <div
-                key={photo.key}
-                className="entry">
-                <div className="thumb">
-                    <img src={photo.sizes.thumb.url} />
-                </div>
-                <div className="form">
-                    <EditPhoto
-                        onDeleteClick={onDeleteClick}
-                        onUpdateClick={onUpdateClick}
-                        photo={photo} />
+                key={photo.key}>
+                <h3>{photo.name}</h3>
+                <div className="entry">
+                    <div className="thumb">
+                        <img src={photo.sizes.thumb.url} />
+                    </div>
+                    <div className="form">
+                        <EditPhoto
+                            onDeleteClick={onDeleteClick}
+                            onUpdateClick={onUpdateClick}
+                            photo={photo} />
+                    </div>
                 </div>
             </div>
         ))}
