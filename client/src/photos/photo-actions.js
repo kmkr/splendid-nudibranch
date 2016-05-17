@@ -3,27 +3,31 @@ import {serverToClient} from '../../../common/photo-data-conversion';
 
 function firstXWithDescription(photos, num = 5) {
     let foundNum = 0;
+    const length = photos.length;
 
-    for (let i = 0; foundNum < num && i < photos.length; i++) {
-        if (photos[i].description) {
+    for (let i = 0; i < length && foundNum < num; i++) {
+        const photo = photos[i];
+
+        if (photo.description) {
             foundNum++;
         } else {
             // Place at the end of the array
-            photos.push(photos.splice(i, 1));
+            photos[i] = null;
+            photos.push(photo);
         }
     }
 
-    return photos;
+    return photos.filter(p => p);
 }
-function shuffle(o) {
-    for (let i = o.length; i; i -= 1) {
+function shuffle(photos) {
+    for (let i = photos.length; i; i -= 1) {
         const j = Math.floor(Math.random() * i);
-        const x = o[i - 1];
-        o[i - 1] = o[j];
-        o[j] = x;
+        const x = photos[i - 1];
+        photos[i - 1] = photos[j];
+        photos[j] = x;
     }
 
-    return o;
+    return photos;
 }
 
 export function fetchPhotos() {
