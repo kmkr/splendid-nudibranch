@@ -1,6 +1,21 @@
 import actionTypes from './photo-action-types';
 import {serverToClient} from '../../../common/photo-data-conversion';
 
+function firstXWithDescription(photos, num = 5) {
+    let foundNum = 0;
+
+    for (let i = 0; foundNum < num && i < photos.length; i++) {
+        const photo = photos[i];
+        if (photo.description) {
+            foundNum++;
+        } else {
+            photos[i] = null;
+            photos.push(photo);
+        }
+    }
+
+    return photos.filter(p => p);
+}
 function shuffle(o) {
     for (let i = o.length; i; i -= 1) {
         const j = Math.floor(Math.random() * i);
@@ -16,7 +31,7 @@ export function fetchPhotos() {
     const {photos, base} = window.sn.data.photoData;
     return {
         type: actionTypes.SET_PHOTOS,
-        data: shuffle(photos.map(photo => serverToClient(photo, base)))
+        data: firstXWithDescription(shuffle(photos.map(photo => serverToClient(photo, base))))
     };
 }
 
