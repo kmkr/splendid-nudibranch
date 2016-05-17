@@ -25,7 +25,7 @@ Latin	chromodoris annae
 Desc
 
 
-DSC00792.jpg
+DSC00692.jpg
 
 Title	White Eyed Moray
 Loc		Dumaguete, The Philippines
@@ -314,11 +314,11 @@ Desc
 
 DSC04222.jpg
 
-Title	Graeffe's sea cucumber
+Title	Graeffe's Sea Cucumber
 Loc		Anilao, The Philippines
 Latin	Pearsonothuria graeffei
 Tags	sea-cucumber 2014
-Desc	The sea cucumbers are scavengers, mostly seen crawling around the sea floor. However, they gametes float around in the water column and a vertical positioning is thought to increase the chance of successful reproduction for both male and female.
+Desc	The sea cucumbers are scavengers, crawling mostly around the sea floor. Not always though - they gametes float around in the water column and a vertical positioning is thought to increase the chance of successful reproduction for both male and female.
 
 
 DSC04244.jpg
@@ -404,17 +404,17 @@ Desc
 
 DSC05829.jpg
 
-Title	Red Sea Visibility
+Title	The Red Sea
 Loc		Egypt
 Tags	2014
 Latin	-
-Desc	The Red Sea is surrounded by deserts and with few connected rivers the visibility gets exceptional.
+Desc	Surrounded by deserts and with few connected rivers, the Red Sea's visibility is very pleasant.
 
 
 DSC06145.jpg
 
 Title	St. Johns Cave Systems
-Loc		St. Johns, Egypt
+Loc		St. Johns Reef, Egypt
 Tags	2014
 Latin	-
 Desc	St. Johns is know for its array of caverns, tunnels, overhangs and swim-throughs. The sun pierce through the cracks, crevices and holes inside the caverns, guiding us through the maze. The majestetic area feel like a long lost world, mountains now covered in coral.
@@ -440,7 +440,7 @@ Desc	Born as male and turns into female later in life, this eel can grow up to t
 
 DSC06519.jpg
 
-Title	Bluespotted ribbontail ray
+Title	Bluespotted Ribbontail Ray
 Loc		Egypt
 Tags	2014
 Latin	Taeniura lymma
@@ -470,7 +470,7 @@ Title	Spinner Dolphin
 Loc		Egypt
 Tags	2014 dolphin
 Latin	Stenella longirostris
-Desc	When I hear the signals and clicks of dolphins on dives I instantly change focus from finding small stuff, finding snails or whatever I'm up to at the moment, and instead scout for the source of these fascinating whistles. I know the dolphins are around, but they are fast swimmers so not necessarily for long. Sounds travel efficiently in water, so it's difficult to say how close they actually are. Most often I will not find them, but sometimes I do, and some of these encounters I believe are the dolphins finding me more than the other way around. They are curious, playful and intelligent creatures.
+Desc	Those times I'm lucky enough to hear distant sounds of dolphins I instantly change focus from finding small stuff, finding snails or whatever I'm up to at the moment, and instead scout. The dolphins are somewhere around, but they are fast swimmers so not necessarily for long. Most often I will not find them, but sometimes I do, and some of these encounters I believe are the dolphins finding me more than the other way around. They are curious, playful and intelligent creatures.
 
 
 DSC06693.jpg
@@ -505,8 +505,8 @@ Desc	The red lionfish is the only known species to blow water at prey in effort 
 
 DSC07252.jpg
 
-Title	Moon jellyfish
-Loc		egypt
+Title	Moon Jellyfish
+Loc		Egypt
 Tags	2015
 Latin	Aurelia aurita
 Desc	The short tentacles around the bell of the moon jelly are poisonous to small marine animals, which the jelly sometimes eat. A complete meal is ensured by using a layer of mucus covering the creature to catch plankton.
@@ -515,7 +515,7 @@ Desc	The short tentacles around the bell of the moon jelly are poisonous to smal
 DSC07289.jpg
 
 Title	Crescent-tail Bigeye
-Loc		egypt
+Loc		Egypt
 Tags	2015
 Latin	Priacanthus hamrur
 Desc
@@ -541,7 +541,7 @@ Desc	Water temperatures in the Red Sea peaks at 35 degrees celcius. Most reefs b
 
 DSC07567.jpg
 
-Title	Blackfin barracuda
+Title	Blackfin Barracuda
 Loc		egypt
 Tags	2015
 Latin	Sphyraena genie
@@ -551,8 +551,8 @@ Desc	Barracudas aggregate in schools as a protection against larger predators.
 
 DSC07673.jpg
 
-Title	Two-banded anemonefish
-Loc		egypt
+Title	Two-banded Anemonefish
+Loc		Egypt
 Tags	2015
 Latin	Amphiprion bicinctus
 Desc
@@ -578,7 +578,7 @@ Desc	At the end of our dive Elphinstone the last of us in the water were blessed
 DSC07841.jpg
 
 Title	Bluecheek Butterflyfish
-Loc		egypt
+Loc		Egypt
 Tags	2015
 Latin	Chaetodon semilarvatus
 Desc	Endemic to the Red Sea and Gulf of Aden, the bluecheek butterflyfish is one of the few species of fish that have long-term mates.
@@ -622,7 +622,7 @@ Latin	Hyas araneus
 
 IMG_3351.jpg
 
-Title	The Cenotes of Yucatán
+Title	The Yucatán Cenotes
 Loc		Yucatán, Mexico
 Tags	2011
 Latin	-
