@@ -17,7 +17,7 @@ const LargeCollage = ({scroll}) => {
     return (
         <div style={wrapperStyle}>
             <div id="large-collage">
-                {collage.type === '2x2' ? <TwoXTwoCollage
+                {collage && collage.type === '2x2' ? <TwoXTwoCollage
                     collage={collage}
                     scroll={scroll} /> : null}
             </div>
