@@ -5,16 +5,15 @@ function firstXWithDescription(photos, num = 5) {
     let foundNum = 0;
 
     for (let i = 0; foundNum < num && i < photos.length; i++) {
-        const photo = photos[i];
-        if (photo.description) {
+        if (photos[i].description) {
             foundNum++;
         } else {
-            photos[i] = null;
-            photos.push(photo);
+            // Place at the end of the array
+            photos.push(photos.splice(i, 1));
         }
     }
 
-    return photos.filter(p => p);
+    return photos;
 }
 function shuffle(o) {
     for (let i = o.length; i; i -= 1) {
