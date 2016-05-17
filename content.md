@@ -165,7 +165,7 @@ Title	Painted Frogfish
 Loc		Anilao, The Philippines
 Latin	Antennarius pictus
 Tags	2014 frogfish
-Desc	The social activity of this fish is rather limited, and it lives alone most of the time expect for mating. It's a solitary type, and the male will sometimes eat the female if she stays around too long after mating.
+Desc	The social activity of this fish is rather limited, and the male will sometimes eat the female if she stays around too long after mating.
 
 
 DSC03281.jpg
@@ -426,7 +426,7 @@ Title	Elphinstone Anthias
 Loc		Elphinestone Reef, Egypt
 Tags	2014 anthias
 Latin	Anthiinae (family)
-Desc	Participating in a huge feeding aggregation, the massive amount of anthias make some of the visually dramatic scenes on the reef. Anthias live in harems consisting of one dominant male, a few lesser males, juveniles and a cluster of females. All anthias are hermaphordites and begin life as female.
+Desc	Participating in a huge feeding aggregation, the massive amount of anthias make some of the visually dramatic scenes on the reef. Anthias live in harems consisting of one dominant male, a few lesser males, juveniles and a cluster of females. All anthias are hermaphrodites and begin life as female.
 
 
 DSC06497.jpg
