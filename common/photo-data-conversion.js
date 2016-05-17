@@ -1,7 +1,7 @@
 import {resizeTo} from './constants';
 
 function buildUrl(base, key, name, size) {
-    return `${base}/${key}/${size}_${name}`;
+    return `${base}/${key}/${size}_${encodeURIComponent(name)}`;
 }
 
 export function serverToClient(photoFromServer, base) {
