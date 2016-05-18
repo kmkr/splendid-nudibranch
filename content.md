@@ -31,7 +31,7 @@ Title	White Eyed Moray
 Loc		Dumaguete, The Philippines
 Tags	2013 eel
 Latin	Gymnothorax thyrsoideus
-Desc	Moray eels are shy creatures mostly seen peeking out from rocks and coral formations, only their heads exposed. Most of the long slender body is hidden inside crevices, in which it retreats if you come too near.
+Desc	Moray eels are shy creatures mostly seen peeking out from rocks and coral formations, only their heads exposed. Most of the long slender body is hidden inside crevices, in which it retreats if you approach too fast, or come too near.
 
 
 DSC00792.jpg
@@ -84,7 +84,7 @@ DSC02484.jpg
 Title	Klara of Pandan Island
 Loc		Pandan Island, The Philippines
 Tags	2014 parrot
-Desc	On a tiny island just outside Mindoro in the Philippines lives an old parrot named Klara, watched over by the two owners of the island. I didn't like it at first, but over time I learned there was more to it than just keeping a parrot as a pet. In fact, the story is very touching but too long to write here. Ask me one time if you want to hear it.
+Desc	On a tiny island just outside Mindoro in the Philippines lives an old parrot named Klara, watched over by the two owners of the island. Over time I learned there was more to the story than just keeping a parrot as a pet. In fact, it's very touching but too long to write here. Ask me one time if you want to hear it.
 
 
 DSC02544.jpg
@@ -111,7 +111,7 @@ Title	Juvenile Boxfish
 Loc		Anilao, The Philippines
 Latin
 Tags	2014 boxfish
-Desc	The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. The boxfish is a type of animal that is consistently cute its entire lifetime, not just in the juvenile stage.
+Desc	The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. The boxfish is one of those animals being consistently cute its entire lifetime, not just as juvenile.
 
 
 DSC02648.jpg
@@ -183,7 +183,7 @@ Title	Coleman's Shrimp
 Loc		Anilao, The Philippines
 Latin	Periclimenes colemani
 Tags	2014 shrimp urchin
-Desc	Man and wife living on a toxic fire urchin. The pair clears a little patch on the urchin with their claws, just enough so they can move freely around on the urchin collecting small pieces of food. The largest of them is always the female.
+Desc	The pair of shrimp clears a little patch on the fire urchin with their claws, just enough to move freely around on the urchin collecting small pieces of food while still being protected from predators by the urchin's toxic spines. The largest of the shrimps is always the female.
 
 
 DSC03425.jpg
@@ -201,7 +201,7 @@ Title	Reticulate Stargazer
 Loc		Anilao, The Philippines
 Latin	Uranoscopus chinensis
 Tags	stargazer 2014
-Desc	Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site turns to a large scale battlefield for the tiny creatures living there. A stargazer approached in the midst of the chaos, landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. He waits for passing fish before jumping upwards while creating a vacuum to suck in the prey.
+Desc	Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site turns to a large scale battlefield when the sun disappears. A stargazer approached us in the midst of the chaos, landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. He waits for passing fish before jumping upwards while creating a vacuum to suck in the prey.
 
 
 DSC03660.jpg
@@ -237,7 +237,7 @@ Title	Giant Frogfish
 Loc		Anilao, The Philippines
 Latin	Antennarius commerson
 Tags	frogfish 2014
-Desc	In two weeks, the frogfish can change its own color to match the environment. Frogfishes use their pelvic fins (the ones below the body) to walk along the sea floor, but they generally do not move very much. Their pectoral fins (one on each side) is used for stability.
+Desc	In just two weeks, the frogfish can change its own color to match the environment. They generally do not move very much, but can use the pelvic fins (the ones below the body) to walk along the sea floor. Their pectoral fins (one on each side) are used for stability.
 
 
 DSC03808.jpg
@@ -264,7 +264,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Hypselodoris bullocki
 Tags	nudibranch 2014
-Desc	Nudibranch have external gills (yellow rosette on the back), hence its name that translates to "naked gill".
+Desc	Nudibranch have external gills (yellow rosette on the back), hence its name, which translates to "naked gill".
 
 
 DSC04020.jpg
@@ -282,7 +282,7 @@ Title	Leopard Anemone Shrimp
 Loc		Anilao, The Philippines
 Latin	Izucaris masudai
 Tags	shrimp 2014
-Desc	The single goal for the dive where this photo was taken was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew only approximately where to find it, and its small length of only two centimeters combined with a camouflaged body made it quite a challenge.
+Desc	The single goal for this dive was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew only approximately where to find it,  its small length of only two centimeters combined with a camouflaged body made the search quite a challenge.
 
 
 DSC04078.jpg
@@ -327,7 +327,7 @@ Title	Longhorn Cowfish
 Loc		Anilao, The Philippines
 Tags	2014 boxfish cowfish
 Latin	Lactoria cornuta
-Desc	The cowfish is a peaceful fish and it's horns function is as defence - to make the fish hard to swallow for its reef predators. The cowfish is, sadly, a common target for the aquarium industry due to their adorable looks.
+Desc	A peaceful fish having horns as defence to make it more difficult for predator to swallow the fish. The cowfishes are, sadly, a common target for the aquarium industry due to their adorable looks.
 
 
 DSC04554.jpg
@@ -572,7 +572,7 @@ Title	Silky Shark
 Loc		Elphinestone Reef, Egypt
 Tags	shark 2015
 Latin	Carcharhinus falciformis
-Desc	At the end of our dive Elphinstone the last of us in the water were blessed with a visit by this beautiful silky shark. Once abundant in the world's oceans, now overfished and in some places depleted. Commercial fishing of tuna, the silkys favored prey, make it the shark second most commonly taken as bycatch.
+Desc	Once abundant in the world's oceans, now overfished and in some places depleted. Commercial fishing of tuna, the silkys favored prey, make it the shark second most commonly taken as bycatch.
 
 
 DSC07841.jpg
@@ -599,7 +599,7 @@ Title	Juvenile Blacktip Reef Shark
 Loc		Perhentian Besar, Malaysia
 Tags	2015 shark
 Latin	Carcharhinus melanopterus
-Desc	Each day these and many more juvenile sharks hanged around just outside the beach. They didn't seem to bother me too much and let me swim with them while they were trying to catch a meal.
+Desc	These, and many more, juvenile sharks hang around just outside the beach all day. They didn't seem to bother me too much and let me swim with them while they were trying to catch a meal.
 
 
 DSC09129.jpg
@@ -608,7 +608,7 @@ Title	Juvenile Blacktip Reef Shark
 Loc		Perhentian Besar, Malaysia
 Tags	2015
 Latin	Carcharhinus melanopterus
-Desc	Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds just outside a small beach on Perhentians to practice the skill of hunting.
+Desc	Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds outside a small beach on Perhentians to practice the skill of hunting.
 
 
 DSC09919.jpg
@@ -644,4 +644,4 @@ Title	Potato Cod
 Loc		Cod Hole, Great Barrier Reef, Australia
 Tags	2013 cod
 Latin	Epinephelus tukula
-Desc	A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once the first person locates them. They really seem to just hang around to get cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
+Desc	A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once the first person locates them. They seem to chill out at the same place, getting cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
