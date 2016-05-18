@@ -1,10 +1,20 @@
 import {
+    batchUpdatePhotosActionTypes,
     deletePhotoActionTypes,
     updatePhotoActionTypes,
     uploadPhotoActionTypes
 } from './edit-photo-action-types';
 import fetchActionFactory from '../../actions/fetch-action-factory';
 import {serverToClient} from '../../../../common/photo-data-conversion';
+
+export function batchUpdatePhotos(photos) {
+    return fetchActionFactory({
+        actionTypes: batchUpdatePhotosActionTypes,
+        url: '/photos/metadata',
+        method: 'postJSON',
+        options: photos
+    });
+}
 
 export function uploadPhoto(photo) {
     return fetchActionFactory({

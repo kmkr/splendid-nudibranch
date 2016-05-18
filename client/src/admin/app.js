@@ -3,8 +3,9 @@ import {connect} from 'react-redux';
 
 import Authenticator from './authenticator';
 import PhotoUploader from './photos/photo-uploader';
+import BatchUpdatePhotos from './photos/batch-update-photos';
 import ListPhotos from './photos/list-photos';
-import {updatePhoto, uploadPhoto, deletePhoto} from './photos/edit-photo-actions';
+import {batchUpdatePhotos, updatePhoto, uploadPhoto, deletePhoto} from './photos/edit-photo-actions';
 import {setTagsForPhoto} from './tags/edit-tags-actions';
 import {fetchPhotos} from '../photos/photo-actions';
 import snFetch from '../fetch';
@@ -35,6 +36,10 @@ class App extends Component {
         this.setState({token});
     }
 
+    onBatchUpdatePhotos(photos) {
+        this.props.dispatch(batchUpdatePhotos(photos));
+    }
+
     onUpdateClick(photo, updatedValues, updatedTags) {
         this.props.dispatch(updatePhoto(photo, updatedValues));
         this.props.dispatch(setTagsForPhoto(photo, updatedTags));
@@ -48,6 +53,9 @@ class App extends Component {
                     <div style={{opacity: this.state.token ? 1 : 0.2}}>
                         <h1>Upload photos</h1>
                         <PhotoUploader onAddPhoto={this.onAddPhoto.bind(this)} />
+                        <hr />
+                        <h1>Batch update photos</h1>
+                        <BatchUpdatePhotos photos={this.props.photos.data} onSubmit={this.onBatchUpdatePhotos.bind(this)} />
                         <hr />
                         <h1>Edit photos</h1>
                         <ListPhotos

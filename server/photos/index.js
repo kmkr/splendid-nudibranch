@@ -39,4 +39,23 @@ router.delete('/:id', (req, res) => {
         });
 });
 
+// todo: handle tags
+router.post('/metadata', (req, res) => {
+    if (req.body.length === 0) {
+        res.status(204).end();
+        return;
+    }
+
+    const photos = req.body;
+    Promise.all(photos.map(photo => {
+        delete photo.tags;
+        return updatePhotoHandler(photo.key, photo);
+    }))
+    .then(() => {
+        cache.clear();
+        res.status(204).end();
+    })
+    .catch(error => res.status(500).json({error}));
+});
+
 export default router;
