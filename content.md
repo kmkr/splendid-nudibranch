@@ -84,7 +84,7 @@ DSC02484.jpg
 Title	Klara of Pandan Island
 Loc		Pandan Island, The Philippines
 Tags	2014 parrot
-Desc	On a tiny island just outside Mindoro in the Philippines lives an old parrot named Klara. She is watched over by the owners of the island. I didn't like it at first, but over time I learned there was more to it than just keeping a parrot as a pet. In fact, the story is very touching but too long to write here. Ask me one time if you want to hear it.
+Desc	On a tiny island just outside Mindoro in the Philippines lives an old parrot named Klara, watched over by the two owners of the island. I didn't like it at first, but over time I learned there was more to it than just keeping a parrot as a pet. In fact, the story is very touching but too long to write here. Ask me one time if you want to hear it.
 
 
 DSC02544.jpg
@@ -102,7 +102,7 @@ Title	Tube Dwelling Anemone
 Loc		Anilao, The Philippines
 Latin	Cerianthus sp. (not confirmed)
 Tags	2014 anemone
-Desc	Not a true anemone, this animal construct a tube in the sand in which they live in. It's entire body, including more than 200 tapering tentacles,  can be retracted inside the tube for protection. This creature is a favored meal to some types of nudibranchs.
+Desc	Not a true anemone, this animal construct a tube in the sand in which it lives. The entire body, including more than 200 tapering tentacles, can be retracted inside the tube for protection. This creature is a favored meal to some types of nudibranchs.
 
 
 DSC02594.jpg
@@ -129,7 +129,7 @@ Title	Wire Coral Shrimp
 Loc		Anilao, The Philippines
 Latin	Pontonides unciger
 Tags	2014 shrimp
-Desc	Lives exclusively on the black coral whip, usually in pairs. I couldn't find more than one shrimp, but they are very well camouflaged and only one centimeter long so maybe this shrimp didn't live alone after all. You may wonder why the whip is called black coral when it's bright green. The reason is due to its black inner skeleton while the flesh varies in color. P. Unciger shrimps adept by changing their own color to match the coral's color.
+Desc	Lives exclusively on the black coral whip, usually in pairs. I found only one, but they are very well camouflaged and small so perhaps a second companion was around somewhere. You may wonder why the whip is called black coral when it's bright green. The reason is due to its black inner skeleton while the flesh varies in color. P. Unciger shrimps adept by changing their own color to match the coral's color.
 
 
 DSC02931.jpg
@@ -192,7 +192,7 @@ Title	Bobbit Worm
 Loc		Anilao, The Philippines
 Latin	Eunice aphroditois
 Tags	worm 2014
-Desc	The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Only small parts of the body is exposed, just enought to ambush surprised fish. This worm is quite rare, shy, and mysterious as well. Not much is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish. The bobbit was one of my reasons to go to Anilao.
+Desc	The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Most of the body is covered in sand, just enough is exposed to ambush surprised fish. This worm is quite rare, shy, and mysterious as well so little is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish. The bobbit was one of my reasons to go to Anilao.
 
 
 DSC03448.jpg
@@ -201,7 +201,7 @@ Title	Reticulate Stargazer
 Loc		Anilao, The Philippines
 Latin	Uranoscopus chinensis
 Tags	stargazer 2014
-Desc	Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site is turned into a large scale battlefield for the tiny creatures living there. The starfish were many and moving fast, climbing over animals and any obstructing ground they collided into, stopping only to devour the delicious molluscs their tube feet got attached to. Countless squids dancing around in the dark, moving just outside the beam of our lights while concurrently exploiting it for the ongoing hunt. A stargazer landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. The stargazer waits for passing fish before it jumps upwards while it creates a vacuum to suck in the prey.
+Desc	Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site turns to a large scale battlefield for the tiny creatures living there. A stargazer approached in the midst of the chaos, landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. He waits for passing fish before jumping upwards while creating a vacuum to suck in the prey.
 
 
 DSC03660.jpg
@@ -237,7 +237,7 @@ Title	Giant Frogfish
 Loc		Anilao, The Philippines
 Latin	Antennarius commerson
 Tags	frogfish 2014
-Desc	The plump body of a frogfish is uncommon in the world of fish, but their large variation of colors make up for it. In two weeks, the fish can change its own color to match the environment. Frogfishes use their pelvic fins (the ones below the body) to walk along the sea floor, but they generally do not move very much. Their pectoral fins (one on each side) is used for stability.
+Desc	In two weeks, the frogfish can change its own color to match the environment. Frogfishes use their pelvic fins (the ones below the body) to walk along the sea floor, but they generally do not move very much. Their pectoral fins (one on each side) is used for stability.
 
 
 DSC03808.jpg
@@ -246,7 +246,7 @@ Title	Nudibranch
 Loc		Anilao, The Philippines
 Latin	Hypselodoris infucata
 Tags	nudibranch 2014
-Desc	Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which many other molluscs use as their primary defence.
+Desc	Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which many other molluscs use as their primary protection.
 
 
 DSC03814.jpg
@@ -345,7 +345,7 @@ Title	Magnificent Sea Anemone
 Loc		Anilao, The Philippines
 Tags	2014 anemone
 Latin	Heteractis magnifica with Amphiprion perideraion
-Desc	The previous name for this anemone was the Ritteri Anemone. The new name is Heteractis magnifica, or "Magnificent Sea Anemone", perhaps updated because it's too beautiful for the old dull name. The anemone can entirely retract it's tentacles and it's column, here in purple color, will be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself. Did I mention it's an awesome animal?
+Desc	The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the old dull name. The anemone can entirely retract it's tentacles and it's column, here in purple color, will be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself. Did I mention it's an awesome animal?
 
 
 DSC04665.jpg
@@ -481,6 +481,7 @@ Tags	2014 dolphin
 Latin	Stenella longirostris
 Desc	Dolphins use echolocation to "see" the environment, similar to a sonar or radar. They send out bursts of clicking sounds, and based on the frequency of the return signal, and how much time the signal used to return, the dolphin can estimate what kind of objects are nearby.
 
+
 DSC06743.jpg
 
 Title	Green Turtle
@@ -546,7 +547,6 @@ Loc		egypt
 Tags	2015
 Latin	Sphyraena genie
 Desc	Barracudas aggregate in schools as a protection against larger predators.
-
 
 
 DSC07673.jpg
