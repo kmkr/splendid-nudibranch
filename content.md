@@ -13,7 +13,7 @@ Title			Western Clown Anemonefish
 Location		Dumaguete, The Philippines
 Tags			anemonefish clownfish 2013 anemone
 Latin			Amphiprion ocellaris
-Description		Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish population there is a strict hierarchy where juveniles begin at the bottom and have to gradually move upwards by proving their abilities to the rest of the population. In that period they may be victims to agression, and possibly eviction from the anemone by more mature clownfish.
+Description		Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish population there is a strict hierarchy where juveniles begin at the bottom and have to gradually move upwards by proving their abilities to the rest of the population. During this time they may be victims to agression, and possibly eviction from the anemone by more mature clownfish.
 
 
 DSC00571.jpg
@@ -31,7 +31,7 @@ Title			White Eyed Moray
 Location		Dumaguete, The Philippines
 Tags			2013 eel
 Latin			Gymnothorax thyrsoideus
-Description		Moray eels are shy creatures mostly seen peeking out from rocks and coral formations, only their heads exposed. Most of the long slender body is hidden inside crevices, in which it retreats if you approach too fast, or come too near.
+Description		Moray eels are shy creatures mostly seen peeking out from rocks and coral formations, only their heads exposed. Most of the long slender body is hidden inside crevices, where it retreats completely if you approach too fast or come too near.
 
 
 DSC00792.jpg
@@ -48,8 +48,8 @@ DSC00974.jpg
 Title			Garden Eels
 Location		Dumaguete, The Philippines
 Tags			eel 2013
-Latin			?
-Description		Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over thousand individuals. Each eel has its own burrow in the sand which it rarely leaves.
+Latin
+Description		Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over thousand individuals. Each eel has its own burrow in the sand that it seldom leaves.
 
 
 DSC01151.jpg
@@ -58,7 +58,7 @@ Title			Thresher Shark
 Location		Malapascua, The Philippines
 Latin			Alopias macrourus
 Tags			shark 2013
-Description		Malapascua is known for its legendary thresher sharks usually found in deep waters. However, when the sun starts to rise they ascend to the cleaning stations on the sloaps of Monad Shoal. Diving starts 05.00 am.
+Description		Malapascua is known for its legendary thresher sharks usually found in deep waters. However, when the sun starts to rise they ascend to the cleaning stations on the sloaps of Monad Shoal outside a small island in The Philippines. Diving starts 05.00 am.
 
 
 DSC01725.jpg
@@ -93,7 +93,7 @@ Title			Fire Urchin
 Location		Anilao, The Philippines
 Latin			Astropyga radiata
 Tags			2014 urchin
-Description		Often found in shallow areas, this type of urchin sometimes carpet the sandy floor in large aggregations. Having iridescent blue dots, radiant bodies and long spines, they contribute to brighten up the muddy coast of Anilao.
+Description		Often found in shallow areas, this type of urchin sometimes carpet the sandy floor in large aggregations. Having iridescent blue dots, radiant bodies and long spines, they contribute to bright up the muddy coast of Anilao.
 
 
 DSC02569.jpg
@@ -102,14 +102,14 @@ Title			Tube Dwelling Anemone
 Location		Anilao, The Philippines
 Latin			Cerianthus sp. (not confirmed)
 Tags			2014 anemone
-Description		Not a true anemone, this animal construct a tube in the sand in which it lives. The entire body, including more than 200 tapering tentacles, can be retracted inside the tube for protection. This creature is a favored meal to some types of nudibranchs.
+Description		Not a true anemone, this animal construct a tube in the sand in which it lives. The entire body, including more than 200 tapering tentacles, can be retracted inside the tube for protection.
 
 
 DSC02594.jpg
 
 Title			Juvenile Boxfish
 Location		Anilao, The Philippines
-Latin
+Latin			Ostracion cubicus
 Tags			2014 boxfish
 Description		The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. The boxfish is one of those animals being consistently cute its entire lifetime, not just as juvenile.
 
@@ -129,7 +129,7 @@ Title			Wire Coral Shrimp
 Location		Anilao, The Philippines
 Latin			Pontonides unciger
 Tags			2014 shrimp
-Description		Lives exclusively on the black coral whip, usually in pairs. I found only one, but they are very well camouflaged and small so perhaps a second companion was around somewhere. You may wonder why the whip is called black coral when it's bright green. The reason is due to its black inner skeleton while the flesh varies in color. P. Unciger shrimps adept by changing their own color to match the coral's color.
+Description		Lives exclusively on the black coral whip, usually in pairs. I found only one, but they are very well camouflaged and small, so perhaps a second companion was around somewhere. You may wonder why the whip is called black coral when it's bright green, and the reason is due to its black inner skeleton. The outer flesh varies in color and P. Unciger shrimps adept by changing their own color to match the coral's color.
 
 
 DSC02931.jpg
@@ -183,7 +183,7 @@ Title			Coleman's Shrimp
 Location		Anilao, The Philippines
 Latin			Periclimenes colemani
 Tags			2014 shrimp urchin
-Description		The pair of shrimp clears a little patch on the fire urchin with their claws, just enough to move freely around on the urchin collecting small pieces of food while still being protected from predators by the urchin's toxic spines. The largest of the shrimps is always the female.
+Description		The pair of shrimps clears a little patch on the fire urchin with their claws, just enough to move freely around collecting small pieces of food while still being protected from predators by the urchin's toxic spines. The largest of the shrimps is always the female.
 
 
 DSC03425.jpg
@@ -192,7 +192,7 @@ Title			Bobbit Worm
 Location		Anilao, The Philippines
 Latin			Eunice aphroditois
 Tags			worm 2014
-Description		The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Most of the body is covered in sand, just enough is exposed to ambush surprised fish. This worm is quite rare, shy, and mysterious as well so little is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish. The bobbit was one of my reasons to go to Anilao.
+Description		The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Most of the body is covered in sand, just enough is exposed to ambush surprised fish. This worm is quite rare, shy, and mysterious as well so little is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish.
 
 
 DSC03448.jpg
@@ -237,7 +237,7 @@ Title			Giant Frogfish
 Location		Anilao, The Philippines
 Latin			Antennarius commerson
 Tags			frogfish 2014
-Description		In just two weeks, the frogfish can change its own color to match the environment. They generally do not move very much, but can use the pelvic fins (the ones below the body) to walk along the sea floor. Their pectoral fins (one on each side) are used for stability.
+Description		In just two weeks, the frogfish can change its own color to match the environment. They generally do not move very much, but sometimes use the pelvic fins (the ones below the body) to walk along the sea floor. Their pectoral fins (one on each side) are used for stability.
 
 
 DSC03808.jpg
@@ -246,7 +246,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Hypselodoris infucata
 Tags			nudibranch 2014
-Description		Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which many other molluscs use as their primary protection.
+Description		Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which many other molluscs use as primary protection.
 
 
 DSC03814.jpg
@@ -282,7 +282,7 @@ Title			Leopard Anemone Shrimp
 Location		Anilao, The Philippines
 Latin			Izucaris masudai
 Tags			shrimp 2014
-Description		The single goal for this dive was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew only approximately where to find it,  its small length of only two centimeters combined with a camouflaged body made the search quite a challenge.
+Description		The single goal for this dive was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew approximately where to find it, however its small length of only two centimeters combined with a camouflaged body made the search quite a challenge.
 
 
 DSC04078.jpg
@@ -327,7 +327,7 @@ Title			Longhorn Cowfish
 Location		Anilao, The Philippines
 Tags			2014 boxfish cowfish
 Latin			Lactoria cornuta
-Description		A peaceful fish having horns as defence to make it more difficult for predator to swallow the fish. The cowfishes are, sadly, a common target for the aquarium industry due to their adorable looks.
+Description		A peaceful fish having horns as defence to make it more difficult for predators to swallow it. The cowfishes are, sadly, a common target for the aquarium industry due to their adorable looks.
 
 
 DSC04554.jpg
@@ -335,7 +335,7 @@ DSC04554.jpg
 Title
 Location		Anilao, The Philippines
 Tags			2014
-Latin			-
+Latin
 Description
 
 
@@ -345,7 +345,7 @@ Title			Magnificent Sea Anemone
 Location		Anilao, The Philippines
 Tags			2014 anemone
 Latin			Heteractis magnifica with Amphiprion perideraion
-Description		The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the old dull name. The anemone can entirely retract it's tentacles and it's column, here in purple color, will be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself. Did I mention it's an awesome animal?
+Description		The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the old dull name. The anemone can entirely retract it's tentacles. It's column, here in purple color, will then be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself. Did I mention it's an awesome animal?
 
 
 DSC04665.jpg
@@ -372,7 +372,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Janolus sp.
 Tags			nudibranch 2014
-Description		Unlike many other sea slugs, nudibranchs lack a shell. As a larva they do have one but it's shed when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most use the toxic metabolites from what they eat for their own defence.
+Description		As larva nudibranchs have shells, but it's shed when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
 
 
 DSC04884.jpg
@@ -407,7 +407,7 @@ DSC05829.jpg
 Title			The Red Sea
 Location		Egypt
 Tags			2014
-Latin			-
+Latin
 Description		Surrounded by deserts and with few connected rivers, the Red Sea's visibility is very pleasant.
 
 
@@ -416,7 +416,7 @@ DSC06145.jpg
 Title			St. Johns Cave Systems
 Location		St. Johns Reef, Egypt
 Tags			2014
-Latin			-
+Latin
 Description		St. Johns is know for its array of caverns, tunnels, overhangs and swim-throughs. The sun pierce through the cracks, crevices and holes inside the caverns, guiding us through the maze. The majestetic area feel like a long lost world, mountains now covered in coral.
 
 
@@ -470,7 +470,7 @@ Title			Spinner Dolphin
 Location		Egypt
 Tags			2014 dolphin
 Latin			Stenella longirostris
-Description		Those times I'm lucky enough to hear distant sounds of dolphins I instantly change focus from finding small stuff, finding snails or whatever I'm up to at the moment, and instead scout. The dolphins are somewhere around, but they are fast swimmers so not necessarily for long. Most often I will not find them, but sometimes I do, and some of these encounters I believe are the dolphins finding me more than the other way around. They are curious, playful and intelligent creatures.
+Description		Those times I'm lucky enough to hear whistles and clicking sounds I instantly change focus from finding small stuff, snails or whatever I'm up to at the moment, and instead scout for what could be dolphins. They are fast swimmers, so if they are around, they are not necessarily for long. Most often I will not find them, but sometimes I do, and some of these encounters I believe are the dolphins finding me more than the other way around. They are curious, playful and intelligent creatures.
 
 
 DSC06693.jpg
@@ -497,7 +497,7 @@ Title			Common Lionfish
 Location		Egypt
 Tags			2015 scorpionfish lionfish
 Latin			Pterois miles
-Description		?
+Description
 
 
 //Senere til en Red Lionfish:
@@ -528,7 +528,7 @@ Title			Titan Triggerfish
 Location		Egypt
 Tags			triggerfish 2015
 Latin			Balistoides viridescens
-Description		Scattered throughout the world's seas, the triggerfish is usually a solitary fish. It's territorial and can be nasty to intruders if there are eggs to watch over. Be respectful and watch its signals, an erect dorsal spine means stay away.
+Description		Scattered throughout the world's seas, the triggerfish is usually a solitary fish. It's territorial and can be nasty to intruders if there are eggs to protect. Be respectful and watch its signals, an erect dorsal spine (on top of the fish) means stay away.
 
 
 DSC07475.jpg
@@ -590,7 +590,7 @@ Title			Juvenile Blacktip Reef Shark
 Location		Perhentian Besar, Malaysia
 Tags			2015 shark
 Latin			Carcharhinus melanopterus
-Description		These, and many more, juvenile sharks hang around just outside the beach all day. They didn't seem to bother me too much and let me swim with them while they were trying to catch a meal.
+Description		These, and many more, juvenile sharks were eager to becoming grown-up-sharks and tried to hunt small fish all day long. They didn't seem to bother me too much and allowed me to swim with them while they were hunting.
 
 
 DSC09129.jpg
@@ -616,7 +616,7 @@ IMG_3351.jpg
 Title			The Yucatán Cenotes
 Location		Yucatán, Mexico
 Tags			2011
-Latin			-
+Latin
 Description		The eastern parts of Mexico is highly fertile with dense jungle and a magnificent flora. Underground cave systems filled with water act as the area’s principal source of water. For us, access to these underground labyrinths are through sinkholes called cenotes. Diving in the area is otherworldly, a fantastic experience.
 
 
@@ -635,4 +635,4 @@ Title			Potato Cod
 Location		Cod Hole, Great Barrier Reef, Australia
 Tags			2013 cod
 Latin			Epinephelus tukula
-Description		A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once the first person locates them. They seem to chill out at the same place, getting cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
+Description		A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once located. They seem to chill out at the same place, getting cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
