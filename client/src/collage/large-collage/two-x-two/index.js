@@ -14,6 +14,7 @@ const TwoXTwoCollage = ({collage, scroll}) => {
 
     const logoSize = 250;
     const logoStyle = {
+        zIndex: 1000,
         position: 'absolute',
         width: `${logoSize}px`,
         height: `${logoSize}px`,
