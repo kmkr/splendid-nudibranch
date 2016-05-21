@@ -5,25 +5,29 @@ import TwoXTwoItem from './two-x-two-item';
 import './two-x-two-collage.scss';
 
 const TwoXTwoCollage = ({collage, scroll}) => {
-    const {innerHeight, innerWidth} = scroll;
+    const {innerHeight} = scroll;
 
     const SOME_SLACK = 10;
-    const cropStyle = {
-        height: `${innerHeight / 2 - SOME_SLACK}px`
-    };
+    const MAX_HEIGHT_PER_IMAGE = 666;
+    const height = Math.min(innerHeight / 2 - SOME_SLACK, MAX_HEIGHT_PER_IMAGE);
+    const cropStyle = {height};
 
     const logoSize = 250;
-    const padding = 8; // From .SCSS
     const logoStyle = {
         position: 'absolute',
         width: `${logoSize}px`,
         height: `${logoSize}px`,
-        top: `${(innerHeight / 2) - (logoSize / 2) - (padding * 2) - (SOME_SLACK / 2)}px`,
-        left: `${(innerWidth / 2) - (logoSize / 2) - padding}px`
+        top: '50%',
+        left: '50%',
+        marginLeft: `-${logoSize / 2}px`,
+        marginTop: `-${logoSize / 2}px`
     };
 
     return (
         <div id="two-x-two-collage">
+            <TransitionImage
+                style={logoStyle}
+                src="/static/images/logo-round.svg" />
             {collage.items.map(item => (
                 <div key={item.key}
                      className="crop-wrapper">
@@ -36,9 +40,6 @@ const TwoXTwoCollage = ({collage, scroll}) => {
                     </div>
                 </div>
             ))}
-            <TransitionImage
-                style={logoStyle}
-                src="/static/images/logo-round.svg" />
         </div>
     );
 };
