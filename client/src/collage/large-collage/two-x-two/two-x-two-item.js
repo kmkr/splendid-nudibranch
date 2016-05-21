@@ -27,7 +27,7 @@ const TwoXTwoItem = ({collageItem, dispatch, scroll}) => {
             onClick={() => {
                 dispatch(selectPhoto(collageItem.key));
             }}
-            href={`#photos/${collageItem.key}`}
+            href={`/photos/${collageItem.key}`}
             selector={`#photo-${collageItem.key}`}>
             <TransitionImage
                 style={getImgStyle(scroll.innerWidth, collageItem.styles)}
