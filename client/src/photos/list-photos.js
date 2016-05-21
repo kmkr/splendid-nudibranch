@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import shallowCompare from 'shallow-compare-without-functions';
 
 import Photo from './photo';
 import {postStats, beaconStats} from '../statistics';
@@ -6,11 +7,23 @@ import {postStats, beaconStats} from '../statistics';
 let photosLoaded = 0;
 
 class ListPhotos extends Component {
+
+    constructor(props) {
+        super(props),
+
+        this.photoLoaded = this.photoLoaded.bind(this);
+    }
+
     componentWillMount() {
         window.addEventListener('unload', () => {
             beaconStats({photosLoaded});
         });
     }
+
+    shouldComponentUpdate(nextProps, nextStyle) {
+        return shallowCompare(this, nextProps, nextStyle);
+    }
+
     photoLoaded(photo) {
         const {onPhotoLoad} = this.props;
         photosLoaded++;
@@ -37,7 +50,7 @@ class ListPhotos extends Component {
                     this.isVisible(index) ? (
                         <Photo
                             key={photo.key}
-                            onPhotoLoad={this.photoLoaded.bind(this)}
+                            onPhotoLoad={this.photoLoaded}
                             availHeight={availHeight}
                             photo={photo} />
                         ) : null

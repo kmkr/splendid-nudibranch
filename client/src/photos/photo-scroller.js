@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import shallowCompare from 'shallow-compare-without-functions';
 
 import ListPhotos from './list-photos';
 
@@ -19,13 +20,20 @@ class PhotoScroller extends Component {
         const {innerHeight, pageYOffset} = props.scroll;
         const SOME_BUFFER = innerHeight / 2;
         if ((pageYOffset + innerHeight + SOME_BUFFER) > photoListWrapper.offsetTop) {
-            state.visibleEnd = Math.min(
+            const visibleEnd = Math.min(
                 props.photos.length,
                 Math.max(LOAD_AT_START, props.photos.filter(p => p.loaded).length + LOAD_AT_A_TIME)
             );
+
+            if (visibleEnd !== state.visibleEnd) {
+                this.setState({visibleEnd});
+            }
         }
 
-        this.setState(state);
+    }
+
+    shouldComponentUpdate(nextProps, nextStyle) {
+        return shallowCompare(this, nextProps, nextStyle);
     }
 
     render() {

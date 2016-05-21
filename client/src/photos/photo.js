@@ -1,4 +1,6 @@
 import React, {Component, PropTypes} from 'react';
+import shallowCompare from 'shallow-compare-without-functions';
+
 import TransitionImage from '../transition-image';
 import Anchor from '../anchor';
 
@@ -21,6 +23,10 @@ class Photo extends Component {
         this.state = {
             showComponent: false
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextStyle) {
+        return shallowCompare(this, nextProps, nextStyle);
     }
 
     render() {

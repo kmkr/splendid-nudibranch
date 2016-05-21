@@ -4,6 +4,18 @@ import TransitionImage from '../../../transition-image';
 import TwoXTwoItem from './two-x-two-item';
 import './two-x-two-collage.scss';
 
+const logoSize = 250;
+const logoStyle = {
+    zIndex: 1000,
+    position: 'absolute',
+    width: `${logoSize}px`,
+    height: `${logoSize}px`,
+    top: '50%',
+    left: '50%',
+    marginLeft: `-${logoSize / 2}px`,
+    marginTop: `-${logoSize / 2}px`
+};
+
 const TwoXTwoCollage = ({collage, scroll}) => {
     const {innerHeight} = scroll;
 
@@ -11,18 +23,6 @@ const TwoXTwoCollage = ({collage, scroll}) => {
     const MAX_HEIGHT_PER_IMAGE = 666;
     const height = Math.min(innerHeight / 2 - SOME_SLACK, MAX_HEIGHT_PER_IMAGE);
     const cropStyle = {height};
-
-    const logoSize = 250;
-    const logoStyle = {
-        zIndex: 1000,
-        position: 'absolute',
-        width: `${logoSize}px`,
-        height: `${logoSize}px`,
-        top: '50%',
-        left: '50%',
-        marginLeft: `-${logoSize / 2}px`,
-        marginTop: `-${logoSize / 2}px`
-    };
 
     return (
         <div id="two-x-two-collage">

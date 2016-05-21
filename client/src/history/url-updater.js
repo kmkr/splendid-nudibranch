@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import smoothScroll from 'smooth-scroll';
 import {selectPhoto} from '../photos/photo-actions';
 
-class HashchangeHandler extends Component {
+class UrlUpdater extends Component {
     constructor(props) {
         super(props);
 
@@ -62,6 +62,11 @@ class HashchangeHandler extends Component {
         this.lastOffset = currentOffset;
     }
 
+    shouldComponentUpdate() {
+        return false;
+    }
+
+
     render() {
         return <span />;
     }
@@ -74,4 +79,4 @@ function select(state) {
     };
 }
 
-export default connect(select)(HashchangeHandler);
+export default connect(select)(UrlUpdater);

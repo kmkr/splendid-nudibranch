@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import shallowCompare from 'shallow-compare-without-functions';
 
 import {photoLoaded, fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
@@ -16,6 +17,8 @@ class PhotoSection extends Component {
         this.state = {
             fixed: false
         };
+
+        this.onPhotoLoad = this.onPhotoLoad.bind(this);
     }
 
     componentWillMount() {
@@ -23,15 +26,15 @@ class PhotoSection extends Component {
     }
 
     componentWillReceiveProps({scroll}) {
-        if (scroll.pageYOffset > (scroll.availHeight + margin)) {
-            this.setState({
-                fixed: true
-            });
-        } else {
-            this.setState({
-                fixed: false
-            });
+        const fixed = scroll.pageYOffset > (scroll.availHeight + margin);
+
+        if (fixed !== this.state.fixed) {
+            this.setState({fixed});
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return shallowCompare(this, nextProps, nextState);
     }
 
     onSelectTag(tagName) {
@@ -78,7 +81,7 @@ class PhotoSection extends Component {
                 }
                 <div>
                     <PhotoScroller
-                        onPhotoLoad={this.onPhotoLoad.bind(this)}
+                        onPhotoLoad={this.onPhotoLoad}
                         photos={this.photosBySelectedTags()}
                         scroll={scroll} />
                 </div>
