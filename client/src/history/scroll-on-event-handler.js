@@ -9,20 +9,59 @@ class KeyUpScroller extends Component {
     componentWillMount() {
         window.addEventListener('keydown', e => this.handleKeyDown(e));
         window.addEventListener('keyup', e => this.handleKeyUp(e));
+        window.addEventListener('wheel', e => this.handleWheel(e));
+    }
+
+    scrollTo(anchor) {
+        if (this.scrolling) {
+            return;
+        }
+
+        this.scrolling = true;
+        smoothScroll.animateScroll(`#${anchor.domId}`, null, {
+            speed: 600,
+            updateURL: false,
+            callback: () => {
+                this.scrolling = false;
+            }
+        });
+    }
+
+    nextAnchors() {
+        const {anchors, currentOffset} = this.props;
+        return anchors.filter(anchor => anchor.position.offsetTop > currentOffset);
+    }
+
+    previousAnchors() {
+        const {anchors, currentOffset} = this.props;
+        return anchors
+            .filter(anchor => anchor.position.offsetTop < currentOffset)
+            .reverse();
+    }
+
+    handleWheel(e) {
+        e.preventDefault();
+        let nextAnchors;
+
+        if (e.deltaY > 0) { // moving down
+            nextAnchors = this.nextAnchors();
+        } else {
+            nextAnchors = this.previousAnchors();
+        }
+
+        if (nextAnchors.length && !this.scrolling) {
+            this.scrollTo(nextAnchors[0]);
+        }
     }
 
     handleKeyDown(e) {
         const keyCode = e.keyCode || e.detail.keyCode;
-        const {anchors, currentOffset} = this.props;
 
         let nextAnchors;
         if (UP_KEYS.indexOf(keyCode) !== -1) {
-            nextAnchors = anchors
-                .filter(anchor => anchor.position.offsetTop < currentOffset)
-                .reverse();
+            nextAnchors = this.previousAnchors();
         } else if (DOWN_KEYS.indexOf(keyCode) !== -1) {
-            nextAnchors = anchors
-                .filter(anchor => anchor.position.offsetTop > currentOffset);
+            nextAnchors = this.nextAnchors();
             if (!nextAnchors[0]) {
                 console.log('todo: håndter at anchors ikke er lastet enda');
             }
@@ -46,7 +85,7 @@ class KeyUpScroller extends Component {
     handleKeyUp() {
         if (this.nextQueuedAnchor && !this.abortChange) {
             smoothScroll.animateScroll(`#${this.nextQueuedAnchor.domId}`, null, {
-                speed: 200,
+                speed: 600,
                 updateURL: false
             });
         }
