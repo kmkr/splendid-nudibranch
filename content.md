@@ -58,7 +58,7 @@ Title			Thresher Shark
 Location		Malapascua, The Philippines
 Latin			Alopias macrourus
 Tags			shark 2013
-Description		Malapascua is known for its legendary thresher sharks usually found in deep waters. However, when the sun starts to rise they ascend to the cleaning stations on the sloaps of Monad Shoal outside a small island in The Philippines. Diving starts 05.00 am.
+Description		Malapascua is known for its legendary thresher sharks. They are usually found in deep waters, but when the sun starts to rise they ascend to the cleaning stations on the sloaps of Monad Shoal. Diving starts 05.00 am.
 
 
 DSC01725.jpg
@@ -120,7 +120,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Nembrotha chamberlaini
 Tags			nudibranch 2014
-Description		Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, called rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Many species of nudibranchs can retracted these vital organs as protection against other fish.
+Description		Perhaps the most distinctive characteristic of nudibranchs is the pair of tentacles on the head, called rhinophores. They are chemical sensors used to smell and taste the chemicals dissolved in the water, such as food and potential mates. Many species of nudibranchs can retract these vital organs to protect them against other fish.
 
 
 DSC02713.jpg
@@ -129,7 +129,7 @@ Title			Wire Coral Shrimp
 Location		Anilao, The Philippines
 Latin			Pontonides unciger
 Tags			2014 shrimp
-Description		Lives exclusively on the black coral whip, usually in pairs. I found only one, but they are very well camouflaged and small, so perhaps a second companion was around somewhere. You may wonder why the whip is called black coral when it's bright green, and the reason is due to its black inner skeleton. The outer flesh varies in color and P. Unciger shrimps adept by changing their own color to match the coral's color.
+Description		Lives exclusively on the black coral whip, usually in pairs. I found only one, but they are very well camouflaged and small, so perhaps a second companion was around somewhere. You may wonder why the whip is called black coral when it's bright green, and the reason is due to its black inner skeleton. The outer flesh varies in color and P. Unciger shrimps adept by changing their own skin to match the coral's color.
 
 
 DSC02931.jpg
@@ -201,7 +201,7 @@ Title			Reticulate Stargazer
 Location		Anilao, The Philippines
 Latin			Uranoscopus chinensis
 Tags			stargazer 2014
-Description		Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site turns to a large scale battlefield when the sun disappears. A stargazer approached us in the midst of the chaos, landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. He waits for passing fish before jumping upwards while creating a vacuum to suck in the prey.
+Description		Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, worms, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site turns to a large scale battlefield when the sun sets. A stargazer approached us in the midst of the chaos, landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. He waits for passing fish before jumping upwards while creating a vacuum to suck in the prey.
 
 
 DSC03660.jpg
@@ -282,7 +282,7 @@ Title			Leopard Anemone Shrimp
 Location		Anilao, The Philippines
 Latin			Izucaris masudai
 Tags			shrimp 2014
-Description		The single goal for this dive was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew approximately where to find it, however its small length of only two centimeters combined with a camouflaged body made the search quite a challenge.
+Description		The single goal for this dive was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew approximately where to find it, however its small size and camouflaged body made the search quite a challenge.
 
 
 DSC04078.jpg
@@ -318,7 +318,7 @@ Title			Graeffe's Sea Cucumber
 Location		Anilao, The Philippines
 Latin			Pearsonothuria graeffei
 Tags			sea-cucumber 2014
-Description		The sea cucumbers are scavengers, crawling mostly around the sea floor. Not always though - they gametes float around in the water column and a vertical positioning is thought to increase the chance of successful reproduction for both male and female.
+Description		The sea cucumbers are scavengers, crawling mostly around the sea floor. Not always though - since their gametes float around in the water column a vertical positioning is thought to increase the chance of successful reproduction for both male and female.
 
 
 DSC04244.jpg
@@ -372,7 +372,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Janolus sp.
 Tags			nudibranch 2014
-Description		As larva nudibranchs have shells, but it's shed when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
+Description		As larva nudibranchs have shells, but shed it when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
 
 
 DSC04884.jpg
@@ -461,7 +461,7 @@ Title			The Dugongs of Marsha Shouna
 Location		Marsa Alam, Egypt
 Tags			2014 dugong
 Latin			Dugong dugon
-Description		The word "dugong" means lady of the sea, they are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The dugong is herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are depleted entirely due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam have now only seven dugongs left.
+Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. The dugong is herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are depleted entirely due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam have now only seven dugongs left.
 
 
 DSC06687.jpg
