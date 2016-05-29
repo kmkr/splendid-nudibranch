@@ -8,5 +8,9 @@ body {
 }
 
 .container-fluid {
-    padding: 0;
+    //padding: 0 ($grid-gutter-width * 2);
+    padding: 0 4%;
+    @include media-breakpoint-down(lg) {
+        padding: 0;
+    }
 }

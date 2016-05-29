@@ -44,7 +44,7 @@ class Photo extends Component {
                         }}
                         style={{maxHeight: `${availHeight * GIVE_ME_SOME_SLACK_FACTOR}px`}}
                         srcSet={srcSet}
-                        sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 80vw"
+                        sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 70vw"
                         src={photo.sizes.large.url}/>
                 </div>
                 <div className="text">

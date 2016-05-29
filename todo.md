@@ -8,7 +8,7 @@ Hilde:
 
 KM:
 
-- Ytelsefiks (https://github.com/garbles/why-did-you-update)
+- Spørre H om vi kan ha en keyhelp som forklarer navigasjon
 - Vuder css for max height med calc i stedet for JS.
 - Fiks når skjerm er så høy at collage blir feil (årsaken er høyde på bildet som settes i `two-x-two/index.js`)
 

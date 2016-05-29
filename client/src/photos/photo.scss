@@ -7,10 +7,6 @@
     margin-right: auto;
     text-align: center;
 
-    @include media-breakpoint-up(xl) {
-        max-width: 70%;
-    }
-
     &.loading {
         margin: 0;
         height: 0;
@@ -21,16 +17,23 @@
     }
 
     .photo {
+        @include media-breakpoint-up(xl) {
+            display: inline-block;
+            width: 70%;
+        }
     }
 
     .text {
+        @include media-breakpoint-up(xl) {
+            display: inline-block;
+            width: 30%;
+        }
         .text-wrapper {
             text-align: left;
-            margin-top: 75px;
             padding-left: 10%;
             padding-right: 10%;
 
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(xl) {
                 margin-top: 50px;
             }
 
