@@ -54,6 +54,7 @@ class Photo extends Component {
                         <p className="description">{photo.description}</p>
                     </div>
                 </div>
+                <div style={{clear: 'both'}}/>
             </div>
         );
     }
