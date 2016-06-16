@@ -2,15 +2,11 @@
 @import "../vendor/bootstrap/mixins/breakpoint";
 
 .photo-wrapper {
+    margin-bottom: 150px;
+
     @include media-breakpoint-up(lg) {
         padding-left: 8%;
         padding-right: 8%;
-    }
-    margin-bottom: 150px;
-    &.landscape {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
     }
 
     &.loading {
@@ -31,20 +27,25 @@
 
     .text {
         @include media-breakpoint-up(xl) {
-            float: right;
+            float: left;
             width: 30%;
         }
         .text-wrapper {
             text-align: left;
-            margin-top: 90px;
             max-width: 70ch;
 
             @include media-breakpoint-down(lg) {
+                margin-top: 50px;
                 padding-left: 8%;
                 padding-right: 8%;
             }
 
+            @include media-breakpoint-down(md) {
+                margin-top: 25px;
+            }
+
             @include media-breakpoint-up(xl) {
+                margin-top: 90px;
                 padding-left: 20%;
             }
         }
