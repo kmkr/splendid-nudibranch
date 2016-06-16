@@ -4,6 +4,12 @@ function buildUrl(base, key, name, size) {
     return `${base}/${key}/${size}_${encodeURIComponent(name)}`;
 }
 
+function getMode(resizeData) {
+    const {width, height} = resizeData[Object.keys(resizeData)[0]];
+
+    return width > height ? 'landscape' : 'portrait';
+}
+
 export function serverToClient(photoFromServer, base) {
     return {
         name: photoFromServer.name,
@@ -13,6 +19,7 @@ export function serverToClient(photoFromServer, base) {
         latin: photoFromServer.latin,
         location: photoFromServer.location,
         tags: photoFromServer.tags,
+        mode: getMode(photoFromServer.resize),
         sizes: resizeTo.reduce((prev, current) => ({
             ...prev,
             [current.name]: {

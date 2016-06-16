@@ -3,13 +3,15 @@
 
 .photo-wrapper {
     @include media-breakpoint-up(lg) {
-        padding-left: 4%;
-        padding-right: 4%;
+        padding-left: 8%;
+        padding-right: 8%;
     }
     margin-bottom: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    &.landscape {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 
     &.loading {
         margin: 0;
@@ -34,13 +36,17 @@
         }
         .text-wrapper {
             text-align: left;
-            padding-left: 10%;
-            padding-right: 10%;
+            margin-top: 90px;
+            max-width: 70ch;
 
-            @include media-breakpoint-down(xl) {
-                margin-top: 90px;
+            @include media-breakpoint-down(lg) {
+                padding-left: 8%;
+                padding-right: 8%;
             }
 
+            @include media-breakpoint-up(xl) {
+                padding-left: 20%;
+            }
         }
 
         .title {

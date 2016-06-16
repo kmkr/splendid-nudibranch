@@ -34,7 +34,7 @@ class Photo extends Component {
         const srcSet = buildSrcSet(photo.sizes);
 
         return (
-            <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''}`}>
+            <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''} ${photo.mode}`}>
                 <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
                 <div className="photo">
                     <TransitionImage
@@ -62,7 +62,14 @@ class Photo extends Component {
 
 Photo.propTypes = {
     availHeight: PropTypes.number.isRequired,
-    photo: PropTypes.object.isRequired,
+    photo: PropTypes.shape({
+        description: PropTypes.string,
+        mode: PropTypes.oneOf(['portrait', 'landscape']).isRequired,
+        latin: PropTypes.string,
+        sizes: PropTypes.object.isRequired,
+        title: PropTypes.string.isRequired,
+        loaded: PropTypes.bool.isRequired
+    }),
     onPhotoLoad: PropTypes.func.isRequired
 };
 
