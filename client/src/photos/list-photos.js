@@ -55,7 +55,6 @@ class ListPhotos extends Component {
                             photo={photo} />
                         ) : null
                 ))}
-
             </div>
         );
     }
