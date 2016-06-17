@@ -1,22 +1,33 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
+import Vivus from 'vivus';
 
 import './small-collage.scss';
 
-const SmallCollage = ({scroll}) => {
-    const style = {
-        height: `${scroll.availHeight}px`
-    };
-    return (
-        <div
-            style={style}
-            id="small-collage">
+class SmallCollage extends Component {
+    componentDidMount() {
+        new Vivus('logo', {duration: 60}); // eslint-disable-line no-new
+    }
+    render() {
+        const {scroll} = this.props;
 
-            <img src="/static/images/logo-square.svg" />
+        const style = {
+            height: `${scroll.availHeight}px`
+        };
+        return (
+            <div
+                style={style}
+                id="small-collage">
 
-            <p>THE SPLENDID NUDIBRANCH</p>
-        </div>
-    );
-};
+                <object
+                    id="logo"
+                    type="image/svg+xml"
+                    data="/static/images/logo-square.svg" />
+
+                <p>THE SPLENDID NUDIBRANCH</p>
+            </div>
+        );
+    }
+}
 
 SmallCollage.propTypes = {
     scroll: PropTypes.object.isRequired
