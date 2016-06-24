@@ -4,7 +4,7 @@ import shallowCompare from 'shallow-compare-without-functions';
 import ListPhotos from './list-photos';
 
 const LOAD_AT_START = Math.ceil(window.innerHeight / 1000);
-const LOAD_AT_A_TIME = 2;
+const LOAD_AT_A_TIME = 1;
 
 class PhotoScroller extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class PhotoScroller extends Component {
         const state = {};
         const photoListWrapper = this.refs['photo-list-wrapper'];
         const {innerHeight, pageYOffset} = props.scroll;
-        const SOME_BUFFER = innerHeight / 2;
+        const SOME_BUFFER = innerHeight;
         if ((pageYOffset + innerHeight + SOME_BUFFER) > photoListWrapper.offsetTop) {
             const visibleEnd = Math.min(
                 props.photos.length,
