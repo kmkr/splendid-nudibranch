@@ -46,7 +46,7 @@ class Photo extends Component {
                             style={{maxHeight: `${availHeight * GIVE_ME_SOME_SLACK_FACTOR}px`}}
                             src={photo.sizes.large.url}
                             srcSet={srcSet}
-                            sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 70vw"/>
+                            sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 60vw"/>
                     </div>
                     <div className="text">
                         <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
