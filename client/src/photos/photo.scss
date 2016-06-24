@@ -8,6 +8,11 @@
 .photo-wrapper {
     @include media-breakpoint-up(lg) {
         padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-right: 0;
     }
 
     &.loading {
@@ -20,6 +25,11 @@
     }
 
     &.portrait {
+        @include media-breakpoint-down(lg) {
+            .photo {
+                text-align: center;
+            }
+        }
         @include media-breakpoint-up(xl) {
             display: flex;
             .photo {
@@ -40,6 +50,11 @@
 
     &.landscape {
         .photo {
+            @include media-breakpoint-down(lg) {
+                @media (orientation: landscape) {
+                    text-align: center;
+                }
+            }
             @include media-breakpoint-up(xl) {
                 float: left;
                 width: 70%;
@@ -54,14 +69,6 @@
         }
 
         .text-wrapper {
-            @include media-breakpoint-down(lg) {
-                margin-top: 50px;
-            }
-
-            @include media-breakpoint-down(md) {
-                margin-top: 25px;
-            }
-
             @include media-breakpoint-up(xl) {
                 margin-top: 90px;
                 padding-left: 20%;
@@ -75,6 +82,14 @@
             max-width: 70ch;
             padding-left: 8%;
             padding-right: 8%;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: 50px;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-top: 25px;
+            }
         }
 
         .title {
