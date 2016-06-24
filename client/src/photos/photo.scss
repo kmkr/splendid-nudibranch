@@ -1,12 +1,13 @@
 @import '../constants/styles';
 @import "../vendor/bootstrap/mixins/breakpoint";
 
-.photo-wrapper {
+.photo-and-text-wrapper {
     margin-bottom: 150px;
+}
 
+.photo-wrapper {
     @include media-breakpoint-up(lg) {
         padding-left: 8%;
-        padding-right: 8%;
     }
 
     &.loading {
@@ -18,26 +19,43 @@
         }
     }
 
-    .photo {
+    &.portrait {
         @include media-breakpoint-up(xl) {
-            float: left;
-            width: 70%;
+            display: flex;
+            .photo {
+                flex-shrink: 1;
+            }
+            .text {
+                align-self: center;
+                text-align: center;
+                flex: 1 0 50%;
+
+                .text-wrapper {
+                    text-align: left;
+                }
+            }
         }
+
     }
 
-    .text {
-        @include media-breakpoint-up(xl) {
-            float: left;
-            width: 30%;
+    &.landscape {
+        .photo {
+            @include media-breakpoint-up(xl) {
+                float: left;
+                width: 70%;
+            }
         }
-        .text-wrapper {
-            text-align: left;
-            max-width: 70ch;
 
+        .text {
+            @include media-breakpoint-up(xl) {
+                float: left;
+                width: 30%;
+            }
+        }
+
+        .text-wrapper {
             @include media-breakpoint-down(lg) {
                 margin-top: 50px;
-                padding-left: 8%;
-                padding-right: 8%;
             }
 
             @include media-breakpoint-down(md) {
@@ -48,6 +66,15 @@
                 margin-top: 90px;
                 padding-left: 20%;
             }
+        }
+    }
+
+
+    .text {
+        .text-wrapper {
+            max-width: 70ch;
+            padding-left: 8%;
+            padding-right: 8%;
         }
 
         .title {

@@ -34,24 +34,26 @@ class Photo extends Component {
         const srcSet = buildSrcSet(photo.sizes);
 
         return (
-            <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''} ${photo.mode}`}>
-                <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
-                <div className="photo">
-                    <TransitionImage
-                        onLoad={() => {
-                            this.setState({showComponent: true});
-                            onPhotoLoad(photo);
-                        }}
-                        style={{maxHeight: `${availHeight * GIVE_ME_SOME_SLACK_FACTOR}px`}}
-                        src={photo.sizes.large.url}
-                        srcSet={srcSet}
-                        sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 70vw"/>
-                </div>
-                <div className="text">
-                    <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
-                        <p className="title">{photo.title}</p>
-                        <p className="latin">{photo.latin}</p>
-                        <p className="description">{photo.description}</p>
+            <div className="photo-and-text-wrapper">
+                <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''} ${photo.mode}`}>
+                    <div className="photo">
+                        <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
+                        <TransitionImage
+                            onLoad={() => {
+                                this.setState({showComponent: true});
+                                onPhotoLoad(photo);
+                            }}
+                            style={{maxHeight: `${availHeight * GIVE_ME_SOME_SLACK_FACTOR}px`}}
+                            src={photo.sizes.large.url}
+                            srcSet={srcSet}
+                            sizes="(max-width: 1360px) l00vw, (min-width: 1360px) 70vw"/>
+                    </div>
+                    <div className="text">
+                        <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
+                            <p className="title">{photo.title}</p>
+                            <p className="latin">{photo.latin}</p>
+                            <p className="description">{photo.description}</p>
+                        </div>
                     </div>
                 </div>
                 <div style={{clear: 'both'}}/>
