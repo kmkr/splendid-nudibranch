@@ -1,5 +1,7 @@
- #small-collage {
-    height: 100vh;
+@import "../max-height";
+
+#small-collage {
+    @include maxheight();
     background-color: #000;
     display: -webkit-flex;
     -webkit-align-items: center;
