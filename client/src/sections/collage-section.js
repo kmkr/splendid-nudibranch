@@ -8,14 +8,13 @@ const threshold = 1200;
 
 class CollageSection extends Component {
     render() {
-        const {scroll} = this.props;
+        // todo: fix with media query?
+        const {innerWidth} = this.props;
         return (
             <div id="collage-section">
-                {scroll.innerWidth > threshold ?
-                    <LargeCollage
-                        scroll={scroll} /> :
-                    <SmallCollage
-                        scroll={scroll} />
+                {innerWidth > threshold ?
+                    <LargeCollage /> :
+                    <SmallCollage />
                 }
             </div>
         );
@@ -24,7 +23,7 @@ class CollageSection extends Component {
 
 function select(state) {
     return {
-        scroll: state.scroll
+        innerWidth: state.scroll.innerWidth
     };
 }
 
