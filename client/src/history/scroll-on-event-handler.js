@@ -2,18 +2,24 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import smoothScroll from 'smooth-scroll';
 
+import debounce from 'throttle-debounce/throttle';
+
 const UP_KEYS = [33/* pgup */, 37/* arrow left *//* 38 arrow up */];
 const DOWN_KEYS = [32/* space */, 34/* pgdn */, 39/* arrow right *//*, 40 arrow down */];
 
 class ScrollOnEventHandler extends Component {
+    constructor() {
+        super();
+        this.handleWheel = debounce(900, this.handleWheel);
+    }
+
     componentWillMount() {
         window.addEventListener('keydown', e => this.handleKeyDown(e));
         window.addEventListener('keyup', e => this.handleKeyUp(e));
-        window.addEventListener('wheel', e => this.handleWheel(e));
+        window.addEventListener('wheel', e => this.wheelProxy(e));
     }
 
     componentWillReceiveProps() {
-        // todo: effektiviser
         this.scrollToQueued();
     }
 
@@ -74,15 +80,17 @@ class ScrollOnEventHandler extends Component {
         return anchors.indexOf(previousAnchor);
     }
 
-    // todo: verifiser wheel
-    handleWheel(e) {
+    wheelProxy(e) {
         e.preventDefault();
 
-        // The wheel event is fired in bursts so try to enforce only the first event by waiting for scroll to finish
         if (this.scrolling) {
             return;
         }
 
+        this.handleWheel(e);
+    }
+
+    handleWheel(e) {
         let nextAnchorIndex;
 
         if (e.deltaY > 0) { // moving down

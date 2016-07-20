@@ -1,4 +1,4 @@
-import debounce from 'debounce';
+import debounce from 'throttle-debounce/debounce';
 
 import * as idGenerator from '../../../common/id-generator';
 
@@ -41,5 +41,5 @@ function beaconSend(content = {}) {
     navigator.sendBeacon('/stats', JSON.stringify(data));
 }
 
-export const postStats = debounce(send, DELAY);
+export const postStats = debounce(DELAY, send);
 export const beaconStats = beaconSend;
