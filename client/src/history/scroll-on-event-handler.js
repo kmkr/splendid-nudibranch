@@ -71,7 +71,7 @@ class ScrollOnEventHandler extends Component {
             }
         }
 
-        if (nextAnchors) {
+        if (nextAnchors.length) {
             // Don't interfer if the user is holding down the button
             if (this.nextQueuedAnchor) {
                 this.abortChange = true;
