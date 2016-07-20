@@ -53,7 +53,7 @@ class ScrollOnEventHandler extends Component {
             nextAnchors = this.previousAnchors();
         }
 
-        if (nextAnchors.length && !this.scrolling) {
+        if (nextAnchors.length) {
             this.scrollTo(nextAnchors[0]);
         }
     }
