@@ -12,86 +12,109 @@ class ScrollOnEventHandler extends Component {
         window.addEventListener('wheel', e => this.handleWheel(e));
     }
 
+    componentWillReceiveProps() {
+        // todo: effektiviser
+        this.scrollToQueued();
+    }
+
     shouldComponentUpdate() {
         return false;
     }
 
-    scrollTo(anchor) {
-        if (this.scrolling) {
+    scrollToQueued() {
+        if (this.scrolling || typeof this.scrollToIndex !== 'number') {
+            return;
+        }
+
+        const {anchors} = this.props;
+        const scrollToIndex = this.scrollToIndex;
+        const anchor = anchors[scrollToIndex];
+        if (!anchor) {
             return;
         }
 
         this.scrolling = true;
+
         smoothScroll.animateScroll(`#${anchor.domId}`, null, {
             speed: 300,
             updateURL: false,
             callback: () => {
                 this.scrolling = false;
+                // Sjekk om scrollToIndex er oppdatert mens scroll pågikk
+                if (this.scrollToIndex !== scrollToIndex) {
+                    this.scrollToQueued();
+                } else {
+                    this.scrollToIndex = null;
+                }
             }
         });
     }
 
-    followingAnchors() {
+    followingAnchorIndex() {
         const {anchors, currentOffset} = this.props;
-        return anchors.filter(anchor => anchor.position.offsetTop > currentOffset);
+        const followingAnchor = anchors
+            .filter((anchor, index) => {
+                const followsCurrentOffset = anchor.position.offsetTop > currentOffset;
+                const followsQueuedScroll = index > (this.scrollToIndex || 0);
+
+                return followsCurrentOffset && followsQueuedScroll;
+            })[0];
+        return anchors.indexOf(followingAnchor);
     }
 
-    previousAnchors() {
+    previousAnchorIndex() {
         const {anchors, currentOffset} = this.props;
-        return anchors
-            .filter(anchor => anchor.position.offsetTop < currentOffset)
-            .reverse();
+        const previousAnchor = anchors
+            .filter((anchor, index) => {
+                const isBeforeCurrentOffset = anchor.position.offsetTop < currentOffset;
+                const isBeforeQueuedScroll = index < ((!this.scrollToIndex || this.scrollToIndex === -1) ? Number.MAX_VALUE : this.scrollToIndex);
+                return isBeforeCurrentOffset && isBeforeQueuedScroll;
+            })
+            .reverse()[0];
+        return anchors.indexOf(previousAnchor);
     }
 
+    // todo: verifiser wheel
     handleWheel(e) {
         e.preventDefault();
-        let nextAnchors;
 
-        if (e.deltaY > 0) { // moving down
-            nextAnchors = this.followingAnchors();
-        } else {
-            nextAnchors = this.previousAnchors();
+        // The wheel event is fired in bursts so try to enforce only the first event by waiting for scroll to finish
+        if (this.scrolling) {
+            return;
         }
 
-        if (nextAnchors.length) {
-            this.scrollTo(nextAnchors[0]);
+        let nextAnchorIndex;
+
+        if (e.deltaY > 0) { // moving down
+            nextAnchorIndex = this.followingAnchorIndex();
+        } else {
+            nextAnchorIndex = this.previousAnchorIndex();
+        }
+
+        if (typeof nextAnchorIndex === 'number' && nextAnchorIndex >= 0) {
+            this.scrollToIndex = nextAnchorIndex;
+            this.scrollToQueued();
         }
     }
 
     handleKeyDown(e) {
         const keyCode = e.keyCode || e.detail.keyCode;
 
-        let nextAnchors;
+        let nextAnchorIndex;
         if (UP_KEYS.indexOf(keyCode) !== -1) {
-            nextAnchors = this.previousAnchors();
+            nextAnchorIndex = this.scrolling ? this.scrollToIndex - 1 : this.previousAnchorIndex();
         } else if (DOWN_KEYS.indexOf(keyCode) !== -1) {
-            nextAnchors = this.followingAnchors();
-            if (!nextAnchors[0]) {
-                console.log('todo: håndter at anchors ikke er lastet enda');
-            }
+            nextAnchorIndex = this.scrolling ? this.scrollToIndex + 1 : this.followingAnchorIndex();
         }
 
-        if (nextAnchors.length) {
-            // Don't interfer if the user is holding down the button
-            if (this.nextQueuedAnchor) {
-                this.abortChange = true;
-                return;
-            }
-
-            if (nextAnchors[0] !== this.nextQueuedAnchor) {
-                e.preventDefault();
-                this.nextQueuedAnchor = nextAnchors[0];
-            }
+        if (typeof nextAnchorIndex === 'number') {
+            e.preventDefault();
+            this.scrollToIndex = nextAnchorIndex;
         }
-
     }
 
     handleKeyUp() {
-        if (this.nextQueuedAnchor && !this.abortChange) {
-            this.scrollTo(this.nextQueuedAnchor);
-        }
-        this.abortChange = null;
-        this.nextQueuedAnchor = null;
+        this.scrollToQueued();
     }
 
     render() {
