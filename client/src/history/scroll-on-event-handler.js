@@ -31,7 +31,7 @@ class ScrollOnEventHandler extends Component {
         });
     }
 
-    nextAnchors() {
+    followingAnchors() {
         const {anchors, currentOffset} = this.props;
         return anchors.filter(anchor => anchor.position.offsetTop > currentOffset);
     }
@@ -48,7 +48,7 @@ class ScrollOnEventHandler extends Component {
         let nextAnchors;
 
         if (e.deltaY > 0) { // moving down
-            nextAnchors = this.nextAnchors();
+            nextAnchors = this.followingAnchors();
         } else {
             nextAnchors = this.previousAnchors();
         }
@@ -65,7 +65,7 @@ class ScrollOnEventHandler extends Component {
         if (UP_KEYS.indexOf(keyCode) !== -1) {
             nextAnchors = this.previousAnchors();
         } else if (DOWN_KEYS.indexOf(keyCode) !== -1) {
-            nextAnchors = this.nextAnchors();
+            nextAnchors = this.followingAnchors();
             if (!nextAnchors[0]) {
                 console.log('todo: håndter at anchors ikke er lastet enda');
             }
