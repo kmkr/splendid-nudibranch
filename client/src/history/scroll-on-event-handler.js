@@ -87,15 +87,8 @@ class ScrollOnEventHandler extends Component {
     }
 
     handleKeyUp() {
-        if (this.nextQueuedAnchor && !this.abortChange && !this.scrolling) {
-            this.scrolling = true;
-            smoothScroll.animateScroll(`#${this.nextQueuedAnchor.domId}`, null, {
-                speed: 300,
-                updateURL: false,
-                callback: () => {
-                    this.scrolling = false;
-                }
-            });
+        if (this.nextQueuedAnchor && !this.abortChange) {
+            this.scrollTo(this.nextQueuedAnchor);
         }
         this.abortChange = null;
         this.nextQueuedAnchor = null;
