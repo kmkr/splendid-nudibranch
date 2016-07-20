@@ -18,7 +18,7 @@ class PhotoScroller extends Component {
         const state = {};
         const photoListWrapper = this.refs['photo-list-wrapper'];
         const {innerHeight, pageYOffset} = props.scroll;
-        const SOME_BUFFER = innerHeight;
+        const SOME_BUFFER = innerHeight * 2;
         if ((pageYOffset + innerHeight + SOME_BUFFER) > photoListWrapper.offsetTop) {
             const visibleEnd = Math.min(
                 props.photos.length,
