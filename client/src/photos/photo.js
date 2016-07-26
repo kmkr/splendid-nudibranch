@@ -34,10 +34,11 @@ class Photo extends Component {
         const srcSet = buildSrcSet(photo.sizes);
 
         return (
+        <div>
+            <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
             <div className="photo-and-text-wrapper">
                 <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''} ${photo.mode}`}>
                     <div className="photo">
-                        <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
                         <TransitionImage
                             onLoad={() => {
                                 this.setState({showComponent: true});
@@ -57,6 +58,7 @@ class Photo extends Component {
                     </div>
                 </div>
                 <div style={{clear: 'both'}}/>
+            </div>
             </div>
         );
     }
