@@ -57,7 +57,9 @@
     }
 
     &.landscape {
-        display: flex;
+        @include media-breakpoint-up(xl) {
+            display: flex;
+        }
 
         .photo {
             @include media-breakpoint-down(lg) {
