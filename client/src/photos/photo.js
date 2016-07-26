@@ -10,6 +10,7 @@ const GIVE_ME_SOME_SLACK_FACTOR = 0.85;
 
 function buildSrcSet(sizes) {
     return Object.keys(sizes)
+        .reverse()
         .map(key => {
             const size = sizes[key];
             return `${size.url} ${size.width}w`;
@@ -47,7 +48,7 @@ class Photo extends Component {
                             style={{maxHeight: `${availHeight * GIVE_ME_SOME_SLACK_FACTOR}px`}}
                             src={photo.sizes.large.url}
                             srcSet={srcSet}
-                            sizes="(max-width: 1360px) 100vw, (min-width: 1360px) 60vw"/>
+                            sizes="(min-width: 1360px) 60vw"/>
                     </div>
                     <div className="text">
                         <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
