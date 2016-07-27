@@ -2,11 +2,20 @@
 @import "../vendor/bootstrap/mixins/breakpoint";
 @import "../max-height";
 
+/*
+.photo-and-text-wrapper {border: 1px solid black;}
+.photo-wrapper {border: 1px solid red;}
+.photo {border: 1px solid yellow;}
+.photo {border: 1px solid blue;}
+*/
+
 .photo-and-text-wrapper {
     @include media-breakpoint-up(lg) {
         @include maxheight();
         display: flex;
         align-items: center;
+        padding-left: 8%;
+        padding-right: 8%;
     }
     @include media-breakpoint-down(lg) {
         margin-bottom: 150px;
@@ -14,14 +23,7 @@
 }
 
 .photo-wrapper {
-    @include media-breakpoint-up(lg) {
-        padding-left: 8%;
-        padding-right: 8%;
-    }
-
-    @include media-breakpoint-up(xl) {
-        padding-right: 0;
-    }
+    flex: 1 0 100%;
 
     &.loading {
         margin: 0;
@@ -68,7 +70,7 @@
                 }
             }
             @include media-breakpoint-up(xl) {
-                flex-shrink: 0;
+                flex-shrink: 1;
             }
         }
 
