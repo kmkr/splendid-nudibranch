@@ -38,11 +38,10 @@ function photoIndex(res, selectedPhotoKey) {
     return (
         Promise.all([
             viewDataService.getPhotoData(),
-            viewDataService.getCollages(),
             viewDataService.getKeywords()
-        ]).then(([photoData, collages, keywords]) => res.render('index', {
+        ]).then(([photoData, keywords]) => res.render('index', {
             data: {
-                photoData, collages
+                photoData
             },
             selectedPhotoKey,
             keywords

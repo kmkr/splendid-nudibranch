@@ -1,20 +1,11 @@
 import * as cache from '../../cache';
 import listPhotos from '../../photos/list';
-import listCollages from '../../collages/list';
 
 export function getPhotoData() {
     return Promise.resolve(cache.get('photoData') || listPhotos())
     .then(photoData => {
         cache.put('photoData', photoData);
         return photoData;
-    });
-}
-
-export function getCollages() {
-    return Promise.resolve(cache.get('collages') || listCollages())
-    .then(collages => {
-        cache.put('collages', collages);
-        return collages;
     });
 }
 
