@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import smoothScroll from 'smooth-scroll';
+import './addWheelListener';
 
 import throttle from 'throttle-debounce/throttle';
 
@@ -16,7 +17,7 @@ class ScrollOnEventHandler extends Component {
     componentWillMount() {
         window.addEventListener('keydown', e => this.handleKeyDown(e));
         window.addEventListener('keyup', e => this.handleKeyUp(e));
-        window.addEventListener('wheel', e => this.wheelProxy(e));
+        window.addWheelListener(document.body, e => this.wheelProxy(e));
     }
 
     componentWillReceiveProps() {
@@ -42,7 +43,7 @@ class ScrollOnEventHandler extends Component {
         this.scrolling = true;
 
         smoothScroll.animateScroll(`#${anchor.domId}`, null, {
-            speed: 300,
+            speed: 600,
             updateURL: false,
             callback: () => {
                 this.scrolling = false;
