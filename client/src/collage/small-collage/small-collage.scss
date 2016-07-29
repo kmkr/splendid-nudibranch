@@ -5,16 +5,12 @@
 #small-collage {
     @include maxheight();
     background-color: #000;
-    display: -webkit-flex;
-    -webkit-align-items: center;
-    -webkit-justify-content: center;
-    -webkit-flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 
-    // full width hack from https://css-tricks.com/full-width-containers-limited-width-parents/
+    /* full width hack from https://css-tricks.com/full-width-containers-limited-width-parents */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -25,15 +21,11 @@
 
     p {
         text-align: center;
-        -webkit-flex-shrink: 0;
-        -webkit-flex-basis: 100%;
         flex-shrink: 0;
         flex-basis: 100%;
     }
 
     object {
-        -webkit-flex-shrink: 0;
-        -webkit-flex-basis: 60%;
         flex-shrink: 0;
         flex-basis: 60%;
         width: 60%;

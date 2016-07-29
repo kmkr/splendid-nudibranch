@@ -50,7 +50,6 @@
 
         .expandable {
             width: 100%;
-            -webkit-transition: left .5s, right .5s, width .5s;
             transition: left .5s, right .5s, width .5s;
             &.opened {
                 left: 0;
@@ -77,9 +76,7 @@
         }
 
         .expandable {
-            -webkit-transition: right .5s, width .5s;
             transition: right .5s, width .5s;
-            display: -webkit-flex;
             display: flex;
             &.opened {
                 width: 300px;

@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const env = process.env.NODE_ENV;
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     context: __dirname,
@@ -29,9 +31,12 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: ['style', 'css', 'sass']
+                loaders: ['style', 'css', 'postcss', 'sass']
             }
         ]
+    },
+    postcss: function () {
+        return [precss, autoprefixer];
     },
     plugins: [
         new webpack.DefinePlugin({
