@@ -19,13 +19,12 @@ class SmallCollage extends Component {
     render() {
         return (
             <div id="small-collage">
-                <object
-                    id="logo"
-                    type="image/svg+xml"
-                    data="/static/images/logo-square.svg" />
-
-                <p>THE SPLENDID NUDIBRANCH</p>
-
+                <div>
+                    <object
+                        id="logo"
+                        type="image/svg+xml"
+                        data="/static/images/logo-square.svg" />
+                </div>
                 <svg className="arrows" onClick={this.scrollToPhotoSection}>
                     <path className="a1" d="M0 0 L30 32 L60 0"></path>
                     <path className="a2" d="M0 20 L30 52 L60 20"></path>

@@ -6,9 +6,8 @@
     @include maxheight();
     background-color: #000;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 
     /* full width hack from https://css-tricks.com/full-width-containers-limited-width-parents */
     width: 100vw;
@@ -19,21 +18,20 @@
     margin-right: -50vw;
     // end
 
-    p {
-        text-align: center;
-        flex-shrink: 0;
-        flex-basis: 100%;
+    > div {
+        @include media-breakpoint-down(lg) {
+            flex-basis: 50%;
+        }
+        @include media-breakpoint-up(xl) {
+            flex-basis: 30%;
+        }
     }
 
     object {
-        flex-shrink: 0;
-        flex-basis: 60%;
-        width: 60%;
-        max-height: 65%; // Avoid massive logo on landscape tablets
+        width: 100%;
 
-        @include media-breakpoint-up(md) {
-            flex-basis: 30%;
-            max-height: 35%;
+        @media (orientation:landscape) {
+            max-height: 50%; // Avoid massive logo on landscape tablets
         }
     }
 }

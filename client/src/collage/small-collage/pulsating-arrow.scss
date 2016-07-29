@@ -1,10 +1,4 @@
-@import '../../constants/styles';
-@import "../../vendor/bootstrap/mixins/breakpoint";
-
 .arrows {
-    @include media-breakpoint-down(md) {
-        display: none;
-    }
     width: 60px;
     height: 72px;
     position: absolute;
