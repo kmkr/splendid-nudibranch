@@ -6,7 +6,7 @@
 .photo-and-text-wrapper {border: 1px solid black;}
 .photo-wrapper {border: 1px solid red;}
 .photo {border: 1px solid yellow;}
-.photo {border: 1px solid blue;}
+.text {border: 1px solid blue;}
 */
 
 .photo-and-text-wrapper {
@@ -26,8 +26,6 @@
 }
 
 .photo-wrapper {
-    flex: 1 0 100%;
-
     &.loading {
         margin: 0;
         height: 0;
