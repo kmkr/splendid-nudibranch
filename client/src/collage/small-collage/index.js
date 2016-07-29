@@ -23,7 +23,8 @@ class SmallCollage extends Component {
                     <object
                         id="logo"
                         type="image/svg+xml"
-                        data="/static/images/logo-square.svg" />
+                        data="/static/images/logo-square.svg"/>
+                    <img className="title-image" src="/static/images/title.svg"/>
                 </div>
                 <svg className="arrows" onClick={this.scrollToPhotoSection}>
                     <path className="a1" d="M0 0 L30 32 L60 0"></path>
