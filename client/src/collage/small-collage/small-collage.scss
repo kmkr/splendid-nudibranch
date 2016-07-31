@@ -29,11 +29,14 @@
     }
 
     > div {
+        img {
+            max-width: 100%;
+        }
         @include media-breakpoint-down(lg) {
-            max-width: 50%;
-            flex-basis: 50%;
+            max-width: 55%;
+            flex-basis: 55%;
             @media (orientation:landscape) {
-                max-width: 50%;
+                max-width: 40%;
                 flex-basis: 40%;
             }
         }
