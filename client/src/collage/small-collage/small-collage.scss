@@ -30,13 +30,16 @@
 
     > div {
         @include media-breakpoint-down(lg) {
+            max-width: 50%;
             flex-basis: 50%;
             @media (orientation:landscape) {
+                max-width: 50%;
                 flex-basis: 40%;
             }
         }
         @include media-breakpoint-up(xl) {
             flex-basis: 30%;
+            max-width: 30%;
         }
     }
 
