@@ -5,12 +5,20 @@ import './add-wheel-listener';
 
 const UP_KEYS = [33/* pgup */, 37/* arrow left *//* 38 arrow up */];
 const DOWN_KEYS = [32/* space */, 34/* pgdn */, 39/* arrow right *//*, 40 arrow down */];
+const WHEEL_SCROLL_PAUSE = 1000;
+
+function now() {
+    return new Date().getTime();
+}
 
 class ScrollOnEventHandler extends Component {
     componentWillMount() {
         window.addEventListener('keydown', e => this.handleKeyDown(e));
         window.addEventListener('keyup', e => this.handleKeyUp(e));
         window.addWheelListener(document.body, e => this.handleWheel(e));
+        this.lastScrollStarted = 0;
+        this.scrolling = false;
+        this.scrollToIndex = null;
     }
 
     componentWillReceiveProps() {
@@ -34,6 +42,7 @@ class ScrollOnEventHandler extends Component {
         }
 
         this.scrolling = true;
+        this.lastScrollStarted = now();
 
         smoothScroll.animateScroll(`#${anchor.domId}`, null, {
             speed: 600,
@@ -77,7 +86,7 @@ class ScrollOnEventHandler extends Component {
     handleWheel(e) {
         e.preventDefault();
 
-        if (this.scrolling) {
+        if (this.scrolling || (now() - this.lastScrollStarted) < WHEEL_SCROLL_PAUSE) {
             return;
         }
 
