@@ -47,13 +47,13 @@ class ListPhotos extends Component {
         return (
             <div>
                 {photos.map((photo, index) => (
-                    this.isVisible(index) ? (
+                    this.isVisible(index) && (
                         <Photo
                             key={photo.key}
                             onPhotoLoad={this.photoLoaded}
                             availHeight={availHeight}
                             photo={photo} />
-                        ) : null
+                        )
                 ))}
             </div>
         );
