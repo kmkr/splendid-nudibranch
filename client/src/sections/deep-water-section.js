@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import SmoothScrollLink from '../history/smooth-scroll-link';
+import SmoothScrollLink from '../navigation/smooth-scroll-link';
 
 import './deep-water-section.scss';
 

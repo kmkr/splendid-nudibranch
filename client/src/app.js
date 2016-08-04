@@ -8,8 +8,8 @@ import MidWaterSection from './sections/mid-water-section';
 import PhotoSection from './sections/photo-section';
 import throttle from './scroll/throttler';
 import {updatePosition, updateSize} from './scroll/scroll-actions';
-import UrlUpdater from './history/url-updater';
-import ScrollOnEventHandler from './history/scroll-on-event-handler';
+import UrlUpdater from './navigation/url-updater';
+import ScrollOnEventHandler from './navigation/scroll-on-event-handler';
 
 class App extends Component {
     componentWillMount() {
