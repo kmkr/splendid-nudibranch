@@ -14,7 +14,7 @@ class ScrollOnEventHandler extends Component {
     componentWillMount() {
         window.addEventListener('keydown', e => this.handleKeyDown(e));
         window.addEventListener('keyup', e => this.handleKeyUp(e));
-        window.addWheelListener(document.body, e => this.wheelProxy(e));
+        window.addWheelListener(document.body, e => this.handleWheel(e));
     }
 
     componentWillReceiveProps() {
@@ -78,17 +78,13 @@ class ScrollOnEventHandler extends Component {
         return anchors.indexOf(previousAnchor);
     }
 
-    wheelProxy(e) {
+    handleWheel(e) {
         e.preventDefault();
 
         if (this.scrolling) {
             return;
         }
 
-        this.handleWheel(e);
-    }
-
-    handleWheel(e) {
         let nextAnchorIndex;
 
         if (e.deltaY > 0) { // moving down
