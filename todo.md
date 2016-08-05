@@ -1,14 +1,21 @@
 Hilde:
 
-- interaksjon ved enden av siden uten filter aktivt
+- Interaksjon ved enden av siden uten filter aktivt
 - Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
 - favicon.ico
-- interaksjon ved enden av siden når man har et filter aktivt
+- Interaksjon ved enden av siden når man har et filter aktivt
 
 KM:
 
-- Spørre H om vi kan ha en keyhelp som forklarer navigasjon
-- Vuder css for max height med calc i stedet for JS.
+- Spørre H om vi kan fikse en `share`-knapp som gir en URL
+- Vurder css for max height med calc i stedet for JS.
+
+- Blank ut foto når den er utenfor viewport.
+-- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.
+-- Implementer `componentDidMount` i `blankable-anchored-photo.js` som registrerer egen høyde på div OG egen pageYOffset. `blankable-anchored-photo` tar over ansvaret til `Anchor`.
+-- Lytt på `scroll.innerHeight` og `scroll.innerWidth` og gjør en oppdatering på egen høyde og pageYOffset.
+-- Lytt på `scroll.pageYOffset` og se om bildet er utenfor viewet. Dersom utenfor:
+--- Sett høyde på div til egen høyde og ikke render bildet
 
 Søk
 - Filter tags
