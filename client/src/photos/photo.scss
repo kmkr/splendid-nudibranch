@@ -17,8 +17,11 @@
     @include media-breakpoint-up(lg) {
         display: flex;
         align-items: center;
-        padding-left: 8%;
-        padding-right: 8%;
+        margin-left: 8%;
+        margin-right: 8%;
+        .photo-wrapper {
+            flex: 1 0 100%;
+        }
     }
     @include media-breakpoint-down(lg) {
         margin-bottom: 150px;
@@ -72,6 +75,7 @@
             }
             @include media-breakpoint-up(xl) {
                 flex-shrink: 1;
+                flex-basis: 70%;
             }
         }
 
