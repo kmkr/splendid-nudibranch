@@ -9,7 +9,6 @@ export default (type, name, obj) => {
         }
         running = true;
         requestAnimationFrame(() => {
-            console.log('wozzy');
             obj.dispatchEvent(new CustomEvent(name));
             running = false;
         });
