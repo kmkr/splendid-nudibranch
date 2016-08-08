@@ -6,15 +6,25 @@ import './deep-water-section.scss';
 
 const DeepWaterSection = ({photos}) => {
     const somePhotoLoading = photos.data.some(photo => !photo.loaded);
+
     return (
         <div id="deep-water-section">
             {somePhotoLoading ?
-                <div className="spinner" /> :
-                <SmoothScrollLink
-                    name="/"
-                    selector="#app"
-                    href="#">Go to top
-                </SmoothScrollLink>
+                <div className="spinner-wrapper"><div className="spinner" /></div> :
+
+                <div>
+                    <img className="barracuda" src="/static/images/barracuda.svg" />
+                    <img className="anemone" src="/static/images/anemone.svg" />
+
+                    <div className="drop-your-weights-wrapper">
+                            <SmoothScrollLink
+                                name="/"
+                                selector="#app"
+                                href="#">DROP YOUR WEIGHTS
+                            </SmoothScrollLink>
+
+                    </div>
+                </div>
             }
         </div>
     );

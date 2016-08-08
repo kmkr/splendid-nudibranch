@@ -7,7 +7,7 @@ import './arrow.scss';
 
 class SmallCollage extends Component {
     componentDidMount() {
-        new Vivus('logo', {duration: 60}); // eslint-disable-line no-new
+        new Vivus('logo', {duration: 80}); // eslint-disable-line no-new
     }
 
     scrollToPhotoSection() {
@@ -23,7 +23,7 @@ class SmallCollage extends Component {
                     <object
                         id="logo"
                         type="image/svg+xml"
-                        data="/static/images/logo-square.svg"/>
+                        data="/static/images/logo.svg"/>
                     <img className="title-image" src="/static/images/title.svg"/>
                 </div>
                 <div className="arrow bounce" onClick={this.scrollToPhotoSection}/>
