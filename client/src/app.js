@@ -35,6 +35,7 @@ class App extends Component {
                 <CollageSection />
                 <PhotoSection />
                 <MidWaterSection />
+                <Anchor id="bottom" name=""/>
                 <DeepWaterSection />
                 <UrlUpdater />
                 <ScrollOnEventHandler />
