@@ -636,3 +636,12 @@ Location		Cod Hole, Great Barrier Reef, Australia
 Tags			2013 cod
 Latin			Epinephelus tukula
 Description		A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once located. They seem to chill out at the same place, getting cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
+
+
+Kris Krister 453.jpg
+
+Title			Potato Cod
+Location		Cod Hole, Great Barrier Reef, Australia
+Tags			2013 cod
+Latin			Epinephelus tukula
+Description		This fish is bold - can come really close and will sometimes tamper with your dive gear. Tukula means "man-eater", but he's just curious and want to play.
