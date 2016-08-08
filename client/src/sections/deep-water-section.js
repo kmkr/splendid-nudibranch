@@ -18,6 +18,8 @@ const DeepWaterSection = ({photos}) => {
 
                     <div className="drop-your-weights-wrapper">
                             <SmoothScrollLink
+                                speed={4000}
+                                easing="easeOutCubic"
                                 name="/"
                                 selector="#app"
                                 href="#">DROP YOUR WEIGHTS

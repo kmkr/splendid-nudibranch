@@ -14,7 +14,11 @@ class SmoothScrollLink extends Component {
         this.props.onClick();
         // Anchor er ikke oppdatert i denne fasen
         setTimeout(() => {
-            smoothScroll.animateScroll(this.props.selector || this.props.href, null, {updateURL: false});
+            smoothScroll.animateScroll(this.props.selector || this.props.href, null, {
+                easing: this.props.easing,
+                speed: this.props.speed,
+                updateURL: false
+            });
         }, 100);
     }
 
@@ -28,13 +32,16 @@ class SmoothScrollLink extends Component {
 }
 
 SmoothScrollLink.propTypes = {
+    speed: PropTypes.number,
     href: PropTypes.string.isRequired,
     selector: PropTypes.string,
     onClick: PropTypes.func
 };
 
 SmoothScrollLink.defaultProps = {
-    onClick: () => {}
+    easing: 'linear',
+    onClick: () => {},
+    speed: 100
 };
 
 export default SmoothScrollLink;
