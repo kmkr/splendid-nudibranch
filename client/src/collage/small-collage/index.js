@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
-import Vivus from 'vivus';
 import smoothScroll from 'smooth-scroll';
 
 import './small-collage.scss';
 import './arrow.scss';
 
 class SmallCollage extends Component {
-    componentDidMount() {
-        new Vivus('logo', {duration: 80}); // eslint-disable-line no-new
-    }
-
     scrollToPhotoSection() {
         smoothScroll.animateScroll('#photo-section', null, {
             updateURL: false
