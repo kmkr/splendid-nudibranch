@@ -7,7 +7,7 @@ function getMatchingPhoto(name, allPhotos) {
     return allPhotos.find(photo => photo.name === name);
 }
 
-function shouldUpdate(currentPhoto, allPhotos) {
+function hasChanges(currentPhoto, allPhotos) {
     if (!currentPhoto.key) {
         return false;
     }
@@ -19,14 +19,19 @@ export function map(content, photos) {
     const results = [];
     let currentPhoto = {};
     const allowedExtensions = /\.(jpg|gif|png)$/;
-    const lines = content.split('\n').filter(line => line && line[0] !== '/');
+    const commentStart = '/';
+    const lines = content.split('\n').filter(line => line && line[0] !== commentStart);
 
     while (lines.length) {
         const line = lines.shift().trim();
 
         if (line.toLowerCase().match(allowedExtensions) || lines.length === 0) {
-            if (shouldUpdate(currentPhoto, photos)) {
+            if (hasChanges(currentPhoto, photos)) {
                 results.push(currentPhoto);
+            }
+
+            if (lines.length === 0) {
+                continue;
             }
 
             currentPhoto = {};

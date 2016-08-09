@@ -41,20 +41,25 @@ export default ({
                 const toDispatch = {
                     type: actionTypes.FETCH_ERROR,
                     error: {
-                        message: error.statusText,
+                        message: error.statusText || error.message,
                         type: error.status
                     }
                 };
-                error.json()
-                    .then(data => {
-                        dispatch({
-                            ...toDispatch,
-                            ...data
+
+                if (error.then && error.json) {
+                    error.json()
+                        .then(data => {
+                            dispatch({
+                                ...toDispatch,
+                                ...data
+                            });
+                        })
+                        .catch(() => {
+                            dispatch(toDispatch);
                         });
-                    })
-                    .catch(() => {
-                        dispatch(toDispatch);
-                    });
+                } else {
+                    dispatch(toDispatch);
+                }
             });
     };
 };

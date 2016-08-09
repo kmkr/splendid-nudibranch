@@ -24,6 +24,8 @@ export default class BatchUpdatePhotos extends React.Component {
                 <div>
                     <textarea
                         value={this.state.content}
+                        cols="100"
+                        rows="10"
                         onChange={e => this.setState({content: e.target.value})} />
                 </div>
                 <div>

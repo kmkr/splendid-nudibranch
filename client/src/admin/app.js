@@ -37,7 +37,11 @@ class App extends Component {
     }
 
     onBatchUpdatePhotos(photos) {
-        this.props.dispatch(batchUpdatePhotos(photos));
+        if (photos.length) {
+            this.props.dispatch(batchUpdatePhotos(photos));
+        } else {
+            console.log('Nothing to update');
+        }
     }
 
     onUpdateClick(photo, updatedValues, updatedTags) {
