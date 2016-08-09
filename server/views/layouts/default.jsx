@@ -25,6 +25,20 @@ const Layout = ({children, data, keywords, selectedPhotoKey}) => (
                 rel="stylesheet"
                 type="text/css" />
 
+            <link
+                rel="icon"
+                type="image/png"
+                href="/static/images/favicon-100.png"
+                sizes="100x100" />
+            <link
+                rel="icon"
+                type="image/png"
+                href="/static/images/favicon-192.png"
+                sizes="192x192" />
+            <link
+                rel="icon"
+                href="/static/images/favicon.ico"
+                sizes="32x32" />
             <Style />
         </head>
         <body className="container-fluid">
