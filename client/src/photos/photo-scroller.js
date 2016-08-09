@@ -32,8 +32,8 @@ class PhotoScroller extends Component {
 
     }
 
-    shouldComponentUpdate(nextProps, nextStyle) {
-        return shallowCompare(this, nextProps, nextStyle);
+    shouldComponentUpdate(nextProps, nextState) {
+        return shallowCompare(this, nextProps, nextState);
     }
 
     render() {
