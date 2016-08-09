@@ -249,15 +249,6 @@ Tags			nudibranch 2014
 Description		Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which many other molluscs use as primary protection.
 
 
-DSC03814.jpg
-
-Title			?
-Location		Anilao, The Philippines
-Latin
-Tags			2014
-Description
-
-
 DSC04006.jpg
 
 Title			Nudibranch
@@ -328,15 +319,6 @@ Location		Anilao, The Philippines
 Tags			2014 boxfish cowfish
 Latin			Lactoria cornuta
 Description		A peaceful fish having horns as defence to make it more difficult for predators to swallow it. The cowfishes are, sadly, a common target for the aquarium industry due to their adorable looks.
-
-
-DSC04554.jpg
-
-Title
-Location		Anilao, The Philippines
-Tags			2014
-Latin
-Description
 
 
 DSC04577.jpg
