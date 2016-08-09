@@ -1,6 +1,5 @@
 Hilde:
 
-- Interaksjon ved enden av siden uten filter aktivt
 - Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
 - favicon.ico
 - Interaksjon ved enden av siden når man har et filter aktivt
