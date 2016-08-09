@@ -4,7 +4,7 @@ import {listItems} from './s3-lister';
 import {resizeTo} from '../../../common/constants';
 
 function expectNumberOfKeys() {
-    const numOriginalUpload = 1;
+    const numOriginalUpload = 0;
 
     return resizeTo.length + numOriginalUpload;
 }
