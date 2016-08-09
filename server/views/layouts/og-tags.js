@@ -13,7 +13,7 @@ const OgTags = (data, selectedPhotoKey) => {
             'og:type': 'article',
             'og:site_name': 'The Splendid Nudibranch',
             'og:title': match.title,
-            'og:url': `https://splendid-nudibranch.herokuapp.com/photos/${match.key}`,
+            'og:url': `http://www.thesplendidnudibranch.pink/photos/${match.key}`,
             'og:description': match.description,
             'og:image': selectedPhotoUrl
         };
@@ -21,7 +21,7 @@ const OgTags = (data, selectedPhotoKey) => {
 
     return {
         'og:site_name': 'The Splendid Nudibranch',
-        'og:url': 'https://splendid-nudibranch.herokuapp.com',
+        'og:url': 'http://www.thesplendidnudibranch.pink',
         'og:description': description,
         'og:image': '' // todo: eksporter en PNG av logo med svart bakgrunn
     };
