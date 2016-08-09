@@ -449,11 +449,11 @@ Description
 
 DSC06574.jpg
 
-Title
+Title			Tassled Scorpionfish
 Location		Egypt
 Tags			2014 scorpionfish
-Latin
-Description
+Latin			Scorpaenopsis oxycephala
+Description		An ambush predator that excels at blending in with the surroundings.
 
 DSC06604.jpg
 
