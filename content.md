@@ -13,7 +13,7 @@ Title			Western Clown Anemonefish
 Location		Dumaguete, The Philippines
 Tags			anemonefish clownfish 2013 anemone
 Latin			Amphiprion ocellaris
-Description		Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish population there is a strict hierarchy where juveniles begin at the bottom and have to gradually move upwards by proving their abilities to the rest of the population. During this time they may be victims to agression, and possibly eviction from the anemone by more mature clownfish.
+Description		Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish community there is a strict hierarchy where juveniles begin at the bottom and have to gradually move upwards by proving their abilities to the rest of the population. During this time they may be victims to agression, and possibly eviction from the anemone by more mature clownfish.
 
 
 DSC00571.jpg
@@ -111,7 +111,7 @@ Title			Juvenile Boxfish
 Location		Anilao, The Philippines
 Latin			Ostracion cubicus
 Tags			2014 boxfish
-Description		The members of the boxfish family displays a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. The boxfish is one of those animals being consistently cute its entire lifetime, not just as juvenile.
+Description		The members of the boxfish family display a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. The boxfish is one of those animals being consistently cute its entire lifetime, not just as juvenile.
 
 
 DSC02648.jpg
@@ -273,7 +273,7 @@ Title			Leopard Anemone Shrimp
 Location		Anilao, The Philippines
 Latin			Izucaris masudai
 Tags			shrimp 2014
-Description		The single goal for this dive was to find this rare, beautiful shrimp. We knew approximately where to find it, however its small size and camouflaged body made the search quite a challenge.
+Description		The single goal for this dive was to find this rare, beautiful shrimp. We knew approximately where to find it, however its small size and camouflaged body made the search a challenge.
 
 
 DSC04078.jpg
@@ -443,7 +443,7 @@ Title			The Dugongs of Marsha Shouna
 Location		Marsa Alam, Egypt
 Tags			2014 dugong
 Latin			Dugong dugon
-Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. The dugong is herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are depleted entirely due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam had only seven dugongs left at the time of writing.
+Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. It's herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are depleted entirely due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam had only seven dugongs left at the time of writing.
 
 
 DSC06687.jpg
@@ -528,7 +528,7 @@ Title			Blackfin Barracuda
 Location		egypt
 Tags			2015
 Latin			Sphyraena genie
-Description		Barracudas aggregate in schools as a protection against larger predators.
+Description		Barracudas aggregate in schools as protection against larger predators.
 
 
 DSC07673.jpg
@@ -608,7 +608,7 @@ Title			Dwarf Minke Whale
 Location		Ribbon Reefs, Great Barrier Reef, Australia
 Tags			2010 whale
 Latin			Undescribed (Balaenoptera acutorostrata subspecies)
-Description		The group of whales circled us and gradually came closer for each round. As they moved closer we could spot their fine details, their uniqueness and beauty. Scientists in Australia use the spots on their skin to distinguish them from each other and is the primary elements to count the number of individuals. When the distance between us and the whales closed to only a few meters apart, one of the whales opened his eyes. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
+Description		In Australia, a group of whales circled us and gradually came closer for each round they took. As they moved closer we could recognize their fine details, their uniqueness and beauty. Scientists in Australia use the spots on their skin to distinguish them from each other and is the primary elements to count the number of individuals. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
 
 
 Kris Krister 412.jpg
