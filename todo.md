@@ -1,13 +1,13 @@
 Hilde:
 
 - Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
-- favicon.ico
 - Interaksjon ved enden av siden når man har et filter aktivt
+- Shareknapp og location
 
 KM:
 
-- Spørre H om vi kan fikse en `share`-knapp som gir en URL
 - Vurder css for max height med calc i stedet for JS.
+- SCRIPT5009: 'fetch' is undefined - fiks polyfill
 
 - Blank ut foto når den er utenfor viewport.
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.
