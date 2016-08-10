@@ -4,7 +4,7 @@ import sm from 'sitemap';
 const router = express.Router();
 
 const sitemap = sm.createSitemap({
-    hostname: 'http://splendid-nudibran.ch', //todo
+    hostname: 'http://thesplendidnudibranch.pink',
     cacheTime: 600000,
     urls: [
         {
