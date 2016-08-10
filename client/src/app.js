@@ -33,7 +33,9 @@ class App extends Component {
             <div>
                 <Anchor id="top" name=""/>
                 <CollageSection />
-                <PhotoSection />
+                <div className="container-fluid">
+                    <PhotoSection />
+                </div>
                 <MidWaterSection />
                 <Anchor id="bottom" name=""/>
                 <DeepWaterSection />

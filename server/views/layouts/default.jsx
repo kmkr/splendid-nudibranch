@@ -41,7 +41,7 @@ const Layout = ({children, data, keywords, selectedPhotoKey}) => (
                 sizes="32x32" />
             <Style />
         </head>
-        <body className="container-fluid">
+        <body>
             {children}
         </body>
     </html>
