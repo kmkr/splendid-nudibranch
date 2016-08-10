@@ -15,10 +15,9 @@ class SmallCollage extends Component {
         return (
             <div id="small-collage">
                 <div>
-                    <object
+                    <img
                         id="logo"
-                        type="image/svg+xml"
-                        data="/static/images/logo.svg"/>
+                        src="/static/images/logo.svg"/>
                     <img className="title-image" src="/static/images/title.svg"/>
                 </div>
                 <div className="arrow bounce" onClick={this.scrollToPhotoSection}/>
