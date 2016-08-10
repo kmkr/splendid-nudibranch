@@ -21,7 +21,7 @@ DSC00571.jpg
 Title			Nudibranch
 Location		Dumaguete, The Philippines
 Tags			nudibranch 2013
-Latin			chromodoris annae
+Latin			Chromodoris annae
 Description
 
 
@@ -31,7 +31,7 @@ Title			White Eyed Moray
 Location		Dumaguete, The Philippines
 Tags			2013 eel
 Latin			Gymnothorax thyrsoideus
-Description		Moray eels are shy creatures mostly seen peeking out from rocks and coral formations, only their heads exposed. Most of the long slender body is hidden inside crevices, where it retreats completely if you approach too fast or come too near.
+Description		Moray eels are shy creatures mostly seen peeking out from rocks and coral formations with only their heads exposed. Most of the long slender body is hidden inside crevices, where it retreats completely if you approach too fast or come too near.
 
 
 DSC00792.jpg
@@ -273,7 +273,7 @@ Title			Leopard Anemone Shrimp
 Location		Anilao, The Philippines
 Latin			Izucaris masudai
 Tags			shrimp 2014
-Description		The single goal for this dive was to find this rare, beautiful shrimp. Down at 23 meters below surface we knew approximately where to find it, however its small size and camouflaged body made the search quite a challenge.
+Description		The single goal for this dive was to find this rare, beautiful shrimp. We knew approximately where to find it, however its small size and camouflaged body made the search quite a challenge.
 
 
 DSC04078.jpg
@@ -327,7 +327,7 @@ Title			Magnificent Sea Anemone
 Location		Anilao, The Philippines
 Tags			2014 anemone
 Latin			Heteractis magnifica with Amphiprion perideraion
-Description		The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the old dull name. The anemone can entirely retract it's tentacles. It's column, here in purple color, will then be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself. Did I mention it's an awesome animal?
+Description		The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the old dull name. The anemone can entirely retract it's tentacles. It's column, here in purple color, will then be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself.
 
 
 DSC04665.jpg
@@ -344,7 +344,7 @@ DSC04681.jpg
 Title			Nudibranch
 Location		Anilao, The Philippines
 Tags			2014 nudibranch
-Latin
+Latin			Chromodoris joshi
 Description
 
 
@@ -354,7 +354,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Janolus sp.
 Tags			nudibranch 2014
-Description		As larva nudibranchs have shells, but shed it when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
+Description		As larva nudibranchs have shells, but it's shed when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
 
 
 DSC04884.jpg
@@ -380,7 +380,7 @@ DSC05075.jpg
 Title			Nudibranch
 Location		Anilao, The Philippines
 Tags			2014
-Latin
+Latin			Hypselodoris emma
 Description
 
 
@@ -390,7 +390,7 @@ Title			The Red Sea
 Location		Egypt
 Tags			2014
 Latin
-Description		Surrounded by deserts and with few connected rivers, the Red Sea's visibility is very pleasant.
+Description		Surrounded by deserts and with few connected rivers carrying runoff, the Red Sea's visibility is very pleasant.
 
 
 DSC06145.jpg
@@ -435,7 +435,7 @@ Title			Tassled Scorpionfish
 Location		Egypt
 Tags			2014 scorpionfish
 Latin			Scorpaenopsis oxycephala
-Description		An ambush predator that excels at blending in with the surroundings.
+Description		An ambush predator that excels at blending in with the surroundings. Highly venomous.
 
 DSC06604.jpg
 
@@ -443,7 +443,7 @@ Title			The Dugongs of Marsha Shouna
 Location		Marsa Alam, Egypt
 Tags			2014 dugong
 Latin			Dugong dugon
-Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. The dugong is herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are depleted entirely due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam have now only seven dugongs left.
+Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. The dugong is herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are depleted entirely due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam had only seven dugongs left at the time of writing.
 
 
 DSC06687.jpg
@@ -452,7 +452,7 @@ Title			Spinner Dolphin
 Location		Egypt
 Tags			2014 dolphin
 Latin			Stenella longirostris
-Description		Those times I'm lucky enough to hear whistles and clicking sounds I instantly change focus from finding small stuff, snails or whatever I'm up to at the moment, and instead scout for what could be dolphins. They are fast swimmers, so if they are around, they are not necessarily for long. Most often I will not find them, but sometimes I do, and some of these encounters I believe are the dolphins finding me more than the other way around. They are curious, playful and intelligent creatures.
+Description		Those times I'm lucky enough to hear whistles and clicking sounds I instantly change focus from finding small stuff, snails or whatever I'm up to at the moment, and instead scout for what could be dolphins. They are fast swimmers, so if they are around, they are not necessarily for long. Most often I will not find them, but sometimes I do, and some of these encounters I believe are the dolphins approaching me more than the other way around. They are curious, playful and intelligent creatures.
 
 
 DSC06693.jpg
@@ -492,7 +492,7 @@ Title			Moon Jellyfish
 Location		Egypt
 Tags			2015
 Latin			Aurelia aurita
-Description		The short tentacles around the bell of the moon jelly are poisonous to small marine animals, which the jelly sometimes eat. A complete meal is ensured by using a layer of mucus covering the creature to catch plankton.
+Description		The short tentacles around the bell of the moon jelly are poisonous to small marine animals that the jelly sometimes eat. A complete meal is ensured by using a layer of mucus covering the creature to catch plankton.
 
 
 DSC07289.jpg
@@ -617,7 +617,7 @@ Title			Potato Cod
 Location		Cod Hole, Great Barrier Reef, Australia
 Tags			2013 cod
 Latin			Epinephelus tukula
-Description		A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once located. They seem to chill out at the same place, getting cleaned by wrasses or to check out visiting divers. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
+Description		A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once located. They seem to chill out at the same place, getting cleaned by wrasses. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
 
 
 Kris Krister 453.jpg
