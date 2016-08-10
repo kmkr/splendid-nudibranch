@@ -22,4 +22,18 @@
     @media screen and (device-aspect-ratio: 40/71) {
         height: 500px;
     }
+
+    /**
+    * iFail 4 portrait
+    */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:portrait) {
+        height: 422px;
+    }
+
+    /**
+    * iFail 4 landscape
+    */
+    @media only screen and (min-device-width: 320px)  and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:landscape) {
+        height: 281px;
+    }
 }
