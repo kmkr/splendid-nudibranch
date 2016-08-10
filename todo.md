@@ -3,6 +3,7 @@ Hilde:
 - Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
 - Interaksjon ved enden av siden når man har et filter aktivt
 - Shareknapp og location
+- Logo fungerer ikke i Edge
 
 KM:
 
