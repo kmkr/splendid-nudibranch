@@ -246,7 +246,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Hypselodoris infucata
 Tags			nudibranch 2014
-Description		Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which many other molluscs use as primary protection.
+Description		Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which most other molluscs use as primary protection.
 
 
 DSC04006.jpg
@@ -327,7 +327,7 @@ Title			Magnificent Sea Anemone
 Location		Anilao, The Philippines
 Tags			2014 anemone
 Latin			Heteractis magnifica with Amphiprion perideraion
-Description		The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the old dull name. The anemone can entirely retract it's tentacles. It's column, here in purple color, will then be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself.
+Description		The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the first dull name. The anemone can entirely retract it's tentacles. It's column, here in purple color, will then be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself.
 
 
 DSC04665.jpg
@@ -354,7 +354,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Janolus sp.
 Tags			nudibranch 2014
-Description		As larva nudibranchs have shells, but it's shed when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
+Description		Nudibranchs have shells as larva, but shed them when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
 
 
 DSC04884.jpg
