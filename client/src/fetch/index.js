@@ -1,3 +1,5 @@
+import 'whatwg-fetch';
+
 const interceptors = [];
 
 function fetchWithHeaders(url, additionalRequestOptions = {}) {

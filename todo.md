@@ -7,8 +7,6 @@ Hilde:
 KM:
 
 - Vurder css for max height med calc i stedet for JS.
-- Logo fungerer ikke i Edge
-- SCRIPT5009: 'fetch' is undefined - fiks polyfill
 
 - Blank ut foto når den er utenfor viewport.
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.
