@@ -336,7 +336,7 @@ Title			Devil Scorpionfish
 Location		Anilao, The Philippines
 Tags			2014 scorpionfish
 Latin			Scorpaenopsis diabolus
-Description
+Description		Normally, pectoral fins are used to swim but this fish has evolved two small stilts that allow it to walk and dig the seabed instead. While this is by no means unique for an ocean species, it's still fascinating to observe this type of irregularity. Perhaps, a long time ago another species did just the same, and that is why there are creatures (such as you and me) walking on land today.
 
 
 DSC04681.jpg
