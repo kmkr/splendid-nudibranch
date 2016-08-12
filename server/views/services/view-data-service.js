@@ -21,6 +21,10 @@ function onlyUnique(value, index, ary) {
     return ary.indexOf(value) === index;
 }
 
+function reduceFlatten(a, b) {
+    return a.concat(b);
+}
+
 export function getKeywords() {
     return getPhotoData()
         .then(({photos}) => (
@@ -30,10 +34,12 @@ export function getKeywords() {
                 'underwater',
                 'photography',
                 ...photos
-                    .map(p => p.location),
+                    // Location tags are separated by commas - I want all such word groups to be candidates for unique filter so that "The Philippines", "Pandan Island, The Philippines" and "Apo Reef, The Philippines" ends up as three separate keywords "Pandan Island", "Apo Reef" and "The Philippines"
+                    .map(p => (p.location || '').split(', '))
+                    .reduce(reduceFlatten, []),
                 ...photos
                     .map(p => p.tags)
-                    .reduce((a, b) => a.concat(b), [])
+                    .reduce(reduceFlatten, [])
                     .filter(noStopWords)
             ]
             .filter(onlyUnique)
