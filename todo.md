@@ -6,6 +6,7 @@ Hilde:
 
 KM:
 
+- Mindre arrow på mobil
 - Vurder css for max height med calc i stedet for JS.
 
 - Blank ut foto når den er utenfor viewport.
