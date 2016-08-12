@@ -40,7 +40,7 @@ Title			Fuchsia Flatworm
 Location		Dumaguete, The Philippines
 Latin			Pseudoceros ferrugineus
 Tags			2013 worm
-Description		Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, that they generally move faster and are (duh) flat.
+Description		Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, that they generally move faster and are flat - obviously.
 
 
 DSC00974.jpg
