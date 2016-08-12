@@ -33,6 +33,12 @@ export function getKeywords() {
                 'scuba',
                 'underwater',
                 'photography',
+                'fish',
+                'nudibranch',
+                'crab',
+                'shrimp',
+                'shark',
+                'macro',
                 ...photos
                     // Location tags are separated by commas - I want all such word groups to be candidates for unique filter so that "The Philippines", "Pandan Island, The Philippines" and "Apo Reef, The Philippines" ends up as three separate keywords "Pandan Island", "Apo Reef" and "The Philippines"
                     .map(p => (p.location || '').split(', '))
