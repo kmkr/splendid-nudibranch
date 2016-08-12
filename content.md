@@ -525,7 +525,7 @@ Description		Water temperatures in the Red Sea peaks at 35 degrees celcius. Most
 DSC07567.jpg
 
 Title			Blackfin Barracuda
-Location		egypt
+Location		Egypt
 Tags			2015
 Latin			Sphyraena genie
 Description		Barracudas aggregate in schools as protection against larger predators.
@@ -543,7 +543,7 @@ Description
 DSC07724.jpg
 
 Title			Bluecheek Butterflyfish
-Location		egypt
+Location		Egypt
 Tags			2015
 Latin			Chaetodon semilarvatus
 Description
