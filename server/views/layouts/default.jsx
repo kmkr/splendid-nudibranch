@@ -1,5 +1,6 @@
 import React from 'react';
 import Style from './style';
+import License from './license';
 import ogTags from './og-tags';
 
 import {description} from '../../../common/constants';
@@ -42,6 +43,7 @@ const Layout = ({children, data, keywords, selectedPhotoKey}) => (
             <Style />
         </head>
         <body>
+            <License />
             {children}
         </body>
     </html>
