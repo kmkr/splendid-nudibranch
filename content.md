@@ -470,7 +470,7 @@ Title			Green Turtle
 Location		Marsa Alam, Egypt
 Tags			2014 turtle
 Latin			Chelonia mydas
-Description		It's believed that green turtles need between 20 - 50 years to reach sexual maturity, and a turtle's life is not easy so very few reach adulthood. Once, the estimate was one percent. It dropped to one thousandth. Now I've heard speculations of much less. Previously suffering from unrestricted exploitation by humans, turtles are now having more like a global protection status. However, their slow reproductive rate, combined with increased development in coastal areas make the species very vulnerable. Many turtles are also lost due to accidental catch by fishermen.
+Description		It's believed that green turtles need between 20 - 50 years to reach sexual maturity, and a turtle's life is not easy so very few reach adulthood. Once, the estimate was one percent. It dropped to one thousandth. Previously suffering from unrestricted exploitation by humans, turtles are now having more like a global protection status. However, their slow reproductive rate, combined with increased development in coastal areas make the species very vulnerable. Many turtles are also lost due to accidental catch by fishermen.
 
 
 DSC07195.jpg
@@ -492,7 +492,7 @@ Title			Moon Jellyfish
 Location		Egypt
 Tags			2015
 Latin			Aurelia aurita
-Description		The short tentacles around the bell of the moon jelly are poisonous to small marine animals that the jelly sometimes eat. A complete meal is ensured by using a layer of mucus covering the creature to catch plankton.
+Description		The short tentacles around the bell of the moon jelly are poisonous to small marine animals, which the jelly sometimes eat. A complete meal is ensured by using a layer of mucus covering the creature to catch plankton.
 
 
 DSC07289.jpg
@@ -626,4 +626,4 @@ Title			Potato Cod
 Location		Cod Hole, Great Barrier Reef, Australia
 Tags			2013 cod
 Latin			Epinephelus tukula
-Description		This fish is bold - can come really close and will sometimes tamper with your dive gear. Tukula means "man-eater", but he's just curious and want to play.
+Description		This fish is bold. It may come really close and will sometimes tamper with your dive gear. It's latin name tukula means "man-eater" due to its large size, but it means no harm - just a curious and social fish.
