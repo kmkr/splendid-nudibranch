@@ -572,7 +572,7 @@ Title			Juvenile Blacktip Reef Shark
 Location		Perhentian Besar, Malaysia
 Tags			2015 shark
 Latin			Carcharhinus melanopterus
-Description		These, and many more, juvenile sharks were eager to becoming grown-up-sharks and tried to hunt small fish all day long. They didn't seem to bother me too much and allowed me to swim with them while they were hunting.
+Description		These, and many more, juvenile sharks were eager to become grown-up-sharks and tried to hunt small fish all day long. They didn't seem to bother me too much and allowed me to swim with them while they were hunting.
 
 
 DSC09129.jpg
@@ -581,7 +581,7 @@ Title			Juvenile Blacktip Reef Shark
 Location		Perhentian Besar, Malaysia
 Tags			2015
 Latin			Carcharhinus melanopterus
-Description		Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds outside a small beach on Perhentians to practice the skill of hunting.
+Description		Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds outside a small beach on the island Perhentian Besar to practice the skill of hunting.
 
 
 DSC09919.jpg
