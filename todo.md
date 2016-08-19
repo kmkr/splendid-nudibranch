@@ -1,14 +1,13 @@
 Hilde:
 
-- Eksporter en PNG av logo med svart bakgrunn til og-tag (minst 1200 x 630)
 - Interaksjon ved enden av siden når man har et filter aktivt
 - Shareknapp og location
-- Grafikk bunn av siden på mobil
 
 KM:
 
 - Mindre arrow på mobil
 - Vurder css for max height med calc i stedet for JS.
+- Grafikk bunn av siden på mobil
 
 - Blank ut foto når den er utenfor viewport.
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.

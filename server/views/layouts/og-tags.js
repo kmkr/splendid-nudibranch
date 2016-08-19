@@ -23,7 +23,7 @@ const OgTags = (data, selectedPhotoKey) => {
         'og:site_name': 'The Splendid Nudibranch',
         'og:url': 'http://www.thesplendidnudibranch.pink',
         'og:description': description,
-        'og:image': '' // todo: eksporter en PNG av logo med svart bakgrunn
+        'og:image': 'http://www.thesplendidnudibranch.pink/static/images/logo.png'
     };
 };
 
