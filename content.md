@@ -359,11 +359,11 @@ Description		Nudibranchs have shells as larva, but shed them when they mature. S
 
 DSC04884.jpg
 
-Title
+Title			White-spotted Hermit Crab
 Location		Anilao, The Philippines
 Tags			2014
-Latin
-Description
+Latin			Dardanus megistos
+Description		A hermit crab's home is the shell of a gastropod, usually snails. As they grow, larger shells are required. However, suitable intact shells are of limited resource and competition for the best shell among hermit crabs is common. If a crab looking for new vacancy finds a shell that is too large, it will stay in its current shell and wait by the vacant shell for other hermit crabs to arrive. As other crabs arrive and check the shell, they will do the same and when finally one finds the vacant shell suitable, each crab exchange shells in sequence.
 
 
 DSC04913.jpg
