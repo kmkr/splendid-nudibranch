@@ -13,14 +13,14 @@ class SmallCollage extends Component {
 
     render() {
         return (
-            <div id="small-collage">
+            <div id="small-collage" onClick={this.scrollToPhotoSection}>
                 <div>
                     <img
                         id="logo"
                         src="/static/images/logo.svg"/>
                     <img className="title-image" src="/static/images/title.svg"/>
                 </div>
-                <div className="arrow bounce" onClick={this.scrollToPhotoSection}/>
+                <div className="arrow bounce"/>
             </div>
         );
     }
