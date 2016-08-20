@@ -15,6 +15,9 @@ const DeepWaterSection = ({photos}) => {
                 <div>
                     <img className="barracuda" src="/static/images/barracuda.svg" />
                     <img className="anemone" src="/static/images/anemone.svg" />
+                    <div className="jellyfish-wrapper">
+                        <img className="jellyfish" src="/static/images/jellyfish.svg" />
+                    </div>
 
                     <div className="drop-your-weights-wrapper">
                             <SmoothScrollLink

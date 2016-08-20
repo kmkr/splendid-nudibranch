@@ -5,9 +5,7 @@ Hilde:
 
 KM:
 
-- Mindre arrow på mobil
 - Vurder css for max height med calc i stedet for JS.
-- Grafikk bunn av siden på mobil
 
 - Blank ut foto når den er utenfor viewport.
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.

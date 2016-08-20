@@ -69,9 +69,20 @@
         clear: both;
 
         @include media-breakpoint-down(sm) {
-            width: 100px;
-            margin-bottom: -15px;
-            margin-right: 25px;
+            display: none;
+        }
+    }
+
+    .jellyfish-wrapper {
+        text-align: center;
+    }
+
+    img.jellyfish {
+        width: 200px;
+        margin-bottom: 100px;
+
+        @include media-breakpoint-up(md) {
+            display: none;
         }
     }
 }
