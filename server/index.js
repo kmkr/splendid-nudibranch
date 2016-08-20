@@ -27,7 +27,7 @@ app.use(logger('combined'));
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine({
-    transformViews: true
+    transformViews: false
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.text());

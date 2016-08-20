@@ -1,21 +1,21 @@
-//import {convert} from '../../../common/photo-data-conversion';
+import {serverToClient} from '../../../common/photo-data-conversion';
 import {description} from '../../../common/constants';
 
 const OgTags = (data, selectedPhotoKey) => {
     const match = data.photoData.photos.filter(p => p.key === selectedPhotoKey)[0];
 
-    // todo: få denne til å fungere
-    //const selectedPhoto = photoDataConversion(match, data.photoData.base);
-
     if (match) {
-        const selectedPhotoUrl = `${data.photoData.base}/${match.key}/m_${match.name}`;
+        const selectedPhoto = serverToClient(match, data.photoData.base);
+        const selectedPhotoSize = selectedPhoto.sizes.medium;
         return {
             'og:type': 'article',
             'og:site_name': 'The Splendid Nudibranch',
-            'og:title': match.title,
-            'og:url': `http://www.thesplendidnudibranch.pink/photos/${match.key}`,
-            'og:description': match.description,
-            'og:image': selectedPhotoUrl
+            'og:title': selectedPhoto.title,
+            'og:url': `http://www.thesplendidnudibranch.pink/photos/${selectedPhoto.key}`,
+            'og:description': selectedPhoto.description,
+            'og:image': selectedPhotoSize.url,
+            'og:image:width': selectedPhotoSize.width,
+            'og:image:height': selectedPhotoSize.height
         };
     }
 
@@ -23,7 +23,9 @@ const OgTags = (data, selectedPhotoKey) => {
         'og:site_name': 'The Splendid Nudibranch',
         'og:url': 'http://www.thesplendidnudibranch.pink',
         'og:description': description,
-        'og:image': 'http://www.thesplendidnudibranch.pink/static/images/logo.png'
+        'og:image': 'http://www.thesplendidnudibranch.pink/static/images/logo.png',
+        'og:image:width': 1300,
+        'og:image:height': 616
     };
 };
 

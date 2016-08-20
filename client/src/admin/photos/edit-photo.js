@@ -83,7 +83,7 @@ class EditPhoto extends Component {
                     <textarea
                         placeholder="Photo description"
                         value={this.state.description}
-                        onChange={this.attrUpdated.bind(this, 'description')}></textarea>
+                        onChange={this.attrUpdated.bind(this, 'description')}/>
 
                     <div className="tags">
                         <AddTag
