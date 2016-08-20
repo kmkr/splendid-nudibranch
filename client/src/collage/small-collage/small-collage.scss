@@ -18,6 +18,10 @@
                 margin-top: 50px;
             }
         }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 65px;
+        }
     }
 
     > div {
@@ -40,6 +44,7 @@
 
     #logo {
         width: 100%;
+        margin-top: -10px;
 
         @media (orientation:landscape) {
             max-height: 50%; // Avoid massive logo on landscape tablets
