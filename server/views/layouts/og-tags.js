@@ -20,6 +20,7 @@ const OgTags = (data, selectedPhotoKey) => {
     }
 
     return {
+        'og:title': 'The Splendid Nudibranch',
         'og:site_name': 'The Splendid Nudibranch',
         'og:url': 'http://www.thesplendidnudibranch.pink',
         'og:description': description,
