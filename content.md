@@ -443,7 +443,7 @@ Title			The Dugongs of Marsha Shouna
 Location		Marsa Alam, Egypt
 Tags			2014 dugong
 Latin			Dugong dugon
-Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. It's herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are depleted entirely due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam had only seven dugongs left at the time of writing.
+Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. It's herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are entirely depleted due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam had only seven dugongs left at the time of writing.
 
 
 DSC06687.jpg
