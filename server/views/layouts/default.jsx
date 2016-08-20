@@ -13,9 +13,7 @@ const Layout = ({children, data, keywords, selectedPhotoKey}) => (
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             {keywords && <meta name="keywords" content={keywords} />}
-            <meta name="description" content={description} />
-            <meta name="author" content="Kris-Mikael Krister" />
-            <meta name="illustrator" content="Hilde D. Johannessen" />
+            <meta name="description" content={`Author: Kris-Mikael Krister, Illustrator: Hilde. D. Johannessen, ${description}`} />
             {entries(ogTags(data, selectedPhotoKey)).map(entry => (
                 <meta
                     key={entry[0]}
