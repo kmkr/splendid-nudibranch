@@ -627,3 +627,46 @@ Location		Cod Hole, Great Barrier Reef, Australia
 Tags			2013 cod
 Latin			Epinephelus tukula
 Description		This fish is bold. It may come really close and will sometimes tamper with your dive gear. It's latin name tukula means "man-eater" due to its large size, but it means no harm - just a curious and social fish.
+
+
+
+DSC00157.jpg
+
+Title			Great Spider Crab
+Location		Gulen, Norway
+Tags			2016 crab
+Latin			Hyas araneus
+
+
+DSC00195.jpg
+
+Title			Nudibranch
+Location		Gulen, Norway
+Tags			2016 nudibranch
+
+
+DSC00208.jpg
+
+Title			Starfish
+Location		Gulen, Norway
+Tags			2016 starfish
+
+
+
+DSC00320.jpg
+
+Title			Nudibranch
+Location		Gulen, Norway
+Tags			2016 nudibranch
+Latin			Limacia clavigera
+
+
+
+DSC00366.jpg
+
+Title			Lumpsucker
+Location		Gulen, Norway
+Tags			2016
+Latin			Cyclopterus lumpus
+
+
