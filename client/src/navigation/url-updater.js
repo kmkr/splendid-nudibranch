@@ -49,7 +49,7 @@ class UrlUpdater extends Component {
 
         const SLACK_FACTOR = 1.8;
         const matching = (anchors
-            .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.outerHeight / SLACK_FACTOR)))
+            .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.innerHeight / SLACK_FACTOR)))
             .reverse())[0];
 
         if (matching) {

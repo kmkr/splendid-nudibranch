@@ -13,12 +13,11 @@ function doNotTrack() {
 }
 
 function getData(content = {}) {
-    const {innerHeight, outerHeight} = window;
+    const {innerHeight} = window;
 
     return {
         id: uid,
         innerHeight,
-        outerHeight,
         ...content
     };
 }
