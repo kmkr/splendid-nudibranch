@@ -6,8 +6,6 @@ import Anchor from '../anchor';
 
 import './photo.scss';
 
-const GIVE_ME_SOME_SLACK_FACTOR = 0.85;
-
 function buildSrcSet(sizes) {
     return Object.keys(sizes)
         .reverse()
@@ -31,7 +29,7 @@ class Photo extends Component {
     }
 
     render() {
-        const {availHeight, onPhotoLoad, photo} = this.props;
+        const {onPhotoLoad, photo} = this.props;
         const srcSet = buildSrcSet(photo.sizes);
 
         return (
@@ -46,7 +44,6 @@ class Photo extends Component {
                                     this.setState({showComponent: true});
                                     onPhotoLoad(photo);
                                 }}
-                                style={{maxHeight: `${availHeight * GIVE_ME_SOME_SLACK_FACTOR}px`}}
                                 src={photo.sizes.large.url}
                                 srcSet={srcSet}
                                 sizes="(min-width: 1360px) 60vw"/>
@@ -66,7 +63,6 @@ class Photo extends Component {
 }
 
 Photo.propTypes = {
-    availHeight: PropTypes.number.isRequired,
     photo: PropTypes.shape({
         description: PropTypes.string,
         mode: PropTypes.oneOf(['portrait', 'landscape']).isRequired,

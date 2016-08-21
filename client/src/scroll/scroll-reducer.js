@@ -2,9 +2,7 @@ import scrollReducer from './scroll-action-types';
 
 const initialState = {
     pageYOffset: 0,
-    innerWidth: 0,
-    innerHeight: 0,
-    availHeight: 0
+    outerHeight: 0
 };
 
 export default (state = initialState, action) => {

@@ -42,7 +42,7 @@ class ListPhotos extends Component {
     }
 
     render() {
-        const {availHeight, photos} = this.props;
+        const {photos} = this.props;
 
         return (
             <div>
@@ -51,7 +51,6 @@ class ListPhotos extends Component {
                         <Photo
                             key={photo.key}
                             onPhotoLoad={this.photoLoaded}
-                            availHeight={availHeight}
                             photo={photo} />
                         )
                 ))}
@@ -63,7 +62,6 @@ class ListPhotos extends Component {
 ListPhotos.propTypes = {
     onPhotoLoad: PropTypes.func.isRequired,
     photos: PropTypes.array.isRequired,
-    availHeight: PropTypes.number.isRequired,
     visibleEnd: PropTypes.number
 };
 

@@ -11,7 +11,7 @@
 
 .photo-and-text-wrapper {
     @include media-breakpoint-up(xl) {
-        @include maxheight();
+        @include height();
     }
 
     @include media-breakpoint-up(lg) {
@@ -35,6 +35,14 @@
         .text-wrapper {
             height: 0;
             margin: 0;
+        }
+    }
+
+    .photo {
+        @include media-breakpoint-up(xl) {
+            img {
+                @include max-height(85);
+            }
         }
     }
 

@@ -5,6 +5,10 @@ import './small-collage.scss';
 import './arrow.scss';
 
 class SmallCollage extends Component {
+    shouldComponentUpdate() {
+        return false;
+    }
+
     scrollToPhotoSection() {
         smoothScroll.animateScroll('#photo-section', null, {
             updateURL: false

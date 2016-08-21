@@ -5,7 +5,7 @@ Hilde:
 
 KM:
 
-- Vurder css for max height med calc i stedet for JS.
+- Fjern rester av selectedTags
 
 - Blank ut foto når den er utenfor viewport.
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.

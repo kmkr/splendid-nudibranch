@@ -8,7 +8,7 @@ import {selectTag, unselectTag} from '../selected-tags/selected-tags-actions';
 import Search from '../search';
 import './photo-section.scss';
 
-const margin = 100;
+const MARGIN = 100;
 
 class PhotoSection extends Component {
 
@@ -26,7 +26,7 @@ class PhotoSection extends Component {
     }
 
     componentWillReceiveProps({scroll}) {
-        const fixed = scroll.pageYOffset > (scroll.availHeight + margin);
+        const fixed = scroll.pageYOffset > (scroll.outerHeight + MARGIN);
 
         if (fixed !== this.state.fixed) {
             this.setState({fixed});
@@ -65,12 +65,12 @@ class PhotoSection extends Component {
         return (
             <div
                 id="photo-section"
-                style={{marginTop: `${margin}px`}}>
+                style={{marginTop: `${MARGIN}px`}}>
                 {false && <div
                     id="search-wrapper"
                     className={this.state.fixed ? 'fixed' : ''}
                     style={{
-                        top: this.state.fixed ? 0 : `${scroll.availHeight + margin}px`
+                        top: this.state.fixed ? 0 : `${scroll.outerHeight + MARGIN}px`
                     }}>
                     <Search
                         selectedTags={selectedTags}
