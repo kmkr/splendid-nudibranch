@@ -632,18 +632,21 @@ Description		This fish is bold. It may come really close and will sometimes tamp
 
 DSC00157.jpg
 
-Title			Great Spider Crab
+Title			Toad Crab
 Location		Gulen, Norway
 Tags			2016 crab
-Latin			Hyas araneus
+Latin			Hyas coarctatus
+Description		This decorator crab collects sea weed, sponges, algae and other particles in the water to improve its camouflage.
 
 
 
 DSC00208.jpg
 
-Title			Starfish
+Title			Common Sea Star
 Location		Gulen, Norway
-Tags			2016 starfish
+Tags			2016 seastar
+Description		In addition to have the ability to regenerate limbs, most sea stars are able to eat outside of their bodies by moving its stomach inside the prey to ingest it.
+
 
 
 
@@ -662,5 +665,5 @@ Title			Lumpsucker
 Location		Gulen, Norway
 Tags			2016
 Latin			Cyclopterus lumpus
-
+Description		Instead of having the normal type of pelvic fins (below), this fish has evolved disc-like fins and use them to adhere to the substrate.
 
