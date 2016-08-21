@@ -13,7 +13,7 @@ export function updateSize() {
     return {
         type: actionTypes.UPDATE_SIZE,
         data: {
-            outerHeight: window.outerHeight
+            outerHeight: window.outerHeight || window.innerHeight // iOS sets outerHeight to 0 on mobile
         }
     };
 }
