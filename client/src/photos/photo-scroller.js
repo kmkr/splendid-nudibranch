@@ -18,7 +18,7 @@ class PhotoScroller extends Component {
     componentWillReceiveProps(props) {
         const state = {};
         const photoListWrapper = this.refs['photo-list-wrapper'];
-        const {pageYOffset} = props.scroll;
+        const {pageYOffset} = props;
         const SOME_BUFFER = AVAIL_HEIGHT * 2;
         if ((pageYOffset + AVAIL_HEIGHT + SOME_BUFFER) > photoListWrapper.offsetTop) {
             const visibleEnd = Math.min(
@@ -54,7 +54,7 @@ class PhotoScroller extends Component {
 PhotoScroller.propTypes = {
     onPhotoLoad: PropTypes.func.isRequired,
     photos: PropTypes.array.isRequired,
-    scroll: PropTypes.object.isRequired
+    pageYOffset: PropTypes.number.isRequired
 };
 
 export default PhotoScroller;
