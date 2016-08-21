@@ -638,12 +638,6 @@ Tags			2016 crab
 Latin			Hyas araneus
 
 
-DSC00195.jpg
-
-Title			Nudibranch
-Location		Gulen, Norway
-Tags			2016 nudibranch
-
 
 DSC00208.jpg
 
