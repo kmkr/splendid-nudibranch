@@ -25,13 +25,9 @@ export function map(content, photos) {
     while (lines.length) {
         const line = lines.shift().trim();
 
-        if (line.toLowerCase().match(allowedExtensions) || lines.length === 0) {
+        if (line.toLowerCase().match(allowedExtensions)) {
             if (hasChanges(currentPhoto, photos)) {
                 results.push(currentPhoto);
-            }
-
-            if (lines.length === 0) {
-                continue;
             }
 
             currentPhoto = {};
@@ -57,6 +53,10 @@ export function map(content, photos) {
                 lineVal = split[split.length - 1];
             }
             currentPhoto[lineKey] = processor(lineVal);
+
+            if (lines.length === 0 && hasChanges(currentPhoto, photos)) {
+                results.push(currentPhoto);
+            }
             continue;
         }
 
