@@ -642,9 +642,10 @@ Description		This decorator crab collects sea weed, sponges, algae and other par
 
 DSC00208.jpg
 
-Title			Common Sea Star
+Title			Common Starfish
 Location		Gulen, Norway
-Tags			2016 seastar
+Tags			2016 starfish
+Latin			Asterias rubens
 Description		In addition to have the ability to regenerate limbs, most sea stars are able to eat outside of their bodies by moving its stomach inside the prey to ingest it.
 
 
