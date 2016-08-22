@@ -31,7 +31,7 @@ Title			White Eyed Moray
 Location		Dumaguete, The Philippines
 Tags			2013 eel
 Latin			Gymnothorax thyrsoideus
-Description		Moray eels are shy creatures mostly seen peeking out from rocks and coral formations with only their heads exposed. Most of the long slender body is hidden inside crevices, where it retreats completely if you approach too fast or come too near.
+Description		Moray eels are shy creatures usually seen peeking out from rocks and coral formations with only their heads exposed. Most of the long slender body is hidden inside crevices, where it retreats completely if you approach too fast or come too near.
 
 
 DSC00792.jpg
@@ -354,7 +354,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Janolus sp.
 Tags			nudibranch 2014
-Description		Nudibranchs have shells as larva, but shed them when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other teqniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
+Description		Nudibranchs have shells as larva, but shed them when they mature. Shells are heavy and make moving around difficult. Most molluscs use the shell as a primary defence, but nudibranchs have developed other techniques for protection, such as toxic secretion. A few make their own poisons, but most utilize the toxic metabolites from what they eat.
 
 
 DSC04884.jpg
