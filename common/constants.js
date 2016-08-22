@@ -26,4 +26,4 @@ export const resizeTo = [
     }
 ];
 
-export const description = 'Photos of sea critters, slender sharks, beautiful shrimps, lots of fish and splendid nudibranchs';
+export const description = 'Photos of sea critters, slender sharks, beautiful shrimps, lots of fish and splendid nudibranchs.';
