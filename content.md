@@ -626,7 +626,7 @@ Title			Potato Cod
 Location		Cod Hole, Great Barrier Reef, Australia
 Tags			2013 cod
 Latin			Epinephelus tukula
-Description		This fish is bold. It may come really close and will sometimes tamper with your dive gear. It's latin name tukula means "man-eater" due to its large size, but it means no harm - just a curious and social fish.
+Description		This fish is bold. It may come really close and will sometimes tamper with your dive gear. It's latin name tukula means "man-eater" due to its large size, but it means no harm - it's just a curious and social fish.
 
 
 
