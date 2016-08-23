@@ -5,6 +5,8 @@ Hilde:
 
 KM:
 
+- Fiks wheel på iOS
+
 - Blank ut foto når den er utenfor viewport.
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.
 -- Implementer `componentDidMount` i `blankable-anchored-photo.js` som registrerer egen høyde på div OG egen pageYOffset. `blankable-anchored-photo` tar over ansvaret til `Anchor`.
