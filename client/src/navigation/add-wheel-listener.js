@@ -1,3 +1,5 @@
+// Taken from https://developer.mozilla.org/en-US/docs/Web/Events/wheel
+
 /* eslint-disable */
 
 // creates a global "addWheelListener" method
