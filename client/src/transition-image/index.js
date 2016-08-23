@@ -13,6 +13,19 @@ class TransitionImage extends Component {
         return shallowCompare(this, nextProps, nextState);
     }
 
+    onLoad() {
+        if (this.state.loaded) {
+            // Some browsers call onLoad multiple times, perhaps due to srcSet
+            return;
+        }
+
+        this.setState({
+            loaded: true
+        });
+
+        this.props.onLoad();
+    }
+
     render() {
         const className = this.props.className ? `${this.props.className} transition-image` : 'transition-image';
         return (
@@ -23,10 +36,7 @@ class TransitionImage extends Component {
                     ...this.props.style,
                     opacity: this.state.loaded ? 1 : 0
                 }}
-                onLoad={() => {
-                    this.setState({loaded: true});
-                    this.props.onLoad();
-                }} />
+                onLoad={this.onLoad.bind(this)} />
         );
     }
 }
