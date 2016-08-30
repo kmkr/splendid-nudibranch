@@ -21,7 +21,7 @@ const Layout = ({children, data, keywords, selectedPhotoKey}) => (
                     content={entry[1]} />
             ))}
             <link
-                href="https://fonts.googleapis.com/css?family=Raleway:400,700|Quicksand"
+                href="https://fonts.googleapis.com/css?family=Raleway:400,700"
                 rel="stylesheet"
                 type="text/css" />
 
