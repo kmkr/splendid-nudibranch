@@ -16,6 +16,7 @@ const Index = ({data, keywords}) => (
             <script
                 type="text/javascript"
                 src="/static/scripts/admin-bundle.js"
+                async
                 charSet="utf-8" />
         </div>
     </Layout>

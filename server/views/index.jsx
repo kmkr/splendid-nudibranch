@@ -19,6 +19,7 @@ const Index = ({data, keywords, selectedPhotoKey}) => (
             <script
                 type="text/javascript"
                 src="/static/scripts/bundle.js"
+                async
                 charSet="utf-8" />
         </div>
     </Layout>
