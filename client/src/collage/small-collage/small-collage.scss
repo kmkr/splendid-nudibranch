@@ -3,7 +3,8 @@
 @import "../../max-height";
 
 #small-collage {
-    @include height(); // todo: iPad må ha litt justering...
+    @include height();
+    cursor: pointer;
     background-color: #dea392;
     display: flex;
     flex-wrap: wrap;
