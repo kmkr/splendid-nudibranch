@@ -5,7 +5,7 @@ Hilde:
 
 KM:
 
-- Fiks wheel på iOS
+- Inline font som b64
 
 - Blank ut foto når den er utenfor viewport.
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.
