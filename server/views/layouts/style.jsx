@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Style = () => (
-    <style dangerouslySetInnerHTML={{__html: `
+const styles = `
 .spinner {
     width: 70px;
     height: 70px;
@@ -52,8 +51,10 @@ const Style = () => (
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-}
-    `}} />
+}`.replace(/\s{2,}/g, '').replace(/\n/g, '');
+
+const Style = () => (
+    <style dangerouslySetInnerHTML={{__html: styles}} />
 );
 
 export default Style;
