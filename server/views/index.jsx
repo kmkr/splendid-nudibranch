@@ -8,7 +8,9 @@ const Index = ({data, keywords, selectedPhotoKey}) => (
         selectedPhotoKey={selectedPhotoKey}>
         <div>
             <div id="app">
-                <div className="spinner" />
+                <div className="loading-placeholder">
+                    <div className="spinner" />
+                </div>
             </div>
             <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
                 window.sn = {
