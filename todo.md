@@ -5,7 +5,8 @@ Hilde:
 
 KM:
 
-- Inline font som b64
+- Forbedre første skjerm med loading. Bruk pink farge og sentrer loadingikon
+- Vurder inline font som b64, bruk fontsquirrel til å hente raleway
 
 - Blank ut foto når den er utenfor viewport.
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.
