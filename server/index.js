@@ -22,6 +22,7 @@ function verifyEnv() {
 verifyEnv();
 
 const app = express();
+app.disable('x-powered-by');
 app.use(compression());
 app.use(logger('combined'));
 app.set('views', `${__dirname}/views`);
