@@ -59,7 +59,7 @@
     "redux-thunk": "^2.1.0",
     "sass-loader": "^4.0.0",
     "sitemap": "^1.8.1",
-    "smooth-scroll": "github:cferdinandi/smooth-scroll",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll#v9.4.3",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "whatwg-fetch": "^1.0.0",
