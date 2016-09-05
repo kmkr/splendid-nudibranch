@@ -1,5 +1,4 @@
-import React, {Component, PropTypes} from 'react';
-import shallowCompare from 'shallow-compare-without-functions';
+import React, {PureComponent, PropTypes} from 'react';
 
 import TransitionImage from '../transition-image';
 import Anchor from '../anchor';
@@ -16,20 +15,23 @@ function buildSrcSet(sizes) {
         .join(', ');
 }
 
-class Photo extends Component {
+class Photo extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
             showComponent: false
         };
+        this.onLoad = this.onLoad.bind(this);
     }
 
-    shouldComponentUpdate(nextProps, nextStyle) {
-        return shallowCompare(this, nextProps, nextStyle);
+    onLoad() {
+        const {onPhotoLoad, photo} = this.props;
+        this.setState({showComponent: true});
+        onPhotoLoad(photo);
     }
 
     render() {
-        const {onPhotoLoad, photo} = this.props;
+        const {photo} = this.props;
         const srcSet = buildSrcSet(photo.sizes);
 
         return (
@@ -40,10 +42,7 @@ class Photo extends Component {
                     <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''} ${photo.mode}`}>
                         <div className="photo">
                             <TransitionImage
-                                onLoad={() => {
-                                    this.setState({showComponent: true});
-                                    onPhotoLoad(photo);
-                                }}
+                                onLoad={this.onLoad}
                                 src={photo.sizes.large.url}
                                 srcSet={srcSet}
                                 sizes="(min-width: 1360px) 60vw"/>

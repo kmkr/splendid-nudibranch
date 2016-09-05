@@ -1,12 +1,7 @@
-import React, {Component, PropTypes} from 'react';
+import React, {PureComponent, PropTypes} from 'react';
 import smoothScroll from 'smooth-scroll';
-import shallowCompare from 'shallow-compare-without-functions';
 
-class SmoothScrollLink extends Component {
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
+class SmoothScrollLink extends PureComponent {
 
     onClick(e) {
         e.preventDefault();

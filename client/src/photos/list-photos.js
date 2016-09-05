@@ -1,12 +1,11 @@
-import React, {Component, PropTypes} from 'react';
-import shallowCompare from 'shallow-compare-without-functions';
+import React, {PureComponent, PropTypes} from 'react';
 
 import Photo from './photo';
 import {postStats, beaconStats} from '../statistics';
 
 let photosLoaded = 0;
 
-class ListPhotos extends Component {
+class ListPhotos extends PureComponent {
 
     constructor(props) {
         super(props),
@@ -18,10 +17,6 @@ class ListPhotos extends Component {
         window.addEventListener('unload', () => {
             beaconStats({photosLoaded});
         });
-    }
-
-    shouldComponentUpdate(nextProps, nextStyle) {
-        return shallowCompare(this, nextProps, nextStyle);
     }
 
     photoLoaded(photo) {

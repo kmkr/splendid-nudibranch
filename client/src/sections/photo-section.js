@@ -1,12 +1,11 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
-import shallowCompare from 'shallow-compare-without-functions';
 
 import {photoLoaded, fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
 import './photo-section.scss';
 
-class PhotoSection extends Component {
+class PhotoSection extends PureComponent {
 
     constructor(props) {
         super(props);
@@ -16,10 +15,6 @@ class PhotoSection extends Component {
 
     componentWillMount() {
         this.props.dispatch(fetchPhotos());
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
     }
 
     onPhotoLoad({key}) {

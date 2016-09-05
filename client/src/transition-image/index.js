@@ -1,16 +1,11 @@
-import React, {Component, PropTypes} from 'react';
-import shallowCompare from 'shallow-compare-without-functions';
+import React, {PureComponent, PropTypes} from 'react';
 
 import './transition-image.scss';
 
-class TransitionImage extends Component {
-    constructor(props) {
-        super(props);
+class TransitionImage extends PureComponent {
+    constructor() {
+        super();
         this.state = {loaded: false};
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
     }
 
     onLoad() {

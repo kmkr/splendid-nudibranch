@@ -98,7 +98,6 @@ class ScrollOnEventHandler extends Component {
         }
 
         const PAUSE = this.highFrequencyWheel ? HIGH_FREQUENCY_WHEEL_SCROLL_PAUSE : WHEEL_SCROLL_PAUSE;
-        console.log(PAUSE);
 
         if (this.scrolling || sinceLastScroll < PAUSE) {
             return;

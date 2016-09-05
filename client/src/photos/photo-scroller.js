@@ -1,5 +1,4 @@
-import React, {Component, PropTypes} from 'react';
-import shallowCompare from 'shallow-compare-without-functions';
+import React, {PureComponent, PropTypes} from 'react';
 
 import ListPhotos from './list-photos';
 
@@ -7,7 +6,7 @@ const AVAIL_HEIGHT = screen.availHeight;
 const LOAD_AT_START = Math.ceil(AVAIL_HEIGHT / 1000);
 const LOAD_AT_A_TIME = 1;
 
-class PhotoScroller extends Component {
+class PhotoScroller extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -31,10 +30,6 @@ class PhotoScroller extends Component {
             }
         }
 
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
     }
 
     render() {
