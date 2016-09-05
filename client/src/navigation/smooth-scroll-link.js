@@ -18,9 +18,10 @@ class SmoothScrollLink extends PureComponent {
     }
 
     render() {
+        const {easing, selector, speed, onClick, ...props} = this.props; // eslint-disable-line no-unused-vars
         return (
             <a
-                {...this.props}
+                {...props}
                 onClick={this.onClick.bind(this)} />
         );
     }
