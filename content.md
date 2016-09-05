@@ -273,7 +273,7 @@ Title			Leopard Anemone Shrimp
 Location		Anilao, The Philippines
 Latin			Izucaris masudai
 Tags			shrimp 2014
-Description		A rare, beautiful shrimp discribed as recently as 1999. It's name is derived from where it was found - the Izu Penisula in Japan.
+Description		A rare, beautiful shrimp described as recently as 1999. It's name is derived from where it was found - the Izu Peninsula in Japan.
 
 
 DSC04078.jpg
