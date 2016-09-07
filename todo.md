@@ -3,6 +3,7 @@ Hilde:
 - Interaksjon ved enden av siden når man har et filter aktivt
 - Shareknapp og location
 
+
 KM:
 
 - Bruk webp-bilder i tillegg til JPG
