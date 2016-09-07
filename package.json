@@ -14,11 +14,8 @@
     "package:client": "webpack -p --config client/webpack.config.js",
     "package:server": "babel server --out-dir lib/server && babel common --out-dir lib/common && ncp ./server/static/images ./lib/server/static/images && node build-scripts/move-layouts.js",
     "lint": "eslint .",
-    "test": "npm run test:client ; npm run test:server",
-    "test:client": "ava --require babel-register client/**/*_test.js",
-    "test:client:watch": "karma start client/karma.conf.js",
-    "test:server": "mocha -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\"",
-    "test:server:watch": "mocha -w -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\""
+    "test": "ava --require babel-register client/**/*_test.js common/**/*_test.js server/**/*_test.js",
+    "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
@@ -69,6 +66,7 @@
     "ava": "^0.16.0",
     "babel-register": "^6.11.6",
     "phantomjs-prebuilt": "^2.1.12",
+    "proxyquire": "^1.7.10",
     "rimraf": "^2.5.4",
     "sinon": "^1.17.5"
   }

@@ -1,8 +1,7 @@
-import {expect} from 'chai';
+import test from 'ava';
+
 import * as idGenerator from './id-generator';
 
-describe('id-generator', function () {
-    it('should generate id', function () {
-        expect(idGenerator.id()).to.match(/[a-z0-9]{4}\-[a-z0-9]{4}/);
-    });
+test('generation of id', t => {
+    t.regex(idGenerator.id(), /[a-z0-9]{4}\-[a-z0-9]{4}/);
 });
