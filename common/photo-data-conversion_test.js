@@ -1,27 +1,25 @@
-import {expect} from 'chai';
+import test from 'ava';
 import {serverToClient} from './photo-data-conversion';
 
-describe('photo-data-conversion', () => {
-    let base, photoFromServer;
+const base = 'http://my/base';
+const photoFromServer = {
+    key: '1234-5678',
+    name: 'ole-brumm.jpg'
+};
 
-    beforeEach(() => {
-        base = 'http://my/base';
-        photoFromServer = {
-            key: '1234-5678',
-            name: 'ole-brumm.jpg'
-        };
-    });
+test('should convert', t => {
+    const expected = `${base}/${photoFromServer.key}/s_${photoFromServer.name}`;
+    t.equal(serverToClient(photoFromServer, base).small, expected);
+});
 
-    it('should convert', () => {
-        const expected = `${base}/${photoFromServer.key}/s_${photoFromServer.name}`;
-        expect(serverToClient(photoFromServer, base).small).to.equal(expected);
-    });
+test('should contain size keys', t => {
+    const clientVer = serverToClient(photoFromServer, base);
 
-    it('should contain size keys', () => {
-        expect(serverToClient(photoFromServer, base)).to.have.any.keys(['small', 'medium', 'large']);
-    });
+    t.true(typeof clientVer.small !== 'undefined');
+    t.true(typeof clientVer.medium !== 'undefined');
+    t.true(typeof clientVer.large !== 'undefined');
+});
 
-    it('should include key', () => {
-        expect(serverToClient(photoFromServer, base)).to.have.property('key', '1234-5678');
-    });
+test('should include key', t => {
+    t(serverToClient(photoFromServer, base)).to.have.property('key', '1234-5678');
 });

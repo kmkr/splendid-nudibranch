@@ -1,49 +1,42 @@
-import chai, {expect} from 'chai';
+import test from 'ava';
 import snFetch from '../fetch';
 import fetchActionFactory from './fetch-action-factory';
 import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-chai.use(sinonChai);
 
-describe('fetch-action-factory', () => {
-    let actionTypes, dispatchSpy, fetchAction, fetchPromise, getStub;
-    beforeEach(() => {
-        actionTypes = {
-            REQUEST: 'REQUEST',
-            RECEIVE: 'RECEIVE',
-            FETCH_ERROR: 'FETCH_ERROR'
-        };
+const ACTION_TYPES = {
+    REQUEST: 'REQUEST',
+    RECEIVE: 'RECEIVE',
+    FETCH_ERROR: 'FETCH_ERROR'
+};
 
-        fetchPromise = new Promise(() => {});
+test.beforeEach(t => {
+    const fetchPromise = new Promise(() => {});
+    t.context.fetchAction = fetchActionFactory({
+        actionTypes: ACTION_TYPES,
+        url: '/url'
     });
 
-    beforeEach(() => {
-        fetchAction = fetchActionFactory({
-            actionTypes,
-            url: '/url'
-        });
-
-        getStub = sinon.stub(snFetch, 'get');
-        getStub.returns(fetchPromise);
-        dispatchSpy = sinon.spy();
-    });
-
-    afterEach(() => {
-        getStub.restore();
-    });
-
-    it('should delegate to fetch', () => {
-        fetchAction(dispatchSpy);
-
-        expect(getStub).to.have.been.calledWith('/url', {});
-    });
-
-    it('should dispatch request event', () => {
-        fetchAction(dispatchSpy);
-
-        expect(dispatchSpy).to.have.been.calledWith({
-            type: actionTypes.REQUEST
-        });
-    });
-
+    t.context.getStub = sinon.stub(snFetch, 'get');
+    t.context.getStub.returns(fetchPromise);
+    t.context.dispatchSpy = sinon.spy();
 });
+
+test.afterEach(t => {
+    t.context.getStub.restore();
+});
+
+test('delegation to fetch', t => {
+    t.context.fetchAction(t.context.dispatchSpy);
+
+    t.true(t.context.getStub.calledWith('/url', {}));
+});
+
+test('dispatching of request event', t => {
+    t.context.fetchAction(t.context.dispatchSpy);
+
+    t.true(t.context.dispatchSpy.calledWith({
+        type: ACTION_TYPES.REQUEST,
+        data: null
+    }));
+});
+
