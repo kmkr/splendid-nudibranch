@@ -14,11 +14,8 @@
     "package:client": "webpack -p --config client/webpack.config.js",
     "package:server": "babel server --out-dir lib/server && babel common --out-dir lib/common && ncp ./server/static/images ./lib/server/static/images && node build-scripts/move-layouts.js",
     "lint": "eslint .",
-    "test": "npm run test:client ; npm run test:server",
-    "test:client": "karma start client/karma.conf.js --single-run",
-    "test:client:watch": "karma start client/karma.conf.js",
-    "test:server": "mocha -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\"",
-    "test:server:watch": "mocha -w -R spec --compilers js:babel-register --recursive \"server/**/*_test.js\""
+    "test": "ava --require babel-register client/**/*_test.js common/**/*_test.js server/**/*_test.js",
+    "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
@@ -66,25 +63,11 @@
     "why-did-you-update": "0.0.8"
   },
   "devDependencies": {
+    "ava": "^0.16.0",
     "babel-register": "^6.11.6",
-    "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
-    "chai-enzyme": "^0.5.0",
-    "enzyme": "^2.4.1",
-    "imports-loader": "^0.6.5",
-    "json-loader": "^0.5.4",
-    "karma": "^1.2.0",
-    "karma-mocha": "^1.1.1",
-    "karma-mocha-reporter": "^2.1.0",
-    "karma-phantomjs-launcher": "^1.0.1",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^1.8.0",
-    "mocha": "^3.0.2",
     "phantomjs-prebuilt": "^2.1.12",
     "proxyquire": "^1.7.10",
-    "react-addons-test-utils": "^15.3.1",
     "rimraf": "^2.5.4",
-    "sinon": "^1.17.5",
-    "sinon-chai": "^2.8.0"
+    "sinon": "^1.17.5"
   }
 }

@@ -1,14 +1,11 @@
-import {expect} from 'chai';
+import test from 'ava';
 
 import {generateParams} from './s3-wrapper';
 
-describe('s3-wrapper', function () {
-    it('should return defaults', function () {
-        expect(generateParams()).to.have.property('Bucket');
-    });
+test('return defaults', t => {
+    t.is(generateParams().Bucket, 'splendid-nudibranch-dev');
+});
 
-    it('should assign extras', function () {
-        expect(generateParams({foo: 'bar'})).to.have.property('Bucket');
-        expect(generateParams({foo: 'bar'})).to.have.property('foo', 'bar');
-    });
+test('should assign extras', t => {
+    t.is(generateParams({foo: 'bar'}).foo, 'bar');
 });

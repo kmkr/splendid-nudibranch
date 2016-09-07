@@ -1,27 +1,48 @@
-import {expect} from 'chai';
+import test from 'ava';
 import {serverToClient} from './photo-data-conversion';
 
-describe('photo-data-conversion', () => {
-    let base, photoFromServer;
+const base = 'http://my/base';
+const photoFromServer = {
+    key: '1234-5678',
+    name: 'ole-brumm.jpg',
+    location: 'loc',
+    resize: {
+        thumb: {
+            width: 40,
+            height: 20
+        },
+        xsmall: {
+            width: 80,
+            height: 40
+        },
+        small: {
+            width: 100,
+            height: 50
+        },
+        medium: {
+            width: 200,
+            height: 100
+        },
+        large: {
+            width: 300,
+            height: 150
+        }
+    }
+};
 
-    beforeEach(() => {
-        base = 'http://my/base';
-        photoFromServer = {
-            key: '1234-5678',
-            name: 'ole-brumm.jpg'
-        };
-    });
+test('should convert', t => {
+    const expected = `${base}/${photoFromServer.key}/s_${photoFromServer.name}`;
+    t.is(serverToClient(photoFromServer, base).sizes.small.url, expected);
+});
 
-    it('should convert', () => {
-        const expected = `${base}/${photoFromServer.key}/s_${photoFromServer.name}`;
-        expect(serverToClient(photoFromServer, base).small).to.equal(expected);
-    });
+test('should contain size keys', t => {
+    const clientVer = serverToClient(photoFromServer, base);
 
-    it('should contain size keys', () => {
-        expect(serverToClient(photoFromServer, base)).to.have.any.keys(['small', 'medium', 'large']);
-    });
+    t.true(typeof clientVer.sizes.small === 'object');
+    t.true(typeof clientVer.sizes.medium === 'object');
+    t.true(typeof clientVer.sizes.large === 'object');
+});
 
-    it('should include key', () => {
-        expect(serverToClient(photoFromServer, base)).to.have.property('key', '1234-5678');
-    });
+test('should include key', t => {
+    t.is(serverToClient(photoFromServer, base).key, '1234-5678');
 });
