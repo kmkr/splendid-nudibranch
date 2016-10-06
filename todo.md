@@ -6,6 +6,7 @@ Hilde:
 
 KM:
 
+- Sjekk performance-forbedring med rollup
 - Bruk webp-bilder i tillegg til JPG
     - Konverter tilsvarende som JPG ved upload
     - Lag et endepunkt som konverterer alle de som finnes fra før og laster opp til S3
