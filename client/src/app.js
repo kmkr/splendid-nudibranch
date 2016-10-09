@@ -9,7 +9,7 @@ import throttle from './scroll/throttler';
 import {updatePosition, updateSize} from './scroll/scroll-actions';
 import UrlUpdater from './navigation/url-updater';
 import ScrollOnEventHandler from './navigation/scroll-on-event-handler';
-import {setSelectedTags} from './tags/selected-tags-actions';
+import {setSelectedFilters} from './filters/filter-actions';
 
 class App extends Component {
     componentWillMount() {
@@ -21,7 +21,7 @@ class App extends Component {
         window.addEventListener('optimizedResize', () => (
             this.props.dispatch(updateSize())
         ));
-        this.props.dispatch(setSelectedTags());
+        this.props.dispatch(setSelectedFilters());
     }
 
     componentDidMount() {

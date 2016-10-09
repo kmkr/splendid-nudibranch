@@ -2,7 +2,7 @@ import React, {PureComponent, PropTypes} from 'react';
 
 import ListPhotos from './list-photos';
 import MidWater from './mid-water';
-import selectedTagsMatcher from '../tags/selected-tags-matcher';
+import filterMatcher from '../filters/filter-matcher';
 
 const AVAIL_HEIGHT = screen.availHeight;
 const LOAD_AT_START = Math.ceil(AVAIL_HEIGHT / 1000);
@@ -35,10 +35,10 @@ class PhotoScroller extends PureComponent {
     }
 
     render() {
-        const {onPhotoLoad, photos, selectedTags} = this.props;
+        const {onPhotoLoad, photos, filters} = this.props;
 
-        const selectedTagPhotos = photos.filter(p => selectedTagsMatcher(p, selectedTags));
-        const nonSelectedTagPhotos = photos.filter(p => !selectedTagsMatcher(p, selectedTags));
+        const selectedTagPhotos = photos.filter(p => filterMatcher(p, filters));
+        const nonSelectedTagPhotos = photos.filter(p => !filterMatcher(p, filters));
 
         return (
             <div id="photo-scroller">
@@ -66,7 +66,7 @@ PhotoScroller.propTypes = {
     onPhotoLoad: PropTypes.func.isRequired,
     photos: PropTypes.array.isRequired,
     pageYOffset: PropTypes.number.isRequired,
-    selectedTags: PropTypes.array.isRequired
+    filters: PropTypes.object.isRequired
 };
 
 export default PhotoScroller;

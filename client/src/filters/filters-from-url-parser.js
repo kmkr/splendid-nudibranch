@@ -5,14 +5,15 @@ export default () => {
         return uri.split('&')
             .reduce((prev, cur) => {
                 const [key, val] = cur.split('=');
-                if (prev[key]) {
-                    prev[key].push(val);
+                const plural = `${key}s`;
+                if (prev[plural]) {
+                    prev[plural].push(val);
                 } else {
-                    prev[key] = [val];
+                    prev[plural] = [val];
                 }
                 return prev;
-            }, {}).tag || [];
+            }, {});
     }
 
-    return [];
+    return {};
 };

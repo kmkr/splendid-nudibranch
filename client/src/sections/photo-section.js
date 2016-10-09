@@ -32,14 +32,14 @@ class PhotoSection extends PureComponent {
     }
 
     render() {
-        const {pageYOffset, photos, selectedTags} = this.props;
+        const {pageYOffset, photos, filters} = this.props;
         return (
             <div id="photo-section">
                 <PhotoScroller
                     onPhotoLoad={this.onPhotoLoad}
                     photos={photos}
                     pageYOffset={pageYOffset}
-                    selectedTags={selectedTags} />
+                    filters={filters} />
             </div>
         );
     }
@@ -49,7 +49,7 @@ function select(state) {
     return {
         photos: state.photos.data,
         pageYOffset: state.scroll.pageYOffset,
-        selectedTags: state.selectedTags.data
+        filters: state.filters.data
     };
 }
 
