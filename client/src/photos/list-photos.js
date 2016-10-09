@@ -1,9 +1,6 @@
 import React, {PureComponent, PropTypes} from 'react';
 
 import Photo from './photo';
-import {postStats, beaconStats} from '../statistics';
-
-let photosLoaded = 0;
 
 class ListPhotos extends PureComponent {
 
@@ -13,16 +10,8 @@ class ListPhotos extends PureComponent {
         this.photoLoaded = this.photoLoaded.bind(this);
     }
 
-    componentWillMount() {
-        window.addEventListener('unload', () => {
-            beaconStats({photosLoaded});
-        });
-    }
-
     photoLoaded(photo) {
         const {onPhotoLoad} = this.props;
-        photosLoaded++;
-        postStats({photosLoaded});
         onPhotoLoad({key: photo.key});
     }
 

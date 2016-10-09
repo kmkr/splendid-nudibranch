@@ -1,6 +1,8 @@
 import React, {PureComponent, PropTypes} from 'react';
 
 import ListPhotos from './list-photos';
+import MidWater from './mid-water';
+import selectedTagsMatcher from '../tags/selected-tags-matcher';
 
 const AVAIL_HEIGHT = screen.availHeight;
 const LOAD_AT_START = Math.ceil(AVAIL_HEIGHT / 1000);
@@ -33,12 +35,26 @@ class PhotoScroller extends PureComponent {
     }
 
     render() {
+        const {onPhotoLoad, photos, selectedTags} = this.props;
+
+        const selectedTagPhotos = photos.filter(p => selectedTagsMatcher(p, selectedTags));
+        const nonSelectedTagPhotos = photos.filter(p => !selectedTagsMatcher(p, selectedTags));
+
         return (
             <div id="photo-scroller">
+                {selectedTagPhotos.length &&
+                    <div>
+                        <ListPhotos
+                            onPhotoLoad={onPhotoLoad}
+                            photos={selectedTagPhotos}
+                            visibleEnd={this.state.visibleEnd} />
+                        <MidWater photos={selectedTagPhotos} />
+                    </div>
+                }
                 <ListPhotos
-                    onPhotoLoad={this.props.onPhotoLoad}
-                    photos={this.props.photos}
-                    visibleEnd={this.state.visibleEnd} />
+                    onPhotoLoad={onPhotoLoad}
+                    photos={nonSelectedTagPhotos}
+                    visibleEnd={this.state.visibleEnd - selectedTagPhotos.length} />
 
                 <div ref="photo-list-wrapper" />
             </div>
@@ -49,7 +65,8 @@ class PhotoScroller extends PureComponent {
 PhotoScroller.propTypes = {
     onPhotoLoad: PropTypes.func.isRequired,
     photos: PropTypes.array.isRequired,
-    pageYOffset: PropTypes.number.isRequired
+    pageYOffset: PropTypes.number.isRequired,
+    selectedTags: PropTypes.array.isRequired
 };
 
 export default PhotoScroller;

@@ -53,7 +53,8 @@ class UrlUpdater extends Component {
             .reverse())[0];
 
         if (matching) {
-            const newPath = `/${matching.name}`;
+            const search = window.location.search || '';
+            const newPath = `/${matching.name}${search}`;
             if (newPath !== window.location.pathname) {
                 history.replaceState(null, null, newPath);
             }

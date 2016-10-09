@@ -1,5 +1,7 @@
 import actionTypes from './photo-action-types';
 import {serverToClient} from '../../../common/photo-data-conversion';
+import prioritizeSelectedTags from '../tags/prioritize-selected-tags';
+import selectedTagsFromUrlParser from '../tags/selected-tags-from-url-parser';
 
 function firstXWithDescription(photos, num = 5) {
     let foundNum = 0;
@@ -32,9 +34,15 @@ function shuffle(photos) {
 
 export function fetchPhotos() {
     const {photos, base} = window.sn.data.photoData;
+    const selectedTags = selectedTagsFromUrlParser();
+    const prioritizer = prioritizeSelectedTags(selectedTags);
     return {
         type: actionTypes.SET_PHOTOS,
-        data: firstXWithDescription(shuffle(photos.map(photo => serverToClient(photo, base))))
+        data: firstXWithDescription(
+            shuffle(
+                photos.map(photo => serverToClient(photo, base))
+            ).sort(prioritizer)
+        )
     };
 }
 

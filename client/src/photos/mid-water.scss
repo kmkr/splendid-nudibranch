@@ -1,0 +1,8 @@
+@import '../constants/styles';
+@import "../vendor/bootstrap/mixins/breakpoint";
+
+#mid-water {
+    @include media-breakpoint-up(xl) {
+        @include height();
+    }
+}
