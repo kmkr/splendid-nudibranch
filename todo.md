@@ -6,6 +6,7 @@ Hilde:
 
 KM:
 
+- Vurder å bruke route.param for å hente param-data (som f.eks photo)
 - Sjekk performance-forbedring med rollup
 - Bruk webp-bilder i tillegg til JPG
     - Konverter tilsvarende som JPG ved upload
