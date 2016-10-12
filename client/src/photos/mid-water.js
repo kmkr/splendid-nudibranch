@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react';
 
+import Anchor from '../anchor';
+
 import '../sections/water-column.scss';
 
 const MidWaterSection = ({photos}) => {
@@ -10,11 +12,15 @@ const MidWaterSection = ({photos}) => {
     return (
         <div>
             {!somePhotoLoading &&
-                <div id="mid-water" className="water-column">
+                <Anchor
+                    id="mid-water"
+                    name=""
+                    className="water-column">
+
                     <div className="link-wrapper">
                         <a href="#">EXPLORE MORE</a>
                     </div>
-                </div>
+                </Anchor>
             }
         </div>
     );
