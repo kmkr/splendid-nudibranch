@@ -1,7 +1,6 @@
 import React, {PureComponent, PropTypes} from 'react';
 
 import TransitionImage from '../transition-image';
-import Anchor from '../anchor';
 
 import './photo.scss';
 
@@ -36,8 +35,6 @@ class Photo extends PureComponent {
 
         return (
             <div>
-                <Anchor id={`photo-${photo.key}`} name={`photos/${photo.key}`} />
-
                 <div className="photo-and-text-wrapper">
                     <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''} ${photo.mode}`}>
                         <div className="photo">
