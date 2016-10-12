@@ -554,7 +554,7 @@ Title			Silky Shark
 Location		Elphinestone Reef, Egypt
 Tags			shark 2015
 Latin			Carcharhinus falciformis
-Description		Once abundant in the world's oceans, now overfished and in some places depleted. Commercial fishing of tuna, the silkys favored prey, make it the shark second most commonly taken as bycatch.
+Description		Once abundant in the world's oceans, now overfished and in some places depleted. The silky is the shark second most commonly taken as bycatch due to commercial fishing of tuna, it's favored prey.
 
 
 DSC07841.jpg
