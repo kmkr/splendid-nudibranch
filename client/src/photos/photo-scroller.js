@@ -45,7 +45,7 @@ class PhotoScroller extends PureComponent {
                 {selectedTagPhotos.length &&
                     <div>
                         <ListPhotos
-                            isFilteredGroup
+                            activeFilters={filters}
                             onPhotoLoad={onPhotoLoad}
                             photos={selectedTagPhotos}
                             visibleEnd={this.state.visibleEnd} />

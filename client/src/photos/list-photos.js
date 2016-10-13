@@ -2,6 +2,7 @@ import React, {PureComponent, PropTypes} from 'react';
 
 import Anchor from '../anchor';
 import Photo from './photo';
+import filtersToUrlSearchParser from '../filters/filters-to-url-search-parser';
 
 class ListPhotos extends PureComponent {
 
@@ -9,7 +10,6 @@ class ListPhotos extends PureComponent {
         super(props),
 
         this.photoLoaded = this.photoLoaded.bind(this);
-        this.search = window.location.search;
     }
 
     photoLoaded(photo) {
@@ -28,13 +28,13 @@ class ListPhotos extends PureComponent {
     }
 
     renderPhoto(photo) {
-        const {isFilteredGroup} = this.props;
-        const name = `photos/${photo.key}${isFilteredGroup ? this.search : ''}`;
+        const {activeFilters} = this.props;
+        console.log(filtersToUrlSearchParser(activeFilters));
+        const name = `photos/${photo.key}${filtersToUrlSearchParser(activeFilters)}`;
         return (
             <div key={photo.key}>
                 <Anchor
                     id={`photo-${photo.key}`}
-                    includeSearch={isFilteredGroup}
                     name={name} />
                 <Photo
                     onPhotoLoad={this.photoLoaded}
@@ -57,14 +57,14 @@ class ListPhotos extends PureComponent {
 }
 
 ListPhotos.propTypes = {
-    isFilteredGroup: PropTypes.bool,
+    activeFilters: PropTypes.array,
     onPhotoLoad: PropTypes.func.isRequired,
     photos: PropTypes.array.isRequired,
     visibleEnd: PropTypes.number
 };
 
 ListPhotos.propTypes = {
-    isFilteredGroup: false
+    activeFilters: []
 };
 
 export default ListPhotos;
