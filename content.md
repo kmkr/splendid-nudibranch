@@ -668,3 +668,111 @@ Tags			2016
 Latin			Cyclopterus lumpus
 Description		Instead of having the normal type of pelvic fins (below), this fish has evolved disc-like fins and use them to adhere to the substrate.
 
+
+
+DSC00591.jpg
+
+Title			Green Turtle
+Location		Bonaire, The Netherlands
+Tags			2016 turtle
+Latin			Chelonia mydas
+Description
+
+
+
+DSC00598.jpg
+
+Title			Green Turtle
+Location		Bonaire, The Netherlands
+Tags			2016 turtle
+Latin			Chelonia mydas
+Description
+
+
+DSC00631.jpg
+
+Title			French Angelfish
+Location		Bonaire, The Netherlands
+Tags			2016
+Latin			Pomacanthus paru
+Description
+
+
+DSC00946.jpg
+
+Title			Green Turtle
+Location		Bonaire, The Netherlands
+Tags			2016 turtle
+Latin			Chelonia mydas
+Description
+
+
+DSC01136.jpg
+
+Title			Atlantic Tarpon
+Location		Bonaire, The Netherlands
+Tags			2016
+Latin           Megalops atlanticus
+Description
+
+
+DSC01178.jpg
+
+Title           Shore Diving Bonaire
+Location		Bonaire, The Netherlands
+Tags			2016
+Latin
+Description
+
+DSC01316.jpg
+
+Title           Hilma Hooker
+Location		Bonaire, The Netherlands
+Tags			2016 wreck
+Latin
+Description
+
+
+DSC01646.jpg
+
+Title           Spotted Scorpionfish
+Location		Bonaire, The Netherlands
+Tags			2016
+Latin           Scorpaena plumieri
+Description
+
+
+DSC01682.jpg
+
+Title           Banded Coral Shrimp
+Location		Bonaire, The Netherlands
+Tags			2016 shrimp
+Latin           Stenopus hispidus
+Description
+
+
+DSC02022.jpg
+
+Title           Smooth Trunkfish
+Location		Bonaire, The Netherlands
+Tags			2016
+Latin           Lactophrys triqueter
+Description
+
+
+DSC02100.jpg
+
+Title           ??
+Location		Bonaire, The Netherlands
+Tags			2016 school
+Latin
+Description
+
+
+DSC02162.jpg
+
+Title           ??
+Location		Bonaire, The Netherlands
+Tags			2016 eel
+Latin
+Description
