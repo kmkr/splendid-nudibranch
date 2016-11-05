@@ -713,8 +713,7 @@ Title			Atlantic Tarpon
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin           Megalops atlanticus
-Description
-
+Description     We were accompanied by a group of tarpons during our night dives on Bonaire. They are nocturnal hunters and used our torches as assistance.
 
 DSC01178.jpg
 
@@ -722,15 +721,15 @@ Title           Shore Diving Bonaire
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin
-Description
+Description     The entire coastline of Bonaire's leeside is fringed by a beautiful coral reef, most of it accessible from shore.
 
 DSC01316.jpg
 
-Title           Hilma Hooker
+Title           The Hilma Hooker
 Location		Bonaire, The Netherlands
 Tags			2016 wreck
 Latin
-Description
+Description     After loosing power off the coast of Bonaire, The Hilma Hooker was towed to the main pier on the island. As it was already under investigation by the DEA, a search was quickly conducted and 11.000 kg of marijuana was found. However, the owner of the ship was not. The ship was in need of maintenance, especially the hull. The ship was towed a couple of kilometers south in fear of disrupting boat traffic in case it sunk, which it did. Now it's a great dive site, easily accessible on the southern coast of Bonaire.
 
 
 DSC01646.jpg
