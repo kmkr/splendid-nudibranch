@@ -23,3 +23,4 @@ KM:
 
 Søk
 - Filter tags
+- Vurder FUSe for søking, https://github.com/krisk/Fuse
