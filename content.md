@@ -668,6 +668,14 @@ Tags			2016
 Latin			Cyclopterus lumpus
 Description		Instead of having the normal type of pelvic fins (below), this fish has evolved disc-like fins and use them to adhere to the substrate.
 
+DSC00564.jpg
+
+Title			Spotted Moray Eel
+Location		Bonaire, The Netherlands
+Tags			2016 eel
+Latin			Gymnothorax moringa
+Description   Unline most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag their prey inside their mouths.
+
 
 
 DSC00591.jpg
@@ -747,7 +755,7 @@ Title           Banded Coral Shrimp
 Location		Bonaire, The Netherlands
 Tags			2016 shrimp
 Latin           Stenopus hispidus
-Description
+Description   Prefers to live in caves, often seen upside down. Cleans parasites from fish cruising by.
 
 
 DSC02022.jpg
@@ -756,7 +764,7 @@ Title           Smooth Trunkfish
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin           Lactophrys triqueter
-Description
+Description   Using its large mouth, the trunkfish expel a jet of water on the seabed to reveal worms and small crustaceans.
 
 
 DSC02100.jpg
@@ -770,8 +778,8 @@ Description
 
 DSC02162.jpg
 
-Title           ??
+Title           Chain Moray Eel
 Location		Bonaire, The Netherlands
 Tags			2016 eel
-Latin
+Latin     Echidna catenata
 Description
