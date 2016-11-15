@@ -668,13 +668,15 @@ Tags			2016
 Latin			Cyclopterus lumpus
 Description		Instead of having the normal type of pelvic fins (below), this fish has evolved disc-like fins and use them to adhere to the substrate.
 
+
+
 DSC00564.jpg
 
 Title			Spotted Moray Eel
 Location		Bonaire, The Netherlands
 Tags			2016 eel
 Latin			Gymnothorax moringa
-Description   Unline most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag their prey inside their mouths.
+Description     Unline most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag their prey inside their mouths.
 
 
 
@@ -684,7 +686,7 @@ Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description
+Description     Surprisingly curious, this young turtle swam with us in the shallows on the way out to the Salt Pier dive site.
 
 
 
@@ -694,7 +696,7 @@ Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description
+Description     The green turtle inhabit coastal areas of as many as 140 countries. The Caribbean Islands have together one of the largest populations of green turtles in the world.
 
 
 DSC00631.jpg
@@ -706,13 +708,22 @@ Latin			Pomacanthus paru
 Description
 
 
+DSC00696.jpg
+
+Title           French Grunt
+Location		Bonaire, The Netherlands
+Tags			2016 school
+Latin           Haemulon flavolineatum
+Description
+
+
 DSC00946.jpg
 
 Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description
+Description     The fat beneath the carapace of a C. Mydas is green, hence the common name green turtle.
 
 
 DSC01136.jpg
@@ -721,7 +732,7 @@ Title			Atlantic Tarpon
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin           Megalops atlanticus
-Description     A group of tarpons accompanied us during all our night dives on Bonaire. They are nocturnal hunters and exploited our torches as assistance.
+Description     A group of tarpons accompanied us during all night dives on Bonaire. These nocturnal hunters exploited the light from our torches to find prey.
 
 DSC01178.jpg
 
@@ -729,7 +740,7 @@ Title           Shore Diving Bonaire
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin
-Description     The entire coastline of Bonaire's leeside is fringed by a beautiful coral reef, most of it accessible from shore.
+Description     The entire coastline of Bonaire's leeside is fringed by a beautiful coral reef, most of it accessible from shore. The reef starts immediately, so you could easily stay the entire dive at only a few meters depth if you want.
 
 DSC01316.jpg
 
@@ -737,7 +748,7 @@ Title           The Hilma Hooker
 Location		Bonaire, The Netherlands
 Tags			2016 wreck
 Latin
-Description     After loosing power off the coast of Bonaire, The Hilma Hooker was towed to the main pier on the island. A search was quickly conducted and 11.000 kg of marijuana was found. The owner of the ship however, was not. Hilma Hooker was old, and especially the hull was in need of maintenance. The ship was towed a couple of kilometers south in fear of disrupting boat traffic in case it sunk, which it did. Now it's a great dive site, easily accessible on the southern coast of Bonaire.
+Description     After loosing power off the coast of Bonaire, The Hilma Hooker was towed to the island's main pier. As this ship already was suspected by the DEA, a search was quickly conducted and 11.000 kg of marijuana was found. The owner of the ship however, was not. Hilma Hooker was starting to wear down, the hull was in dire need of maintenance. The ship was towed a couple of kilometers south in fear of disrupting boat traffic in case it sunk, which it promtly did. Now it's a great dive site, easily accessible on the southern coast of Bonaire.
 
 
 DSC01646.jpg
@@ -746,7 +757,7 @@ Title           Spotted Scorpionfish
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin           Scorpaena plumieri
-Description
+Description     The scorpionfish is commonly found motionless blending in with the environment, virtually invisible. Touch it and you're gonna have a bad time.
 
 
 DSC01682.jpg
@@ -755,7 +766,7 @@ Title           Banded Coral Shrimp
 Location		Bonaire, The Netherlands
 Tags			2016 shrimp
 Latin           Stenopus hispidus
-Description   Prefers to live in caves, often seen upside down. Cleans parasites from fish cruising by.
+Description     Prefers to live in caves, often seen upside down. Cleans parasites from fish cruising by.
 
 
 DSC02022.jpg
@@ -764,16 +775,7 @@ Title           Smooth Trunkfish
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin           Lactophrys triqueter
-Description   Using its large mouth, the trunkfish expel a jet of water on the seabed to reveal worms and small crustaceans.
-
-
-DSC02100.jpg
-
-Title           ??
-Location		Bonaire, The Netherlands
-Tags			2016 school
-Latin
-Description
+Description     Using its large mouth, the trunkfish expel a jet of water on the seabed to reveal worms and small crustaceans.
 
 
 DSC02162.jpg
@@ -781,5 +783,15 @@ DSC02162.jpg
 Title           Chain Moray Eel
 Location		Bonaire, The Netherlands
 Tags			2016 eel
-Latin     Echidna catenata
+Latin           Echidna catenata
 Description
+
+
+
+DSC02188.jpg
+
+Title           Christmas Tree Worm
+Location		Bonaire, The Netherlands
+Tags			2016 worm
+Latin           Spirobranchus giganteus
+Description     This pair of feather-like tentacles, called radioles, is used for respiration and to catch floating plankton and microscopic plants. Each worm has one pair of radioles.
