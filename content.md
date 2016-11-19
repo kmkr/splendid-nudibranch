@@ -686,7 +686,7 @@ Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description     Surprisingly curious, this young turtle swam with us in the shallows on the way out to the Salt Pier dive site.
+Description     Surprisingly curious, this young turtle swam around us in the shallows on the way out to the Salt Pier, a gorgeous dive site on Bonaire.
 
 
 
@@ -696,7 +696,7 @@ Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description     The green turtle inhabit coastal areas of as many as 140 countries. The Caribbean Islands have together one of the largest populations of green turtles in the world.
+Description     The green turtle inhabit coastal areas of as many as 140 countries. Together, The Caribbean Islands have together one of the largest populations of green turtles in the world.
 
 
 DSC00631.jpg
@@ -748,7 +748,7 @@ Title           The Hilma Hooker
 Location		Bonaire, The Netherlands
 Tags			2016 wreck
 Latin
-Description     After loosing power off the coast of Bonaire, The Hilma Hooker was towed to the island's main pier. As this ship already was suspected by the DEA, a search was quickly conducted and 11.000 kg of marijuana was found. The owner of the ship however, was not. Hilma Hooker was starting to wear down, the hull was in dire need of maintenance. The ship was towed a couple of kilometers south in fear of disrupting boat traffic in case it sunk, which it promtly did. Now it's a great dive site, easily accessible on the southern coast of Bonaire.
+Description     After loosing power off the coast of Bonaire, The Hilma Hooker was towed to the island's main pier. As this ship already was suspected by the DEA, a search was quickly conducted and 11.000 kg of marijuana was found. The owner of the ship however, was not. Hilma Hooker was starting to wear down and the hull was in dire need of maintenance. It was towed a couple of kilometers south in fear of disrupting boat traffic in case it sunk, which it promtly did. Now it's a great dive site, easily accessible on the southern coast of Bonaire.
 
 
 DSC01646.jpg
@@ -757,7 +757,7 @@ Title           Spotted Scorpionfish
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin           Scorpaena plumieri
-Description     The scorpionfish is commonly found motionless blending in with the environment, virtually invisible. Touch it and you're gonna have a bad time.
+Description     The scorpionfish is commonly found motionless blending in with the environment, virtually invisible. Do not touch.
 
 
 DSC01682.jpg
@@ -775,7 +775,7 @@ Title           Smooth Trunkfish
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin           Lactophrys triqueter
-Description     Using its large mouth, the trunkfish expel a jet of water on the seabed to reveal worms and small crustaceans.
+Description     Using its large mouth, the trunkfish expel a jet of water on the seabed to reveal hidden treats like worms and small crustaceans.
 
 
 DSC02162.jpg
