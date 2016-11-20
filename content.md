@@ -686,7 +686,7 @@ Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description     Surprisingly curious, this young turtle swam around us in the shallows on the way out to the Salt Pier, a gorgeous dive site on Bonaire.
+Description     Surprisingly curious, this young turtle swam around us in the shallows during our way out to the Salt Pier, a gorgeous dive site on Bonaire.
 
 
 
@@ -696,7 +696,7 @@ Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description     The green turtle inhabit coastal areas of as many as 140 countries. Together, The Caribbean Islands have together one of the largest populations of green turtles in the world.
+Description     The green turtle inhabit coastal areas of as many as 140 countries. Together, The Caribbean Islands have one of the largest populations of green turtles in the world.
 
 
 DSC00631.jpg
@@ -723,7 +723,7 @@ Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description     The fat beneath the carapace of a C. Mydas is green, hence the common name green turtle.
+Description     The fat beneath the carapace of a C. Mydas is green, which is why it's common name is "green turtle".
 
 
 DSC01136.jpg
@@ -732,7 +732,7 @@ Title			Atlantic Tarpon
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin           Megalops atlanticus
-Description     A group of tarpons accompanied us during all night dives on Bonaire. These nocturnal hunters exploited the light from our torches to find prey.
+Description     A group of tarpons accompanied us during our night dives on Bonaire. These nocturnal hunters exploited the light from our torches to find prey.
 
 DSC01178.jpg
 
@@ -740,7 +740,7 @@ Title           Shore Diving Bonaire
 Location		Bonaire, The Netherlands
 Tags			2016
 Latin
-Description     The entire coastline of Bonaire's leeside is fringed by a beautiful coral reef, most of it accessible from shore. The reef starts immediately, so you could easily stay the entire dive at only a few meters depth if you want.
+Description     The entire coastline of Bonaire's leeside is fringed by a beautiful coral reef, most of it accessible from shore. The reef starts at about two meter depth, so you could easily stay the entire dive at only a few meters depth if you want.
 
 DSC01316.jpg
 
@@ -794,4 +794,4 @@ Title           Christmas Tree Worm
 Location		Bonaire, The Netherlands
 Tags			2016 worm
 Latin           Spirobranchus giganteus
-Description     This pair of feather-like tentacles, called radioles, is used for respiration and to catch floating plankton and microscopic plants. Each worm has one pair of radioles.
+Description     This pair of feather-like tentacles, called radioles, is used for respiration and to catch floating plankton and microscopic plants. Each worm has one pair of these radioles.
