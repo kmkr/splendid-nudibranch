@@ -1,10 +1,7 @@
 import test from 'ava';
 
 import photoReducer from './photo-reducer';
-import {
-    updatePhotoActionTypes,
-    uploadPhotoActionTypes,
-    deletePhotoActionTypes}
+import {uploadPhotoActionTypes}
     from '../admin/photos/edit-photo-action-types';
 
 const origState = {

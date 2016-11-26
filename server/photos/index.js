@@ -18,15 +18,6 @@ router.post('/', upload.single('file'), (req, res) => {
         .catch(error => res.status(500).json({error}));
 });
 
-router.put('/:id', (req, res) => {
-    updatePhotoHandler(req.params.id, req.body)
-        .then(response => {
-            cache.clear();
-            return res.json(response);
-        })
-        .catch(error => res.status(500).json({error}));
-});
-
 router.delete('/:id', (req, res) => {
     deletePhotoHandler(req.params.id)
         .then(response => {
@@ -39,18 +30,17 @@ router.delete('/:id', (req, res) => {
         });
 });
 
-// todo: handle tags
 router.post('/metadata', (req, res) => {
     if (req.body.length === 0) {
         res.status(204).end();
         return;
     }
 
-    const photos = req.body;
-    Promise.all(photos.map(photo => {
-        delete photo.tags;
-        return updatePhotoHandler(photo.key, photo);
-    }))
+    const updatedPhotos = req.body;
+
+    Promise.all(updatedPhotos.map(updatedPhoto => (
+        updatePhotoHandler(updatedPhoto.key, updatedPhoto)
+    )))
     .then(() => {
         cache.clear();
         res.status(204).end();

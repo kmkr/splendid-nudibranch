@@ -1,5 +1,0 @@
-export const setTagsForPhotoActionTypes = {
-    REQUEST: 'REQUEST_SET_TAGS_FOR_PHOTO',
-    RECEIVE: 'RECEIVE_SET_TAGS_FOR_PHOTO',
-    FETCH_ERROR: 'FETCH_ERROR_SET_TAGS_FOR_PHOTO'
-};

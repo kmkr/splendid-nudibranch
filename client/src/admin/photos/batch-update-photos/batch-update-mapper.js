@@ -1,3 +1,5 @@
+import arrayIsEqual from './array-is-equal';
+
 const lineProcessors = {
     tags: line => line.split(/\s/),
     fallback: line => line
@@ -12,7 +14,15 @@ function hasChanges(currentPhoto, allPhotos) {
         return false;
     }
     const matchingPhoto = getMatchingPhoto(currentPhoto.name, allPhotos);
-    return Object.keys(currentPhoto).some(key => key !== 'tags' && currentPhoto[key] !== matchingPhoto[key]);
+    return Object.keys(currentPhoto).some(key => {
+        const value = currentPhoto[key];
+
+        if (Array.isArray(value)) {
+            return !arrayIsEqual(value, matchingPhoto[key]);
+        } else {
+            return value !== matchingPhoto[key];
+        }
+    });
 }
 
 export function map(content, photos) {

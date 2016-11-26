@@ -5,7 +5,6 @@ import compression from 'compression';
 
 import {auth} from './auth';
 import photoRouter from './photos';
-import tagRouter from './tags';
 import sitemapRouter from './sitemap';
 import statsRouter from './statistics';
 import robotsRouter from './robots';
@@ -67,7 +66,6 @@ app.get('/admin', (req, res) => {
         }));
 });
 app.use('/photos', photoRouter);
-app.use('/tags', tagRouter);
 app.use('/stats', statsRouter);
 app.use('/sitemap.xml', sitemapRouter);
 app.use('/robots.txt', robotsRouter);

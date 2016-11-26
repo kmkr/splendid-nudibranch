@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 import './list-photos.scss';
 import EditPhoto from './edit-photo';
 
-const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
+const ListPhotos = ({photos, onDeleteClick}) => (
     <div className="list-photos">
         {photos.map(photo => (
             <div
@@ -16,7 +16,6 @@ const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
                     <div className="form">
                         <EditPhoto
                             onDeleteClick={onDeleteClick}
-                            onUpdateClick={onUpdateClick}
                             photo={photo} />
                     </div>
                 </div>
@@ -27,8 +26,7 @@ const ListPhotos = ({photos, onDeleteClick, onUpdateClick}) => (
 
 ListPhotos.propTypes = {
     photos: PropTypes.array.isRequired,
-    onDeleteClick: PropTypes.func.isRequired,
-    onUpdateClick: PropTypes.func.isRequired
+    onDeleteClick: PropTypes.func.isRequired
 };
 
 export default ListPhotos;

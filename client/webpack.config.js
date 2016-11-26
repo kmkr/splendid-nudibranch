@@ -35,7 +35,7 @@ module.exports = {
             }
         ]
     },
-    postcss: function () {
+    postcss() {
         return [precss, autoprefixer];
     },
     plugins: [

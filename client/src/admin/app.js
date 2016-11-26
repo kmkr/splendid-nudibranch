@@ -5,8 +5,7 @@ import Authenticator from './authenticator';
 import PhotoUploader from './photos/photo-uploader';
 import BatchUpdatePhotos from './photos/batch-update-photos';
 import ListPhotos from './photos/list-photos';
-import {batchUpdatePhotos, updatePhoto, uploadPhoto, deletePhoto} from './photos/edit-photo-actions';
-import {setTagsForPhoto} from './tags/edit-tags-actions';
+import {batchUpdatePhotos, uploadPhoto, deletePhoto} from './photos/edit-photo-actions';
 import {fetchPhotos} from '../photos/photo-actions';
 import snFetch from '../fetch';
 
@@ -44,11 +43,6 @@ class App extends Component {
         }
     }
 
-    onUpdateClick(photo, updatedValues, updatedTags) {
-        this.props.dispatch(updatePhoto(photo, updatedValues));
-        this.props.dispatch(setTagsForPhoto(photo, updatedTags));
-    }
-
     render() {
         return (
             <div className="row">
@@ -64,8 +58,7 @@ class App extends Component {
                         <h1>Edit photos</h1>
                         <ListPhotos
                             photos={this.props.photos.data}
-                            onDeleteClick={this.onDeleteClick.bind(this)}
-                            onUpdateClick={this.onUpdateClick.bind(this)} />
+                            onDeleteClick={this.onDeleteClick.bind(this)} />
                     </div>
                 </div>
             </div>

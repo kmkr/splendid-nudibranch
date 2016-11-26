@@ -2,8 +2,6 @@ import test from 'ava';
 
 import photoReducer from './photo-reducer';
 import {
-    updatePhotoActionTypes,
-    uploadPhotoActionTypes,
     deletePhotoActionTypes}
     from '../admin/photos/edit-photo-action-types';
 

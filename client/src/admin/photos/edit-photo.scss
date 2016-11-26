@@ -46,13 +46,7 @@
             vertical-align: baseline;
             border-radius: .25em;
             margin-right: .2em;
-            &.saved {
-                background-color: #5cb85c;
-            }
-
-            &.unsaved {
-                background-color: #f0ad4e;
-            }
+            background-color: #5cb85c;
         }
     }
 }

@@ -66,5 +66,5 @@ export default file => {
                 }));
         })
         .then(metadata => insertToDb(id, file, metadata))
-        .then(photo => photoDataFormatter.dbToClient(photo, []));
+        .then(photo => photoDataFormatter.dbToClient(photo));
 };

@@ -1,25 +1,13 @@
 import getPhotosActionTypes from './photo-action-types';
 import {
     deletePhotoActionTypes,
-    updatePhotoActionTypes,
     uploadPhotoActionTypes
 } from '../admin/photos/edit-photo-action-types';
-
-import {setTagsForPhotoActionTypes} from '../admin/tags/edit-tags-action-types';
 
 function photo(state, action) {
     switch (action.type) {
     case uploadPhotoActionTypes.RECEIVE:
         return {...action.data};
-    case setTagsForPhotoActionTypes.RECEIVE:
-        const newTagsForPhoto = action.data
-            .filter(t => t.photoKey === state.key)
-            .map(t => t.name);
-
-        return {
-            ...state,
-            tags: [...state.tags, ...newTagsForPhoto]
-        };
     case getPhotosActionTypes.PHOTO_LOADED:
         if (action.data.key !== state.key) {
             return state;
@@ -28,39 +16,6 @@ function photo(state, action) {
         return {
             ...state,
             loaded: true
-        };
-    case updatePhotoActionTypes.REQUEST:
-        if (action.data.key !== state.key) {
-            return state;
-        }
-
-        return {
-            ...state,
-            updating: true,
-            error: false
-        };
-    case updatePhotoActionTypes.RECEIVE:
-        if (action.data.key !== state.key) {
-            return state;
-        }
-
-        return {
-            ...state,
-            updating: false,
-            ...action.data
-        };
-    case setTagsForPhotoActionTypes.FETCH_ERROR:
-    case updatePhotoActionTypes.FETCH_ERROR:
-        if (action.data.key !== state.key) {
-            return state;
-        }
-
-        return {
-            ...state,
-            deleting: false,
-            updating: false,
-            error: true,
-            ...action.data
         };
     case deletePhotoActionTypes.REQUEST:
         if (action.data.key !== state.key) {
@@ -111,11 +66,6 @@ export default (state = initialState, action) => {
             data: [...state.data, photo(undefined, action)]
         };
     case getPhotosActionTypes.PHOTO_LOADED:
-    case setTagsForPhotoActionTypes.RECEIVE:
-    case setTagsForPhotoActionTypes.FETCH_ERROR:
-    case updatePhotoActionTypes.REQUEST:
-    case updatePhotoActionTypes.RECEIVE:
-    case updatePhotoActionTypes.FETCH_ERROR:
     case deletePhotoActionTypes.REQUEST:
     case deletePhotoActionTypes.FETCH_ERROR:
         return {

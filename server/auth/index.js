@@ -20,14 +20,15 @@ export function auth(req, res, next) {
     }
 
     const key = getKey(req.path);
+    const response = key ? {key} : {};
 
     if (!req.header('x-auth')) {
-        res.status(400).json({key});
+        res.status(400).json(response);
     }
 
     if (req.header('x-auth') === ADMIN_KEY) {
         return next();
     }
 
-    res.status(403).end({key});
+    res.status(403).end(response);
 }

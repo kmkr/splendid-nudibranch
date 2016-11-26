@@ -1,11 +1,5 @@
-function tagsForKey(key, tagsFromDb) {
-    return tagsFromDb
-        .filter(t => t.photos.some(photoKey => photoKey === key))
-        .map(t => t.name);
-}
-
-function mapOne(photoFromDb, tagsFromDb) {
-    const {title, description, latin, location, key, name, resize} = photoFromDb;
+function mapOne(photoFromDb) {
+    const {title, description, latin, location, key, name, resize, tags} = photoFromDb;
     return {
         title,
         description,
@@ -14,13 +8,13 @@ function mapOne(photoFromDb, tagsFromDb) {
         key,
         name,
         resize,
-        tags: tagsForKey(key, tagsFromDb)
+        tags: tags || []
     };
 }
-export function dbToClient(photoArg, tagsArg) {
+export function dbToClient(photoArg) {
     if (photoArg.constructor === Array) {
-        return photoArg.map(photo => mapOne(photo, tagsArg));
+        return photoArg.map(mapOne);
     }
 
-    return mapOne(photoArg, tagsArg);
+    return mapOne(photoArg);
 }
