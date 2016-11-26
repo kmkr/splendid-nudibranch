@@ -3,12 +3,13 @@ import {connect} from 'react-redux';
 import SmoothScrollLink from '../navigation/smooth-scroll-link';
 
 import './deep-water-section.scss';
+import './water-column.scss';
 
 const DeepWaterSection = ({photos}) => {
     const somePhotoLoading = photos.data.some(photo => !photo.loaded);
 
     return (
-        <div id="deep-water-section">
+        <div id="deep-water-section" className="water-column">
             {somePhotoLoading ?
                 <div className="spinner-wrapper"><div className="spinner" /></div> :
 
@@ -19,7 +20,7 @@ const DeepWaterSection = ({photos}) => {
                         <img className="jellyfish" src="/static/images/jellyfish.svg" />
                     </div>
 
-                    <div className="drop-your-weights-wrapper">
+                    <div className="link-wrapper">
                             <SmoothScrollLink
                                 speed={4000}
                                 easing="easeOutCubic"

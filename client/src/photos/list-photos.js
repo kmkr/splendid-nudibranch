@@ -1,9 +1,8 @@
 import React, {PureComponent, PropTypes} from 'react';
 
+import Anchor from '../anchor';
 import Photo from './photo';
-import {postStats, beaconStats} from '../statistics';
-
-let photosLoaded = 0;
+import filtersToUrlSearchParser from '../filters/filters-to-url-search-parser';
 
 class ListPhotos extends PureComponent {
 
@@ -13,16 +12,8 @@ class ListPhotos extends PureComponent {
         this.photoLoaded = this.photoLoaded.bind(this);
     }
 
-    componentWillMount() {
-        window.addEventListener('unload', () => {
-            beaconStats({photosLoaded});
-        });
-    }
-
     photoLoaded(photo) {
         const {onPhotoLoad} = this.props;
-        photosLoaded++;
-        postStats({photosLoaded});
         onPhotoLoad({key: photo.key});
     }
 
@@ -36,18 +27,29 @@ class ListPhotos extends PureComponent {
         return index < visibleEnd;
     }
 
+    renderPhoto(photo) {
+        const {activeFilters} = this.props;
+        console.log(filtersToUrlSearchParser(activeFilters));
+        const name = `photos/${photo.key}${filtersToUrlSearchParser(activeFilters)}`;
+        return (
+            <div key={photo.key}>
+                <Anchor
+                    id={`photo-${photo.key}`}
+                    name={name} />
+                <Photo
+                    onPhotoLoad={this.photoLoaded}
+                    photo={photo} />
+            </div>
+        );
+    }
+
     render() {
         const {photos} = this.props;
 
         return (
             <div>
                 {photos.map((photo, index) => (
-                    this.isVisible(index) && (
-                        <Photo
-                            key={photo.key}
-                            onPhotoLoad={this.photoLoaded}
-                            photo={photo} />
-                        )
+                    this.isVisible(index) && this.renderPhoto(photo)
                 ))}
             </div>
         );
@@ -55,9 +57,14 @@ class ListPhotos extends PureComponent {
 }
 
 ListPhotos.propTypes = {
+    activeFilters: PropTypes.array,
     onPhotoLoad: PropTypes.func.isRequired,
     photos: PropTypes.array.isRequired,
     visibleEnd: PropTypes.number
+};
+
+ListPhotos.propTypes = {
+    activeFilters: []
 };
 
 export default ListPhotos;

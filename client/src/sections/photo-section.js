@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 
 import {photoLoaded, fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
+import {postStats, beaconStats} from '../statistics';
+
 import './photo-section.scss';
 
 class PhotoSection extends PureComponent {
@@ -15,20 +17,29 @@ class PhotoSection extends PureComponent {
 
     componentWillMount() {
         this.props.dispatch(fetchPhotos());
+        window.addEventListener('unload', () => {
+            beaconStats({photosLoaded: this.getNumberOfLoadedPhotos()});
+        });
+    }
+
+    getNumberOfLoadedPhotos() {
+        return this.props.photos.filter(p => p.loaded).length;
     }
 
     onPhotoLoad({key}) {
+        postStats({photosLoaded: this.getNumberOfLoadedPhotos()});
         this.props.dispatch(photoLoaded(key));
     }
 
     render() {
-        const {pageYOffset, photos} = this.props;
+        const {pageYOffset, photos, filters} = this.props;
         return (
             <div id="photo-section">
                 <PhotoScroller
                     onPhotoLoad={this.onPhotoLoad}
                     photos={photos}
-                    pageYOffset={pageYOffset} />
+                    pageYOffset={pageYOffset}
+                    filters={filters} />
             </div>
         );
     }
@@ -37,7 +48,8 @@ class PhotoSection extends PureComponent {
 function select(state) {
     return {
         photos: state.photos.data,
-        pageYOffset: state.scroll.pageYOffset
+        pageYOffset: state.scroll.pageYOffset,
+        filters: state.filters.data
     };
 }
 

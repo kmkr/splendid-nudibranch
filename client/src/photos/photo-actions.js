@@ -34,7 +34,11 @@ export function fetchPhotos() {
     const {photos, base} = window.sn.data.photoData;
     return {
         type: actionTypes.SET_PHOTOS,
-        data: firstXWithDescription(shuffle(photos.map(photo => serverToClient(photo, base))))
+        data: firstXWithDescription(
+            shuffle(
+                photos.map(photo => serverToClient(photo, base))
+            )
+        )
     };
 }
 
