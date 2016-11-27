@@ -59,8 +59,7 @@
     "smooth-scroll": "github:cferdinandi/smooth-scroll#v9.4.3",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
-    "whatwg-fetch": "^2.0.1",
-    "why-did-you-update": "0.0.8"
+    "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
     "ava": "^0.17.0",
