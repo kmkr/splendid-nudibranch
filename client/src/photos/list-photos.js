@@ -63,7 +63,7 @@ ListPhotos.propTypes = {
     visibleEnd: PropTypes.number
 };
 
-ListPhotos.propTypes = {
+ListPhotos.defaultProps = {
     activeFilters: []
 };
 
