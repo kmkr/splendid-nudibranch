@@ -65,7 +65,7 @@ Photo.propTypes = {
         latin: PropTypes.string,
         sizes: PropTypes.object.isRequired,
         title: PropTypes.string.isRequired,
-        loaded: PropTypes.bool.isRequired
+        loaded: PropTypes.bool
     }),
     onPhotoLoad: PropTypes.func.isRequired
 };
