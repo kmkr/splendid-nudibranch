@@ -29,7 +29,6 @@ class ListPhotos extends PureComponent {
 
     renderPhoto(photo) {
         const {activeFilters} = this.props;
-        console.log(filtersToUrlSearchParser(activeFilters));
         const name = `photos/${photo.key}${filtersToUrlSearchParser(activeFilters)}`;
         return (
             <div key={photo.key}>
