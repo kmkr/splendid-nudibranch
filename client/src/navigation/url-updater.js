@@ -66,7 +66,6 @@ class UrlUpdater extends Component {
         return false;
     }
 
-
     render() {
         return <span />;
     }
