@@ -31,7 +31,6 @@ class PhotoScroller extends PureComponent {
                 this.setState({visibleEnd});
             }
         }
-
     }
 
     render() {
