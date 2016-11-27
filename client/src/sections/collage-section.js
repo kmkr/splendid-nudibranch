@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
 import SmallCollage from '../collage/small-collage';
 
-class CollageSection extends Component {
+class CollageSection extends PureComponent {
     render() {
         return (
             <div id="collage-section">
