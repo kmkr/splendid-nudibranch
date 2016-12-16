@@ -16,6 +16,7 @@ KM:
 - Vurder inline font som b64, bruk fontsquirrel til å hente raleway
 
 - Blank ut foto når den er utenfor viewport.
+-- Vurder https://github.com/stutrek/scrollMonitor
 -- Lag en ny komponent som wrapper photo, `blankable-anchored-photo.js`.
 -- Implementer `componentDidMount` i `blankable-anchored-photo.js` som registrerer egen høyde på div OG egen pageYOffset. `blankable-anchored-photo` tar over ansvaret til `Anchor`.
 -- Lytt på `scroll.innerHeight` og `scroll.innerWidth` og gjør en oppdatering på egen høyde og pageYOffset.
