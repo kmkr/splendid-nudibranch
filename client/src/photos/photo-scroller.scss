@@ -1,0 +1,35 @@
+@import '../constants/styles';
+@import "../vendor/bootstrap/mixins/breakpoint";
+@import "../max-height";
+
+#photo-scroller {
+    #active-photo-title-bar {
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include height(5);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+        }
+    }
+
+    #active-photo-menu-bar {
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(xl) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            background-color: #fff;
+        }
+    }
+}

@@ -4,6 +4,8 @@
 
 #small-collage {
     @include height();
+    position: relative;
+    z-index: 10;
     cursor: pointer;
     background-color: #dea392;
     display: flex;

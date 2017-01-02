@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import smoothScroll from 'smooth-scroll';
 import {selectPhoto} from '../photos/photo-actions';
+import getActiveAnchor from './active-anchor-service';
 
 class UrlUpdater extends Component {
     constructor(props) {
@@ -45,12 +46,7 @@ class UrlUpdater extends Component {
             return;
         }
 
-        const currentOffset = scroll.pageYOffset;
-
-        const SLACK_FACTOR = 1.8;
-        const matching = (anchors
-            .filter(anchor => currentOffset >= (anchor.position.offsetTop - (scroll.innerHeight / SLACK_FACTOR)))
-            .reverse())[0];
+        const matching = getActiveAnchor({anchors, scroll});
 
         if (matching) {
             const newPath = `/${matching.name}`;
@@ -59,7 +55,7 @@ class UrlUpdater extends Component {
             }
         }
 
-        this.lastOffset = currentOffset;
+        this.lastOffset = scroll.pageYOffset;
     }
 
     shouldComponentUpdate() {

@@ -1,6 +1,7 @@
 import React, {PureComponent, PropTypes} from 'react';
 
 import TransitionImage from '../transition-image';
+import MenuBar from './menu-bar';
 
 import './photo.scss';
 
@@ -35,20 +36,21 @@ class Photo extends PureComponent {
 
         return (
             <div>
-                <div className="photo-and-text-wrapper">
-                    <div className={`photo-wrapper ${!this.state.showComponent ? 'loading' : ''} ${photo.mode}`}>
+                <div className={`photo-and-text-wrapper ${!this.state.showComponent ? 'loading' : ''}`}>
+                    <MenuBar photo={photo}/>
+                    <div className={`photo-wrapper ${photo.mode}`}>
                         <div className="photo">
                             <TransitionImage
                                 onLoad={this.onLoad}
                                 src={photo.sizes.large.url}
-                                srcSet={srcSet}
-                                sizes="(min-width: 1360px) 60vw"/>
+                                srcSet={srcSet}/>
                         </div>
-                        <div className="text">
+                        <div className={`text ${photo.detailsActive ? 'expanded' : ''}`}>
                             <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
                                 <p className="title">{photo.title}</p>
                                 <p className="latin">{photo.latin}</p>
                                 <p className="description">{photo.description}</p>
+                                <p className="location">{photo.location}</p>
                             </div>
                         </div>
                     </div>

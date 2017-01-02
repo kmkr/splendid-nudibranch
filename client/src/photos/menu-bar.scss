@@ -1,0 +1,44 @@
+@import '../constants/styles';
+@import "../vendor/bootstrap/mixins/breakpoint";
+@import "../max-height";
+
+#menu-bar {
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5%;
+        background-color: #fff;
+        text-align: center;
+        font-size: 50px;
+
+        > div {
+            padding: 10px;
+        }
+
+        &.portrait {
+            color: lightgrey;
+        }
+
+        &.landscape {
+            cursor: pointer;
+            > div {
+                transition: .2s ease-in-out;
+
+                &.expanded {
+                    background-color: #000;
+                    > div {
+                        color: #fff;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}

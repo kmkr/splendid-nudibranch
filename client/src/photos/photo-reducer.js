@@ -6,6 +6,11 @@ import {
 
 function photo(state, action) {
     switch (action.type) {
+    case getPhotosActionTypes.SET_PHOTOS:
+        return {
+            ...state,
+            detailsActive: state.mode === 'portrait'
+        };
     case uploadPhotoActionTypes.RECEIVE:
         return {...action.data};
     case getPhotosActionTypes.PHOTO_LOADED:
@@ -16,6 +21,15 @@ function photo(state, action) {
         return {
             ...state,
             loaded: true
+        };
+    case getPhotosActionTypes.TOGGLE_PHOTO_DETAILS:
+        if (action.data.key !== state.key) {
+            return state;
+        }
+
+        return {
+            ...state,
+            detailsActive: !state.detailsActive
         };
     case deletePhotoActionTypes.REQUEST:
         if (action.data.key !== state.key) {
@@ -53,7 +67,7 @@ export default (state = initialState, action) => {
     case getPhotosActionTypes.SET_PHOTOS:
         return {
             ...state,
-            data: [...action.data]
+            data: action.data.map(d => photo(d, action))
         };
     case getPhotosActionTypes.SELECT_PHOTO:
         return {
@@ -66,6 +80,7 @@ export default (state = initialState, action) => {
             data: [...state.data, photo(undefined, action)]
         };
     case getPhotosActionTypes.PHOTO_LOADED:
+    case getPhotosActionTypes.TOGGLE_PHOTO_DETAILS:
     case deletePhotoActionTypes.REQUEST:
     case deletePhotoActionTypes.FETCH_ERROR:
         return {

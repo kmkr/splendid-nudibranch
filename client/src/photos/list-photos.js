@@ -7,7 +7,7 @@ import filtersToUrlSearchParser from '../filters/filters-to-url-search-parser';
 class ListPhotos extends PureComponent {
 
     constructor(props) {
-        super(props),
+        super(props);
 
         this.photoLoaded = this.photoLoaded.bind(this);
     }

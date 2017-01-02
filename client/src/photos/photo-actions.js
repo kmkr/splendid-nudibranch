@@ -59,3 +59,12 @@ export function photoLoaded(key) {
         }
     };
 }
+
+export function toggleDetails(key) {
+    return {
+        type: actionTypes.TOGGLE_PHOTO_DETAILS,
+        data: {
+            key
+        }
+    };
+}

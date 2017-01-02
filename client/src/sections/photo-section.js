@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 
+import TitleBar from '../photos/title-bar';
 import {photoLoaded, fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
 import {postStats, beaconStats} from '../statistics';
@@ -40,6 +41,7 @@ class PhotoSection extends PureComponent {
                     photos={photos}
                     pageYOffset={pageYOffset}
                     filters={filters} />
+                <TitleBar/>
             </div>
         );
     }

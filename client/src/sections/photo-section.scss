@@ -1,15 +1,2 @@
 #photo-section {
-    #search-wrapper {
-        z-index: 10;
-        right: 0;
-        left: 0;
-        position: absolute;
-
-        &.fixed {
-            position: fixed;
-        }
-    }
-    img {
-        max-width: 100%;
-    }
 }

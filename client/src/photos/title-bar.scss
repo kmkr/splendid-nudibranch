@@ -1,0 +1,26 @@
+@import '../constants/styles';
+@import "../vendor/bootstrap/mixins/breakpoint";
+@import "../max-height";
+
+#title-bar {
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include height(5);
+        position: fixed;
+        z-index: 6;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 10px;
+        padding-left: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: $font-size-large;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}

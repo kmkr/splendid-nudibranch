@@ -11,113 +11,96 @@
 
 .photo-and-text-wrapper {
     @include media-breakpoint-up(xl) {
-        @include height();
-    }
+        @include height(95);
+        margin-bottom: 10px; // For å unngå en glipe mellom bildet og title-bar
+        position: relative;
 
-    @include media-breakpoint-up(lg) {
-        display: flex;
-        align-items: center;
-        margin-left: 8%;
-        margin-right: 8%;
-        .photo-wrapper {
-            flex: 1 0 100%;
+        img {
+            @include max-height(95); // title bar er 5%
         }
     }
+
     @include media-breakpoint-down(lg) {
         margin-bottom: 150px;
     }
-}
 
-.photo-wrapper {
     &.loading {
-        margin: 0;
         height: 0;
-        .text-wrapper {
+        margin: 0;
+        * {
             height: 0;
             margin: 0;
         }
     }
+}
 
-    .photo {
-        @include media-breakpoint-up(xl) {
-            img {
-                @include max-height(85);
-            }
-        }
+.photo-wrapper {
+    width: 95%; // meny er 5%
+    img {
+        max-width: 100%;
     }
 
     &.portrait {
         @include media-breakpoint-down(lg) {
+            img {
+                max-width: 100%;
+            }
             .photo {
                 text-align: center;
             }
         }
         @include media-breakpoint-up(xl) {
+            background-color: lightgrey;
             display: flex;
             .photo {
                 flex-shrink: 1;
             }
             .text {
                 align-self: center;
-                text-align: center;
-                flex: 1 0 50%;
+                flex-grow: 1;
+            }
 
-                .text-wrapper {
-                    text-align: left;
-                }
+            .text-wrapper {
+                margin: 0 auto;
             }
         }
-
     }
 
     &.landscape {
-        @include media-breakpoint-up(xl) {
-            display: flex;
-        }
-
-        .photo {
-            @include media-breakpoint-down(lg) {
-                @media (orientation: landscape) {
-                    text-align: center;
-                }
-            }
-            @include media-breakpoint-up(xl) {
-                flex-shrink: 1;
-                flex-basis: 70%;
-            }
-        }
-
         .text {
             @include media-breakpoint-up(xl) {
-                flex: 1 0 30%;
-            }
-        }
-
-        .text-wrapper {
-            @include media-breakpoint-up(xl) {
-                margin-top: 90px;
-                padding-left: 20%;
+                background-color: #000;
+                color: #fff;
+                position: absolute;
+                top: 0;
+                width: 400px;
+                right: -400px;
+                transition: all .1s ease-in-out;
+                bottom: 0;
+                padding-top: 100px;
+                &.expanded {
+                    transform: translate3d(0, 0, 0);
+                    right: 5%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
             }
         }
     }
-
 
     .text {
         .text-wrapper {
             max-width: 70ch;
-            padding-left: 8%;
+
+            @include media-breakpoint-up(xl) {
+                text-align: center;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
 
             @include media-breakpoint-down(lg) {
                 padding-left: 8%;
                 padding-right: 8%;
-            }
-
-            @include media-breakpoint-up(xl) {
-                padding-left: 16%;
-                margin-top: 50px;
-            }
-
-            @include media-breakpoint-down(lg) {
                 margin-top: 50px;
             }
 
@@ -141,11 +124,16 @@
         .latin {
             font-size: $font-size-small;
             margin-bottom: 30px;
+            text-transform: uppercase;
         }
 
-        .description, .latin {
+        .description, .latin, .location {
             font-weight: 400;
         }
 
+        .location {
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
     }
 }
