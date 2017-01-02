@@ -53,14 +53,17 @@ export function map(content, photos) {
             continue;
         }
 
-        const split = line.split(/\t/);
+        const split = line.split(/\s/);
         const lineKey = split[0].toLowerCase();
 
         if (lineKey) {
             const processor = lineProcessors[lineKey] || lineProcessors.fallback;
             let lineVal = '';
             if (split.length > 1) {
-                lineVal = split[split.length - 1];
+                lineVal = split
+                    .slice(1, split.length)
+                    .filter(e => e)
+                    .join(' ');
             }
             currentPhoto[lineKey] = processor(lineVal);
 
