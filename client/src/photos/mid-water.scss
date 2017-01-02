@@ -1,8 +1,35 @@
 @import '../constants/styles';
 @import "../vendor/bootstrap/mixins/breakpoint";
+@import "../max-height";
 
 #mid-water {
-    @include media-breakpoint-up(xl) {
+    background-color: #dea392;
+    position: relative;
+    cursor: pointer;
+
+    .wrapper {
+        align-items: center;
+        display: flex;
         @include height();
+    }
+
+    .images {
+        flex-basis: 35%;
+        flex-shrink: 1;
+        padding-left: 5%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .link {
+        font-size: 50px;
+        text-transform: uppercase;
+        padding: 5%;
+        text-align: center;
+        flex-basis: 65%;
+        a {
+            color: #fff;
+        }
     }
 }

@@ -18,7 +18,7 @@ class TitleBar extends PureComponent {
         let title = '';
         if (activeAnchor) {
             // todo: finn en bedre måte å knytte dette på?
-            const photo = photos.find(p => p.key.match(activeAnchor.name.replace('photos/', '')));
+            const photo = photos.find(p => activeAnchor.name.indexOf(p.key) > -1);
 
             if (photo && photo.loaded && photo.title) {
                 title = photo.title;

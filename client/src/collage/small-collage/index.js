@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import smoothScroll from 'smooth-scroll';
 
+import Arrow from '../../arrow';
 import './small-collage.scss';
-import './arrow.scss';
 
 class SmallCollage extends Component {
     shouldComponentUpdate() {
@@ -24,7 +24,7 @@ class SmallCollage extends Component {
                         src="/static/images/logo.svg"/>
                     <img className="title-image" src="/static/images/title.svg"/>
                 </div>
-                <div className="arrow bounce"/>
+                <Arrow/>
             </div>
         );
     }

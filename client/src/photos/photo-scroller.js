@@ -49,6 +49,7 @@ class PhotoScroller extends PureComponent {
                             photos={selectedTagPhotos}
                             visibleEnd={this.state.visibleEnd} />
                         <MidWater photos={selectedTagPhotos} />
+                        <div id="post-mid-water"/>
                     </div>
                 }
                 <ListPhotos

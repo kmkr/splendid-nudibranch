@@ -1,30 +1,54 @@
-import React, {PropTypes} from 'react';
+import React, {PureComponent, PropTypes} from 'react';
 
 import Anchor from '../anchor';
+import Arrow from '../arrow';
+import smoothScroll from 'smooth-scroll';
 
-import '../sections/water-column.scss';
+import './mid-water.scss';
 
-const MidWaterSection = ({photos}) => {
+class MidWaterSection extends PureComponent {
 
-    const somePhotoLoading = photos
-        .some(photo => !photo.loaded);
+    constructor() {
+        super();
+        this.scrollToNextPhoto = this.scrollToNextPhoto.bind(this);
+    }
 
-    return (
-        <div>
-            {!somePhotoLoading &&
-                <Anchor
-                    id="mid-water"
-                    name=""
-                    className="water-column">
+    scrollToNextPhoto(e) {
+        e.preventDefault();
+        smoothScroll.animateScroll('#post-mid-water', null, {
+            updateURL: false
+        });
+    }
 
-                    <div className="link-wrapper">
-                        <a href="#">EXPLORE MORE</a>
-                    </div>
-                </Anchor>
-            }
-        </div>
-    );
-};
+    render() {
+        const {photos} = this.props;
+
+        const somePhotoLoading = photos
+            .some(photo => !photo.loaded);
+
+        return (
+            <div>
+                {!somePhotoLoading &&
+                    <Anchor
+                        id="mid-water"
+                        name=""
+                        className="water-column">
+
+                        <div className="wrapper" onClick={this.scrollToNextPhoto}>
+                            <div className="images">
+                                <img src="/static/images/jellyfish.svg" />
+                            </div>
+                            <div className="link">
+                                <a href="#" onClick={this.scrollToNextPhoto}>EXPLORE MORE</a>
+                            </div>
+                        </div>
+                        <Arrow />
+                    </Anchor>
+                }
+            </div>
+        );
+    }
+}
 
 MidWaterSection.propTypes = {
     photos: PropTypes.array.isRequired
