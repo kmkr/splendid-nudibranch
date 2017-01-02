@@ -41,7 +41,7 @@ class PhotoScroller extends PureComponent {
 
         return (
             <div id="photo-scroller">
-                {selectedTagPhotos.length &&
+                {!!selectedTagPhotos.length &&
                     <div>
                         <ListPhotos
                             activeFilters={filters}
