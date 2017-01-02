@@ -41,9 +41,11 @@ export function metadata(filePath) {
             }
 
             console.log(value);
+            const exif = value['Profile-EXIF'];
+            const dateTimeOrig = exif && exif['Date Time Original'];
             return resolve({
                 ...value.size,
-                shot_at: parseDate(value['Profile-EXIF']['Date Time Original'])
+                shot_at: dateTimeOrig ? parseDate(dateTimeOrig) : new Date()
             });
         });
     });
