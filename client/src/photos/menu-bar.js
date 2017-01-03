@@ -21,11 +21,15 @@ class MenuBar extends PureComponent {
 
     handleKeyDown(e) {
         const keyCode = e.keyCode || e.detail.keyCode;
-        if (TOGGLE_KEYS.indexOf(keyCode) !== -1) {
+        if (this.isClickable() && TOGGLE_KEYS.indexOf(keyCode) !== -1) {
             e.preventDefault();
             e.stopPropagation();
             this.handleClickDetails();
         }
+    }
+
+    isClickable() {
+        return this.props.photo.mode === 'landscape';
     }
 
     render() {
@@ -39,8 +43,8 @@ class MenuBar extends PureComponent {
 
                     <div
                         className={photo.detailsActive ? 'expanded' : ''}
-                        tabIndex="0" onKeyDown={this.handleKeyDown}>
-                        <div>+</div>
+                        tabIndex={this.isClickable() ? 0 : -1} onKeyDown={this.handleKeyDown}>
+                        <span>+</span>
                     </div>
                 </div>
             </div>

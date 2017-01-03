@@ -19,7 +19,7 @@
         font-size: 50px;
 
         > div {
-            padding: 10px;
+            height: 75px;
         }
 
         &.portrait {
@@ -29,11 +29,15 @@
         &.landscape {
             cursor: pointer;
             > div {
-                transition: .2s ease-in-out;
+                > span {
+                    display: inline-block; // tillater rotering uten å endre outline ved rotasjon
+                    transition: .2s ease-in-out;
+                }
 
                 &.expanded {
                     background-color: #000;
-                    > div {
+                    outline: none; // outline ødelegger venstre side av firkanten
+                    > span {
                         color: #fff;
                         transform: rotate(45deg);
                     }
