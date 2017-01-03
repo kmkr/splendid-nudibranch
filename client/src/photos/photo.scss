@@ -35,7 +35,9 @@
 }
 
 .photo-wrapper {
-    width: 95%; // meny er 5%
+    @include media-breakpoint-up(xl) {
+        width: 95%; // meny er 5%
+    }
     img {
         max-width: 100%;
     }
