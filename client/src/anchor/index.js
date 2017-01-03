@@ -61,7 +61,8 @@ Anchor.propTypes = {
 
 function select(state) {
     return {
-        scroll: state.scroll
+        scroll: state.scroll,
+        photoPositions: state.photos.data.map(d => d.position)
     };
 }
 
