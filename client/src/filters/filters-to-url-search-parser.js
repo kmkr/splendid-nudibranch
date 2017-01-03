@@ -1,4 +1,4 @@
-export default (filters = []) => {
+export default (filters = {}) => {
     const keys = Object.keys(filters);
     if (!keys.length) {
         return '';

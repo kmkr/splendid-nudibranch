@@ -56,14 +56,14 @@ class ListPhotos extends PureComponent {
 }
 
 ListPhotos.propTypes = {
-    activeFilters: PropTypes.array,
+    activeFilters: PropTypes.object,
     onPhotoLoad: PropTypes.func.isRequired,
     photos: PropTypes.array.isRequired,
     visibleEnd: PropTypes.number
 };
 
 ListPhotos.defaultProps = {
-    activeFilters: []
+    activeFilters: {}
 };
 
 export default ListPhotos;
