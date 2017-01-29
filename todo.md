@@ -6,7 +6,7 @@ Hilde:
 
 KM:
 
-- Få svart greie til å følge bilde
+- Send stats uavhengig av photo-section slik at toggled oppdaterer sending
 - Bytt til less for å slippe den native dep-greia
 - Vurder å bruke route.param for å hente param-data (som f.eks photo)
 - Sjekk performance-forbedring med rollup

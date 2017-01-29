@@ -18,6 +18,7 @@ function getData(content = {}) {
     return {
         id: uid,
         innerHeight,
+        toggled: Object.keys(toggled).length,
         ...content
     };
 }
@@ -41,3 +42,6 @@ function beaconSend(content = {}) {
 
 export const postStats = debounce(send, DELAY);
 export const beaconStats = beaconSend;
+export const trackToggle = key => {
+    toggled[key] = true;
+};

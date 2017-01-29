@@ -45,7 +45,7 @@ class Anchor extends Component {
     }
 
     render() {
-        const {dispatch, scroll, ...props} = this.props; // eslint-disable-line no-unused-vars
+        const {dispatch, scroll, photoPositions, ...props} = this.props; // eslint-disable-line no-unused-vars
         return (
             <div
                 ref={div => this.anchor = div}

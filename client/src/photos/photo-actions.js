@@ -1,5 +1,6 @@
 import actionTypes from './photo-action-types';
 import {serverToClient} from '../../../common/photo-data-conversion';
+import {trackToggle} from '../statistics';
 
 function firstXWithDescription(photos, num = 5) {
     let foundNum = 0;
@@ -61,6 +62,7 @@ export function photoLoaded(key) {
 }
 
 export function toggleDetails(key) {
+    trackToggle(key);
     return {
         type: actionTypes.TOGGLE_PHOTO_DETAILS,
         data: {
