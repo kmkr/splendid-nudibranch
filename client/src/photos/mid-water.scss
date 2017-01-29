@@ -23,13 +23,21 @@
     }
 
     .link {
-        font-size: 50px;
         text-transform: uppercase;
         padding: 5%;
         text-align: center;
         flex-basis: 65%;
-        a {
+
+        p {
             color: #fff;
+            font-size: 25px;
+            margin-bottom: 0;
+        }
+
+        a {
+            font-size: 50px;
+            color: #fff;
+            text-decoration: none;
         }
     }
 }

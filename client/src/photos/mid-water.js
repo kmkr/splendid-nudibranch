@@ -39,6 +39,7 @@ class MidWaterSection extends PureComponent {
                                 <img src="/static/images/jellyfish.svg" />
                             </div>
                             <div className="link">
+                                <p>NO MORE IMAGES FOR YOUR CHOSEN FILTER</p>
                                 <a href="#" onClick={this.scrollToNextPhoto}>EXPLORE MORE</a>
                             </div>
                         </div>
