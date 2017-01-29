@@ -37,6 +37,7 @@
 .photo-wrapper {
     @include media-breakpoint-up(xl) {
         width: 95%; // meny er 5%
+        position: relative;
     }
     img {
         max-width: 100%;
@@ -69,6 +70,9 @@
     }
 
     &.landscape {
+        .photo {
+            display: flex; // Workaround for bug der div.photo tar større høyde enn img på innsiden
+        }
         .text {
             @include media-breakpoint-up(xl) {
                 background-color: #000;
@@ -82,7 +86,7 @@
                 padding-top: 100px;
                 &.expanded {
                     transform: translate3d(0, 0, 0);
-                    right: 5%;
+                    right: 0;
                     padding-left: 10px;
                     padding-right: 10px;
                 }
