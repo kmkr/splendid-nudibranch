@@ -748,7 +748,7 @@ Title           The Hilma Hooker
 Location		Bonaire, The Netherlands
 Tags			2016 wreck
 Latin
-Description     After loosing power off the coast of Bonaire, The Hilma Hooker was towed to the island's main pier. As this ship already was suspected by the DEA, a search was quickly conducted and 11.000 kg of marijuana was found. The owner of the ship however, was not. Hilma Hooker was starting to wear down and the hull was in dire need of maintenance. It was towed a couple of kilometers south in fear of disrupting boat traffic in case it sunk, which it promtly did. Now it's a great dive site, easily accessible on the western coast of Bonaire.
+Description     After losing power off the coast of Bonaire, The Hilma Hooker was towed to the island's main pier. As this ship already was suspected by the DEA, a search was quickly conducted and 11.000 kg of marijuana was found. The owner of the ship however, was not. Hilma Hooker was starting to wear down and the hull was in dire need of maintenance. It was towed a couple of kilometers south in fear of disrupting boat traffic in case it sunk, which it promtly did. Now it's a great dive site, easily accessible on the western coast of Bonaire.
 
 
 DSC01646.jpg
