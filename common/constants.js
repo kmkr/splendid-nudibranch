@@ -23,6 +23,11 @@ export const resizeTo = [
         name: 'large',
         shortName: 'l',
         width: 1900
+    },
+    {
+        name: 'xlarge',
+        shortName: 'xl',
+        width: 2560
     }
 ];
 
