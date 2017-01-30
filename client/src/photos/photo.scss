@@ -124,22 +124,21 @@
                 font-size: 20px;
             }
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
             margin-bottom: 0px; /* Otherwise latin name comes too close */
         }
 
         .latin {
             font-size: $font-size-small;
             margin-bottom: 30px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-        }
-
-        .description, .latin, .location {
-            font-weight: 400;
         }
 
         .location {
             margin-top: 40px;
+            letter-spacing: 1.5px;
+            font-size: $font-size-small;
             text-transform: uppercase;
         }
     }
