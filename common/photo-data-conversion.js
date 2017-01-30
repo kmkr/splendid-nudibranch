@@ -20,18 +20,25 @@ export function serverToClient(photoFromServer, base) {
         location: photoFromServer.location,
         tags: photoFromServer.tags,
         mode: getMode(photoFromServer.resize),
-        sizes: resizeTo.reduce((prev, current) => ({
-            ...prev,
-            [current.name]: {
-                url: buildUrl(
-                    base,
-                    photoFromServer.key,
-                    photoFromServer.name,
-                    current.shortName
-                ),
-                width: photoFromServer.resize[current.name].width,
-                height: photoFromServer.resize[current.name].height
+        sizes: resizeTo.reduce((prev, current) => {
+            if (!photoFromServer.resize[current.name]) {
+                console.log(`Warning: missing size ${current.name} for ${photoFromServer.name}`);
+                return prev;
             }
-        }), {})
+
+            return {
+                ...prev,
+                [current.name]: {
+                    url: buildUrl(
+                        base,
+                        photoFromServer.key,
+                        photoFromServer.name,
+                        current.shortName
+                    ),
+                    width: photoFromServer.resize[current.name].width,
+                    height: photoFromServer.resize[current.name].height
+                }
+            };
+        }, {})
     };
 }

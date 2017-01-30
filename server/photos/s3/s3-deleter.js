@@ -13,7 +13,7 @@ export function deletePhoto(key) {
     return new Promise((resolve, reject) => {
         return listItems(key)
             .then(data => {
-                if (data.length !== expectNumberOfKeys()) {
+                if (data.length > expectNumberOfKeys()) {
                     return reject(`Expected ${expectNumberOfKeys()} keys with prefix ${key}, but found ${data.length}. Aborting deletion`);
                 }
 
