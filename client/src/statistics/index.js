@@ -6,6 +6,7 @@ import snFetch from '../fetch';
 
 const DELAY = 3000;
 const uid = idGenerator.uid();
+const toggled = {};
 
 function doNotTrack() {
     const {navigator, doNotTrack} = window;
