@@ -11,8 +11,7 @@
 
 .photo-and-text-wrapper {
     @include media-breakpoint-up(xl) {
-        @include height(95);
-        margin-bottom: 10px; // For å unngå en glipe mellom bildet og title-bar
+        @include height(100);
         position: relative;
 
         img {
@@ -43,6 +42,10 @@
         max-width: 100%;
     }
 
+    .photo {
+        display: flex; // Workaround for bug der div.photo tar større høyde enn img på innsiden
+    }
+
     &.portrait {
         @include media-breakpoint-down(lg) {
             img {
@@ -53,26 +56,24 @@
             }
         }
         @include media-breakpoint-up(xl) {
-            background-color: lightgrey;
-            display: flex;
-            .photo {
-                flex-shrink: 1;
-            }
-            .text {
-                align-self: center;
-                flex-grow: 1;
-            }
+            .photo-flex-wrapper {
+                display: flex;
+                .photo {
+                    flex-shrink: 1;
+                }
+                .text {
+                    align-self: center;
+                    flex-grow: 1;
+                }
 
-            .text-wrapper {
-                margin: 0 auto;
+                .text-wrapper {
+                    margin: 0 auto;
+                }
             }
         }
     }
 
     &.landscape {
-        .photo {
-            display: flex; // Workaround for bug der div.photo tar større høyde enn img på innsiden
-        }
         .text {
             @include media-breakpoint-up(xl) {
                 background-color: #000;
@@ -116,7 +117,7 @@
         }
 
         .title {
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.2;
             font-size: $font-size-large;
             @include media-breakpoint-down(lg) {
@@ -139,6 +140,23 @@
 
         .location {
             margin-top: 40px;
+            text-transform: uppercase;
+        }
+    }
+
+    .title-bar {
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include height(5);
+            position: relative;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            font-size: 22px;
             text-transform: uppercase;
         }
     }

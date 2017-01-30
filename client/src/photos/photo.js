@@ -39,20 +39,25 @@ class Photo extends PureComponent {
                 <div className={`photo-and-text-wrapper ${!this.state.showComponent ? 'loading' : ''}`}>
                     <MenuBar photo={photo}/>
                     <div className={`photo-wrapper ${photo.mode}`}>
-                        <div className="photo">
-                            <TransitionImage
-                                onLoad={this.onLoad}
-                                src={photo.sizes.large.url}
-                                sizes="(min-width: 1360px) 95vw"
-                                srcSet={srcSet}/>
-                        </div>
-                        <div className={`text ${photo.detailsActive ? 'expanded' : ''}`}>
-                            <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
-                                <p className="title">{photo.title}</p>
-                                <p className="latin">{photo.latin}</p>
-                                <p className="description">{photo.description}</p>
-                                <p className="location">{photo.location}</p>
+                        <div className="photo-flex-wrapper">
+                            <div className="photo">
+                                <TransitionImage
+                                    onLoad={this.onLoad}
+                                    src={photo.sizes.large.url}
+                                    sizes="(min-width: 1360px) 95vw"
+                                    srcSet={srcSet}/>
                             </div>
+                            <div className={`text ${photo.detailsActive ? 'expanded' : ''}`}>
+                                <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
+                                    <p className="title">{photo.title}</p>
+                                    <p className="latin">{photo.latin}</p>
+                                    <p className="description">{photo.description}</p>
+                                    <p className="location">{photo.location}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="title-bar">
+                            <span>{photo.title}</span>
                         </div>
                     </div>
                 </div>
