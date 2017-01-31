@@ -13,13 +13,12 @@
     "prepackage": "rimraf lib/",
     "package": "npm run package:client && npm run package:server",
     "package:client": "NODE_ENV=production webpack -p --config client/webpack.config.js",
-    "package:server": "NODE_ENV=production babel server --out-dir lib/server && babel common --out-dir lib/common && ncp ./server/static/images ./lib/server/static/images && node build-scripts/move-layouts.js",
+    "package:server": "babel server --out-dir lib/server && babel common --out-dir lib/common && ncp ./server/static/images ./lib/server/static/images && node build-scripts/move-layouts.js",
     "lint": "eslint .",
     "test": "ava",
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "autoprefixer": "^6.5.3",
     "aws-sdk": "^2.7.7",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
@@ -32,11 +31,9 @@
     "mongodb": "^2.2.11",
     "morgan": "^1.7.0",
     "multer": "^1.2.0",
-    "ncp": "^2.0.0",
-    "object.entries": "^1.0.3",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-redux": "^4.4.6",
+    "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-logger": "^2.7.4",
     "redux-thunk": "^2.1.0",
@@ -45,6 +42,7 @@
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
+    "autoprefixer": "^6.5.3",
     "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
@@ -59,15 +57,15 @@
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.7.1",
     "exports-loader": "^0.6.3",
-    "node-sass": "^3.13.0",
+    "node-sass": "^4.4.0",
+    "ncp": "^2.0.0",
     "postcss-loader": "^1.1.1",
-    "proxyquire": "^1.7.10",
     "precss": "^1.4.0",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.3"
+    "webpack": "^2.2.1"
   },
   "ava": {
     "files": [

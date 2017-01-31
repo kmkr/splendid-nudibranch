@@ -15,33 +15,38 @@ module.exports = {
         filename: '[name].js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                query: {
+                options: {
                     presets: ['es2015', 'react']
                 }
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'eslint-loader'
+                use: 'eslint-loader'
             },
             {
                 test: /\.scss$/,
-                loaders: ['style', 'css', 'postcss', 'sass']
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             }
         ]
-    },
-    postcss() {
-        return [precss, autoprefixer];
     },
     plugins: [
         new webpack.DefinePlugin({
             '__DEV__': JSON.stringify(env !== 'production'),
             'process.env.NODE_ENV': JSON.stringify(env || 'development')
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    precss(),
+                    autoprefixer()
+                ]
+            }
         })
     ]
 };

@@ -2,7 +2,6 @@ import React from 'react';
 import Style from './style';
 import License from './license';
 import ogTags from './og-tags';
-import entries from 'object.entries';
 
 import {description} from '../../../common/constants';
 
@@ -14,7 +13,7 @@ const Layout = ({children, data, keywords, selectedPhotoKey, year, location}) =>
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             {keywords && <meta name="keywords" content={keywords} />}
             <meta name="description" content={`Author: Kris-Mikael Krister, Illustrator: Hilde. D. Johannessen, ${description}`} />
-            {entries(ogTags(data, {selectedPhotoKey, year, location})).map(entry => (
+            {Object.entries(ogTags(data, {selectedPhotoKey, year, location})).map(entry => (
                 <meta
                     key={entry[0]}
                     property={entry[0]}
