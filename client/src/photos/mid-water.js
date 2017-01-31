@@ -34,10 +34,13 @@ class MidWaterSection extends PureComponent {
                         name=""
                         className="water-column">
 
+                        <div className="jellyfishes">
+                            <img className="jellyfish-1" src="/static/images/jellyfish-white.svg" />
+                            <img className="jellyfish-2" src="/static/images/jellyfish-white.svg" />
+                            <img className="jellyfish-3" src="/static/images/jellyfish-white.svg" />
+                        </div>
+
                         <div className="wrapper" onClick={this.scrollToNextPhoto}>
-                            <div className="images">
-                                <img src="/static/images/jellyfish.svg" />
-                            </div>
                             <div className="link">
                                 <p>NO MORE IMAGES FOR YOUR CHOSEN FILTER</p>
                                 <a href="#" onClick={this.scrollToNextPhoto}>EXPLORE MORE</a>

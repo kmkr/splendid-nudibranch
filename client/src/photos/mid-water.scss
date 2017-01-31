@@ -9,17 +9,36 @@
 
     .wrapper {
         align-items: center;
+        justify-content: center;
         display: flex;
         @include height();
     }
 
-    .images {
-        flex-basis: 35%;
-        flex-shrink: 1;
-        padding-left: 5%;
-        img {
-            width: 100%;
+    .jellyfishes {
+        @include media-breakpoint-down(lg) {
+            display: none;
         }
+    }
+
+    .jellyfish-1 {
+        position: absolute;
+        top: 7%;
+        width: 7%;
+        left: 5%;
+    }
+
+    .jellyfish-2 {
+        position: absolute;
+        top: 35%;
+        width: 5%;
+        left: 15%;
+    }
+
+    .jellyfish-3 {
+        position: absolute;
+        top: 60%;
+        width: 4%;
+        left: 9%;
     }
 
     .link {
