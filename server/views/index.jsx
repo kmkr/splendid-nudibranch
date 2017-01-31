@@ -1,10 +1,12 @@
 import React from 'react';
 import Layout from './layouts/default';
 
-const Index = ({data, keywords, selectedPhotoKey}) => (
+const Index = ({data, keywords, selectedPhotoKey, year, location}) => (
     <Layout
         data={data}
         keywords={keywords}
+        year={year}
+        location={location}
         selectedPhotoKey={selectedPhotoKey}>
         <div>
             <div id="app">

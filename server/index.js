@@ -34,7 +34,7 @@ app.use(bodyParser.text());
 app.use(auth);
 app.use('/static', express.static(`${__dirname}/static`));
 
-function photoIndex(res, selectedPhotoKey) {
+function photoIndex(res, {photoKey, year, location}) {
     return (
         Promise.all([
             viewDataService.getPhotoData(),
@@ -43,18 +43,20 @@ function photoIndex(res, selectedPhotoKey) {
             data: {
                 photoData
             },
-            selectedPhotoKey,
+            selectedPhotoKey: photoKey,
+            year,
+            location,
             keywords
         }))
     );
 }
 
 app.get('/', (req, res) => {
-    photoIndex(res);
+    photoIndex(res, {year: req.query.year, location: req.query.location});
 });
 
 app.get('/photos/:key', (req, res) => {
-    photoIndex(res, req.params.key);
+    photoIndex(res, {photoKey: req.params.key, year: req.query.year, location: req.query.location});
 });
 
 app.get('/admin', (req, res) => {

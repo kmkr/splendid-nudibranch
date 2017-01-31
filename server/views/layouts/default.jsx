@@ -6,7 +6,7 @@ import entries from 'object.entries';
 
 import {description} from '../../../common/constants';
 
-const Layout = ({children, data, keywords, selectedPhotoKey}) => (
+const Layout = ({children, data, keywords, selectedPhotoKey, year, location}) => (
     <html>
         <head>
             <title>The Splendid Nudibranch</title>
@@ -14,7 +14,7 @@ const Layout = ({children, data, keywords, selectedPhotoKey}) => (
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             {keywords && <meta name="keywords" content={keywords} />}
             <meta name="description" content={`Author: Kris-Mikael Krister, Illustrator: Hilde. D. Johannessen, ${description}`} />
-            {entries(ogTags(data, selectedPhotoKey)).map(entry => (
+            {entries(ogTags(data, {selectedPhotoKey, year, location})).map(entry => (
                 <meta
                     key={entry[0]}
                     property={entry[0]}
