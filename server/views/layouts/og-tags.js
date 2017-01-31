@@ -20,10 +20,17 @@ export default (data, {selectedPhotoKey, year, location}) => {
         };
     }
 
+    let url = 'http://www.thesplendidnudibranch.pink';
+    if (location || year) {
+        url += '/?';
+    }
+
+    url += Object.entries({location, year}).filter(e => e[1]).map(entry => `${entry[0]}=${entry[1]}`).join('&');
+
     return {
         'og:title': 'The Splendid Nudibranch',
         'og:site_name': 'The Splendid Nudibranch',
-        'og:url': 'http://www.thesplendidnudibranch.pink',
+        'og:url': url,
         'og:description': year || location ? ['Photos from', location, year].filter(e => e).join(' ') : description,
         'og:image': 'http://www.thesplendidnudibranch.pink/static/images/logo.png',
         'og:image:width': 1300,
