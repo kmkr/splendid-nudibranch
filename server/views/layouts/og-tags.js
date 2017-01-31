@@ -26,8 +26,11 @@ export default (data, {selectedPhotoKey, year, location}) => {
     let title;
     if (location || year) {
         url += '/?';
-        title = ['Photos from', location, year]
+        title = [location, year]
             .filter(e => e)
+            .map(str => (
+                str.charAt(0).toUpperCase() + str.slice(1)
+            ))
             .join(' ') + ` :: ${name}`;
     }
 
