@@ -676,7 +676,7 @@ Title			Spotted Moray Eel
 Location		Bonaire, The Netherlands
 Tags			2016 eel
 Latin			Gymnothorax moringa
-Description     Unlike most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag their prey inside their mouths.
+Description     Unlike most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag prey inside their mouths.
 
 
 
@@ -794,3 +794,195 @@ Location		Bonaire, The Netherlands
 Tags			2016 worm
 Latin           Spirobranchus giganteus
 Description     This pair of feather-like tentacles, called radioles, is used for respiration and to catch floating plankton and microscopic plants. Each worm has one pair of these radioles.
+
+
+
+DSC02379.jpg
+
+Title           Tiger Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Galeocerdo cuvier
+Description     The tigers have excellent sense of smell and sight, and some native Hawaiians think their eyeballs have seeing powers.
+
+
+
+DSC02397.jpg
+
+Title           Scalloped Hammerhead Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Sphyrna lewini
+Description     All of our dives on Cocos featured hammerheads, most shy and in the distance like here. One of my best memories from Cocos were the ascent on a site called Manuelita, which we dove many times. What we didn't realize at first was that the hammerheads had disperged and moved away when we got there. Immediately when we started our ascend they started to return. During our safety stop we saw the hoards coming from all directions and reuniting at the cleaning stations on the ocean floor.
+
+
+DSC02499.jpg
+
+Title           Scalloped Hammerhead Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Sphyrna lewini
+Description     The wide-set eyes give hammerheads an excellent visual range, better than most sharks.
+
+
+DSC02650.jpg
+
+Title           Scalloped Hammerhead Sharks
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Sphyrna lewini
+Description
+
+
+DSC02872.jpg
+
+Title           Whitetip Reef Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Triaenodon obesus
+Description
+
+
+DSC02949.jpg
+
+Title           Starry Grouper
+Location		Cocos Island, Costa Rica
+Tags			2017
+Latin           Epinephelus labriformis
+Description     Groupers typically have large mouths, fat libs and stout bodies. This one is a small grouper, but still fearless enough to just stare back when I was snapping a shot.
+
+
+DSC03000.jpg
+
+Title           Scalloped Hammerhead Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Sphyrna lewini
+Description     Hammerheads are often seen in large schools during the day, but at night they feed solitary. The stingray is it's favored prey.
+
+
+DSC03018.jpg
+
+Title           Whitetip Reef Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Triaenodon obesus
+Description     Whitetip sharks have a grumpy look, somewhat opposite of the dolphins' constant happy looking face.
+
+
+DSC03040.jpg
+
+Title           Whitetip Reef Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Triaenodon obesus
+Description     Whitetips feed at night and their usual shy attitude during daytime switch completely. You swim with hundreds of sharks when diving at night on Cocos. This dive is one of my all-time favorites.
+
+
+DSC03044.jpg
+
+Title           Whitetip Reef Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Triaenodon obesus
+Description     The whitetip sharks let me close enough to get slapped by their caudal fins.
+
+
+
+DSC03124.jpg
+
+Title           Jordans Snapper
+Location		Cocos Island, Costa Rica
+Tags			2017 school
+Latin           Lutjanus jordani
+Description
+
+
+DSC03216.jpg
+
+Title           Chestnut Moray Eel
+Location		Cocos Island, Costa Rica
+Tags			2017 eel
+Latin           Gymtothorax castaneus
+Description
+
+
+DSC03242.jpg
+
+Title           Spotted Eagle Ray
+Location		Cocos Island, Costa Rica
+Tags			2017 ray
+Latin           Aetobatus narinari
+Description     The gorgeous eagle rays can grow up to five meters, including a whip-like tail.
+
+
+DSC03276.jpg
+
+Title           Spotted Scorpion Fish
+Location		Cocos Island, Costa Rica
+Tags			2017
+Latin           Scorpaena plumieri
+Description     Skin flaps and feathery fins helps this fish with camouflage against the surrounding coral.
+
+
+DSC03543.jpg
+
+Title           Giant Frogfish
+Location		Cocos Island, Costa Rica
+Tags			2017 frogfish
+Latin           Antennarius commerson
+Description     Frogfish don't have swim bladders. Instead they walk on the ocean floor using their non-traditional fins.
+
+
+DSC03559.jpg
+
+Title           Scalloped Hammerhead Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Sphyrna lewini
+Description
+
+
+DSC03596.jpg
+
+Title           Round Ribbontail Ray
+Location		Cocos Island, Costa Rica
+Tags			2017
+Latin           Taeniura meyeni
+Description     This type of ray is overfished in almost across much of it's range. However, they thrive around Cocos and we saw them on almost all dives.
+
+
+DSC03628.jpg
+
+Title           Scalloped Hammerhead Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Sphyrna lewini
+Description
+
+
+DSC03638.jpg
+
+Title           Scalloped Hammerhead Shark
+Location		Cocos Island, Costa Rica
+Tags			2017 shark
+Latin           Sphyrna lewini
+Description     Sharks can detect electrical fields created by other animals using specialized sensory organs. For the hammerheads, these organs are spread over the oddly wide-shaped head to boost the sensitivity.
+
+
+DSC04037.jpg
+
+Title           Southern Stingray
+Location		Caño Island, Costa Rica
+Tags			2017 ray
+Latin           Dasyatis americana
+Description     The flat body has sharp corners and allows the stingray to efficiently bury itself in the sand to avoid predators.
+
+
+DSC04072.jpg
+
+Title           Spottail grunt
+Location		Caño Island, Costa Rica
+Tags			2017 school
+Latin           Haemulon maculicauda
+Description     Longer and thinner than most grunts, the spottail is named after the black botch at the base of their caudal fins.
