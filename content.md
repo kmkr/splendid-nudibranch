@@ -676,7 +676,7 @@ Title			Spotted Moray Eel
 Location		Bonaire, The Netherlands
 Tags			2016 eel
 Latin			Gymnothorax moringa
-Description     Unline most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag their prey inside their mouths.
+Description     Unlike most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag their prey inside their mouths.
 
 
 
@@ -696,7 +696,7 @@ Title			Green Turtle
 Location		Bonaire, The Netherlands
 Tags			2016 turtle
 Latin			Chelonia mydas
-Description     The green turtle inhabit coastal areas of as many as 140 countries. Together, The Caribbean Islands have one of the largest populations of green turtles in the world.
+Description     The green turtles inhabit coastal areas of as many as 140 countries. The Caribbean Islands have one of the largest populations of green turtles in the world.
 
 
 DSC00631.jpg
@@ -744,7 +744,7 @@ Description     The entire coastline of Bonaire's leeside is fringed by a beauti
 
 DSC01316.jpg
 
-Title           The Hilma Hooker
+Title           The Hilma Hooker Wreck
 Location		Bonaire, The Netherlands
 Tags			2016 wreck
 Latin
@@ -785,7 +785,6 @@ Location		Bonaire, The Netherlands
 Tags			2016 eel
 Latin           Echidna catenata
 Description
-
 
 
 DSC02188.jpg
