@@ -38,6 +38,7 @@ class PhotoScroller extends PureComponent {
 
         const selectedTagPhotos = photos.filter(p => filterMatcher(p, filters));
         const nonSelectedTagPhotos = photos.filter(p => !filterMatcher(p, filters));
+        const showNonSelectedTagPhotos = selectedTagPhotos.every(p => p.loaded);
 
         const visibleEndNonSelected = Math.max(1, this.state.visibleEnd - selectedTagPhotos.length);
         return (
@@ -53,11 +54,14 @@ class PhotoScroller extends PureComponent {
                         <div id="post-mid-water"/>
                     </div>
                 }
-                <ListPhotos
-                    onPhotoLoad={onPhotoLoad}
-                    photos={nonSelectedTagPhotos}
-                    visibleEnd={visibleEndNonSelected} />
 
+                {showNonSelectedTagPhotos && (
+                    <ListPhotos
+                        onPhotoLoad={onPhotoLoad}
+                        photos={nonSelectedTagPhotos}
+                        visibleEnd={visibleEndNonSelected} />
+
+                )}
                 <div ref="photo-list-wrapper" />
             </div>
         );
