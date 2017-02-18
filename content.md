@@ -61,15 +61,6 @@ Tags			shark 2013
 Description		Malapascua is known for its legendary thresher sharks. They are usually found in deep waters, but when the sun starts to rise they ascend to the cleaning stations on the sloaps of Monad Shoal. Diving starts 05.00 am.
 
 
-DSC01725.jpg
-
-Title			Nudibranch
-Location		Malapascua, The Philippines
-Latin			Chromodoris sp.
-Tags			2013 nudibranch
-Description
-
-
 DSC01782.jpg
 
 Title			Blackfin Barracuda
@@ -130,15 +121,6 @@ Location		Anilao, The Philippines
 Latin			Pontonides unciger
 Tags			2014 shrimp
 Description		Lives exclusively on the black coral whip, usually in pairs. I found only one, but they are very well camouflaged and small, so perhaps a second companion was around somewhere. You may wonder why the whip is called black coral when it's bright green, and the reason is due to its black inner skeleton. The outer flesh varies in color and P. Unciger shrimps adapt by changing their own skin to match the coral's color.
-
-
-DSC02931.jpg
-
-Title			Shortfin Lionfish
-Location		Anilao, The Philippines
-Latin			Dendrochirus brachypterus
-Tags			2014 scorpionfish lionfish
-Description
 
 
 DSC02955.jpg
@@ -382,15 +364,6 @@ Location		Anilao, The Philippines
 Tags			2014
 Latin			Hypselodoris emma
 Description
-
-
-DSC05829.jpg
-
-Title			The Red Sea
-Location		Egypt
-Tags			2014
-Latin
-Description		Surrounded by deserts and with few connected rivers carrying runoff, the Red Sea's visibility is very pleasant.
 
 
 DSC06145.jpg
