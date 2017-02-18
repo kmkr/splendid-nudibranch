@@ -827,7 +827,7 @@ Description     The wide-set eyes give hammerheads an excellent visual range, be
 
 DSC02650.jpg
 
-Title           Scalloped Hammerhead Sharks
+Title           Scalloped Hammerhead Shark
 Location		Cocos Island, Costa Rica
 Tags			2017 shark
 Latin           Sphyrna lewini
@@ -852,15 +852,14 @@ Latin           Epinephelus labriformis
 Description     Groupers typically have large mouths, fat libs and stout bodies. This one is a small grouper, but still fearless enough to just stare back when I was snapping a shot.
 
 
-DSC02987
-
-DSC02949.jpg
+DSC02987.jpg
 
 Title           Pronghorn Spiny Lobster
 Location		Cocos Island, Costa Rica
 Tags			2017 lobster
 Latin            Panulirus penicillatus
-Description     
+Description
+
 
 DSC03000.jpg
 
