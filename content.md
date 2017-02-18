@@ -49,7 +49,7 @@ Title			Garden Eels
 Location		Dumaguete, The Philippines
 Tags			eel 2013
 Latin
-Description		Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over thousand individuals. Each eel has its own burrow in the sand that it seldom leaves.
+Description		Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over a thousand individuals. Each eel has its own burrow in the sand that it seldom leaves.
 
 
 DSC01151.jpg
@@ -93,7 +93,7 @@ Title			Fire Urchin
 Location		Anilao, The Philippines
 Latin			Astropyga radiata
 Tags			2014 urchin
-Description		Often found in shallow areas, this type of urchin sometimes carpet the sandy floor in large aggregations. Having iridescent blue dots, radiant bodies and long spines, they contribute to bright up the muddy coast of Anilao.
+Description		Often found in shallow areas, this type of urchin sometimes carpet the sandy floor in large aggregations. Having iridescent blue dots, radiant bodies and long spines, they contribute to brighten up the muddy coast of Anilao.
 
 
 DSC02569.jpg
@@ -129,7 +129,7 @@ Title			Wire Coral Shrimp
 Location		Anilao, The Philippines
 Latin			Pontonides unciger
 Tags			2014 shrimp
-Description		Lives exclusively on the black coral whip, usually in pairs. I found only one, but they are very well camouflaged and small, so perhaps a second companion was around somewhere. You may wonder why the whip is called black coral when it's bright green, and the reason is due to its black inner skeleton. The outer flesh varies in color and P. Unciger shrimps adept by changing their own skin to match the coral's color.
+Description		Lives exclusively on the black coral whip, usually in pairs. I found only one, but they are very well camouflaged and small, so perhaps a second companion was around somewhere. You may wonder why the whip is called black coral when it's bright green, and the reason is due to its black inner skeleton. The outer flesh varies in color and P. Unciger shrimps adapt by changing their own skin to match the coral's color.
 
 
 DSC02931.jpg
@@ -183,7 +183,7 @@ Title			Coleman's Shrimp
 Location		Anilao, The Philippines
 Latin			Periclimenes colemani
 Tags			2014 shrimp urchin
-Description		The pair of shrimps clears a little patch on the fire urchin with their claws, just enough to move freely around collecting small pieces of food while still being protected from predators by the urchin's toxic spines. The largest of the shrimps is always the female.
+Description		The pair of shrimp clears a little patch on the fire urchin with their claws. The patch is just large enough to move freely around collecting small pieces of food while still being protected from predators by the urchin's toxic spines. The largest of the shrimps is always the female.
 
 
 DSC03425.jpg
@@ -192,7 +192,7 @@ Title			Bobbit Worm
 Location		Anilao, The Philippines
 Latin			Eunice aphroditois
 Tags			worm 2014
-Description		The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Most of the body is covered in sand, just enough is exposed to ambush surprised fish. This worm is quite rare, shy, and mysterious as well so little is known about its behaviour. It's theorized that the worm doesn’t see at all but use its excellent receptors to movements in the water to sense nearby fish.
+Description		The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Most of the body is covered in sand, just enough is exposed to ambush surprised fish. This worm is quite rare, shy, and mysterious. Little is known about its behaviour. It's theorized that the worm doesn’t see at all but uses its excellent receptors to detect movement in the water to sense nearby fish.
 
 
 DSC03448.jpg
@@ -201,7 +201,7 @@ Title			Reticulate Stargazer
 Location		Anilao, The Philippines
 Latin			Uranoscopus chinensis
 Tags			stargazer 2014
-Description		Night dives at the Anilao pier feels like something from another world. The sandy bottom comes to life from all the crabs, shrimps, worms, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site turns to a large scale battlefield when the sun sets. A stargazer approached us in the midst of the chaos, landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. He waits for passing fish before jumping upwards while creating a vacuum to suck in the prey.
+Description		Night dives at the Anilao pier feel like something from another world. The sandy bottom comes to life with all the crabs, shrimps, worms, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site turns to a large scale battlefield when the sun sets. A stargazer approached us in the midst of the chaos, landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. He waits for passing fish before jumping upwards while creating a vacuum to suck in the prey.
 
 
 DSC03660.jpg
@@ -210,7 +210,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Nembrotha chamberlaini
 Tags			nudibranch 2014
-Description		Nudibranch's eyes are located inside the body with only about a quarter of a millimeter in diameter. These simple eyes are only coarsly able to discern differences in light intensity.
+Description		Nudibranch's eyes are located inside the body and measure about a quarter of a millimeter in diameter. These simple eyes are only coarsly able to discern differences in light intensity.
 
 
 DSC03699.jpg
@@ -255,7 +255,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Hypselodoris bullocki
 Tags			nudibranch 2014
-Description		Nudibranch have external gills (yellow rosette on the back), hence its name, which translates to "naked gill".
+Description		Nudibranchs have external gills (the yellow rosette on the back), hence its name, which translates to "naked gill".
 
 
 DSC04020.jpg
@@ -572,7 +572,7 @@ Title			Juvenile Blacktip Reef Shark
 Location		Perhentian Besar, Malaysia
 Tags			2015 shark
 Latin			Carcharhinus melanopterus
-Description		These, and many more, juvenile sharks were eager to become grown-up-sharks and tried to hunt small fish all day long. They didn't seem to bother me too much and allowed me to swim with them while they were hunting.
+Description		These, and many more, juvenile sharks were eager to become grown-up-sharks and tried to hunt small fish all day long. They didn't seem to mind me too much and allowed me to swim with them while they were hunting.
 
 
 DSC09129.jpg
@@ -617,7 +617,7 @@ Title			Potato Cod
 Location		Cod Hole, Great Barrier Reef, Australia
 Tags			2013 cod
 Latin			Epinephelus tukula
-Description		A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once located. They seem to chill out at the same place, getting cleaned by wrasses. One of the potato cods on the barrier reef were so large it was nicknamed VW Beetle.
+Description		A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once located. They seem to chill out at the same place, getting cleaned by wrasses. One of the potato cods on the barrier reef was so large it was nicknamed VW Beetle.
 
 
 Kris Krister 453.jpg
@@ -646,7 +646,7 @@ Title			Common Starfish
 Location		Gulen, Norway
 Tags			2016 starfish
 Latin			Asterias rubens
-Description		In addition to have the ability to regenerate limbs, most sea stars are able to eat outside of their bodies by moving its stomach inside the prey to ingest it.
+Description		In addition to having the ability to regenerate limbs, most sea stars are able to eat outside of their bodies by moving its stomach inside the prey to ingest it.
 
 
 
@@ -803,7 +803,7 @@ Title           Tiger Shark
 Location		Cocos Island, Costa Rica
 Tags			2017 shark
 Latin           Galeocerdo cuvier
-Description     The tigers have excellent sense of smell and sight, and some native Hawaiians think their eyeballs have seeing powers.
+Description     The tigers have excellent sense of smell and sight, and some native Hawaiians think their eyeballs have the power to look into the future.
 
 
 
@@ -813,7 +813,7 @@ Title           Scalloped Hammerhead Shark
 Location		Cocos Island, Costa Rica
 Tags			2017 shark
 Latin           Sphyrna lewini
-Description     All of our dives on Cocos featured hammerheads, most shy and in the distance like here. One of my best memories from Cocos were the ascent on a site called Manuelita, which we dove many times. What we didn't realize at first was that the hammerheads had disperged and moved away when we got there. Immediately when we started our ascend they started to return. During our safety stop we saw the hoards coming from all directions and reuniting at the cleaning stations on the ocean floor.
+Description     All of our dives on Cocos featured hammerheads, most shy and in the distance like here. One of my best memories from Cocos was the ascent on a site called Manuelita, which we dove many times. What we didn't realize at first was that the hammerheads had disperged and moved away when we got there. Immediately when we started to ascend they returned. During our safety stop we saw the hoards coming from all directions and reuniting at the cleaning stations on the ocean floor.
 
 
 DSC02499.jpg
@@ -857,7 +857,7 @@ DSC02987.jpg
 Title           Pronghorn Spiny Lobster
 Location		Cocos Island, Costa Rica
 Tags			2017 lobster
-Latin            Panulirus penicillatus
+Latin           Panulirus penicillatus
 Description
 
 
