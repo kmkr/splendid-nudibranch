@@ -776,7 +776,7 @@ Title           Tiger Shark
 Location		Cocos Island, Costa Rica
 Tags			2017 shark
 Latin           Galeocerdo cuvier
-Description     The tigers have excellent sense of smell and sight, and some native Hawaiians think their eyeballs have the power to look into the future.
+Description     The tigers have excellent sense of smell and sight. Some native Hawaiians think their eyeballs have the power to look into the future.
 
 
 
@@ -795,7 +795,7 @@ Title           Scalloped Hammerhead Shark
 Location		Cocos Island, Costa Rica
 Tags			2017 shark
 Latin           Sphyrna lewini
-Description     The wide-set eyes give hammerheads an excellent visual range, better than most sharks.
+Description     The wide-set eyes give hammerheads long visual range, better than most sharks.
 
 
 DSC02650.jpg
@@ -822,7 +822,7 @@ Title           Starry Grouper
 Location		Cocos Island, Costa Rica
 Tags			2017
 Latin           Epinephelus labriformis
-Description     Groupers typically have large mouths, fat libs and stout bodies. This one is a small grouper, but still fearless enough to just stare back when I was snapping a shot.
+Description     Groupers typically have large mouths, fat lips and stout bodies. The starry grouper is relatively small, but still fearless enough to stay still and stare back when I was snapping a shot.
 
 
 DSC02987.jpg
