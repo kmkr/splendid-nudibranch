@@ -44,7 +44,7 @@ class Photo extends PureComponent {
                                 <TransitionImage
                                     onLoad={this.onLoad}
                                     src={photo.sizes.large.url}
-                                    sizes="(min-width: 1360px) 95vw"
+                                    sizes="(min-width: 1360px) 95vw, 100vw"
                                     srcSet={srcSet}/>
                             </div>
                             <div className={`text ${photo.detailsActive ? 'expanded' : ''}`}>
