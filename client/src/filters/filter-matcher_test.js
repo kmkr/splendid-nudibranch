@@ -24,7 +24,7 @@ test('match location', t => {
     t.true(filterMatcher(photo, {locations: ['foo']}));
 });
 
-test.only('match complex location', t => {
+test('match complex location', t => {
     const photo = {
         location: 'Foo, Bar Baz'
     };
