@@ -3,10 +3,12 @@ function matchYear(photo, years) {
 }
 
 function matchLocation(photo, locations) {
-    const locs = (photo.location || '').split(',');
-    const toMatch = locs.map(elem => elem.toLowerCase());
+    const locs = (photo.location || '')
+        .split(',')
+        .map(loc => loc.trim());
+    const toMatch = locs.map(elem => elem.toLowerCase().replace(/\s/g, '.'));
     return locations
-        .map(elem => elem.toLowerCase())
+        .map(elem => elem.replace(' ', '.').toLowerCase())
         .some(elem => toMatch.indexOf(elem) !== -1);
 }
 
