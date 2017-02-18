@@ -42,6 +42,7 @@ class Photo extends PureComponent {
                         <div className="photo-flex-wrapper">
                             <div className="photo">
                                 <TransitionImage
+                                    alt={photo.title}
                                     onLoad={this.onLoad}
                                     src={photo.sizes.large.url}
                                     sizes="(min-width: 1360px) 95vw, 100vw"

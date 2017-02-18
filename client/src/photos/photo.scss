@@ -9,6 +9,7 @@
 .text {border: 1px solid blue;}
 */
 
+
 .photo-and-text-wrapper {
     @include media-breakpoint-up(xl) {
         @include height(100);
