@@ -849,7 +849,7 @@ Title           Whitetip Reef Shark
 Location		Cocos Island, Costa Rica
 Tags			2017 shark
 Latin           Triaenodon obesus
-Description     Whitetip sharks have a grumpy look, somewhat opposite of the dolphins' constant happy looking face.
+Description     The large oval eyes allows the whitetip to see well in dim light.
 
 
 DSC03040.jpg
@@ -904,7 +904,7 @@ Title           Spotted Scorpion Fish
 Location		Cocos Island, Costa Rica
 Tags			2017
 Latin           Scorpaena plumieri
-Description     Skin flaps and feathery fins helps this fish with camouflage against the surrounding coral.
+Description     Skin flaps and feathery fins help this fish to camouflage against the surrounding coral.
 
 
 DSC03543.jpg
@@ -931,7 +931,7 @@ Title           Round Ribbontail Ray
 Location		Cocos Island, Costa Rica
 Tags			2017
 Latin           Taeniura meyeni
-Description     This type of ray is overfished in almost across much of it's range. However, they thrive around Cocos and we saw them on almost all dives.
+Description     This type of ray is overfished across much of it's range. However, they thrive around Cocos and we saw them on almost all dives.
 
 
 DSC03628.jpg
