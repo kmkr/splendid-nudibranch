@@ -1,8 +1,6 @@
-import test from 'ava';
-
 import {map} from './batch-update-mapper';
 
-test('should update two photos', t => {
+it('should update two photos', () => {
     const content = `
 DSC00564.jpg
 
@@ -34,10 +32,10 @@ Description
 `;
     const updated = map(content, getPhotos());
 
-    t.true(updated.length === 2);
+    expect(updated.length === 2).toBe(true);
 
     const [p1, p2] = updated;
-    t.deepEqual(p1, {
+    expect(p1).toEqual({
         name: 'DSC00564.jpg',
         key: 'c051-e24f',
         title: 'Western Clown Anemonefish',
@@ -47,7 +45,7 @@ Description
         description: 'Foo bar'
     });
 
-    t.deepEqual(p2, {
+    expect(p2).toEqual({
         name: 'DSC01136.jpg',
         key: '47e7-02f9',
         title: 'Nudibranch',
@@ -59,7 +57,7 @@ Description
 });
 
 
-test('should support whitespaces after key', t => {
+it('should support whitespaces after key', () => {
     /* eslint-disable */
     const content = `
 DSC00564.jpg
@@ -84,10 +82,10 @@ Description
 
     const updated = map(content, getPhotos());
 
-    t.true(updated.length === 2);
+    expect(updated.length === 2).toBe(true);
 
     const [p1, p2] = updated;
-    t.deepEqual(p1, {
+    expect(p1).toEqual({
         name: 'DSC00564.jpg',
         key: 'c051-e24f',
         title: 'Western Clown Anemonefish',
@@ -97,7 +95,7 @@ Description
         description: ''
     });
 
-    t.deepEqual(p2, {
+    expect(p2).toEqual({
         name: 'DSC01136.jpg',
         key: '47e7-02f9',
         title: 'Nudibranch',

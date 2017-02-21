@@ -1,4 +1,3 @@
-import test from 'ava';
 import {serverToClient} from './photo-data-conversion';
 
 const base = 'http://my/base';
@@ -30,19 +29,19 @@ const photoFromServer = {
     }
 };
 
-test('should convert', t => {
+it('should convert', () => {
     const expected = `${base}/${photoFromServer.key}/s_${photoFromServer.name}`;
-    t.is(serverToClient(photoFromServer, base).sizes.small.url, expected);
+    expect(serverToClient(photoFromServer, base).sizes.small.url).toBe(expected);
 });
 
-test('should contain size keys', t => {
+it('should contain size keys', () => {
     const clientVer = serverToClient(photoFromServer, base);
 
-    t.true(typeof clientVer.sizes.small === 'object');
-    t.true(typeof clientVer.sizes.medium === 'object');
-    t.true(typeof clientVer.sizes.large === 'object');
+    expect(typeof clientVer.sizes.small === 'object').toBe(true);
+    expect(typeof clientVer.sizes.medium === 'object').toBe(true);
+    expect(typeof clientVer.sizes.large === 'object').toBe(true);
 });
 
-test('should include key', t => {
-    t.is(serverToClient(photoFromServer, base).key, '1234-5678');
+it('should include key', () => {
+    expect(serverToClient(photoFromServer, base).key).toBe('1234-5678');
 });

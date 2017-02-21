@@ -1,5 +1,3 @@
-import test from 'ava';
-
 import photoReducer from './photo-reducer';
 import {
     deletePhotoActionTypes}
@@ -20,16 +18,16 @@ const action = {
 };
 
 const reduced = photoReducer(origState, action);
-test('should map to correct amount of photos', t => {
-    t.true(reduced.data.length === 2);
+it('should map to correct amount of photos', () => {
+    expect(reduced.data.length === 2).toBe(true);
 });
 
-test('should remove correct photo', t => {
-    t.deepEqual(reduced.data[0], origState.data[0]);
-    t.deepEqual(reduced.data[1], origState.data[2]);
+it('should remove correct photo', () => {
+    expect(reduced.data[0]).toEqual(origState.data[0]);
+    expect(reduced.data[1]).toEqual(origState.data[2]);
 });
 
-test('should not touch the original state', t => {
-    t.is(reduced.data[0], origState.data[0]);
-    t.is(reduced.data[1], origState.data[2]);
+it('should not touch the original state', () => {
+    expect(reduced.data[0]).toBe(origState.data[0]);
+    expect(reduced.data[1]).toBe(origState.data[2]);
 });

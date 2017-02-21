@@ -1,65 +1,63 @@
-import test from 'ava';
-
 import filterMatcher from './filter-matcher';
 
 
-test('match year', t => {
+it('match year', () => {
     const photo = {
         tags: ['waz', 'woz', '2016']
     };
-    t.true(filterMatcher(photo, {years: ['2016']}));
+    expect(filterMatcher(photo, {years: ['2016']})).toBe(true);
 });
 
-test('no match on year', t => {
+it('no match on year', () => {
     const photo = {
         tags: ['waz', 'woz', '2016']
     };
-    t.false(filterMatcher(photo, {years: ['2015']}));
+    expect(filterMatcher(photo, {years: ['2015']})).toBe(false);
 });
 
-test('match location', t => {
+it('match location', () => {
     const photo = {
         location: 'Foo, Bar'
     };
-    t.true(filterMatcher(photo, {locations: ['foo']}));
+    expect(filterMatcher(photo, {locations: ['foo']})).toBe(true);
 });
 
-test('match complex location', t => {
+it('match complex location', () => {
     const photo = {
         location: 'Foo, Bar Baz'
     };
-    t.true(filterMatcher(photo, {locations: ['bar.baz']}));
+    expect(filterMatcher(photo, {locations: ['bar.baz']})).toBe(true);
 });
 
-test('no match on location', t => {
+it('no match on location', () => {
     const photo = {
         location: 'Foo, Bar'
     };
-    t.false(filterMatcher(photo, {locations: ['bazzy']}));
+    expect(filterMatcher(photo, {locations: ['bazzy']})).toBe(false);
 });
 
-test('match tag', t => {
+it('match tag', () => {
     const photo = {
         tags: ['foo', 'bar']
     };
-    t.true(filterMatcher(photo, {tags: ['wiz', 'bar']}));
+    expect(filterMatcher(photo, {tags: ['wiz', 'bar']})).toBe(true);
 });
 
-test('no match on tag', t => {
+it('no match on tag', () => {
     const photo = {
         tags: ['foo', 'bar']
     };
-    t.false(filterMatcher(photo, {tags: ['wiz']}));
+    expect(filterMatcher(photo, {tags: ['wiz']})).toBe(false);
 });
 
-test('no match on empty tags', t => {
+it('no match on empty tags', () => {
     const photo = {
         tags: ['foo', 'bar']
     };
-    t.false(filterMatcher(photo, {tags: []}));
+    expect(filterMatcher(photo, {tags: []})).toBe(false);
 });
 
-test('no match for empty filter', t => {
+it('no match for empty filter', () => {
     const photo = {};
-    t.false(filterMatcher(photo, {}));
+    expect(filterMatcher(photo, {})).toBe(false);
 });
