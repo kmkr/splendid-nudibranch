@@ -228,7 +228,7 @@ Title			Nudibranch
 Location		Anilao, The Philippines
 Latin			Hypselodoris infucata
 Tags			nudibranch 2014
-Description		Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanisms to having a hard shell, which most other molluscs use as primary protection.
+Description		Many nudibranchs use their brightly colored bodies to warn potential predators that they are full of distasteful chemicals. This is an alternative defence mechanism to having a hard shell, which most other molluscs use as primary protection.
 
 
 DSC04006.jpg
@@ -372,7 +372,7 @@ Title			St. Johns Cave Systems
 Location		St. Johns Reef, Egypt
 Tags			2014
 Latin
-Description		St. Johns is know for its array of caverns, tunnels, overhangs and swim-throughs. The sun pierce through the cracks, crevices and holes inside the caverns, guiding us through the maze. The majestetic area feel like a long lost world, mountains now covered in coral.
+Description		St. Johns is know for its array of caverns, tunnels, overhangs and swim-throughs. The sun pierce through the cracks, crevices and holes inside the caverns, guiding us through the maze. The majestetic area is like a forgotten world, mountains now covered in coral.
 
 
 DSC06417.jpg
@@ -416,7 +416,7 @@ Title			The Dugongs of Marsha Shouna
 Location		Marsa Alam, Egypt
 Tags			2014 dugong
 Latin			Dugong dugon
-Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. It's herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are entirely depleted due to hunting, bycatch and habitat desctruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam had only seven dugongs left at the time of writing.
+Description		Dugongs are believed to be inspirations behind tales or mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. It's herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are entirely depleted due to hunting, bycatch and habitat destruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam had only seven dugongs left at the time of writing.
 
 
 DSC06687.jpg
