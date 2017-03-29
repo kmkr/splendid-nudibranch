@@ -858,7 +858,7 @@ Title           Whitetip Reef Shark
 Location		Cocos Island, Costa Rica
 Tags			2017 shark
 Latin           Triaenodon obesus
-Description     Whitetips feed at night and their usual shy attitude during daytime disappears completely. You swim with hundreds of sharks when diving at night on Cocos. This dive is one of my all-time favorites.
+Description     Whitetips feed at night and their usual shy attitude during daytime disappear completely. You swim with hundreds of sharks when diving at night on Cocos. This dive is one of my all-time favorites.
 
 
 DSC03044.jpg
