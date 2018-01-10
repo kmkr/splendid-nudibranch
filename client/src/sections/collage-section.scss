@@ -1,0 +1,15 @@
+@import '../constants/styles';
+@import "../vendor/bootstrap/mixins/breakpoint";
+
+#collage-section {
+    display: flex;
+    flex-wrap: wrap;
+
+    .collage-item {
+        flex: 1 0 auto;
+    }
+
+    img {
+        max-height: 270px;
+    }
+}

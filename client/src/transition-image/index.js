@@ -24,19 +24,6 @@ class TransitionImage extends PureComponent {
     render() {
         const {alt, src, srcSet, sizes} = this.props;
 
-        /*
-        return (
-            <picture className="transition-image" style={{opacity: this.state.loaded ? 1 : 0}}>
-                <source
-                    srcSet={srcSet}
-                    sizes={sizes} />
-                <img
-                    alt={alt}
-                    src={src}
-                    onLoad={this.onLoad.bind(this)} />
-            </picture>
-        );
-        */
         return (
             <img
                 alt={alt}
@@ -54,8 +41,8 @@ TransitionImage.propTypes = {
     alt: PropTypes.string,
     onLoad: PropTypes.func,
     src: PropTypes.string.isRequired,
-    srcSet: PropTypes.string.isRequired,
-    sizes: PropTypes.string.isRequired
+    srcSet: PropTypes.string,
+    sizes: PropTypes.string
 };
 
 TransitionImage.defaultProps = {

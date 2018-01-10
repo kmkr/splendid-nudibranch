@@ -1,8 +1,6 @@
 import React, {PureComponent, PropTypes} from 'react';
 
-import Anchor from '../anchor';
 import Photo from './photo';
-import filtersToUrlSearchParser from '../filters/filters-to-url-search-parser';
 
 class ListPhotos extends PureComponent {
 
@@ -10,6 +8,7 @@ class ListPhotos extends PureComponent {
         super(props);
 
         this.photoLoaded = this.photoLoaded.bind(this);
+        this.renderPhoto = this.renderPhoto.bind(this);
     }
 
     photoLoaded(photo) {
@@ -17,24 +16,9 @@ class ListPhotos extends PureComponent {
         onPhotoLoad({key: photo.key});
     }
 
-    isVisible(index) {
-        const {photos} = this.props;
-        let {visibleEnd} = this.props;
-        if (!visibleEnd) {
-            visibleEnd = photos.length;
-        }
-
-        return index < visibleEnd;
-    }
-
     renderPhoto(photo) {
-        const {activeFilters} = this.props;
-        const name = `photos/${photo.key}${filtersToUrlSearchParser(activeFilters)}`;
         return (
             <div key={photo.key}>
-                <Anchor
-                    id={`photo-${photo.key}`}
-                    name={name} />
                 <Photo
                     onPhotoLoad={this.photoLoaded}
                     photo={photo} />
@@ -47,23 +31,15 @@ class ListPhotos extends PureComponent {
 
         return (
             <div>
-                {photos.map((photo, index) => (
-                    this.isVisible(index) && this.renderPhoto(photo)
-                ))}
+                {photos.map(this.renderPhoto)}
             </div>
         );
     }
 }
 
 ListPhotos.propTypes = {
-    activeFilters: PropTypes.object,
     onPhotoLoad: PropTypes.func.isRequired,
-    photos: PropTypes.array.isRequired,
-    visibleEnd: PropTypes.number
-};
-
-ListPhotos.defaultProps = {
-    activeFilters: {}
+    photos: PropTypes.array.isRequired
 };
 
 export default ListPhotos;

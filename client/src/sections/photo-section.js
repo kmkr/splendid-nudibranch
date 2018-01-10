@@ -5,8 +5,6 @@ import {photoLoaded, fetchPhotos} from '../photos/photo-actions';
 import PhotoScroller from '../photos/photo-scroller';
 import {postStats, beaconStats} from '../statistics';
 
-import './photo-section.scss';
-
 class PhotoSection extends PureComponent {
 
     constructor(props) {
@@ -32,14 +30,12 @@ class PhotoSection extends PureComponent {
     }
 
     render() {
-        const {pageYOffset, photos, filters} = this.props;
+        const {photos} = this.props;
         return (
             <div id="photo-section">
                 <PhotoScroller
                     onPhotoLoad={this.onPhotoLoad}
-                    photos={photos}
-                    pageYOffset={pageYOffset}
-                    filters={filters} />
+                    photos={photos} />
             </div>
         );
     }
@@ -47,9 +43,7 @@ class PhotoSection extends PureComponent {
 
 function select(state) {
     return {
-        photos: state.photos.data,
-        pageYOffset: state.scroll.pageYOffset,
-        filters: state.filters.data
+        photos: state.photos.data
     };
 }
 
