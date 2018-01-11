@@ -21,6 +21,19 @@ class CollageSection extends PureComponent {
         this.props.dispatch(photoLoaded(key));
     }
 
+    // todo: sett bredde på photos
+    // todo: oppdater bredde på photos på resize event
+
+    // bredde-algoritme:
+    // hvis minst tre av de fem neste er portrait => 5
+    // hvis to av de fire neste er portrait => 4
+    // hvis en eller ingen av de tre neste er portrait => 3
+
+    // høyde settes ved å:
+    // totalBredde = Math.min(window.innerWidth, max-bredde)
+    // wide bilder får (16/9 av plassen / ant bilder per rad)
+    // portrait bilder får (2/3 av plassen / ant bilder per rad)
+
     render() {
         const {photos} = this.props;
         return (
