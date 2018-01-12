@@ -20,25 +20,13 @@ function firstXWithDescription(photos, num = 5) {
 
     return photos.filter(p => p);
 }
-function shuffle(photos) {
-    for (let i = photos.length; i; i -= 1) {
-        const j = Math.floor(Math.random() * i);
-        const x = photos[i - 1];
-        photos[i - 1] = photos[j];
-        photos[j] = x;
-    }
-
-    return photos;
-}
 
 export function fetchPhotos() {
     const {photos, base} = window.sn.data.photoData;
     return {
         type: actionTypes.SET_PHOTOS,
         data: firstXWithDescription(
-            shuffle(
-                photos.map(photo => serverToClient(photo, base))
-            )
+            photos.map(photo => serverToClient(photo, base))
         )
     };
 }

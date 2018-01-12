@@ -22,7 +22,7 @@ class TransitionImage extends PureComponent {
     }
 
     render() {
-        const {alt, src, srcSet, sizes} = this.props;
+        const {alt, src, srcSet, sizes, width} = this.props;
 
         return (
             <img
@@ -32,6 +32,7 @@ class TransitionImage extends PureComponent {
                 onLoad={this.onLoad.bind(this)}
                 srcSet={srcSet}
                 sizes={sizes}
+                width={width}
                 src={src}/>
         );
     }
