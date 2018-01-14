@@ -26,38 +26,60 @@ class CollageSection extends PureComponent {
     }
 
     setPhotoWidth() {
-
         const photos = [...this.props.photos];
         const totalWidth = Math.min(window.innerWidth, 2560);
-        const withWidth = [];
+        const groups = [];
 
         while (photos.length) {
-            let numPerRow;
-            let numPortrait;
-            if (getNumPortrait(photos.slice(0, 5)) >= 3) {
-                numPerRow = 5;
-                numPortrait = getNumPortrait(photos.slice(0, 5));
-            } else if (getNumPortrait(photos.slice(0, 4)) >= 2) {
-                numPerRow = 4;
-                numPortrait = getNumPortrait(photos.slice(0, 4));
-            } else {
-                numPortrait = getNumPortrait(photos.slice(0, 3));
-                numPerRow = 3;
+            const subGroup = {
+                height: null,
+                photos: []
+            };
+            let numThisRow = 3;
+            let portraitScaleFactor = 1;
+            let landscapeScaleFactor = 1;
+            const numNext5 = getNumPortrait(photos.slice(0, 5));
+
+            if (numNext5 && numNext5 < 5) {
+                const numNext4 = getNumPortrait(photos.slice(0, 4));
+                const numNext3 = getNumPortrait(photos.slice(0, 3));
+
+                if (numNext5 === 4) {
+                    // ??
+                    numThisRow = 5;
+                } else if (numNext5 === 3) {
+                    numThisRow = 5;
+                    portraitScaleFactor = 0.6;
+                    landscapeScaleFactor = 1.3;
+                } else if (numNext4 === 2) {
+                    numThisRow = 4;
+                    portraitScaleFactor = 0.6;
+                    landscapeScaleFactor = 1.35;
+                } else if (numNext3 === 1) {
+                    portraitScaleFactor = 0.5;
+                    landscapeScaleFactor = 1.2;
+                }
             }
 
-            console.log(numPerRow);
-            for (let i = 0; i < numPerRow; i++) {
+            console.log(`numThisRow ${numThisRow} psf ${portraitScaleFactor} lsf ${landscapeScaleFactor}`);
+            for (let i = 0; i < numThisRow; i++) {
                 const photoToAdd = photos.shift();
                 if (!photoToAdd) {
-                    return withWidth;
+                    return groups;
                 }
-                const ratioForPhoto = photoToAdd.mode === 'portrait' ? (1.2 * (numPortrait / numPerRow)) : (numPortrait * 3) / numPerRow;
-                photoToAdd.displayedWidth = (totalWidth / numPerRow) * ratioForPhoto;
-                withWidth.push(photoToAdd);
+                const scale = photoToAdd.mode === 'portrait' ? portraitScaleFactor : landscapeScaleFactor;
+
+                const marginsInRow = (numThisRow + 1) * 8;
+                photoToAdd.displayedWidth = ((totalWidth - marginsInRow) / numThisRow) * scale;
+                subGroup.photos.push(photoToAdd);
+                const height = photoToAdd.mode === 'portrait' ? photoToAdd.displayedWidth * (4 / 3) : photoToAdd.displayedWidth * (9 / 16);
+                subGroup.height = subGroup.height ? Math.min(subGroup.height, height) : height;
+                // next row
             }
+            groups.push(subGroup);
         }
 
-        return withWidth;
+        return groups;
     }
 
     // todo: sett bredde på photos
@@ -74,16 +96,21 @@ class CollageSection extends PureComponent {
     // portrait bilder får (2/3 av plassen / ant bilder per rad)
 
     render() {
-        const photos = this.setPhotoWidth();
+        const photoGroups = this.setPhotoWidth();
         return (
             <div id="collage-section">
-                {photos.map(photo => (
-                    <div className="collage-item">
-                        <TransitionImage
-                           alt={photo.title}
-                           onLoad={this.onLoad}
-                           width={photo.displayedWidth}
-                           src={photo.sizes.xsmall.url}/>
+                {photoGroups.map((photoGroup, index) => (
+                    <div key={`photo-group-${index}`} style={{maxHeight: `${photoGroup.height}px`}}>
+                        {photoGroup.photos.map(photo => (
+                            <div key={photo.key}
+                                className="collage-item"
+                                style={{width: `${photo.displayedWidth}px`}}>
+                                <TransitionImage
+                                    alt={photo.title}
+                                    onLoad={this.onLoad}
+                                    src={photo.sizes.xsmall.url}/>
+                            </div>
+                        ))}
                     </div>
                 ))}
             </div>
