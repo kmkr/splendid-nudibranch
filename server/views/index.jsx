@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from './layouts/default';
 
-const Index = ({data, keywords, selectedPhotoKey, year, location}) => (
+const Index = ({photos, keywords, selectedPhotoKey, year, location}) => (
     <Layout
-        data={data}
+        photos={photos}
         keywords={keywords}
         year={year}
         location={location}
@@ -15,9 +15,7 @@ const Index = ({data, keywords, selectedPhotoKey, year, location}) => (
                 </div>
             </div>
             <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
-                window.sn = {
-                    data: ${JSON.stringify(data)}
-                };
+                window.snPhotos = ${JSON.stringify(photos)}
             `}}>
             </script>
             <script

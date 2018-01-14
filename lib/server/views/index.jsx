@@ -15,7 +15,7 @@ var _default2 = _interopRequireDefault(_default);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Index = function Index(_ref) {
-    var data = _ref.data,
+    var photos = _ref.photos,
         keywords = _ref.keywords,
         selectedPhotoKey = _ref.selectedPhotoKey,
         year = _ref.year,
@@ -23,7 +23,7 @@ var Index = function Index(_ref) {
     return _react2.default.createElement(
         _default2.default,
         {
-            data: data,
+            photos: photos,
             keywords: keywords,
             year: year,
             location: location,
@@ -40,7 +40,7 @@ var Index = function Index(_ref) {
                     _react2.default.createElement('div', { className: 'spinner' })
                 )
             ),
-            _react2.default.createElement('script', { type: 'text/javascript', dangerouslySetInnerHTML: { __html: '\n                window.sn = {\n                    data: ' + JSON.stringify(data) + '\n                };\n            ' } }),
+            _react2.default.createElement('script', { type: 'text/javascript', dangerouslySetInnerHTML: { __html: '\n                window.snPhotos = ' + JSON.stringify(photos) + '\n            ' } }),
             _react2.default.createElement('script', {
                 type: 'text/javascript',
                 src: '/static/scripts/bundle.js',

@@ -3,7 +3,7 @@ import {
     deletePhotoActionTypes,
     uploadPhotoActionTypes
 } from './edit-photo-action-types';
-import fetchActionFactory from '../../actions/fetch-action-factory';
+import fetchActionFactory from '../actions/fetch-action-factory';
 import {serverToClient} from '../../../../common/photo-data-conversion';
 
 export function batchUpdatePhotos(photos) {

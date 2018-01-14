@@ -1,7 +1,5 @@
 import React, {PureComponent, PropTypes} from 'react';
 
-import './transition-image.scss';
-
 class TransitionImage extends PureComponent {
     constructor() {
         super();

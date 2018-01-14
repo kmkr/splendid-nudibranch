@@ -10,6 +10,7 @@ import sitemapRouter from './sitemap';
 import statsRouter from './statistics';
 import robotsRouter from './robots';
 import * as viewDataService from './views/services/view-data-service';
+import {serverToClient} from './photos/photo-data-conversion';
 
 function verifyEnv() {
     const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
@@ -41,9 +42,7 @@ function photoIndex(res, {photoKey, year, location}) {
             viewDataService.getPhotoData(),
             viewDataService.getKeywords()
         ]).then(([photoData, keywords]) => res.render('index', {
-            data: {
-                photoData
-            },
+            photos: photoData.photos.map(p => serverToClient(p, photoData.base)),
             selectedPhotoKey: photoKey,
             year,
             location,

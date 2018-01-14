@@ -1,13 +1,12 @@
 const webpack = require('webpack');
 const env = process.env.NODE_ENV;
-const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
     context: __dirname,
     entry: {
-        'bundle': './src/index.js',
-        'admin-bundle': './src/admin/index.js'
+        'bundle': './src/index.js'
+        // 'admin-bundle': './src/admin/index.js'
     },
     devtool: env !== 'production' ? 'source-map' : false,
     output: {
@@ -30,8 +29,8 @@ module.exports = {
                 use: 'eslint-loader'
             },
             {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader']
             }
         ]
     },
@@ -43,7 +42,6 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             options: {
                 postcss: [
-                    precss(),
                     autoprefixer()
                 ]
             }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server/index.js",
   "engines": {
-    "node": "6.4.0"
+    "node": ">=6.4.0"
   },
   "scripts": {
     "start": "NODE_ENV=production node lib/server/index.js",
@@ -23,7 +23,6 @@
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "core-js": "^2.4.1",
-    "debounce": "^1.0.0",
     "es6-promise": "^4.0.5",
     "express": "^4.14.0",
     "express-react-views": "^0.10.2",
@@ -38,7 +37,6 @@
     "redux-logger": "^2.7.4",
     "redux-thunk": "^2.1.0",
     "sitemap": "^1.8.2",
-    "smooth-scroll": "github:cferdinandi/smooth-scroll#v9.4.3",
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
@@ -60,11 +58,8 @@
     "exports-loader": "^0.6.3",
     "jest": "^19.0.0",
     "ncp": "^2.0.0",
-    "node-sass": "^4.4.0",
     "postcss-loader": "^1.1.1",
-    "precss": "^1.4.0",
     "rimraf": "^2.5.4",
-    "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
   },

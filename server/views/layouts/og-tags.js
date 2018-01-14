@@ -1,4 +1,3 @@
-import {serverToClient} from '../../../common/photo-data-conversion';
 import {description} from '../../../common/constants';
 
 const name = 'The Splendid Nudibranch';
@@ -21,8 +20,8 @@ function buildUrl({selectedPhotoKey, year, location}) {
     return url;
 }
 
-export default (data, {selectedPhotoKey, year, location}) => {
-    const match = data.photoData.photos.filter(p => p.key === selectedPhotoKey)[0];
+export default (photos, {selectedPhotoKey, year, location}) => {
+    const selectedPhoto = photos.filter(p => p.key === selectedPhotoKey)[0];
 
     let filterTitle;
     if (location || year) {
@@ -34,8 +33,7 @@ export default (data, {selectedPhotoKey, year, location}) => {
             .join(' ');
     }
 
-    if (match) {
-        const selectedPhoto = serverToClient(match, data.photoData.base);
+    if (selectedPhoto) {
         const selectedPhotoSize = selectedPhoto.sizes.medium;
 
         return {
