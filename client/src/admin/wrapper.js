@@ -1,28 +1,28 @@
-import React, {PropTypes} from 'react';
-import {createStore, applyMiddleware} from 'redux';
-import {Provider} from 'react-redux';
-import thunk from 'redux-thunk';
-import createLogger from 'redux-logger';
+import React, {PropTypes} from 'react'
+import {createStore, applyMiddleware} from 'redux'
+import {Provider} from 'react-redux'
+import thunk from 'redux-thunk'
+import createLogger from 'redux-logger'
 
-import './app.scss';
-import './polyfills';
-import rootReducer from './reducers/root-reducer';
+import './app.scss'
+import './polyfills'
+import rootReducer from './reducers/root-reducer'
 
 const logger = createLogger({
-    predicate: () => __DEV__,
-    collapsed: true
-});
+  predicate: () => __DEV__,
+  collapsed: true
+})
 
-const store = applyMiddleware(thunk, logger)(createStore)(rootReducer);
+const store = applyMiddleware(thunk, logger)(createStore)(rootReducer)
 
 const Wrapper = ({children}) => (
-    <Provider store={store}>
-        {children}
-    </Provider>
-);
+  <Provider store={store}>
+    {children}
+  </Provider>
+)
 
 Wrapper.propTypes = {
-    children: PropTypes.node.isRequired
-};
+  children: PropTypes.node.isRequired
+}
 
-export default Wrapper;
+export default Wrapper

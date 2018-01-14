@@ -1,1 +1,1 @@
-import 'core-js/fn/object/entries';
+import 'core-js/fn/object/entries'

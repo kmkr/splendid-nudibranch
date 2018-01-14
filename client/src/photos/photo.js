@@ -1,82 +1,82 @@
-import React, {PureComponent, PropTypes} from 'react';
+import React, {PureComponent, PropTypes} from 'react'
 
-import TransitionImage from '../transition-image';
-import MenuBar from './menu-bar';
+import TransitionImage from '../transition-image'
+import MenuBar from './menu-bar'
 
-import './photo.scss';
+import './photo.scss'
 
-function buildSrcSet(sizes) {
-    return Object.keys(sizes)
+function buildSrcSet (sizes) {
+  return Object.keys(sizes)
         .reverse()
         .map(key => {
-            const size = sizes[key];
-            return `${size.url} ${size.width}w`;
+          const size = sizes[key]
+          return `${size.url} ${size.width}w`
         })
-        .join(', ');
+        .join(', ')
 }
 
 class Photo extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showComponent: false
-        };
-        this.onLoad = this.onLoad.bind(this);
+  constructor (props) {
+    super(props)
+    this.state = {
+      showComponent: false
     }
+    this.onLoad = this.onLoad.bind(this)
+  }
 
-    onLoad() {
-        const {onPhotoLoad, photo} = this.props;
-        this.setState({showComponent: true});
-        onPhotoLoad(photo);
-    }
+  onLoad () {
+    const {onPhotoLoad, photo} = this.props
+    this.setState({showComponent: true})
+    onPhotoLoad(photo)
+  }
 
-    render() {
-        const {photo} = this.props;
-        const srcSet = buildSrcSet(photo.sizes);
+  render () {
+    const {photo} = this.props
+    const srcSet = buildSrcSet(photo.sizes)
 
-        return (
-            <div>
-                <div className={`photo-and-text-wrapper ${!this.state.showComponent ? 'loading' : ''}`}>
-                    <MenuBar photo={photo}/>
-                    <div className={`photo-wrapper ${photo.mode}`}>
-                        <div className="photo-flex-wrapper">
-                            <div className="photo">
-                                <TransitionImage
-                                    alt={photo.title}
-                                    onLoad={this.onLoad}
-                                    src={photo.sizes.large.url}
-                                    sizes="(min-width: 1360px) 95vw, 100vw"
-                                    srcSet={srcSet}/>
-                            </div>
-                            <div className={`text ${photo.detailsActive ? 'expanded' : ''}`}>
-                                <div className="text-wrapper" style={{opacity: this.state.showComponent ? 1 : 0}}>
-                                    <p className="title">{photo.title}</p>
-                                    <p className="latin">{photo.latin}</p>
-                                    <p className="description">{photo.description}</p>
-                                    <p className="location">{photo.location}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="title-bar">
-                            <span>{photo.title}</span>
-                        </div>
-                    </div>
+    return (
+      <div>
+        <div className={`photo-and-text-wrapper ${!this.state.showComponent ? 'loading' : ''}`}>
+          <MenuBar photo={photo} />
+          <div className={`photo-wrapper ${photo.mode}`}>
+            <div className='photo-flex-wrapper'>
+              <div className='photo'>
+                <TransitionImage
+                  alt={photo.title}
+                  onLoad={this.onLoad}
+                  src={photo.sizes.large.url}
+                  sizes='(min-width: 1360px) 95vw, 100vw'
+                  srcSet={srcSet} />
+              </div>
+              <div className={`text ${photo.detailsActive ? 'expanded' : ''}`}>
+                <div className='text-wrapper' style={{opacity: this.state.showComponent ? 1 : 0}}>
+                  <p className='title'>{photo.title}</p>
+                  <p className='latin'>{photo.latin}</p>
+                  <p className='description'>{photo.description}</p>
+                  <p className='location'>{photo.location}</p>
                 </div>
+              </div>
             </div>
-        );
-    }
+            <div className='title-bar'>
+              <span>{photo.title}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 Photo.propTypes = {
-    photo: PropTypes.shape({
-        description: PropTypes.string,
-        mode: PropTypes.oneOf(['portrait', 'landscape']).isRequired,
-        latin: PropTypes.string,
-        sizes: PropTypes.object.isRequired,
-        title: PropTypes.string.isRequired,
-        loaded: PropTypes.bool
-    }),
-    onPhotoLoad: PropTypes.func.isRequired
-};
+  photo: PropTypes.shape({
+    description: PropTypes.string,
+    mode: PropTypes.oneOf(['portrait', 'landscape']).isRequired,
+    latin: PropTypes.string,
+    sizes: PropTypes.object.isRequired,
+    title: PropTypes.string.isRequired,
+    loaded: PropTypes.bool
+  }),
+  onPhotoLoad: PropTypes.func.isRequired
+}
 
-export default Photo;
+export default Photo

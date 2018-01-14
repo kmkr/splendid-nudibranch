@@ -1,11 +1,11 @@
 export default (db, collectionName, filter) => {
-    return new Promise((resolve, reject) => {
-        return db.collection(collectionName).find(filter).toArray((err, result) => {
-            if (err) {
-                return reject(err);
-            }
+  return new Promise((resolve, reject) => {
+    return db.collection(collectionName).find(filter).toArray((err, result) => {
+      if (err) {
+        return reject(err)
+      }
 
-            return resolve(result);
-        });
-    });
-};
+      return resolve(result)
+    })
+  })
+}

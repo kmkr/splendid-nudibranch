@@ -1,79 +1,78 @@
-import './polyfills';
-import bodyParser from 'body-parser';
-import express from 'express';
-import logger from 'morgan';
-import compression from 'compression';
+import './polyfills'
+import bodyParser from 'body-parser'
+import express from 'express'
+import logger from 'morgan'
+import compression from 'compression'
 
-import {auth} from './auth';
-import photoRouter from './photos';
-import sitemapRouter from './sitemap';
-import statsRouter from './statistics';
-import robotsRouter from './robots';
-import * as viewDataService from './views/services/view-data-service';
-import {serverToClient} from './photos/photo-data-conversion';
+import {auth} from './auth'
+import photoRouter from './photos'
+import sitemapRouter from './sitemap'
+import statsRouter from './statistics'
+import robotsRouter from './robots'
+import * as viewDataService from './views/services/view-data-service'
+import {serverToClient} from './photos/photo-data-conversion'
 
-function verifyEnv() {
-    const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
-        .filter(key => !process.env[key]);
-    if (missing.length) {
-        throw new Error(`Missing required env key(s) ${missing.join(', ')}`);
-    }
+function verifyEnv () {
+  const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
+        .filter(key => !process.env[key])
+  if (missing.length) {
+    throw new Error(`Missing required env key(s) ${missing.join(', ')}`)
+  }
 }
 
-verifyEnv();
+verifyEnv()
 
-const app = express();
-app.disable('x-powered-by');
-app.use(compression());
-app.use(logger('combined'));
-app.set('views', `${__dirname}/views`);
-app.set('view engine', 'jsx');
+const app = express()
+app.disable('x-powered-by')
+app.use(compression())
+app.use(logger('combined'))
+app.set('views', `${__dirname}/views`)
+app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine({
-    transformViews: false
-}));
-app.use(bodyParser.json());
-app.use(bodyParser.text());
-app.use(auth);
-app.use('/static', express.static(`${__dirname}/static`));
+  transformViews: false
+}))
+app.use(bodyParser.json())
+app.use(bodyParser.text())
+app.use(auth)
+app.use('/static', express.static(`${__dirname}/static`))
 
-function photoIndex(res, {photoKey, year, location}) {
-    return (
+function photoIndex (res, {photoKey, year, location}) {
+  return (
         Promise.all([
-            viewDataService.getPhotoData(),
-            viewDataService.getKeywords()
+          viewDataService.getPhotoData(),
+          viewDataService.getKeywords()
         ]).then(([photoData, keywords]) => res.render('index', {
-            photos: photoData.photos.map(p => serverToClient(p, photoData.base)),
-            selectedPhotoKey: photoKey,
-            year,
-            location,
-            keywords
+          photos: photoData.photos.map(p => serverToClient(p, photoData.base)),
+          selectedPhotoKey: photoKey,
+          year,
+          location,
+          keywords
         }))
-    );
+  )
 }
 
 app.get('/', (req, res) => {
-    photoIndex(res, {year: req.query.year, location: req.query.location});
-});
+  photoIndex(res, {year: req.query.year, location: req.query.location})
+})
 
 app.get('/photos/:key', (req, res) => {
-    photoIndex(res, {photoKey: req.params.key, year: req.query.year, location: req.query.location});
-});
+  photoIndex(res, {photoKey: req.params.key, year: req.query.year, location: req.query.location})
+})
 
 app.get('/admin', (req, res) => {
-    viewDataService.getPhotoData()
+  viewDataService.getPhotoData()
         .then(photoData => res.render('index-admin', {
-            data: {
-                photoData
-            }
-        }));
-});
-app.use('/photos', photoRouter);
-app.use('/stats', statsRouter);
-app.use('/sitemap.xml', sitemapRouter);
-app.use('/robots.txt', robotsRouter);
+          data: {
+            photoData
+          }
+        }))
+})
+app.use('/photos', photoRouter)
+app.use('/stats', statsRouter)
+app.use('/sitemap.xml', sitemapRouter)
+app.use('/robots.txt', robotsRouter)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
-
+  console.log(`Listening on port ${port}`)
+})

@@ -1,13 +1,13 @@
-import express from 'express';
+import express from 'express'
 
-import statEntryHandler from './new';
+import statEntryHandler from './new'
 
-const router = express.Router();
+const router = express.Router()
 
 router.post('/', (req, res) => {
-    statEntryHandler(req)
+  statEntryHandler(req)
         .then(() => res.status(204).end())
-        .catch(err => res.status(500).json({err}));
-});
+        .catch(err => res.status(500).json({err}))
+})
 
-export default router;
+export default router

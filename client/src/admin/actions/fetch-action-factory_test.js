@@ -1,41 +1,40 @@
+import snFetch from '../fetch'
+import fetchActionFactory from './fetch-action-factory'
+
 jest.mock('../fetch', () => ({
-    get: jest.fn()
-}));
-import snFetch from '../fetch';
-import fetchActionFactory from './fetch-action-factory';
-
+  get: jest.fn()
+}))
 const ACTION_TYPES = {
-    REQUEST: 'REQUEST',
-    RECEIVE: 'RECEIVE',
-    FETCH_ERROR: 'FETCH_ERROR'
-};
+  REQUEST: 'REQUEST',
+  RECEIVE: 'RECEIVE',
+  FETCH_ERROR: 'FETCH_ERROR'
+}
 
-let fetchAction;
-let dispatchSpy;
+let fetchAction
+let dispatchSpy
 
 beforeEach(() => {
-    const fetchPromise = new Promise(() => {});
-    fetchAction = fetchActionFactory({
-        actionTypes: ACTION_TYPES,
-        url: '/url'
-    });
+  const fetchPromise = new Promise(() => {})
+  fetchAction = fetchActionFactory({
+    actionTypes: ACTION_TYPES,
+    url: '/url'
+  })
 
-    snFetch.get.mockReturnValue(fetchPromise);
-    dispatchSpy = jest.fn();
-});
+  snFetch.get.mockReturnValue(fetchPromise)
+  dispatchSpy = jest.fn()
+})
 
 it('delegation to fetch', () => {
-    fetchAction(dispatchSpy);
+  fetchAction(dispatchSpy)
 
-    expect(snFetch.get).toHaveBeenCalledWith('/url', {});
-});
+  expect(snFetch.get).toHaveBeenCalledWith('/url', {})
+})
 
 it('dispatching of request event', () => {
-    fetchAction(dispatchSpy);
+  fetchAction(dispatchSpy)
 
-    expect(dispatchSpy).toHaveBeenCalledWith({
-        type: ACTION_TYPES.REQUEST,
-        data: null
-    });
-});
-
+  expect(dispatchSpy).toHaveBeenCalledWith({
+    type: ACTION_TYPES.REQUEST,
+    data: null
+  })
+})

@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Wrapper from '../wrapper';
-import App from './app';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Wrapper from '../wrapper'
+import App from './app'
 
-import './polyfills';
+import './polyfills'
 
 ReactDOM.render(
-    <Wrapper>
-        <App />
-    </Wrapper>,
+  <Wrapper>
+    <App />
+  </Wrapper>,
     document.getElementById('app')
-);
+)

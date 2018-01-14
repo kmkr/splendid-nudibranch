@@ -1,7 +1,7 @@
-import snFetch from '../fetch';
+import snFetch from '../fetch'
 
-const defaultRequestHandler = () => null;
-const defaultResponseHandler = response => response;
+const defaultRequestHandler = () => null
+const defaultResponseHandler = response => response
 
 export default ({
     actionTypes,
@@ -12,54 +12,54 @@ export default ({
     errorHandler,
     method = 'get'
 }) => {
-    return dispatch => {
-        dispatch({
-            type: actionTypes.REQUEST,
-            data: requestHandler()
-        });
-        return snFetch[method](url, options)
+  return dispatch => {
+    dispatch({
+      type: actionTypes.REQUEST,
+      data: requestHandler()
+    })
+    return snFetch[method](url, options)
             .then(response => response.json())
             .then(content => {
-                dispatch({
-                    type: actionTypes.RECEIVE,
-                    data: responseHandler(content)
-                });
+              dispatch({
+                type: actionTypes.RECEIVE,
+                data: responseHandler(content)
+              })
             })
             .catch(error => {
-                if (typeof errorHandler === 'function') {
-                    const handled = errorHandler(error);
-                    if (handled) {
-                        dispatch({
-                            type: actionTypes.RECEIVE,
-                            data: responseHandler(handled)
-                        });
-                        return;
-                    }
+              if (typeof errorHandler === 'function') {
+                const handled = errorHandler(error)
+                if (handled) {
+                  dispatch({
+                    type: actionTypes.RECEIVE,
+                    data: responseHandler(handled)
+                  })
+                  return
                 }
+              }
 
                 // todo: send error to backend
-                const toDispatch = {
-                    type: actionTypes.FETCH_ERROR,
-                    error: {
-                        message: error.statusText || error.message,
-                        type: error.status
-                    }
-                };
+              const toDispatch = {
+                type: actionTypes.FETCH_ERROR,
+                error: {
+                  message: error.statusText || error.message,
+                  type: error.status
+                }
+              }
 
-                if (error.then && error.json) {
-                    error.json()
+              if (error.then && error.json) {
+                error.json()
                         .then(data => {
-                            dispatch({
-                                ...toDispatch,
-                                ...data
-                            });
+                          dispatch({
+                            ...toDispatch,
+                            ...data
+                          })
                         })
                         .catch(() => {
-                            dispatch(toDispatch);
-                        });
-                } else {
-                    dispatch(toDispatch);
-                }
-            });
-    };
-};
+                          dispatch(toDispatch)
+                        })
+              } else {
+                dispatch(toDispatch)
+              }
+            })
+  }
+}

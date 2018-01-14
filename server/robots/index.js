@@ -1,13 +1,13 @@
-import express from 'express';
+import express from 'express'
 
-const router = express.Router();
+const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.header('Content-Type', 'text/plain');
-    res.send(`
+  res.header('Content-Type', 'text/plain')
+  res.send(`
 User-agent: *
 Disallow: /admin
-`);
-});
+`)
+})
 
-export default router;
+export default router

@@ -1,1 +1,1 @@
-import './custom-event';
+import './custom-event'
