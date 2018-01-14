@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx h */
+import {h} from 'preact';
 
 import TransitionImage from '../transition-image';
 import setPhotoWidth from './set-width-helper';

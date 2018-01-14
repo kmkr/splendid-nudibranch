@@ -1,8 +1,9 @@
-import React, {PureComponent, PropTypes} from 'react';
+/** @jsx h */
+import {h, Component} from 'preact';
 
 import Photo from './photo';
 
-class ListPhotos extends PureComponent {
+class ListPhotos extends Component {
 
     constructor(props) {
         super(props);
@@ -36,10 +37,5 @@ class ListPhotos extends PureComponent {
         );
     }
 }
-
-ListPhotos.propTypes = {
-    onPhotoLoad: PropTypes.func.isRequired,
-    photos: PropTypes.array.isRequired
-};
 
 export default ListPhotos;

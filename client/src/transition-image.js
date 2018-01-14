@@ -1,6 +1,7 @@
-import React, {PureComponent, PropTypes} from 'react';
+/** @jsx h */
+import {h, Component} from 'preact';
 
-class TransitionImage extends PureComponent {
+class TransitionImage extends Component {
     constructor() {
         super();
         this.state = {loaded: false};
@@ -35,14 +36,6 @@ class TransitionImage extends PureComponent {
         );
     }
 }
-
-TransitionImage.propTypes = {
-    alt: PropTypes.string,
-    onLoad: PropTypes.func,
-    src: PropTypes.string.isRequired,
-    srcSet: PropTypes.string,
-    sizes: PropTypes.string
-};
 
 TransitionImage.defaultProps = {
     alt: '',

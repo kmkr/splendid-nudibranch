@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+/** @jsx h */
+import {h, render} from 'preact';
 
 import Collage from './collage';
 
 const photos = window.snPhotos;
 
-ReactDOM.render((
+render((
     <div className="container-fluid">
         <Collage photos={photos} />
     </div>

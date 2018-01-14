@@ -39,7 +39,6 @@ const Layout = ({children, photos, keywords, selectedPhotoKey, year, location}) 
                 rel="icon"
                 href="/static/images/favicon.ico"
                 sizes="32x32" />
-            <Style />
         </head>
         <body>
             <License />
