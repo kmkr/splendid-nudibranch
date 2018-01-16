@@ -1,4 +1,4 @@
-import {description} from '../../../common/constants'
+import {description} from '../common/constants'
 
 const name = 'The Splendid Nudibranch'
 

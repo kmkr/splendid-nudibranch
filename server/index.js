@@ -9,8 +9,10 @@ import photoRouter from './photos'
 import sitemapRouter from './sitemap'
 import statsRouter from './statistics'
 import robotsRouter from './robots'
-import * as viewDataService from './views/services/view-data-service'
+import * as viewDataService from './view-data-service'
 import {serverToClient} from './photos/photo-data-conversion'
+import ogTags from './og-tags'
+import {description} from '../common/constants'
 
 function verifyEnv () {
   const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
@@ -27,28 +29,30 @@ app.disable('x-powered-by')
 app.use(compression())
 app.use(logger('combined'))
 app.set('views', `${__dirname}/views`)
-app.set('view engine', 'jsx')
-app.engine('jsx', require('express-react-views').createEngine({
-  transformViews: false
-}))
+app.set('view engine', 'pug');
 app.use(bodyParser.json())
 app.use(bodyParser.text())
 app.use(auth)
 app.use('/static', express.static(`${__dirname}/static`))
 
 function photoIndex (res, {photoKey, year, location}) {
-  return (
+    return (
         Promise.all([
-          viewDataService.getPhotoData(),
-          viewDataService.getKeywords()
-        ]).then(([photoData, keywords]) => res.render('index', {
-          photos: photoData.photos.map(p => serverToClient(p, photoData.base)),
-          selectedPhotoKey: photoKey,
-          year,
-          location,
-          keywords
-        }))
-  )
+            viewDataService.getPhotoData(),
+            viewDataService.getKeywords()
+        ]).then(([photoData, keywords]) => {
+            const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
+            return res.render('index', {
+                description,
+                photos: JSON.stringify(photos),
+                ogTags: ogTags(photos, {}),
+                selectedPhotoKey: photoKey,
+                year,
+                location,
+                keywords
+            })
+        })
+    )
 }
 
 app.get('/', (req, res) => {

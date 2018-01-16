@@ -1,5 +1,5 @@
-import * as cache from '../../cache'
-import listPhotos from '../../photos/list'
+import * as cache from './cache'
+import listPhotos from './photos/list'
 
 export function getPhotoData () {
   return Promise.resolve(cache.get('photoData') || listPhotos())

@@ -19,25 +19,7 @@ const Layout = ({children, photos, keywords, selectedPhotoKey, year, location}) 
           property={entry[0]}
           content={entry[1]} />
             ))}
-      <link
-        href='https://fonts.googleapis.com/css?family=Raleway:300,600'
-        rel='stylesheet'
-        type='text/css' />
 
-      <link
-        rel='icon'
-        type='image/png'
-        href='/static/images/favicon-100.png'
-        sizes='100x100' />
-      <link
-        rel='icon'
-        type='image/png'
-        href='/static/images/favicon-192.png'
-        sizes='192x192' />
-      <link
-        rel='icon'
-        href='/static/images/favicon.ico'
-        sizes='32x32' />
     </head>
     <body>
       <License />
