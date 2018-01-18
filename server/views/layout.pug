@@ -32,7 +32,7 @@ html
         sizes='32x32'
     )
 
-    each metaKey in ogTags
-        meta(key=metaKey property=metaKey content=ogTags[metaKey])
+    each metaValue, metaKey in ogTags
+        meta(property=metaKey content=metaValue)
   body
     block content

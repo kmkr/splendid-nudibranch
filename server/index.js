@@ -45,7 +45,7 @@ function photoIndex (res, {photoKey, year, location}) {
             return res.render('index', {
                 description,
                 photos: JSON.stringify(photos),
-                ogTags: ogTags(photos, {}),
+                ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
                 selectedPhotoKey: photoKey,
                 year,
                 location,

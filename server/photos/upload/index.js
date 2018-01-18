@@ -1,4 +1,4 @@
-import * as idGenerator from '../../../common/id-generator'
+import * as idGenerator from '../../id-generator'
 import s3Uploader from '../s3/s3-uploader'
 import {resize, metadata as getMetadata} from './gm'
 import tempFileWriter from './temp-file-writer'
