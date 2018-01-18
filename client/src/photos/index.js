@@ -3,7 +3,7 @@ import { h, Component } from 'preact'
 
 import TransitionImage from '../transition-image'
 
-function buildSrcSet(sizes) {
+function buildSrcSet (sizes) {
   return Object.keys(sizes)
     .reverse()
     .map(key => {
@@ -14,7 +14,7 @@ function buildSrcSet(sizes) {
 }
 
 class Photo extends Component {
-  render() {
+  render () {
     const { photo } = this.props
     const srcSet = buildSrcSet(photo.sizes)
 

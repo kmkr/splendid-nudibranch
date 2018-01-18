@@ -10,7 +10,7 @@ function getPhotoWithKey (photos, key) {
 
 class App extends Component {
   constructor (props) {
-    super(props);
+    super(props)
 
     const selectedPhotoKey = (window.location.href.match(/photos\/([^/]+)/) || [])[1]
     this.state = {
@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   componentDidMount () {
-    const { photos } = this.props;
+    const { photos } = this.props
     window.addEventListener('popstate', e => {
       // e.state is equal to the data-attribute of the last image we clicked
 
@@ -28,7 +28,7 @@ class App extends Component {
       this.setState({
         selectedPhoto: photo
       })
-    });
+    })
   }
 
   onSelectPhoto (photo) {
@@ -41,8 +41,8 @@ class App extends Component {
   }
 
   render () {
-    const { photos } = this.props;
-    const { selectedPhoto } = this.state;
+    const { photos } = this.props
+    const { selectedPhoto } = this.state
     return (
       <div>
         {selectedPhoto ? <Photo photo={selectedPhoto} /> : (
@@ -51,7 +51,7 @@ class App extends Component {
           </div>
         )}
       </div>
-    );
+    )
   }
 }
 

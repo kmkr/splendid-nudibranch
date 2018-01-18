@@ -29,30 +29,30 @@ app.disable('x-powered-by')
 app.use(compression())
 app.use(logger('combined'))
 app.set('views', `${__dirname}/views`)
-app.set('view engine', 'pug');
+app.set('view engine', 'pug')
 app.use(bodyParser.json())
 app.use(bodyParser.text())
 app.use(auth)
 app.use('/static', express.static(`${__dirname}/static`))
 
 function photoIndex (res, {photoKey, year, location}) {
-    return (
+  return (
         Promise.all([
-            viewDataService.getPhotoData(),
-            viewDataService.getKeywords()
+          viewDataService.getPhotoData(),
+          viewDataService.getKeywords()
         ]).then(([photoData, keywords]) => {
-            const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
-            return res.render('index', {
-                description,
-                photos: JSON.stringify(photos),
-                ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
-                selectedPhotoKey: photoKey,
-                year,
-                location,
-                keywords
-            })
+          const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
+          return res.render('index', {
+            description,
+            photos: JSON.stringify(photos),
+            ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
+            selectedPhotoKey: photoKey,
+            year,
+            location,
+            keywords
+          })
         })
-    )
+  )
 }
 
 app.get('/', (req, res) => {
