@@ -17,7 +17,7 @@ class Photo extends Component {
   render() {
     const { photo } = this.props;
     return (
-      <a href="#"
+      <a href={`/photos/${photo.key}`}
         onClick={this.onClick}
         className='collage-item'
         style={{ width: `${photo.displayedWidth}px` }}>
