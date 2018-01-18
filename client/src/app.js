@@ -37,6 +37,7 @@ class App extends Component {
     })
 
     window.history.pushState(photo.key, '', `/photos/${photo.key}`)
+    window.scrollTo(0, 0)
   }
 
   render () {
