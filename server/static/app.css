@@ -1,11 +1,7 @@
 body {
-    margin: 0;
     overflow-x: hidden;
     font-weight: 300;
     font-size: 16px;
-}
-
-.container-fluid {
     max-width: 2560px;
     margin: 0 auto;
 }

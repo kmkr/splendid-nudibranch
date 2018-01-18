@@ -5,19 +5,23 @@ class TransitionImage extends Component {
   constructor () {
     super()
     this.state = {loaded: false}
+    this.onLoad = this.onLoad.bind(this)
+  }
+
+  componentDidMount () {
+    this.img.onload = this.onLoad
+    this.img.setAttribute('src', this.props.src)
   }
 
   onLoad () {
     if (this.state.loaded) {
-            // Some browsers call onLoad multiple times, perhaps due to srcSet
+      // Some browsers call onLoad multiple times, perhaps due to srcSet
       return
     }
 
     this.setState({
       loaded: true
     })
-
-    this.props.onLoad()
   }
 
   render () {
@@ -25,21 +29,15 @@ class TransitionImage extends Component {
 
     return (
       <img
-        alt={alt}
+        alt={alt || ''}
+        ref={img => this.img = img}
         className='transition-image'
         style={{opacity: this.state.loaded ? 1 : 0}}
-        onLoad={this.onLoad.bind(this)}
         srcSet={srcSet}
         sizes={sizes}
-        width={width}
-        src={src} />
+        width={width} />
     )
   }
-}
-
-TransitionImage.defaultProps = {
-  alt: '',
-  onLoad: () => {}
 }
 
 export default TransitionImage
