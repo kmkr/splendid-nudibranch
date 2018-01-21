@@ -4,20 +4,26 @@ const express = require('express')
 const logger = require('morgan')
 const compression = require('compression')
 
-const {auth} = require('./auth')
+const { auth } = require('./auth')
 const photoRouter = require('./photos')
 const sitemapRouter = require('./sitemap')
 const statsRouter = require('./statistics')
 const robotsRouter = require('./robots')
 const viewDataService = require('./view-data-service')
-const {serverToClient} = require('./photos/photo-data-conversion')
+const { serverToClient } = require('./photos/photo-data-conversion')
 const ogTags = require('./og-tags')
-const {description} = require('../common/constants')
+const { description } = require('../common/constants')
 const hashStore = require('./hash-store')
 
 function verifyEnv () {
-  const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
-        .filter(key => !process.env[key])
+  const missing = [
+    'AWS_ACCESS_KEY_ID',
+    'AWS_SECRET_ACCESS_KEY',
+    'SN_DB_URL',
+    'SN_S3_BASE',
+    'SN_S3_BUCKET_NAME',
+    'SN_ADMIN_ACCESS_KEY'
+  ].filter(key => !process.env[key])
   if (missing.length) {
     throw new Error(`Missing required env key(s) ${missing.join(', ')}`)
   }
@@ -36,47 +42,67 @@ app.use(bodyParser.text())
 app.use(auth)
 const isProd = process.env.NODE_ENV === 'production'
 
-app.use('/static', express.static(`${__dirname}/static`, {
-  maxAge: isProd ? 60 * 60 * 24 * 365 : 0// 1 year
-}))
+app.use(
+  '/static',
+  express.static(`${__dirname}/static`, {
+    maxAge: isProd ? 60 * 60 * 24 * 365 : 0 // 1 year
+  })
+)
 
 const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
-function photoIndex (res, {photoKey, year, location} = {}, jsFile, cssFile) {
-  return (
-        Promise.all([
-          viewDataService.getPhotoData(),
-          viewDataService.getKeywords()
-        ]).then(([photoData, keywords]) => {
-          const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
-          return res.render('index', {
-            description,
-            favico100: hashStore.withHash('/static/images/favicon-100.png'),
-            favico192: hashStore.withHash('/static/images/favicon-192.png'),
-            favico: hashStore.withHash('/static/images/favicon.ico'),
-            js: hashStore.withHash(jsFile),
-            css: hashStore.withHash(cssFile),
-            photos: JSON.stringify(photos),
-            ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
-            selectedPhotoKey: photoKey,
-            year,
-            location,
-            keywords
-          })
-        })
-  )
+function photoIndex (res, { photoKey, year, location } = {}, jsFile, cssFile) {
+  return Promise.all([
+    viewDataService.getPhotoData(),
+    viewDataService.getKeywords()
+  ]).then(([photoData, keywords]) => {
+    const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
+    return res.render('index', {
+      description,
+      favico100: hashStore.withHash('/static/images/favicon-100.png'),
+      favico192: hashStore.withHash('/static/images/favicon-192.png'),
+      favico: hashStore.withHash('/static/images/favicon.ico'),
+      js: hashStore.withHash(jsFile),
+      css: hashStore.withHash(cssFile),
+      photos: JSON.stringify(photos),
+      ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
+      selectedPhotoKey: photoKey,
+      year,
+      location,
+      keywords
+    })
+  })
 }
 
 app.get('/', (req, res) => {
-  photoIndex(res, {year: req.query.year, location: req.query.location}, '/static/scripts/bundle.js', indexCssFile)
+  photoIndex(
+    res,
+    { year: req.query.year, location: req.query.location },
+    '/static/scripts/bundle.js',
+    indexCssFile
+  )
 })
 
 app.get('/photos/:key', (req, res) => {
-  photoIndex(res, {photoKey: req.params.key, year: req.query.year, location: req.query.location}, '/static/scripts/bundle.js', indexCssFile)
+  photoIndex(
+    res,
+    {
+      photoKey: req.params.key,
+      year: req.query.year,
+      location: req.query.location
+    },
+    '/static/scripts/bundle.js',
+    indexCssFile
+  )
 })
 
 app.get('/admin', (req, res) => {
-  photoIndex(res, {}, '/static/scripts/admin-bundle.js', '/static/css/app-admin.css')
+  photoIndex(
+    res,
+    {},
+    '/static/scripts/admin-bundle.js',
+    '/static/css/app-admin.css'
+  )
 })
 
 app.use('/photos', photoRouter)
