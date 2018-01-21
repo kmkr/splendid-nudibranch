@@ -7,7 +7,7 @@ html
     if keywords
         meta(name='keywords' content=keywords)
     meta(name='description' content=`Author: Kris-Mikael Krister, Illustrator: Hilde. D. Johannessen, ${description}`)
-    link(rel='stylesheet' href=`/static/${css}`)
+    link(rel='stylesheet' href=css)
     link(
         href='https://fonts.googleapis.com/css?family=Raleway:300,600'
         rel='stylesheet'
@@ -17,18 +17,18 @@ html
     link(
         rel='icon'
         type='image/png'
-        href='/static/images/favicon-100.png'
+        href=favico100
         sizes='100x100'
     )
     link(
         rel='icon'
         type='image/png'
-        href='/static/images/favicon-192.png'
+        href=favico192
         sizes='192x192'
     )
     link(
         rel='icon'
-        href='/static/images/favicon.ico'
+        href=favico
         sizes='32x32'
     )
 

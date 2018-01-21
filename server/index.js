@@ -13,6 +13,7 @@ const viewDataService = require('./view-data-service')
 const {serverToClient} = require('./photos/photo-data-conversion')
 const ogTags = require('./og-tags')
 const {description} = require('../common/constants')
+const hashStore = require('./hash-store')
 
 function verifyEnv () {
   const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
@@ -33,12 +34,14 @@ app.set('view engine', 'pug')
 app.use(bodyParser.json())
 app.use(bodyParser.text())
 app.use(auth)
-app.use('/static', express.static(`${__dirname}/static`))
+app.use('/static', express.static(`${__dirname}/static`, {
+  maxAge: 60 * 60 * 24 * 365 // 1 year
+}))
 
 const env = process.env.NODE_ENV
-const indexCssFile = env === 'production' ? 'app.min.css' : 'app.css'
+const indexCssFile = env === 'production' ? '/static/app.min.css' : '/static/app.css'
 
-function photoIndex (res, {photoKey, year, location} = {}, jsFile = 'bundle.js', cssFile) {
+function photoIndex (res, {photoKey, year, location} = {}, jsFile, cssFile) {
   return (
         Promise.all([
           viewDataService.getPhotoData(),
@@ -47,8 +50,11 @@ function photoIndex (res, {photoKey, year, location} = {}, jsFile = 'bundle.js',
           const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
           return res.render('index', {
             description,
-            js: jsFile,
-            css: cssFile,
+            favico100: hashStore.withHash('/static/images/favicon-100.png'),
+            favico192: hashStore.withHash('/static/images/favicon-192.png'),
+            favico: hashStore.withHash('/static/images/favicon.ico'),
+            js: hashStore.withHash(jsFile),
+            css: hashStore.withHash(cssFile),
             photos: JSON.stringify(photos),
             ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
             selectedPhotoKey: photoKey,
@@ -61,15 +67,15 @@ function photoIndex (res, {photoKey, year, location} = {}, jsFile = 'bundle.js',
 }
 
 app.get('/', (req, res) => {
-  photoIndex(res, {year: req.query.year, location: req.query.location}, 'bundle.js', indexCssFile)
+  photoIndex(res, {year: req.query.year, location: req.query.location}, '/static/scripts/bundle.js', indexCssFile)
 })
 
 app.get('/photos/:key', (req, res) => {
-  photoIndex(res, {photoKey: req.params.key, year: req.query.year, location: req.query.location})
+  photoIndex(res, {photoKey: req.params.key, year: req.query.year, location: req.query.location}, '/static/scripts/bundle.js', indexCssFile)
 })
 
 app.get('/admin', (req, res) => {
-  photoIndex(res, {}, 'admin-bundle.js', 'app-admin.css')
+  photoIndex(res, {}, '/static/scripts/admin-bundle.js', '/static/app-admin.css')
 })
 
 app.use('/photos', photoRouter)
