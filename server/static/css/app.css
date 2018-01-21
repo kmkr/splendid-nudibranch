@@ -6,10 +6,11 @@
   --font-size-large: 20px;
   --font-size-medium: 16px;
   --font-size-small: 14px;
+  --color-dark: #373a3c;
 }
 
 body {
-  color: #373a3c;
+  color: var(--color-dark);
   background-color: #fff;
   overflow-x: hidden;
   font-family: Raleway, sans-serif;
