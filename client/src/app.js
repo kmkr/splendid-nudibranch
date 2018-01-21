@@ -17,6 +17,8 @@ class App extends Component {
       selectedPhoto: selectedPhotoKey ? getPhotoWithKey(this.props.photos, selectedPhotoKey) : null
     }
     this.onSelectPhoto = this.onSelectPhoto.bind(this)
+    this.onNextPhoto = this.onNextPhoto.bind(this)
+    this.onPreviousPhoto = this.onPreviousPhoto.bind(this)
   }
 
   componentDidMount () {
@@ -31,6 +33,10 @@ class App extends Component {
     })
   }
 
+  selectPhotoIndex (photoIndex) {
+    this.onSelectPhoto(this.props.photos[photoIndex])
+  }
+
   onSelectPhoto (photo) {
     this.setState({
       selectedPhoto: photo
@@ -40,12 +46,47 @@ class App extends Component {
     window.scrollTo(0, 0)
   }
 
+  getCurrentPhotoIndex () {
+    const { selectedPhoto } = this.state
+    if (!selectedPhoto) {
+      return 0
+    }
+
+    const { photos } = this.props
+
+    return photos.indexOf(selectedPhoto)
+  }
+
+  onNextPhoto () {
+    const currentPhotoIndex = this.getCurrentPhotoIndex()
+    const { photos } = this.props
+
+    if (currentPhotoIndex === (photos.length - 1)) {
+      this.selectPhotoIndex(0)
+      return
+    }
+
+    this.selectPhotoIndex(Math.max(currentPhotoIndex + 1, 0))
+  }
+
+  onPreviousPhoto () {
+    const currentPhotoIndex = this.getCurrentPhotoIndex()
+    const { photos } = this.props
+
+    if (currentPhotoIndex === 0) {
+      this.selectPhotoIndex(photos.length - 1)
+      return
+    }
+
+    this.selectPhotoIndex(Math.max(currentPhotoIndex - 1, 0))
+  }
+
   render () {
     const { photos } = this.props
     const { selectedPhoto } = this.state
     return (
       <div>
-        {selectedPhoto ? <Photo photo={selectedPhoto} /> : (
+        {selectedPhoto ? <Photo photo={selectedPhoto} onNext={this.onNextPhoto} onPrevious={this.onPreviousPhoto} /> : (
           <div style={{display: selectedPhoto ? 'none' : 'block'}}>
             <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
           </div>

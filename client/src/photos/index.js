@@ -15,7 +15,7 @@ function buildSrcSet (sizes) {
 
 class Photo extends Component {
   render () {
-    const { photo } = this.props
+    const { photo, onNext, onPrevious } = this.props
     const srcSet = buildSrcSet(photo.sizes)
 
     return (
@@ -30,6 +30,9 @@ class Photo extends Component {
         <p>{photo.latin}</p>
         <p>{photo.description}</p>
         <p>{photo.location}</p>
+
+        <button onClick={onPrevious}>Previous</button>
+        <button onClick={onNext}>Next</button>
       </div>
     )
   }

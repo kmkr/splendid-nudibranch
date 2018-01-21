@@ -1238,6 +1238,8 @@ var App = function (_Component) {
       selectedPhoto: selectedPhotoKey ? getPhotoWithKey(_this.props.photos, selectedPhotoKey) : null
     };
     _this.onSelectPhoto = _this.onSelectPhoto.bind(_this);
+    _this.onNextPhoto = _this.onNextPhoto.bind(_this);
+    _this.onPreviousPhoto = _this.onPreviousPhoto.bind(_this);
     return _this;
   }
 
@@ -1258,6 +1260,11 @@ var App = function (_Component) {
       });
     }
   }, {
+    key: 'selectPhotoIndex',
+    value: function selectPhotoIndex(photoIndex) {
+      this.onSelectPhoto(this.props.photos[photoIndex]);
+    }
+  }, {
     key: 'onSelectPhoto',
     value: function onSelectPhoto(photo) {
       this.setState({
@@ -1268,6 +1275,48 @@ var App = function (_Component) {
       window.scrollTo(0, 0);
     }
   }, {
+    key: 'getCurrentPhotoIndex',
+    value: function getCurrentPhotoIndex() {
+      var selectedPhoto = this.state.selectedPhoto;
+
+      if (!selectedPhoto) {
+        return 0;
+      }
+
+      var photos = this.props.photos;
+
+
+      return photos.indexOf(selectedPhoto);
+    }
+  }, {
+    key: 'onNextPhoto',
+    value: function onNextPhoto() {
+      var currentPhotoIndex = this.getCurrentPhotoIndex();
+      var photos = this.props.photos;
+
+
+      if (currentPhotoIndex === photos.length - 1) {
+        this.selectPhotoIndex(0);
+        return;
+      }
+
+      this.selectPhotoIndex(Math.max(currentPhotoIndex + 1, 0));
+    }
+  }, {
+    key: 'onPreviousPhoto',
+    value: function onPreviousPhoto() {
+      var currentPhotoIndex = this.getCurrentPhotoIndex();
+      var photos = this.props.photos;
+
+
+      if (currentPhotoIndex === 0) {
+        this.selectPhotoIndex(photos.length - 1);
+        return;
+      }
+
+      this.selectPhotoIndex(Math.max(currentPhotoIndex - 1, 0));
+    }
+  }, {
     key: 'render',
     value: function render() {
       var photos = this.props.photos;
@@ -1276,7 +1325,7 @@ var App = function (_Component) {
       return (0, _preact.h)(
         'div',
         null,
-        selectedPhoto ? (0, _preact.h)(_photos2.default, { photo: selectedPhoto }) : (0, _preact.h)(
+        selectedPhoto ? (0, _preact.h)(_photos2.default, { photo: selectedPhoto, onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto }) : (0, _preact.h)(
           'div',
           { style: { display: selectedPhoto ? 'none' : 'block' } },
           (0, _preact.h)(_collage2.default, { photos: photos, onSelectPhoto: this.onSelectPhoto })
@@ -1525,7 +1574,10 @@ var Photo = function (_Component) {
   _createClass(Photo, [{
     key: 'render',
     value: function render() {
-      var photo = this.props.photo;
+      var _props = this.props,
+          photo = _props.photo,
+          onNext = _props.onNext,
+          onPrevious = _props.onPrevious;
 
       var srcSet = buildSrcSet(photo.sizes);
 
@@ -1556,6 +1608,16 @@ var Photo = function (_Component) {
           'p',
           null,
           photo.location
+        ),
+        (0, _preact.h)(
+          'button',
+          { onClick: onPrevious },
+          'Previous'
+        ),
+        (0, _preact.h)(
+          'button',
+          { onClick: onNext },
+          'Next'
         )
       );
     }
