@@ -6,12 +6,11 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node lib/server/index.js",
+    "start": "NODE_ENV=production node server/index.js",
     "start:server": "node server/index.js",
     "start:client": "webpack --watch --config client/webpack.config.js",
     "build": "npm run lint && npm run test && npm run package",
-    "build:css": "postcss -o lib/server/static/app.css server/static/app.min.css",
-    "prepackage": "rimraf lib/",
+    "build:css": "postcss -o server/static/app.min.css server/static/app.css",
     "package": "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
     "lint": "standard --global it --global expect --global describe --global jest --global beforeEach --global __DEV__",
     "test": "jest",
@@ -29,8 +28,7 @@
     "morgan": "^1.7.0",
     "multer": "^1.2.0",
     "pug": "^2.0.0-rc.4",
-    "sitemap": "^1.8.2",
-    "whatwg-fetch": "^2.0.1"
+    "sitemap": "^1.8.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
@@ -50,7 +48,8 @@
     "rimraf": "^2.5.4",
     "standard": "^10.0.3",
     "throttleit": "^1.0.0",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "whatwg-fetch": "^2.0.1"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -67,7 +66,6 @@
   },
   "standard": {
     "ignore": [
-      "lib/",
       "server/static/"
     ]
   }

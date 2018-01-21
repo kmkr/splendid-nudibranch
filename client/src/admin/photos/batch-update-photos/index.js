@@ -1,9 +1,10 @@
-import React, {PropTypes} from 'react'
+/** @jsx h */
+import {h, Component} from 'preact'
 import {map} from './batch-update-mapper'
 
-export default class BatchUpdatePhotos extends React.Component {
-  constructor (props) {
-    super(props)
+export default class BatchUpdatePhotos extends Component {
+  constructor () {
+    super()
     this.state = {
       content: ''
     }
@@ -34,9 +35,4 @@ export default class BatchUpdatePhotos extends React.Component {
       </div>
     )
   }
-}
-
-BatchUpdatePhotos.propTypes = {
-  photos: PropTypes.array.isRequired,
-  onSubmit: PropTypes.func.isRequired
 }

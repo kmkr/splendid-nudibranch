@@ -1,13 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Wrapper from '../wrapper'
-import App from './app'
-
+/** @jsx h */
+import {h, render} from 'preact'
+import '../polyfills'
 import './polyfills'
+import App from './app'
+const photos = window.snPhotos
 
-ReactDOM.render(
-  <Wrapper>
-    <App />
-  </Wrapper>,
-    document.getElementById('app')
-)
+render(<App photos={photos} />, document.getElementById('app'))

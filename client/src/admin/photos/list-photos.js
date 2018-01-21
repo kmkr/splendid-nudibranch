@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react'
+/** @jsx h */
+import {h} from 'preact'
 
-import './list-photos.scss'
 import EditPhoto from './edit-photo'
 
 const ListPhotos = ({photos, onDeleteClick}) => (
@@ -23,10 +23,5 @@ const ListPhotos = ({photos, onDeleteClick}) => (
         ))}
   </div>
 )
-
-ListPhotos.propTypes = {
-  photos: PropTypes.array.isRequired,
-  onDeleteClick: PropTypes.func.isRequired
-}
 
 export default ListPhotos

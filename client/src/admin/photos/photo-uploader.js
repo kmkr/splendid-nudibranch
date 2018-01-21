@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+/** @jsx h */
+import {h, Component} from 'preact'
 
 function toFormData (fileList) {
   return fileList.map(file => {
@@ -8,7 +9,7 @@ function toFormData (fileList) {
   })
 }
 
-class PhotoUploader extends React.Component {
+class PhotoUploader extends Component {
   onAddPhoto ({target}) {
     const formDataList = toFormData(Array.from(target.files || []))
     formDataList.map(formData => this.props.onAddPhoto(formData))
@@ -22,10 +23,6 @@ class PhotoUploader extends React.Component {
         onChange={e => this.onAddPhoto(e)} />
     )
   }
-}
-
-PhotoUploader.propTypes = {
-  onAddPhoto: PropTypes.func.isRequired
 }
 
 export default PhotoUploader

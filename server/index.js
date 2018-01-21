@@ -36,9 +36,9 @@ app.use(auth)
 app.use('/static', express.static(`${__dirname}/static`))
 
 const env = process.env.NODE_ENV
-const cssFile = env === 'production' ? 'app.min.css' : 'app.css'
+const indexCssFile = env === 'production' ? 'app.min.css' : 'app.css'
 
-function photoIndex (res, {photoKey, year, location}) {
+function photoIndex (res, {photoKey, year, location} = {}, jsFile = 'bundle.js', cssFile) {
   return (
         Promise.all([
           viewDataService.getPhotoData(),
@@ -47,6 +47,7 @@ function photoIndex (res, {photoKey, year, location}) {
           const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
           return res.render('index', {
             description,
+            js: jsFile,
             css: cssFile,
             photos: JSON.stringify(photos),
             ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
@@ -60,7 +61,7 @@ function photoIndex (res, {photoKey, year, location}) {
 }
 
 app.get('/', (req, res) => {
-  photoIndex(res, {year: req.query.year, location: req.query.location})
+  photoIndex(res, {year: req.query.year, location: req.query.location}, 'bundle.js', indexCssFile)
 })
 
 app.get('/photos/:key', (req, res) => {
@@ -68,13 +69,9 @@ app.get('/photos/:key', (req, res) => {
 })
 
 app.get('/admin', (req, res) => {
-  viewDataService.getPhotoData()
-        .then(photoData => res.render('index-admin', {
-          data: {
-            photoData
-          }
-        }))
+  photoIndex(res, {}, 'admin-bundle.js', 'app-admin.css')
 })
+
 app.use('/photos', photoRouter)
 app.use('/stats', statsRouter)
 app.use('/sitemap.xml', sitemapRouter)

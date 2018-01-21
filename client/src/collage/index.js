@@ -23,12 +23,12 @@ class Collage extends Component {
   }
 
   componentDidMount () {
-    throttle("resize", "optimizedResize");
-    window.addEventListener("optimizedResize", this.updateWidth)
+    throttle('resize', 'optimizedResize')
+    window.addEventListener('optimizedResize', this.updateWidth)
   }
 
   componentWillUnmount () {
-    window.removeEventListener("optimizedResize", this.updateWidth)
+    window.removeEventListener('optimizedResize', this.updateWidth)
   }
 
   render () {

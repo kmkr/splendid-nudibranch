@@ -4,7 +4,8 @@ const env = process.env.NODE_ENV
 module.exports = {
   context: __dirname,
   entry: {
-    bundle: './src/index.js'
+    bundle: './src/index.js',
+    'admin-bundle': './src/admin/index.js'
   },
   devtool: env !== 'production' ? 'source-map' : false,
   output: {

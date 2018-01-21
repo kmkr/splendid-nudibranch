@@ -60,11 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1085,7 +1086,8 @@ var preact = {
 
 
 /***/ }),
-/* 1 */
+
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1168,7 +1170,8 @@ var TransitionImage = function (_Component) {
 exports.default = TransitionImage;
 
 /***/ }),
-/* 2 */
+
+/***/ 32:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1176,7 +1179,7 @@ exports.default = TransitionImage;
 
 var _preact = __webpack_require__(0);
 
-var _app = __webpack_require__(3);
+var _app = __webpack_require__(33);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -1188,7 +1191,8 @@ var photos = window.snPhotos;
 (0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
 
 /***/ }),
-/* 3 */
+
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1202,11 +1206,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _collage = __webpack_require__(4);
+var _collage = __webpack_require__(34);
 
 var _collage2 = _interopRequireDefault(_collage);
 
-var _photos = __webpack_require__(9);
+var _photos = __webpack_require__(39);
 
 var _photos2 = _interopRequireDefault(_photos);
 
@@ -1340,7 +1344,8 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 4 */
+
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1354,15 +1359,15 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _photo = __webpack_require__(5);
+var _photo = __webpack_require__(35);
 
 var _photo2 = _interopRequireDefault(_photo);
 
-var _setWidthHelper = __webpack_require__(6);
+var _setWidthHelper = __webpack_require__(36);
 
 var _setWidthHelper2 = _interopRequireDefault(_setWidthHelper);
 
-var _throttle = __webpack_require__(7);
+var _throttle = __webpack_require__(37);
 
 var _throttle2 = _interopRequireDefault(_throttle);
 
@@ -1401,13 +1406,13 @@ var Collage = function (_Component) {
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      (0, _throttle2.default)("resize", "optimizedResize");
-      window.addEventListener("optimizedResize", this.updateWidth);
+      (0, _throttle2.default)('resize', 'optimizedResize');
+      window.addEventListener('optimizedResize', this.updateWidth);
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      window.removeEventListener("optimizedResize", this.updateWidth);
+      window.removeEventListener('optimizedResize', this.updateWidth);
     }
   }, {
     key: 'render',
@@ -1439,7 +1444,8 @@ var Collage = function (_Component) {
 exports.default = Collage;
 
 /***/ }),
-/* 5 */
+
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1453,7 +1459,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _transitionImage = __webpack_require__(1);
+var _transitionImage = __webpack_require__(22);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
 
@@ -1508,7 +1514,8 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-/* 6 */
+
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1583,41 +1590,81 @@ function getNumPortrait(photos) {
 }
 
 /***/ }),
-/* 7 */
+
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
-var _throttleit = __webpack_require__(10);
+var _throttleit = __webpack_require__(38);
 
 var _throttleit2 = _interopRequireDefault(_throttleit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (type, name, obj) {
-    obj = obj || window;
-    var running = false;
-    var func = (0, _throttleit2.default)(function () {
-        if (running) {
-            return;
-        }
-        running = true;
-        requestAnimationFrame(function () {
-            obj.dispatchEvent(new CustomEvent(name));
-            running = false;
-        });
-    }, 200);
-    obj.addEventListener(type, func);
+  obj = obj || window;
+  var running = false;
+  var func = (0, _throttleit2.default)(function () {
+    if (running) {
+      return;
+    }
+    running = true;
+    window.requestAnimationFrame(function () {
+      obj.dispatchEvent(new window.CustomEvent(name));
+      running = false;
+    });
+  }, 200);
+  obj.addEventListener(type, func);
 };
 
 /***/ }),
-/* 8 */,
-/* 9 */
+
+/***/ 38:
+/***/ (function(module, exports) {
+
+module.exports = throttle;
+
+/**
+ * Returns a new function that, when invoked, invokes `func` at most once per `wait` milliseconds.
+ *
+ * @param {Function} func Function to wrap.
+ * @param {Number} wait Number of milliseconds that must elapse between `func` invocations.
+ * @return {Function} A new function that wraps the `func` function passed in.
+ */
+
+function throttle (func, wait) {
+  var ctx, args, rtn, timeoutID; // caching
+  var last = 0;
+
+  return function throttled () {
+    ctx = this;
+    args = arguments;
+    var delta = new Date() - last;
+    if (!timeoutID)
+      if (delta >= wait) call();
+      else timeoutID = setTimeout(call, wait - delta);
+    return rtn;
+  };
+
+  function call () {
+    timeoutID = 0;
+    last = +new Date();
+    rtn = func.apply(ctx, args);
+    ctx = null;
+    args = null;
+  }
+}
+
+
+/***/ }),
+
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1631,7 +1678,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _transitionImage = __webpack_require__(1);
+var _transitionImage = __webpack_require__(22);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
 
@@ -1717,44 +1764,7 @@ var Photo = function (_Component) {
 
 exports.default = Photo;
 
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-module.exports = throttle;
-
-/**
- * Returns a new function that, when invoked, invokes `func` at most once per `wait` milliseconds.
- *
- * @param {Function} func Function to wrap.
- * @param {Number} wait Number of milliseconds that must elapse between `func` invocations.
- * @return {Function} A new function that wraps the `func` function passed in.
- */
-
-function throttle (func, wait) {
-  var ctx, args, rtn, timeoutID; // caching
-  var last = 0;
-
-  return function throttled () {
-    ctx = this;
-    args = arguments;
-    var delta = new Date() - last;
-    if (!timeoutID)
-      if (delta >= wait) call();
-      else timeoutID = setTimeout(call, wait - delta);
-    return rtn;
-  };
-
-  function call () {
-    timeoutID = 0;
-    last = +new Date();
-    rtn = func.apply(ctx, args);
-    ctx = null;
-    args = null;
-  }
-}
-
-
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=bundle.js.map

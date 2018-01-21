@@ -4,6 +4,7 @@
         "react"
     ],
     "plugins": [
+        ["transform-react-jsx", { "pragma":"h" }],
         "transform-object-rest-spread"
     ],
     "env": {

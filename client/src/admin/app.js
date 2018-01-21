@@ -1,34 +1,36 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
+/** @jsx h */
+import {h, Component} from 'preact'
 
 import Authenticator from './authenticator'
 import PhotoUploader from './photos/photo-uploader'
 import BatchUpdatePhotos from './photos/batch-update-photos'
 import ListPhotos from './photos/list-photos'
-import {batchUpdatePhotos, uploadPhoto, deletePhoto} from './photos/edit-photo-actions'
-import {fetchPhotos} from '../photos/photo-actions'
-import snFetch from '../fetch'
+import snFetch from './fetch'
 
 class App extends Component {
-  constructor (props) {
-    super(props)
+  constructor () {
+    super()
     this.state = {
       token: ''
     }
+
+    this.onAddPhoto = this.onAddPhoto.bind(this)
+    this.onDeleteClick = this.onDeleteClick.bind(this)
+    this.onSetToken = this.onSetToken.bind(this)
+    this.onBatchUpdatePhotos = this.onBatchUpdatePhotos.bind(this)
   }
   componentWillMount () {
-    this.props.dispatch(fetchPhotos())
     snFetch.addHeaderRequestInterceptor(() => ({
       'x-auth': this.state.token
     }))
   }
 
   onAddPhoto (photo) {
-    this.props.dispatch(uploadPhoto(photo))
+    snFetch.post('/photos', photo)
   }
 
   onDeleteClick (photo) {
-    this.props.dispatch(deletePhoto(photo))
+    snFetch.delete(`/photos/${photo.key}`)
   }
 
   onSetToken (token) {
@@ -37,7 +39,7 @@ class App extends Component {
 
   onBatchUpdatePhotos (photos) {
     if (photos.length) {
-      this.props.dispatch(batchUpdatePhotos(photos))
+      snFetch.postJSON('/photos/metadata', photos)
     } else {
       console.log('Nothing to update')
     }
@@ -47,18 +49,18 @@ class App extends Component {
     return (
       <div className='row'>
         <div className='col-lg-push-2 col-lg-10'>
-          <Authenticator onSetToken={this.onSetToken.bind(this)} />
+          <Authenticator onSetToken={this.onSetToken} />
           <div style={{opacity: this.state.token ? 1 : 0.2}}>
             <h1>Upload photos</h1>
-            <PhotoUploader onAddPhoto={this.onAddPhoto.bind(this)} />
+            <PhotoUploader onAddPhoto={this.onAddPhoto} />
             <hr />
             <h1>Batch update photos</h1>
-            <BatchUpdatePhotos photos={this.props.photos.data} onSubmit={this.onBatchUpdatePhotos.bind(this)} />
+            <BatchUpdatePhotos photos={this.props.photos.data} onSubmit={this.onBatchUpdatePhotos} />
             <hr />
             <h1>Edit photos</h1>
             <ListPhotos
-              photos={this.props.photos.data}
-              onDeleteClick={this.onDeleteClick.bind(this)} />
+              photos={this.props.photos}
+              onDeleteClick={this.onDeleteClick} />
           </div>
         </div>
       </div>
@@ -66,10 +68,4 @@ class App extends Component {
   }
 }
 
-function select (state) {
-  return {
-    photos: state.photos
-  }
-}
-
-export default connect(select)(App)
+export default App
