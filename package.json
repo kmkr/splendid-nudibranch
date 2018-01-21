@@ -21,7 +21,6 @@
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "core-js": "^2.4.1",
-    "es6-promise": "^4.0.5",
     "express": "^4.14.0",
     "gm": "^1.23.0",
     "md5-file": "^3.2.3",
@@ -43,14 +42,11 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.16.0",
     "jest": "^19.0.0",
-    "ncp": "^2.0.0",
     "postcss-cli": "^4.1.1",
     "preact": "^8.2.7",
-    "rimraf": "^2.5.4",
     "standard": "^10.0.3",
     "throttleit": "^1.0.0",
-    "webpack": "^3.10.0",
-    "whatwg-fetch": "^2.0.1"
+    "webpack": "^3.10.0"
   },
   "jest": {
     "moduleFileExtensions": [
