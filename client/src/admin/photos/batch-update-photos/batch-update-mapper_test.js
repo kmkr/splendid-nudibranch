@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import {map} from './batch-update-mapper'
 
 it('should update two photos', () => {

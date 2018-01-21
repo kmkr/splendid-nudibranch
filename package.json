@@ -12,7 +12,7 @@
     "build": "npm run lint && npm run test && npm run package",
     "build:css": "postcss -o server/static/css/app.min.css server/static/css/app.css",
     "package": "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
-    "lint": "standard --global it --global expect --global describe --global jest --global beforeEach --global __DEV__",
+    "lint": "standard --global __DEV__",
     "test": "jest",
     "test:watch": "npm run test -- --watch"
   },

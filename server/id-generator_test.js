@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 const idGenerator = require('./id-generator')
 
 it('generation of id', () => {
