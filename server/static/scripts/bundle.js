@@ -63,9 +63,8 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1086,8 +1085,28 @@ var preact = {
 
 
 /***/ }),
-
-/***/ 22:
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1116,7 +1135,9 @@ var TransitionImage = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (TransitionImage.__proto__ || Object.getPrototypeOf(TransitionImage)).call(this));
 
-    _this.state = { loaded: false };
+    _this.state = {
+      visible: false
+    };
     _this.onLoad = _this.onLoad.bind(_this);
     return _this;
   }
@@ -1128,15 +1149,25 @@ var TransitionImage = function (_Component) {
       this.img.setAttribute('src', this.props.src);
     }
   }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.src !== this.props.src) {
+        this.img.setAttribute('src', this.props.src);
+        this.setState({
+          visible: false
+        });
+      }
+    }
+  }, {
     key: 'onLoad',
     value: function onLoad() {
-      if (this.state.loaded) {
+      if (this.state.visible) {
         // Some browsers call onLoad multiple times, perhaps due to srcSet
         return;
       }
 
       this.setState({
-        loaded: true
+        visible: true
       });
     }
   }, {
@@ -1157,7 +1188,7 @@ var TransitionImage = function (_Component) {
           _this2.img = img;
         },
         className: 'transition-image',
-        style: { opacity: this.state.loaded ? 1 : 0 },
+        style: { opacity: this.state.visible ? 1 : 0 },
         srcSet: srcSet,
         sizes: sizes,
         width: width });
@@ -1170,8 +1201,16 @@ var TransitionImage = function (_Component) {
 exports.default = TransitionImage;
 
 /***/ }),
-
-/***/ 32:
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1191,8 +1230,7 @@ var photos = window.snPhotos;
 (0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
 
 /***/ }),
-
-/***/ 33:
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1315,8 +1353,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-
-/***/ 34:
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1415,8 +1452,7 @@ var Collage = function (_Component) {
 exports.default = Collage;
 
 /***/ }),
-
-/***/ 35:
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1485,8 +1521,7 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-
-/***/ 36:
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1561,8 +1596,7 @@ function getNumPortrait(photos) {
 }
 
 /***/ }),
-
-/***/ 37:
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1595,8 +1629,7 @@ exports.default = function (type, name, obj) {
 };
 
 /***/ }),
-
-/***/ 38:
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = throttle;
@@ -1634,8 +1667,7 @@ function throttle (func, wait) {
 
 
 /***/ }),
-
-/***/ 39:
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1649,11 +1681,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _photo = __webpack_require__(90);
+var _photo = __webpack_require__(40);
 
 var _photo2 = _interopRequireDefault(_photo);
 
-var _scrollOnEventHandler = __webpack_require__(91);
+var _scrollOnEventHandler = __webpack_require__(41);
 
 var _scrollOnEventHandler2 = _interopRequireDefault(_scrollOnEventHandler);
 
@@ -1745,8 +1777,7 @@ var PhotosWrapper = function (_Component) {
 exports.default = PhotosWrapper;
 
 /***/ }),
-
-/***/ 90:
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1847,8 +1878,7 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-
-/***/ 91:
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1933,6 +1963,5 @@ var ScrollOnEventHandler = function (_Component) {
 exports.default = ScrollOnEventHandler;
 
 /***/ })
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=bundle.js.map

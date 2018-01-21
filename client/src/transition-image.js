@@ -4,7 +4,9 @@ import {h, Component} from 'preact'
 class TransitionImage extends Component {
   constructor () {
     super()
-    this.state = {loaded: false}
+    this.state = {
+      visible: false
+    }
     this.onLoad = this.onLoad.bind(this)
   }
 
@@ -13,14 +15,23 @@ class TransitionImage extends Component {
     this.img.setAttribute('src', this.props.src)
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.src !== this.props.src) {
+      this.img.setAttribute('src', this.props.src)
+      this.setState({
+        visible: false
+      })
+    }
+  }
+
   onLoad () {
-    if (this.state.loaded) {
+    if (this.state.visible) {
       // Some browsers call onLoad multiple times, perhaps due to srcSet
       return
     }
 
     this.setState({
-      loaded: true
+      visible: true
     })
   }
 
@@ -32,7 +43,7 @@ class TransitionImage extends Component {
         alt={alt || ''}
         ref={img => { this.img = img }}
         className='transition-image'
-        style={{opacity: this.state.loaded ? 1 : 0}}
+        style={{opacity: this.state.visible ? 1 : 0}}
         srcSet={srcSet}
         sizes={sizes}
         width={width} />
