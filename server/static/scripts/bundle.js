@@ -1206,7 +1206,7 @@ var _collage = __webpack_require__(4);
 
 var _collage2 = _interopRequireDefault(_collage);
 
-var _photos = __webpack_require__(7);
+var _photos = __webpack_require__(9);
 
 var _photos2 = _interopRequireDefault(_photos);
 
@@ -1350,6 +1350,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _preact = __webpack_require__(0);
 
 var _photo = __webpack_require__(5);
@@ -1360,27 +1362,80 @@ var _setWidthHelper = __webpack_require__(6);
 
 var _setWidthHelper2 = _interopRequireDefault(_setWidthHelper);
 
+var _throttle = __webpack_require__(7);
+
+var _throttle2 = _interopRequireDefault(_throttle);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Collage = function Collage(_ref) {
-  var photos = _ref.photos,
-      onSelectPhoto = _ref.onSelectPhoto;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  var photoGroups = (0, _setWidthHelper2.default)(photos);
-  return (0, _preact.h)(
-    'div',
-    { id: 'collage' },
-    photoGroups.map(function (photoGroup, index) {
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+var Collage = function (_Component) {
+  _inherits(Collage, _Component);
+
+  function Collage() {
+    _classCallCheck(this, Collage);
+
+    var _this = _possibleConstructorReturn(this, (Collage.__proto__ || Object.getPrototypeOf(Collage)).call(this));
+
+    _this.state = {
+      innerWidth: window.innerWidth
+    };
+
+    _this.updateWidth = _this.updateWidth.bind(_this);
+    return _this;
+  }
+
+  _createClass(Collage, [{
+    key: 'updateWidth',
+    value: function updateWidth() {
+      this.setState({
+        innerWidth: window.innerWidth
+      });
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      (0, _throttle2.default)("resize", "optimizedResize");
+      window.addEventListener("optimizedResize", this.updateWidth);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener("optimizedResize", this.updateWidth);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          photos = _props.photos,
+          onSelectPhoto = _props.onSelectPhoto;
+
+      var photoGroups = (0, _setWidthHelper2.default)(photos);
       return (0, _preact.h)(
         'div',
-        { key: 'photo-group-' + index, style: { maxHeight: photoGroup.height + 'px' } },
-        photoGroup.photos.map(function (photo) {
-          return (0, _preact.h)(_photo2.default, { key: photo.key, photo: photo, onSelect: onSelectPhoto });
+        { id: 'collage' },
+        photoGroups.map(function (photoGroup, index) {
+          return (0, _preact.h)(
+            'div',
+            { key: 'photo-group-' + index, style: { maxHeight: photoGroup.height + 'px' } },
+            photoGroup.photos.map(function (photo) {
+              return (0, _preact.h)(_photo2.default, { key: photo.key, photo: photo, onSelect: onSelectPhoto });
+            })
+          );
         })
       );
-    })
-  );
-}; /** @jsx h */
+    }
+  }]);
+
+  return Collage;
+}(_preact.Component);
+
 exports.default = Collage;
 
 /***/ }),
@@ -1535,6 +1590,40 @@ function getNumPortrait(photos) {
 
 
 Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _throttleit = __webpack_require__(10);
+
+var _throttleit2 = _interopRequireDefault(_throttleit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (type, name, obj) {
+    obj = obj || window;
+    var running = false;
+    var func = (0, _throttleit2.default)(function () {
+        if (running) {
+            return;
+        }
+        running = true;
+        requestAnimationFrame(function () {
+            obj.dispatchEvent(new CustomEvent(name));
+            running = false;
+        });
+    }, 200);
+    obj.addEventListener(type, func);
+};
+
+/***/ }),
+/* 8 */,
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -1627,6 +1716,44 @@ var Photo = function (_Component) {
 }(_preact.Component);
 
 exports.default = Photo;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = throttle;
+
+/**
+ * Returns a new function that, when invoked, invokes `func` at most once per `wait` milliseconds.
+ *
+ * @param {Function} func Function to wrap.
+ * @param {Number} wait Number of milliseconds that must elapse between `func` invocations.
+ * @return {Function} A new function that wraps the `func` function passed in.
+ */
+
+function throttle (func, wait) {
+  var ctx, args, rtn, timeoutID; // caching
+  var last = 0;
+
+  return function throttled () {
+    ctx = this;
+    args = arguments;
+    var delta = new Date() - last;
+    if (!timeoutID)
+      if (delta >= wait) call();
+      else timeoutID = setTimeout(call, wait - delta);
+    return rtn;
+  };
+
+  function call () {
+    timeoutID = 0;
+    last = +new Date();
+    rtn = func.apply(ctx, args);
+    ctx = null;
+    args = null;
+  }
+}
+
 
 /***/ })
 /******/ ]);

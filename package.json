@@ -49,6 +49,7 @@
     "preact": "^8.2.7",
     "rimraf": "^2.5.4",
     "standard": "^10.0.3",
+    "throttleit": "^1.0.0",
     "webpack": "^3.10.0"
   },
   "jest": {
