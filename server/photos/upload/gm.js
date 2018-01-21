@@ -32,6 +32,22 @@ function parseDate (exifDate) {
   return new Date(exifDate.replace(':', '-'))
 }
 
+function getMetadata (identification) {
+  const exif = identification['Profile-EXIF']
+
+  if (!exif) {
+    return {}
+  }
+
+  const dateTimeOrig = exif['Date Time Original']
+
+  return {
+    // todo: add title from suitable metadata field
+    description: exif['Image Description'] || '',
+    shot_at: dateTimeOrig ? parseDate(dateTimeOrig) : new Date()
+  }
+}
+
 module.exports.metadata = function (filePath) {
   return new Promise((resolve, reject) => {
     gm(filePath).identify((err, value) => {
@@ -40,12 +56,9 @@ module.exports.metadata = function (filePath) {
       }
 
       console.log(value)
-      const exif = value['Profile-EXIF']
-      const dateTimeOrig = exif && exif['Date Time Original']
-      return resolve({
-        ...value.size,
-        shot_at: dateTimeOrig ? parseDate(dateTimeOrig) : new Date()
-      })
+      return resolve(Object.assign({
+        ...value.size
+      }, getMetadata(value)))
     })
   })
 }
