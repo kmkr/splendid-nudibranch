@@ -1,41 +1,62 @@
 /** @jsx h */
-import { h, Component } from 'preact'
+import {h, Component} from 'preact'
 
-import TransitionImage from '../transition-image'
+import Photo from './photo'
+import ScrollOnEventHandler from './scroll-on-event-handler'
 
-function buildSrcSet (sizes) {
-  return Object.keys(sizes)
-    .reverse()
-    .map(key => {
-      const size = sizes[key]
-      return `${size.url} ${size.width}w`
-    })
-    .join(', ')
-}
+class PhotosWrapper extends Component {
+  constructor () {
+    super()
+    this.onNextPhoto = this.onNextPhoto.bind(this)
+    this.onPreviousPhoto = this.onPreviousPhoto.bind(this)
+  }
 
-class Photo extends Component {
+  getCurrentPhotoIndex () {
+    const { photos, selectedPhoto } = this.props
+    if (!selectedPhoto) {
+      return 0
+    }
+
+    return photos.indexOf(selectedPhoto)
+  }
+
+  onNextPhoto () {
+    const currentPhotoIndex = this.getCurrentPhotoIndex()
+    const { photos } = this.props
+
+    if (currentPhotoIndex === (photos.length - 1)) {
+      this.onSelectPhotoIndex(0)
+      return
+    }
+
+    this.onSelectPhotoIndex(Math.max(currentPhotoIndex + 1, 0))
+  }
+
+  onPreviousPhoto () {
+    const currentPhotoIndex = this.getCurrentPhotoIndex()
+    const { photos } = this.props
+
+    if (currentPhotoIndex === 0) {
+      this.onSelectPhotoIndex(photos.length - 1)
+      return
+    }
+
+    this.onSelectPhotoIndex(Math.max(currentPhotoIndex - 1, 0))
+  }
+
+  onSelectPhotoIndex (photoIndex) {
+    this.props.onSelectPhoto(this.props.photos[photoIndex])
+  }
+
   render () {
-    const { photo, onNext, onPrevious } = this.props
-    const srcSet = buildSrcSet(photo.sizes)
-
+    const { selectedPhoto } = this.props
     return (
       <div>
-        <TransitionImage
-          alt={photo.title}
-          src={photo.sizes.large.url}
-          sizes='(min-width: 1360px) 95vw, 100vw'
-          srcSet={srcSet} />
-
-        <p>{photo.title}</p>
-        <p>{photo.latin}</p>
-        <p>{photo.description}</p>
-        <p>{photo.location}</p>
-
-        <button onClick={onPrevious}>Previous</button>
-        <button onClick={onNext}>Next</button>
+        <ScrollOnEventHandler onNext={this.onNextPhoto} onPrevious={this.onPreviousPhoto} />
+        <Photo photo={selectedPhoto} onNext={this.onNextPhoto} onPrevious={this.onPreviousPhoto} />
       </div>
     )
   }
 }
 
-export default Photo
+export default PhotosWrapper

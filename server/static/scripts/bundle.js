@@ -1242,8 +1242,6 @@ var App = function (_Component) {
       selectedPhoto: selectedPhotoKey ? getPhotoWithKey(_this.props.photos, selectedPhotoKey) : null
     };
     _this.onSelectPhoto = _this.onSelectPhoto.bind(_this);
-    _this.onNextPhoto = _this.onNextPhoto.bind(_this);
-    _this.onPreviousPhoto = _this.onPreviousPhoto.bind(_this);
     return _this;
   }
 
@@ -1262,11 +1260,6 @@ var App = function (_Component) {
           selectedPhoto: photo
         });
       });
-    }
-  }, {
-    key: 'selectPhotoIndex',
-    value: function selectPhotoIndex(photoIndex) {
-      this.onSelectPhoto(this.props.photos[photoIndex]);
     }
   }, {
     key: 'onSelectPhoto',
@@ -1293,34 +1286,6 @@ var App = function (_Component) {
       return photos.indexOf(selectedPhoto);
     }
   }, {
-    key: 'onNextPhoto',
-    value: function onNextPhoto() {
-      var currentPhotoIndex = this.getCurrentPhotoIndex();
-      var photos = this.props.photos;
-
-
-      if (currentPhotoIndex === photos.length - 1) {
-        this.selectPhotoIndex(0);
-        return;
-      }
-
-      this.selectPhotoIndex(Math.max(currentPhotoIndex + 1, 0));
-    }
-  }, {
-    key: 'onPreviousPhoto',
-    value: function onPreviousPhoto() {
-      var currentPhotoIndex = this.getCurrentPhotoIndex();
-      var photos = this.props.photos;
-
-
-      if (currentPhotoIndex === 0) {
-        this.selectPhotoIndex(photos.length - 1);
-        return;
-      }
-
-      this.selectPhotoIndex(Math.max(currentPhotoIndex - 1, 0));
-    }
-  }, {
     key: 'render',
     value: function render() {
       var photos = this.props.photos;
@@ -1329,7 +1294,13 @@ var App = function (_Component) {
       return (0, _preact.h)(
         'div',
         null,
-        selectedPhoto ? (0, _preact.h)(_photos2.default, { photo: selectedPhoto, onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto }) : (0, _preact.h)(
+        selectedPhoto ? (0, _preact.h)(_photos2.default, {
+          onNext: this.onNextPhoto,
+          onPrevious: this.onPreviousPhoto,
+          onSelectPhoto: this.onSelectPhoto,
+          photos: photos,
+          selectedPhoto: selectedPhoto
+        }) : (0, _preact.h)(
           'div',
           { style: { display: selectedPhoto ? 'none' : 'block' } },
           (0, _preact.h)(_collage2.default, { photos: photos, onSelectPhoto: this.onSelectPhoto })
@@ -1678,6 +1649,117 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
+var _photo = __webpack_require__(90);
+
+var _photo2 = _interopRequireDefault(_photo);
+
+var _scrollOnEventHandler = __webpack_require__(91);
+
+var _scrollOnEventHandler2 = _interopRequireDefault(_scrollOnEventHandler);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+var PhotosWrapper = function (_Component) {
+  _inherits(PhotosWrapper, _Component);
+
+  function PhotosWrapper() {
+    _classCallCheck(this, PhotosWrapper);
+
+    var _this = _possibleConstructorReturn(this, (PhotosWrapper.__proto__ || Object.getPrototypeOf(PhotosWrapper)).call(this));
+
+    _this.onNextPhoto = _this.onNextPhoto.bind(_this);
+    _this.onPreviousPhoto = _this.onPreviousPhoto.bind(_this);
+    return _this;
+  }
+
+  _createClass(PhotosWrapper, [{
+    key: 'getCurrentPhotoIndex',
+    value: function getCurrentPhotoIndex() {
+      var _props = this.props,
+          photos = _props.photos,
+          selectedPhoto = _props.selectedPhoto;
+
+      if (!selectedPhoto) {
+        return 0;
+      }
+
+      return photos.indexOf(selectedPhoto);
+    }
+  }, {
+    key: 'onNextPhoto',
+    value: function onNextPhoto() {
+      var currentPhotoIndex = this.getCurrentPhotoIndex();
+      var photos = this.props.photos;
+
+
+      if (currentPhotoIndex === photos.length - 1) {
+        this.onSelectPhotoIndex(0);
+        return;
+      }
+
+      this.onSelectPhotoIndex(Math.max(currentPhotoIndex + 1, 0));
+    }
+  }, {
+    key: 'onPreviousPhoto',
+    value: function onPreviousPhoto() {
+      var currentPhotoIndex = this.getCurrentPhotoIndex();
+      var photos = this.props.photos;
+
+
+      if (currentPhotoIndex === 0) {
+        this.onSelectPhotoIndex(photos.length - 1);
+        return;
+      }
+
+      this.onSelectPhotoIndex(Math.max(currentPhotoIndex - 1, 0));
+    }
+  }, {
+    key: 'onSelectPhotoIndex',
+    value: function onSelectPhotoIndex(photoIndex) {
+      this.props.onSelectPhoto(this.props.photos[photoIndex]);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var selectedPhoto = this.props.selectedPhoto;
+
+      return (0, _preact.h)(
+        'div',
+        null,
+        (0, _preact.h)(_scrollOnEventHandler2.default, { onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto }),
+        (0, _preact.h)(_photo2.default, { photo: selectedPhoto, onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto })
+      );
+    }
+  }]);
+
+  return PhotosWrapper;
+}(_preact.Component);
+
+exports.default = PhotosWrapper;
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
 var _transitionImage = __webpack_require__(22);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
@@ -1763,6 +1845,92 @@ var Photo = function (_Component) {
 }(_preact.Component);
 
 exports.default = Photo;
+
+/***/ }),
+
+/***/ 91:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+var LEFT_KEYS = [33, // pgup
+37 // arrow left
+];
+var RIGHT_KEYS = [32, // space
+34, // pgdn
+39 // arrow right
+];
+
+var ScrollOnEventHandler = function (_Component) {
+  _inherits(ScrollOnEventHandler, _Component);
+
+  function ScrollOnEventHandler() {
+    _classCallCheck(this, ScrollOnEventHandler);
+
+    var _this = _possibleConstructorReturn(this, (ScrollOnEventHandler.__proto__ || Object.getPrototypeOf(ScrollOnEventHandler)).call(this));
+
+    _this.handleKeyUp = _this.handleKeyUp.bind(_this);
+    return _this;
+  }
+
+  _createClass(ScrollOnEventHandler, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      window.addEventListener('keyup', this.handleKeyUp);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('keyup', this.handleKeyUp);
+    }
+  }, {
+    key: 'shouldComponentUpdate',
+    value: function shouldComponentUpdate() {
+      return false;
+    }
+  }, {
+    key: 'handleKeyUp',
+    value: function handleKeyUp(e) {
+      var keyCode = e.keyCode || e.detail.keyCode;
+      var _props = this.props,
+          onPrevious = _props.onPrevious,
+          onNext = _props.onNext;
+
+
+      if (LEFT_KEYS.indexOf(keyCode) !== -1) {
+        e.preventDefault();
+        onPrevious();
+      } else if (RIGHT_KEYS.indexOf(keyCode) !== -1) {
+        e.preventDefault();
+        onNext();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return (0, _preact.h)('span', null);
+    }
+  }]);
+
+  return ScrollOnEventHandler;
+}(_preact.Component);
+
+exports.default = ScrollOnEventHandler;
 
 /***/ })
 

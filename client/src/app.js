@@ -2,7 +2,7 @@
 import {h, Component} from 'preact'
 
 import Collage from './collage'
-import Photo from './photos'
+import PhotosWrapper from './photos'
 
 function getPhotoWithKey (photos, key) {
   return photos.filter(p => p.key === key)[0]
@@ -17,8 +17,6 @@ class App extends Component {
       selectedPhoto: selectedPhotoKey ? getPhotoWithKey(this.props.photos, selectedPhotoKey) : null
     }
     this.onSelectPhoto = this.onSelectPhoto.bind(this)
-    this.onNextPhoto = this.onNextPhoto.bind(this)
-    this.onPreviousPhoto = this.onPreviousPhoto.bind(this)
   }
 
   componentDidMount () {
@@ -31,10 +29,6 @@ class App extends Component {
         selectedPhoto: photo
       })
     })
-  }
-
-  selectPhotoIndex (photoIndex) {
-    this.onSelectPhoto(this.props.photos[photoIndex])
   }
 
   onSelectPhoto (photo) {
@@ -57,36 +51,20 @@ class App extends Component {
     return photos.indexOf(selectedPhoto)
   }
 
-  onNextPhoto () {
-    const currentPhotoIndex = this.getCurrentPhotoIndex()
-    const { photos } = this.props
-
-    if (currentPhotoIndex === (photos.length - 1)) {
-      this.selectPhotoIndex(0)
-      return
-    }
-
-    this.selectPhotoIndex(Math.max(currentPhotoIndex + 1, 0))
-  }
-
-  onPreviousPhoto () {
-    const currentPhotoIndex = this.getCurrentPhotoIndex()
-    const { photos } = this.props
-
-    if (currentPhotoIndex === 0) {
-      this.selectPhotoIndex(photos.length - 1)
-      return
-    }
-
-    this.selectPhotoIndex(Math.max(currentPhotoIndex - 1, 0))
-  }
-
   render () {
     const { photos } = this.props
     const { selectedPhoto } = this.state
     return (
       <div>
-        {selectedPhoto ? <Photo photo={selectedPhoto} onNext={this.onNextPhoto} onPrevious={this.onPreviousPhoto} /> : (
+        {selectedPhoto ? (
+          <PhotosWrapper
+            onNext={this.onNextPhoto}
+            onPrevious={this.onPreviousPhoto}
+            onSelectPhoto={this.onSelectPhoto}
+            photos={photos}
+            selectedPhoto={selectedPhoto}
+          />
+        ) : (
           <div style={{display: selectedPhoto ? 'none' : 'block'}}>
             <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
           </div>
