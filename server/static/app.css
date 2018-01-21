@@ -1,3 +1,6 @@
+@import 'collage.css';
+@import 'photo-text-wrapper.css';
+
 :root {
   --margin: 8px;
   --font-size-large: 20px;
@@ -22,51 +25,6 @@ body {
   }
 }
 
-#collage {
-  margin-top: 8px;
-}
-
-@media (min-width: 1024px) {
-  #collage > div {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    margin-bottom: var(--margin);
-    margin-left: var(--margin);
-  }
-
-  #collage > div > div {
-    display: inline-block;
-    flex: 1 1 auto;
-    margin-right: var(--margin);
-  }
-}
-
-#collage img {
-  max-width: 100%;
-  width: 100%;
-}
-
-.photo-text-wrapper {
-  margin: 50px 8%;
-  max-width: 70ch;
-}
-
-.photo-text-wrapper .title {
-  text-transform: uppercase;
-  font-size: var(--font-size-large);
-  font-weight: 600;
-  letter-spacing: 3px;
-  line-height: 1.2;
-}
-
-.photo-text-wrapper .latin, .photo-text-wrapper .location {
-  font-size: var(--font-size-small);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-img.transition-image {
+.transition-image {
   transition: opacity .5s ease-in-out;
 }

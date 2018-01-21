@@ -1,0 +1,18 @@
+.photo-text-wrapper {
+  margin: 50px 8%;
+  max-width: 70ch;
+}
+
+.photo-text-wrapper .title {
+  text-transform: uppercase;
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.photo-text-wrapper .latin, .photo-text-wrapper .location {
+  font-size: var(--font-size-small);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}

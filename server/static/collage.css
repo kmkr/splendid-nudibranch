@@ -1,0 +1,25 @@
+#collage {
+  margin-top: 8px;
+}
+
+@media (min-width: 1024px) {
+  #collage > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-bottom: var(--margin);
+    margin-left: var(--margin);
+  }
+
+  #collage > div > div {
+    display: inline-block;
+    flex: 1 1 auto;
+    margin-right: var(--margin);
+  }
+}
+
+#collage img {
+  max-width: 100%;
+  width: 100%;
+}
