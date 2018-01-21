@@ -7,8 +7,6 @@ import throttle from './throttle'
 import getWidth from './get-width'
 
 function hasScrollbar () {
-  console.log(document.body.offsetHeight)
-  console.log(window.innerHeight)
   return document.body.offsetHeight >= window.innerHeight
 }
 

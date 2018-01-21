@@ -52,7 +52,6 @@ export default function (_photos) {
       subGroup.photos.push(photoToAdd)
       const ratio = photoToAdd.sizes.small.height / photoToAdd.sizes.small.width
       const height = photoToAdd.displayedWidth * ratio
-      console.log(`width ${photoToAdd.displayedWidth} height ${height} ratio ${ratio}`)
       subGroup.height = subGroup.height ? Math.min(subGroup.height, height) : height
             // next row
     }
