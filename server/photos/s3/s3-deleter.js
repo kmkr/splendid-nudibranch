@@ -1,7 +1,7 @@
-import {s3, generateParams} from './s3-wrapper'
+const {s3, generateParams} = require('./s3-wrapper')
 
-import {listItems} from './s3-lister'
-import {resizeTo} from '../../../common/constants'
+const {listItems} = require('./s3-lister')
+const {resizeTo} = require('../../../common/constants')
 
 function expectNumberOfKeys () {
   const numOriginalUpload = 0
@@ -9,7 +9,7 @@ function expectNumberOfKeys () {
   return resizeTo.length + numOriginalUpload
 }
 
-export function deletePhoto (key) {
+module.exports.deletePhoto = function (key) {
   return new Promise((resolve, reject) => {
     return listItems(key)
             .then(data => {

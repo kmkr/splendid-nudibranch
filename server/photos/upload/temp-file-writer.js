@@ -1,7 +1,7 @@
-import fs from 'fs'
-import * as idGenerator from '../../id-generator'
+const fs = require('fs')
+const idGenerator = require('../../id-generator')
 
-export default (file) => {
+module.exports = (file) => {
   const temp = '/tmp'
   const tempFile = `${temp}/${idGenerator.id()}_${file.originalname}`
   return new Promise((resolve, reject) => {

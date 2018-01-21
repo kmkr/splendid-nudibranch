@@ -11,7 +11,7 @@ function mapOne (photoFromDb) {
     tags: tags || []
   }
 }
-export function dbToClient (photoArg) {
+module.exports.dbToClient = function (photoArg) {
   if (photoArg.constructor === Array) {
     return photoArg.map(mapOne)
   }

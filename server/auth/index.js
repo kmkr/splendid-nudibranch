@@ -10,7 +10,7 @@ function getKey (path) {
   }
 }
 
-export function auth (req, res, next) {
+module.exports.auth = function (req, res, next) {
   if (req.method === 'GET') {
     return next()
   }

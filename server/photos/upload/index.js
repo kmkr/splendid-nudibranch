@@ -1,11 +1,11 @@
-import * as idGenerator from '../../id-generator'
-import s3Uploader from '../s3/s3-uploader'
-import {resize, metadata as getMetadata} from './gm'
-import tempFileWriter from './temp-file-writer'
-import db from '../../db'
-import {base} from '../constants'
-import {resizeTo} from '../../../common/constants'
-import * as photoDataFormatter from '../photo-data-formatter'
+const idGenerator = require('../../id-generator')
+const s3Uploader = require('../s3/s3-uploader')
+const {resize, metadata: getMetadata} = require('./gm')
+const tempFileWriter = require('./temp-file-writer')
+const db = require('../../db')
+const {base} = require('../constants')
+const {resizeTo} = require('../../../common/constants')
+const photoDataFormatter = require('../photo-data-formatter')
 
 function resizeToMultiple (path) {
   return resizeTo.map(r => resize(path, r.width, r.name))
@@ -37,7 +37,7 @@ function insertToDb (id, file, additionalData) {
   return db.insert('photos', photo).then(() => photo)
 }
 
-export default file => {
+module.exports = file => {
   const id = idGenerator.id()
   let tempFilePath
   return tempFileWriter(file)

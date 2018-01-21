@@ -1,4 +1,4 @@
-import {serverToClient} from './photo-data-conversion'
+const {serverToClient} = require('./photo-data-conversion')
 
 const base = 'http://my/base'
 const photoFromServer = {

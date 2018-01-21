@@ -1,8 +1,8 @@
-import React from 'react'
-import License from './license'
-import ogTags from './og-tags'
+const React = require('react')
+const License = require('./license')
+const ogTags = require('./og-tags')
 
-import {description} from '../../../common/constants'
+const {description} = require('../../../common/constants')
 
 const Layout = ({children, photos, keywords, selectedPhotoKey, year, location}) => (
   <html>
@@ -28,4 +28,4 @@ const Layout = ({children, photos, keywords, selectedPhotoKey, year, location}) 
   </html>
 )
 
-export default Layout
+module.exports = Layout

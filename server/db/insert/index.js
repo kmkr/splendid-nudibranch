@@ -1,4 +1,4 @@
-export default (db, collectionName, _item) => {
+module.exports = (db, collectionName, _item) => {
   const now = new Date()
   const item = {
     ..._item,

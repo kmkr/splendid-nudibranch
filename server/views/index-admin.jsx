@@ -1,5 +1,5 @@
-import React from 'react'
-import Layout from './layouts/default'
+const React = require('react')
+const Layout = require('./layouts/default')
 
 const Index = ({data, keywords}) => (
   <Layout data={data} keywords={keywords}>
@@ -21,4 +21,4 @@ const Index = ({data, keywords}) => (
   </Layout>
 )
 
-export default Index
+module.exports = Index

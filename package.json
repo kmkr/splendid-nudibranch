@@ -3,18 +3,16 @@
   "version": "1.0.0",
   "main": "server/index.js",
   "engines": {
-    "node": ">=6.4.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
     "start": "NODE_ENV=production node lib/server/index.js",
-    "start:server": "npm run package:server && node lib/server/index.js",
+    "start:server": "node server/index.js",
     "start:client": "webpack --watch --config client/webpack.config.js",
     "build": "npm run lint && npm run test && npm run package",
-    "build:css": "postcss -o lib/server/static/app.css server/static/app.css",
+    "build:css": "postcss -o lib/server/static/app.css server/static/app.min.css",
     "prepackage": "rimraf lib/",
-    "package": "npm run package:client && npm run package:server",
-    "package:client": "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
-    "package:server": "babel server --out-dir lib/server && babel common --out-dir lib/common && ncp ./server/static/images ./lib/server/static/images && ncp ./server/views ./lib/server/views",
+    "package": "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
     "lint": "standard --global it --global expect --global describe --global jest --global beforeEach --global __DEV__",
     "test": "jest",
     "test:watch": "npm run test -- --watch"

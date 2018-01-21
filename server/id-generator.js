@@ -4,10 +4,10 @@ function s4 () {
     .substring(1)
 }
 
-export function id () {
+module.exports.id = function () {
   return `${s4()}-${s4()}`
 }
 
-export function uid () {
+module.exports.uid = function () {
   return `${s4()}${s4()}-${s4()}${s4()}`
 }

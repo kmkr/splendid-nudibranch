@@ -1,10 +1,10 @@
-import express from 'express'
-import multer from 'multer'
+const express = require('express')
+const multer = require('multer')
 
-import photoUploadHandler from './upload'
-import deletePhotoHandler from './delete'
-import updatePhotoHandler from './update'
-import * as cache from '../cache'
+const photoUploadHandler = require('./upload')
+const deletePhotoHandler = require('./delete')
+const updatePhotoHandler = require('./update')
+const cache = require('../cache')
 
 const router = express.Router()
 const upload = multer()
@@ -48,4 +48,4 @@ router.post('/metadata', (req, res) => {
     .catch(error => res.status(500).json({error}))
 })
 
-export default router
+module.exports = router

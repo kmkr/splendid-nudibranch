@@ -1,7 +1,7 @@
-import db from '../../db'
-import * as photoDataFormatter from '../photo-data-formatter'
+const db = require('../../db')
+const photoDataFormatter = require('../photo-data-formatter')
 
-export default (key, newValues) => {
+module.exports = (key, newValues) => {
   return db.update('photos', {key}, newValues)
         .then(updatedPhoto => photoDataFormatter.dbToClient(updatedPhoto))
 }

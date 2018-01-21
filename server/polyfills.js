@@ -1,1 +1,1 @@
-import 'core-js/fn/object/entries'
+require('core-js/fn/object/entries')

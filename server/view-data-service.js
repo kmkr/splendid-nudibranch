@@ -1,13 +1,15 @@
-import * as cache from './cache'
-import listPhotos from './photos/list'
+const cache = require('./cache')
+const listPhotos = require('./photos/list')
 
-export function getPhotoData () {
+function getPhotoData () {
   return Promise.resolve(cache.get('photoData') || listPhotos())
     .then(photoData => {
       cache.put('photoData', photoData)
       return photoData
     })
 }
+
+module.exports.getPhotoData = getPhotoData
 
 const stopWords = [
   /\d{4}/
@@ -25,7 +27,7 @@ function reduceFlatten (a, b) {
   return a.concat(b)
 }
 
-export function getKeywords () {
+module.exports.getKeywords = function () {
   return getPhotoData()
         .then(({photos}) => (
             [

@@ -1,4 +1,4 @@
-import {description} from '../common/constants'
+const {description} = require('../common/constants')
 
 const name = 'The Splendid Nudibranch'
 
@@ -20,7 +20,7 @@ function buildUrl ({selectedPhotoKey, year, location}) {
   return url
 }
 
-export default (photos, {selectedPhotoKey, year, location}) => {
+module.exports = (photos, {selectedPhotoKey, year, location}) => {
   const selectedPhoto = photos.filter(p => p.key === selectedPhotoKey)[0]
 
   let filterTitle

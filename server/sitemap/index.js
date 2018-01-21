@@ -1,5 +1,5 @@
-import express from 'express'
-import sm from 'sitemap'
+const express = require('express')
+const sm = require('sitemap')
 
 const router = express.Router()
 
@@ -26,4 +26,4 @@ router.get('/', (req, res) => {
   })
 })
 
-export default router
+module.exports = router

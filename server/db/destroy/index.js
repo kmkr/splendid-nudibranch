@@ -1,4 +1,4 @@
-export default (db, collectionName, filter) => {
+module.exports = (db, collectionName, filter) => {
   return new Promise((resolve, reject) => {
     db.collection(collectionName)
             .deleteOne(filter, (err, data) => {

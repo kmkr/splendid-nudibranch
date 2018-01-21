@@ -8,7 +8,7 @@ module.exports = {
   },
   devtool: env !== 'production' ? 'source-map' : false,
   output: {
-    path: `${__dirname}/../lib/server/static/scripts`,
+    path: `${__dirname}/../server/static/scripts`,
     filename: '[name].js'
   },
   module: {

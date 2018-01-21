@@ -1,4 +1,4 @@
-export const resizeTo = [
+module.exports.resizeTo = [
   {
     name: 'thumb',
     shortName: 'thumb',
@@ -31,4 +31,4 @@ export const resizeTo = [
   }
 ]
 
-export const description = 'Photos of sea critters, slender sharks, beautiful shrimps, lots of fish and splendid nudibranchs.'
+module.exports.description = 'Photos of sea critters, slender sharks, beautiful shrimps, lots of fish and splendid nudibranchs.'

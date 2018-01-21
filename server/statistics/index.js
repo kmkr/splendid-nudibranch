@@ -1,6 +1,6 @@
-import express from 'express'
+const express = require('express')
 
-import statEntryHandler from './new'
+const statEntryHandler = require('./new')
 
 const router = express.Router()
 
@@ -10,4 +10,4 @@ router.post('/', (req, res) => {
         .catch(err => res.status(500).json({err}))
 })
 
-export default router
+module.exports = router

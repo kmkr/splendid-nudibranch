@@ -1,6 +1,6 @@
-import gm from 'gm'
+const gm = require('gm')
 
-export function resize (filePath, size, sizeLabel) {
+module.exports.resize = function (filePath, size, sizeLabel) {
   return new Promise((resolve, reject) => {
     console.log('[resizer.js] Resizing file %s to %s', filePath, size)
     gm(filePath)
@@ -32,7 +32,7 @@ function parseDate (exifDate) {
   return new Date(exifDate.replace(':', '-'))
 }
 
-export function metadata (filePath) {
+module.exports.metadata = function (filePath) {
   return new Promise((resolve, reject) => {
     gm(filePath).identify((err, value) => {
       if (err) {

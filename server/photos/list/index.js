@@ -1,8 +1,8 @@
-import db from '../../db'
-import {base} from '../constants'
-import * as photoDataFormatter from '../photo-data-formatter'
+const db = require('../../db')
+const {base} = require('../constants')
+const photoDataFormatter = require('../photo-data-formatter')
 
-export default () => (
+module.exports = () => (
     db.list('photos').then(photos => ({
       base,
       photos: photoDataFormatter.dbToClient(photos)

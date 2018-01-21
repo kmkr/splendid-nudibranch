@@ -1,9 +1,9 @@
-import {MongoClient} from 'mongodb'
+const {MongoClient} = require('mongodb')
 
-import getCollection from './get'
-import insertToCollection from './insert'
-import destroyFromCollection from './destroy'
-import updateOneInCollection from './update'
+const getCollection = require('./get')
+const insertToCollection = require('./insert')
+const destroyFromCollection = require('./destroy')
+const updateOneInCollection = require('./update')
 
 const url = process.env.SN_DB_URL
 const getDb = new Promise((resolve, reject) => {
@@ -16,7 +16,7 @@ const getDb = new Promise((resolve, reject) => {
   })
 })
 
-export default {
+module.exports = {
   insert (collectionName, data) {
     return getDb.then(db => insertToCollection(db, collectionName, data))
   },

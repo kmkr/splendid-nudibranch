@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1091,9 +1091,92 @@ var preact = {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _preact = __webpack_require__(0);
 
-var _app = __webpack_require__(2);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+var TransitionImage = function (_Component) {
+  _inherits(TransitionImage, _Component);
+
+  function TransitionImage() {
+    _classCallCheck(this, TransitionImage);
+
+    var _this = _possibleConstructorReturn(this, (TransitionImage.__proto__ || Object.getPrototypeOf(TransitionImage)).call(this));
+
+    _this.state = { loaded: false };
+    _this.onLoad = _this.onLoad.bind(_this);
+    return _this;
+  }
+
+  _createClass(TransitionImage, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.img.onload = this.onLoad;
+      this.img.setAttribute('src', this.props.src);
+    }
+  }, {
+    key: 'onLoad',
+    value: function onLoad() {
+      if (this.state.loaded) {
+        // Some browsers call onLoad multiple times, perhaps due to srcSet
+        return;
+      }
+
+      this.setState({
+        loaded: true
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          alt = _props.alt,
+          srcSet = _props.srcSet,
+          sizes = _props.sizes,
+          width = _props.width;
+
+
+      return (0, _preact.h)('img', {
+        alt: alt || '',
+        ref: function ref(img) {
+          _this2.img = img;
+        },
+        className: 'transition-image',
+        style: { opacity: this.state.loaded ? 1 : 0 },
+        srcSet: srcSet,
+        sizes: sizes,
+        width: width });
+    }
+  }]);
+
+  return TransitionImage;
+}(_preact.Component);
+
+exports.default = TransitionImage;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _preact = __webpack_require__(0);
+
+var _app = __webpack_require__(3);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -1105,7 +1188,7 @@ var photos = window.snPhotos;
 (0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1119,7 +1202,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _collage = __webpack_require__(3);
+var _collage = __webpack_require__(4);
 
 var _collage2 = _interopRequireDefault(_collage);
 
@@ -1208,7 +1291,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1220,11 +1303,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _preact = __webpack_require__(0);
 
-var _photo = __webpack_require__(6);
+var _photo = __webpack_require__(5);
 
 var _photo2 = _interopRequireDefault(_photo);
 
-var _setWidthHelper = __webpack_require__(5);
+var _setWidthHelper = __webpack_require__(6);
 
 var _setWidthHelper2 = _interopRequireDefault(_setWidthHelper);
 
@@ -1252,7 +1335,7 @@ var Collage = function Collage(_ref) {
 exports.default = Collage;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1266,6 +1349,12 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
+var _transitionImage = __webpack_require__(1);
+
+var _transitionImage2 = _interopRequireDefault(_transitionImage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -1273,69 +1362,49 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
 
 
-var TransitionImage = function (_Component) {
-  _inherits(TransitionImage, _Component);
+var Photo = function (_Component) {
+  _inherits(Photo, _Component);
 
-  function TransitionImage() {
-    _classCallCheck(this, TransitionImage);
+  function Photo() {
+    _classCallCheck(this, Photo);
 
-    var _this = _possibleConstructorReturn(this, (TransitionImage.__proto__ || Object.getPrototypeOf(TransitionImage)).call(this));
+    var _this = _possibleConstructorReturn(this, (Photo.__proto__ || Object.getPrototypeOf(Photo)).call(this));
 
-    _this.state = { loaded: false };
-    _this.onLoad = _this.onLoad.bind(_this);
+    _this.onClick = _this.onClick.bind(_this);
     return _this;
   }
 
-  _createClass(TransitionImage, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.img.onload = this.onLoad;
-      this.img.setAttribute('src', this.props.src);
-    }
-  }, {
-    key: 'onLoad',
-    value: function onLoad() {
-      if (this.state.loaded) {
-        // Some browsers call onLoad multiple times, perhaps due to srcSet
-        return;
-      }
-
-      this.setState({
-        loaded: true
-      });
+  _createClass(Photo, [{
+    key: 'onClick',
+    value: function onClick(e) {
+      e.preventDefault();
+      this.props.onSelect(this.props.photo);
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var photo = this.props.photo;
 
-      var _props = this.props,
-          alt = _props.alt,
-          srcSet = _props.srcSet,
-          sizes = _props.sizes,
-          width = _props.width;
-
-
-      return (0, _preact.h)('img', {
-        alt: alt || '',
-        ref: function ref(img) {
-          _this2.img = img;
-        },
-        className: 'transition-image',
-        style: { opacity: this.state.loaded ? 1 : 0 },
-        srcSet: srcSet,
-        sizes: sizes,
-        width: width });
+      return (0, _preact.h)(
+        'a',
+        { href: '/photos/' + photo.key,
+          onClick: this.onClick,
+          className: 'collage-item',
+          style: { width: photo.displayedWidth + 'px' } },
+        (0, _preact.h)(_transitionImage2.default, {
+          alt: photo.title,
+          src: photo.sizes.xsmall.url })
+      );
     }
   }]);
 
-  return TransitionImage;
+  return Photo;
 }(_preact.Component);
 
-exports.default = TransitionImage;
+exports.default = Photo;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1410,75 +1479,6 @@ function getNumPortrait(photos) {
 }
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _preact = __webpack_require__(0);
-
-var _transitionImage = __webpack_require__(4);
-
-var _transitionImage2 = _interopRequireDefault(_transitionImage);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
-
-
-var Photo = function (_Component) {
-  _inherits(Photo, _Component);
-
-  function Photo() {
-    _classCallCheck(this, Photo);
-
-    var _this = _possibleConstructorReturn(this, (Photo.__proto__ || Object.getPrototypeOf(Photo)).call(this));
-
-    _this.onClick = _this.onClick.bind(_this);
-    return _this;
-  }
-
-  _createClass(Photo, [{
-    key: 'onClick',
-    value: function onClick(e) {
-      e.preventDefault();
-      this.props.onSelect(this.props.photo);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var photo = this.props.photo;
-
-      return (0, _preact.h)(
-        'a',
-        { href: '/photos/' + photo.key,
-          onClick: this.onClick,
-          className: 'collage-item',
-          style: { width: photo.displayedWidth + 'px' } },
-        (0, _preact.h)(_transitionImage2.default, {
-          alt: photo.title,
-          src: photo.sizes.xsmall.url })
-      );
-    }
-  }]);
-
-  return Photo;
-}(_preact.Component);
-
-exports.default = Photo;
-
-/***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1493,7 +1493,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _transitionImage = __webpack_require__(4);
+var _transitionImage = __webpack_require__(1);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
 

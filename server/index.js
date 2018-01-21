@@ -1,18 +1,18 @@
-import './polyfills'
-import bodyParser from 'body-parser'
-import express from 'express'
-import logger from 'morgan'
-import compression from 'compression'
+require('./polyfills')
+const bodyParser = require('body-parser')
+const express = require('express')
+const logger = require('morgan')
+const compression = require('compression')
 
-import {auth} from './auth'
-import photoRouter from './photos'
-import sitemapRouter from './sitemap'
-import statsRouter from './statistics'
-import robotsRouter from './robots'
-import * as viewDataService from './view-data-service'
-import {serverToClient} from './photos/photo-data-conversion'
-import ogTags from './og-tags'
-import {description} from '../common/constants'
+const {auth} = require('./auth')
+const photoRouter = require('./photos')
+const sitemapRouter = require('./sitemap')
+const statsRouter = require('./statistics')
+const robotsRouter = require('./robots')
+const viewDataService = require('./view-data-service')
+const {serverToClient} = require('./photos/photo-data-conversion')
+const ogTags = require('./og-tags')
+const {description} = require('../common/constants')
 
 function verifyEnv () {
   const missing = ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SN_DB_URL', 'SN_S3_BASE', 'SN_S3_BUCKET_NAME', 'SN_ADMIN_ACCESS_KEY']
@@ -35,6 +35,9 @@ app.use(bodyParser.text())
 app.use(auth)
 app.use('/static', express.static(`${__dirname}/static`))
 
+const env = process.env.NODE_ENV
+const cssFile = env === 'production' ? 'app.min.css' : 'app.css'
+
 function photoIndex (res, {photoKey, year, location}) {
   return (
         Promise.all([
@@ -44,6 +47,7 @@ function photoIndex (res, {photoKey, year, location}) {
           const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
           return res.render('index', {
             description,
+            css: cssFile,
             photos: JSON.stringify(photos),
             ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
             selectedPhotoKey: photoKey,

@@ -1,7 +1,7 @@
-import db from '../../db'
-import {deletePhoto} from '../s3/s3-deleter'
+const db = require('../../db')
+const {deletePhoto} = require('../s3/s3-deleter')
 
-export default (key) => {
+module.exports = (key) => {
   return deletePhoto(key)
         .then(() => db.delete('photos', {key}))
         .then(() => ({key}))

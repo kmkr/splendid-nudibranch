@@ -1,4 +1,4 @@
-import {resizeTo} from '../../common/constants'
+const {resizeTo} = require('../../common/constants')
 
 function buildUrl (base, key, name, size) {
   return `${base}/${key}/${size}_${encodeURIComponent(name)}`
@@ -10,7 +10,7 @@ function getMode (resizeData) {
   return width > height ? 'landscape' : 'portrait'
 }
 
-export function serverToClient (photo, base) {
+module.exports.serverToClient = function (photo, base) {
   return {
     name: photo.name,
     key: photo.key,

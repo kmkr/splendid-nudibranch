@@ -1,6 +1,6 @@
-import {s3, generateParams} from './s3-wrapper'
+const {s3, generateParams} = require('./s3-wrapper')
 
-export default {
+module.exports = {
   upload: (buffer, name, mimetype) => {
     return new Promise((resolve, reject) => {
       const params = generateParams({
