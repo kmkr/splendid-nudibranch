@@ -40,7 +40,7 @@ app.use('/static', express.static(`${__dirname}/static`, {
   maxAge: isProd ? 60 * 60 * 24 * 365 : 0// 1 year
 }))
 
-const indexCssFile = isProd ? '/static/app.min.css' : '/static/app.css'
+const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
 function photoIndex (res, {photoKey, year, location} = {}, jsFile, cssFile) {
   return (
@@ -76,7 +76,7 @@ app.get('/photos/:key', (req, res) => {
 })
 
 app.get('/admin', (req, res) => {
-  photoIndex(res, {}, '/static/scripts/admin-bundle.js', '/static/app-admin.css')
+  photoIndex(res, {}, '/static/scripts/admin-bundle.js', '/static/css/app-admin.css')
 })
 
 app.use('/photos', photoRouter)

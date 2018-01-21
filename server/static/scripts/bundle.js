@@ -60,12 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 33);
+/******/ 	return __webpack_require__(__webpack_require__.s = 34);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1086,8 +1085,28 @@ var preact = {
 
 
 /***/ }),
-
-/***/ 22:
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1182,8 +1201,49 @@ var TransitionImage = function (_Component) {
 exports.default = TransitionImage;
 
 /***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 23:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _preact = __webpack_require__(0);
+
+var PhotoText = function PhotoText(_ref) {
+  var photo = _ref.photo;
+  return (0, _preact.h)(
+    'div',
+    { className: 'photo-text-wrapper' },
+    (0, _preact.h)(
+      'p',
+      { className: 'title' },
+      photo.title
+    ),
+    (0, _preact.h)(
+      'p',
+      { className: 'latin' },
+      photo.latin
+    ),
+    (0, _preact.h)(
+      'p',
+      { className: 'description' },
+      photo.description
+    ),
+    (0, _preact.h)(
+      'p',
+      { className: 'location' },
+      photo.location
+    )
+  );
+}; /** @jsx h */
+exports.default = PhotoText;
+
+/***/ }),
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1198,8 +1258,16 @@ exports.default = function () {
 };
 
 /***/ }),
-
-/***/ 33:
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1207,7 +1275,7 @@ exports.default = function () {
 
 var _preact = __webpack_require__(0);
 
-var _app = __webpack_require__(34);
+var _app = __webpack_require__(35);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -1219,8 +1287,7 @@ var photos = window.snPhotos;
 (0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
 
 /***/ }),
-
-/***/ 34:
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1234,11 +1301,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _collage = __webpack_require__(35);
+var _collage = __webpack_require__(36);
 
 var _collage2 = _interopRequireDefault(_collage);
 
-var _photos = __webpack_require__(40);
+var _photos = __webpack_require__(41);
 
 var _photos2 = _interopRequireDefault(_photos);
 
@@ -1343,8 +1410,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-
-/***/ 35:
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1358,19 +1424,19 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _photo = __webpack_require__(36);
+var _photo = __webpack_require__(37);
 
 var _photo2 = _interopRequireDefault(_photo);
 
-var _setWidthHelper = __webpack_require__(37);
+var _setWidthHelper = __webpack_require__(38);
 
 var _setWidthHelper2 = _interopRequireDefault(_setWidthHelper);
 
-var _throttle = __webpack_require__(38);
+var _throttle = __webpack_require__(39);
 
 var _throttle2 = _interopRequireDefault(_throttle);
 
-var _getWidth = __webpack_require__(23);
+var _getWidth = __webpack_require__(24);
 
 var _getWidth2 = _interopRequireDefault(_getWidth);
 
@@ -1462,8 +1528,7 @@ var Collage = function (_Component) {
 exports.default = Collage;
 
 /***/ }),
-
-/***/ 36:
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1481,7 +1546,7 @@ var _transitionImage = __webpack_require__(22);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
 
-var _photoText = __webpack_require__(92);
+var _photoText = __webpack_require__(23);
 
 var _photoText2 = _interopRequireDefault(_photoText);
 
@@ -1547,8 +1612,7 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-
-/***/ 37:
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1615,7 +1679,7 @@ exports.default = function (_photos) {
   return groups;
 };
 
-var _getWidth = __webpack_require__(23);
+var _getWidth = __webpack_require__(24);
 
 var _getWidth2 = _interopRequireDefault(_getWidth);
 
@@ -1630,8 +1694,7 @@ function getNumPortrait(photos) {
 }
 
 /***/ }),
-
-/***/ 38:
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1641,7 +1704,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _throttleit = __webpack_require__(39);
+var _throttleit = __webpack_require__(40);
 
 var _throttleit2 = _interopRequireDefault(_throttleit);
 
@@ -1664,8 +1727,7 @@ exports.default = function (type, name, obj) {
 };
 
 /***/ }),
-
-/***/ 39:
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = throttle;
@@ -1703,8 +1765,7 @@ function throttle (func, wait) {
 
 
 /***/ }),
-
-/***/ 40:
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1718,11 +1779,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _photo = __webpack_require__(41);
+var _photo = __webpack_require__(42);
 
 var _photo2 = _interopRequireDefault(_photo);
 
-var _scrollOnEventHandler = __webpack_require__(42);
+var _scrollOnEventHandler = __webpack_require__(43);
 
 var _scrollOnEventHandler2 = _interopRequireDefault(_scrollOnEventHandler);
 
@@ -1814,8 +1875,7 @@ var PhotosWrapper = function (_Component) {
 exports.default = PhotosWrapper;
 
 /***/ }),
-
-/***/ 41:
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1833,7 +1893,7 @@ var _transitionImage = __webpack_require__(22);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
 
-var _photoText = __webpack_require__(92);
+var _photoText = __webpack_require__(23);
 
 var _photoText2 = _interopRequireDefault(_photoText);
 
@@ -1901,8 +1961,7 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-
-/***/ 42:
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1986,50 +2045,6 @@ var ScrollOnEventHandler = function (_Component) {
 
 exports.default = ScrollOnEventHandler;
 
-/***/ }),
-
-/***/ 92:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _preact = __webpack_require__(0);
-
-var PhotoText = function PhotoText(_ref) {
-  var photo = _ref.photo;
-  return (0, _preact.h)(
-    'div',
-    { className: 'photo-text-wrapper' },
-    (0, _preact.h)(
-      'p',
-      { className: 'title' },
-      photo.title
-    ),
-    (0, _preact.h)(
-      'p',
-      { className: 'latin' },
-      photo.latin
-    ),
-    (0, _preact.h)(
-      'p',
-      { className: 'description' },
-      photo.description
-    ),
-    (0, _preact.h)(
-      'p',
-      { className: 'location' },
-      photo.location
-    )
-  );
-}; /** @jsx h */
-exports.default = PhotoText;
-
 /***/ })
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=bundle.js.map
