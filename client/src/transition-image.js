@@ -36,17 +36,19 @@ class TransitionImage extends Component {
   }
 
   render () {
-    const {alt, srcSet, sizes, width} = this.props
+    const {alt, onClick, srcSet, sizes, width} = this.props
 
     return (
       <img
         alt={alt || ''}
         ref={img => { this.img = img }}
         className='transition-image'
+        onClick={onClick || (() => {})}
         style={{opacity: this.state.visible ? 1 : 0}}
         srcSet={srcSet}
         sizes={sizes}
-        width={width} />
+        width={width}
+      />
     )
   }
 }

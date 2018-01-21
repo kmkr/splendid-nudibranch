@@ -1158,6 +1158,7 @@ var TransitionImage = function (_Component) {
 
       var _props = this.props,
           alt = _props.alt,
+          onClick = _props.onClick,
           srcSet = _props.srcSet,
           sizes = _props.sizes,
           width = _props.width;
@@ -1169,10 +1170,12 @@ var TransitionImage = function (_Component) {
           _this2.img = img;
         },
         className: 'transition-image',
+        onClick: onClick || function () {},
         style: { opacity: this.state.visible ? 1 : 0 },
         srcSet: srcSet,
         sizes: sizes,
-        width: width });
+        width: width
+      });
     }
   }]);
 
@@ -1901,6 +1904,7 @@ var Photo = function Photo(_ref) {
     null,
     (0, _preact.h)(_transitionImage2.default, {
       alt: photo.title,
+      onClick: onNext,
       src: photo.sizes.large.url,
       srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
       sizes: '100vw'

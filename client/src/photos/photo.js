@@ -9,6 +9,7 @@ const Photo = ({ photo, onNext, onPrevious }) => (
   <div>
     <TransitionImage
       alt={photo.title}
+      onClick={onNext}
       src={photo.sizes.large.url}
       srcSet={buildSrcSet(photo.sizes)}
       sizes='100vw'
