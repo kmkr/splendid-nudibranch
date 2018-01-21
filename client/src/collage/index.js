@@ -4,13 +4,20 @@ import {h, Component} from 'preact'
 import Photo from './photo'
 import setPhotoWidth from './set-width-helper'
 import throttle from './throttle'
+import getWidth from './get-width'
+
+function hasScrollbar () {
+  console.log(document.body.offsetHeight)
+  console.log(window.innerHeight)
+  return document.body.offsetHeight >= window.innerHeight
+}
 
 class Collage extends Component {
   constructor () {
     super()
 
     this.state = {
-      innerWidth: window.innerWidth
+      width: getWidth(),
     }
 
     this.updateWidth = this.updateWidth.bind(this)
@@ -18,13 +25,17 @@ class Collage extends Component {
 
   updateWidth () {
     this.setState({
-      innerWidth: window.innerWidth
+      width: getWidth()
     })
   }
 
   componentDidMount () {
     throttle('resize', 'optimizedResize')
     window.addEventListener('optimizedResize', this.updateWidth)
+    // Force re-calculation of photo height/width if scrollbar is present
+    if (hasScrollbar()) {
+      this.updateWidth()
+    }
   }
 
   componentWillUnmount () {
@@ -37,7 +48,7 @@ class Collage extends Component {
     return (
       <div id='collage'>
         {photoGroups.map((photoGroup, index) => (
-          <div key={`photo-group-${index}`} style={{ maxHeight: `${photoGroup.height}px` }}>
+          <div key={`photo-group-${index}`} style={{ height: `${photoGroup.height}px` }}>
             {photoGroup.photos.map(photo => <Photo key={photo.key} photo={photo} onSelect={onSelectPhoto} />)}
           </div>
         ))}

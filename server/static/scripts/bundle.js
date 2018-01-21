@@ -63,8 +63,9 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1085,28 +1086,8 @@ var preact = {
 
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */
+
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1201,16 +1182,8 @@ var TransitionImage = function (_Component) {
 exports.default = TransitionImage;
 
 /***/ }),
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */
+
+/***/ 32:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1230,7 +1203,8 @@ var photos = window.snPhotos;
 (0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
 
 /***/ }),
-/* 33 */
+
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1353,7 +1327,8 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 34 */
+
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1379,6 +1354,10 @@ var _throttle = __webpack_require__(37);
 
 var _throttle2 = _interopRequireDefault(_throttle);
 
+var _getWidth = __webpack_require__(92);
+
+var _getWidth2 = _interopRequireDefault(_getWidth);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1387,6 +1366,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
 
+
+function hasScrollbar() {
+  console.log(document.body.offsetHeight);
+  console.log(window.innerHeight);
+  return document.body.offsetHeight >= window.innerHeight;
+}
 
 var Collage = function (_Component) {
   _inherits(Collage, _Component);
@@ -1397,7 +1382,7 @@ var Collage = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Collage.__proto__ || Object.getPrototypeOf(Collage)).call(this));
 
     _this.state = {
-      innerWidth: window.innerWidth
+      width: (0, _getWidth2.default)()
     };
 
     _this.updateWidth = _this.updateWidth.bind(_this);
@@ -1408,7 +1393,7 @@ var Collage = function (_Component) {
     key: 'updateWidth',
     value: function updateWidth() {
       this.setState({
-        innerWidth: window.innerWidth
+        width: (0, _getWidth2.default)()
       });
     }
   }, {
@@ -1416,6 +1401,10 @@ var Collage = function (_Component) {
     value: function componentDidMount() {
       (0, _throttle2.default)('resize', 'optimizedResize');
       window.addEventListener('optimizedResize', this.updateWidth);
+      // Force re-calculation of photo height/width if scrollbar is present
+      if (hasScrollbar()) {
+        this.updateWidth();
+      }
     }
   }, {
     key: 'componentWillUnmount',
@@ -1436,7 +1425,7 @@ var Collage = function (_Component) {
         photoGroups.map(function (photoGroup, index) {
           return (0, _preact.h)(
             'div',
-            { key: 'photo-group-' + index, style: { maxHeight: photoGroup.height + 'px' } },
+            { key: 'photo-group-' + index, style: { height: photoGroup.height + 'px' } },
             photoGroup.photos.map(function (photo) {
               return (0, _preact.h)(_photo2.default, { key: photo.key, photo: photo, onSelect: onSelectPhoto });
             })
@@ -1452,7 +1441,8 @@ var Collage = function (_Component) {
 exports.default = Collage;
 
 /***/ }),
-/* 35 */
+
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1521,7 +1511,8 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-/* 36 */
+
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1533,7 +1524,7 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function (_photos) {
   var photos = [].concat(_toConsumableArray(_photos));
-  var totalWidth = Math.min(window.innerWidth, 2560);
+  var totalWidth = Math.min((0, _getWidth2.default)(), 2560);
   var groups = [];
 
   while (photos.length) {
@@ -1577,7 +1568,9 @@ exports.default = function (_photos) {
       var marginsInRow = (numThisRow + 1) * 8;
       photoToAdd.displayedWidth = (totalWidth - marginsInRow) / numThisRow * scale;
       subGroup.photos.push(photoToAdd);
-      var height = photoToAdd.mode === 'portrait' ? photoToAdd.displayedWidth * (4 / 3) : photoToAdd.displayedWidth * (9 / 16);
+      var ratio = photoToAdd.sizes.small.height / photoToAdd.sizes.small.width;
+      var height = photoToAdd.displayedWidth * ratio;
+      console.log('width ' + photoToAdd.displayedWidth + ' height ' + height + ' ratio ' + ratio);
       subGroup.height = subGroup.height ? Math.min(subGroup.height, height) : height;
       // next row
     }
@@ -1586,6 +1579,12 @@ exports.default = function (_photos) {
 
   return groups;
 };
+
+var _getWidth = __webpack_require__(92);
+
+var _getWidth2 = _interopRequireDefault(_getWidth);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -1596,7 +1595,8 @@ function getNumPortrait(photos) {
 }
 
 /***/ }),
-/* 37 */
+
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1629,7 +1629,8 @@ exports.default = function (type, name, obj) {
 };
 
 /***/ }),
-/* 38 */
+
+/***/ 38:
 /***/ (function(module, exports) {
 
 module.exports = throttle;
@@ -1667,7 +1668,8 @@ function throttle (func, wait) {
 
 
 /***/ }),
-/* 39 */
+
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1777,7 +1779,8 @@ var PhotosWrapper = function (_Component) {
 exports.default = PhotosWrapper;
 
 /***/ }),
-/* 40 */
+
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1878,7 +1881,8 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-/* 41 */
+
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1962,6 +1966,23 @@ var ScrollOnEventHandler = function (_Component) {
 
 exports.default = ScrollOnEventHandler;
 
+/***/ }),
+
+/***/ 92:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  return document.scrollWidth || document.body.clientWidth || window.innerWidth;
+};
+
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=bundle.js.map
