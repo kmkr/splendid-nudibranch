@@ -34,12 +34,13 @@ app.set('view engine', 'pug')
 app.use(bodyParser.json())
 app.use(bodyParser.text())
 app.use(auth)
+const isProd = process.env.NODE_ENV === 'production'
+
 app.use('/static', express.static(`${__dirname}/static`, {
-  maxAge: 60 * 60 * 24 * 365 // 1 year
+  maxAge: isProd ? 60 * 60 * 24 * 365 : 0// 1 year
 }))
 
-const env = process.env.NODE_ENV
-const indexCssFile = env === 'production' ? '/static/app.min.css' : '/static/app.css'
+const indexCssFile = isProd ? '/static/app.min.css' : '/static/app.css'
 
 function photoIndex (res, {photoKey, year, location} = {}, jsFile, cssFile) {
   return (
