@@ -1,5 +1,6 @@
 const {s3, generateParams} = require('./s3-wrapper')
 
+const oneYear = 60 * 60 * 24 * 365
 module.exports = {
   upload: (buffer, name, mimetype) => {
     return new Promise((resolve, reject) => {
@@ -7,7 +8,7 @@ module.exports = {
         ACL: 'public-read',
         Key: `${name}`,
         Body: buffer,
-        CacheControl: 'public, max-age',
+        CacheControl: `public, max-age=${oneYear}`,
         ContentType: mimetype,
         Expires: new Date(2100, 1)
       })
