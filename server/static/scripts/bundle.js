@@ -63,8 +63,9 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1085,28 +1086,8 @@ var preact = {
 
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */
+
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1201,7 +1182,8 @@ var TransitionImage = function (_Component) {
 exports.default = TransitionImage;
 
 /***/ }),
-/* 23 */
+
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1216,16 +1198,8 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */
+
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1245,7 +1219,8 @@ var photos = window.snPhotos;
 (0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
 
 /***/ }),
-/* 34 */
+
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1368,7 +1343,8 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 35 */
+
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1486,7 +1462,8 @@ var Collage = function (_Component) {
 exports.default = Collage;
 
 /***/ }),
-/* 36 */
+
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1503,6 +1480,10 @@ var _preact = __webpack_require__(0);
 var _transitionImage = __webpack_require__(22);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
+
+var _photoText = __webpack_require__(92);
+
+var _photoText2 = _interopRequireDefault(_photoText);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1540,15 +1521,22 @@ var Photo = function (_Component) {
 
       var style = setWidth ? { width: photo.displayedWidth + 'px' } : {};
       return (0, _preact.h)(
-        'a',
-        { href: '/photos/' + photo.key,
-          onClick: this.onClick,
-          className: 'collage-item',
-          style: style
-        },
-        (0, _preact.h)(_transitionImage2.default, {
-          alt: photo.title,
-          src: photo.sizes.xsmall.url })
+        'div',
+        { style: style },
+        (0, _preact.h)(
+          'a',
+          { href: '/photos/' + photo.key,
+            onClick: this.onClick
+          },
+          (0, _preact.h)(_transitionImage2.default, {
+            alt: photo.title,
+            src: photo.sizes.xsmall.url })
+        ),
+        (0, _preact.h)(
+          'div',
+          { className: 'sn-dn-ns' },
+          (0, _preact.h)(_photoText2.default, { photo: photo })
+        )
       );
     }
   }]);
@@ -1559,7 +1547,8 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-/* 37 */
+
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1641,7 +1630,8 @@ function getNumPortrait(photos) {
 }
 
 /***/ }),
-/* 38 */
+
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1674,7 +1664,8 @@ exports.default = function (type, name, obj) {
 };
 
 /***/ }),
-/* 39 */
+
+/***/ 39:
 /***/ (function(module, exports) {
 
 module.exports = throttle;
@@ -1712,7 +1703,8 @@ function throttle (func, wait) {
 
 
 /***/ }),
-/* 40 */
+
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1822,7 +1814,8 @@ var PhotosWrapper = function (_Component) {
 exports.default = PhotosWrapper;
 
 /***/ }),
-/* 41 */
+
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1839,6 +1832,10 @@ var _preact = __webpack_require__(0);
 var _transitionImage = __webpack_require__(22);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
+
+var _photoText = __webpack_require__(92);
+
+var _photoText2 = _interopRequireDefault(_photoText);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1883,26 +1880,7 @@ var Photo = function (_Component) {
           src: photo.sizes.large.url,
           sizes: '(min-width: 1360px) 95vw, 100vw',
           srcSet: srcSet }),
-        (0, _preact.h)(
-          'p',
-          null,
-          photo.title
-        ),
-        (0, _preact.h)(
-          'p',
-          null,
-          photo.latin
-        ),
-        (0, _preact.h)(
-          'p',
-          null,
-          photo.description
-        ),
-        (0, _preact.h)(
-          'p',
-          null,
-          photo.location
-        ),
+        (0, _preact.h)(_photoText2.default, { photo: photo }),
         (0, _preact.h)(
           'button',
           { onClick: onPrevious },
@@ -1923,7 +1901,8 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-/* 42 */
+
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2007,6 +1986,50 @@ var ScrollOnEventHandler = function (_Component) {
 
 exports.default = ScrollOnEventHandler;
 
+/***/ }),
+
+/***/ 92:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _preact = __webpack_require__(0);
+
+var PhotoText = function PhotoText(_ref) {
+  var photo = _ref.photo;
+  return (0, _preact.h)(
+    'div',
+    { className: 'photo-text-wrapper' },
+    (0, _preact.h)(
+      'p',
+      { className: 'title' },
+      photo.title
+    ),
+    (0, _preact.h)(
+      'p',
+      { className: 'latin' },
+      photo.latin
+    ),
+    (0, _preact.h)(
+      'p',
+      { className: 'description' },
+      photo.description
+    ),
+    (0, _preact.h)(
+      'p',
+      { className: 'location' },
+      photo.location
+    )
+  );
+}; /** @jsx h */
+exports.default = PhotoText;
+
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=bundle.js.map

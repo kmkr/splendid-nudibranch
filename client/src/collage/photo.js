@@ -2,6 +2,7 @@
 import { h, Component } from 'preact'
 
 import TransitionImage from '../transition-image'
+import PhotoText from '../photos/photo-text'
 
 class Photo extends Component {
   constructor () {
@@ -15,17 +16,21 @@ class Photo extends Component {
 
   render () {
     const { photo, setWidth } = this.props
-    const style = setWidth ? { width: `${photo.displayedWidth}px`} : {}
+    const style = setWidth ? {width: `${photo.displayedWidth}px`} : {}
     return (
-      <a href={`/photos/${photo.key}`}
-        onClick={this.onClick}
-        className='collage-item'
-        style={style}
-      >
-        <TransitionImage
-          alt={photo.title}
-          src={photo.sizes.xsmall.url} />
-      </a>
+      <div style={style}>
+        <a href={`/photos/${photo.key}`}
+          onClick={this.onClick}
+        >
+          <TransitionImage
+            alt={photo.title}
+            src={photo.sizes.xsmall.url} />
+        </a>
+
+        <div className='sn-dn-ns'>
+          <PhotoText photo={photo} />
+        </div>
+      </div>
     )
   }
 }

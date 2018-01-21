@@ -44,6 +44,7 @@
     "cssnano": "^3.10.0",
     "jest": "^19.0.0",
     "postcss-cli": "^4.1.1",
+    "postcss-css-variables": "^0.8.0",
     "preact": "^8.2.7",
     "standard": "^10.0.3",
     "throttleit": "^1.0.0",

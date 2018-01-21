@@ -15,7 +15,7 @@ class Collage extends Component {
     super()
 
     this.state = {
-      width: getWidth(),
+      width: getWidth()
     }
 
     this.updateWidth = this.updateWidth.bind(this)

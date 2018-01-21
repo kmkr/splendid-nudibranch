@@ -2,6 +2,7 @@
 import { h, Component } from 'preact'
 
 import TransitionImage from '../transition-image'
+import PhotoText from './photo-text'
 
 function buildSrcSet (sizes) {
   return Object.keys(sizes)
@@ -26,10 +27,7 @@ class Photo extends Component {
           sizes='(min-width: 1360px) 95vw, 100vw'
           srcSet={srcSet} />
 
-        <p>{photo.title}</p>
-        <p>{photo.latin}</p>
-        <p>{photo.description}</p>
-        <p>{photo.location}</p>
+        <PhotoText photo={photo} />
 
         <button onClick={onPrevious}>Previous</button>
         <button onClick={onNext}>Next</button>
