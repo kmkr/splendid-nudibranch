@@ -1,39 +1,24 @@
 /** @jsx h */
-import { h, Component } from 'preact'
+import { h } from 'preact'
 
 import TransitionImage from '../transition-image'
 import PhotoText from './photo-text'
+import buildSrcSet from './src-set-builder'
 
-function buildSrcSet (sizes) {
-  return Object.keys(sizes)
-    .reverse()
-    .map(key => {
-      const size = sizes[key]
-      return `${size.url} ${size.width}w`
-    })
-    .join(', ')
-}
+const Photo = ({ photo, onNext, onPrevious }) => (
+  <div>
+    <TransitionImage
+      alt={photo.title}
+      src={photo.sizes.large.url}
+      srcSet={buildSrcSet(photo.sizes)}
+      sizes='100vw'
+    />
 
-class Photo extends Component {
-  render () {
-    const { photo, onNext, onPrevious } = this.props
-    const srcSet = buildSrcSet(photo.sizes)
+    <PhotoText photo={photo} />
 
-    return (
-      <div>
-        <TransitionImage
-          alt={photo.title}
-          src={photo.sizes.large.url}
-          sizes='(min-width: 1360px) 95vw, 100vw'
-          srcSet={srcSet} />
-
-        <PhotoText photo={photo} />
-
-        <button onClick={onPrevious}>Previous</button>
-        <button onClick={onNext}>Next</button>
-      </div>
-    )
-  }
-}
+    <button onClick={onPrevious}>Previous</button>
+    <button onClick={onNext}>Next</button>
+  </div>
+)
 
 export default Photo
