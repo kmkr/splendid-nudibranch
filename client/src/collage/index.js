@@ -43,13 +43,24 @@ class Collage extends Component {
   render () {
     const { photos, onSelectPhoto } = this.props
     const photoGroups = setPhotoWidth(photos)
+    const setDimensions = getWidth() > 1024
     return (
       <div id='collage'>
-        {photoGroups.map((photoGroup, index) => (
-          <div key={`photo-group-${index}`} style={{ height: `${photoGroup.height}px` }}>
-            {photoGroup.photos.map(photo => <Photo key={photo.key} photo={photo} onSelect={onSelectPhoto} />)}
-          </div>
-        ))}
+        {photoGroups.map((photoGroup, index) => {
+          const style = setDimensions ? { height: `${photoGroup.height}px` } : {}
+          return (
+            <div key={`photo-group-${index}`} style={style}>
+              {photoGroup.photos.map(photo => (
+                <Photo
+                  key={photo.key}
+                  setWidth={setDimensions}
+                  photo={photo}
+                  onSelect={onSelectPhoto}
+                />
+              ))}
+            </div>
+          )
+        })}
       </div>
     )
   }

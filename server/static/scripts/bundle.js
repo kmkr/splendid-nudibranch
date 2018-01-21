@@ -60,12 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1086,8 +1085,28 @@ var preact = {
 
 
 /***/ }),
-
-/***/ 22:
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1182,8 +1201,31 @@ var TransitionImage = function (_Component) {
 exports.default = TransitionImage;
 
 /***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 32:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  return document.scrollWidth || document.body.clientWidth || window.innerWidth;
+};
+
+/***/ }),
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1191,7 +1233,7 @@ exports.default = TransitionImage;
 
 var _preact = __webpack_require__(0);
 
-var _app = __webpack_require__(33);
+var _app = __webpack_require__(34);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -1203,8 +1245,7 @@ var photos = window.snPhotos;
 (0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
 
 /***/ }),
-
-/***/ 33:
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1218,11 +1259,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _collage = __webpack_require__(34);
+var _collage = __webpack_require__(35);
 
 var _collage2 = _interopRequireDefault(_collage);
 
-var _photos = __webpack_require__(39);
+var _photos = __webpack_require__(40);
 
 var _photos2 = _interopRequireDefault(_photos);
 
@@ -1327,8 +1368,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-
-/***/ 34:
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1342,19 +1382,19 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _photo = __webpack_require__(35);
+var _photo = __webpack_require__(36);
 
 var _photo2 = _interopRequireDefault(_photo);
 
-var _setWidthHelper = __webpack_require__(36);
+var _setWidthHelper = __webpack_require__(37);
 
 var _setWidthHelper2 = _interopRequireDefault(_setWidthHelper);
 
-var _throttle = __webpack_require__(37);
+var _throttle = __webpack_require__(38);
 
 var _throttle2 = _interopRequireDefault(_throttle);
 
-var _getWidth = __webpack_require__(92);
+var _getWidth = __webpack_require__(23);
 
 var _getWidth2 = _interopRequireDefault(_getWidth);
 
@@ -1368,8 +1408,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 function hasScrollbar() {
-  console.log(document.body.offsetHeight);
-  console.log(window.innerHeight);
   return document.body.offsetHeight >= window.innerHeight;
 }
 
@@ -1419,15 +1457,22 @@ var Collage = function (_Component) {
           onSelectPhoto = _props.onSelectPhoto;
 
       var photoGroups = (0, _setWidthHelper2.default)(photos);
+      var setDimensions = (0, _getWidth2.default)() > 1024;
       return (0, _preact.h)(
         'div',
         { id: 'collage' },
         photoGroups.map(function (photoGroup, index) {
+          var style = setDimensions ? { height: photoGroup.height + 'px' } : {};
           return (0, _preact.h)(
             'div',
-            { key: 'photo-group-' + index, style: { height: photoGroup.height + 'px' } },
+            { key: 'photo-group-' + index, style: style },
             photoGroup.photos.map(function (photo) {
-              return (0, _preact.h)(_photo2.default, { key: photo.key, photo: photo, onSelect: onSelectPhoto });
+              return (0, _preact.h)(_photo2.default, {
+                key: photo.key,
+                setWidth: setDimensions,
+                photo: photo,
+                onSelect: onSelectPhoto
+              });
             })
           );
         })
@@ -1441,8 +1486,7 @@ var Collage = function (_Component) {
 exports.default = Collage;
 
 /***/ }),
-
-/***/ 35:
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1490,14 +1534,18 @@ var Photo = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var photo = this.props.photo;
+      var _props = this.props,
+          photo = _props.photo,
+          setWidth = _props.setWidth;
 
+      var style = setWidth ? { width: photo.displayedWidth + 'px' } : {};
       return (0, _preact.h)(
         'a',
         { href: '/photos/' + photo.key,
           onClick: this.onClick,
           className: 'collage-item',
-          style: { width: photo.displayedWidth + 'px' } },
+          style: style
+        },
         (0, _preact.h)(_transitionImage2.default, {
           alt: photo.title,
           src: photo.sizes.xsmall.url })
@@ -1511,8 +1559,7 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-
-/***/ 36:
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1570,7 +1617,6 @@ exports.default = function (_photos) {
       subGroup.photos.push(photoToAdd);
       var ratio = photoToAdd.sizes.small.height / photoToAdd.sizes.small.width;
       var height = photoToAdd.displayedWidth * ratio;
-      console.log('width ' + photoToAdd.displayedWidth + ' height ' + height + ' ratio ' + ratio);
       subGroup.height = subGroup.height ? Math.min(subGroup.height, height) : height;
       // next row
     }
@@ -1580,7 +1626,7 @@ exports.default = function (_photos) {
   return groups;
 };
 
-var _getWidth = __webpack_require__(92);
+var _getWidth = __webpack_require__(23);
 
 var _getWidth2 = _interopRequireDefault(_getWidth);
 
@@ -1595,8 +1641,7 @@ function getNumPortrait(photos) {
 }
 
 /***/ }),
-
-/***/ 37:
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1606,7 +1651,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _throttleit = __webpack_require__(38);
+var _throttleit = __webpack_require__(39);
 
 var _throttleit2 = _interopRequireDefault(_throttleit);
 
@@ -1629,8 +1674,7 @@ exports.default = function (type, name, obj) {
 };
 
 /***/ }),
-
-/***/ 38:
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = throttle;
@@ -1668,8 +1712,7 @@ function throttle (func, wait) {
 
 
 /***/ }),
-
-/***/ 39:
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1683,11 +1726,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _preact = __webpack_require__(0);
 
-var _photo = __webpack_require__(40);
+var _photo = __webpack_require__(41);
 
 var _photo2 = _interopRequireDefault(_photo);
 
-var _scrollOnEventHandler = __webpack_require__(41);
+var _scrollOnEventHandler = __webpack_require__(42);
 
 var _scrollOnEventHandler2 = _interopRequireDefault(_scrollOnEventHandler);
 
@@ -1779,8 +1822,7 @@ var PhotosWrapper = function (_Component) {
 exports.default = PhotosWrapper;
 
 /***/ }),
-
-/***/ 40:
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1881,8 +1923,7 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-
-/***/ 41:
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1966,23 +2007,6 @@ var ScrollOnEventHandler = function (_Component) {
 
 exports.default = ScrollOnEventHandler;
 
-/***/ }),
-
-/***/ 92:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function () {
-  return document.scrollWidth || document.body.clientWidth || window.innerWidth;
-};
-
 /***/ })
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=bundle.js.map

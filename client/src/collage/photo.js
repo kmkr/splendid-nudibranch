@@ -14,12 +14,14 @@ class Photo extends Component {
   }
 
   render () {
-    const { photo } = this.props
+    const { photo, setWidth } = this.props
+    const style = setWidth ? { width: `${photo.displayedWidth}px`} : {}
     return (
       <a href={`/photos/${photo.key}`}
         onClick={this.onClick}
         className='collage-item'
-        style={{ width: `${photo.displayedWidth}px` }}>
+        style={style}
+      >
         <TransitionImage
           alt={photo.title}
           src={photo.sizes.xsmall.url} />
