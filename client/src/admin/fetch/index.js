@@ -4,24 +4,26 @@ function fetchWithHeaders (url, additionalRequestOptions = {}) {
   const headers = {
     accept: 'application/json',
     ...(additionalRequestOptions.headers || {}),
-    ...interceptors.reduce((a, b) => (
-      {
+    ...interceptors.reduce(
+      (a, b) => ({
         ...a(),
         ...b()
-      }
-        ), () => {})
+      }),
+      () => {}
+    )
   }
 
   delete additionalRequestOptions.headers
 
-  return window.fetch(url, {headers, ...additionalRequestOptions})
-        .then(response => {
-          if (response.status >= 400) {
-            return Promise.reject(response)
-          }
+  return window
+    .fetch(url, { headers, ...additionalRequestOptions })
+    .then(response => {
+      if (response.status >= 400) {
+        return Promise.reject(response)
+      }
 
-          return response
-        })
+      return response
+    })
 }
 
 export default {
@@ -29,13 +31,17 @@ export default {
     interceptors.push(interceptor)
   },
   get (url, requestOptions = {}) {
-    return fetchWithHeaders(url, {method: 'GET', ...requestOptions})
+    return fetchWithHeaders(url, { method: 'GET', ...requestOptions })
   },
   post (url, body, requestOptions = {}) {
-    return fetchWithHeaders(url, {method: 'POST', body, ...requestOptions}, true)
+    return fetchWithHeaders(
+      url,
+      { method: 'POST', body, ...requestOptions },
+      true
+    )
   },
   delete (url, requestOptions = {}) {
-    return fetchWithHeaders(url, {method: 'DELETE', ...requestOptions}, true)
+    return fetchWithHeaders(url, { method: 'DELETE', ...requestOptions }, true)
   },
   putJSON (url, body, additionalRequestOptions = {}) {
     const requestOptions = {
