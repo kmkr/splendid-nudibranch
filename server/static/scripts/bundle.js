@@ -1771,6 +1771,10 @@ var _photo = __webpack_require__(42);
 
 var _photo2 = _interopRequireDefault(_photo);
 
+var _sidebar = __webpack_require__(94);
+
+var _sidebar2 = _interopRequireDefault(_sidebar);
+
 var _scrollOnEventHandler = __webpack_require__(43);
 
 var _scrollOnEventHandler2 = _interopRequireDefault(_scrollOnEventHandler);
@@ -1852,7 +1856,8 @@ var PhotosWrapper = function (_Component) {
         'div',
         null,
         (0, _preact.h)(_scrollOnEventHandler2.default, { onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto }),
-        (0, _preact.h)(_photo2.default, { photo: selectedPhoto, onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto })
+        (0, _preact.h)(_photo2.default, { photo: selectedPhoto, onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto }),
+        (0, _preact.h)(_sidebar2.default, { photo: selectedPhoto })
       );
     }
   }]);
@@ -1880,17 +1885,12 @@ var _transitionImage = __webpack_require__(22);
 
 var _transitionImage2 = _interopRequireDefault(_transitionImage);
 
-var _photoText = __webpack_require__(23);
-
-var _photoText2 = _interopRequireDefault(_photoText);
-
 var _srcSetBuilder = __webpack_require__(93);
 
 var _srcSetBuilder2 = _interopRequireDefault(_srcSetBuilder);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/** @jsx h */
 var Photo = function Photo(_ref) {
   var photo = _ref.photo,
       onNext = _ref.onNext,
@@ -1905,7 +1905,6 @@ var Photo = function Photo(_ref) {
       srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
       sizes: '100vw'
     }),
-    (0, _preact.h)(_photoText2.default, { photo: photo }),
     (0, _preact.h)(
       'button',
       { onClick: onPrevious },
@@ -1917,8 +1916,7 @@ var Photo = function Photo(_ref) {
       'Next'
     )
   );
-};
-
+}; /** @jsx h */
 exports.default = Photo;
 
 /***/ }),
@@ -2025,6 +2023,113 @@ exports.default = function (sizes) {
     return size.url + ' ' + size.width + 'w';
   }).join(', ');
 };
+
+/***/ }),
+
+/***/ 94:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+var _photoText = __webpack_require__(23);
+
+var _photoText2 = _interopRequireDefault(_photoText);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+var TOGGLE_KEYS = [13, // enter
+32 // space
+];
+
+var Sidebar = function (_Component) {
+  _inherits(Sidebar, _Component);
+
+  function Sidebar() {
+    _classCallCheck(this, Sidebar);
+
+    var _this = _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).call(this));
+
+    _this.handleClickDetails = _this.handleClickDetails.bind(_this);
+    _this.handleKeyDown = _this.handleKeyDown.bind(_this);
+    _this.state = {
+      expanded: true
+    };
+    return _this;
+  }
+
+  _createClass(Sidebar, [{
+    key: 'handleClickDetails',
+    value: function handleClickDetails(e) {
+      e.preventDefault();
+      this.setState({
+        expanded: !this.state.expanded
+      });
+    }
+  }, {
+    key: 'handleKeyDown',
+    value: function handleKeyDown(e) {
+      var keyCode = e.keyCode || e.detail.keyCode;
+      if (this.isClickable() && TOGGLE_KEYS.indexOf(keyCode) !== -1) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.handleClickDetails();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var photo = this.props.photo;
+      var expanded = this.state.expanded;
+
+
+      return (0, _preact.h)(
+        'div',
+        null,
+        (0, _preact.h)(
+          'div',
+          { id: 'sidebar', onClick: this.handleClickDetails },
+          (0, _preact.h)(
+            'div',
+            {
+              className: expanded ? 'expanded' : '',
+              onKeyDown: this.handleKeyDown
+            },
+            (0, _preact.h)(
+              'a',
+              { href: '#', tabIndex: '0', 'aria-role': 'button' },
+              '+'
+            )
+          )
+        ),
+        (0, _preact.h)(
+          'div',
+          { id: 'sidebar-text', 'class': expanded ? 'expanded' : '' },
+          (0, _preact.h)(_photoText2.default, { photo: photo })
+        )
+      );
+    }
+  }]);
+
+  return Sidebar;
+}(_preact.Component);
+
+exports.default = Sidebar;
 
 /***/ })
 

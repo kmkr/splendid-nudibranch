@@ -1,5 +1,6 @@
 @import 'collage.css';
 @import 'photo-text-wrapper.css';
+@import 'sidebar.css';
 
 :root {
   --margin: 8px;
@@ -22,6 +23,12 @@ body {
 
 @media (min-width: 1024px) {
   .sn-dn-ns {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .sn-dn-l {
     display: none;
   }
 }
