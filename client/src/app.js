@@ -65,9 +65,7 @@ class App extends Component {
             selectedPhoto={selectedPhoto}
           />
         ) : (
-          <div style={{display: selectedPhoto ? 'none' : 'block'}}>
-            <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
-          </div>
+          <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
         )}
       </div>
     )

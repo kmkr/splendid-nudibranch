@@ -1374,11 +1374,7 @@ var App = function (_Component) {
           onSelectPhoto: this.onSelectPhoto,
           photos: photos,
           selectedPhoto: selectedPhoto
-        }) : (0, _preact.h)(
-          'div',
-          { style: { display: selectedPhoto ? 'none' : 'block' } },
-          (0, _preact.h)(_collage2.default, { photos: photos, onSelectPhoto: this.onSelectPhoto })
-        )
+        }) : (0, _preact.h)(_collage2.default, { photos: photos, onSelectPhoto: this.onSelectPhoto })
       );
     }
   }]);
