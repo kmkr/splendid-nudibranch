@@ -29,7 +29,7 @@ class PhotosWrapper extends Component {
       return
     }
 
-    this.onSelectPhotoIndex(Math.max(currentPhotoIndex + 1, 0))
+    this.onSelectPhotoIndex(currentPhotoIndex + 1)
   }
 
   onPreviousPhoto () {
