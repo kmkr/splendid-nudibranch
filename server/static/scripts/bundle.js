@@ -2053,10 +2053,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
 
 
-var TOGGLE_KEYS = [13, // enter
-32 // space
-];
-
 var Sidebar = function (_Component) {
   _inherits(Sidebar, _Component);
 
@@ -2066,7 +2062,6 @@ var Sidebar = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).call(this));
 
     _this.handleClickDetails = _this.handleClickDetails.bind(_this);
-    _this.handleKeyDown = _this.handleKeyDown.bind(_this);
     _this.state = {
       expanded: true
     };
@@ -2080,16 +2075,6 @@ var Sidebar = function (_Component) {
       this.setState({
         expanded: !this.state.expanded
       });
-    }
-  }, {
-    key: 'handleKeyDown',
-    value: function handleKeyDown(e) {
-      var keyCode = e.keyCode || e.detail.keyCode;
-      if (this.isClickable() && TOGGLE_KEYS.indexOf(keyCode) !== -1) {
-        e.preventDefault();
-        e.stopPropagation();
-        this.handleClickDetails();
-      }
     }
   }, {
     key: 'render',
@@ -2107,8 +2092,7 @@ var Sidebar = function (_Component) {
           (0, _preact.h)(
             'div',
             {
-              className: expanded ? 'expanded' : '',
-              onKeyDown: this.handleKeyDown
+              className: expanded ? 'expanded' : ''
             },
             (0, _preact.h)(
               'a',
