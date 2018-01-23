@@ -1,7 +1,7 @@
 const cache = require('./cache')
 const listPhotos = require('./photos/list')
 
-function getPhotoData () {
+function getPhotoData() {
   return Promise.resolve(cache.get('photoData') || listPhotos()).then(
     photoData => {
       cache.put('photoData', photoData)
@@ -14,19 +14,19 @@ module.exports.getPhotoData = getPhotoData
 
 const stopWords = [/\d{4}/]
 
-function noStopWords (elem) {
+function noStopWords(elem) {
   return stopWords.some(sw => sw.test(elem))
 }
 
-function onlyUnique (value, index, ary) {
+function onlyUnique(value, index, ary) {
   return ary.indexOf(value) === index
 }
 
-function reduceFlatten (a, b) {
+function reduceFlatten(a, b) {
   return a.concat(b)
 }
 
-module.exports.getKeywords = function () {
+module.exports.getKeywords = function() {
   return getPhotoData().then(({ photos }) =>
     [
       'diving',

@@ -1,16 +1,16 @@
-const {resizeTo} = require('../../common/constants')
+const { resizeTo } = require('../../common/constants')
 
-function buildUrl (base, key, name, size) {
+function buildUrl(base, key, name, size) {
   return `${base}/${key}/${size}_${encodeURIComponent(name)}`
 }
 
-function getMode (resizeData) {
-  const {width, height} = resizeData[Object.keys(resizeData)[0]]
+function getMode(resizeData) {
+  const { width, height } = resizeData[Object.keys(resizeData)[0]]
 
   return width > height ? 'landscape' : 'portrait'
 }
 
-module.exports.serverToClient = function (photo, base) {
+module.exports.serverToClient = function(photo, base) {
   return {
     name: photo.name,
     key: photo.key,
@@ -29,12 +29,7 @@ module.exports.serverToClient = function (photo, base) {
       return {
         ...prev,
         [current.name]: {
-          url: buildUrl(
-                        base,
-                        photo.key,
-                        photo.name,
-                        current.shortName
-                    ),
+          url: buildUrl(base, photo.key, photo.name, current.shortName),
           width: photo.resize[current.name].width,
           height: photo.resize[current.name].height
         }

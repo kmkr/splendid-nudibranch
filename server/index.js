@@ -15,7 +15,7 @@ const ogTags = require('./og-tags')
 const { description } = require('../common/constants')
 const hashStore = require('./hash-store')
 
-function verifyEnv () {
+function verifyEnv() {
   const missing = [
     'AWS_ACCESS_KEY_ID',
     'AWS_SECRET_ACCESS_KEY',
@@ -51,7 +51,7 @@ app.use(
 
 const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
-function photoIndex (res, { photoKey, year, location } = {}, jsFile, cssFile) {
+function photoIndex(res, { photoKey, year, location } = {}, jsFile, cssFile) {
   return Promise.all([
     viewDataService.getPhotoData(),
     viewDataService.getKeywords()

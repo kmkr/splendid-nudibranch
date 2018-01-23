@@ -1,5 +1,5 @@
 /** @jsx h */
-import {h, Component} from 'preact'
+import { h, Component } from 'preact'
 
 import Authenticator from './authenticator'
 import PhotoUploader from './photos/photo-uploader'
@@ -8,7 +8,7 @@ import ListPhotos from './photos/list-photos'
 import snFetch from './fetch'
 
 class App extends Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       token: ''
@@ -19,25 +19,25 @@ class App extends Component {
     this.onSetToken = this.onSetToken.bind(this)
     this.onBatchUpdatePhotos = this.onBatchUpdatePhotos.bind(this)
   }
-  componentWillMount () {
+  componentWillMount() {
     snFetch.addHeaderRequestInterceptor(() => ({
       'x-auth': this.state.token
     }))
   }
 
-  onAddPhoto (photo) {
+  onAddPhoto(photo) {
     snFetch.post('/photos', photo)
   }
 
-  onDeleteClick (photo) {
+  onDeleteClick(photo) {
     snFetch.delete(`/photos/${photo.key}`)
   }
 
-  onSetToken (token) {
-    this.setState({token})
+  onSetToken(token) {
+    this.setState({ token })
   }
 
-  onBatchUpdatePhotos (photos) {
+  onBatchUpdatePhotos(photos) {
     if (photos.length) {
       snFetch.postJSON('/photos/metadata', photos)
     } else {
@@ -45,22 +45,26 @@ class App extends Component {
     }
   }
 
-  render () {
+  render() {
     return (
-      <div className='row'>
-        <div className='col-lg-push-2 col-lg-10'>
+      <div className="row">
+        <div className="col-lg-push-2 col-lg-10">
           <Authenticator onSetToken={this.onSetToken} />
-          <div style={{opacity: this.state.token ? 1 : 0.2}}>
+          <div style={{ opacity: this.state.token ? 1 : 0.2 }}>
             <h1>Upload photos</h1>
             <PhotoUploader onAddPhoto={this.onAddPhoto} />
             <hr />
             <h1>Batch update photos</h1>
-            <BatchUpdatePhotos photos={this.props.photos.data} onSubmit={this.onBatchUpdatePhotos} />
+            <BatchUpdatePhotos
+              photos={this.props.photos.data}
+              onSubmit={this.onBatchUpdatePhotos}
+            />
             <hr />
             <h1>Edit photos</h1>
             <ListPhotos
               photos={this.props.photos}
-              onDeleteClick={this.onDeleteClick} />
+              onDeleteClick={this.onDeleteClick}
+            />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 const interceptors = []
 
-function fetchWithHeaders (url, additionalRequestOptions = {}) {
+function fetchWithHeaders(url, additionalRequestOptions = {}) {
   const headers = {
     accept: 'application/json',
     ...(additionalRequestOptions.headers || {}),
@@ -27,23 +27,23 @@ function fetchWithHeaders (url, additionalRequestOptions = {}) {
 }
 
 export default {
-  addHeaderRequestInterceptor (interceptor) {
+  addHeaderRequestInterceptor(interceptor) {
     interceptors.push(interceptor)
   },
-  get (url, requestOptions = {}) {
+  get(url, requestOptions = {}) {
     return fetchWithHeaders(url, { method: 'GET', ...requestOptions })
   },
-  post (url, body, requestOptions = {}) {
+  post(url, body, requestOptions = {}) {
     return fetchWithHeaders(
       url,
       { method: 'POST', body, ...requestOptions },
       true
     )
   },
-  delete (url, requestOptions = {}) {
+  delete(url, requestOptions = {}) {
     return fetchWithHeaders(url, { method: 'DELETE', ...requestOptions }, true)
   },
-  putJSON (url, body, additionalRequestOptions = {}) {
+  putJSON(url, body, additionalRequestOptions = {}) {
     const requestOptions = {
       method: 'PUT',
       body: JSON.stringify(body),
@@ -55,7 +55,7 @@ export default {
 
     return fetchWithHeaders(url, requestOptions, true)
   },
-  postJSON (url, body, additionalRequestOptions = {}) {
+  postJSON(url, body, additionalRequestOptions = {}) {
     const requestOptions = {
       body: JSON.stringify(body),
       headers: {},

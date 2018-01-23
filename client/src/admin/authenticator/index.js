@@ -1,10 +1,11 @@
 /** @jsx h */
-import {h} from 'preact'
+import { h } from 'preact'
 
-export default ({onSetToken}) => (
+export default ({ onSetToken }) => (
   <input
-    type='password'
-    name='authenticator-token'
-    placeholder='Authenticator token'
-    onChange={e => onSetToken(e.target.value)} />
+    type="password"
+    name="authenticator-token"
+    placeholder="Authenticator token"
+    onChange={e => onSetToken(e.target.value)}
+  />
 )

@@ -1,7 +1,7 @@
 const WHITELIST = ['/stats']
 const ADMIN_KEY = process.env.SN_ADMIN_ACCESS_KEY
 
-function getKey (path) {
+function getKey(path) {
   const segments = path.split('/')
   const lastSegment = segments[segments.length - 1]
 
@@ -10,7 +10,7 @@ function getKey (path) {
   }
 }
 
-module.exports.auth = function (req, res, next) {
+module.exports.auth = function(req, res, next) {
   if (req.method === 'GET') {
     return next()
   }
@@ -20,7 +20,7 @@ module.exports.auth = function (req, res, next) {
   }
 
   const key = getKey(req.path)
-  const response = key ? {key} : {}
+  const response = key ? { key } : {}
 
   if (!req.header('x-auth')) {
     res.status(400).json(response)

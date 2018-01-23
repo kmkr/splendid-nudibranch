@@ -1,10 +1,10 @@
 import getWidth from './get-width'
 
-function getNumPortrait (photos) {
+function getNumPortrait(photos) {
   return photos.filter(photo => photo.mode === 'portrait').length
 }
 
-export default function (_photos) {
+export default function(_photos) {
   const photos = [..._photos]
   const totalWidth = Math.min(getWidth(), 2560)
   const groups = []
@@ -24,7 +24,7 @@ export default function (_photos) {
       const numNext3 = getNumPortrait(photos.slice(0, 3))
 
       if (numNext5 === 4) {
-                // ??
+        // ??
         numThisRow = 5
       } else if (numNext5 === 3) {
         numThisRow = 5
@@ -45,15 +45,21 @@ export default function (_photos) {
       if (!photoToAdd) {
         return groups
       }
-      const scale = photoToAdd.mode === 'portrait' ? portraitScaleFactor : landscapeScaleFactor
+      const scale =
+        photoToAdd.mode === 'portrait'
+          ? portraitScaleFactor
+          : landscapeScaleFactor
 
       const marginsInRow = (numThisRow + 1) * 8
-      photoToAdd.displayedWidth = ((totalWidth - marginsInRow) / numThisRow) * scale
+      photoToAdd.displayedWidth =
+        (totalWidth - marginsInRow) / numThisRow * scale
       subGroup.photos.push(photoToAdd)
       const ratio = photoToAdd.sizes.small.height / photoToAdd.sizes.small.width
       const height = photoToAdd.displayedWidth * ratio
-      subGroup.height = subGroup.height ? Math.min(subGroup.height, height) : height
-            // next row
+      subGroup.height = subGroup.height
+        ? Math.min(subGroup.height, height)
+        : height
+      // next row
     }
     groups.push(subGroup)
   }

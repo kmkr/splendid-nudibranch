@@ -1,4 +1,4 @@
-function CustomEvent (event, params) {
+function CustomEvent(event, params) {
   params = params || {
     bubbles: false,
     cancelable: false,

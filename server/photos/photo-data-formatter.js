@@ -1,5 +1,14 @@
-function mapOne (photoFromDb) {
-  const {title, description, latin, location, key, name, resize, tags} = photoFromDb
+function mapOne(photoFromDb) {
+  const {
+    title,
+    description,
+    latin,
+    location,
+    key,
+    name,
+    resize,
+    tags
+  } = photoFromDb
   return {
     title,
     description,
@@ -11,7 +20,7 @@ function mapOne (photoFromDb) {
     tags: tags || []
   }
 }
-module.exports.dbToClient = function (photoArg) {
+module.exports.dbToClient = function(photoArg) {
   if (photoArg.constructor === Array) {
     return photoArg.map(mapOne)
   }

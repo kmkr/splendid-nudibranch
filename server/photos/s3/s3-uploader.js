@@ -1,4 +1,4 @@
-const {s3, generateParams} = require('./s3-wrapper')
+const { s3, generateParams } = require('./s3-wrapper')
 
 const oneYear = 60 * 60 * 24 * 365
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
 
       console.log('[s3-uploader] Putting %s', name)
 
-      s3.putObject(params, (err) => {
+      s3.putObject(params, err => {
         if (err) {
           return reject(err)
         }

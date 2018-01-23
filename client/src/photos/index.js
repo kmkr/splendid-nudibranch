@@ -1,18 +1,18 @@
 /** @jsx h */
-import {h, Component} from 'preact'
+import { h, Component } from 'preact'
 
 import Photo from './photo'
 import Sidebar from './sidebar'
 import ScrollOnEventHandler from './scroll-on-event-handler'
 
 class PhotosWrapper extends Component {
-  constructor () {
+  constructor() {
     super()
     this.onNextPhoto = this.onNextPhoto.bind(this)
     this.onPreviousPhoto = this.onPreviousPhoto.bind(this)
   }
 
-  getCurrentPhotoIndex () {
+  getCurrentPhotoIndex() {
     const { photos, selectedPhoto } = this.props
     if (!selectedPhoto) {
       return 0
@@ -21,11 +21,11 @@ class PhotosWrapper extends Component {
     return photos.indexOf(selectedPhoto)
   }
 
-  onNextPhoto () {
+  onNextPhoto() {
     const currentPhotoIndex = this.getCurrentPhotoIndex()
     const { photos } = this.props
 
-    if (currentPhotoIndex === (photos.length - 1)) {
+    if (currentPhotoIndex === photos.length - 1) {
       this.onSelectPhotoIndex(0)
       return
     }
@@ -33,7 +33,7 @@ class PhotosWrapper extends Component {
     this.onSelectPhotoIndex(currentPhotoIndex + 1)
   }
 
-  onPreviousPhoto () {
+  onPreviousPhoto() {
     const currentPhotoIndex = this.getCurrentPhotoIndex()
     const { photos } = this.props
 
@@ -45,16 +45,23 @@ class PhotosWrapper extends Component {
     this.onSelectPhotoIndex(Math.max(currentPhotoIndex - 1, 0))
   }
 
-  onSelectPhotoIndex (photoIndex) {
+  onSelectPhotoIndex(photoIndex) {
     this.props.onSelectPhoto(this.props.photos[photoIndex])
   }
 
-  render () {
+  render() {
     const { selectedPhoto } = this.props
     return (
       <div>
-        <ScrollOnEventHandler onNext={this.onNextPhoto} onPrevious={this.onPreviousPhoto} />
-        <Photo photo={selectedPhoto} onNext={this.onNextPhoto} onPrevious={this.onPreviousPhoto} />
+        <ScrollOnEventHandler
+          onNext={this.onNextPhoto}
+          onPrevious={this.onPreviousPhoto}
+        />
+        <Photo
+          photo={selectedPhoto}
+          onNext={this.onNextPhoto}
+          onPrevious={this.onPreviousPhoto}
+        />
         <Sidebar photo={selectedPhoto} />
       </div>
     )

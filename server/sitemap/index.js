@@ -16,7 +16,7 @@ const sitemap = sm.createSitemap({
 })
 
 router.get('/', (req, res) => {
-  sitemap.toXML(function (err, xml) {
+  sitemap.toXML(function(err, xml) {
     if (err) {
       return res.status(500).end()
     }

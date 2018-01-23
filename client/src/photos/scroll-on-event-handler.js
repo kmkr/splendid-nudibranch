@@ -1,6 +1,6 @@
 /** @jsx h */
 
-import {h, Component} from 'preact'
+import { h, Component } from 'preact'
 const LEFT_KEYS = [
   33, // pgup
   37 // arrow left
@@ -12,24 +12,24 @@ const RIGHT_KEYS = [
 ]
 
 class ScrollOnEventHandler extends Component {
-  constructor () {
+  constructor() {
     super()
     this.handleKeyUp = this.handleKeyUp.bind(this)
   }
 
-  componentWillMount () {
+  componentWillMount() {
     window.addEventListener('keyup', this.handleKeyUp)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('keyup', this.handleKeyUp)
   }
 
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false
   }
 
-  handleKeyUp (e) {
+  handleKeyUp(e) {
     const keyCode = e.keyCode || e.detail.keyCode
     const { onPrevious, onNext } = this.props
 
@@ -42,7 +42,7 @@ class ScrollOnEventHandler extends Component {
     }
   }
 
-  render () {
+  render() {
     return <span />
   }
 }

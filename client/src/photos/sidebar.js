@@ -4,7 +4,7 @@ import { h, Component } from 'preact'
 import PhotoText from './photo-text'
 
 class Sidebar extends Component {
-  constructor () {
+  constructor() {
     super()
     this.handleClickDetails = this.handleClickDetails.bind(this)
     this.state = {
@@ -12,28 +12,28 @@ class Sidebar extends Component {
     }
   }
 
-  handleClickDetails (e) {
+  handleClickDetails(e) {
     e.preventDefault()
     this.setState({
       expanded: !this.state.expanded
     })
   }
 
-  render () {
+  render() {
     const { photo } = this.props
     const { expanded } = this.state
 
     return (
       <div>
-        <div id='sidebar' onClick={this.handleClickDetails}>
-          <div
-            className={expanded ? 'expanded' : ''}
-          >
-            <a href='#' tabIndex='0' aria-role='button'>+</a>
+        <div id="sidebar" onClick={this.handleClickDetails}>
+          <div className={expanded ? 'expanded' : ''}>
+            <a href="#" tabIndex="0" aria-role="button">
+              +
+            </a>
           </div>
         </div>
 
-        <div id='sidebar-text' class={expanded ? 'expanded' : ''}>
+        <div id="sidebar-text" class={expanded ? 'expanded' : ''}>
           <PhotoText photo={photo} />
         </div>
       </div>

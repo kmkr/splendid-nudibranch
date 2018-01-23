@@ -1,4 +1,4 @@
-const {MongoClient} = require('mongodb')
+const { MongoClient } = require('mongodb')
 
 const getCollection = require('./get')
 const insertToCollection = require('./insert')
@@ -17,31 +17,30 @@ const getDb = new Promise((resolve, reject) => {
 })
 
 module.exports = {
-  insert (collectionName, data) {
+  insert(collectionName, data) {
     return getDb.then(db => insertToCollection(db, collectionName, data))
   },
-  list (collectionName, filter) {
+  list(collectionName, filter) {
     return getDb.then(db => getCollection(db, collectionName, filter))
   },
-  delete (collectionName, filter) {
+  delete(collectionName, filter) {
     return getDb.then(db => destroyFromCollection(db, collectionName, filter))
   },
-  update (collectionName, filter, newValues) {
+  update(collectionName, filter, newValues) {
     return getDb
-            .then(db => updateOneInCollection(db, collectionName, filter, newValues))
-            .then(() => this.list(collectionName, filter))
-            .then(data => data[0])
+      .then(db => updateOneInCollection(db, collectionName, filter, newValues))
+      .then(() => this.list(collectionName, filter))
+      .then(data => data[0])
   },
-  updateWithInsertFallback (collectionName, filter, data) {
+  updateWithInsertFallback(collectionName, filter, data) {
     return getDb.then(db => {
-      return getCollection(db, collectionName, filter)
-                .then(collection => {
-                  if (collection.length) {
-                    return updateOneInCollection(db, collectionName, filter, data)
-                  }
+      return getCollection(db, collectionName, filter).then(collection => {
+        if (collection.length) {
+          return updateOneInCollection(db, collectionName, filter, data)
+        }
 
-                  return insertToCollection(db, collectionName, data)
-                })
+        return insertToCollection(db, collectionName, data)
+      })
     })
   }
 }

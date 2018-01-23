@@ -1,25 +1,28 @@
 /** @jsx h */
-import {h, Component} from 'preact'
+import { h, Component } from 'preact'
 
 import Collage from './collage'
 import PhotosWrapper from './photos'
 
-function getPhotoWithKey (photos, key) {
+function getPhotoWithKey(photos, key) {
   return photos.filter(p => p.key === key)[0]
 }
 
 class App extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
-    const selectedPhotoKey = (window.location.href.match(/photos\/([^/]+)/) || [])[1]
+    const selectedPhotoKey = (window.location.href.match(/photos\/([^/]+)/) ||
+      [])[1]
     this.state = {
-      selectedPhoto: selectedPhotoKey ? getPhotoWithKey(this.props.photos, selectedPhotoKey) : null
+      selectedPhoto: selectedPhotoKey
+        ? getPhotoWithKey(this.props.photos, selectedPhotoKey)
+        : null
     }
     this.onSelectPhoto = this.onSelectPhoto.bind(this)
   }
 
-  componentDidMount () {
+  componentDidMount() {
     const { photos } = this.props
     window.addEventListener('popstate', e => {
       // e.state is equal to the data-attribute of the last image we clicked
@@ -31,7 +34,7 @@ class App extends Component {
     })
   }
 
-  onSelectPhoto (photo) {
+  onSelectPhoto(photo) {
     this.setState({
       selectedPhoto: photo
     })
@@ -40,7 +43,7 @@ class App extends Component {
     window.scrollTo(0, 0)
   }
 
-  getCurrentPhotoIndex () {
+  getCurrentPhotoIndex() {
     const { selectedPhoto } = this.state
     if (!selectedPhoto) {
       return 0
@@ -51,7 +54,7 @@ class App extends Component {
     return photos.indexOf(selectedPhoto)
   }
 
-  render () {
+  render() {
     const { photos } = this.props
     const { selectedPhoto } = this.state
     return (

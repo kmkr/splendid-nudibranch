@@ -1,5 +1,5 @@
 /** @jsx h */
-import {h, render} from 'preact'
+import { h, render } from 'preact'
 import '../polyfills'
 import './polyfills'
 import App from './app'

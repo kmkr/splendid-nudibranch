@@ -1,4 +1,4 @@
-export default function (sizes) {
+export default function(sizes) {
   return Object.keys(sizes)
     .reverse()
     .map(key => {

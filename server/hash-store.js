@@ -3,7 +3,7 @@ const path = require('path')
 
 const hashes = {}
 
-module.exports.withHash = (filePath) => {
+module.exports.withHash = filePath => {
   if (hashes[filePath]) {
     return hashes[filePath]
   }

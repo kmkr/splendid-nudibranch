@@ -1201,26 +1201,26 @@ var _preact = __webpack_require__(0);
 var PhotoText = function PhotoText(_ref) {
   var photo = _ref.photo;
   return (0, _preact.h)(
-    'div',
-    { className: 'photo-text-wrapper' },
+    "div",
+    { className: "photo-text-wrapper" },
     (0, _preact.h)(
-      'p',
-      { className: 'title' },
+      "p",
+      { className: "title" },
       photo.title
     ),
     (0, _preact.h)(
-      'p',
-      { className: 'latin' },
+      "p",
+      { className: "latin" },
       photo.latin
     ),
     (0, _preact.h)(
-      'p',
-      { className: 'description' },
+      "p",
+      { className: "description" },
       photo.description
     ),
     (0, _preact.h)(
-      'p',
-      { className: 'location' },
+      "p",
+      { className: "location" },
       photo.location
     )
   );
@@ -1571,9 +1571,7 @@ var Photo = function (_Component) {
         { style: style },
         (0, _preact.h)(
           'a',
-          { href: '/photos/' + photo.key,
-            onClick: this.onClick
-          },
+          { href: '/photos/' + photo.key, onClick: this.onClick },
           (0, _preact.h)(_transitionImage2.default, {
             alt: photo.title,
             src: photo.sizes.xsmall.url,
@@ -1855,8 +1853,15 @@ var PhotosWrapper = function (_Component) {
       return (0, _preact.h)(
         'div',
         null,
-        (0, _preact.h)(_scrollOnEventHandler2.default, { onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto }),
-        (0, _preact.h)(_photo2.default, { photo: selectedPhoto, onNext: this.onNextPhoto, onPrevious: this.onPreviousPhoto }),
+        (0, _preact.h)(_scrollOnEventHandler2.default, {
+          onNext: this.onNextPhoto,
+          onPrevious: this.onPreviousPhoto
+        }),
+        (0, _preact.h)(_photo2.default, {
+          photo: selectedPhoto,
+          onNext: this.onNextPhoto,
+          onPrevious: this.onPreviousPhoto
+        }),
         (0, _preact.h)(_sidebar2.default, { photo: selectedPhoto })
       );
     }
@@ -2091,9 +2096,7 @@ var Sidebar = function (_Component) {
           { id: 'sidebar', onClick: this.handleClickDetails },
           (0, _preact.h)(
             'div',
-            {
-              className: expanded ? 'expanded' : ''
-            },
+            { className: expanded ? 'expanded' : '' },
             (0, _preact.h)(
               'a',
               { href: '#', tabIndex: '0', 'aria-role': 'button' },

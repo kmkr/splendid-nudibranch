@@ -1,13 +1,13 @@
 let cache = {}
 
-module.exports.get = function (key) {
+module.exports.get = function(key) {
   return cache[key]
 }
 
-module.exports.put = function (key, val) {
+module.exports.put = function(key, val) {
   cache[key] = val
 }
 
-module.exports.clear = function () {
+module.exports.clear = function() {
   cache = {}
 }

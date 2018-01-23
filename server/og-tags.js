@@ -1,8 +1,8 @@
-const {description} = require('../common/constants')
+const { description } = require('../common/constants')
 
 const name = 'The Splendid Nudibranch'
 
-function buildUrl ({selectedPhotoKey, year, location}) {
+function buildUrl({ selectedPhotoKey, year, location }) {
   let url = 'http://www.thesplendidnudibranch.pink'
 
   if (selectedPhotoKey) {
@@ -11,26 +11,24 @@ function buildUrl ({selectedPhotoKey, year, location}) {
 
   if (location || year) {
     url += '/?'
-    url += Object.entries({location, year})
-            .filter(e => e[1])
-            .map(entry => `${entry[0]}=${entry[1]}`)
-            .join('&')
+    url += Object.entries({ location, year })
+      .filter(e => e[1])
+      .map(entry => `${entry[0]}=${entry[1]}`)
+      .join('&')
   }
 
   return url
 }
 
-module.exports = (photos, {selectedPhotoKey, year, location}) => {
+module.exports = (photos, { selectedPhotoKey, year, location }) => {
   const selectedPhoto = photos.filter(p => p.key === selectedPhotoKey)[0]
 
   let filterTitle
   if (location || year) {
     filterTitle = [location, year]
-            .filter(e => e)
-            .map(str => (
-                str.charAt(0).toUpperCase() + str.slice(1)
-            ))
-            .join(' ')
+      .filter(e => e)
+      .map(str => str.charAt(0).toUpperCase() + str.slice(1))
+      .join(' ')
   }
 
   if (selectedPhoto) {
@@ -39,8 +37,10 @@ module.exports = (photos, {selectedPhotoKey, year, location}) => {
     return {
       'og:type': 'article',
       'og:site_name': name,
-      'og:title': [filterTitle || selectedPhoto.title, name].filter(e => e).join(' :: '),
-      'og:url': buildUrl({selectedPhotoKey, year, location}),
+      'og:title': [filterTitle || selectedPhoto.title, name]
+        .filter(e => e)
+        .join(' :: '),
+      'og:url': buildUrl({ selectedPhotoKey, year, location }),
       'og:description': selectedPhoto.description,
       'og:image': selectedPhotoSize.url,
       'og:image:width': selectedPhotoSize.width,
@@ -52,7 +52,7 @@ module.exports = (photos, {selectedPhotoKey, year, location}) => {
     'og:type': 'article',
     'og:site_name': name,
     'og:title': [filterTitle, name].filter(e => e).join(' :: '),
-    'og:url': buildUrl({year, location}),
+    'og:url': buildUrl({ year, location }),
     'og:description': description,
     'og:image': 'http://www.thesplendidnudibranch.pink/static/images/logo.png',
     'og:image:width': 1300,

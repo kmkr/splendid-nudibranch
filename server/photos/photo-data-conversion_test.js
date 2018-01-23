@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-const {serverToClient} = require('./photo-data-conversion')
+const { serverToClient } = require('./photo-data-conversion')
 
 const base = 'http://my/base'
 const photoFromServer = {

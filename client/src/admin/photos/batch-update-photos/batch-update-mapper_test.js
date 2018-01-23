@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import {map} from './batch-update-mapper'
+import { map } from './batch-update-mapper'
 
 it('should update two photos', () => {
 /* eslint-disable */
@@ -33,7 +33,7 @@ Description
 
 
 `
-/* eslint-enable */
+  /* eslint-enable */
   const updated = map(content, getPhotos())
 
   expect(updated.length === 2).toBe(true)
@@ -61,7 +61,7 @@ Description
 })
 
 it('should support whitespaces after key', () => {
-    /* eslint-disable */
+  /* eslint-disable */
     const content = `
 DSC00564.jpg
 
@@ -109,48 +109,52 @@ Description
   })
 })
 
-function getPhotos () {
+function getPhotos() {
   return [
     {
       name: 'DSC00564.jpg',
       key: 'c051-e24f',
       title: 'Spotted Moray Eel',
-      description: 'Unlike most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag their prey inside their mouths.',
+      description:
+        'Unlike most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag their prey inside their mouths.',
       latin: 'Gymnothorax moringa',
       location: 'Bonaire, The Netherlands',
-      tags: [
-        '2016',
-        'eel'
-      ],
+      tags: ['2016', 'eel'],
       mode: 'landscape',
       sizes: {
         thumb: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/thumb_DSC00564.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/thumb_DSC00564.jpg',
           width: 220,
           height: 124
         },
         xsmall: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/xs_DSC00564.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/xs_DSC00564.jpg',
           width: 500,
           height: 281
         },
         small: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/s_DSC00564.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/s_DSC00564.jpg',
           width: 1000,
           height: 563
         },
         medium: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/m_DSC00564.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/m_DSC00564.jpg',
           width: 1400,
           height: 788
         },
         large: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/l_DSC00564.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/l_DSC00564.jpg',
           width: 1900,
           height: 1069
         },
         xlarge: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/xl_DSC00564.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/c051-e24f/xl_DSC00564.jpg',
           width: 2560,
           height: 1440
         }
@@ -161,42 +165,46 @@ function getPhotos () {
       name: 'DSC00974.jpg',
       key: '81ad-bdb4',
       title: 'Garden Eels',
-      description: 'Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over thousand individuals. Each eel has its own burrow in the sand that it seldom leaves.',
+      description:
+        'Sometimes mistaken for swaying seagrass, these small eels live in colonies that can reach over thousand individuals. Each eel has its own burrow in the sand that it seldom leaves.',
       latin: '',
       location: 'Dumaguete, The Philippines',
-      tags: [
-        'eel',
-        '2013'
-      ],
+      tags: ['eel', '2013'],
       mode: 'landscape',
       sizes: {
         thumb: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/thumb_DSC00974.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/thumb_DSC00974.jpg',
           width: 220,
           height: 124
         },
         xsmall: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/xs_DSC00974.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/xs_DSC00974.jpg',
           width: 500,
           height: 281
         },
         small: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/s_DSC00974.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/s_DSC00974.jpg',
           width: 1000,
           height: 563
         },
         medium: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/m_DSC00974.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/m_DSC00974.jpg',
           width: 1400,
           height: 788
         },
         large: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/l_DSC00974.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/l_DSC00974.jpg',
           width: 1900,
           height: 1069
         },
         xlarge: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/xl_DSC00974.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/81ad-bdb4/xl_DSC00974.jpg',
           width: 2560,
           height: 1440
         }
@@ -207,42 +215,46 @@ function getPhotos () {
       name: 'DSC00598.jpg',
       key: '2d81-648d',
       title: 'Green Turtle',
-      description: 'The green turtle inhabit coastal areas of as many as 140 countries. Together, The Caribbean Islands have one of the largest populations of green turtles in the world.',
+      description:
+        'The green turtle inhabit coastal areas of as many as 140 countries. Together, The Caribbean Islands have one of the largest populations of green turtles in the world.',
       latin: 'Chelonia mydas',
       location: 'Bonaire, The Netherlands',
-      tags: [
-        '2016',
-        'turtle'
-      ],
+      tags: ['2016', 'turtle'],
       mode: 'landscape',
       sizes: {
         thumb: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/thumb_DSC00598.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/thumb_DSC00598.jpg',
           width: 220,
           height: 124
         },
         xsmall: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/xs_DSC00598.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/xs_DSC00598.jpg',
           width: 500,
           height: 281
         },
         small: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/s_DSC00598.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/s_DSC00598.jpg',
           width: 1000,
           height: 563
         },
         medium: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/m_DSC00598.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/m_DSC00598.jpg',
           width: 1400,
           height: 788
         },
         large: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/l_DSC00598.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/l_DSC00598.jpg',
           width: 1900,
           height: 1069
         },
         xlarge: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/xl_DSC00598.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/2d81-648d/xl_DSC00598.jpg',
           width: 2560,
           height: 1440
         }
@@ -253,41 +265,46 @@ function getPhotos () {
       name: 'DSC01136.jpg',
       key: '47e7-02f9',
       title: 'Atlantic Tarpon',
-      description: 'A group of tarpons accompanied us during our night dives on Bonaire. These nocturnal hunters exploited the light from our torches to find prey.',
+      description:
+        'A group of tarpons accompanied us during our night dives on Bonaire. These nocturnal hunters exploited the light from our torches to find prey.',
       latin: 'Megalops atlanticus',
       location: 'Bonaire, The Netherlands',
-      tags: [
-        '2016'
-      ],
+      tags: ['2016'],
       mode: 'landscape',
       sizes: {
         thumb: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/thumb_DSC01136.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/thumb_DSC01136.jpg',
           width: 220,
           height: 124
         },
         xsmall: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/xs_DSC01136.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/xs_DSC01136.jpg',
           width: 500,
           height: 281
         },
         small: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/s_DSC01136.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/s_DSC01136.jpg',
           width: 1000,
           height: 563
         },
         medium: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/m_DSC01136.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/m_DSC01136.jpg',
           width: 1400,
           height: 788
         },
         large: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/l_DSC01136.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/l_DSC01136.jpg',
           width: 1900,
           height: 1069
         },
         xlarge: {
-          url: 'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/xl_DSC01136.jpg',
+          url:
+            'https://s3.eu-central-1.amazonaws.com/splendid-nudibranch-dev/47e7-02f9/xl_DSC01136.jpg',
           width: 2560,
           height: 1440
         }

@@ -11,7 +11,7 @@ const Photo = ({ photo, onNext, onPrevious }) => (
       onClick={onNext}
       src={photo.sizes.large.url}
       srcSet={buildSrcSet(photo.sizes)}
-      sizes='100vw'
+      sizes="100vw"
     />
 
     <button onClick={onPrevious}>Previous</button>

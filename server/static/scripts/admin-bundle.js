@@ -2501,7 +2501,10 @@ var App = function (_Component) {
               null,
               'Batch update photos'
             ),
-            (0, _preact.h)(_batchUpdatePhotos2.default, { photos: this.props.photos.data, onSubmit: this.onBatchUpdatePhotos }),
+            (0, _preact.h)(_batchUpdatePhotos2.default, {
+              photos: this.props.photos.data,
+              onSubmit: this.onBatchUpdatePhotos
+            }),
             (0, _preact.h)('hr', null),
             (0, _preact.h)(
               'h1',
@@ -2510,7 +2513,8 @@ var App = function (_Component) {
             ),
             (0, _preact.h)(_listPhotos2.default, {
               photos: this.props.photos,
-              onDeleteClick: this.onDeleteClick })
+              onDeleteClick: this.onDeleteClick
+            })
           )
         )
       );
@@ -2537,13 +2541,14 @@ var _preact = __webpack_require__(0);
 
 exports.default = function (_ref) {
   var onSetToken = _ref.onSetToken;
-  return (0, _preact.h)('input', {
-    type: 'password',
-    name: 'authenticator-token',
-    placeholder: 'Authenticator token',
+  return (0, _preact.h)("input", {
+    type: "password",
+    name: "authenticator-token",
+    placeholder: "Authenticator token",
     onChange: function onChange(e) {
       return onSetToken(e.target.value);
-    } });
+    }
+  });
 }; /** @jsx h */
 
 /***/ }),
@@ -2602,10 +2607,7 @@ var PhotoUploader = function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      return (0, _preact.h)('input', {
-        type: 'file',
-        multiple: true,
-        onChange: function onChange(e) {
+      return (0, _preact.h)('input', { type: 'file', multiple: true, onChange: function onChange(e) {
           return _this3.onAddPhoto(e);
         } });
     }
@@ -2681,7 +2683,8 @@ var BatchUpdatePhotos = function (_Component) {
             rows: '10',
             onChange: function onChange(e) {
               return _this2.setState({ content: e.target.value });
-            } })
+            }
+          })
         ),
         (0, _preact.h)(
           'div',
@@ -2867,8 +2870,7 @@ var ListPhotos = function ListPhotos(_ref) {
     photos.map(function (photo) {
       return (0, _preact.h)(
         'div',
-        {
-          key: photo.key },
+        { key: photo.key },
         (0, _preact.h)(
           'h3',
           null,
@@ -2885,9 +2887,7 @@ var ListPhotos = function ListPhotos(_ref) {
           (0, _preact.h)(
             'div',
             { className: 'form' },
-            (0, _preact.h)(_editPhoto2.default, {
-              onDeleteClick: onDeleteClick,
-              photo: photo })
+            (0, _preact.h)(_editPhoto2.default, { onDeleteClick: onDeleteClick, photo: photo })
           )
         )
       );
@@ -2914,33 +2914,25 @@ var EditPhoto = function EditPhoto(_ref) {
   var photo = _ref.photo,
       onDeleteClick = _ref.onDeleteClick;
   return (0, _preact.h)(
-    'div',
-    { className: 'edit-photo row' },
+    "div",
+    { className: "edit-photo row" },
     (0, _preact.h)(
-      'div',
-      { className: 'col-sm-10' },
-      (0, _preact.h)('input', {
-        placeholder: 'Title',
+      "div",
+      { className: "col-sm-10" },
+      (0, _preact.h)("input", { placeholder: "Title", disabled: true, value: photo.title }),
+      (0, _preact.h)("input", { placeholder: "Location", disabled: true, value: photo.location }),
+      (0, _preact.h)("input", { placeholder: "Latin", disabled: true, value: photo.latin }),
+      (0, _preact.h)("textarea", {
+        placeholder: "Photo description",
         disabled: true,
-        value: photo.title }),
-      (0, _preact.h)('input', {
-        placeholder: 'Location',
-        disabled: true,
-        value: photo.location }),
-      (0, _preact.h)('input', {
-        placeholder: 'Latin',
-        disabled: true,
-        value: photo.latin }),
-      (0, _preact.h)('textarea', {
-        placeholder: 'Photo description',
-        disabled: true,
-        value: photo.description }),
+        value: photo.description
+      }),
       (0, _preact.h)(
-        'div',
-        { className: 'tags' },
+        "div",
+        { className: "tags" },
         photo.tags.sort().map(function (tag) {
           return (0, _preact.h)(
-            'span',
+            "span",
             { key: tag },
             tag
           );
@@ -2948,20 +2940,21 @@ var EditPhoto = function EditPhoto(_ref) {
       )
     ),
     (0, _preact.h)(
-      'div',
-      { className: 'col-sm-4' },
+      "div",
+      { className: "col-sm-4" },
       (0, _preact.h)(
-        'button',
+        "button",
         {
-          className: 'danger ' + (photo.deleting ? 'active' : ''),
+          className: "danger " + (photo.deleting ? 'active' : ''),
           disabled: photo.deleting,
-          onClick: onDeleteClick.bind(undefined, photo) },
-        'Delete'
+          onClick: onDeleteClick.bind(undefined, photo)
+        },
+        "Delete"
       ),
       photo.error && (0, _preact.h)(
-        'p',
+        "p",
         { style: { color: 'red' } },
-        'Something bad happened!'
+        "Something bad happened!"
       )
     )
   );

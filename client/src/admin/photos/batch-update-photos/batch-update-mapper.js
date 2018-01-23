@@ -5,11 +5,11 @@ const lineProcessors = {
   fallback: line => line
 }
 
-function getMatchingPhoto (name, allPhotos) {
+function getMatchingPhoto(name, allPhotos) {
   return allPhotos.find(photo => photo.name === name)
 }
 
-function hasChanges (currentPhoto, allPhotos) {
+function hasChanges(currentPhoto, allPhotos) {
   if (!currentPhoto.key) {
     return false
   }
@@ -25,12 +25,14 @@ function hasChanges (currentPhoto, allPhotos) {
   })
 }
 
-export function map (content, photos) {
+export function map(content, photos) {
   const results = []
   let currentPhoto = {}
   const allowedExtensions = /\.(jpg|gif|png)$/
   const commentStart = '/'
-  const lines = content.split('\n').filter(line => line && line[0] !== commentStart)
+  const lines = content
+    .split('\n')
+    .filter(line => line && line[0] !== commentStart)
 
   while (lines.length) {
     const line = lines.shift().trim()
@@ -44,7 +46,9 @@ export function map (content, photos) {
       const matchingPhoto = getMatchingPhoto(line, photos)
 
       if (!matchingPhoto) {
-        console.log(`Expected to find photo with name ${line} in list of photos, but did not find it! Skipping photo.`)
+        console.log(
+          `Expected to find photo with name ${line} in list of photos, but did not find it! Skipping photo.`
+        )
         continue
       }
 
@@ -61,9 +65,9 @@ export function map (content, photos) {
       let lineVal = ''
       if (split.length > 1) {
         lineVal = split
-                    .slice(1, split.length)
-                    .filter(e => e)
-                    .join(' ')
+          .slice(1, split.length)
+          .filter(e => e)
+          .join(' ')
       }
       currentPhoto[lineKey] = processor(lineVal)
 
@@ -73,7 +77,9 @@ export function map (content, photos) {
       continue
     }
 
-    throw new Error(`Expected empty line, file name or tab separated key. Found "${line}"`)
+    throw new Error(
+      `Expected empty line, file name or tab separated key. Found "${line}"`
+    )
   }
 
   return results
