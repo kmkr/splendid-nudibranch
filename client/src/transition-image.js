@@ -1,6 +1,8 @@
 /** @jsx h */
 import { h, Component } from 'preact'
 
+function noop() {}
+
 class TransitionImage extends Component {
   constructor() {
     super()
@@ -45,7 +47,7 @@ class TransitionImage extends Component {
           this.img = img
         }}
         className="transition-image"
-        onClick={onClick || (() => {})}
+        onClick={onClick || noop}
         style={{ opacity: this.state.visible ? 1 : 0 }}
         srcSet={srcSet}
         sizes={sizes}
