@@ -1,5 +1,6 @@
 @import 'collage.css';
 @import 'photo-text-wrapper.css';
+@import 'photo.css';
 @import 'sidebar.css';
 
 :root {
@@ -8,11 +9,12 @@
   --font-size-medium: 16px;
   --font-size-small: 14px;
   --color-dark: #373a3c;
+  --color-white: #fff;
 }
 
 body {
   color: var(--color-dark);
-  background-color: #fff;
+  background-color: var(--color-white);
   overflow-x: hidden;
   font-family: Raleway, sans-serif;
   font-weight: 300;
@@ -34,5 +36,5 @@ body {
 }
 
 .transition-image {
-  transition: opacity .5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }

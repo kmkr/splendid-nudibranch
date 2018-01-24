@@ -19,7 +19,7 @@
   color: var(--color-dark);
   text-decoration: none;
   display: inline-block; /* tillater rotering uten å endre outline ved rotasjon */
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #sidebar > div.expanded > a {
@@ -39,7 +39,7 @@
   top: 0;
   width: 400px;
   right: -400px;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   bottom: 0;
   padding-top: 100px;
   text-align: center;

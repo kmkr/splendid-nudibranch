@@ -1,0 +1,19 @@
+.photo-wrapper {
+  position: relative;
+}
+
+.photo-wrapper .photo-and-sidebar {
+  /* Workaround for bug der div.photo tar større høyde enn img på innsiden */
+  display: flex;
+}
+
+.photo-wrapper img {
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.photo-wrapper .bottom-bar {
+  position: relative;
+  z-index: 10;
+  background-color: var(--color-white);
+}

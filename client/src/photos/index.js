@@ -2,7 +2,7 @@
 import { h, Component } from 'preact'
 
 import Photo from './photo'
-import Sidebar from './sidebar'
+
 import ScrollOnEventHandler from './scroll-on-event-handler'
 
 class PhotosWrapper extends Component {
@@ -62,7 +62,6 @@ class PhotosWrapper extends Component {
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
         />
-        <Sidebar photo={selectedPhoto} />
       </div>
     )
   }
