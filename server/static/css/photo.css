@@ -110,12 +110,12 @@
     outline: none;
   }
 
-  #sidebar > div > a:hover {
-    color: var(--color-pink);
-  }
-
   #sidebar > div.expanded > a {
     color: var(--color-dark);
+  }
+
+  #sidebar > div > a:hover {
+    color: var(--color-pink);
   }
 
   #sidebar > div.expanded > a {
