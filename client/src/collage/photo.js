@@ -29,7 +29,7 @@ class Photo extends Component {
           />
         </a>
 
-        <div className="sn-dn-ns">
+        <div className="sn-dn-ns sn-mb-l">
           <PhotoText photo={photo} />
         </div>
       </div>

@@ -1623,7 +1623,7 @@ var Photo = function (_Component) {
         ),
         (0, _preact.h)(
           'div',
-          { className: 'sn-dn-ns' },
+          { className: 'sn-dn-ns sn-mb-l' },
           (0, _preact.h)(_photoText2.default, { photo: photo })
         )
       );
