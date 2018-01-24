@@ -1916,6 +1916,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _preact = __webpack_require__(0);
 
+var _photoText = __webpack_require__(23);
+
+var _photoText2 = _interopRequireDefault(_photoText);
+
 var _sidebar = __webpack_require__(44);
 
 var _sidebar2 = _interopRequireDefault(_sidebar);
@@ -1930,43 +1934,46 @@ var _srcSetBuilder2 = _interopRequireDefault(_srcSetBuilder);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/** @jsx h */
 var Photo = function Photo(_ref) {
   var photo = _ref.photo,
       onNext = _ref.onNext,
       onPrevious = _ref.onPrevious;
   return (0, _preact.h)(
     'div',
-    { 'class': 'photo-wrapper' },
+    { 'class': photo.mode },
     (0, _preact.h)(
       'div',
-      { 'class': 'photo-and-sidebar' },
-      (0, _preact.h)(_transitionImage2.default, {
-        alt: photo.title,
-        onClick: onNext,
-        src: photo.sizes.large.url,
-        srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
-        sizes: '100vw'
-      }),
-      (0, _preact.h)(_sidebar2.default, { photo: photo })
-    ),
-    (0, _preact.h)(
-      'div',
-      { 'class': 'bottom-bar' },
+      { 'class': 'photo-wrapper' },
       (0, _preact.h)(
-        'button',
-        { onClick: onPrevious },
-        'Previous'
+        'div',
+        { 'class': 'photo-and-sidebar' },
+        (0, _preact.h)(_transitionImage2.default, {
+          alt: photo.title,
+          onClick: onNext,
+          src: photo.sizes.large.url,
+          srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
+          sizes: '100vw'
+        }),
+        (0, _preact.h)(_photoText2.default, { photo: photo }),
+        (0, _preact.h)(_sidebar2.default, { photo: photo })
       ),
       (0, _preact.h)(
-        'button',
-        { onClick: onNext },
-        'Next'
+        'div',
+        { 'class': 'bottom-bar' },
+        (0, _preact.h)(
+          'button',
+          { onClick: onPrevious },
+          'Previous'
+        ),
+        (0, _preact.h)(
+          'button',
+          { onClick: onNext },
+          'Next'
+        )
       )
     )
   );
-};
-
+}; /** @jsx h */
 exports.default = Photo;
 
 /***/ }),
@@ -2029,16 +2036,21 @@ var Sidebar = function (_Component) {
 
       return (0, _preact.h)(
         'div',
-        null,
+        { id: 'sidebar-wrapper' },
         (0, _preact.h)(
           'div',
-          { id: 'sidebar', onClick: this.handleClickDetails },
+          { id: 'sidebar' },
           (0, _preact.h)(
             'div',
             { className: expanded ? 'expanded' : '' },
             (0, _preact.h)(
               'a',
-              { href: '#', tabIndex: '0', 'aria-role': 'button' },
+              {
+                href: '#',
+                tabIndex: '0',
+                'aria-role': 'button',
+                onClick: this.handleClickDetails
+              },
               '+'
             )
           )

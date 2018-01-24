@@ -1,10 +1,40 @@
-.photo-wrapper {
+/* landscape */
+
+.landscape .photo-wrapper {
   position: relative;
 }
 
-.photo-wrapper .photo-and-sidebar {
+.landscape .photo-and-sidebar {
   /* Workaround for bug der div.photo tar større høyde enn img på innsiden */
   display: flex;
+}
+
+.landscape .bottom-bar {
+  position: relative;
+  z-index: 10;
+  background-color: var(--color-white);
+}
+
+.landscape .photo-and-sidebar > .photo-text-wrapper {
+  display: none;
+}
+
+/* portrait */
+
+.portrait #sidebar-wrapper {
+  display: none;
+}
+
+.portrait .photo-and-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* all */
+
+.photo-wrapper {
+  text-align: center;
 }
 
 .photo-wrapper img {
@@ -12,8 +42,88 @@
   max-height: 100vh;
 }
 
-.photo-wrapper .bottom-bar {
-  position: relative;
-  z-index: 10;
-  background-color: var(--color-white);
+.photo-text-wrapper {
+  margin: 50px 8%;
+  max-width: 60ch;
+}
+
+.photo-text-wrapper .title {
+  text-transform: uppercase;
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.photo-text-wrapper .latin {
+  margin-top: 5px;
+}
+
+.photo-text-wrapper .description {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.photo-text-wrapper .latin,
+.photo-text-wrapper .location {
+  font-size: var(--font-size-small);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+#sidebar {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 5%;
+  text-align: center;
+  font-size: 60px;
+}
+
+#sidebar > div {
+  height: 75px;
+}
+
+#sidebar > div > a {
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+  color: var(--color-white);
+  outline: none;
+}
+
+#sidebar > div > a:hover {
+  color: var(--color-pink);
+}
+
+#sidebar > div.expanded > a {
+  color: var(--color-dark);
+}
+
+#sidebar > div.expanded > a {
+  transform: rotate(45deg);
+}
+
+#sidebar-text {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  right: -400px;
+  transition: all 0.1s ease-in-out;
+  bottom: 0;
+  padding-top: 100px;
+  text-align: center;
+  line-height: 24px;
+}
+
+#sidebar-text.expanded {
+  transform: translate3d(0, 0, 0);
+  right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }

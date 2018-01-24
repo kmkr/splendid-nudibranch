@@ -1,7 +1,5 @@
 @import 'collage.css';
-@import 'photo-text-wrapper.css';
 @import 'photo.css';
-@import 'sidebar.css';
 
 :root {
   --margin: 8px;
@@ -10,6 +8,7 @@
   --font-size-small: 14px;
   --color-dark: #373a3c;
   --color-white: #fff;
+  --color-pink: #dea392;
 }
 
 body {

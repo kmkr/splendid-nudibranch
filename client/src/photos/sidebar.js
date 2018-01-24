@@ -24,10 +24,15 @@ class Sidebar extends Component {
     const { expanded } = this.state
 
     return (
-      <div>
-        <div id="sidebar" onClick={this.handleClickDetails}>
+      <div id="sidebar-wrapper">
+        <div id="sidebar">
           <div className={expanded ? 'expanded' : ''}>
-            <a href="#" tabIndex="0" aria-role="button">
+            <a
+              href="#"
+              tabIndex="0"
+              aria-role="button"
+              onClick={this.handleClickDetails}
+            >
               +
             </a>
           </div>
