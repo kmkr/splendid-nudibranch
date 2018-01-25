@@ -43,7 +43,7 @@ class Collage extends Component {
   render() {
     const { photos, onSelectPhoto } = this.props
     const photoGroups = setPhotoWidth(photos)
-    const setDimensions = getWidth() > 1024
+    const setDimensions = getWidth() >= 1100
     return (
       <div id="collage">
         {photoGroups.map((photoGroup, index) => {

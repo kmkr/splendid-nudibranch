@@ -43,7 +43,7 @@ class ScrollOnEventHandler extends Component {
   }
 
   render() {
-    return <span />
+    return null
   }
 }
 

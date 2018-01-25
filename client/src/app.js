@@ -67,21 +67,17 @@ class App extends Component {
   render() {
     const { photos } = this.props
     const { selectedPhoto } = this.state
-    return (
-      <div>
-        {selectedPhoto ? (
-          <PhotosWrapper
-            onHome={this.onHome}
-            onNext={this.onNextPhoto}
-            onPrevious={this.onPreviousPhoto}
-            onSelectPhoto={this.onSelectPhoto}
-            photos={photos}
-            selectedPhoto={selectedPhoto}
-          />
-        ) : (
-          <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
-        )}
-      </div>
+    return selectedPhoto ? (
+      <PhotosWrapper
+        onHome={this.onHome}
+        onNext={this.onNextPhoto}
+        onPrevious={this.onPreviousPhoto}
+        onSelectPhoto={this.onSelectPhoto}
+        photos={photos}
+        selectedPhoto={selectedPhoto}
+      />
+    ) : (
+      <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
     )
   }
 }

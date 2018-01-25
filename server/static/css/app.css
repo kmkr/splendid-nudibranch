@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .sn-dn-ns {
     display: none;
   }

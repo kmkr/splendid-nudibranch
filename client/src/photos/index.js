@@ -58,13 +58,12 @@ class PhotosWrapper extends Component {
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
         />
-        <Photo onNext={this.onNextPhoto} photo={selectedPhoto}>
-          <Navigation
-            onNext={this.onNextPhoto}
-            onPrevious={this.onPreviousPhoto}
-            onHome={this.props.onHome}
-          />
-        </Photo>
+        <Photo onNext={this.onNextPhoto} photo={selectedPhoto} />
+        <Navigation
+          onNext={this.onNextPhoto}
+          onPrevious={this.onPreviousPhoto}
+          onHome={this.props.onHome}
+        />
       </div>
     )
   }

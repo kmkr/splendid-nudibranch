@@ -25,7 +25,7 @@ class Photo extends Component {
             alt={photo.title}
             src={photo.sizes.xsmall.url}
             srcSet={buildSrcSet(photo.sizes)}
-            sizes="(min-width: 1024px) 30vw, 100vw"
+            sizes="(min-width: 1100px) 30vw, 100vw"
           />
         </a>
 

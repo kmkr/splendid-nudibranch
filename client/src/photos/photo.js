@@ -10,20 +10,16 @@ const Photo = ({ children, onNext, photo }) => (
   <div class={`photo-and-navigation ${photo.mode}`}>
     <div class="photo-wrapper">
       <div class="photo-and-sidebar">
-        <div class="photo-and-children">
-          <TransitionImage
-            alt={photo.title}
-            onClick={onNext}
-            src={photo.sizes.large.url}
-            srcSet={buildSrcSet(photo.sizes)}
-            sizes="100vw"
-          />
-        </div>
+        <TransitionImage
+          alt={photo.title}
+          onClick={onNext}
+          src={photo.sizes.large.url}
+          srcSet={buildSrcSet(photo.sizes)}
+          sizes="100vw"
+        />
         <PhotoText photo={photo} />
         <Sidebar photo={photo} />
       </div>
-
-      <div class="bottom-bar" />
     </div>
     {children}
   </div>
