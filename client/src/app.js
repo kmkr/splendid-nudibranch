@@ -73,9 +73,6 @@ class App extends Component {
     return selectedPhoto ? (
       <PhotosWrapper
         onHome={this.onHome}
-        onNext={this.onNextPhoto}
-        onPrevious={this.onPreviousPhoto}
-        onSelectPhoto={this.onSelectPhoto}
         photos={photos}
         selectedPhoto={selectedPhoto}
       />
