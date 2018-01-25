@@ -4,6 +4,7 @@ import { h, Component } from 'preact'
 import Collage from './collage'
 import DeepWater from './deep-water'
 import PhotosWrapper from './photos'
+import { addAction, beaconStats } from './statistics'
 
 function getPhotoWithKey(photos, key) {
   return photos.filter(p => p.key === key)[0]
@@ -32,6 +33,10 @@ class App extends Component {
         selectedPhoto: photo
       })
     })
+
+    window.addEventListener('unload', () => {
+      beaconStats()
+    })
   }
 
   onSelectPhoto(photo) {
@@ -41,6 +46,7 @@ class App extends Component {
 
     window.history.pushState(photo.key, '', `/photos/${photo.key}`)
     window.scroll({ top: 0, behavior: 'smooth' })
+    addAction()
   }
 
   onHome(e) {
@@ -54,6 +60,7 @@ class App extends Component {
 
     window.history.pushState(null, '', '/')
     window.scroll({ top: 0, behavior: 'smooth' })
+    addAction()
   }
 
   getCurrentPhotoIndex() {
@@ -73,6 +80,7 @@ class App extends Component {
     return selectedPhoto ? (
       <PhotosWrapper
         onHome={this.onHome}
+        onSelectPhoto={this.onSelectPhoto}
         photos={photos}
         selectedPhoto={selectedPhoto}
       />
