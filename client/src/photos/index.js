@@ -2,6 +2,7 @@
 import { h, Component } from 'preact'
 
 import Photo from './photo'
+import Navigation from './navigation'
 
 import ScrollOnEventHandler from './scroll-on-event-handler'
 
@@ -57,11 +58,13 @@ class PhotosWrapper extends Component {
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
         />
-        <Photo
-          photo={selectedPhoto}
-          onNext={this.onNextPhoto}
-          onPrevious={this.onPreviousPhoto}
-        />
+        <Photo onNext={this.onNextPhoto} photo={selectedPhoto}>
+          <Navigation
+            onNext={this.onNextPhoto}
+            onPrevious={this.onPreviousPhoto}
+            onHome={this.props.onHome}
+          />
+        </Photo>
       </div>
     )
   }

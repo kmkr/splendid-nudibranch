@@ -1,5 +1,6 @@
 @import 'collage.css';
 @import 'photo.css';
+@import 'button.css';
 
 :root {
   --margin: 8px;

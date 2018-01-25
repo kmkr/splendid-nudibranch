@@ -20,6 +20,7 @@ class App extends Component {
         : null
     }
     this.onSelectPhoto = this.onSelectPhoto.bind(this)
+    this.onHome = this.onHome.bind(this)
   }
 
   componentDidMount() {
@@ -43,6 +44,15 @@ class App extends Component {
     window.scrollTo(0, 0)
   }
 
+  onHome(photo) {
+    this.setState({
+      selectedPhoto: null
+    })
+
+    window.history.pushState(null, '', '/')
+    window.scrollTo(0, 0)
+  }
+
   getCurrentPhotoIndex() {
     const { selectedPhoto } = this.state
     if (!selectedPhoto) {
@@ -61,6 +71,7 @@ class App extends Component {
       <div>
         {selectedPhoto ? (
           <PhotosWrapper
+            onHome={this.onHome}
             onNext={this.onNextPhoto}
             onPrevious={this.onPreviousPhoto}
             onSelectPhoto={this.onSelectPhoto}

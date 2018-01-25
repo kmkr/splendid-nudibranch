@@ -63,8 +63,9 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 35);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1085,28 +1086,8 @@ var preact = {
 
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */
+
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1206,7 +1187,8 @@ var TransitionImage = function (_Component) {
 exports.default = TransitionImage;
 
 /***/ }),
-/* 23 */
+
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1248,7 +1230,8 @@ var PhotoText = function PhotoText(_ref) {
 exports.default = PhotoText;
 
 /***/ }),
-/* 24 */
+
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1266,7 +1249,8 @@ exports.default = function (sizes) {
 };
 
 /***/ }),
-/* 25 */
+
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1281,16 +1265,8 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */
+
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1310,7 +1286,8 @@ var photos = window.snPhotos;
 (0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
 
 /***/ }),
-/* 36 */
+
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1360,6 +1337,7 @@ var App = function (_Component) {
       selectedPhoto: selectedPhotoKey ? getPhotoWithKey(_this.props.photos, selectedPhotoKey) : null
     };
     _this.onSelectPhoto = _this.onSelectPhoto.bind(_this);
+    _this.onHome = _this.onHome.bind(_this);
     return _this;
   }
 
@@ -1390,6 +1368,16 @@ var App = function (_Component) {
       window.scrollTo(0, 0);
     }
   }, {
+    key: 'onHome',
+    value: function onHome(photo) {
+      this.setState({
+        selectedPhoto: null
+      });
+
+      window.history.pushState(null, '', '/');
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: 'getCurrentPhotoIndex',
     value: function getCurrentPhotoIndex() {
       var selectedPhoto = this.state.selectedPhoto;
@@ -1413,6 +1401,7 @@ var App = function (_Component) {
         'div',
         null,
         selectedPhoto ? (0, _preact.h)(_photos2.default, {
+          onHome: this.onHome,
           onNext: this.onNextPhoto,
           onPrevious: this.onPreviousPhoto,
           onSelectPhoto: this.onSelectPhoto,
@@ -1429,7 +1418,8 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 37 */
+
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1547,7 +1537,8 @@ var Collage = function (_Component) {
 exports.default = Collage;
 
 /***/ }),
-/* 38 */
+
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1636,7 +1627,8 @@ var Photo = function (_Component) {
 exports.default = Photo;
 
 /***/ }),
-/* 39 */
+
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1718,7 +1710,8 @@ function getNumPortrait(photos) {
 }
 
 /***/ }),
-/* 40 */
+
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1751,7 +1744,8 @@ exports.default = function (type, name, obj) {
 };
 
 /***/ }),
-/* 41 */
+
+/***/ 41:
 /***/ (function(module, exports) {
 
 module.exports = throttle;
@@ -1789,7 +1783,8 @@ function throttle (func, wait) {
 
 
 /***/ }),
-/* 42 */
+
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1806,6 +1801,10 @@ var _preact = __webpack_require__(0);
 var _photo = __webpack_require__(43);
 
 var _photo2 = _interopRequireDefault(_photo);
+
+var _navigation = __webpack_require__(95);
+
+var _navigation2 = _interopRequireDefault(_navigation);
 
 var _scrollOnEventHandler = __webpack_require__(45);
 
@@ -1891,11 +1890,15 @@ var PhotosWrapper = function (_Component) {
           onNext: this.onNextPhoto,
           onPrevious: this.onPreviousPhoto
         }),
-        (0, _preact.h)(_photo2.default, {
-          photo: selectedPhoto,
-          onNext: this.onNextPhoto,
-          onPrevious: this.onPreviousPhoto
-        })
+        (0, _preact.h)(
+          _photo2.default,
+          { onNext: this.onNextPhoto, photo: selectedPhoto },
+          (0, _preact.h)(_navigation2.default, {
+            onNext: this.onNextPhoto,
+            onPrevious: this.onPreviousPhoto,
+            onHome: this.props.onHome
+          })
+        )
       );
     }
   }]);
@@ -1906,7 +1909,8 @@ var PhotosWrapper = function (_Component) {
 exports.default = PhotosWrapper;
 
 /***/ }),
-/* 43 */
+
+/***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1937,49 +1941,42 @@ var _srcSetBuilder2 = _interopRequireDefault(_srcSetBuilder);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Photo = function Photo(_ref) {
-  var photo = _ref.photo,
+  var children = _ref.children,
       onNext = _ref.onNext,
-      onPrevious = _ref.onPrevious;
+      photo = _ref.photo;
   return (0, _preact.h)(
     'div',
-    { 'class': photo.mode },
+    { 'class': 'photo-and-navigation ' + photo.mode },
     (0, _preact.h)(
       'div',
       { 'class': 'photo-wrapper' },
       (0, _preact.h)(
         'div',
         { 'class': 'photo-and-sidebar' },
-        (0, _preact.h)(_transitionImage2.default, {
-          alt: photo.title,
-          onClick: onNext,
-          src: photo.sizes.large.url,
-          srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
-          sizes: '100vw'
-        }),
+        (0, _preact.h)(
+          'div',
+          { 'class': 'photo-and-children' },
+          (0, _preact.h)(_transitionImage2.default, {
+            alt: photo.title,
+            onClick: onNext,
+            src: photo.sizes.large.url,
+            srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
+            sizes: '100vw'
+          })
+        ),
         (0, _preact.h)(_photoText2.default, { photo: photo }),
         (0, _preact.h)(_sidebar2.default, { photo: photo })
       ),
-      (0, _preact.h)(
-        'div',
-        { 'class': 'bottom-bar' },
-        (0, _preact.h)(
-          'button',
-          { onClick: onPrevious },
-          'Previous'
-        ),
-        (0, _preact.h)(
-          'button',
-          { onClick: onNext },
-          'Next'
-        )
-      )
-    )
+      (0, _preact.h)('div', { 'class': 'bottom-bar' })
+    ),
+    children
   );
 }; /** @jsx h */
 exports.default = Photo;
 
 /***/ }),
-/* 44 */
+
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2072,7 +2069,8 @@ var Sidebar = function (_Component) {
 exports.default = Sidebar;
 
 /***/ }),
-/* 45 */
+
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2156,6 +2154,104 @@ var ScrollOnEventHandler = function (_Component) {
 
 exports.default = ScrollOnEventHandler;
 
+/***/ }),
+
+/***/ 95:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+var Navigation = function (_Component) {
+  _inherits(Navigation, _Component);
+
+  function Navigation() {
+    _classCallCheck(this, Navigation);
+
+    var _this = _possibleConstructorReturn(this, (Navigation.__proto__ || Object.getPrototypeOf(Navigation)).call(this));
+
+    _this.onHome = _this.onHome.bind(_this);
+    _this.onPrevious = _this.onPrevious.bind(_this);
+    _this.onNext = _this.onNext.bind(_this);
+    return _this;
+  }
+
+  _createClass(Navigation, [{
+    key: "onHome",
+    value: function onHome(e) {
+      e.preventDefault();
+      this.props.onHome();
+    }
+  }, {
+    key: "onNext",
+    value: function onNext(e) {
+      e.preventDefault();
+      this.props.onNext();
+    }
+  }, {
+    key: "onPrevious",
+    value: function onPrevious(e) {
+      e.preventDefault();
+      this.props.onPrevious();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return (0, _preact.h)(
+        "div",
+        { "class": "navigation" },
+        (0, _preact.h)(
+          "span",
+          { "class": "link-wrapper" },
+          (0, _preact.h)(
+            "a",
+            { href: "#", onClick: this.onPrevious },
+            "Previous"
+          )
+        ),
+        (0, _preact.h)(
+          "span",
+          { "class": "link-wrapper" },
+          (0, _preact.h)(
+            "a",
+            { href: "/", onClick: this.onHome },
+            "Home"
+          )
+        ),
+        (0, _preact.h)(
+          "span",
+          { "class": "link-wrapper" },
+          (0, _preact.h)(
+            "a",
+            { href: "#", onClick: this.onNext },
+            "Next"
+          )
+        )
+      );
+    }
+  }]);
+
+  return Navigation;
+}(_preact.Component);
+
+exports.default = Navigation;
+
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=bundle.js.map

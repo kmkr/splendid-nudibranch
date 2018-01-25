@@ -1,3 +1,7 @@
+.photo-and-navigation {
+  position: relative;
+}
+
 @media (min-width: 1024px) {
   /* landscape */
 
@@ -33,6 +37,10 @@
   }
 
   /* all */
+  .photo-and-navigation {
+    /* Avoids y overflow with navigation */
+    overflow: hidden;
+  }
 
   .photo-wrapper {
     text-align: center;

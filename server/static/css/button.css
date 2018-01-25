@@ -1,0 +1,40 @@
+.navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.link-wrapper {
+  width: 100%;
+  clear: both;
+  background-color: var(--color-pink);
+  text-align: center;
+  height: 110px;
+}
+
+.link-wrapper a {
+  letter-spacing: 4px;
+  border: 2px solid var(--color-dark);
+  padding: 15px 40px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  margin-top: -30px;
+  display: inline-block;
+
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  transition-property: color, background-color;
+  text-decoration: none;
+}
+
+.link-wrapper a:hover {
+  background-color: var(--color-pink);
+  color: var(--color-dark);
+}
