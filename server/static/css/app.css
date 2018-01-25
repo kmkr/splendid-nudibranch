@@ -1,6 +1,8 @@
 @import 'collage.css';
 @import 'photo.css';
-@import 'button.css';
+@import 'navigation.css';
+@import 'link-wrapper.css';
+@import 'deep-water.css';
 
 :root {
   --margin: 8px;
@@ -21,6 +23,7 @@ body {
   font-size: var(--font-size-medium);
   max-width: 2560px;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 1100px) {

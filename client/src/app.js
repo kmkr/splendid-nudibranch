@@ -2,6 +2,7 @@
 import { h, Component } from 'preact'
 
 import Collage from './collage'
+import DeepWater from './deep-water'
 import PhotosWrapper from './photos'
 
 function getPhotoWithKey(photos, key) {
@@ -26,8 +27,6 @@ class App extends Component {
   componentDidMount() {
     const { photos } = this.props
     window.addEventListener('popstate', e => {
-      // e.state is equal to the data-attribute of the last image we clicked
-
       const photo = !!e.state && getPhotoWithKey(photos, e.state)
       this.setState({
         selectedPhoto: photo
@@ -41,16 +40,20 @@ class App extends Component {
     })
 
     window.history.pushState(photo.key, '', `/photos/${photo.key}`)
-    window.scroll({ top: 0, behaviour: 'smooth' })
+    window.scroll({ top: 0, behavior: 'smooth' })
   }
 
-  onHome(photo) {
+  onHome(e) {
+    if (e) {
+      e.preventDefault()
+    }
+
     this.setState({
       selectedPhoto: null
     })
 
     window.history.pushState(null, '', '/')
-    window.scroll({ top: 0, behaviour: 'smooth' })
+    window.scroll({ top: 0, behavior: 'smooth' })
   }
 
   getCurrentPhotoIndex() {
@@ -77,7 +80,10 @@ class App extends Component {
         selectedPhoto={selectedPhoto}
       />
     ) : (
-      <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
+      <div>
+        <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
+        <DeepWater onHome={this.onHome} />
+      </div>
     )
   }
 }

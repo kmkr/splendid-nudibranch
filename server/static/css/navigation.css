@@ -1,0 +1,22 @@
+@media (min-width: 1100px) {
+  .navigation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    z-index: 10;
+  }
+}
+
+.navigation {
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .navigation .link-wrapper a {
+    font-size: var(--font-size-small);
+    padding: 10px;
+    margin: 5px;
+    width: 23%;
+  }
+}

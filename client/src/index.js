@@ -2,6 +2,7 @@
 import { h, render } from 'preact'
 
 import App from './app'
+import './polyfills'
 
 const photos = window.snPhotos
 

@@ -4,14 +4,8 @@ import { h, Component } from 'preact'
 class Navigation extends Component {
   constructor() {
     super()
-    this.onHome = this.onHome.bind(this)
     this.onPrevious = this.onPrevious.bind(this)
     this.onNext = this.onNext.bind(this)
-  }
-
-  onHome(e) {
-    e.preventDefault()
-    this.props.onHome()
   }
 
   onNext(e) {
@@ -33,7 +27,7 @@ class Navigation extends Component {
           </a>
         </span>
         <span class="link-wrapper">
-          <a href="/" onClick={this.onHome}>
+          <a href="/" onClick={this.props.onHome}>
             Home
           </a>
         </span>
