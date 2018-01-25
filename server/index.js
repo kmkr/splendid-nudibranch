@@ -12,7 +12,7 @@ const robotsRouter = require('./robots')
 const viewDataService = require('./view-data-service')
 const { serverToClient } = require('./photos/photo-data-conversion')
 const ogTags = require('./og-tags')
-const { description } = require('../common/constants')
+const { description } = require('./photos/constants')
 const hashStore = require('./hash-store')
 
 function verifyEnv() {

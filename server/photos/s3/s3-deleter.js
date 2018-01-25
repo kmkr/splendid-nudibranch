@@ -1,7 +1,7 @@
 const { s3, generateParams } = require('./s3-wrapper')
 
 const { listItems } = require('./s3-lister')
-const { resizeTo } = require('../../../common/constants')
+const { resizeTo } = require('../constants')
 
 function expectNumberOfKeys() {
   const numOriginalUpload = 0

@@ -1,10 +1,10 @@
-const idGenerator = require('../../id-generator')
+const idGenerator = require('../id-generator')
 const s3Uploader = require('../s3/s3-uploader')
 const { resize, metadata: getMetadata } = require('./gm')
 const tempFileWriter = require('./temp-file-writer')
 const db = require('../../db')
 const { base } = require('../constants')
-const { resizeTo } = require('../../../common/constants')
+const { resizeTo } = require('../constants')
 const photoDataFormatter = require('../photo-data-formatter')
 
 function resizeToMultiple(path) {

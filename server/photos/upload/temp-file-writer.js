@@ -1,5 +1,5 @@
 const fs = require('fs')
-const idGenerator = require('../../id-generator')
+const idGenerator = require('../id-generator')
 
 module.exports = file => {
   const temp = '/tmp'

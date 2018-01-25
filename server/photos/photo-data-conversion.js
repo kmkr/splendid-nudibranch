@@ -1,4 +1,4 @@
-const { resizeTo } = require('../../common/constants')
+const { resizeTo } = require('./constants')
 
 function buildUrl(base, key, name, size) {
   return `${base}/${key}/${size}_${encodeURIComponent(name)}`

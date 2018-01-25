@@ -1,4 +1,4 @@
-const { description } = require('../common/constants')
+const { description } = require('./photos/constants')
 
 const name = 'The Splendid Nudibranch'
 
