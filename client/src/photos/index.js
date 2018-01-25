@@ -4,7 +4,8 @@ import { h, Component } from 'preact'
 import Photo from './photo'
 import Navigation from './navigation'
 
-import ScrollOnEventHandler from './scroll-on-event-handler'
+import KeyboardEventHandler from './keyboard-event-handler'
+import TouchEventHandler from './touch-event-handler'
 
 class PhotosWrapper extends Component {
   constructor() {
@@ -54,7 +55,11 @@ class PhotosWrapper extends Component {
     const { selectedPhoto } = this.props
     return (
       <div>
-        <ScrollOnEventHandler
+        <KeyboardEventHandler
+          onNext={this.onNextPhoto}
+          onPrevious={this.onPreviousPhoto}
+        />
+        <TouchEventHandler
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
         />

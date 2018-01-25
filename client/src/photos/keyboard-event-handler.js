@@ -11,7 +11,7 @@ const RIGHT_KEYS = [
   39 // arrow right
 ]
 
-class ScrollOnEventHandler extends Component {
+class KeyboardEventHandler extends Component {
   constructor() {
     super()
     this.handleKeyUp = this.handleKeyUp.bind(this)
@@ -47,4 +47,4 @@ class ScrollOnEventHandler extends Component {
   }
 }
 
-export default ScrollOnEventHandler
+export default KeyboardEventHandler
