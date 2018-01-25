@@ -136,6 +136,10 @@
     line-height: 24px;
   }
 
+  #sidebar-text .photo-text-wrapper {
+    margin-bottom: 100px;
+  }
+
   #sidebar-text.expanded {
     transform: translate3d(0, 0, 0);
     right: 0;
