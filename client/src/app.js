@@ -41,7 +41,7 @@ class App extends Component {
     })
 
     window.history.pushState(photo.key, '', `/photos/${photo.key}`)
-    window.scrollTo(0, 0)
+    window.scroll({ top: 0, behaviour: 'smooth' })
   }
 
   onHome(photo) {
@@ -50,7 +50,7 @@ class App extends Component {
     })
 
     window.history.pushState(null, '', '/')
-    window.scrollTo(0, 0)
+    window.scroll({ top: 0, behaviour: 'smooth' })
   }
 
   getCurrentPhotoIndex() {

@@ -51,6 +51,7 @@
     "postcss-import": "^11.0.0",
     "preact": "^8.2.7",
     "prettier": "^1.10.2",
+    "smoothscroll-polyfill": "^0.4.0",
     "throttleit": "^1.0.0",
     "webpack": "^3.10.0"
   },
