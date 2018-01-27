@@ -22,38 +22,51 @@
   border-color: #d43f3a;
 }
 
-@keyframes animate-inprogress {0% { background-position: 0 0; } 100% { background-position: 60px 0; } }
+@keyframes animate-inprogress {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 0;
+  }
+}
 
 .edit-photo button.active {
   background-size: 30px 30px !important;
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, .05) 25%,
-      transparent 25%,
-      transparent 50%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, .05) 75%,
-      transparent 75%, transparent) !important;
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.05) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.05) 75%,
+    transparent 75%,
+    transparent
+  ) !important;
   animation: animate-inprogress 3s linear infinite;
 }
 .edit-photo.tags > span {
   display: inline;
-  padding: .2em .6em .3em;
+  padding: 0.2em 0.6em 0.3em;
   font-size: 75%;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: .25em;
-  margin-right: .2em;
+  border-radius: 0.25em;
+  margin-right: 0.2em;
   background-color: #5cb85c;
 }
-
 
 .list-photos .entry {
   margin-bottom: 40px;
   display: flex;
 }
 
-.list-photos textarea, .list-photos input {
+.list-photos textarea,
+.list-photos input {
   width: 100%;
 }
 
