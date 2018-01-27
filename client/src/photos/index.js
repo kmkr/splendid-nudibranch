@@ -5,7 +5,6 @@ import Photo from './photo'
 import Navigation from './navigation'
 
 import KeyboardEventHandler from './keyboard-event-handler'
-import TouchEventHandler from './touch-event-handler'
 
 class PhotosWrapper extends Component {
   constructor() {
@@ -48,10 +47,6 @@ class PhotosWrapper extends Component {
     return (
       <div>
         <KeyboardEventHandler
-          onNext={this.onNextPhoto}
-          onPrevious={this.onPreviousPhoto}
-        />
-        <TouchEventHandler
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
         />
