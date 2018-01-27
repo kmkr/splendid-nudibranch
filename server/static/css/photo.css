@@ -96,8 +96,7 @@
 }
 
 @media (max-width: 1100px) {
-  #sidebar,
-  #sidebar-text {
+  #sidebar-wrapper {
     display: none;
   }
 }
