@@ -11,7 +11,7 @@
   color: var(--color-pink);
 }
 
-.link-wrapper {
+#navigation .link-wrapper {
   margin-top: 20px;
   text-align: center;
 }
@@ -23,7 +23,7 @@
 }
 
 @media (min-width: 1100px) {
-  .link-wrapper {
+  #navigation .link-wrapper {
     display: none;
   }
 }
