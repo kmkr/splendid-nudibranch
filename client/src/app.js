@@ -110,7 +110,7 @@ class App extends Component {
       <div>
         <TopLogo onGoToPhotos={this.onGoToPhotos} />
         <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
-        <DeepWater onHome={this.onHome} />
+        <DeepWater onClick={this.onGoToPhotos} />
       </div>
     )
   }

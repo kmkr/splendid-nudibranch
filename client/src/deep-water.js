@@ -1,10 +1,10 @@
 /** @jsx h */
 import { h } from 'preact'
 
-const DeepWater = ({ onHome }) => (
+const DeepWater = ({ onClick }) => (
   <div id="deep-water">
     <div class="link-wrapper">
-      <a href="#" onClick={onHome}>
+      <a href="#" onClick={onClick}>
         DROP YOUR WEIGHTS
       </a>
     </div>
