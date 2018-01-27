@@ -3,6 +3,7 @@
 }
 
 @media (min-width: 1100px) {
+  /* group */
   #collage > div {
     display: flex;
     justify-content: center;
@@ -12,10 +13,24 @@
     margin-left: var(--margin);
   }
 
+  /* single photo */
   #collage > div > div {
     display: inline-block;
     flex: 1 1 auto;
     margin-right: var(--margin);
+    position: relative;
+  }
+
+  #collage > div > div a:hover:after {
+    position: absolute;
+    content: '';
+    background: var(--color-pink);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0.8;
   }
 }
 

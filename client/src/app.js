@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h, Component } from 'preact'
 
+import TopLogo from './top-logo'
 import Collage from './collage'
 import DeepWater from './deep-water'
 import PhotosWrapper from './photos'
@@ -86,6 +87,7 @@ class App extends Component {
       />
     ) : (
       <div>
+        <TopLogo />
         <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
         <DeepWater onHome={this.onHome} />
       </div>
