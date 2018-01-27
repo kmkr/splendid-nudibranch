@@ -2372,13 +2372,6 @@ var DeepWater = function DeepWater(_ref) {
   return (0, _preact.h)(
     "div",
     { id: "deep-water" },
-    (0, _preact.h)("img", { "class": "barracuda", src: "/static/images/barracuda.svg" }),
-    (0, _preact.h)("img", { "class": "anemone", src: "/static/images/anemone.svg" }),
-    (0, _preact.h)(
-      "div",
-      { "class": "jellyfish-wrapper" },
-      (0, _preact.h)("img", { "class": "jellyfish", src: "/static/images/jellyfish.svg" })
-    ),
     (0, _preact.h)(
       "div",
       { "class": "link-wrapper" },

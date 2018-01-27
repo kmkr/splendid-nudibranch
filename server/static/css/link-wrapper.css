@@ -7,7 +7,6 @@
 
 .link-wrapper a {
   letter-spacing: 4px;
-  border: 2px solid var(--color-dark);
   padding: 15px 40px;
   background-color: var(--color-dark);
   color: var(--color-white);
@@ -26,5 +25,5 @@
 
 .link-wrapper a:hover {
   background-color: var(--color-pink);
-  color: var(--color-dark);
+  color: var(--color-white);
 }
