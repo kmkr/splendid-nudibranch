@@ -5,9 +5,9 @@
 @media (min-width: 1100px) {
   /* landscape */
 
-  .landscape .photo-wrapper {
+  /* .landscape .photo-wrapper {
     position: relative;
-  }
+  } */
 
   /* .landscape .photo-and-sidebar {
     Workaround for bug der div.photo tar større høyde enn img på innsiden
@@ -24,13 +24,15 @@
     display: none;
   }
 
-  .portrait .photo-and-sidebar {
+  /* all */
+  .photo-and-sidebar {
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: calc(100vh - 60px);
   }
 
-  /* all */
   .photo-and-navigation {
     /* Avoids y overflow with navigation */
     overflow: hidden;
@@ -46,7 +48,7 @@
 
   .photo-wrapper img {
     max-width: 100%;
-    max-height: 100vh;
+    max-height: calc(100vh - 60px);
   }
 }
 
@@ -94,7 +96,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 5%;
+    width: 50px;
     text-align: center;
     font-size: 60px;
   }
@@ -108,11 +110,7 @@
     text-decoration: none;
     display: inline-block;
     transition: 0.1s ease-in-out;
-    color: var(--color-white);
     outline: none;
-  }
-
-  #sidebar > div.expanded > a {
     color: var(--color-dark);
   }
 

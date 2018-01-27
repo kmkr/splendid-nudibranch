@@ -3191,7 +3191,7 @@ var TopLogo = function (_Component) {
       return (0, _preact.h)(
         "div",
         { id: "top-logo" },
-        "hey"
+        (0, _preact.h)("img", { src: "/static/images/logo.svg" })
       );
     }
   }]);

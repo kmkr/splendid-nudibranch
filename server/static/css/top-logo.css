@@ -1,4 +1,12 @@
 #top-logo {
   height: 100vh;
   background-color: var(--color-pink);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#top-logo img {
+  width: 500px;
+  max-width: 30%;
 }
