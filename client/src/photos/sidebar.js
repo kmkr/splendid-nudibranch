@@ -29,6 +29,7 @@ class Sidebar extends Component {
           <div className={expanded ? 'expanded' : ''}>
             <a
               href="#"
+              title={expanded ? 'Close info box' : 'Read more about this photo'}
               tabIndex="0"
               aria-role="button"
               onClick={this.handleClickDetails}

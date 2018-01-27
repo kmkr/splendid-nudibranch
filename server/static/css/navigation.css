@@ -1,22 +1,29 @@
-@media (min-width: 1100px) {
-  .navigation {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50px;
-    z-index: 10;
-  }
+#navigation .home {
+  position: absolute;
+  font-size: 45px; /* try to match sidebar expand */
+  top: 0;
+  left: 30px;
+  width: 30px;
+  height: 30px;
 }
 
-.navigation {
+#navigation .home:hover {
+  color: var(--color-pink);
+}
+
+.link-wrapper {
+  margin-top: 20px;
   text-align: center;
 }
 
 @media (max-width: 1100px) {
-  .navigation .link-wrapper a {
-    font-size: var(--font-size-small);
-    padding: 10px;
-    margin: 5px;
-    width: 23%;
+  #navigation .home {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .link-wrapper {
+    display: none;
   }
 }

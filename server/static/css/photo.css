@@ -113,7 +113,6 @@
     display: inline-block;
     transition: 0.1s ease-in-out;
     outline: none;
-    color: var(--color-dark);
   }
 
   #sidebar > div > a:hover {

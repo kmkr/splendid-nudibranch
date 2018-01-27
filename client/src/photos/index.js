@@ -72,11 +72,7 @@ class PhotosWrapper extends Component {
             />
           }
         />
-        <Navigation
-          onNext={this.onNextPhoto}
-          onPrevious={this.onPreviousPhoto}
-          onHome={this.props.onHome}
-        />
+        <Navigation onHome={this.props.onHome} />
       </div>
     )
   }
