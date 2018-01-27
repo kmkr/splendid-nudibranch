@@ -2486,44 +2486,37 @@ var PhotosWrapper = function (_Component) {
           photos = _props.photos,
           selectedPhoto = _props.selectedPhoto;
 
-      if (!selectedPhoto) {
-        return 0;
-      }
+      return photos.indexOf(selectedPhoto) || 0;
+    }
+  }, {
+    key: 'getNextPhoto',
+    value: function getNextPhoto() {
+      var photos = this.props.photos;
 
-      return photos.indexOf(selectedPhoto);
+      return photos[this.getCurrentPhotoIndex() + 1] || photos[0];
+    }
+  }, {
+    key: 'getPreviousPhoto',
+    value: function getPreviousPhoto() {
+      var photos = this.props.photos;
+
+      return photos[this.getCurrentPhotoIndex() - 1] || photos[photos.length - 1];
     }
   }, {
     key: 'onNextPhoto',
-    value: function onNextPhoto() {
-      var currentPhotoIndex = this.getCurrentPhotoIndex();
-      var photos = this.props.photos;
-
-
-      if (currentPhotoIndex === photos.length - 1) {
-        this.onSelectPhotoIndex(0);
-        return;
+    value: function onNextPhoto(e) {
+      if (e) {
+        e.preventDefault();
       }
-
-      this.onSelectPhotoIndex(currentPhotoIndex + 1);
+      this.props.onSelectPhoto(this.getNextPhoto());
     }
   }, {
     key: 'onPreviousPhoto',
-    value: function onPreviousPhoto() {
-      var currentPhotoIndex = this.getCurrentPhotoIndex();
-      var photos = this.props.photos;
-
-
-      if (currentPhotoIndex === 0) {
-        this.onSelectPhotoIndex(photos.length - 1);
-        return;
+    value: function onPreviousPhoto(e) {
+      if (e) {
+        e.preventDefault();
       }
-
-      this.onSelectPhotoIndex(Math.max(currentPhotoIndex - 1, 0));
-    }
-  }, {
-    key: 'onSelectPhotoIndex',
-    value: function onSelectPhotoIndex(photoIndex) {
-      this.props.onSelectPhoto(this.props.photos[photoIndex]);
+      this.props.onSelectPhoto(this.getPreviousPhoto());
     }
   }, {
     key: 'render',
@@ -2541,7 +2534,19 @@ var PhotosWrapper = function (_Component) {
           onNext: this.onNextPhoto,
           onPrevious: this.onPreviousPhoto
         }),
-        (0, _preact.h)(_photo2.default, { onNext: this.onNextPhoto, photo: selectedPhoto }),
+        (0, _preact.h)(_photo2.default, {
+          photo: selectedPhoto,
+          next: (0, _preact.h)('a', {
+            href: '/photos/' + this.getNextPhoto().key,
+            'class': 'click-next',
+            onClick: this.onNextPhoto
+          }),
+          previous: (0, _preact.h)('a', {
+            href: '/photos/' + this.getPreviousPhoto().key,
+            'class': 'click-previous',
+            onClick: this.onPreviousPhoto
+          })
+        }),
         (0, _preact.h)(_navigation2.default, {
           onNext: this.onNextPhoto,
           onPrevious: this.onPreviousPhoto,
@@ -2589,11 +2594,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Photo = function Photo(_ref) {
   var children = _ref.children,
-      onNext = _ref.onNext,
+      next = _ref.next,
+      previous = _ref.previous,
       photo = _ref.photo;
   return (0, _preact.h)(
     'div',
     { 'class': 'photo-and-navigation ' + photo.mode },
+    previous,
+    next,
     (0, _preact.h)(
       'div',
       { 'class': 'photo-wrapper' },
@@ -2602,7 +2610,6 @@ var Photo = function Photo(_ref) {
         { 'class': 'photo-and-sidebar' },
         (0, _preact.h)(_transitionImage2.default, {
           alt: photo.title,
-          onClick: onNext,
           src: photo.sizes.large.url,
           srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
           sizes: '100vw'

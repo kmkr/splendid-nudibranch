@@ -16,39 +16,31 @@ class PhotosWrapper extends Component {
 
   getCurrentPhotoIndex() {
     const { photos, selectedPhoto } = this.props
-    if (!selectedPhoto) {
-      return 0
-    }
-
-    return photos.indexOf(selectedPhoto)
+    return photos.indexOf(selectedPhoto) || 0
   }
 
-  onNextPhoto() {
-    const currentPhotoIndex = this.getCurrentPhotoIndex()
+  getNextPhoto() {
     const { photos } = this.props
-
-    if (currentPhotoIndex === photos.length - 1) {
-      this.onSelectPhotoIndex(0)
-      return
-    }
-
-    this.onSelectPhotoIndex(currentPhotoIndex + 1)
+    return photos[this.getCurrentPhotoIndex() + 1] || photos[0]
   }
 
-  onPreviousPhoto() {
-    const currentPhotoIndex = this.getCurrentPhotoIndex()
+  getPreviousPhoto() {
     const { photos } = this.props
-
-    if (currentPhotoIndex === 0) {
-      this.onSelectPhotoIndex(photos.length - 1)
-      return
-    }
-
-    this.onSelectPhotoIndex(Math.max(currentPhotoIndex - 1, 0))
+    return photos[this.getCurrentPhotoIndex() - 1] || photos[photos.length - 1]
   }
 
-  onSelectPhotoIndex(photoIndex) {
-    this.props.onSelectPhoto(this.props.photos[photoIndex])
+  onNextPhoto(e) {
+    if (e) {
+      e.preventDefault()
+    }
+    this.props.onSelectPhoto(this.getNextPhoto())
+  }
+
+  onPreviousPhoto(e) {
+    if (e) {
+      e.preventDefault()
+    }
+    this.props.onSelectPhoto(this.getPreviousPhoto())
   }
 
   render() {
@@ -63,7 +55,23 @@ class PhotosWrapper extends Component {
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
         />
-        <Photo onNext={this.onNextPhoto} photo={selectedPhoto} />
+        <Photo
+          photo={selectedPhoto}
+          next={
+            <a
+              href={`/photos/${this.getNextPhoto().key}`}
+              class="click-next"
+              onClick={this.onNextPhoto}
+            />
+          }
+          previous={
+            <a
+              href={`/photos/${this.getPreviousPhoto().key}`}
+              class="click-previous"
+              onClick={this.onPreviousPhoto}
+            />
+          }
+        />
         <Navigation
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
