@@ -44,11 +44,14 @@ class App extends Component {
   }
 
   onSelectPhoto(photo) {
+    const photoIsActive = !!this.state.selectedPhoto
+    if (!photoIsActive) {
+      setPosition()
+    }
     this.setState({
       selectedPhoto: photo
     })
 
-    setPosition()
     window.history.pushState(photo.key, '', `/photos/${photo.key}`)
     window.scroll({ top: 0, behavior: 'smooth' })
     addAction()
