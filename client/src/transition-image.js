@@ -1,8 +1,6 @@
 /** @jsx h */
 import { h, Component } from 'preact'
 
-function noop() {}
-
 class TransitionImage extends Component {
   constructor() {
     super()
@@ -10,20 +8,6 @@ class TransitionImage extends Component {
       visible: false
     }
     this.onLoad = this.onLoad.bind(this)
-  }
-
-  componentDidMount() {
-    this.img.onload = this.onLoad
-    this.img.setAttribute('src', this.props.src)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.src !== this.props.src) {
-      this.img.setAttribute('src', this.props.src)
-      this.setState({
-        visible: false
-      })
-    }
   }
 
   onLoad() {
@@ -38,20 +22,18 @@ class TransitionImage extends Component {
   }
 
   render() {
-    const { alt, onClick, srcSet, sizes, width } = this.props
+    const { alt, onClick, src, srcSet, sizes } = this.props
 
     return (
       <img
         alt={alt || ''}
-        ref={img => {
-          this.img = img
-        }}
         className="transition-image"
-        onClick={onClick || noop}
+        onClick={onClick}
+        onLoad={this.onLoad}
         style={{ opacity: this.state.visible ? 1 : 0 }}
+        src={src}
         srcSet={srcSet}
         sizes={sizes}
-        width={width}
       />
     )
   }

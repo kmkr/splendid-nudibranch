@@ -32,7 +32,7 @@ class Photo extends Component {
           <div class="photo-wrapper">
             {previous}
             {next}
-            <TransitionImage
+            <img
               alt={photo.title}
               src={photo.sizes.large.url}
               srcSet={buildSrcSet(photo.sizes)}
