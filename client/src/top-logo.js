@@ -1,14 +1,11 @@
 /** @jsx h */
 import { h, Component } from 'preact'
 
-class TopLogo extends Component {
-  render() {
-    return (
-      <div id="top-logo">
-        <img src="/static/images/logo.svg" />
-      </div>
-    )
-  }
-}
+const TopLogo = ({ onGoToPhotos }) => (
+  <div id="top-logo">
+    <img src="/static/images/logo.svg" />
+    <a href="#collage" class="arrow" onClick={onGoToPhotos} />
+  </div>
+)
 
 export default TopLogo

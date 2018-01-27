@@ -1,0 +1,25 @@
+#top-logo .arrow {
+  position: absolute;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKICAgICB2aWV3Qm94PSIwIDAgMzMuMiAyMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzMuMiAyMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgogICAgPGRlZnM+CiAgICAgICAgPHJlY3QgaWQ9IlNWR0lEXzFfIiB5PSIwIiB3aWR0aD0iMzMuMiIgaGVpZ2h0PSIyMyIvPgogICAgPC9kZWZzPgogICAgPGNsaXBQYXRoIGlkPSJTVkdJRF8yXyI+CiAgICAgICAgPHVzZSB4bGluazpocmVmPSIjU1ZHSURfMV8iICBvdmVyZmxvdz0idmlzaWJsZSIvPgogICAgPC9jbGlwUGF0aD4KICAgIDxsaW5lIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8yXykiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHgxPSIzMi43IiB5MT0iMTAuMiIgeDI9IjE2LjMiIHkyPSIyMi40Ii8+CiAgICA8bGluZSBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMS41IiB4MT0iMC40IiB5MT0iMTAuMiIgeDI9IjE2LjkiIHkyPSIyMi40Ii8+CiAgICA8bGluZSBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMS41IiB4MT0iMzIuNyIgeTE9IjAuNiIgeDI9IjE2LjMiIHkyPSIxMi44Ii8+CiAgICA8bGluZSBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMS41IiB4MT0iMC40IiB5MT0iMC42IiB4Mj0iMTYuOSIgeTI9IjEyLjgiLz4KPC9nPgo8L3N2Zz4=);
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -25px;
+  width: 50px;
+  min-height: 30px;
+}
+
+@media (max-width: 1100px) {
+  #top-logo .arrow {
+    margin-left: -20px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  #top-logo .arrow {
+    margin-left: -12px;
+    width: 24px;
+  }
+}

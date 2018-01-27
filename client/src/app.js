@@ -24,6 +24,7 @@ class App extends Component {
     }
     this.onSelectPhoto = this.onSelectPhoto.bind(this)
     this.onHome = this.onHome.bind(this)
+    this.onGoToPhotos = this.onGoToPhotos.bind(this)
   }
 
   componentDidMount() {
@@ -64,6 +65,12 @@ class App extends Component {
     addAction()
   }
 
+  onGoToPhotos(e) {
+    e.preventDefault()
+    const y = document.querySelector('#top-logo').offsetHeight
+    window.scroll({ top: y, behavior: 'smooth' })
+  }
+
   getCurrentPhotoIndex() {
     const { selectedPhoto } = this.state
     if (!selectedPhoto) {
@@ -87,7 +94,7 @@ class App extends Component {
       />
     ) : (
       <div>
-        <TopLogo />
+        <TopLogo onGoToPhotos={this.onGoToPhotos} />
         <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
         <DeepWater onHome={this.onHome} />
       </div>
