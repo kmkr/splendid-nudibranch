@@ -1,1 +1,3638 @@
-!function(e){function t(o){if(n[o])return n[o].exports;var r=n[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var n={};t.m=e,t.c=n,t.d=function(e,n,o){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:o})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=39)}([function(e,t,n){"use strict";function o(){}function r(e,t){var n,r,i,l,u=A;for(l=arguments.length;l-- >2;)D.push(arguments[l]);for(t&&null!=t.children&&(D.length||D.push(t.children),delete t.children);D.length;)if((r=D.pop())&&void 0!==r.pop)for(l=r.length;l--;)D.push(r[l]);else"boolean"==typeof r&&(r=null),(i="function"!=typeof e)&&(null==r?r="":"number"==typeof r?r=String(r):"string"!=typeof r&&(i=!1)),i&&n?u[u.length-1]+=r:u===A?u=[r]:u.push(r),n=i;var a=new o;return a.nodeName=e,a.children=u,a.attributes=null==t?void 0:t,a.key=null==t?void 0:t.key,void 0!==L.vnode&&L.vnode(a),a}function i(e,t){for(var n in t)e[n]=t[n];return e}function l(e,t){return r(e.nodeName,i(i({},e.attributes),t),arguments.length>2?[].slice.call(arguments,2):e.children)}function u(e){!e._dirty&&(e._dirty=!0)&&1==B.push(e)&&(L.debounceRendering||I)(a)}function a(){var e,t=B;for(B=[];e=t.pop();)e._dirty&&j(e)}function s(e,t,n){return"string"==typeof t||"number"==typeof t?void 0!==e.splitText:"string"==typeof t.nodeName?!e._componentConstructor&&c(e,t.nodeName):n||e._componentConstructor===t.nodeName}function c(e,t){return e.normalizedNodeName===t||e.nodeName.toLowerCase()===t.toLowerCase()}function f(e){var t=i({},e.attributes);t.children=e.children;var n=e.nodeName.defaultProps;if(void 0!==n)for(var o in n)void 0===t[o]&&(t[o]=n[o]);return t}function p(e,t){var n=t?document.createElementNS("http://www.w3.org/2000/svg",e):document.createElement(e);return n.normalizedNodeName=e,n}function d(e){var t=e.parentNode;t&&t.removeChild(e)}function h(e,t,n,o,r){if("className"===t&&(t="class"),"key"===t);else if("ref"===t)n&&n(null),o&&o(e);else if("class"!==t||r)if("style"===t){if(o&&"string"!=typeof o&&"string"!=typeof n||(e.style.cssText=o||""),o&&"object"==typeof o){if("string"!=typeof n)for(var i in n)i in o||(e.style[i]="");for(var i in o)e.style[i]="number"==typeof o[i]&&!1===W.test(i)?o[i]+"px":o[i]}}else if("dangerouslySetInnerHTML"===t)o&&(e.innerHTML=o.__html||"");else if("o"==t[0]&&"n"==t[1]){var l=t!==(t=t.replace(/Capture$/,""));t=t.toLowerCase().substring(2),o?n||e.addEventListener(t,m,l):e.removeEventListener(t,m,l),(e._listeners||(e._listeners={}))[t]=o}else if("list"!==t&&"type"!==t&&!r&&t in e)v(e,t,null==o?"":o),null!=o&&!1!==o||e.removeAttribute(t);else{var u=r&&t!==(t=t.replace(/^xlink\:?/,""));null==o||!1===o?u?e.removeAttributeNS("http://www.w3.org/1999/xlink",t.toLowerCase()):e.removeAttribute(t):"function"!=typeof o&&(u?e.setAttributeNS("http://www.w3.org/1999/xlink",t.toLowerCase(),o):e.setAttribute(t,o))}else e.className=o||""}function v(e,t,n){try{e[t]=n}catch(e){}}function m(e){return this._listeners[e.type](L.event&&L.event(e)||e)}function y(){for(var e;e=R.pop();)L.afterMount&&L.afterMount(e),e.componentDidMount&&e.componentDidMount()}function b(e,t,n,o,r,i){U++||(H=null!=r&&void 0!==r.ownerSVGElement,z=null!=e&&!("__preactattr_"in e));var l=w(e,t,n,o,i);return r&&l.parentNode!==r&&r.appendChild(l),--U||(z=!1,i||y()),l}function w(e,t,n,o,r){var i=e,l=H;if(null!=t&&"boolean"!=typeof t||(t=""),"string"==typeof t||"number"==typeof t)return e&&void 0!==e.splitText&&e.parentNode&&(!e._component||r)?e.nodeValue!=t&&(e.nodeValue=t):(i=document.createTextNode(t),e&&(e.parentNode&&e.parentNode.replaceChild(i,e),g(e,!0))),i.__preactattr_=!0,i;var u=t.nodeName;if("function"==typeof u)return S(e,t,n,o);if(H="svg"===u||"foreignObject"!==u&&H,u=String(u),(!e||!c(e,u))&&(i=p(u,H),e)){for(;e.firstChild;)i.appendChild(e.firstChild);e.parentNode&&e.parentNode.replaceChild(i,e),g(e,!0)}var a=i.firstChild,s=i.__preactattr_,f=t.children;if(null==s){s=i.__preactattr_={};for(var d=i.attributes,h=d.length;h--;)s[d[h].name]=d[h].value}return!z&&f&&1===f.length&&"string"==typeof f[0]&&null!=a&&void 0!==a.splitText&&null==a.nextSibling?a.nodeValue!=f[0]&&(a.nodeValue=f[0]):(f&&f.length||null!=a)&&_(i,f,n,o,z||null!=s.dangerouslySetInnerHTML),k(i,t.attributes,s),H=l,i}function _(e,t,n,o,r){var i,l,u,a,c,f=e.childNodes,p=[],h={},v=0,m=0,y=f.length,b=0,_=t?t.length:0;if(0!==y)for(var P=0;P<y;P++){var k=f[P],x=k.__preactattr_,O=_&&x?k._component?k._component.__key:x.key:null;null!=O?(v++,h[O]=k):(x||(void 0!==k.splitText?!r||k.nodeValue.trim():r))&&(p[b++]=k)}if(0!==_)for(var P=0;P<_;P++){a=t[P],c=null;var O=a.key;if(null!=O)v&&void 0!==h[O]&&(c=h[O],h[O]=void 0,v--);else if(!c&&m<b)for(i=m;i<b;i++)if(void 0!==p[i]&&s(l=p[i],a,r)){c=l,p[i]=void 0,i===b-1&&b--,i===m&&m++;break}c=w(c,a,n,o),u=f[P],c&&c!==e&&c!==u&&(null==u?e.appendChild(c):c===u.nextSibling?d(u):e.insertBefore(c,u))}if(v)for(var P in h)void 0!==h[P]&&g(h[P],!1);for(;m<=b;)void 0!==(c=p[b--])&&g(c,!1)}function g(e,t){var n=e._component;n?E(n):(null!=e.__preactattr_&&e.__preactattr_.ref&&e.__preactattr_.ref(null),!1!==t&&null!=e.__preactattr_||d(e),P(e))}function P(e){for(e=e.lastChild;e;){var t=e.previousSibling;g(e,!0),e=t}}function k(e,t,n){var o;for(o in n)t&&null!=t[o]||null==n[o]||h(e,o,n[o],n[o]=void 0,H);for(o in t)"children"===o||"innerHTML"===o||o in n&&t[o]===("value"===o||"checked"===o?e[o]:n[o])||h(e,o,n[o],n[o]=t[o],H)}function x(e){var t=e.constructor.name;(Y[t]||(Y[t]=[])).push(e)}function O(e,t,n){var o,r=Y[e.name];if(e.prototype&&e.prototype.render?(o=new e(t,n),M.call(o,t,n)):(o=new M(t,n),o.constructor=e,o.render=C),r)for(var i=r.length;i--;)if(r[i].constructor===e){o.nextBase=r[i].nextBase,r.splice(i,1);break}return o}function C(e,t,n){return this.constructor(e,n)}function T(e,t,n,o,r){e._disable||(e._disable=!0,(e.__ref=t.ref)&&delete t.ref,(e.__key=t.key)&&delete t.key,!e.base||r?e.componentWillMount&&e.componentWillMount():e.componentWillReceiveProps&&e.componentWillReceiveProps(t,o),o&&o!==e.context&&(e.prevContext||(e.prevContext=e.context),e.context=o),e.prevProps||(e.prevProps=e.props),e.props=t,e._disable=!1,0!==n&&(1!==n&&!1===L.syncComponentUpdates&&e.base?u(e):j(e,1,r)),e.__ref&&e.__ref(e))}function j(e,t,n,o){if(!e._disable){var r,l,u,a=e.props,s=e.state,c=e.context,p=e.prevProps||a,d=e.prevState||s,h=e.prevContext||c,v=e.base,m=e.nextBase,w=v||m,_=e._component,P=!1;if(v&&(e.props=p,e.state=d,e.context=h,2!==t&&e.shouldComponentUpdate&&!1===e.shouldComponentUpdate(a,s,c)?P=!0:e.componentWillUpdate&&e.componentWillUpdate(a,s,c),e.props=a,e.state=s,e.context=c),e.prevProps=e.prevState=e.prevContext=e.nextBase=null,e._dirty=!1,!P){r=e.render(a,s,c),e.getChildContext&&(c=i(i({},c),e.getChildContext()));var k,x,C=r&&r.nodeName;if("function"==typeof C){var S=f(r);l=_,l&&l.constructor===C&&S.key==l.__key?T(l,S,1,c,!1):(k=l,e._component=l=O(C,S,c),l.nextBase=l.nextBase||m,l._parentComponent=e,T(l,S,0,c,!1),j(l,1,n,!0)),x=l.base}else u=w,k=_,k&&(u=e._component=null),(w||1===t)&&(u&&(u._component=null),x=b(u,r,c,n||!v,w&&w.parentNode,!0));if(w&&x!==w&&l!==_){var M=w.parentNode;M&&x!==M&&(M.replaceChild(x,w),k||(w._component=null,g(w,!1)))}if(k&&E(k),e.base=x,x&&!o){for(var N=e,D=e;D=D._parentComponent;)(N=D).base=x;x._component=N,x._componentConstructor=N.constructor}}if(!v||n?R.unshift(e):P||(e.componentDidUpdate&&e.componentDidUpdate(p,d,h),L.afterUpdate&&L.afterUpdate(e)),null!=e._renderCallbacks)for(;e._renderCallbacks.length;)e._renderCallbacks.pop().call(e);U||o||y()}}function S(e,t,n,o){for(var r=e&&e._component,i=r,l=e,u=r&&e._componentConstructor===t.nodeName,a=u,s=f(t);r&&!a&&(r=r._parentComponent);)a=r.constructor===t.nodeName;return r&&a&&(!o||r._component)?(T(r,s,3,n,o),e=r.base):(i&&!u&&(E(i),e=l=null),r=O(t.nodeName,s,n),e&&!r.nextBase&&(r.nextBase=e,l=null),T(r,s,1,n,o),e=r.base,l&&e!==l&&(l._component=null,g(l,!1))),e}function E(e){L.beforeUnmount&&L.beforeUnmount(e);var t=e.base;e._disable=!0,e.componentWillUnmount&&e.componentWillUnmount(),e.base=null;var n=e._component;n?E(n):t&&(t.__preactattr_&&t.__preactattr_.ref&&t.__preactattr_.ref(null),e.nextBase=t,d(t),x(e),P(t)),e.__ref&&e.__ref(null)}function M(e,t){this._dirty=!0,this.context=t,this.props=e,this.state=this.state||{}}function N(e,t,n){return b(n,e,{},!1,t,!1)}Object.defineProperty(t,"__esModule",{value:!0}),n.d(t,"h",function(){return r}),n.d(t,"createElement",function(){return r}),n.d(t,"cloneElement",function(){return l}),n.d(t,"Component",function(){return M}),n.d(t,"render",function(){return N}),n.d(t,"rerender",function(){return a}),n.d(t,"options",function(){return L});var L={},D=[],A=[],I="function"==typeof Promise?Promise.resolve().then.bind(Promise.resolve()):setTimeout,W=/acit|ex(?:s|g|n|p|$)|rph|ows|mnc|ntw|ine[ch]|zoo|^ord/i,B=[],R=[],U=0,H=!1,z=!1,Y={};i(M.prototype,{setState:function(e,t){var n=this.state;this.prevState||(this.prevState=i({},n)),i(n,"function"==typeof e?e(n,this.props):e),t&&(this._renderCallbacks=this._renderCallbacks||[]).push(t),u(this)},forceUpdate:function(e){e&&(this._renderCallbacks=this._renderCallbacks||[]).push(e),j(this,2)},render:function(){}});var F={h:r,createElement:r,cloneElement:l,Component:M,render:N,rerender:a,options:L};t.default=F},,,,,,,,,,,,function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(0),r=function(e){var t=e.photo;return(0,o.h)("div",{className:"photo-text-wrapper"},(0,o.h)("p",{className:"title"},t.title),(0,o.h)("p",{className:"latin"},t.latin),(0,o.h)("p",{className:"description"},t.description),(0,o.h)("p",{className:"location"},t.location))};t.default=r},function(e,t,n){"use strict";var o=n(14),r=function(e){return e&&e.__esModule?e:{default:e}}(o);n(15),n(16),r.default.polyfill()},function(e,t,n){!function(){"use strict";function t(e){var t=["MSIE ","Trident/","Edge/"];return new RegExp(t.join("|")).test(e)}function n(){function e(e,t){this.scrollLeft=e,this.scrollTop=t}function n(e){return.5*(1-Math.cos(Math.PI*e))}function i(e){if(null===e||"object"!=typeof e||void 0===e.behavior||"auto"===e.behavior||"instant"===e.behavior)return!0;if("object"==typeof e&&"smooth"===e.behavior)return!1;throw new TypeError("behavior member of ScrollOptions "+e.behavior+" is not a valid value for enumeration ScrollBehavior.")}function l(e,t){return"Y"===t?e.clientHeight+h<e.scrollHeight:"X"===t?e.clientWidth+h<e.scrollWidth:void 0}function u(e,t){var n=o.getComputedStyle(e,null)["overflow"+t];return"auto"===n||"scroll"===n}function a(e){var t=l(e,"Y")&&u(e,"Y"),n=l(e,"X")&&u(e,"X");return t||n}function s(e){var t;do{e=e.parentNode,t=e===r.body}while(!1===t&&!1===a(e));return t=null,e}function c(e){var t,r,i,l=m(),u=(l-e.startTime)/d;u=u>1?1:u,t=n(u),r=e.startX+(e.x-e.startX)*t,i=e.startY+(e.y-e.startY)*t,e.method.call(e.scrollable,r,i),r===e.x&&i===e.y||o.requestAnimationFrame(c.bind(o,e))}function f(t,n,i){var l,u,a,s,f=m();t===r.body?(l=o,u=o.scrollX||o.pageXOffset,a=o.scrollY||o.pageYOffset,s=v.scroll):(l=t,u=t.scrollLeft,a=t.scrollTop,s=e),c({scrollable:l,method:s,startTime:f,startX:u,startY:a,x:n,y:i})}if(!("scrollBehavior"in r.documentElement.style&&!0!==o.__forceSmoothScrollPolyfill__)){var p=o.HTMLElement||o.Element,d=468,h=t(o.navigator.userAgent)?1:0,v={scroll:o.scroll||o.scrollTo,scrollBy:o.scrollBy,elementScroll:p.prototype.scroll||e,scrollIntoView:p.prototype.scrollIntoView},m=o.performance&&o.performance.now?o.performance.now.bind(o.performance):Date.now;o.scroll=o.scrollTo=function(){if(void 0!==arguments[0])return!0===i(arguments[0])?void v.scroll.call(o,void 0!==arguments[0].left?arguments[0].left:"object"!=typeof arguments[0]?arguments[0]:o.scrollX||o.pageXOffset,void 0!==arguments[0].top?arguments[0].top:void 0!==arguments[1]?arguments[1]:o.scrollY||o.pageYOffset):void f.call(o,r.body,void 0!==arguments[0].left?~~arguments[0].left:o.scrollX||o.pageXOffset,void 0!==arguments[0].top?~~arguments[0].top:o.scrollY||o.pageYOffset)},o.scrollBy=function(){if(void 0!==arguments[0])return i(arguments[0])?void v.scrollBy.call(o,void 0!==arguments[0].left?arguments[0].left:"object"!=typeof arguments[0]?arguments[0]:0,void 0!==arguments[0].top?arguments[0].top:void 0!==arguments[1]?arguments[1]:0):void f.call(o,r.body,~~arguments[0].left+(o.scrollX||o.pageXOffset),~~arguments[0].top+(o.scrollY||o.pageYOffset))},p.prototype.scroll=p.prototype.scrollTo=function(){if(void 0!==arguments[0]){if(!0===i(arguments[0])){if("number"==typeof arguments[0]&&void 0===arguments[1])throw new SyntaxError("Value couldn't be converted");return void v.elementScroll.call(this,void 0!==arguments[0].left?~~arguments[0].left:"object"!=typeof arguments[0]?~~arguments[0]:this.scrollLeft,void 0!==arguments[0].top?~~arguments[0].top:void 0!==arguments[1]?~~arguments[1]:this.scrollTop)}var e=arguments[0].left,t=arguments[0].top;f.call(this,this,void 0===e?this.scrollLeft:~~e,void 0===t?this.scrollTop:~~t)}},p.prototype.scrollBy=function(){if(void 0!==arguments[0])return!0===i(arguments[0])?void v.elementScroll.call(this,void 0!==arguments[0].left?~~arguments[0].left+this.scrollLeft:~~arguments[0]+this.scrollLeft,void 0!==arguments[0].top?~~arguments[0].top+this.scrollTop:~~arguments[1]+this.scrollTop):void this.scroll({left:~~arguments[0].left+this.scrollLeft,top:~~arguments[0].top+this.scrollTop,behavior:arguments[0].behavior})},p.prototype.scrollIntoView=function(){if(!0===i(arguments[0]))return void v.scrollIntoView.call(this,void 0===arguments[0]||arguments[0]);var e=s(this),t=e.getBoundingClientRect(),n=this.getBoundingClientRect();e!==r.body?(f.call(this,e,e.scrollLeft+n.left-t.left,e.scrollTop+n.top-t.top),"fixed"!==o.getComputedStyle(e).position&&o.scrollBy({left:t.left,top:t.top,behavior:"smooth"})):o.scrollBy({left:n.left,top:n.top,behavior:"smooth"})}}}var o=window,r=document;e.exports={polyfill:n}}()},function(e,t,n){"use strict";function o(e,t){t=t||{bubbles:!1,cancelable:!1,detail:void 0};var n=document.createEvent("CustomEvent");return n.initCustomEvent(e,t.bubbles,t.cancelable,t.detail),n}"function"!=typeof window.CustomEvent&&(o.prototype=window.Event.prototype,window.CustomEvent=o)},function(e,t,n){"use strict";!function(){for(var e=0,t=["ms","moz","webkit","o"],n=0;n<t.length&&!window.requestAnimationFrame;++n)window.requestAnimationFrame=window[t[n]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[t[n]+"CancelAnimationFrame"]||window[t[n]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(t,n){var o=(new Date).getTime(),r=Math.max(0,16-(o-e)),i=window.setTimeout(function(){t(o+r)},r);return e=o+r,i}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(e){clearTimeout(e)})}()},,,,,,,,,,,function(e,t,n){"use strict";function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function i(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}function l(){}Object.defineProperty(t,"__esModule",{value:!0});var u=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),a=n(0),s=function(e){function t(){o(this,t);var e=r(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return e.state={visible:!1},e.onLoad=e.onLoad.bind(e),e}return i(t,e),u(t,[{key:"componentDidMount",value:function(){this.img.onload=this.onLoad,this.img.setAttribute("src",this.props.src)}},{key:"componentWillReceiveProps",value:function(e){e.src!==this.props.src&&(this.img.setAttribute("src",this.props.src),this.setState({visible:!1}))}},{key:"onLoad",value:function(){this.state.visible||this.setState({visible:!0})}},{key:"render",value:function(){var e=this,t=this.props,n=t.alt,o=t.onClick,r=t.srcSet,i=t.sizes,u=t.width;return(0,a.h)("img",{alt:n||"",ref:function(t){e.img=t},className:"transition-image",onClick:o||l,style:{opacity:this.state.visible?1:0},srcSet:r,sizes:i,width:u})}}]),t}(a.Component);t.default=s},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){return Object.keys(e).reverse().map(function(t){var n=e[t];return n.url+" "+n.width+"w"}).join(", ")}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(){return document.scrollWidth||document.body.clientWidth||window.innerWidth}},,,,,,,,,,function(e,t,n){"use strict";var o=n(0),r=n(40),i=function(e){return e&&e.__esModule?e:{default:e}}(r);n(13);var l=window.snPhotos;(0,o.render)((0,o.h)(i.default,{photos:l}),document.getElementById("app"))},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function l(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}function u(e,t){return e.filter(function(e){return e.key===t})[0]}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),s=n(0),c=n(41),f=o(c),p=n(42),d=o(p),h=n(47),v=o(h),m=n(48),y=o(m),b=n(54),w=n(57),_=n(58),g=function(e){function t(e){r(this,t);var n=i(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e)),o=(window.location.href.match(/photos\/([^\/]+)/)||[])[1];return n.state={selectedPhoto:o?u(n.props.photos,o):null},n.onSelectPhoto=n.onSelectPhoto.bind(n),n.onHome=n.onHome.bind(n),n.onGoToPhotos=n.onGoToPhotos.bind(n),n}return l(t,e),a(t,[{key:"componentDidMount",value:function(){var e=this,t=this.props.photos;window.addEventListener("popstate",function(n){var o=!!n.state&&u(t,n.state);e.setState({selectedPhoto:o})}),window.addEventListener("unload",function(){(0,b.beaconStats)()})}},{key:"onSelectPhoto",value:function(e){!!this.state.selectedPhoto||(0,w.setPosition)(),this.setState({selectedPhoto:e}),window.history.pushState(e.key,"","/photos/"+e.key),window.scroll({top:0,behavior:"smooth"}),(0,b.addAction)()}},{key:"onHome",value:function(e){e&&e.preventDefault(),this.setState({selectedPhoto:null}),window.history.pushState(null,"","/"),(0,b.addAction)();var t=(0,w.getPosition)();t?(0,_.setTimeout)(function(){window.scroll({top:t})}):this.onGoToPhotos()}},{key:"onGoToPhotos",value:function(e){e&&e.preventDefault();var t=document.querySelector("#top-logo").offsetHeight;window.scroll({top:t,behavior:"smooth"})}},{key:"getCurrentPhotoIndex",value:function(){var e=this.state.selectedPhoto;return e?this.props.photos.indexOf(e):0}},{key:"render",value:function(){var e=this.props.photos,t=this.state.selectedPhoto;return t?(0,s.h)(y.default,{onHome:this.onHome,onSelectPhoto:this.onSelectPhoto,photos:e,selectedPhoto:t}):(0,s.h)("div",null,(0,s.h)(f.default,{onGoToPhotos:this.onGoToPhotos}),(0,s.h)(d.default,{photos:e,onSelectPhoto:this.onSelectPhoto}),(0,s.h)(v.default,{onHome:this.onHome}))}}]),t}(s.Component);t.default=g},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(0),r=function(e){var t=e.onGoToPhotos;return(0,o.h)("div",{id:"top-logo"},(0,o.h)("img",{src:"/static/images/logo.svg"}),(0,o.h)("a",{href:"#collage",class:"arrow",onClick:t}))};t.default=r},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function l(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}function u(){return document.body.offsetHeight>=window.innerHeight}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),s=n(0),c=n(43),f=o(c),p=n(44),d=o(p),h=n(45),v=o(h),m=n(29),y=o(m),b=function(e){function t(){r(this,t);var e=i(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return e.state={width:(0,y.default)()},e.updateWidth=e.updateWidth.bind(e),e}return l(t,e),a(t,[{key:"updateWidth",value:function(){this.setState({width:(0,y.default)()})}},{key:"componentDidMount",value:function(){(0,v.default)("resize","optimizedResize"),window.addEventListener("optimizedResize",this.updateWidth),u()&&this.updateWidth()}},{key:"componentWillUnmount",value:function(){window.removeEventListener("optimizedResize",this.updateWidth)}},{key:"render",value:function(){var e=this.props,t=e.photos,n=e.onSelectPhoto,o=(0,d.default)(t),r=(0,y.default)()>=1100;return(0,s.h)("div",{id:"collage"},o.map(function(e,t){var o=r?{height:e.height+"px"}:{};return(0,s.h)("div",{key:"photo-group-"+t,style:o},e.photos.map(function(e){return(0,s.h)(f.default,{key:e.key,setWidth:r,photo:e,onSelect:n})}))}))}}]),t}(s.Component);t.default=b},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function l(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var u=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),a=n(0),s=n(27),c=o(s),f=n(12),p=o(f),d=n(28),h=o(d),v=function(e){function t(){r(this,t);var e=i(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return e.onClick=e.onClick.bind(e),e}return l(t,e),u(t,[{key:"onClick",value:function(e){e.preventDefault(),this.props.onSelect(this.props.photo)}},{key:"render",value:function(){var e=this.props,t=e.photo,n=e.setWidth,o=n?{width:t.displayedWidth+"px"}:{};return(0,a.h)("div",{style:o},(0,a.h)("a",{href:"/photos/"+t.key,onClick:this.onClick},(0,a.h)("div",{class:"overlay-title-wrapper"},(0,a.h)("p",{class:"title"},t.title),(0,a.h)("p",{class:"location"},t.location)),(0,a.h)(c.default,{alt:t.title,src:t.sizes.xsmall.url,srcSet:(0,h.default)(t.sizes),sizes:"(min-width: 1100px) 30vw, 100vw"})),(0,a.h)("div",{className:"sn-dn-ns sn-mb-l"},(0,a.h)(p.default,{photo:t})))}}]),t}(a.Component);t.default=v},function(e,t,n){"use strict";function o(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}function r(e){return e.filter(function(e){return"portrait"===e.mode}).length}Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){for(var t=[].concat(o(e)),n=Math.min((0,l.default)(),2560),i=[];t.length;){var u={height:null,photos:[]},a=3,s=1,c=1,f=r(t.slice(0,5));if(f&&f<5){var p=r(t.slice(0,4)),d=r(t.slice(0,3));4===f?a=5:3===f?(a=5,s=.6,c=1.3):2===p?(a=4,s=.6,c=1.35):1===d&&(s=.5,c=1.2)}for(var h=0;h<a;h++){var v=t.shift();if(!v)return i;var m="portrait"===v.mode?s:c,y=8*(a+1);v.displayedWidth=(n-y)/a*m,u.photos.push(v);var b=v.sizes.small.height/v.sizes.small.width,w=v.displayedWidth*b;u.height=u.height?Math.min(u.height,w):w}i.push(u)}return i};var i=n(29),l=function(e){return e&&e.__esModule?e:{default:e}}(i)},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(46),r=function(e){return e&&e.__esModule?e:{default:e}}(o);t.default=function(e,t,n){n=n||window;var o=!1,i=(0,r.default)(function(){o||(o=!0,window.requestAnimationFrame(function(){n.dispatchEvent(new window.CustomEvent(t)),o=!1}))},200);n.addEventListener(e,i)}},function(e,t){function n(e,t){function n(){l=0,u=+new Date,i=e.apply(o,r),o=null,r=null}var o,r,i,l,u=0;return function(){o=this,r=arguments;var e=new Date-u;return l||(e>=t?n():l=setTimeout(n,t-e)),i}}e.exports=n},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(0),r=function(e){var t=e.onHome;return(0,o.h)("div",{id:"deep-water"},(0,o.h)("div",{class:"link-wrapper"},(0,o.h)("a",{href:"#",onClick:t},"DROP YOUR WEIGHTS")))};t.default=r},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function l(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var u=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),a=n(0),s=n(49),c=o(s),f=n(51),p=o(f),d=n(52),h=o(d),v=n(53),m=o(v),y=function(e){function t(){r(this,t);var e=i(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return e.onNextPhoto=e.onNextPhoto.bind(e),e.onPreviousPhoto=e.onPreviousPhoto.bind(e),e}return l(t,e),u(t,[{key:"getCurrentPhotoIndex",value:function(){var e=this.props,t=e.photos,n=e.selectedPhoto;return t.indexOf(n)||0}},{key:"getNextPhoto",value:function(){var e=this.props.photos;return e[this.getCurrentPhotoIndex()+1]||e[0]}},{key:"getPreviousPhoto",value:function(){var e=this.props.photos;return e[this.getCurrentPhotoIndex()-1]||e[e.length-1]}},{key:"onNextPhoto",value:function(e){e&&e.preventDefault(),this.props.onSelectPhoto(this.getNextPhoto())}},{key:"onPreviousPhoto",value:function(e){e&&e.preventDefault(),this.props.onSelectPhoto(this.getPreviousPhoto())}},{key:"render",value:function(){var e=this.props.selectedPhoto;return(0,a.h)("div",null,(0,a.h)(h.default,{onNext:this.onNextPhoto,onPrevious:this.onPreviousPhoto}),(0,a.h)(m.default,{onNext:this.onNextPhoto,onPrevious:this.onPreviousPhoto}),(0,a.h)(c.default,{photo:e,next:(0,a.h)("a",{href:"/photos/"+this.getNextPhoto().key,class:"click-next",onClick:this.onNextPhoto}),previous:(0,a.h)("a",{href:"/photos/"+this.getPreviousPhoto().key,class:"click-previous",onClick:this.onPreviousPhoto})}),(0,a.h)(p.default,{onHome:this.props.onHome}))}}]),t}(a.Component);t.default=y},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var r=n(0),i=n(12),l=o(i),u=n(50),a=o(u),s=n(27),c=o(s),f=n(28),p=o(f),d=function(e){var t=e.next,n=e.previous,o=e.photo;return(0,r.h)("div",{class:"photo-and-navigation "+o.mode},(0,r.h)("div",{class:"photo-and-sidebar"},(0,r.h)("div",{class:"photo-wrapper"},n,t,(0,r.h)(c.default,{alt:o.title,src:o.sizes.large.url,srcSet:(0,p.default)(o.sizes),sizes:"100vw"})),(0,r.h)(l.default,{photo:o}),(0,r.h)(a.default,{photo:o})))};t.default=d},function(e,t,n){"use strict";function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function i(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var l=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),u=n(0),a=n(12),s=function(e){return e&&e.__esModule?e:{default:e}}(a),c=function(e){function t(){o(this,t);var e=r(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return e.handleClickDetails=e.handleClickDetails.bind(e),e.state={expanded:!0},e}return i(t,e),l(t,[{key:"handleClickDetails",value:function(e){e.preventDefault(),this.setState({expanded:!this.state.expanded})}},{key:"render",value:function(){var e=this.props.photo,t=this.state.expanded;return(0,u.h)("div",{id:"sidebar-wrapper"},(0,u.h)("div",{id:"sidebar"},(0,u.h)("div",{className:t?"expanded":""},(0,u.h)("a",{href:"#",title:t?"Close info box":"Read more about this photo",tabIndex:"0","aria-role":"button",onClick:this.handleClickDetails},"+"))),(0,u.h)("div",{id:"sidebar-text",class:t?"expanded":""},(0,u.h)(s.default,{photo:e})))}}]),t}(u.Component);t.default=c},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(0),r=function(e){var t=e.onHome;return(0,o.h)("div",{id:"navigation"},(0,o.h)("a",{class:"home",href:"/",title:"All photos",onClick:t},(0,o.h)("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 85.04 54.67"},(0,o.h)("rect",{fill:"currentColor",class:"cls-1",y:"20.25",width:"24.3",height:"14.17"}),(0,o.h)("rect",{fill:"currentColor",y:"40.49",width:"24.3",height:"14.17"}),(0,o.h)("rect",{fill:"currentColor",x:"30.37",y:"20.25",width:"24.3",height:"14.17"}),(0,o.h)("rect",{fill:"currentColor",x:"60.74",y:"20.25",width:"24.3",height:"14.17"}),(0,o.h)("rect",{fill:"currentColor",x:"30.37",y:"40.49",width:"24.3",height:"14.17"}),(0,o.h)("rect",{fill:"currentColor",x:"60.74",y:"40.49",width:"24.3",height:"14.17"}),(0,o.h)("rect",{fill:"currentColor",width:"24.3",height:"14.17"}),(0,o.h)("rect",{fill:"currentColor",x:"30.37",width:"24.3",height:"14.17"}),(0,o.h)("rect",{fill:"currentColor",x:"60.74",width:"24.3",height:"14.17"}))),(0,o.h)("div",{class:"link-wrapper"},(0,o.h)("a",{href:"/",onClick:t},"See all photos")))};t.default=r},function(e,t,n){"use strict";function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function i(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var l=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),u=n(0),a=[33,37],s=[32,34,39],c=function(e){function t(){o(this,t);var e=r(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return e.handleKeyUp=e.handleKeyUp.bind(e),e}return i(t,e),l(t,[{key:"componentWillMount",value:function(){window.addEventListener("keyup",this.handleKeyUp)}},{key:"componentWillUnmount",value:function(){window.removeEventListener("keyup",this.handleKeyUp)}},{key:"shouldComponentUpdate",value:function(){return!1}},{key:"handleKeyUp",value:function(e){var t=e.keyCode||e.detail.keyCode,n=this.props,o=n.onPrevious,r=n.onNext;-1!==a.indexOf(t)?(e.preventDefault(),o()):-1!==s.indexOf(t)&&(e.preventDefault(),r())}},{key:"render",value:function(){return null}}]),t}(u.Component);t.default=c},function(e,t,n){"use strict";function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function i(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var l=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),u=n(0),a=function(e){function t(){o(this,t);var e=r(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return e.xDown=null,e.yDown=null,e.handleTouchStart=e.handleTouchStart.bind(e),e.handleTouchMove=e.handleTouchMove.bind(e),e}return i(t,e),l(t,[{key:"componentDidMount",value:function(){document.addEventListener("touchstart",this.handleTouchStart,!1),document.addEventListener("touchmove",this.handleTouchMove,!1)}},{key:"componentWillUnmount",value:function(){document.removeEventListener("touchstart",this.handleTouchStart),document.removeEventListener("touchmove",this.handleTouchMove)}},{key:"shouldComponentUpdate",value:function(){return!1}},{key:"handleTouchStart",value:function(e){this.xDown=e.touches[0].clientX,this.yDown=e.touches[0].clientY}},{key:"handleTouchMove",value:function(e){if(this.xDown){var t=this.props,n=t.onNext,o=t.onPrevious,r=e.touches[0].clientX,i=e.touches[0].clientY,l=this.xDown-r,u=this.yDown-i;Math.abs(l)>Math.abs(u)&&(l>0?o():n()),this.xDown=null,this.yDown=null}}},{key:"render",value:function(){return null}}]),t}(u.Component);t.default=a},function(e,t,n){"use strict";function o(){var e=window,t=e.navigator,n=e.doNotTrack;return t.doNotTrack||t.msDoNotTrack||n}function r(){return{id:c,numActions:f}}function i(){if(!o()){var e=new XMLHttpRequest;e.open("POST","/stats",!0),e.setRequestHeader("Content-type","application/json"),e.send(JSON.stringify(r()))}}function l(){o()||"function"!=typeof navigator.sendBeacon||navigator.sendBeacon("/stats",JSON.stringify(r()))}Object.defineProperty(t,"__esModule",{value:!0}),t.beaconStats=t.addAction=void 0;var u=n(55),a=function(e){return e&&e.__esModule?e:{default:e}}(u),s=n(56),c=(0,s.uid)(),f=0,p=(0,a.default)(i,3e3);t.addAction=function(){f++,p()},t.beaconStats=l},function(e,t){e.exports=function(e,t,n){function o(){var s=Date.now()-u;s<t&&s>=0?r=setTimeout(o,t-s):(r=null,n||(a=e.apply(l,i),l=i=null))}var r,i,l,u,a;null==t&&(t=100);var s=function(){l=this,i=arguments,u=Date.now();var s=n&&!r;return r||(r=setTimeout(o,t)),s&&(a=e.apply(l,i),l=i=null),a};return s.clear=function(){r&&(clearTimeout(r),r=null)},s.flush=function(){r&&(a=e.apply(l,i),l=i=null,clearTimeout(r),r=null)},s}},function(e,t,n){"use strict";function o(){return Math.floor(65536*(1+Math.random())).toString(16).substring(1)}e.exports.id=function(){return o()+"-"+o()},e.exports.uid=function(){return""+o()+o()+"-"+o()+o()}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});t.setPosition=function(){try{window.sessionStorage.setItem("scrollPos",window.scrollY)}catch(e){}},t.getPosition=function(){try{return window.sessionStorage.getItem("scrollPos")}catch(e){}}},function(e,t,n){function o(e,t){this._id=e,this._clearFn=t}var r=Function.prototype.apply;t.setTimeout=function(){return new o(r.call(setTimeout,window,arguments),clearTimeout)},t.setInterval=function(){return new o(r.call(setInterval,window,arguments),clearInterval)},t.clearTimeout=t.clearInterval=function(e){e&&e.close()},o.prototype.unref=o.prototype.ref=function(){},o.prototype.close=function(){this._clearFn.call(window,this._id)},t.enroll=function(e,t){clearTimeout(e._idleTimeoutId),e._idleTimeout=t},t.unenroll=function(e){clearTimeout(e._idleTimeoutId),e._idleTimeout=-1},t._unrefActive=t.active=function(e){clearTimeout(e._idleTimeoutId);var t=e._idleTimeout;t>=0&&(e._idleTimeoutId=setTimeout(function(){e._onTimeout&&e._onTimeout()},t))},n(59),t.setImmediate=setImmediate,t.clearImmediate=clearImmediate},function(e,t,n){(function(e,t){!function(e,n){"use strict";function o(e){"function"!=typeof e&&(e=new Function(""+e));for(var t=new Array(arguments.length-1),n=0;n<t.length;n++)t[n]=arguments[n+1];var o={callback:e,args:t};return s[a]=o,u(a),a++}function r(e){delete s[e]}function i(e){var t=e.callback,o=e.args;switch(o.length){case 0:t();break;case 1:t(o[0]);break;case 2:t(o[0],o[1]);break;case 3:t(o[0],o[1],o[2]);break;default:t.apply(n,o)}}function l(e){if(c)setTimeout(l,0,e);else{var t=s[e];if(t){c=!0;try{i(t)}finally{r(e),c=!1}}}}if(!e.setImmediate){var u,a=1,s={},c=!1,f=e.document,p=Object.getPrototypeOf&&Object.getPrototypeOf(e);p=p&&p.setTimeout?p:e,"[object process]"==={}.toString.call(e.process)?function(){u=function(e){t.nextTick(function(){l(e)})}}():function(){if(e.postMessage&&!e.importScripts){var t=!0,n=e.onmessage;return e.onmessage=function(){t=!1},e.postMessage("","*"),e.onmessage=n,t}}()?function(){var t="setImmediate$"+Math.random()+"$",n=function(n){n.source===e&&"string"==typeof n.data&&0===n.data.indexOf(t)&&l(+n.data.slice(t.length))};e.addEventListener?e.addEventListener("message",n,!1):e.attachEvent("onmessage",n),u=function(n){e.postMessage(t+n,"*")}}():e.MessageChannel?function(){var e=new MessageChannel;e.port1.onmessage=function(e){l(e.data)},u=function(t){e.port2.postMessage(t)}}():f&&"onreadystatechange"in f.createElement("script")?function(){var e=f.documentElement;u=function(t){var n=f.createElement("script");n.onreadystatechange=function(){l(t),n.onreadystatechange=null,e.removeChild(n),n=null},e.appendChild(n)}}():function(){u=function(e){setTimeout(l,0,e)}}(),p.setImmediate=o,p.clearImmediate=r}}("undefined"==typeof self?void 0===e?this:e:self)}).call(t,n(60),n(61))},function(e,t){var n;n=function(){return this}();try{n=n||Function("return this")()||(0,eval)("this")}catch(e){"object"==typeof window&&(n=window)}e.exports=n},function(e,t){function n(){throw new Error("setTimeout has not been defined")}function o(){throw new Error("clearTimeout has not been defined")}function r(e){if(c===setTimeout)return setTimeout(e,0);if((c===n||!c)&&setTimeout)return c=setTimeout,setTimeout(e,0);try{return c(e,0)}catch(t){try{return c.call(null,e,0)}catch(t){return c.call(this,e,0)}}}function i(e){if(f===clearTimeout)return clearTimeout(e);if((f===o||!f)&&clearTimeout)return f=clearTimeout,clearTimeout(e);try{return f(e)}catch(t){try{return f.call(null,e)}catch(t){return f.call(this,e)}}}function l(){v&&d&&(v=!1,d.length?h=d.concat(h):m=-1,h.length&&u())}function u(){if(!v){var e=r(l);v=!0;for(var t=h.length;t;){for(d=h,h=[];++m<t;)d&&d[m].run();m=-1,t=h.length}d=null,v=!1,i(e)}}function a(e,t){this.fun=e,this.array=t}function s(){}var c,f,p=e.exports={};!function(){try{c="function"==typeof setTimeout?setTimeout:n}catch(e){c=n}try{f="function"==typeof clearTimeout?clearTimeout:o}catch(e){f=o}}();var d,h=[],v=!1,m=-1;p.nextTick=function(e){var t=new Array(arguments.length-1);if(arguments.length>1)for(var n=1;n<arguments.length;n++)t[n-1]=arguments[n];h.push(new a(e,t)),1!==h.length||v||r(u)},a.prototype.run=function(){this.fun.apply(null,this.array)},p.title="browser",p.browser=!0,p.env={},p.argv=[],p.version="",p.versions={},p.on=s,p.addListener=s,p.once=s,p.off=s,p.removeListener=s,p.removeAllListeners=s,p.emit=s,p.prependListener=s,p.prependOnceListener=s,p.listeners=function(e){return[]},p.binding=function(e){throw new Error("process.binding is not supported")},p.cwd=function(){return"/"},p.chdir=function(e){throw new Error("process.chdir is not supported")},p.umask=function(){return 0}}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return h; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return h; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cloneElement", function() { return cloneElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return Component; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rerender", function() { return rerender; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "options", function() { return options; });
+/** Virtual DOM Node */
+function VNode() {}
+
+/** Global options
+ *	@public
+ *	@namespace options {Object}
+ */
+var options = {
+
+	/** If `true`, `prop` changes trigger synchronous component updates.
+  *	@name syncComponentUpdates
+  *	@type Boolean
+  *	@default true
+  */
+	//syncComponentUpdates: true,
+
+	/** Processes all created VNodes.
+  *	@param {VNode} vnode	A newly-created VNode to normalize/process
+  */
+	//vnode(vnode) { }
+
+	/** Hook invoked after a component is mounted. */
+	// afterMount(component) { }
+
+	/** Hook invoked after the DOM is updated with a component's latest render. */
+	// afterUpdate(component) { }
+
+	/** Hook invoked immediately before a component is unmounted. */
+	// beforeUnmount(component) { }
+};
+
+var stack = [];
+
+var EMPTY_CHILDREN = [];
+
+/**
+ * JSX/hyperscript reviver.
+ * @see http://jasonformat.com/wtf-is-jsx
+ * Benchmarks: https://esbench.com/bench/57ee8f8e330ab09900a1a1a0
+ *
+ * Note: this is exported as both `h()` and `createElement()` for compatibility reasons.
+ *
+ * Creates a VNode (virtual DOM element). A tree of VNodes can be used as a lightweight representation
+ * of the structure of a DOM tree. This structure can be realized by recursively comparing it against
+ * the current _actual_ DOM structure, and applying only the differences.
+ *
+ * `h()`/`createElement()` accepts an element name, a list of attributes/props,
+ * and optionally children to append to the element.
+ *
+ * @example The following DOM tree
+ *
+ * `<div id="foo" name="bar">Hello!</div>`
+ *
+ * can be constructed using this function as:
+ *
+ * `h('div', { id: 'foo', name : 'bar' }, 'Hello!');`
+ *
+ * @param {string} nodeName	An element name. Ex: `div`, `a`, `span`, etc.
+ * @param {Object} attributes	Any attributes/props to set on the created element.
+ * @param rest			Additional arguments are taken to be children to append. Can be infinitely nested Arrays.
+ *
+ * @public
+ */
+function h(nodeName, attributes) {
+	var children = EMPTY_CHILDREN,
+	    lastSimple,
+	    child,
+	    simple,
+	    i;
+	for (i = arguments.length; i-- > 2;) {
+		stack.push(arguments[i]);
+	}
+	if (attributes && attributes.children != null) {
+		if (!stack.length) stack.push(attributes.children);
+		delete attributes.children;
+	}
+	while (stack.length) {
+		if ((child = stack.pop()) && child.pop !== undefined) {
+			for (i = child.length; i--;) {
+				stack.push(child[i]);
+			}
+		} else {
+			if (typeof child === 'boolean') child = null;
+
+			if (simple = typeof nodeName !== 'function') {
+				if (child == null) child = '';else if (typeof child === 'number') child = String(child);else if (typeof child !== 'string') simple = false;
+			}
+
+			if (simple && lastSimple) {
+				children[children.length - 1] += child;
+			} else if (children === EMPTY_CHILDREN) {
+				children = [child];
+			} else {
+				children.push(child);
+			}
+
+			lastSimple = simple;
+		}
+	}
+
+	var p = new VNode();
+	p.nodeName = nodeName;
+	p.children = children;
+	p.attributes = attributes == null ? undefined : attributes;
+	p.key = attributes == null ? undefined : attributes.key;
+
+	// if a "vnode hook" is defined, pass every created VNode to it
+	if (options.vnode !== undefined) options.vnode(p);
+
+	return p;
+}
+
+/**
+ *  Copy all properties from `props` onto `obj`.
+ *  @param {Object} obj		Object onto which properties should be copied.
+ *  @param {Object} props	Object from which to copy properties.
+ *  @returns obj
+ *  @private
+ */
+function extend(obj, props) {
+  for (var i in props) {
+    obj[i] = props[i];
+  }return obj;
+}
+
+/**
+ * Call a function asynchronously, as soon as possible. Makes
+ * use of HTML Promise to schedule the callback if available,
+ * otherwise falling back to `setTimeout` (mainly for IE<11).
+ *
+ * @param {Function} callback
+ */
+var defer = typeof Promise == 'function' ? Promise.resolve().then.bind(Promise.resolve()) : setTimeout;
+
+/**
+ * Clones the given VNode, optionally adding attributes/props and replacing its children.
+ * @param {VNode} vnode		The virutal DOM element to clone
+ * @param {Object} props	Attributes/props to add when cloning
+ * @param {VNode} rest		Any additional arguments will be used as replacement children.
+ */
+function cloneElement(vnode, props) {
+  return h(vnode.nodeName, extend(extend({}, vnode.attributes), props), arguments.length > 2 ? [].slice.call(arguments, 2) : vnode.children);
+}
+
+// DOM properties that should NOT have "px" added when numeric
+var IS_NON_DIMENSIONAL = /acit|ex(?:s|g|n|p|$)|rph|ows|mnc|ntw|ine[ch]|zoo|^ord/i;
+
+/** Managed queue of dirty components to be re-rendered */
+
+var items = [];
+
+function enqueueRender(component) {
+	if (!component._dirty && (component._dirty = true) && items.push(component) == 1) {
+		(options.debounceRendering || defer)(rerender);
+	}
+}
+
+function rerender() {
+	var p,
+	    list = items;
+	items = [];
+	while (p = list.pop()) {
+		if (p._dirty) renderComponent(p);
+	}
+}
+
+/**
+ * Check if two nodes are equivalent.
+ *
+ * @param {Node} node			DOM Node to compare
+ * @param {VNode} vnode			Virtual DOM node to compare
+ * @param {boolean} [hyrdating=false]	If true, ignores component constructors when comparing.
+ * @private
+ */
+function isSameNodeType(node, vnode, hydrating) {
+  if (typeof vnode === 'string' || typeof vnode === 'number') {
+    return node.splitText !== undefined;
+  }
+  if (typeof vnode.nodeName === 'string') {
+    return !node._componentConstructor && isNamedNode(node, vnode.nodeName);
+  }
+  return hydrating || node._componentConstructor === vnode.nodeName;
+}
+
+/**
+ * Check if an Element has a given nodeName, case-insensitively.
+ *
+ * @param {Element} node	A DOM Element to inspect the name of.
+ * @param {String} nodeName	Unnormalized name to compare against.
+ */
+function isNamedNode(node, nodeName) {
+  return node.normalizedNodeName === nodeName || node.nodeName.toLowerCase() === nodeName.toLowerCase();
+}
+
+/**
+ * Reconstruct Component-style `props` from a VNode.
+ * Ensures default/fallback values from `defaultProps`:
+ * Own-properties of `defaultProps` not present in `vnode.attributes` are added.
+ *
+ * @param {VNode} vnode
+ * @returns {Object} props
+ */
+function getNodeProps(vnode) {
+  var props = extend({}, vnode.attributes);
+  props.children = vnode.children;
+
+  var defaultProps = vnode.nodeName.defaultProps;
+  if (defaultProps !== undefined) {
+    for (var i in defaultProps) {
+      if (props[i] === undefined) {
+        props[i] = defaultProps[i];
+      }
+    }
+  }
+
+  return props;
+}
+
+/** Create an element with the given nodeName.
+ *	@param {String} nodeName
+ *	@param {Boolean} [isSvg=false]	If `true`, creates an element within the SVG namespace.
+ *	@returns {Element} node
+ */
+function createNode(nodeName, isSvg) {
+	var node = isSvg ? document.createElementNS('http://www.w3.org/2000/svg', nodeName) : document.createElement(nodeName);
+	node.normalizedNodeName = nodeName;
+	return node;
+}
+
+/** Remove a child node from its parent if attached.
+ *	@param {Element} node		The node to remove
+ */
+function removeNode(node) {
+	var parentNode = node.parentNode;
+	if (parentNode) parentNode.removeChild(node);
+}
+
+/** Set a named attribute on the given Node, with special behavior for some names and event handlers.
+ *	If `value` is `null`, the attribute/handler will be removed.
+ *	@param {Element} node	An element to mutate
+ *	@param {string} name	The name/key to set, such as an event or attribute name
+ *	@param {any} old	The last value that was set for this name/node pair
+ *	@param {any} value	An attribute value, such as a function to be used as an event handler
+ *	@param {Boolean} isSvg	Are we currently diffing inside an svg?
+ *	@private
+ */
+function setAccessor(node, name, old, value, isSvg) {
+	if (name === 'className') name = 'class';
+
+	if (name === 'key') {
+		// ignore
+	} else if (name === 'ref') {
+		if (old) old(null);
+		if (value) value(node);
+	} else if (name === 'class' && !isSvg) {
+		node.className = value || '';
+	} else if (name === 'style') {
+		if (!value || typeof value === 'string' || typeof old === 'string') {
+			node.style.cssText = value || '';
+		}
+		if (value && typeof value === 'object') {
+			if (typeof old !== 'string') {
+				for (var i in old) {
+					if (!(i in value)) node.style[i] = '';
+				}
+			}
+			for (var i in value) {
+				node.style[i] = typeof value[i] === 'number' && IS_NON_DIMENSIONAL.test(i) === false ? value[i] + 'px' : value[i];
+			}
+		}
+	} else if (name === 'dangerouslySetInnerHTML') {
+		if (value) node.innerHTML = value.__html || '';
+	} else if (name[0] == 'o' && name[1] == 'n') {
+		var useCapture = name !== (name = name.replace(/Capture$/, ''));
+		name = name.toLowerCase().substring(2);
+		if (value) {
+			if (!old) node.addEventListener(name, eventProxy, useCapture);
+		} else {
+			node.removeEventListener(name, eventProxy, useCapture);
+		}
+		(node._listeners || (node._listeners = {}))[name] = value;
+	} else if (name !== 'list' && name !== 'type' && !isSvg && name in node) {
+		setProperty(node, name, value == null ? '' : value);
+		if (value == null || value === false) node.removeAttribute(name);
+	} else {
+		var ns = isSvg && name !== (name = name.replace(/^xlink\:?/, ''));
+		if (value == null || value === false) {
+			if (ns) node.removeAttributeNS('http://www.w3.org/1999/xlink', name.toLowerCase());else node.removeAttribute(name);
+		} else if (typeof value !== 'function') {
+			if (ns) node.setAttributeNS('http://www.w3.org/1999/xlink', name.toLowerCase(), value);else node.setAttribute(name, value);
+		}
+	}
+}
+
+/** Attempt to set a DOM property to the given value.
+ *	IE & FF throw for certain property-value combinations.
+ */
+function setProperty(node, name, value) {
+	try {
+		node[name] = value;
+	} catch (e) {}
+}
+
+/** Proxy an event to hooked event handlers
+ *	@private
+ */
+function eventProxy(e) {
+	return this._listeners[e.type](options.event && options.event(e) || e);
+}
+
+/** Queue of components that have been mounted and are awaiting componentDidMount */
+var mounts = [];
+
+/** Diff recursion count, used to track the end of the diff cycle. */
+var diffLevel = 0;
+
+/** Global flag indicating if the diff is currently within an SVG */
+var isSvgMode = false;
+
+/** Global flag indicating if the diff is performing hydration */
+var hydrating = false;
+
+/** Invoke queued componentDidMount lifecycle methods */
+function flushMounts() {
+	var c;
+	while (c = mounts.pop()) {
+		if (options.afterMount) options.afterMount(c);
+		if (c.componentDidMount) c.componentDidMount();
+	}
+}
+
+/** Apply differences in a given vnode (and it's deep children) to a real DOM Node.
+ *	@param {Element} [dom=null]		A DOM node to mutate into the shape of the `vnode`
+ *	@param {VNode} vnode			A VNode (with descendants forming a tree) representing the desired DOM structure
+ *	@returns {Element} dom			The created/mutated element
+ *	@private
+ */
+function diff(dom, vnode, context, mountAll, parent, componentRoot) {
+	// diffLevel having been 0 here indicates initial entry into the diff (not a subdiff)
+	if (!diffLevel++) {
+		// when first starting the diff, check if we're diffing an SVG or within an SVG
+		isSvgMode = parent != null && parent.ownerSVGElement !== undefined;
+
+		// hydration is indicated by the existing element to be diffed not having a prop cache
+		hydrating = dom != null && !('__preactattr_' in dom);
+	}
+
+	var ret = idiff(dom, vnode, context, mountAll, componentRoot);
+
+	// append the element if its a new parent
+	if (parent && ret.parentNode !== parent) parent.appendChild(ret);
+
+	// diffLevel being reduced to 0 means we're exiting the diff
+	if (! --diffLevel) {
+		hydrating = false;
+		// invoke queued componentDidMount lifecycle methods
+		if (!componentRoot) flushMounts();
+	}
+
+	return ret;
+}
+
+/** Internals of `diff()`, separated to allow bypassing diffLevel / mount flushing. */
+function idiff(dom, vnode, context, mountAll, componentRoot) {
+	var out = dom,
+	    prevSvgMode = isSvgMode;
+
+	// empty values (null, undefined, booleans) render as empty Text nodes
+	if (vnode == null || typeof vnode === 'boolean') vnode = '';
+
+	// Fast case: Strings & Numbers create/update Text nodes.
+	if (typeof vnode === 'string' || typeof vnode === 'number') {
+
+		// update if it's already a Text node:
+		if (dom && dom.splitText !== undefined && dom.parentNode && (!dom._component || componentRoot)) {
+			/* istanbul ignore if */ /* Browser quirk that can't be covered: https://github.com/developit/preact/commit/fd4f21f5c45dfd75151bd27b4c217d8003aa5eb9 */
+			if (dom.nodeValue != vnode) {
+				dom.nodeValue = vnode;
+			}
+		} else {
+			// it wasn't a Text node: replace it with one and recycle the old Element
+			out = document.createTextNode(vnode);
+			if (dom) {
+				if (dom.parentNode) dom.parentNode.replaceChild(out, dom);
+				recollectNodeTree(dom, true);
+			}
+		}
+
+		out['__preactattr_'] = true;
+
+		return out;
+	}
+
+	// If the VNode represents a Component, perform a component diff:
+	var vnodeName = vnode.nodeName;
+	if (typeof vnodeName === 'function') {
+		return buildComponentFromVNode(dom, vnode, context, mountAll);
+	}
+
+	// Tracks entering and exiting SVG namespace when descending through the tree.
+	isSvgMode = vnodeName === 'svg' ? true : vnodeName === 'foreignObject' ? false : isSvgMode;
+
+	// If there's no existing element or it's the wrong type, create a new one:
+	vnodeName = String(vnodeName);
+	if (!dom || !isNamedNode(dom, vnodeName)) {
+		out = createNode(vnodeName, isSvgMode);
+
+		if (dom) {
+			// move children into the replacement node
+			while (dom.firstChild) {
+				out.appendChild(dom.firstChild);
+			} // if the previous Element was mounted into the DOM, replace it inline
+			if (dom.parentNode) dom.parentNode.replaceChild(out, dom);
+
+			// recycle the old element (skips non-Element node types)
+			recollectNodeTree(dom, true);
+		}
+	}
+
+	var fc = out.firstChild,
+	    props = out['__preactattr_'],
+	    vchildren = vnode.children;
+
+	if (props == null) {
+		props = out['__preactattr_'] = {};
+		for (var a = out.attributes, i = a.length; i--;) {
+			props[a[i].name] = a[i].value;
+		}
+	}
+
+	// Optimization: fast-path for elements containing a single TextNode:
+	if (!hydrating && vchildren && vchildren.length === 1 && typeof vchildren[0] === 'string' && fc != null && fc.splitText !== undefined && fc.nextSibling == null) {
+		if (fc.nodeValue != vchildren[0]) {
+			fc.nodeValue = vchildren[0];
+		}
+	}
+	// otherwise, if there are existing or new children, diff them:
+	else if (vchildren && vchildren.length || fc != null) {
+			innerDiffNode(out, vchildren, context, mountAll, hydrating || props.dangerouslySetInnerHTML != null);
+		}
+
+	// Apply attributes/props from VNode to the DOM Element:
+	diffAttributes(out, vnode.attributes, props);
+
+	// restore previous SVG mode: (in case we're exiting an SVG namespace)
+	isSvgMode = prevSvgMode;
+
+	return out;
+}
+
+/** Apply child and attribute changes between a VNode and a DOM Node to the DOM.
+ *	@param {Element} dom			Element whose children should be compared & mutated
+ *	@param {Array} vchildren		Array of VNodes to compare to `dom.childNodes`
+ *	@param {Object} context			Implicitly descendant context object (from most recent `getChildContext()`)
+ *	@param {Boolean} mountAll
+ *	@param {Boolean} isHydrating	If `true`, consumes externally created elements similar to hydration
+ */
+function innerDiffNode(dom, vchildren, context, mountAll, isHydrating) {
+	var originalChildren = dom.childNodes,
+	    children = [],
+	    keyed = {},
+	    keyedLen = 0,
+	    min = 0,
+	    len = originalChildren.length,
+	    childrenLen = 0,
+	    vlen = vchildren ? vchildren.length : 0,
+	    j,
+	    c,
+	    f,
+	    vchild,
+	    child;
+
+	// Build up a map of keyed children and an Array of unkeyed children:
+	if (len !== 0) {
+		for (var i = 0; i < len; i++) {
+			var _child = originalChildren[i],
+			    props = _child['__preactattr_'],
+			    key = vlen && props ? _child._component ? _child._component.__key : props.key : null;
+			if (key != null) {
+				keyedLen++;
+				keyed[key] = _child;
+			} else if (props || (_child.splitText !== undefined ? isHydrating ? _child.nodeValue.trim() : true : isHydrating)) {
+				children[childrenLen++] = _child;
+			}
+		}
+	}
+
+	if (vlen !== 0) {
+		for (var i = 0; i < vlen; i++) {
+			vchild = vchildren[i];
+			child = null;
+
+			// attempt to find a node based on key matching
+			var key = vchild.key;
+			if (key != null) {
+				if (keyedLen && keyed[key] !== undefined) {
+					child = keyed[key];
+					keyed[key] = undefined;
+					keyedLen--;
+				}
+			}
+			// attempt to pluck a node of the same type from the existing children
+			else if (!child && min < childrenLen) {
+					for (j = min; j < childrenLen; j++) {
+						if (children[j] !== undefined && isSameNodeType(c = children[j], vchild, isHydrating)) {
+							child = c;
+							children[j] = undefined;
+							if (j === childrenLen - 1) childrenLen--;
+							if (j === min) min++;
+							break;
+						}
+					}
+				}
+
+			// morph the matched/found/created DOM child to match vchild (deep)
+			child = idiff(child, vchild, context, mountAll);
+
+			f = originalChildren[i];
+			if (child && child !== dom && child !== f) {
+				if (f == null) {
+					dom.appendChild(child);
+				} else if (child === f.nextSibling) {
+					removeNode(f);
+				} else {
+					dom.insertBefore(child, f);
+				}
+			}
+		}
+	}
+
+	// remove unused keyed children:
+	if (keyedLen) {
+		for (var i in keyed) {
+			if (keyed[i] !== undefined) recollectNodeTree(keyed[i], false);
+		}
+	}
+
+	// remove orphaned unkeyed children:
+	while (min <= childrenLen) {
+		if ((child = children[childrenLen--]) !== undefined) recollectNodeTree(child, false);
+	}
+}
+
+/** Recursively recycle (or just unmount) a node and its descendants.
+ *	@param {Node} node						DOM node to start unmount/removal from
+ *	@param {Boolean} [unmountOnly=false]	If `true`, only triggers unmount lifecycle, skips removal
+ */
+function recollectNodeTree(node, unmountOnly) {
+	var component = node._component;
+	if (component) {
+		// if node is owned by a Component, unmount that component (ends up recursing back here)
+		unmountComponent(component);
+	} else {
+		// If the node's VNode had a ref function, invoke it with null here.
+		// (this is part of the React spec, and smart for unsetting references)
+		if (node['__preactattr_'] != null && node['__preactattr_'].ref) node['__preactattr_'].ref(null);
+
+		if (unmountOnly === false || node['__preactattr_'] == null) {
+			removeNode(node);
+		}
+
+		removeChildren(node);
+	}
+}
+
+/** Recollect/unmount all children.
+ *	- we use .lastChild here because it causes less reflow than .firstChild
+ *	- it's also cheaper than accessing the .childNodes Live NodeList
+ */
+function removeChildren(node) {
+	node = node.lastChild;
+	while (node) {
+		var next = node.previousSibling;
+		recollectNodeTree(node, true);
+		node = next;
+	}
+}
+
+/** Apply differences in attributes from a VNode to the given DOM Element.
+ *	@param {Element} dom		Element with attributes to diff `attrs` against
+ *	@param {Object} attrs		The desired end-state key-value attribute pairs
+ *	@param {Object} old			Current/previous attributes (from previous VNode or element's prop cache)
+ */
+function diffAttributes(dom, attrs, old) {
+	var name;
+
+	// remove attributes no longer present on the vnode by setting them to undefined
+	for (name in old) {
+		if (!(attrs && attrs[name] != null) && old[name] != null) {
+			setAccessor(dom, name, old[name], old[name] = undefined, isSvgMode);
+		}
+	}
+
+	// add new & update changed attributes
+	for (name in attrs) {
+		if (name !== 'children' && name !== 'innerHTML' && (!(name in old) || attrs[name] !== (name === 'value' || name === 'checked' ? dom[name] : old[name]))) {
+			setAccessor(dom, name, old[name], old[name] = attrs[name], isSvgMode);
+		}
+	}
+}
+
+/** Retains a pool of Components for re-use, keyed on component name.
+ *	Note: since component names are not unique or even necessarily available, these are primarily a form of sharding.
+ *	@private
+ */
+var components = {};
+
+/** Reclaim a component for later re-use by the recycler. */
+function collectComponent(component) {
+	var name = component.constructor.name;
+	(components[name] || (components[name] = [])).push(component);
+}
+
+/** Create a component. Normalizes differences between PFC's and classful Components. */
+function createComponent(Ctor, props, context) {
+	var list = components[Ctor.name],
+	    inst;
+
+	if (Ctor.prototype && Ctor.prototype.render) {
+		inst = new Ctor(props, context);
+		Component.call(inst, props, context);
+	} else {
+		inst = new Component(props, context);
+		inst.constructor = Ctor;
+		inst.render = doRender;
+	}
+
+	if (list) {
+		for (var i = list.length; i--;) {
+			if (list[i].constructor === Ctor) {
+				inst.nextBase = list[i].nextBase;
+				list.splice(i, 1);
+				break;
+			}
+		}
+	}
+	return inst;
+}
+
+/** The `.render()` method for a PFC backing instance. */
+function doRender(props, state, context) {
+	return this.constructor(props, context);
+}
+
+/** Set a component's `props` (generally derived from JSX attributes).
+ *	@param {Object} props
+ *	@param {Object} [opts]
+ *	@param {boolean} [opts.renderSync=false]	If `true` and {@link options.syncComponentUpdates} is `true`, triggers synchronous rendering.
+ *	@param {boolean} [opts.render=true]			If `false`, no render will be triggered.
+ */
+function setComponentProps(component, props, opts, context, mountAll) {
+	if (component._disable) return;
+	component._disable = true;
+
+	if (component.__ref = props.ref) delete props.ref;
+	if (component.__key = props.key) delete props.key;
+
+	if (!component.base || mountAll) {
+		if (component.componentWillMount) component.componentWillMount();
+	} else if (component.componentWillReceiveProps) {
+		component.componentWillReceiveProps(props, context);
+	}
+
+	if (context && context !== component.context) {
+		if (!component.prevContext) component.prevContext = component.context;
+		component.context = context;
+	}
+
+	if (!component.prevProps) component.prevProps = component.props;
+	component.props = props;
+
+	component._disable = false;
+
+	if (opts !== 0) {
+		if (opts === 1 || options.syncComponentUpdates !== false || !component.base) {
+			renderComponent(component, 1, mountAll);
+		} else {
+			enqueueRender(component);
+		}
+	}
+
+	if (component.__ref) component.__ref(component);
+}
+
+/** Render a Component, triggering necessary lifecycle events and taking High-Order Components into account.
+ *	@param {Component} component
+ *	@param {Object} [opts]
+ *	@param {boolean} [opts.build=false]		If `true`, component will build and store a DOM node if not already associated with one.
+ *	@private
+ */
+function renderComponent(component, opts, mountAll, isChild) {
+	if (component._disable) return;
+
+	var props = component.props,
+	    state = component.state,
+	    context = component.context,
+	    previousProps = component.prevProps || props,
+	    previousState = component.prevState || state,
+	    previousContext = component.prevContext || context,
+	    isUpdate = component.base,
+	    nextBase = component.nextBase,
+	    initialBase = isUpdate || nextBase,
+	    initialChildComponent = component._component,
+	    skip = false,
+	    rendered,
+	    inst,
+	    cbase;
+
+	// if updating
+	if (isUpdate) {
+		component.props = previousProps;
+		component.state = previousState;
+		component.context = previousContext;
+		if (opts !== 2 && component.shouldComponentUpdate && component.shouldComponentUpdate(props, state, context) === false) {
+			skip = true;
+		} else if (component.componentWillUpdate) {
+			component.componentWillUpdate(props, state, context);
+		}
+		component.props = props;
+		component.state = state;
+		component.context = context;
+	}
+
+	component.prevProps = component.prevState = component.prevContext = component.nextBase = null;
+	component._dirty = false;
+
+	if (!skip) {
+		rendered = component.render(props, state, context);
+
+		// context to pass to the child, can be updated via (grand-)parent component
+		if (component.getChildContext) {
+			context = extend(extend({}, context), component.getChildContext());
+		}
+
+		var childComponent = rendered && rendered.nodeName,
+		    toUnmount,
+		    base;
+
+		if (typeof childComponent === 'function') {
+			// set up high order component link
+
+			var childProps = getNodeProps(rendered);
+			inst = initialChildComponent;
+
+			if (inst && inst.constructor === childComponent && childProps.key == inst.__key) {
+				setComponentProps(inst, childProps, 1, context, false);
+			} else {
+				toUnmount = inst;
+
+				component._component = inst = createComponent(childComponent, childProps, context);
+				inst.nextBase = inst.nextBase || nextBase;
+				inst._parentComponent = component;
+				setComponentProps(inst, childProps, 0, context, false);
+				renderComponent(inst, 1, mountAll, true);
+			}
+
+			base = inst.base;
+		} else {
+			cbase = initialBase;
+
+			// destroy high order component link
+			toUnmount = initialChildComponent;
+			if (toUnmount) {
+				cbase = component._component = null;
+			}
+
+			if (initialBase || opts === 1) {
+				if (cbase) cbase._component = null;
+				base = diff(cbase, rendered, context, mountAll || !isUpdate, initialBase && initialBase.parentNode, true);
+			}
+		}
+
+		if (initialBase && base !== initialBase && inst !== initialChildComponent) {
+			var baseParent = initialBase.parentNode;
+			if (baseParent && base !== baseParent) {
+				baseParent.replaceChild(base, initialBase);
+
+				if (!toUnmount) {
+					initialBase._component = null;
+					recollectNodeTree(initialBase, false);
+				}
+			}
+		}
+
+		if (toUnmount) {
+			unmountComponent(toUnmount);
+		}
+
+		component.base = base;
+		if (base && !isChild) {
+			var componentRef = component,
+			    t = component;
+			while (t = t._parentComponent) {
+				(componentRef = t).base = base;
+			}
+			base._component = componentRef;
+			base._componentConstructor = componentRef.constructor;
+		}
+	}
+
+	if (!isUpdate || mountAll) {
+		mounts.unshift(component);
+	} else if (!skip) {
+		// Ensure that pending componentDidMount() hooks of child components
+		// are called before the componentDidUpdate() hook in the parent.
+		// Note: disabled as it causes duplicate hooks, see https://github.com/developit/preact/issues/750
+		// flushMounts();
+
+		if (component.componentDidUpdate) {
+			component.componentDidUpdate(previousProps, previousState, previousContext);
+		}
+		if (options.afterUpdate) options.afterUpdate(component);
+	}
+
+	if (component._renderCallbacks != null) {
+		while (component._renderCallbacks.length) {
+			component._renderCallbacks.pop().call(component);
+		}
+	}
+
+	if (!diffLevel && !isChild) flushMounts();
+}
+
+/** Apply the Component referenced by a VNode to the DOM.
+ *	@param {Element} dom	The DOM node to mutate
+ *	@param {VNode} vnode	A Component-referencing VNode
+ *	@returns {Element} dom	The created/mutated element
+ *	@private
+ */
+function buildComponentFromVNode(dom, vnode, context, mountAll) {
+	var c = dom && dom._component,
+	    originalComponent = c,
+	    oldDom = dom,
+	    isDirectOwner = c && dom._componentConstructor === vnode.nodeName,
+	    isOwner = isDirectOwner,
+	    props = getNodeProps(vnode);
+	while (c && !isOwner && (c = c._parentComponent)) {
+		isOwner = c.constructor === vnode.nodeName;
+	}
+
+	if (c && isOwner && (!mountAll || c._component)) {
+		setComponentProps(c, props, 3, context, mountAll);
+		dom = c.base;
+	} else {
+		if (originalComponent && !isDirectOwner) {
+			unmountComponent(originalComponent);
+			dom = oldDom = null;
+		}
+
+		c = createComponent(vnode.nodeName, props, context);
+		if (dom && !c.nextBase) {
+			c.nextBase = dom;
+			// passing dom/oldDom as nextBase will recycle it if unused, so bypass recycling on L229:
+			oldDom = null;
+		}
+		setComponentProps(c, props, 1, context, mountAll);
+		dom = c.base;
+
+		if (oldDom && dom !== oldDom) {
+			oldDom._component = null;
+			recollectNodeTree(oldDom, false);
+		}
+	}
+
+	return dom;
+}
+
+/** Remove a component from the DOM and recycle it.
+ *	@param {Component} component	The Component instance to unmount
+ *	@private
+ */
+function unmountComponent(component) {
+	if (options.beforeUnmount) options.beforeUnmount(component);
+
+	var base = component.base;
+
+	component._disable = true;
+
+	if (component.componentWillUnmount) component.componentWillUnmount();
+
+	component.base = null;
+
+	// recursively tear down & recollect high-order component children:
+	var inner = component._component;
+	if (inner) {
+		unmountComponent(inner);
+	} else if (base) {
+		if (base['__preactattr_'] && base['__preactattr_'].ref) base['__preactattr_'].ref(null);
+
+		component.nextBase = base;
+
+		removeNode(base);
+		collectComponent(component);
+
+		removeChildren(base);
+	}
+
+	if (component.__ref) component.__ref(null);
+}
+
+/** Base Component class.
+ *	Provides `setState()` and `forceUpdate()`, which trigger rendering.
+ *	@public
+ *
+ *	@example
+ *	class MyFoo extends Component {
+ *		render(props, state) {
+ *			return <div />;
+ *		}
+ *	}
+ */
+function Component(props, context) {
+	this._dirty = true;
+
+	/** @public
+  *	@type {object}
+  */
+	this.context = context;
+
+	/** @public
+  *	@type {object}
+  */
+	this.props = props;
+
+	/** @public
+  *	@type {object}
+  */
+	this.state = this.state || {};
+}
+
+extend(Component.prototype, {
+
+	/** Returns a `boolean` indicating if the component should re-render when receiving the given `props` and `state`.
+  *	@param {object} nextProps
+  *	@param {object} nextState
+  *	@param {object} nextContext
+  *	@returns {Boolean} should the component re-render
+  *	@name shouldComponentUpdate
+  *	@function
+  */
+
+	/** Update component state by copying properties from `state` to `this.state`.
+  *	@param {object} state		A hash of state properties to update with new values
+  *	@param {function} callback	A function to be called once component state is updated
+  */
+	setState: function setState(state, callback) {
+		var s = this.state;
+		if (!this.prevState) this.prevState = extend({}, s);
+		extend(s, typeof state === 'function' ? state(s, this.props) : state);
+		if (callback) (this._renderCallbacks = this._renderCallbacks || []).push(callback);
+		enqueueRender(this);
+	},
+
+
+	/** Immediately perform a synchronous re-render of the component.
+  *	@param {function} callback		A function to be called after component is re-rendered.
+  *	@private
+  */
+	forceUpdate: function forceUpdate(callback) {
+		if (callback) (this._renderCallbacks = this._renderCallbacks || []).push(callback);
+		renderComponent(this, 2);
+	},
+
+
+	/** Accepts `props` and `state`, and returns a new Virtual DOM tree to build.
+  *	Virtual DOM is generally constructed via [JSX](http://jasonformat.com/wtf-is-jsx).
+  *	@param {object} props		Props (eg: JSX attributes) received from parent element/component
+  *	@param {object} state		The component's current state
+  *	@param {object} context		Context object (if a parent component has provided context)
+  *	@returns VNode
+  */
+	render: function render() {}
+});
+
+/** Render JSX into a `parent` Element.
+ *	@param {VNode} vnode		A (JSX) VNode to render
+ *	@param {Element} parent		DOM element to render into
+ *	@param {Element} [merge]	Attempt to re-use an existing DOM tree rooted at `merge`
+ *	@public
+ *
+ *	@example
+ *	// render a div into <body>:
+ *	render(<div id="hello">hello!</div>, document.body);
+ *
+ *	@example
+ *	// render a "Thing" component into #foo:
+ *	const Thing = ({ name }) => <span>{ name }</span>;
+ *	render(<Thing name="one" />, document.querySelector('#foo'));
+ */
+function render(vnode, parent, merge) {
+  return diff(merge, vnode, {}, false, parent, false);
+}
+
+var preact = {
+	h: h,
+	createElement: h,
+	cloneElement: cloneElement,
+	Component: Component,
+	render: render,
+	rerender: rerender,
+	options: options
+};
+
+
+/* harmony default export */ __webpack_exports__["default"] = (preact);
+//# sourceMappingURL=preact.esm.js.map
+
+
+/***/ }),
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _smoothscrollPolyfill = __webpack_require__(13);
+
+var _smoothscrollPolyfill2 = _interopRequireDefault(_smoothscrollPolyfill);
+
+__webpack_require__(14);
+
+__webpack_require__(15);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_smoothscrollPolyfill2.default.polyfill();
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* smoothscroll v0.4.0 - 2017 - Dustan Kasten, Jeremias Menichelli - MIT License */
+(function () {
+  'use strict';
+
+  /*
+   * aliases
+   * w: window global object
+   * d: document
+   */
+  var w = window;
+  var d = document;
+
+  /**
+   * indicates if a the current browser is made by Microsoft
+   * @method isMicrosoftBrowser
+   * @param {String} userAgent
+   * @returns {Boolean}
+   */
+  function isMicrosoftBrowser(userAgent) {
+    var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+    return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+  }
+
+   // polyfill
+  function polyfill() {
+    // return if scroll behavior is supported and polyfill is not forced
+    if ('scrollBehavior' in d.documentElement.style
+      && w.__forceSmoothScrollPolyfill__ !== true) {
+      return;
+    }
+
+    // globals
+    var Element = w.HTMLElement || w.Element;
+    var SCROLL_TIME = 468;
+
+    /*
+     * IE has rounding bug rounding down clientHeight and clientWidth and
+     * rounding up scrollHeight and scrollWidth causing false positives
+     * on hasScrollableSpace
+     */
+    var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+    // object gathering original scroll methods
+    var original = {
+      scroll: w.scroll || w.scrollTo,
+      scrollBy: w.scrollBy,
+      elementScroll: Element.prototype.scroll || scrollElement,
+      scrollIntoView: Element.prototype.scrollIntoView
+    };
+
+    // define timing method
+    var now = w.performance && w.performance.now
+      ? w.performance.now.bind(w.performance)
+      : Date.now;
+
+    /**
+     * changes scroll position inside an element
+     * @method scrollElement
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function scrollElement(x, y) {
+      this.scrollLeft = x;
+      this.scrollTop = y;
+    }
+
+    /**
+     * returns result of applying ease math function to a number
+     * @method ease
+     * @param {Number} k
+     * @returns {Number}
+     */
+    function ease(k) {
+      return 0.5 * (1 - Math.cos(Math.PI * k));
+    }
+
+    /**
+     * indicates if a smooth behavior should be applied
+     * @method shouldBailOut
+     * @param {Number|Object} firstArg
+     * @returns {Boolean}
+     */
+    function shouldBailOut(firstArg) {
+      if (firstArg === null
+        || typeof firstArg !== 'object'
+        || firstArg.behavior === undefined
+        || firstArg.behavior === 'auto'
+        || firstArg.behavior === 'instant') {
+        // first argument is not an object/null
+        // or behavior is auto, instant or undefined
+        return true;
+      }
+
+      if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+        // first argument is an object and behavior is smooth
+        return false;
+      }
+
+      // throw error when behavior is not supported
+      throw new TypeError(
+        'behavior member of ScrollOptions '
+        + firstArg.behavior
+        + ' is not a valid value for enumeration ScrollBehavior.'
+      );
+    }
+
+    /**
+     * indicates if an element has scrollable space in the provided axis
+     * @method hasScrollableSpace
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function hasScrollableSpace(el, axis) {
+      if (axis === 'Y') {
+        return (el.clientHeight + ROUNDING_TOLERANCE) < el.scrollHeight;
+      }
+
+      if (axis === 'X') {
+        return (el.clientWidth + ROUNDING_TOLERANCE) < el.scrollWidth;
+      }
+    }
+
+    /**
+     * indicates if an element has a scrollable overflow property in the axis
+     * @method canOverflow
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function canOverflow(el, axis) {
+      var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+      return overflowValue === 'auto' || overflowValue === 'scroll';
+    }
+
+    /**
+     * indicates if an element can be scrolled in either axis
+     * @method isScrollable
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function isScrollable(el) {
+      var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+      var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+      return isScrollableY || isScrollableX;
+    }
+
+    /**
+     * finds scrollable parent of an element
+     * @method findScrollableParent
+     * @param {Node} el
+     * @returns {Node} el
+     */
+    function findScrollableParent(el) {
+      var isBody;
+
+      do {
+        el = el.parentNode;
+
+        isBody = el === d.body;
+      } while (isBody === false && isScrollable(el) === false);
+
+      isBody = null;
+
+      return el;
+    }
+
+    /**
+     * self invoked function that, given a context, steps through scrolling
+     * @method step
+     * @param {Object} context
+     * @returns {undefined}
+     */
+    function step(context) {
+      var time = now();
+      var value;
+      var currentX;
+      var currentY;
+      var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+      // avoid elapsed times higher than one
+      elapsed = elapsed > 1 ? 1 : elapsed;
+
+      // apply easing to elapsed time
+      value = ease(elapsed);
+
+      currentX = context.startX + (context.x - context.startX) * value;
+      currentY = context.startY + (context.y - context.startY) * value;
+
+      context.method.call(context.scrollable, currentX, currentY);
+
+      // scroll more if we have not reached our destination
+      if (currentX !== context.x || currentY !== context.y) {
+        w.requestAnimationFrame(step.bind(w, context));
+      }
+    }
+
+    /**
+     * scrolls window or element with a smooth behavior
+     * @method smoothScroll
+     * @param {Object|Node} el
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function smoothScroll(el, x, y) {
+      var scrollable;
+      var startX;
+      var startY;
+      var method;
+      var startTime = now();
+
+      // define scroll context
+      if (el === d.body) {
+        scrollable = w;
+        startX = w.scrollX || w.pageXOffset;
+        startY = w.scrollY || w.pageYOffset;
+        method = original.scroll;
+      } else {
+        scrollable = el;
+        startX = el.scrollLeft;
+        startY = el.scrollTop;
+        method = scrollElement;
+      }
+
+      // scroll looping over a frame
+      step({
+        scrollable: scrollable,
+        method: method,
+        startTime: startTime,
+        startX: startX,
+        startY: startY,
+        x: x,
+        y: y
+      });
+    }
+
+    // ORIGINAL METHODS OVERRIDES
+    // w.scroll and w.scrollTo
+    w.scroll = w.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scroll.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object'
+              ? arguments[0]
+              : (w.scrollX || w.pageXOffset),
+          // use top prop, second argument if present or fallback to scrollY
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined
+              ? arguments[1]
+              : (w.scrollY || w.pageYOffset)
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left
+          : (w.scrollX || w.pageXOffset),
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top
+          : (w.scrollY || w.pageYOffset)
+      );
+    };
+
+    // w.scrollBy
+    w.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0])) {
+        original.scrollBy.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object'
+              ? arguments[0]
+              : 0,
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined
+             ? arguments[1]
+             : 0
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+        ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+      );
+    };
+
+    // Element.prototype.scroll and Element.prototype.scrollTo
+    Element.prototype.scroll = Element.prototype.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        // if one number is passed, throw error to match Firefox implementation
+        if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+          throw new SyntaxError('Value couldn\'t be converted');
+        }
+
+        original.elementScroll.call(
+          this,
+          // use left prop, first number argument or fallback to scrollLeft
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left
+            : typeof arguments[0] !== 'object'
+              ? ~~arguments[0]
+              : this.scrollLeft,
+          // use top prop, second argument or fallback to scrollTop
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top
+            : arguments[1] !== undefined
+              ? ~~arguments[1]
+              : this.scrollTop
+        );
+
+        return;
+      }
+
+      var left = arguments[0].left;
+      var top = arguments[0].top;
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        this,
+        this,
+        typeof left === 'undefined' ? this.scrollLeft : ~~left,
+        typeof top === 'undefined' ? this.scrollTop : ~~top
+      );
+    };
+
+    // Element.prototype.scrollBy
+    Element.prototype.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.elementScroll.call(
+          this,
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left + this.scrollLeft
+            : ~~arguments[0] + this.scrollLeft,
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top + this.scrollTop
+            : ~~arguments[1] + this.scrollTop
+        );
+
+        return;
+      }
+
+      this.scroll({
+        left: ~~arguments[0].left + this.scrollLeft,
+        top: ~~arguments[0].top + this.scrollTop,
+        behavior: arguments[0].behavior
+      });
+    };
+
+    // Element.prototype.scrollIntoView
+    Element.prototype.scrollIntoView = function() {
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scrollIntoView.call(
+          this,
+          arguments[0] === undefined
+            ? true
+            : arguments[0]
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      var scrollableParent = findScrollableParent(this);
+      var parentRects = scrollableParent.getBoundingClientRect();
+      var clientRects = this.getBoundingClientRect();
+
+      if (scrollableParent !== d.body) {
+        // reveal element inside parent
+        smoothScroll.call(
+          this,
+          scrollableParent,
+          scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+          scrollableParent.scrollTop + clientRects.top - parentRects.top
+        );
+
+        // reveal parent in viewport unless is fixed
+        if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+          w.scrollBy({
+            left: parentRects.left,
+            top: parentRects.top,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        // reveal element in viewport
+        w.scrollBy({
+          left: clientRects.left,
+          top: clientRects.top,
+          behavior: 'smooth'
+        });
+      }
+    };
+  }
+
+  if (true) {
+    // commonjs
+    module.exports = { polyfill: polyfill };
+  } else {
+    // global
+    polyfill();
+  }
+
+}());
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function CustomEvent(event, params) {
+  params = params || {
+    bubbles: false,
+    cancelable: false,
+    detail: undefined
+  };
+  var evt = document.createEvent('CustomEvent');
+  evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+  return evt;
+}
+
+if (typeof window.CustomEvent !== 'function') {
+  CustomEvent.prototype = window.Event.prototype;
+  window.CustomEvent = CustomEvent;
+}
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+
+// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+
+// MIT license
+
+/*eslint-disable*/
+(function () {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame) window.requestAnimationFrame = function (callback, element) {
+        var currTime = new Date().getTime();
+        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+        var id = window.setTimeout(function () {
+            callback(currTime + timeToCall);
+        }, timeToCall);
+        lastTime = currTime + timeToCall;
+        return id;
+    };
+
+    if (!window.cancelAnimationFrame) window.cancelAnimationFrame = function (id) {
+        clearTimeout(id);
+    };
+})();
+
+/***/ }),
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  return document.scrollWidth || document.body.clientWidth || window.innerWidth;
+};
+
+/***/ }),
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _preact = __webpack_require__(0);
+
+var _app = __webpack_require__(37);
+
+var _app2 = _interopRequireDefault(_app);
+
+__webpack_require__(12);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var photos = window.snPhotos; /** @jsx h */
+
+
+(0, _preact.render)((0, _preact.h)(_app2.default, { photos: photos }), document.getElementById('app'));
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+var _topLogo = __webpack_require__(38);
+
+var _topLogo2 = _interopRequireDefault(_topLogo);
+
+var _collage = __webpack_require__(39);
+
+var _collage2 = _interopRequireDefault(_collage);
+
+var _deepWater = __webpack_require__(47);
+
+var _deepWater2 = _interopRequireDefault(_deepWater);
+
+var _photos = __webpack_require__(48);
+
+var _photos2 = _interopRequireDefault(_photos);
+
+var _statistics = __webpack_require__(52);
+
+var _scrollLocation = __webpack_require__(55);
+
+var _timers = __webpack_require__(56);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+function getPhotoWithKey(photos, key) {
+  return photos.filter(function (p) {
+    return p.key === key;
+  })[0];
+}
+
+var App = function (_Component) {
+  _inherits(App, _Component);
+
+  function App(props) {
+    _classCallCheck(this, App);
+
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    var selectedPhotoKey = (window.location.href.match(/photos\/([^/]+)/) || [])[1];
+    _this.state = {
+      selectedPhoto: selectedPhotoKey ? getPhotoWithKey(_this.props.photos, selectedPhotoKey) : null
+    };
+    _this.onSelectPhoto = _this.onSelectPhoto.bind(_this);
+    _this.onHome = _this.onHome.bind(_this);
+    _this.onGoToPhotos = _this.onGoToPhotos.bind(_this);
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var photos = this.props.photos;
+
+      window.addEventListener('popstate', function (e) {
+        var photo = !!e.state && getPhotoWithKey(photos, e.state);
+        _this2.setState({
+          selectedPhoto: photo
+        });
+      });
+
+      window.addEventListener('unload', function () {
+        (0, _statistics.beaconStats)();
+      });
+    }
+  }, {
+    key: 'onSelectPhoto',
+    value: function onSelectPhoto(photo) {
+      var photoIsActive = !!this.state.selectedPhoto;
+      if (!photoIsActive) {
+        (0, _scrollLocation.setPosition)();
+      }
+      this.setState({
+        selectedPhoto: photo
+      });
+
+      window.history.pushState(photo.key, '', '/photos/' + photo.key);
+      window.scroll({ top: 0, behavior: 'smooth' });
+      (0, _statistics.addAction)();
+    }
+  }, {
+    key: 'onHome',
+    value: function onHome(e) {
+      if (e) {
+        e.preventDefault();
+      }
+      this.setState({
+        selectedPhoto: null
+      });
+
+      window.history.pushState(null, '', '/');
+      (0, _statistics.addAction)();
+      var prevPosition = (0, _scrollLocation.getPosition)();
+      if (prevPosition) {
+        (0, _timers.setTimeout)(function () {
+          window.scroll({ top: prevPosition });
+        });
+      } else {
+        this.onGoToPhotos();
+      }
+    }
+  }, {
+    key: 'onGoToPhotos',
+    value: function onGoToPhotos(e) {
+      if (e) {
+        e.preventDefault();
+      }
+      var y = document.querySelector('#top-logo').offsetHeight;
+      window.scroll({ top: y, behavior: 'smooth' });
+    }
+  }, {
+    key: 'getCurrentPhotoIndex',
+    value: function getCurrentPhotoIndex() {
+      var selectedPhoto = this.state.selectedPhoto;
+
+      if (!selectedPhoto) {
+        return 0;
+      }
+
+      var photos = this.props.photos;
+
+
+      return photos.indexOf(selectedPhoto);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var photos = this.props.photos;
+      var selectedPhoto = this.state.selectedPhoto;
+
+      return selectedPhoto ? (0, _preact.h)(_photos2.default, {
+        onHome: this.onHome,
+        onSelectPhoto: this.onSelectPhoto,
+        photos: photos,
+        selectedPhoto: selectedPhoto
+      }) : (0, _preact.h)(
+        'div',
+        null,
+        (0, _preact.h)(_topLogo2.default, { onGoToPhotos: this.onGoToPhotos }),
+        (0, _preact.h)(_collage2.default, { photos: photos, onSelectPhoto: this.onSelectPhoto }),
+        (0, _preact.h)(_deepWater2.default, { onHome: this.onHome })
+      );
+    }
+  }]);
+
+  return App;
+}(_preact.Component);
+
+exports.default = App;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _preact = __webpack_require__(0);
+
+var TopLogo = function TopLogo(_ref) {
+  var onGoToPhotos = _ref.onGoToPhotos;
+  return (0, _preact.h)(
+    "div",
+    { id: "top-logo" },
+    (0, _preact.h)("img", { src: "/static/images/logo.svg" }),
+    (0, _preact.h)("a", { href: "#collage", "class": "arrow", onClick: onGoToPhotos })
+  );
+}; /** @jsx h */
+exports.default = TopLogo;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+var _photo = __webpack_require__(40);
+
+var _photo2 = _interopRequireDefault(_photo);
+
+var _setWidthHelper = __webpack_require__(44);
+
+var _setWidthHelper2 = _interopRequireDefault(_setWidthHelper);
+
+var _throttle = __webpack_require__(45);
+
+var _throttle2 = _interopRequireDefault(_throttle);
+
+var _getWidth = __webpack_require__(26);
+
+var _getWidth2 = _interopRequireDefault(_getWidth);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+function hasScrollbar() {
+  return document.body.offsetHeight >= window.innerHeight;
+}
+
+var Collage = function (_Component) {
+  _inherits(Collage, _Component);
+
+  function Collage() {
+    _classCallCheck(this, Collage);
+
+    var _this = _possibleConstructorReturn(this, (Collage.__proto__ || Object.getPrototypeOf(Collage)).call(this));
+
+    _this.state = {
+      width: (0, _getWidth2.default)()
+    };
+
+    _this.updateWidth = _this.updateWidth.bind(_this);
+    return _this;
+  }
+
+  _createClass(Collage, [{
+    key: 'updateWidth',
+    value: function updateWidth() {
+      this.setState({
+        width: (0, _getWidth2.default)()
+      });
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      (0, _throttle2.default)('resize', 'optimizedResize');
+      window.addEventListener('optimizedResize', this.updateWidth);
+      // Force re-calculation of photo height/width if scrollbar is present
+      if (hasScrollbar()) {
+        this.updateWidth();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('optimizedResize', this.updateWidth);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          photos = _props.photos,
+          onSelectPhoto = _props.onSelectPhoto;
+
+      var photoGroups = (0, _setWidthHelper2.default)(photos);
+      var setDimensions = (0, _getWidth2.default)() >= 1100;
+      return (0, _preact.h)(
+        'div',
+        { id: 'collage' },
+        photoGroups.map(function (photoGroup, index) {
+          var style = setDimensions ? { height: photoGroup.height + 'px' } : {};
+          return (0, _preact.h)(
+            'div',
+            { key: 'photo-group-' + index, style: style },
+            photoGroup.photos.map(function (photo) {
+              return (0, _preact.h)(_photo2.default, {
+                key: photo.key,
+                setWidth: setDimensions,
+                photo: photo,
+                onSelect: onSelectPhoto
+              });
+            })
+          );
+        })
+      );
+    }
+  }]);
+
+  return Collage;
+}(_preact.Component);
+
+exports.default = Collage;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+var _transitionImage = __webpack_require__(41);
+
+var _transitionImage2 = _interopRequireDefault(_transitionImage);
+
+var _photoText = __webpack_require__(42);
+
+var _photoText2 = _interopRequireDefault(_photoText);
+
+var _srcSetBuilder = __webpack_require__(43);
+
+var _srcSetBuilder2 = _interopRequireDefault(_srcSetBuilder);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+var Photo = function (_Component) {
+  _inherits(Photo, _Component);
+
+  function Photo() {
+    _classCallCheck(this, Photo);
+
+    var _this = _possibleConstructorReturn(this, (Photo.__proto__ || Object.getPrototypeOf(Photo)).call(this));
+
+    _this.onClick = _this.onClick.bind(_this);
+    return _this;
+  }
+
+  _createClass(Photo, [{
+    key: 'onClick',
+    value: function onClick(e) {
+      e.preventDefault();
+      this.props.onSelect(this.props.photo);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          photo = _props.photo,
+          setWidth = _props.setWidth;
+
+      var style = {
+        width: setWidth ? photo.displayedWidth + 'px' : '100%'
+      };
+
+      return (0, _preact.h)(
+        'div',
+        { style: style },
+        (0, _preact.h)(
+          'a',
+          { href: '/photos/' + photo.key, onClick: this.onClick },
+          (0, _preact.h)(
+            'div',
+            { 'class': 'overlay-title-wrapper' },
+            (0, _preact.h)(
+              'p',
+              { 'class': 'title' },
+              photo.title
+            ),
+            (0, _preact.h)(
+              'p',
+              { 'class': 'location' },
+              photo.location
+            )
+          ),
+          (0, _preact.h)(_transitionImage2.default, {
+            alt: photo.title,
+            src: photo.sizes.xsmall.url,
+            srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
+            sizes: '(min-width: 1100px) 30vw, 100vw'
+          })
+        ),
+        (0, _preact.h)(
+          'div',
+          { className: 'sn-dn-ns sn-mb-l' },
+          (0, _preact.h)(_photoText2.default, { photo: photo })
+        )
+      );
+    }
+  }]);
+
+  return Photo;
+}(_preact.Component);
+
+exports.default = Photo;
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+function noop() {}
+
+var TransitionImage = function (_Component) {
+  _inherits(TransitionImage, _Component);
+
+  function TransitionImage() {
+    _classCallCheck(this, TransitionImage);
+
+    var _this = _possibleConstructorReturn(this, (TransitionImage.__proto__ || Object.getPrototypeOf(TransitionImage)).call(this));
+
+    _this.state = {
+      visible: false
+    };
+    _this.onLoad = _this.onLoad.bind(_this);
+    return _this;
+  }
+
+  _createClass(TransitionImage, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.img.onload = this.onLoad;
+      this.img.setAttribute('src', this.props.src);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.src !== this.props.src) {
+        this.img.setAttribute('src', this.props.src);
+        this.setState({
+          visible: false
+        });
+      }
+    }
+  }, {
+    key: 'onLoad',
+    value: function onLoad() {
+      if (this.state.visible) {
+        // Some browsers call onLoad multiple times, perhaps due to srcSet
+        return;
+      }
+
+      this.setState({
+        visible: true
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          alt = _props.alt,
+          onClick = _props.onClick,
+          srcSet = _props.srcSet,
+          sizes = _props.sizes,
+          width = _props.width;
+
+
+      return (0, _preact.h)('img', {
+        alt: alt || '',
+        ref: function ref(img) {
+          _this2.img = img;
+        },
+        className: 'transition-image',
+        onClick: onClick || noop,
+        style: { opacity: this.state.visible ? 1 : 0 },
+        srcSet: srcSet,
+        sizes: sizes,
+        width: width
+      });
+    }
+  }]);
+
+  return TransitionImage;
+}(_preact.Component);
+
+exports.default = TransitionImage;
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _preact = __webpack_require__(0);
+
+var PhotoText = function PhotoText(_ref) {
+  var photo = _ref.photo;
+  return (0, _preact.h)(
+    "div",
+    { className: "photo-text-wrapper" },
+    (0, _preact.h)(
+      "p",
+      { className: "title" },
+      photo.title
+    ),
+    (0, _preact.h)(
+      "p",
+      { className: "latin" },
+      photo.latin
+    ),
+    (0, _preact.h)(
+      "p",
+      { className: "description" },
+      photo.description
+    ),
+    (0, _preact.h)(
+      "p",
+      { className: "location" },
+      photo.location
+    )
+  );
+}; /** @jsx h */
+exports.default = PhotoText;
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (sizes) {
+  return Object.keys(sizes).reverse().map(function (key) {
+    var size = sizes[key];
+    return size.url + ' ' + size.width + 'w';
+  }).join(', ');
+};
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (_photos) {
+  var photos = [].concat(_toConsumableArray(_photos));
+  var totalWidth = Math.min((0, _getWidth2.default)(), 2560);
+  var groups = [];
+
+  while (photos.length) {
+    var subGroup = {
+      height: null,
+      photos: []
+    };
+    var numThisRow = 3;
+    var portraitScaleFactor = 1;
+    var landscapeScaleFactor = 1;
+    var numNext5 = getNumPortrait(photos.slice(0, 5));
+
+    if (numNext5 && numNext5 < 5) {
+      var numNext4 = getNumPortrait(photos.slice(0, 4));
+      var numNext3 = getNumPortrait(photos.slice(0, 3));
+
+      if (numNext5 === 4) {
+        // ??
+        numThisRow = 5;
+      } else if (numNext5 === 3) {
+        numThisRow = 5;
+        portraitScaleFactor = 0.6;
+        landscapeScaleFactor = 1.3;
+      } else if (numNext4 === 2) {
+        numThisRow = 4;
+        portraitScaleFactor = 0.6;
+        landscapeScaleFactor = 1.35;
+      } else if (numNext3 === 1) {
+        portraitScaleFactor = 0.5;
+        landscapeScaleFactor = 1.2;
+      }
+    }
+
+    for (var i = 0; i < numThisRow; i++) {
+      var photoToAdd = photos.shift();
+      if (!photoToAdd) {
+        return groups;
+      }
+      var scale = photoToAdd.mode === 'portrait' ? portraitScaleFactor : landscapeScaleFactor;
+
+      var marginsInRow = (numThisRow + 1) * 8;
+      photoToAdd.displayedWidth = (totalWidth - marginsInRow) / numThisRow * scale;
+      subGroup.photos.push(photoToAdd);
+      var ratio = photoToAdd.sizes.small.height / photoToAdd.sizes.small.width;
+      var height = photoToAdd.displayedWidth * ratio;
+      subGroup.height = subGroup.height ? Math.min(subGroup.height, height) : height;
+      // next row
+    }
+    groups.push(subGroup);
+  }
+
+  return groups;
+};
+
+var _getWidth = __webpack_require__(26);
+
+var _getWidth2 = _interopRequireDefault(_getWidth);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function getNumPortrait(photos) {
+  return photos.filter(function (photo) {
+    return photo.mode === 'portrait';
+  }).length;
+}
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _throttleit = __webpack_require__(46);
+
+var _throttleit2 = _interopRequireDefault(_throttleit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (type, name, obj) {
+  obj = obj || window;
+  var running = false;
+  var func = (0, _throttleit2.default)(function () {
+    if (running) {
+      return;
+    }
+    running = true;
+    window.requestAnimationFrame(function () {
+      obj.dispatchEvent(new window.CustomEvent(name));
+      running = false;
+    });
+  }, 200);
+  obj.addEventListener(type, func);
+};
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
+module.exports = throttle;
+
+/**
+ * Returns a new function that, when invoked, invokes `func` at most once per `wait` milliseconds.
+ *
+ * @param {Function} func Function to wrap.
+ * @param {Number} wait Number of milliseconds that must elapse between `func` invocations.
+ * @return {Function} A new function that wraps the `func` function passed in.
+ */
+
+function throttle (func, wait) {
+  var ctx, args, rtn, timeoutID; // caching
+  var last = 0;
+
+  return function throttled () {
+    ctx = this;
+    args = arguments;
+    var delta = new Date() - last;
+    if (!timeoutID)
+      if (delta >= wait) call();
+      else timeoutID = setTimeout(call, wait - delta);
+    return rtn;
+  };
+
+  function call () {
+    timeoutID = 0;
+    last = +new Date();
+    rtn = func.apply(ctx, args);
+    ctx = null;
+    args = null;
+  }
+}
+
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _preact = __webpack_require__(0);
+
+var DeepWater = function DeepWater(_ref) {
+  var onHome = _ref.onHome;
+  return (0, _preact.h)(
+    "div",
+    { id: "deep-water" },
+    (0, _preact.h)(
+      "div",
+      { "class": "link-wrapper" },
+      (0, _preact.h)(
+        "a",
+        { href: "#", onClick: onHome },
+        "DROP YOUR WEIGHTS"
+      )
+    )
+  );
+}; /** @jsx h */
+exports.default = DeepWater;
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+var _photo = __webpack_require__(49);
+
+var _photo2 = _interopRequireDefault(_photo);
+
+var _navigation = __webpack_require__(50);
+
+var _navigation2 = _interopRequireDefault(_navigation);
+
+var _keyboardEventHandler = __webpack_require__(51);
+
+var _keyboardEventHandler2 = _interopRequireDefault(_keyboardEventHandler);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+var PhotosWrapper = function (_Component) {
+  _inherits(PhotosWrapper, _Component);
+
+  function PhotosWrapper() {
+    _classCallCheck(this, PhotosWrapper);
+
+    var _this = _possibleConstructorReturn(this, (PhotosWrapper.__proto__ || Object.getPrototypeOf(PhotosWrapper)).call(this));
+
+    _this.onNextPhoto = _this.onNextPhoto.bind(_this);
+    _this.onPreviousPhoto = _this.onPreviousPhoto.bind(_this);
+    return _this;
+  }
+
+  _createClass(PhotosWrapper, [{
+    key: 'getCurrentPhotoIndex',
+    value: function getCurrentPhotoIndex() {
+      var _props = this.props,
+          photos = _props.photos,
+          selectedPhoto = _props.selectedPhoto;
+
+      return photos.indexOf(selectedPhoto) || 0;
+    }
+  }, {
+    key: 'getNextPhoto',
+    value: function getNextPhoto() {
+      var photos = this.props.photos;
+
+      return photos[this.getCurrentPhotoIndex() + 1] || photos[0];
+    }
+  }, {
+    key: 'getPreviousPhoto',
+    value: function getPreviousPhoto() {
+      var photos = this.props.photos;
+
+      return photos[this.getCurrentPhotoIndex() - 1] || photos[photos.length - 1];
+    }
+  }, {
+    key: 'onNextPhoto',
+    value: function onNextPhoto(e) {
+      if (e) {
+        e.preventDefault();
+      }
+      this.props.onSelectPhoto(this.getNextPhoto());
+    }
+  }, {
+    key: 'onPreviousPhoto',
+    value: function onPreviousPhoto(e) {
+      if (e) {
+        e.preventDefault();
+      }
+      this.props.onSelectPhoto(this.getPreviousPhoto());
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var selectedPhoto = this.props.selectedPhoto;
+
+      var nextPhoto = this.getNextPhoto();
+      return (0, _preact.h)(
+        'div',
+        null,
+        (0, _preact.h)(_keyboardEventHandler2.default, {
+          onNext: this.onNextPhoto,
+          onPrevious: this.onPreviousPhoto
+        }),
+        (0, _preact.h)(_photo2.default, {
+          photo: selectedPhoto,
+          preloadPhoto: nextPhoto,
+          next: (0, _preact.h)('a', {
+            href: '/photos/' + nextPhoto.key,
+            'class': 'click-next',
+            onClick: this.onNextPhoto
+          }),
+          previous: (0, _preact.h)('a', {
+            href: '/photos/' + this.getPreviousPhoto().key,
+            'class': 'click-previous',
+            onClick: this.onPreviousPhoto
+          })
+        }),
+        (0, _preact.h)(_navigation2.default, { onHome: this.props.onHome })
+      );
+    }
+  }]);
+
+  return PhotosWrapper;
+}(_preact.Component);
+
+exports.default = PhotosWrapper;
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+var _photoText = __webpack_require__(42);
+
+var _photoText2 = _interopRequireDefault(_photoText);
+
+var _sidebar = __webpack_require__(106);
+
+var _sidebar2 = _interopRequireDefault(_sidebar);
+
+var _transitionImage = __webpack_require__(41);
+
+var _transitionImage2 = _interopRequireDefault(_transitionImage);
+
+var _srcSetBuilder = __webpack_require__(43);
+
+var _srcSetBuilder2 = _interopRequireDefault(_srcSetBuilder);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+function preload(photo) {
+  var image = new Image();
+  image.src = photo.sizes.large.url;
+  image.setAttribute('srcset', (0, _srcSetBuilder2.default)(photo.sizes));
+  image.setAttribute('sizes', '100vw');
+  window.preloadedPhoto = image;
+}
+
+var Photo = function (_Component) {
+  _inherits(Photo, _Component);
+
+  function Photo(props) {
+    _classCallCheck(this, Photo);
+
+    var _this = _possibleConstructorReturn(this, (Photo.__proto__ || Object.getPrototypeOf(Photo)).call(this));
+
+    preload(props.preloadPhoto);
+    return _this;
+  }
+
+  _createClass(Photo, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      preload(nextProps.preloadPhoto);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          next = _props.next,
+          preloadPhoto = _props.preloadPhoto,
+          previous = _props.previous,
+          photo = _props.photo;
+
+      return (0, _preact.h)(
+        'div',
+        { 'class': 'photo-and-navigation ' + photo.mode },
+        (0, _preact.h)(
+          'div',
+          { 'class': 'photo-and-sidebar' },
+          (0, _preact.h)(
+            'div',
+            { 'class': 'photo-wrapper' },
+            previous,
+            next,
+            (0, _preact.h)(_transitionImage2.default, {
+              alt: photo.title,
+              src: photo.sizes.large.url,
+              srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
+              sizes: '100vw'
+            })
+          ),
+          (0, _preact.h)(_photoText2.default, { photo: photo }),
+          (0, _preact.h)(_sidebar2.default, { photo: photo })
+        )
+      );
+    }
+  }]);
+
+  return Photo;
+}(_preact.Component);
+
+exports.default = Photo;
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _preact = __webpack_require__(0);
+
+var Navigation = function Navigation(_ref) {
+  var onHome = _ref.onHome;
+  return (0, _preact.h)(
+    "div",
+    { id: "navigation" },
+    (0, _preact.h)(
+      "a",
+      { "class": "home", href: "/", title: "All photos", onClick: onHome },
+      (0, _preact.h)(
+        "svg",
+        { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 85.04 54.67" },
+        (0, _preact.h)("rect", {
+          fill: "currentColor",
+          "class": "cls-1",
+          y: "20.25",
+          width: "24.3",
+          height: "14.17"
+        }),
+        (0, _preact.h)("rect", { fill: "currentColor", y: "40.49", width: "24.3", height: "14.17" }),
+        (0, _preact.h)("rect", {
+          fill: "currentColor",
+          x: "30.37",
+          y: "20.25",
+          width: "24.3",
+          height: "14.17"
+        }),
+        (0, _preact.h)("rect", {
+          fill: "currentColor",
+          x: "60.74",
+          y: "20.25",
+          width: "24.3",
+          height: "14.17"
+        }),
+        (0, _preact.h)("rect", {
+          fill: "currentColor",
+          x: "30.37",
+          y: "40.49",
+          width: "24.3",
+          height: "14.17"
+        }),
+        (0, _preact.h)("rect", {
+          fill: "currentColor",
+          x: "60.74",
+          y: "40.49",
+          width: "24.3",
+          height: "14.17"
+        }),
+        (0, _preact.h)("rect", { fill: "currentColor", width: "24.3", height: "14.17" }),
+        (0, _preact.h)("rect", { fill: "currentColor", x: "30.37", width: "24.3", height: "14.17" }),
+        (0, _preact.h)("rect", { fill: "currentColor", x: "60.74", width: "24.3", height: "14.17" })
+      )
+    ),
+    (0, _preact.h)(
+      "div",
+      { "class": "link-wrapper" },
+      (0, _preact.h)(
+        "a",
+        { href: "/", onClick: onHome },
+        "See all photos"
+      )
+    )
+  );
+}; /** @jsx h */
+exports.default = Navigation;
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+var LEFT_KEYS = [33, // pgup
+37 // arrow left
+];
+var RIGHT_KEYS = [32, // space
+34, // pgdn
+39 // arrow right
+];
+
+var KeyboardEventHandler = function (_Component) {
+  _inherits(KeyboardEventHandler, _Component);
+
+  function KeyboardEventHandler() {
+    _classCallCheck(this, KeyboardEventHandler);
+
+    var _this = _possibleConstructorReturn(this, (KeyboardEventHandler.__proto__ || Object.getPrototypeOf(KeyboardEventHandler)).call(this));
+
+    _this.handleKeyUp = _this.handleKeyUp.bind(_this);
+    return _this;
+  }
+
+  _createClass(KeyboardEventHandler, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      window.addEventListener('keyup', this.handleKeyUp);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('keyup', this.handleKeyUp);
+    }
+  }, {
+    key: 'shouldComponentUpdate',
+    value: function shouldComponentUpdate() {
+      return false;
+    }
+  }, {
+    key: 'handleKeyUp',
+    value: function handleKeyUp(e) {
+      var keyCode = e.keyCode || e.detail.keyCode;
+      var _props = this.props,
+          onPrevious = _props.onPrevious,
+          onNext = _props.onNext;
+
+
+      if (LEFT_KEYS.indexOf(keyCode) !== -1) {
+        e.preventDefault();
+        onPrevious();
+      } else if (RIGHT_KEYS.indexOf(keyCode) !== -1) {
+        e.preventDefault();
+        onNext();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return null;
+    }
+  }]);
+
+  return KeyboardEventHandler;
+}(_preact.Component);
+
+exports.default = KeyboardEventHandler;
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.beaconStats = exports.addAction = undefined;
+
+var _debounce = __webpack_require__(53);
+
+var _debounce2 = _interopRequireDefault(_debounce);
+
+var _idGenerator = __webpack_require__(54);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DELAY = 3000;
+var id = (0, _idGenerator.uid)();
+
+var numActions = 0;
+
+function doNotTrack() {
+  var _window = window,
+      navigator = _window.navigator,
+      doNotTrack = _window.doNotTrack;
+
+  return navigator.doNotTrack || navigator.msDoNotTrack || doNotTrack;
+}
+
+function getData() {
+  return {
+    id: id,
+    numActions: numActions
+  };
+}
+
+function send() {
+  if (doNotTrack()) {
+    return;
+  }
+
+  var http = new XMLHttpRequest();
+  var url = '/stats';
+  http.open('POST', url, true);
+  http.setRequestHeader('Content-type', 'application/json');
+  http.send(JSON.stringify(getData()));
+}
+
+function beaconSend() {
+  if (doNotTrack() || typeof navigator.sendBeacon !== 'function') {
+    return;
+  }
+
+  navigator.sendBeacon('/stats', JSON.stringify(getData()));
+}
+
+var postStats = (0, _debounce2.default)(send, DELAY);
+
+var addAction = exports.addAction = function addAction() {
+  numActions++;
+  postStats();
+};
+
+var beaconStats = exports.beaconStats = beaconSend;
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports) {
+
+/**
+ * Returns a function, that, as long as it continues to be invoked, will not
+ * be triggered. The function will be called after it stops being called for
+ * N milliseconds. If `immediate` is passed, trigger the function on the
+ * leading edge, instead of the trailing. The function also has a property 'clear' 
+ * that is a function which will clear the timer to prevent previously scheduled executions. 
+ *
+ * @source underscore.js
+ * @see http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
+ * @param {Function} function to wrap
+ * @param {Number} timeout in ms (`100`)
+ * @param {Boolean} whether to execute at the beginning (`false`)
+ * @api public
+ */
+
+module.exports = function debounce(func, wait, immediate){
+  var timeout, args, context, timestamp, result;
+  if (null == wait) wait = 100;
+
+  function later() {
+    var last = Date.now() - timestamp;
+
+    if (last < wait && last >= 0) {
+      timeout = setTimeout(later, wait - last);
+    } else {
+      timeout = null;
+      if (!immediate) {
+        result = func.apply(context, args);
+        context = args = null;
+      }
+    }
+  };
+
+  var debounced = function(){
+    context = this;
+    args = arguments;
+    timestamp = Date.now();
+    var callNow = immediate && !timeout;
+    if (!timeout) timeout = setTimeout(later, wait);
+    if (callNow) {
+      result = func.apply(context, args);
+      context = args = null;
+    }
+
+    return result;
+  };
+
+  debounced.clear = function() {
+    if (timeout) {
+      clearTimeout(timeout);
+      timeout = null;
+    }
+  };
+  
+  debounced.flush = function() {
+    if (timeout) {
+      result = func.apply(context, args);
+      context = args = null;
+      
+      clearTimeout(timeout);
+      timeout = null;
+    }
+  };
+
+  return debounced;
+};
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function s4() {
+  return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+}
+
+module.exports.id = function () {
+  return s4() + "-" + s4();
+};
+
+module.exports.uid = function () {
+  return "" + s4() + s4() + "-" + s4() + s4();
+};
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var setPosition = exports.setPosition = function setPosition() {
+  try {
+    window.sessionStorage.setItem('scrollPos', window.scrollY);
+  } catch (e) {}
+};
+
+var getPosition = exports.getPosition = function getPosition() {
+  try {
+    return window.sessionStorage.getItem('scrollPos');
+  } catch (e) {}
+};
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var apply = Function.prototype.apply;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) {
+  if (timeout) {
+    timeout.close();
+  }
+};
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(window, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// setimmediate attaches itself to the global object
+__webpack_require__(57);
+exports.setImmediate = setImmediate;
+exports.clearImmediate = clearImmediate;
+
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
+    "use strict";
+
+    if (global.setImmediate) {
+        return;
+    }
+
+    var nextHandle = 1; // Spec says greater than zero
+    var tasksByHandle = {};
+    var currentlyRunningATask = false;
+    var doc = global.document;
+    var registerImmediate;
+
+    function setImmediate(callback) {
+      // Callback can either be a function or a string
+      if (typeof callback !== "function") {
+        callback = new Function("" + callback);
+      }
+      // Copy function arguments
+      var args = new Array(arguments.length - 1);
+      for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i + 1];
+      }
+      // Store and register the task
+      var task = { callback: callback, args: args };
+      tasksByHandle[nextHandle] = task;
+      registerImmediate(nextHandle);
+      return nextHandle++;
+    }
+
+    function clearImmediate(handle) {
+        delete tasksByHandle[handle];
+    }
+
+    function run(task) {
+        var callback = task.callback;
+        var args = task.args;
+        switch (args.length) {
+        case 0:
+            callback();
+            break;
+        case 1:
+            callback(args[0]);
+            break;
+        case 2:
+            callback(args[0], args[1]);
+            break;
+        case 3:
+            callback(args[0], args[1], args[2]);
+            break;
+        default:
+            callback.apply(undefined, args);
+            break;
+        }
+    }
+
+    function runIfPresent(handle) {
+        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+        // So if we're currently running a task, we'll need to delay this invocation.
+        if (currentlyRunningATask) {
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // "too much recursion" error.
+            setTimeout(runIfPresent, 0, handle);
+        } else {
+            var task = tasksByHandle[handle];
+            if (task) {
+                currentlyRunningATask = true;
+                try {
+                    run(task);
+                } finally {
+                    clearImmediate(handle);
+                    currentlyRunningATask = false;
+                }
+            }
+        }
+    }
+
+    function installNextTickImplementation() {
+        registerImmediate = function(handle) {
+            process.nextTick(function () { runIfPresent(handle); });
+        };
+    }
+
+    function canUsePostMessage() {
+        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
+        // where `global.postMessage` means something completely different and can't be used for this purpose.
+        if (global.postMessage && !global.importScripts) {
+            var postMessageIsAsynchronous = true;
+            var oldOnMessage = global.onmessage;
+            global.onmessage = function() {
+                postMessageIsAsynchronous = false;
+            };
+            global.postMessage("", "*");
+            global.onmessage = oldOnMessage;
+            return postMessageIsAsynchronous;
+        }
+    }
+
+    function installPostMessageImplementation() {
+        // Installs an event handler on `global` for the `message` event: see
+        // * https://developer.mozilla.org/en/DOM/window.postMessage
+        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
+
+        var messagePrefix = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage = function(event) {
+            if (event.source === global &&
+                typeof event.data === "string" &&
+                event.data.indexOf(messagePrefix) === 0) {
+                runIfPresent(+event.data.slice(messagePrefix.length));
+            }
+        };
+
+        if (global.addEventListener) {
+            global.addEventListener("message", onGlobalMessage, false);
+        } else {
+            global.attachEvent("onmessage", onGlobalMessage);
+        }
+
+        registerImmediate = function(handle) {
+            global.postMessage(messagePrefix + handle, "*");
+        };
+    }
+
+    function installMessageChannelImplementation() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+            var handle = event.data;
+            runIfPresent(handle);
+        };
+
+        registerImmediate = function(handle) {
+            channel.port2.postMessage(handle);
+        };
+    }
+
+    function installReadyStateChangeImplementation() {
+        var html = doc.documentElement;
+        registerImmediate = function(handle) {
+            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+            var script = doc.createElement("script");
+            script.onreadystatechange = function () {
+                runIfPresent(handle);
+                script.onreadystatechange = null;
+                html.removeChild(script);
+                script = null;
+            };
+            html.appendChild(script);
+        };
+    }
+
+    function installSetTimeoutImplementation() {
+        registerImmediate = function(handle) {
+            setTimeout(runIfPresent, 0, handle);
+        };
+    }
+
+    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
+    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
+
+    // Don't get fooled by e.g. browserify environments.
+    if ({}.toString.call(global.process) === "[object process]") {
+        // For Node.js before 0.9
+        installNextTickImplementation();
+
+    } else if (canUsePostMessage()) {
+        // For non-IE10 modern browsers
+        installPostMessageImplementation();
+
+    } else if (global.MessageChannel) {
+        // For web workers, where supported
+        installMessageChannelImplementation();
+
+    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
+        // For IE 6–8
+        installReadyStateChangeImplementation();
+
+    } else {
+        // For older browsers
+        installSetTimeoutImplementation();
+    }
+
+    attachTo.setImmediate = setImmediate;
+    attachTo.clearImmediate = clearImmediate;
+}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58), __webpack_require__(59)))
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(0);
+
+var _photoText = __webpack_require__(42);
+
+var _photoText2 = _interopRequireDefault(_photoText);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** @jsx h */
+
+
+var Sidebar = function (_Component) {
+  _inherits(Sidebar, _Component);
+
+  function Sidebar() {
+    _classCallCheck(this, Sidebar);
+
+    var _this = _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).call(this));
+
+    _this.handleClickDetails = _this.handleClickDetails.bind(_this);
+    _this.state = {
+      expanded: true
+    };
+    return _this;
+  }
+
+  _createClass(Sidebar, [{
+    key: 'handleClickDetails',
+    value: function handleClickDetails(e) {
+      e.preventDefault();
+      this.setState({
+        expanded: !this.state.expanded
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var photo = this.props.photo;
+      var expanded = this.state.expanded;
+
+
+      return (0, _preact.h)(
+        'div',
+        { id: 'sidebar-wrapper' },
+        (0, _preact.h)(
+          'div',
+          { id: 'sidebar' },
+          (0, _preact.h)(
+            'div',
+            { className: expanded ? 'expanded' : '' },
+            (0, _preact.h)(
+              'a',
+              {
+                href: '#',
+                title: expanded ? 'Close info box' : 'Read more about this photo',
+                tabIndex: '0',
+                'aria-role': 'button',
+                onClick: this.handleClickDetails
+              },
+              '+'
+            )
+          )
+        ),
+        (0, _preact.h)(
+          'div',
+          { id: 'sidebar-text', 'class': expanded ? 'expanded' : '' },
+          (0, _preact.h)(_photoText2.default, { photo: photo })
+        )
+      );
+    }
+  }]);
+
+  return Sidebar;
+}(_preact.Component);
+
+exports.default = Sidebar;
+
+/***/ })
+/******/ ]);
+//# sourceMappingURL=bundle.js.map

@@ -44,6 +44,7 @@ class PhotosWrapper extends Component {
 
   render() {
     const { selectedPhoto } = this.props
+    const nextPhoto = this.getNextPhoto()
     return (
       <div>
         <KeyboardEventHandler
@@ -52,9 +53,10 @@ class PhotosWrapper extends Component {
         />
         <Photo
           photo={selectedPhoto}
+          preloadPhoto={nextPhoto}
           next={
             <a
-              href={`/photos/${this.getNextPhoto().key}`}
+              href={`/photos/${nextPhoto.key}`}
               class="click-next"
               onClick={this.onNextPhoto}
             />
