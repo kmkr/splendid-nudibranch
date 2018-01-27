@@ -34,8 +34,8 @@ class Photo extends Component {
             {next}
             <img
               alt={photo.title}
-              src={photo.sizes.large.url}
               srcSet={buildSrcSet(photo.sizes)}
+              src={photo.sizes.large.url}
               sizes="100vw"
             />
           </div>
