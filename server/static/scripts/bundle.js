@@ -2598,32 +2598,30 @@ var _srcSetBuilder2 = _interopRequireDefault(_srcSetBuilder);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Photo = function Photo(_ref) {
-  var children = _ref.children,
-      next = _ref.next,
+  var next = _ref.next,
       previous = _ref.previous,
       photo = _ref.photo;
   return (0, _preact.h)(
     'div',
     { 'class': 'photo-and-navigation ' + photo.mode },
-    previous,
-    next,
     (0, _preact.h)(
       'div',
-      { 'class': 'photo-wrapper' },
+      { 'class': 'photo-and-sidebar' },
       (0, _preact.h)(
         'div',
-        { 'class': 'photo-and-sidebar' },
+        { 'class': 'photo-wrapper' },
+        previous,
+        next,
         (0, _preact.h)(_transitionImage2.default, {
           alt: photo.title,
           src: photo.sizes.large.url,
           srcSet: (0, _srcSetBuilder2.default)(photo.sizes),
           sizes: '100vw'
-        }),
-        (0, _preact.h)(_photoText2.default, { photo: photo }),
-        (0, _preact.h)(_sidebar2.default, { photo: photo })
-      )
-    ),
-    children
+        })
+      ),
+      (0, _preact.h)(_photoText2.default, { photo: photo }),
+      (0, _preact.h)(_sidebar2.default, { photo: photo })
+    )
   );
 }; /** @jsx h */
 exports.default = Photo;

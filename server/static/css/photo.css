@@ -21,15 +21,14 @@
   }
 
   .photo-wrapper {
-    position: absolute;
-    text-align: center;
+    position: relative;
   }
 
-  .photo-wrapper .transition-image {
+  .photo-and-navigation .transition-image {
     transition-duration: 0.1s;
   }
 
-  .photo-wrapper img {
+  .photo-and-navigation img {
     max-width: 100%;
     max-height: calc(100vh - 60px);
   }

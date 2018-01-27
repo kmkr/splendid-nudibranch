@@ -6,23 +6,22 @@ import Sidebar from './sidebar'
 import TransitionImage from '../transition-image'
 import buildSrcSet from './src-set-builder'
 
-const Photo = ({ children, next, previous, photo }) => (
+const Photo = ({ next, previous, photo }) => (
   <div class={`photo-and-navigation ${photo.mode}`}>
-    {previous}
-    {next}
-    <div class="photo-wrapper">
-      <div class="photo-and-sidebar">
+    <div class="photo-and-sidebar">
+      <div class="photo-wrapper">
+        {previous}
+        {next}
         <TransitionImage
           alt={photo.title}
           src={photo.sizes.large.url}
           srcSet={buildSrcSet(photo.sizes)}
           sizes="100vw"
         />
-        <PhotoText photo={photo} />
-        <Sidebar photo={photo} />
       </div>
+      <PhotoText photo={photo} />
+      <Sidebar photo={photo} />
     </div>
-    {children}
   </div>
 )
 
