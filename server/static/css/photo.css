@@ -11,6 +11,11 @@
     display: none;
   }
 
+  .portrait .photo-and-sidebar {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
   /* all */
   .photo-and-sidebar {
     padding: 30px;
