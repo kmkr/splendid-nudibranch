@@ -17,7 +17,10 @@ class Photo extends Component {
 
   render() {
     const { photo, setWidth } = this.props
-    const style = setWidth ? { width: `${photo.displayedWidth}px` } : {}
+    const style = {
+      width: setWidth ? `${photo.displayedWidth}px` : '100%'
+    }
+
     return (
       <div style={style}>
         <a href={`/photos/${photo.key}`} onClick={this.onClick}>
