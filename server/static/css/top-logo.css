@@ -1,5 +1,6 @@
 #top-logo {
   height: 100vh;
+  max-height: 1600px;
   background-color: var(--color-pink);
   display: flex;
   justify-content: center;
