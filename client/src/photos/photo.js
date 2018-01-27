@@ -24,8 +24,7 @@ class Photo extends Component {
     preload(nextProps.preloadPhoto)
   }
 
-  render() {
-    const { next, preloadPhoto, previous, photo } = this.props
+  render({ next, preloadPhoto, previous, photo }) {
     return (
       <div class={`photo-and-navigation ${photo.mode}`}>
         <div class="photo-and-sidebar">

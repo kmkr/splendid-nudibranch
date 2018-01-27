@@ -21,9 +21,7 @@ class TransitionImage extends Component {
     })
   }
 
-  render() {
-    const { alt, onClick, src, srcSet, sizes } = this.props
-
+  render({ alt, onClick, src, srcSet, sizes }) {
     return (
       <img
         alt={alt || ''}

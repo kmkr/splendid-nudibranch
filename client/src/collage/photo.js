@@ -15,8 +15,7 @@ class Photo extends Component {
     this.props.onSelect(this.props.photo)
   }
 
-  render() {
-    const { photo, setWidth } = this.props
+  render({ photo, setWidth }) {
     const style = {
       width: setWidth ? `${photo.displayedWidth}px` : '100%'
     }

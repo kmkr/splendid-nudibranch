@@ -40,8 +40,7 @@ class Collage extends Component {
     window.removeEventListener('optimizedResize', this.updateWidth)
   }
 
-  render() {
-    const { photos, onSelectPhoto } = this.props
+  render({ photos, onSelectPhoto }) {
     const photoGroups = setPhotoWidth(photos)
     const setDimensions = getWidth() >= 1100
     return (

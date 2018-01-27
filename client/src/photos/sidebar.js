@@ -19,10 +19,7 @@ class Sidebar extends Component {
     })
   }
 
-  render() {
-    const { photo } = this.props
-    const { expanded } = this.state
-
+  render({ photo }, { expanded }) {
     return (
       <div id="sidebar-wrapper">
         <div id="sidebar">
