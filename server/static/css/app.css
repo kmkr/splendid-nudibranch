@@ -50,3 +50,8 @@ body {
 .transition-image {
   transition: opacity 0.5s ease-in-out;
 }
+
+p::selection {
+  color: var(--color-white);
+  background-color: var(--color-pink);
+}

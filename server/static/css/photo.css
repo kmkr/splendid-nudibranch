@@ -94,7 +94,7 @@
 
 @media (min-width: 1100px) {
   #sidebar {
-    z-index: 5;
+    z-index: 6;
     position: absolute;
     top: 0;
     right: 0;
@@ -126,6 +126,7 @@
   }
 
   #sidebar-text {
+    z-index: 5;
     background-color: #fff;
     position: absolute;
     top: 0;
