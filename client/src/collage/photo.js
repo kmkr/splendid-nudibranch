@@ -21,6 +21,9 @@ class Photo extends Component {
     return (
       <div style={style}>
         <a href={`/photos/${photo.key}`} onClick={this.onClick}>
+          <div class="overlay-title-wrapper">
+            <p>{photo.title}</p>
+          </div>
           <TransitionImage
             alt={photo.title}
             src={photo.sizes.xsmall.url}
