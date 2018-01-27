@@ -81,7 +81,6 @@
 .photo-text-wrapper .location {
   font-size: var(--font-size-small);
   letter-spacing: 1.5px;
-  text-transform: uppercase;
 }
 
 @media (max-width: 1100px) {
