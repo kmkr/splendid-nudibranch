@@ -6,6 +6,8 @@ import Collage from './collage'
 import DeepWater from './deep-water'
 import PhotosWrapper from './photos'
 import { addAction, beaconStats } from './statistics'
+import { getPosition, setPosition } from './scroll-location'
+import { setTimeout } from 'timers'
 
 function getPhotoWithKey(photos, key) {
   return photos.filter(p => p.key === key)[0]
@@ -46,6 +48,7 @@ class App extends Component {
       selectedPhoto: photo
     })
 
+    setPosition()
     window.history.pushState(photo.key, '', `/photos/${photo.key}`)
     window.scroll({ top: 0, behavior: 'smooth' })
     addAction()
@@ -55,18 +58,26 @@ class App extends Component {
     if (e) {
       e.preventDefault()
     }
-
     this.setState({
       selectedPhoto: null
     })
 
     window.history.pushState(null, '', '/')
-    window.scroll({ top: 0, behavior: 'smooth' })
     addAction()
+    const prevPosition = getPosition()
+    if (prevPosition) {
+      setTimeout(() => {
+        window.scroll({ top: prevPosition })
+      })
+    } else {
+      this.onGoToPhotos()
+    }
   }
 
   onGoToPhotos(e) {
-    e.preventDefault()
+    if (e) {
+      e.preventDefault()
+    }
     const y = document.querySelector('#top-logo').offsetHeight
     window.scroll({ top: y, behavior: 'smooth' })
   }
