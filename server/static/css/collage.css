@@ -58,7 +58,8 @@
     font-size: var(--font-size-xlarge);
   }
 
-  #collage > div > div a:hover:after {
+  #collage a:after {
+    transition: opacity 0.2s ease-in;
     position: absolute;
     content: '';
     background: var(--color-pink);
@@ -67,6 +68,10 @@
     bottom: 0;
     right: 0;
     pointer-events: none;
+    opacity: 0;
+  }
+
+  #collage a:hover:after {
     opacity: 0.8;
   }
 }
