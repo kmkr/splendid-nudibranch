@@ -59,9 +59,15 @@
 
   #collage .overlay-title-wrapper p.title {
     margin-top: 4px;
-    font-size: var(--font-size-xlarge);
+    font-size: var(--font-size-large);
     text-transform: uppercase;
     letter-spacing: 4px;
+  }
+
+  @media (min-width: 1300px) {
+    #collage .overlay-title-wrapper p.title {
+      font-size: var(--font-size-xlarge);
+    }
   }
 
   #collage a:after {
