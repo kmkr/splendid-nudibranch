@@ -47,15 +47,21 @@
 
   #collage > div > div a:hover .overlay-title-wrapper {
     display: flex;
-    align-content: center;
+    flex-direction: column;
     justify-content: center;
   }
 
   #collage .overlay-title-wrapper p {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #collage .overlay-title-wrapper p.title {
+    margin-top: 4px;
     font-size: var(--font-size-xlarge);
+    text-transform: uppercase;
+    letter-spacing: 4px;
   }
 
   #collage a:after {

@@ -2217,8 +2217,13 @@ var Photo = function (_Component) {
             { 'class': 'overlay-title-wrapper' },
             (0, _preact.h)(
               'p',
-              null,
+              { 'class': 'title' },
               photo.title
+            ),
+            (0, _preact.h)(
+              'p',
+              { 'class': 'location' },
+              photo.location
             )
           ),
           (0, _preact.h)(_transitionImage2.default, {
