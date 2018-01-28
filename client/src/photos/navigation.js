@@ -48,7 +48,7 @@ const Navigation = ({ onHome }) => (
     </a>
     <div class="link-wrapper">
       <a href="/" onClick={onHome}>
-        See all photos
+        More photos
       </a>
     </div>
   </div>
