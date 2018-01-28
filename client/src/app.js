@@ -57,8 +57,10 @@ class App extends Component {
     })
 
     window.history.pushState(photo.key, '', `/photos/${photo.key}`)
-    window.scroll({ top: 0, behavior: 'smooth' })
     addAction()
+    setTimeout(() => {
+      window.scroll({ top: 0, behavior: 'smooth' })
+    })
   }
 
   onHome(e) {
