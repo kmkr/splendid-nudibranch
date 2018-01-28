@@ -20,11 +20,14 @@ function mapOne(photoFromDb) {
     key,
     name,
     resize,
+    shotAt: shot_at,
+    createdAt: created_at,
+    updatedAt: updated_at,
     tags: tags || []
   }
 }
 module.exports.dbToClient = function(photoArg) {
-  if (photoArg.constructor === Array) {
+  if (Array.isArray(photoArg)) {
     return photoArg.map(mapOne)
   }
 
