@@ -36,12 +36,7 @@ class Photo extends Component {
           <div class="photo-wrapper">
             {previous}
             {next}
-            <img
-              alt={photo.title}
-              srcSet={photo.srcSet}
-              src={photo.sizes.large.url}
-              sizes={sizes(photo)}
-            />
+            <img alt={photo.title} srcSet={photo.srcSet} sizes={sizes(photo)} />
           </div>
           <PhotoText photo={photo} />
           <Sidebar photo={photo} />
