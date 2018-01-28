@@ -32,6 +32,11 @@ module.exports.resizeTo = [
     name: 'xlarge',
     shortName: 'xl',
     width: 2560
+  },
+  {
+    name: 'xxlarge',
+    shortName: 'xxl',
+    width: 3200
   }
 ]
 
