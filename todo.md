@@ -2,3 +2,4 @@
 * Last bilder on scroll
 * Re-upload alle bilder
 * Fiks facebook import-bilde (gammel farge).
+* Lag en contact-knapp i bunn
