@@ -2908,7 +2908,7 @@ var App = function (_Component) {
               'Batch update photos'
             ),
             (0, _preact.h)(_batchUpdatePhotos2.default, {
-              photos: this.props.photos.data,
+              photos: this.props.photos,
               onSubmit: this.onBatchUpdatePhotos
             }),
             (0, _preact.h)('hr', null),

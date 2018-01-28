@@ -56,7 +56,7 @@ class App extends Component {
             <hr />
             <h1>Batch update photos</h1>
             <BatchUpdatePhotos
-              photos={this.props.photos.data}
+              photos={this.props.photos}
               onSubmit={this.onBatchUpdatePhotos}
             />
             <hr />
