@@ -50,13 +50,13 @@
   .photo-and-navigation .click-previous {
     left: 0;
     right: 50%;
-    cursor: url('/static/images/cursor-previous.png'), auto;
+    cursor: url('/static/images/cursor-previous.png?v2'), auto;
   }
 
   .photo-and-navigation .click-next {
     right: 0;
     left: 50%;
-    cursor: url('/static/images/cursor-next.png'), auto;
+    cursor: url('/static/images/cursor-next.png?v2'), auto;
   }
 }
 
