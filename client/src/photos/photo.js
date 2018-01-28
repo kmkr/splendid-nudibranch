@@ -4,13 +4,18 @@ import { h, Component } from 'preact'
 import PhotoText from './photo-text'
 import Sidebar from './sidebar'
 import TransitionImage from '../transition-image'
-import buildSrcSet from './src-set-builder'
+
+function sizes(photo) {
+  return photo.mode === 'portrait'
+    ? '(min-width: 1100px) 35vw, 100vw'
+    : '(min-width: 1100px) 95vw, 100vw'
+}
 
 function preload(photo) {
   const image = new Image()
   image.src = photo.sizes.large.url
-  image.setAttribute('srcset', buildSrcSet(photo.sizes))
-  image.setAttribute('sizes', '100vw')
+  image.setAttribute('srcset', photo.srcSet)
+  image.setAttribute('sizes', sizes(photo))
   window.preloadedPhoto = image
 }
 
@@ -25,10 +30,6 @@ class Photo extends Component {
   }
 
   render({ next, preloadPhoto, previous, photo }) {
-    const sizes =
-      photo.mode === 'portrait'
-        ? '(min-width: 1100px) 35vw, 100vw'
-        : '(min-width: 1100px) 95vw, 100vw'
     return (
       <div class={`photo-and-navigation ${photo.mode}`}>
         <div class="photo-and-sidebar">
@@ -37,9 +38,9 @@ class Photo extends Component {
             {next}
             <img
               alt={photo.title}
-              srcSet={buildSrcSet(photo.sizes)}
+              srcSet={photo.srcSet}
               src={photo.sizes.large.url}
-              sizes={sizes}
+              sizes={sizes(photo)}
             />
           </div>
           <PhotoText photo={photo} />

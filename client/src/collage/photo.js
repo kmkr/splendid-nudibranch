@@ -3,7 +3,6 @@ import { h, Component } from 'preact'
 
 import TransitionImage from '../transition-image'
 import PhotoText from '../photos/photo-text'
-import buildSrcSet from '../photos/src-set-builder'
 
 class Photo extends Component {
   constructor() {
@@ -30,7 +29,7 @@ class Photo extends Component {
           <TransitionImage
             alt={photo.title}
             src={photo.sizes.xsmall.url}
-            srcSet={buildSrcSet(photo.sizes)}
+            srcSet={photo.srcSet}
             sizes="(min-width: 1100px) 30vw, 100vw"
           />
         </a>
