@@ -41,7 +41,7 @@ class Collage extends Component {
   }
 
   updateLoadedPhotos() {
-    const threshold = 1000
+    const threshold = 2000
     const totalHeight = document.body.offsetHeight
     const scrollPos = window.scrollY
     if (scrollPos >= totalHeight - window.innerHeight - threshold) {
