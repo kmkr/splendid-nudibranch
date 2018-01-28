@@ -43,6 +43,7 @@ export default function(_photos) {
     for (let i = 0; i < numThisRow; i++) {
       const photoToAdd = photos.shift()
       if (!photoToAdd) {
+        groups.push(subGroup)
         return groups
       }
       const scale =
