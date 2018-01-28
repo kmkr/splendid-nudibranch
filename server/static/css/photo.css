@@ -101,6 +101,10 @@
     display: none;
   }
 
+  .photo-wrapper {
+    width: 100%;
+  }
+
   .photo-wrapper img {
     width: 100%;
     max-width: 100%;
