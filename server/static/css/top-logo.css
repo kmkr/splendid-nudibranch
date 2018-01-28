@@ -4,7 +4,8 @@
   background-color: var(--color-pink);
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #top-logo img {
