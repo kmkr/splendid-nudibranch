@@ -25,7 +25,7 @@ class Photo extends Component {
   }
 
   render({ next, preloadPhoto, previous, photo }) {
-    const sizes = photo.mode === 'portrait' ? '30vw' : '95vw'
+    const sizes = photo.mode === 'portrait' ? '35vw' : '95vw'
     return (
       <div class={`photo-and-navigation ${photo.mode}`}>
         <div class="photo-and-sidebar">
