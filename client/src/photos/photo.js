@@ -25,6 +25,7 @@ class Photo extends Component {
   }
 
   render({ next, preloadPhoto, previous, photo }) {
+    const sizes = photo.mode === 'portrait' ? '30vw' : '95vw'
     return (
       <div class={`photo-and-navigation ${photo.mode}`}>
         <div class="photo-and-sidebar">
@@ -35,7 +36,7 @@ class Photo extends Component {
               alt={photo.title}
               srcSet={buildSrcSet(photo.sizes)}
               src={photo.sizes.large.url}
-              sizes="100vw"
+              sizes={sizes}
             />
           </div>
           <PhotoText photo={photo} />
