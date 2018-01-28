@@ -26,6 +26,9 @@ module.exports.serverToClient = function(photo, base) {
         return prev
       }
 
+      if (current.skipPayload) {
+        return prev
+      }
       return {
         ...prev,
         [current.name]: {

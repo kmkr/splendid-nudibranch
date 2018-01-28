@@ -36,6 +36,7 @@ module.exports.resizeTo = [
   {
     name: 'xxlarge',
     shortName: 'xxl',
+    skipPayload: true,
     width: 3200
   }
 ]
