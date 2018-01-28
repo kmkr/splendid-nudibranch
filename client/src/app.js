@@ -68,13 +68,13 @@ class App extends Component {
     window.history.pushState(null, '', '/')
     addAction()
     const prevPosition = getPosition()
-    if (prevPosition) {
-      setTimeout(() => {
+    setTimeout(() => {
+      if (prevPosition) {
         window.scroll({ top: prevPosition })
-      })
-    } else {
-      this.onGoToPhotos()
-    }
+      } else {
+        this.onGoToPhotos()
+      }
+    })
   }
 
   onGoToPhotos(e) {
