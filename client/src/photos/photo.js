@@ -7,7 +7,7 @@ import TransitionImage from '../transition-image'
 
 function sizes(photo) {
   return photo.mode === 'portrait'
-    ? '(min-width: 1100px) 35vw, 100vw'
+    ? '(min-width: 1100px) 50vw, 100vw'
     : '(min-width: 1100px) 95vw, 100vw'
 }
 
