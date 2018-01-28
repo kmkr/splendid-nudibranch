@@ -34,8 +34,8 @@ class TransitionImage extends Component {
         onClick={onClick}
         onLoad={this.onLoad}
         style={{ opacity: visible ? 1 : 0 }}
-        src={src}
         srcSet={srcSet}
+        src={src}
         sizes={sizes}
       />
     )
