@@ -7,6 +7,9 @@ function mapOne(photoFromDb) {
     key,
     name,
     resize,
+    shot_at,
+    created_at,
+    updated_at,
     tags
   } = photoFromDb
   return {
