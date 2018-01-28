@@ -1,11 +1,7 @@
 export const setPosition = () => {
-  try {
-    window.sessionStorage.setItem('scrollPos', window.scrollY)
-  } catch (e) {}
+  window.snScrollLocation = window.scrollY
 }
 
 export const getPosition = () => {
-  try {
-    return window.sessionStorage.getItem('scrollPos')
-  } catch (e) {}
+  return window.snScrollLocation
 }
