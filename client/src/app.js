@@ -33,9 +33,13 @@ class App extends Component {
     const { photos } = this.props
     window.addEventListener('popstate', e => {
       const photo = !!e.state && getPhotoWithKey(photos, e.state)
-      this.setState({
-        selectedPhoto: photo
-      })
+
+      if (photo) {
+        // Old Safaris pops state on first load.
+        this.setState({
+          selectedPhoto: photo
+        })
+      }
     })
 
     window.addEventListener('unload', () => {
