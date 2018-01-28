@@ -836,6 +836,14 @@ Tags 2017
 Latin Scorpaena plumieri
 Description Skin flaps and feathery fins help this fish to camouflage against the surrounding coral.
 
+DSC03426.jpg
+
+Title Scalloped Hammerhead Shark
+Location Cocos Island, Costa Rica
+Tags 2017 shark
+Latin Sphyrna lewini
+Description
+
 DSC03543.jpg
 
 Title Giant Frogfish
