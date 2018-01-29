@@ -33,6 +33,10 @@ class KeyboardEventHandler extends Component {
     const keyCode = e.keyCode || e.detail.keyCode
     const { onPrevious, onNext } = this.props
 
+    if (e.altKey) {
+      return
+    }
+
     if (LEFT_KEYS.indexOf(keyCode) !== -1) {
       e.preventDefault()
       onPrevious()
