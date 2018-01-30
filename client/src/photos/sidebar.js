@@ -31,7 +31,8 @@ class Sidebar extends Component {
               aria-role="button"
               onClick={this.handleClickDetails}
             >
-              +
+              <span class="one" />
+              <span class="two" />
             </a>
           </div>
         </div>
