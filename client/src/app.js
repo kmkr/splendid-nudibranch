@@ -88,7 +88,7 @@ class App extends Component {
       e.preventDefault()
     }
     // Subtract to show a bit of the top screen
-    const y = document.querySelector('#top-logo').offsetHeight - 100
+    const y = document.querySelector('#top-logo').offsetHeight
     window.scroll({ top: y, behavior: 'smooth' })
   }
 
