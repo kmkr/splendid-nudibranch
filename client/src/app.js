@@ -32,10 +32,10 @@ class App extends Component {
   componentDidMount() {
     const { photos } = this.props
     window.addEventListener('popstate', e => {
-      const photo = !!e.state && getPhotoWithKey(photos, e.state)
+      const photo = getPhotoWithKey(photos, e.state)
 
-      if (photo) {
-        // Old Safaris pops state on first load.
+      // Only accept named state - as old Safaris pops state on first load
+      if (e.state) {
         this.setState({
           selectedPhoto: photo
         })
@@ -71,7 +71,7 @@ class App extends Component {
       selectedPhoto: null
     })
 
-    window.history.pushState(null, '', '/')
+    window.history.pushState('frontpage', '', '/')
     addAction()
     const prevPosition = getPosition()
     setTimeout(() => {
