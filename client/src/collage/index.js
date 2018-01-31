@@ -45,8 +45,9 @@ class Collage extends Component {
     const totalHeight = document.body.offsetHeight
     const scrollPos = window.scrollY
     if (scrollPos >= totalHeight - window.innerHeight - threshold) {
+      const additionalLoad = getIsCollage() ? 4 : 2
       const newNumLoadedPhotos = Math.min(
-        this.state.loadPhotos + 2,
+        this.state.loadPhotos + additionalLoad,
         this.props.photos.length
       )
       setNumLoaded(newNumLoadedPhotos)
