@@ -25,6 +25,7 @@ body {
   font-weight: 300;
   font-size: var(--font-size-medium);
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 #container {
