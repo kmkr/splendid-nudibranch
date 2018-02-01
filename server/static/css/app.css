@@ -24,9 +24,12 @@ body {
   font-family: Raleway, sans-serif;
   font-weight: 300;
   font-size: var(--font-size-medium);
-  max-width: 2560px;
-  margin: 0 auto;
   scroll-behavior: smooth;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 2560px;
 }
 
 @media (min-width: 1100px) {

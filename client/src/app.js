@@ -107,17 +107,21 @@ class App extends Component {
     const { photos } = this.props
     const { selectedPhoto } = this.state
     return selectedPhoto ? (
-      <PhotosWrapper
-        onHome={this.onHome}
-        onSelectPhoto={this.onSelectPhoto}
-        photos={photos}
-        selectedPhoto={selectedPhoto}
-      />
+      <div id="container">
+        <PhotosWrapper
+          onHome={this.onHome}
+          onSelectPhoto={this.onSelectPhoto}
+          photos={photos}
+          selectedPhoto={selectedPhoto}
+        />
+      </div>
     ) : (
       <div>
         <TopLogo onGoToPhotos={this.onGoToPhotos} />
-        <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
-        <DeepWater onClick={this.onGoToPhotos} />
+        <div id="container">
+          <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
+          <DeepWater onClick={this.onGoToPhotos} />
+        </div>
       </div>
     )
   }
