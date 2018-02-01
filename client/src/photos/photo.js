@@ -32,7 +32,7 @@ class Photo extends Component {
     return (
       <div class={`photo-and-navigation ${photo.mode}`}>
         <div class="photo-and-text">
-          <div class="photo-inner-wrapper">
+          <div class="photo-wrapper">
             {previous}
             {next}
             <img alt={photo.title} srcSet={photo.srcSet} sizes={sizes(photo)} />
