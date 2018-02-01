@@ -852,6 +852,14 @@ Tags 2017 frogfish
 Latin Antennarius commerson
 Description Frogfish don't have swim bladders. Instead they walk on the ocean floor using their non-traditional fins.
 
+DSC03470.jpg
+
+Title Mexican Hogfish
+Location Cocos Island, Costa Rica
+Tags 2017 fish
+Latin Bodianus diplotaenia
+Description All Bodianus d. start life as female and later become males.
+
 DSC03559.jpg
 
 Title Scalloped Hammerhead Shark
