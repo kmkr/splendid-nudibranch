@@ -3972,12 +3972,10 @@ var App = function (_Component) {
     }
   }, {
     key: 'onGoToPhotos',
-    value: function onGoToPhotos(e) {
-      if (e) {
-        e.preventDefault();
-      }
-      // Subtract to show a bit of the top screen
-      var y = document.querySelector('#top-logo').offsetHeight;
+    value: function onGoToPhotos(e, offset) {
+      e && e.preventDefault();
+
+      var y = document.querySelector('#top-logo').offsetHeight + (offset || 0);
       window.scroll({ top: y, behavior: 'smooth' });
     }
   }, {
@@ -3997,6 +3995,8 @@ var App = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this4 = this;
+
       var photos = this.props.photos;
       var selectedPhoto = this.state.selectedPhoto;
 
@@ -4017,7 +4017,9 @@ var App = function (_Component) {
           'div',
           { id: 'container' },
           (0, _preact.h)(_collage2.default, { photos: photos, onSelectPhoto: this.onSelectPhoto }),
-          (0, _preact.h)(_deepWater2.default, { onClick: this.onGoToPhotos })
+          (0, _preact.h)(_deepWater2.default, { onClick: function onClick(e) {
+              return _this4.onGoToPhotos(e, -100);
+            } })
         )
       );
     }

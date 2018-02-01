@@ -83,12 +83,10 @@ class App extends Component {
     })
   }
 
-  onGoToPhotos(e) {
-    if (e) {
-      e.preventDefault()
-    }
-    // Subtract to show a bit of the top screen
-    const y = document.querySelector('#top-logo').offsetHeight
+  onGoToPhotos(e, offset) {
+    e && e.preventDefault()
+
+    const y = document.querySelector('#top-logo').offsetHeight + (offset || 0)
     window.scroll({ top: y, behavior: 'smooth' })
   }
 
@@ -120,7 +118,7 @@ class App extends Component {
         <TopLogo onGoToPhotos={this.onGoToPhotos} />
         <div id="container">
           <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
-          <DeepWater onClick={this.onGoToPhotos} />
+          <DeepWater onClick={e => this.onGoToPhotos(e, -100)} />
         </div>
       </div>
     )
