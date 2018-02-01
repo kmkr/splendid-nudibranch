@@ -25,11 +25,7 @@
     position: relative;
   }
 
-  .photo-outer-wrapper .transition-image {
-    transition-duration: 0.1s;
-  }
-
-  .photo-outer-wrapper img {
+  .photo-inner-wrapper img {
     max-width: 100%;
     max-height: calc(100vh - 60px);
   }
@@ -57,8 +53,8 @@
 }
 
 @media (max-width: 1100px) {
-  .photo-outer-wrapper .click-previous,
-  .photo-outer-wrapper .click-next {
+  .photo-inner-wrapper .click-previous,
+  .photo-inner-wrapper .click-next {
     display: none;
   }
 }
