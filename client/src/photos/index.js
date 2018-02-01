@@ -3,6 +3,7 @@ import { h, Component } from 'preact'
 
 import Photo from './photo'
 import Navigation from './navigation'
+import Sidebar from './sidebar'
 
 import KeyboardEventHandler from './keyboard-event-handler'
 
@@ -11,6 +12,10 @@ class PhotosWrapper extends Component {
     super()
     this.onNextPhoto = this.onNextPhoto.bind(this)
     this.onPreviousPhoto = this.onPreviousPhoto.bind(this)
+    this.onToggleExpandSidebar = this.onToggleExpandSidebar.bind(this)
+    this.state = {
+      sidebarExpanded: true
+    }
   }
 
   getCurrentPhotoIndex() {
@@ -29,17 +34,20 @@ class PhotosWrapper extends Component {
   }
 
   onNextPhoto(e) {
-    if (e) {
-      e.preventDefault()
-    }
+    e && e.preventDefault()
     this.props.onSelectPhoto(this.getNextPhoto())
   }
 
   onPreviousPhoto(e) {
-    if (e) {
-      e.preventDefault()
-    }
+    e && e.preventDefault()
     this.props.onSelectPhoto(this.getPreviousPhoto())
+  }
+
+  onToggleExpandSidebar(e) {
+    e && e.preventDefault()
+    this.setState(prevState => ({
+      sidebarExpanded: !prevState.sidebarExpanded
+    }))
   }
 
   render() {
@@ -50,6 +58,7 @@ class PhotosWrapper extends Component {
         <KeyboardEventHandler
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
+          onToggleSidebar={this.onToggleExpandSidebar}
         />
         <Photo
           photo={selectedPhoto}
@@ -68,6 +77,11 @@ class PhotosWrapper extends Component {
               onClick={this.onPreviousPhoto}
             />
           }
+        />
+        <Sidebar
+          expanded={this.state.sidebarExpanded}
+          onToggleExpanded={this.onToggleExpandSidebar}
+          photo={selectedPhoto}
         />
         <Navigation onHome={this.props.onHome} />
       </div>

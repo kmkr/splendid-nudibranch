@@ -2,7 +2,6 @@
 import { h, Component } from 'preact'
 
 import PhotoText from './photo-text'
-import Sidebar from './sidebar'
 import TransitionImage from '../transition-image'
 
 function sizes(photo) {
@@ -32,14 +31,13 @@ class Photo extends Component {
   render({ next, preloadPhoto, previous, photo }) {
     return (
       <div class={`photo-and-navigation ${photo.mode}`}>
-        <div class="photo-and-sidebar">
-          <div class="photo-wrapper">
+        <div class="photo-and-text">
+          <div class="photo-inner-wrapper">
             {previous}
             {next}
             <img alt={photo.title} srcSet={photo.srcSet} sizes={sizes(photo)} />
           </div>
           <PhotoText photo={photo} />
-          <Sidebar photo={photo} />
         </div>
       </div>
     )
