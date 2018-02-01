@@ -30,7 +30,7 @@ class Photo extends Component {
 
   render({ next, preloadPhoto, previous, photo }) {
     return (
-      <div class={`photo-and-navigation ${photo.mode}`}>
+      <div class={photo.mode}>
         <div class="photo-and-text">
           <div class="photo-wrapper">
             {previous}
