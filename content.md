@@ -532,7 +532,7 @@ Title Dwarf Minke Whale
 Location Ribbon Reefs, Great Barrier Reef, Australia
 Tags 2010 whale
 Latin Undescribed (Balaenoptera acutorostrata subspecies)
-Description In Australia, a group of whales circled us and gradually came closer for each round they took. As they moved closer we could recognize their fine details, their uniqueness and beauty. Scientists in Australia use the spots on their skin to distinguish them from each other and is the primary elements to count the number of individuals. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
+Description In Australia, a group of whales circled us and gradually came closer for each round they took. As they moved closer we could recognize their fine details, their uniqueness and beauty. Scientists in Australia use the spots on their skin to distinguish them from each other and is the primary method used to count the number of individuals. We dove with all together five minke whales for almost two hours before they perished into the open sea. It was a once-in-a-lifetime experience I will never forget.
 
 Kris Krister 412.jpg
 
