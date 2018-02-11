@@ -5,7 +5,8 @@ module.exports = {
   context: __dirname,
   entry: {
     bundle: './src/index.js',
-    'admin-bundle': './src/admin/index.js'
+    'admin-bundle': './src/admin/index.js',
+    'admin-stats-bundle': './src/admin/stats/index.js'
   },
   devtool: env !== 'production' ? 'source-map' : false,
   output: {

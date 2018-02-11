@@ -14,6 +14,8 @@ const { serverToClient } = require('./photos/photo-data-conversion')
 const ogTags = require('./og-tags')
 const { description } = require('./photos/constants')
 const hashStore = require('./hash-store')
+const newStatsItem = require('./statistics/new')
+const { uid } = require('../common/id-generator')
 
 function verifyEnv() {
   const missing = [
@@ -77,6 +79,7 @@ function photoIndex(res, { photoKey, year, location } = {}, jsFile, cssFile) {
 }
 
 app.get('/', (req, res) => {
+  newStatsItem(req, { id: uid(), path: req.path }, true)
   photoIndex(
     res,
     { year: req.query.year, location: req.query.location },
@@ -86,6 +89,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/photos/:key', (req, res) => {
+  newStatsItem(req, { id: uid(), path: req.path }, true)
   photoIndex(
     res,
     {
@@ -103,6 +107,15 @@ app.get('/admin', (req, res) => {
     res,
     {},
     '/static/scripts/admin-bundle.js',
+    '/static/css/app-admin.css'
+  )
+})
+
+app.get('/admin/stats', (req, res) => {
+  photoIndex(
+    res,
+    {},
+    '/static/scripts/admin-stats-bundle.js',
     '/static/css/app-admin.css'
   )
 })
