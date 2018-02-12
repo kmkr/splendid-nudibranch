@@ -1,4 +1,4 @@
-const idGenerator = require('../../../common/id-generator')
+const idGenerator = require('../../id-generator')
 const s3Uploader = require('../s3/s3-uploader')
 const { resize, metadata: getMetadata } = require('./gm')
 const tempFileWriter = require('./temp-file-writer')

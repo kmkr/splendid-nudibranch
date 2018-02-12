@@ -15,7 +15,7 @@ const ogTags = require('./og-tags')
 const { description } = require('./photos/constants')
 const hashStore = require('./hash-store')
 const newStatsItem = require('./statistics/new')
-const { uid } = require('../common/id-generator')
+const { uid } = require('./id-generator')
 
 function verifyEnv() {
   const missing = [
@@ -53,7 +53,12 @@ app.use(
 
 const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
-function photoIndex(res, { photoKey, year, location } = {}, jsFile, cssFile) {
+function photoIndex(
+  res,
+  { id, photoKey, year, location } = {},
+  jsFile,
+  cssFile
+) {
   return Promise.all([
     viewDataService.getPhotoData(),
     viewDataService.getKeywords()
@@ -62,6 +67,7 @@ function photoIndex(res, { photoKey, year, location } = {}, jsFile, cssFile) {
       .sort((p1, p2) => p2.createdAt.getTime() > p1.createdAt.getTime())
       .map(p => serverToClient(p, photoData.base))
     return res.render('index', {
+      id,
       description,
       favico100: hashStore.withHash('/static/images/favicon-100.png'),
       favico192: hashStore.withHash('/static/images/favicon-192.png'),
@@ -79,23 +85,26 @@ function photoIndex(res, { photoKey, year, location } = {}, jsFile, cssFile) {
 }
 
 app.get('/', (req, res) => {
-  newStatsItem(req, { id: uid(), path: req.path }, true)
+  const id = uid()
+  newStatsItem(req, { id, path: req.path }, true)
   photoIndex(
     res,
-    { year: req.query.year, location: req.query.location },
+    { year: req.query.year, location: req.query.location, id },
     '/static/scripts/bundle.js',
     indexCssFile
   )
 })
 
 app.get('/photos/:key', (req, res) => {
-  newStatsItem(req, { id: uid(), path: req.path }, true)
+  const id = uid()
+  newStatsItem(req, { path: req.path }, true)
   photoIndex(
     res,
     {
       photoKey: req.params.key,
       year: req.query.year,
-      location: req.query.location
+      location: req.query.location,
+      id
     },
     '/static/scripts/bundle.js',
     indexCssFile

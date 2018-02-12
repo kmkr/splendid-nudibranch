@@ -1,9 +1,7 @@
 import debounce from 'debounce'
 
-import { uid } from '../../../common/id-generator'
-
 const DELAY = 3000
-const id = uid()
+const id = window.snClientId
 
 let numActions = 0
 

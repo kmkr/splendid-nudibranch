@@ -3,6 +3,7 @@ extends layout.pug
 block content
     div(id='app')
     script(type='text/javascript').
-         window.snPhotos = !{photos}
+         window.snClientId = '#{id}';
+         window.snPhotos = !{photos};
 
     script(type='text/javascript' src=js async charset='utf-8')
