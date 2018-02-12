@@ -34,8 +34,8 @@ class App extends Component {
     window.addEventListener('popstate', e => {
       const photo = getPhotoWithKey(photos, e.state)
 
-      // Only accept named state - as old Safaris pops state on first load
-      if (e.state) {
+      // Workaround for old Safaris popping state on first load
+      if (e.state || this.forcePopActivation) {
         this.setState({
           selectedPhoto: photo
         })
@@ -45,6 +45,10 @@ class App extends Component {
     window.addEventListener('unload', () => {
       beaconStats()
     })
+
+    setTimeout(() => {
+      this.forcePopActivation = true
+    }, 50)
   }
 
   onSelectPhoto(photo) {
