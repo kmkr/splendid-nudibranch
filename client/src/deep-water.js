@@ -29,6 +29,18 @@ const DeepWater = ({ onClick }) => (
         DROP YOUR WEIGHTS
       </a>
     </div>
+
+    <div id="social">
+      <a href="https://wwww.500px.com/krismikael">
+        <img src="static/images/logo-500px.svg" />
+      </a>
+      <a href="https://www.unsplash.com/@kmkr">
+        <img src="static/images/logo-unsplash.svg" />
+      </a>
+      <a href="https://www.flickr.com/photos/148835878@N08/">
+        <img src="static/images/logo-flickr.svg" />
+      </a>
+    </div>
   </div>
 )
 

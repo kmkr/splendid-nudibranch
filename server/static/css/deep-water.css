@@ -9,3 +9,16 @@
   max-width: 100ch;
   margin-bottom: 80px;
 }
+
+#social {
+  text-align: center;
+}
+
+#social {
+  margin-bottom: 50px;
+}
+
+#social img {
+  height: 30px;
+  margin: 0 10px;
+}
