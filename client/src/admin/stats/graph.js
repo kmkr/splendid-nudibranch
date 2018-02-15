@@ -5,8 +5,16 @@ import Chartist from 'chartist'
 function parseData(data) {
   return data.reduce((prevVal, curVal) => {
     const ca = new Date(curVal.createdAt)
-    const key = [ca.getFullYear(), ca.getMonth() + 1, ca.getDate()].join('-')
-    prevVal[key] = (prevVal[key] || 0) + 1
+    const dateKey = [ca.getFullYear(), ca.getMonth() + 1, ca.getDate()].join(
+      '-'
+    )
+    const newObj = prevVal[dateKey] || {
+      bots: 0,
+      humans: 0
+    }
+    const valueKey = curVal.isBot ? 'bots' : 'humans'
+    newObj[valueKey] = newObj[valueKey] + 1
+    prevVal[dateKey] = newObj
     return prevVal
   }, {})
 }
@@ -16,7 +24,8 @@ class Graph extends Component {
     const data = parseData(this.props.data)
 
     const labels = Object.keys(data)
-    const series = [Object.values(data)]
+    const hits = Object.values(data)
+    const series = [hits.map(h => h.bots), hits.map(h => h.humans)]
 
     new Chartist.Line(
       '#graph',

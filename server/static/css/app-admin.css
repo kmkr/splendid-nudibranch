@@ -1,5 +1,17 @@
 @import './chartist.css';
 
+.ct-line {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.ct-series-b .ct-point,
+.ct-series-b .ct-line,
+.ct-series-b .ct-bar,
+.ct-series-b .ct-slice-donut {
+  stroke: #59922b;
+}
+
 .edit-photo button {
   width: 100%;
   display: inline-block;
