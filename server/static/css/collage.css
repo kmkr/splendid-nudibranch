@@ -45,7 +45,8 @@
     color: var(--color-white);
   }
 
-  #collage > div > div a:hover .overlay-title-wrapper {
+  #collage > div > div a:hover .overlay-title-wrapper,
+  #collage > div > div a:focus .overlay-title-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,7 +84,8 @@
     opacity: 0;
   }
 
-  #collage a:hover:after {
+  #collage a:hover:after,
+  #collage a:focus:after {
     opacity: 0.8;
   }
 }
