@@ -3961,6 +3961,10 @@ var App = function (_Component) {
           _this2.setState({
             selectedPhoto: photo
           });
+
+          if (!photo) {
+            scrollToPrevPosition();
+          }
         }
       });
 
@@ -3990,10 +3994,22 @@ var App = function (_Component) {
       });
     }
   }, {
-    key: 'onHome',
-    value: function onHome(e) {
+    key: 'scrollToPrevPosition',
+    value: function scrollToPrevPosition() {
       var _this3 = this;
 
+      var prevPosition = (0, _scrollLocation.getPosition)();
+      (0, _timers.setTimeout)(function () {
+        if (prevPosition) {
+          window.scroll({ top: prevPosition });
+        } else {
+          _this3.onGoToPhotos();
+        }
+      });
+    }
+  }, {
+    key: 'onHome',
+    value: function onHome(e) {
       if (e) {
         e.preventDefault();
       }
@@ -4003,14 +4019,7 @@ var App = function (_Component) {
 
       window.history.pushState('frontpage', '', '/');
       (0, _statistics.addAction)();
-      var prevPosition = (0, _scrollLocation.getPosition)();
-      (0, _timers.setTimeout)(function () {
-        if (prevPosition) {
-          window.scroll({ top: prevPosition });
-        } else {
-          _this3.onGoToPhotos();
-        }
-      });
+      scrollToPrevPosition();
     }
   }, {
     key: 'onGoToPhotos',

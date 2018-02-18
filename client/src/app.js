@@ -39,6 +39,10 @@ class App extends Component {
         this.setState({
           selectedPhoto: photo
         })
+
+        if (!photo) {
+          scrollToPrevPosition()
+        }
       }
     })
 
@@ -67,6 +71,17 @@ class App extends Component {
     })
   }
 
+  scrollToPrevPosition() {
+    const prevPosition = getPosition()
+    setTimeout(() => {
+      if (prevPosition) {
+        window.scroll({ top: prevPosition })
+      } else {
+        this.onGoToPhotos()
+      }
+    })
+  }
+
   onHome(e) {
     if (e) {
       e.preventDefault()
@@ -77,14 +92,7 @@ class App extends Component {
 
     window.history.pushState('frontpage', '', '/')
     addAction()
-    const prevPosition = getPosition()
-    setTimeout(() => {
-      if (prevPosition) {
-        window.scroll({ top: prevPosition })
-      } else {
-        this.onGoToPhotos()
-      }
-    })
+    scrollToPrevPosition()
   }
 
   onGoToPhotos(e, offset) {
