@@ -11,6 +11,7 @@ setInterval(() => {
 module.exports = (req, data, isAsync = false) => {
   const origin = req.ip
   const ua = req.get('User-Agent')
+  const referrer = req.get('Referer')
   const id = data.id
 
   const func = () =>
@@ -20,6 +21,7 @@ module.exports = (req, data, isAsync = false) => {
       {
         origin,
         ua,
+        referrer,
         ...data
       }
     )
