@@ -41,7 +41,7 @@ class App extends Component {
         })
 
         if (!photo) {
-          scrollToPrevPosition()
+          this.scrollToPrevPosition()
         }
       }
     })
@@ -92,7 +92,7 @@ class App extends Component {
 
     window.history.pushState('frontpage', '', '/')
     addAction()
-    scrollToPrevPosition()
+    this.scrollToPrevPosition()
   }
 
   onGoToPhotos(e, offset) {
