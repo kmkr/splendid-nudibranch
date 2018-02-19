@@ -1,39 +1,54 @@
 /** @jsx h */
 import { h, Component } from 'preact'
 import Chartist from 'chartist'
+import moment from 'moment'
 
 function parseData(data) {
-  return data.reduce((prevVal, curVal) => {
-    const ca = new Date(curVal.createdAt)
-    const dateKey = [ca.getFullYear(), ca.getMonth() + 1, ca.getDate()].join(
-      '-'
-    )
-    const newObj = prevVal[dateKey] || {
-      bots: 0,
-      humans: 0
+  const withDates = data.map(entry => ({
+    ...entry,
+    createdAt: new Date(entry.createdAt)
+  }))
+
+  const bots = withDates.map(entry => ({
+    x: entry.createdAt,
+    y: entry.isBot ? 1 : 0
+  }))
+
+  const humans = withDates.map(entry => ({
+    x: entry.createdAt,
+    y: entry.isBot ? 0 : 1
+  }))
+
+  return [
+    {
+      name: 'Bots',
+      data: bots
+    },
+    {
+      name: 'Humans',
+      data: humans
     }
-    const valueKey = curVal.isBot ? 'bots' : 'humans'
-    newObj[valueKey] = newObj[valueKey] + 1
-    prevVal[dateKey] = newObj
-    return prevVal
-  }, {})
+  ]
 }
 
 class Graph extends Component {
   componentDidMount() {
     const data = parseData(this.props.data)
 
-    const labels = Object.keys(data)
-    const hits = Object.values(data)
-    const series = [hits.map(h => h.bots), hits.map(h => h.humans)]
-
+    console.log(data)
     new Chartist.Line(
       '#graph',
       {
-        labels,
-        series
+        series: data
       },
       {
+        axisX: {
+          type: Chartist.FixedScaleAxis,
+          divisor: 5,
+          labelInterpolationFnc: function(value) {
+            return moment(value).format('MMM D')
+          }
+        },
         fullWidth: true,
         chartPadding: {
           right: 40
