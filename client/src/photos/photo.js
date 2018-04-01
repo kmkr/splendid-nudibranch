@@ -10,31 +10,37 @@ function sizes(photo) {
     : '(min-width: 1100px) 95vw, 100vw'
 }
 
-function preload(photos) {
-  photos.forEach((photo, index) => {
-    const image = new Image()
-    image.src = photo.sizes.large.url
-    image.setAttribute('srcset', photo.srcSet)
-    image.setAttribute('sizes', sizes(photo))
-    const key = `snPreloadedPhoto${index}`
-    window[key] = image
-  })
-}
-
 class Photo extends Component {
   constructor(props) {
     super()
-    preload(props.preloadPhotos)
+    this.preload(props.preloadPhotos)
   }
 
   componentWillReceiveProps(nextProps) {
-    preload(nextProps.preloadPhotos)
+    this.preload(nextProps.preloadPhotos)
   }
 
   componentWillUnmount() {
     if (this.el) {
       this.el.removeChild(this.el.querySelector('img'))
     }
+  }
+
+  preload(photos) {
+    if (this.timeout) {
+      window.clearTimeout(this.timeout)
+    }
+
+    this.timeout = setTimeout(() => {
+      photos.forEach((photo, index) => {
+        const image = new Image()
+        image.src = photo.sizes.large.url
+        image.setAttribute('srcset', photo.srcSet)
+        image.setAttribute('sizes', sizes(photo))
+        const key = `snPreloadedPhoto${index}`
+        window[key] = image
+      })
+    }, 1000)
   }
 
   render({ next, previous, photo }) {
