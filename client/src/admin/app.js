@@ -19,6 +19,7 @@ class App extends Component {
     this.onSetToken = this.onSetToken.bind(this)
     this.onBatchUpdatePhotos = this.onBatchUpdatePhotos.bind(this)
   }
+
   componentWillMount() {
     snFetch.addHeaderRequestInterceptor(() => ({
       'x-auth': this.state.token
@@ -64,6 +65,7 @@ class App extends Component {
             <ListPhotos
               photos={this.props.photos}
               onDeleteClick={this.onDeleteClick}
+              onSubmitOrder={this.onBatchUpdatePhotos}
             />
           </div>
         </div>

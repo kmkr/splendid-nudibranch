@@ -1,14 +1,22 @@
 /** @jsx h */
 import { h, Component } from 'preact'
+import arrayMove from './array-move'
+import ListPhoto from './list-photo'
 
+function orderFunc(photo) {
+  return photo.key
+}
 class ListPhotos extends Component {
-  constructor() {
+  constructor(props) {
     super()
     this.state = {
-      showText: true
+      showText: true,
+      order: props.photos.map(orderFunc)
     }
 
     this.toggleText = this.toggleText.bind(this)
+    this.handleOrderUpdate = this.handleOrderUpdate.bind(this)
+    this.handleSubmitOrderUpdate = this.handleSubmitOrderUpdate.bind(this)
   }
 
   toggleText() {
@@ -17,42 +25,53 @@ class ListPhotos extends Component {
     }))
   }
 
-  render({ photos, onDeleteClick }, { showText }) {
+  handleOrderUpdate(photo, newOrder) {
+    this.setState(curState => ({
+      order: arrayMove(
+        curState.order,
+        curState.order.indexOf(photo.key),
+        newOrder
+      )
+    }))
+  }
+
+  handleSubmitOrderUpdate(e) {
+    e.preventDefault()
+    this.props.onSubmitOrder(
+      this.state.order.map((photoKey, index) => ({
+        key: photoKey,
+        order: index
+      }))
+    )
+  }
+
+  render({ photos, onDeleteClick }, { order, showText }) {
     return (
-      <div className="list-photos">
+      <div class="list-photos-wrapper">
+        <button class="submit-order" onClick={this.handleSubmitOrderUpdate}>
+          Update order
+        </button>
         <label>
           Show text
           <input type="checkbox" checked={showText} onClick={this.toggleText} />
         </label>
-        {photos.map(photo => (
-          <div key={photo.key}>
-            <div className="center">
-              <h3>
-                {photo.name}
-                <button
-                  className={`danger ${photo.deleting ? 'active' : ''}`}
-                  disabled={photo.deleting}
-                  onClick={onDeleteClick.bind(this, photo)}
-                >
-                  ✖
-                </button>
-              </h3>
-              <img src={photo.sizes.thumb.url} />
-            </div>
-            {showText && (
-              <div>
-                <p>{photo.title}</p>
-                <p>{photo.location}</p>
-                <p>{photo.latin}</p>
-                <p>{photo.description}</p>
-
-                <div className="tags">
-                  {photo.tags.sort().map(tag => <span key={tag}>{tag}</span>)}
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
+        <div class="list-photos">
+          {photos
+            .sort(
+              (p1, p2) =>
+                order.indexOf(orderFunc(p1)) - order.indexOf(orderFunc(p2))
+            )
+            .map((photo, index) => (
+              <ListPhoto
+                key={photo.key}
+                photo={photo}
+                order={index}
+                onDeleteClick={onDeleteClick}
+                onOrderUpdate={this.handleOrderUpdate}
+                showText={showText}
+              />
+            ))}
+        </div>
       </div>
     )
   }

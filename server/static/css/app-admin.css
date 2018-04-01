@@ -1,4 +1,5 @@
-@import './chartist.css';
+@import 'base.css';
+@import 'chartist.css';
 
 .ct-line {
   fill: none;
@@ -12,10 +13,8 @@
   stroke: #59922b;
 }
 
-.list-photos button {
-  margin-left: 10px;
+.list-photos-wrapper button {
   padding: 6px;
-  margin-bottom: 0;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
@@ -24,25 +23,13 @@
   border-radius: 4px;
 }
 
-.list-photos button.danger {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-
-.list-photos.tags > span {
-  display: inline;
-  padding: 0.2em 0.6em 0.3em;
-  font-size: 75%;
-  font-weight: 600;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25em;
-  margin-right: 0.2em;
+.list-photos-wrapper button.submit-order {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  color: var(--color-white);
   background-color: #5cb85c;
+  border-color: #429942;
 }
 
 .list-photos {
@@ -50,15 +37,38 @@
   flex-wrap: wrap;
 }
 
-.list-photos > div {
+.list-photo {
   padding: 20px;
   flex: 1 1 175px;
 }
 
-.list-photos .center {
+.list-photo .center {
   text-align: center;
 }
 
-.list-photos .thumb img {
+.list-photo .thumb img {
   max-width: 100%;
+}
+
+.list-photo button.danger {
+  margin-bottom: 0;
+  margin-left: 10px;
+  color: var(--color-white);
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.list-photo .tags > span {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-white);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  margin-right: 0.2em;
+  background-color: #5cb85c;
 }
