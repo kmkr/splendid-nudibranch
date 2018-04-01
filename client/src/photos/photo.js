@@ -31,11 +31,17 @@ class Photo extends Component {
     preload(nextProps.preloadPhotos)
   }
 
+  componentWillUnmount() {
+    if (this.el) {
+      this.el.removeChild(this.el.querySelector('img'))
+    }
+  }
+
   render({ next, previous, photo }) {
     return (
       <div class={photo.mode}>
         <div class="photo-and-text">
-          <div class="photo-wrapper">
+          <div class="photo-wrapper" ref={el => (this.el = el)}>
             {previous}
             {next}
             <img alt={photo.title} srcSet={photo.srcSet} sizes={sizes(photo)} />
