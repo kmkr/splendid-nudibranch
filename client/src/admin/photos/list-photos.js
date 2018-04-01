@@ -1,20 +1,36 @@
 /** @jsx h */
 import { h } from 'preact'
 
-import EditPhoto from './edit-photo'
-
 const ListPhotos = ({ photos, onDeleteClick }) => (
   <div className="list-photos">
     {photos.map(photo => (
       <div key={photo.key}>
-        <h3>{photo.name}</h3>
-        <div className="entry">
-          <div className="thumb">
-            <img src={photo.sizes.thumb.url} />
-          </div>
-          <div className="form">
-            <EditPhoto onDeleteClick={onDeleteClick} photo={photo} />
-          </div>
+        <div className="center">
+          <h3>
+            {photo.name}
+            <button
+              className={`danger ${photo.deleting ? 'active' : ''}`}
+              disabled={photo.deleting}
+              onClick={onDeleteClick.bind(this, photo)}
+            >
+              ✖
+            </button>
+          </h3>
+          <img src={photo.sizes.thumb.url} />
+        </div>
+        <p>{photo.title}</p>
+        <p>{photo.location}</p>
+        <p>{photo.latin}</p>
+        <p>{photo.description}</p>
+
+        <div className="tags">
+          {photo.tags.sort().map(tag => <span key={tag}>{tag}</span>)}
+        </div>
+
+        <div>
+          {photo.error && (
+            <p style={{ color: 'red' }}>Something bad happened!</p>
+          )}
         </div>
       </div>
     ))}

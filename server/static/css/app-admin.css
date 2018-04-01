@@ -12,16 +12,10 @@
   stroke: #59922b;
 }
 
-.edit-photo button {
-  width: 100%;
-  display: inline-block;
-  padding: 6px 12px;
+.list-photos button {
+  margin-left: 10px;
+  padding: 6px;
   margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
@@ -30,36 +24,13 @@
   border-radius: 4px;
 }
 
-.edit-photo button.danger {
+.list-photos button.danger {
   color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
 
-@keyframes animate-inprogress {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-.edit-photo button.active {
-  background-size: 30px 30px !important;
-  background-image: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.05) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.05) 50%,
-    rgba(0, 0, 0, 0.05) 75%,
-    transparent 75%,
-    transparent
-  ) !important;
-  animation: animate-inprogress 3s linear infinite;
-}
-.edit-photo.tags > span {
+.list-photos.tags > span {
   display: inline;
   padding: 0.2em 0.6em 0.3em;
   font-size: 75%;
@@ -74,25 +45,20 @@
   background-color: #5cb85c;
 }
 
-.list-photos .entry {
-  margin-bottom: 40px;
+.list-photos {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.list-photos textarea,
-.list-photos input {
-  width: 100%;
+.list-photos > div {
+  padding: 20px;
+  flex: 1 1 175px;
 }
 
-.list-photos .thumb {
-  flex-basis: 270px;
+.list-photos .center {
   text-align: center;
 }
 
 .list-photos .thumb img {
   max-width: 100%;
-}
-
-.list-photos.form {
-  flex-grow: 1;
 }
