@@ -63,9 +63,7 @@ function photoIndex(
     viewDataService.getPhotoData(),
     viewDataService.getKeywords()
   ]).then(([photoData, keywords]) => {
-    const photos = photoData.photos
-      .sort((p1, p2) => p2.createdAt.getTime() > p1.createdAt.getTime())
-      .map(p => serverToClient(p, photoData.base))
+    const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
     return res.render('index', {
       id,
       description,
