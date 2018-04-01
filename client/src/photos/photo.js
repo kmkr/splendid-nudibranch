@@ -10,25 +10,28 @@ function sizes(photo) {
     : '(min-width: 1100px) 95vw, 100vw'
 }
 
-function preload(photo) {
-  const image = new Image()
-  image.src = photo.sizes.large.url
-  image.setAttribute('srcset', photo.srcSet)
-  image.setAttribute('sizes', sizes(photo))
-  window.preloadedPhoto = image
+function preload(photos) {
+  photos.forEach((photo, index) => {
+    const image = new Image()
+    image.src = photo.sizes.large.url
+    image.setAttribute('srcset', photo.srcSet)
+    image.setAttribute('sizes', sizes(photo))
+    const key = `snPreloadedPhoto${index}`
+    window[key] = image
+  })
 }
 
 class Photo extends Component {
   constructor(props) {
     super()
-    preload(props.preloadPhoto)
+    preload(props.preloadPhotos)
   }
 
   componentWillReceiveProps(nextProps) {
-    preload(nextProps.preloadPhoto)
+    preload(nextProps.preloadPhotos)
   }
 
-  render({ next, preloadPhoto, previous, photo }) {
+  render({ next, previous, photo }) {
     return (
       <div class={photo.mode}>
         <div class="photo-and-text">

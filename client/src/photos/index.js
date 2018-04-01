@@ -53,6 +53,7 @@ class PhotosWrapper extends Component {
   render() {
     const { selectedPhoto } = this.props
     const nextPhoto = this.getNextPhoto()
+    const previousPhoto = this.getPreviousPhoto()
     return (
       <div>
         <KeyboardEventHandler
@@ -62,7 +63,7 @@ class PhotosWrapper extends Component {
         />
         <Photo
           photo={selectedPhoto}
-          preloadPhoto={nextPhoto}
+          preloadPhotos={[nextPhoto, previousPhoto]}
           next={
             <a
               href={`/photos/${nextPhoto.key}`}
