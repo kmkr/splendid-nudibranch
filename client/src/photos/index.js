@@ -57,6 +57,7 @@ class PhotosWrapper extends Component {
     return (
       <div>
         <KeyboardEventHandler
+          onHome={this.props.onHome}
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
           onToggleSidebar={this.onToggleExpandSidebar}

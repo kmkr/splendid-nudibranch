@@ -11,8 +11,10 @@ const RIGHT_KEYS = [
   39 // arrow right
 ]
 const SIDEBAR_KEYS = [
-  27, // ESC
   73 // i
+]
+const HOME_KEYS = [
+  27 // ESC
 ]
 
 class KeyboardEventHandler extends Component {
@@ -35,7 +37,7 @@ class KeyboardEventHandler extends Component {
 
   handleKeyUp(e) {
     const keyCode = e.keyCode || e.detail.keyCode
-    const { onPrevious, onNext, onToggleSidebar } = this.props
+    const { onHome, onPrevious, onNext, onToggleSidebar } = this.props
 
     if (e.altKey) {
       return
@@ -50,6 +52,9 @@ class KeyboardEventHandler extends Component {
     } else if (SIDEBAR_KEYS.indexOf(keyCode) !== -1) {
       e.preventDefault()
       onToggleSidebar()
+    } else if (HOME_KEYS.indexOf(keyCode) !== -1) {
+      e.preventDefault()
+      onHome()
     }
   }
 
