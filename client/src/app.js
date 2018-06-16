@@ -6,7 +6,6 @@ import Collage from './collage'
 import DeepWater from './deep-water'
 import PhotosWrapper from './photos'
 import { addAction, beaconStats } from './statistics'
-import { getPosition, setPosition } from './scroll-location'
 import { setTimeout } from 'timers'
 
 function getPhotoWithKey(photos, key) {
@@ -41,7 +40,7 @@ class App extends Component {
         })
 
         if (!photo) {
-          this.scrollToPrevPosition()
+          this.onGoToPhotos()
         }
       }
     })
@@ -56,10 +55,6 @@ class App extends Component {
   }
 
   onSelectPhoto(photo) {
-    const photoIsActive = !!this.state.selectedPhoto
-    if (!photoIsActive) {
-      setPosition()
-    }
     this.setState({
       selectedPhoto: photo
     })
@@ -71,28 +66,34 @@ class App extends Component {
     })
   }
 
-  scrollToPrevPosition() {
-    const prevPosition = getPosition()
+  scrollToPhoto(key, retryNum) {
     setTimeout(() => {
-      if (prevPosition) {
-        window.scroll({ top: prevPosition })
-      } else {
-        this.onGoToPhotos()
+      console.log(key)
+      const elem = document.querySelector(`[data-photo-key="${key}"]`)
+      if (!elem) {
+        if (retryNum < 3) {
+          return this.scrollToPhoto(key, retryNum + 1)
+        }
+        return this.onGoToPhotos()
       }
-    })
+
+      window.scroll({ top: elem.offsetTop - 50 })
+    }, 50)
   }
 
   onHome(e) {
     if (e) {
       e.preventDefault()
     }
+    const { selectedPhoto } = this.state
+    const selectedPhotoKey = selectedPhoto ? selectedPhoto.key : null
     this.setState({
       selectedPhoto: null
     })
 
     window.history.pushState('frontpage', '', '/')
     addAction()
-    this.scrollToPrevPosition()
+    this.scrollToPhoto(selectedPhotoKey, 0)
   }
 
   onGoToPhotos(e, offset) {
