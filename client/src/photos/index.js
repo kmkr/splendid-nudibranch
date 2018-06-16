@@ -35,12 +35,12 @@ class PhotosWrapper extends Component {
 
   onNextPhoto(e) {
     e && e.preventDefault()
-    this.props.onSelectPhoto(this.getNextPhoto())
+    this.props.onChangePhoto(this.getNextPhoto())
   }
 
   onPreviousPhoto(e) {
     e && e.preventDefault()
-    this.props.onSelectPhoto(this.getPreviousPhoto())
+    this.props.onChangePhoto(this.getPreviousPhoto())
   }
 
   onToggleExpandSidebar(e) {

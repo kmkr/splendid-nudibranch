@@ -120,7 +120,7 @@ class App extends Component {
       <div id="container">
         <PhotosWrapper
           onHome={this.onHome}
-          onSelectPhoto={this.onSelectPhoto}
+          onChangePhoto={this.onSelectPhoto}
           photos={photos}
           selectedPhoto={selectedPhoto}
         />
