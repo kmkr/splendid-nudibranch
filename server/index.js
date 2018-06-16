@@ -68,17 +68,22 @@ function photoIndex(res, { id, photoKey, feature } = {}, jsFile, cssFile) {
     const photos = feature
       ? groupByFeature(mappedPhotos, feature)
       : mappedPhotos
+    const featureName = getFeatureName(feature)
     return res.render('index', {
       id,
       description,
       favico100: hashStore.withHash('/static/images/favicon-100.png'),
       favico192: hashStore.withHash('/static/images/favicon-192.png'),
       favico: hashStore.withHash('/static/images/favicon.ico'),
-      featureName: getFeatureName(feature),
+      featureName,
       js: hashStore.withHash(jsFile),
       css: hashStore.withHash(cssFile),
       photos: JSON.stringify(photos),
-      ogTags: ogTags(photos, { selectedPhotoKey: photoKey }),
+      ogTags: ogTags(photos, {
+        selectedPhotoKey: photoKey,
+        feature,
+        featureName
+      }),
       selectedPhotoKey: photoKey,
       keywords
     })

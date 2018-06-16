@@ -2,35 +2,22 @@ const { description } = require('./photos/constants')
 
 const name = 'The Splendid Nudibranch'
 
-function buildUrl({ selectedPhotoKey, year, location }) {
+function buildUrl({ selectedPhotoKey, feature }) {
   let url = 'http://www.thesplendidnudibranch.pink'
 
   if (selectedPhotoKey) {
-    url += `/photos/${selectedPhotoKey}`
+    return url + `/photos/${selectedPhotoKey}`
   }
 
-  if (location || year) {
-    url += '/?'
-    url += Object.entries({ location, year })
-      .filter(e => e[1])
-      .map(entry => `${entry[0]}=${entry[1]}`)
-      .join('&')
+  if (feature) {
+    return url + `/?feature=${feature.join('&feature=')}`
   }
 
   return url
 }
 
-// todo fjern year
-module.exports = (photos, { selectedPhotoKey, year, location }) => {
+module.exports = (photos, { selectedPhotoKey, feature, featureName }) => {
   const selectedPhoto = photos.filter(p => p.key === selectedPhotoKey)[0]
-
-  let filterTitle
-  if (location || year) {
-    filterTitle = [location, year]
-      .filter(e => e)
-      .map(str => str.charAt(0).toUpperCase() + str.slice(1))
-      .join(' ')
-  }
 
   if (selectedPhoto) {
     const selectedPhotoSize = selectedPhoto.sizes.medium
@@ -41,7 +28,7 @@ module.exports = (photos, { selectedPhotoKey, year, location }) => {
       'og:title': [filterTitle || selectedPhoto.title, name]
         .filter(e => e)
         .join(' :: '),
-      'og:url': buildUrl({ selectedPhotoKey, year, location }),
+      'og:url': buildUrl({ selectedPhotoKey }),
       'og:description': selectedPhoto.description,
       'og:image': selectedPhotoSize.url,
       'og:image:width': selectedPhotoSize.width,
@@ -52,8 +39,8 @@ module.exports = (photos, { selectedPhotoKey, year, location }) => {
   return {
     'og:type': 'article',
     'og:site_name': name,
-    'og:title': [filterTitle, name].filter(e => e).join(' :: '),
-    'og:url': buildUrl({ year, location }),
+    'og:title': [featureName, name].filter(Boolean).join(' :: '),
+    'og:url': buildUrl({ feature }),
     'og:description': description,
     'og:image': 'http://www.thesplendidnudibranch.pink/static/images/logo.png',
     'og:image:width': 1300,
