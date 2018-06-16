@@ -20,6 +20,7 @@ function buildUrl({ selectedPhotoKey, year, location }) {
   return url
 }
 
+// todo fjern year
 module.exports = (photos, { selectedPhotoKey, year, location }) => {
   const selectedPhoto = photos.filter(p => p.key === selectedPhotoKey)[0]
 

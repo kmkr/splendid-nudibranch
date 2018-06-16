@@ -5,6 +5,7 @@ import Photo from './photo'
 import setPhotoWidth from './set-width-helper'
 import throttle from './throttle'
 import getWidth from './get-width'
+import MidWater from './mid-water'
 import { getNumLoaded, setNumLoaded } from './num-loaded-photos'
 
 function hasScrollbar() {
@@ -22,6 +23,7 @@ class Collage extends Component {
     const isCollage = getIsCollage()
     this.updateWidth = this.updateWidth.bind(this)
     this.updateLoadedPhotos = this.updateLoadedPhotos.bind(this)
+    this.renderPhotoGroup = this.renderPhotoGroup.bind(this)
 
     if (!isCollage) {
       throttle('scroll', 'optimizedScroll')
@@ -29,7 +31,7 @@ class Collage extends Component {
     }
     this.state = {
       width: getWidth(),
-      // Old devices (at least old iPads) breaks if all photos are loaded at once. Load only 8 photos at a time.p
+      // Old devices (at least old iPads) breaks if all photos are loaded at once. Load only 8 photos at a time.
       loadPhotos: isCollage ? props.photos.length : Math.max(3, getNumLoaded())
     }
   }
@@ -72,28 +74,41 @@ class Collage extends Component {
     window.removeEventListener('optimizedScroll', this.updateLoadedPhotos)
   }
 
-  render({ photos, onSelectPhoto }, { loadPhotos }) {
-    const photoGroups = setPhotoWidth(photos.slice(0, loadPhotos))
+  renderPhotoGroup(photoGroup) {
+    const { onSelectPhoto } = this.props
     const setDimensions = getIsCollage()
+    const style = setDimensions ? { height: `${photoGroup.height}px` } : {}
+    return (
+      <div key={`photo-group-${photoGroup.key}`} style={style}>
+        {photoGroup.photos.map(photo => (
+          <Photo
+            key={photo.key}
+            setWidth={setDimensions}
+            photo={photo}
+            onSelect={onSelectPhoto}
+          />
+        ))}
+      </div>
+    )
+  }
+
+  render({ photos }, { loadPhotos }) {
+    const featuredPhotos = photos.filter(photo => photo.featured)
+    const nonFeaturedPhotos = photos.filter(photo => !photo.featured)
+    const featuredPhotoGroups = setPhotoWidth(
+      featuredPhotos.slice(0, loadPhotos)
+    )
+    const nonFeaturedPhotoGroups = setPhotoWidth(
+      nonFeaturedPhotos.slice(
+        0,
+        Math.max(0, loadPhotos - featuredPhotos.length)
+      )
+    )
     return (
       <div id="collage">
-        {photoGroups.map((photoGroup, index) => {
-          const style = setDimensions
-            ? { height: `${photoGroup.height}px` }
-            : {}
-          return (
-            <div key={`photo-group-${index}`} style={style}>
-              {photoGroup.photos.map(photo => (
-                <Photo
-                  key={photo.key}
-                  setWidth={setDimensions}
-                  photo={photo}
-                  onSelect={onSelectPhoto}
-                />
-              ))}
-            </div>
-          )
-        })}
+        {featuredPhotoGroups.map(this.renderPhotoGroup)}
+        {!!featuredPhotoGroups.length && <MidWater />}
+        {nonFeaturedPhotoGroups.map(this.renderPhotoGroup)}
       </div>
     )
   }

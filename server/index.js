@@ -10,6 +10,7 @@ const sitemapRouter = require('./sitemap')
 const statsRouter = require('./statistics')
 const robotsRouter = require('./robots')
 const viewDataService = require('./view-data-service')
+const { groupByFeature, getFeatureName } = require('./feature-group-service')
 const { serverToClient } = require('./photos/photo-data-conversion')
 const ogTags = require('./og-tags')
 const { description } = require('./photos/constants')
@@ -53,30 +54,32 @@ app.use(
 
 const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
-function photoIndex(
-  res,
-  { id, photoKey, year, location } = {},
-  jsFile,
-  cssFile
-) {
+function photoIndex(res, { id, photoKey, feature } = {}, jsFile, cssFile) {
   return Promise.all([
     viewDataService.getPhotoData(),
     viewDataService.getKeywords()
   ]).then(([photoData, keywords]) => {
-    const photos = photoData.photos.map(p => serverToClient(p, photoData.base))
+    const mappedPhotos = photoData.photos.map(p =>
+      serverToClient(p, photoData.base)
+    )
+    if (feature && !Array.isArray(feature)) {
+      feature = [feature]
+    }
+    const photos = feature
+      ? groupByFeature(mappedPhotos, feature)
+      : mappedPhotos
     return res.render('index', {
       id,
       description,
       favico100: hashStore.withHash('/static/images/favicon-100.png'),
       favico192: hashStore.withHash('/static/images/favicon-192.png'),
       favico: hashStore.withHash('/static/images/favicon.ico'),
+      featureName: getFeatureName(feature),
       js: hashStore.withHash(jsFile),
       css: hashStore.withHash(cssFile),
       photos: JSON.stringify(photos),
-      ogTags: ogTags(photos, { selectedPhotoKey: photoKey, year, location }),
+      ogTags: ogTags(photos, { selectedPhotoKey: photoKey }),
       selectedPhotoKey: photoKey,
-      year,
-      location,
       keywords
     })
   })
@@ -87,7 +90,7 @@ app.get('/', (req, res) => {
   newStatsItem(req, { id, path: req.path }, true)
   photoIndex(
     res,
-    { year: req.query.year, location: req.query.location, id },
+    { feature: req.query.feature, id },
     '/static/scripts/bundle.js',
     indexCssFile
   )
@@ -100,8 +103,6 @@ app.get('/photos/:key', (req, res) => {
     res,
     {
       photoKey: req.params.key,
-      year: req.query.year,
-      location: req.query.location,
       id
     },
     '/static/scripts/bundle.js',

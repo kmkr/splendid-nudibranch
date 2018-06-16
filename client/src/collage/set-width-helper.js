@@ -11,6 +11,7 @@ export default function(_photos) {
 
   while (photos.length) {
     const subGroup = {
+      key: '',
       height: null,
       photos: []
     }
@@ -55,6 +56,7 @@ export default function(_photos) {
       photoToAdd.displayedWidth =
         (totalWidth - marginsInRow) / numThisRow * scale
       subGroup.photos.push(photoToAdd)
+      subGroup.key += photoToAdd.key
       const ratio = photoToAdd.sizes.small.height / photoToAdd.sizes.small.width
       const height = photoToAdd.displayedWidth * ratio
       subGroup.height = subGroup.height

@@ -18,6 +18,7 @@ module.exports.serverToClient = function(photo, base) {
     description: photo.description,
     latin: photo.latin,
     location: photo.location,
+    // todo: remove tags requirement (only required for admin)
     tags: photo.tags,
     mode: getMode(photo.resize),
     sizes: resizeTo.reduce((prev, current) => {
