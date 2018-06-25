@@ -3,14 +3,14 @@ DSC00259.jpg
 Title Western Clown Anemonefish
 Latin Amphiprion ocellaris
 Location Dumaguete, The Philippines
-Tags anemonefish clownfish 2013 anemone
+Tags anemonefish clownfish 2013 anemone fish
 Description Sea anemones are to most fish poisonous. The clownfish however is immune to their stinging tentacles and form a symbiotic relationship with the anemone where the clownfish receive protection from predators, and the anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
 
 DSC00266.jpg
 
 Title Western Clown Anemonefish
 Location Dumaguete, The Philippines
-Tags anemonefish clownfish 2013 anemone
+Tags anemonefish clownfish 2013 anemone fish
 Latin Amphiprion ocellaris
 Description Clownfish hatch near the surface and travel deeper to search for a host anemone when they reach their juvenile stage. Within a clownfish community there is a strict hierarchy where juveniles begin at the bottom and have to gradually move upwards by proving their abilities to the rest of the population. During this time they may be victims to agression, and possibly eviction from the anemone by more mature clownfish.
 
@@ -59,7 +59,7 @@ DSC01782.jpg
 Title Blackfin Barracuda
 Location Apo Reef, The Philippines
 Latin Sphyraena genie
-Tags 2014 barracuda
+Tags 2014 barracuda school
 Description A streamlined predator, very powerful with fearsome teeth. Its torpedo like body of almost pure muscle makes it extremely fast. A fascinating fish commonly seen schooling.
 
 DSC02484.jpg
@@ -90,7 +90,7 @@ DSC02594.jpg
 Title Juvenile Boxfish
 Location Anilao, The Philippines
 Latin Ostracion cubicus
-Tags 2014 boxfish
+Tags 2014 boxfish fish
 Description The members of the boxfish family display a unique behavior of blowing into the sand of the sea floor to uncover buried food, such as tasty worms and shrimps. The boxfish is one of those animals being consistently cute its entire lifetime, not just as juvenile.
 
 DSC02648.jpg
@@ -130,7 +130,7 @@ DSC02984.jpg
 Title Painted Frogfish
 Location Anilao, The Philippines
 Latin Antennarius pictus
-Tags 2014 frogfish
+Tags 2014 frogfish fish
 Description The social activity of this fish is rather limited, and the male will sometimes eat the female if she stays around too long after mating.
 
 DSC03281.jpg
@@ -154,7 +154,7 @@ DSC03425.jpg
 Title Bobbit Worm
 Location Anilao, The Philippines
 Latin Eunice aphroditois
-Tags worm 2014
+Tags worm 2014 portrait
 Description The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Most of the body is covered in sand, just enough is exposed to ambush surprised fish. This worm is quite rare, shy, and mysterious. Little is known about its behaviour. It's theorized that the worm doesn’t see at all but uses its excellent receptors to detect movement in the water to sense nearby fish.
 
 DSC03448.jpg
@@ -162,7 +162,7 @@ DSC03448.jpg
 Title Reticulate Stargazer
 Location Anilao, The Philippines
 Latin Uranoscopus chinensis
-Tags stargazer 2014
+Tags stargazer 2014 portrait fish
 Description Night dives at the Anilao pier feel like something from another world. The sandy bottom comes to life with all the crabs, shrimps, worms, slugs and bottom dwellers doing their brutal routine. Many of these animals feed at night, and the site turns to a large scale battlefield when the sun sets. A stargazer approached us in the midst of the chaos, landed on the sand and burrowed its tapered body, exposing only its big, heavy, flat head and a vertically slanted mouth. He waits for passing fish before jumping upwards while creating a vacuum to suck in the prey.
 
 DSC03660.jpg
@@ -194,7 +194,7 @@ DSC03769.jpg
 Title Giant Frogfish
 Location Anilao, The Philippines
 Latin Antennarius commerson
-Tags frogfish 2014
+Tags frogfish 2014 fish
 Description In just two weeks, the frogfish can change its own color to match the environment. They generally do not move very much, but sometimes use the pelvic fins (the ones below the body) to walk along the sea floor. Their pectoral fins (one on each side) are used for stability.
 
 DSC03808.jpg
@@ -258,14 +258,14 @@ DSC04222.jpg
 Title Graeffe's Sea Cucumber
 Location Anilao, The Philippines
 Latin Pearsonothuria graeffei
-Tags sea-cucumber 2014
+Tags sea-cucumber 2014 portrait
 Description The sea cucumbers are scavengers, crawling mostly around the sea floor. Not always though - since their gametes float around in the water column a vertical positioning is thought to increase the chance of successful reproduction for both male and female.
 
 DSC04244.jpg
 
 Title Longhorn Cowfish
 Location Anilao, The Philippines
-Tags 2014 boxfish cowfish
+Tags 2014 boxfish cowfish portrait
 Latin Lactoria cornuta
 Description A peaceful fish having horns as defence to make it more difficult for predators to swallow it. The cowfishes are, sadly, a common target for the aquarium industry due to their adorable looks.
 
@@ -273,7 +273,7 @@ DSC04577.jpg
 
 Title Magnificent Sea Anemone
 Location Anilao, The Philippines
-Tags 2014 anemone
+Tags 2014 anemone fish
 Latin Heteractis magnifica with Amphiprion perideraion
 Description The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the first dull name. The anemone can entirely retract it's tentacles. It's column, here in purple color, will then be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself.
 
@@ -281,7 +281,7 @@ DSC04665.jpg
 
 Title Devil Scorpionfish
 Location Anilao, The Philippines
-Tags 2014 scorpionfish
+Tags 2014 scorpionfish fish
 Latin Scorpaenopsis diabolus
 Description Normally, pectoral fins are used to swim but this fish has evolved two small stilts that allow it to walk and dig the seabed instead. While this is by no means unique for an ocean species, it's still fascinating to observe this type of irregularity. Perhaps, a long time ago another species did just the same, and that is why there are creatures (such as you and me) walking on land today.
 
@@ -305,7 +305,7 @@ DSC04884.jpg
 
 Title White-spotted Hermit Crab
 Location Anilao, The Philippines
-Tags 2014
+Tags 2014 hermit-crab crab
 Latin Dardanus megistos
 Description A hermit crab's home is the shell of a gastropod, usually snails. As they grow, larger shells are required. However, suitable intact shells are of limited resource and competition for the best shell among hermit crabs is common. If a crab looking for new vacancy finds a shell that is too large, it will stay in its current shell and wait by the vacant shell for other hermit crabs to arrive. As other crabs arrive and check the shell, they will do the same and when finally one finds the vacant shell suitable, each crab exchange shells in sequence.
 
@@ -321,7 +321,7 @@ DSC05075.jpg
 
 Title Nudibranch
 Location Anilao, The Philippines
-Tags 2014
+Tags 2014 nudibranch
 Latin Hypselodoris emma
 Description
 
@@ -329,7 +329,7 @@ DSC06145.jpg
 
 Title St. Johns Cave Systems
 Location St. Johns Reef, Egypt
-Tags 2014
+Tags 2014 diver
 Latin
 Description St. Johns is know for its array of caverns, tunnels, overhangs and swim-throughs. The sun pierce through the cracks, crevices and holes inside the caverns, guiding us through the maze. The majestetic area is like a forgotten world, mountains now covered in coral.
 
@@ -337,7 +337,7 @@ DSC06417.jpg
 
 Title Elphinstone Anthias
 Location Elphinestone Reef, Egypt
-Tags 2014 anthias
+Tags 2014 anthias school fish
 Latin Anthiinae (family)
 Description Participating in a huge feeding aggregation, the massive amount of anthias make some of the visually dramatic scenes on the reef. Anthias live in harems consisting of one dominant male, a few lesser males, juveniles and a cluster of females. All anthias are hermaphrodites and begin life as female.
 
@@ -345,7 +345,7 @@ DSC06497.jpg
 
 Title Giant Moray Eel
 Location Egypt
-Tags 2014
+Tags 2014 eel portrait
 Latin Gymnothorax javanicus
 Description Born as male and turns into female later in life, this eel can grow up to three meters long.
 
@@ -353,7 +353,7 @@ DSC06519.jpg
 
 Title Bluespotted Ribbontail Ray
 Location Egypt
-Tags 2014
+Tags 2014 portrait ray
 Latin Taeniura lymma
 Description
 
@@ -361,7 +361,7 @@ DSC06574.jpg
 
 Title Tassled Scorpionfish
 Location Egypt
-Tags 2014 scorpionfish
+Tags 2014 scorpionfish fish portrait
 Latin Scorpaenopsis oxycephala
 Description An ambush predator that excels at blending in with the surroundings. Highly venomous.
 
@@ -369,7 +369,7 @@ DSC06604.jpg
 
 Title The Dugongs of Marsha Shouna
 Location Marsa Alam, Egypt
-Tags 2014 dugong
+Tags 2014 dugong portrait
 Latin Dugong dugon
 Description Dugongs are believed to be inspirations behind tales of mermaids and in parts of Indonesia they are considered reincarnations of women. The word "dugong" means lady of the sea. It's herbivorous and feed uniquely on sea grass. Their numbers are very low and in some countries they are entirely depleted due to hunting, bycatch and habitat destruction. I was extremely lucky to encounter one in Marsha Shouna on the western coast of the Red Sea, once home to thousands of dugongs but now with very few individuals. The 100 km coastline along Marsa Alam had only seven dugongs left at the time of writing.
 
@@ -377,7 +377,7 @@ DSC06687.jpg
 
 Title Spinner Dolphin
 Location Egypt
-Tags 2014 dolphin
+Tags 2014 dolphin pod
 Latin Stenella longirostris
 Description Those times I'm lucky enough to hear whistles and clicking sounds I instantly change focus from finding small stuff, snails or whatever I'm up to at the moment, and instead scout for what could be dolphins. They are fast swimmers, so if they are around, they are not necessarily for long. Most often I will not find them, but sometimes I do, and some of these encounters I believe are the dolphins approaching me more than the other way around. They are curious, playful and intelligent creatures.
 
@@ -401,18 +401,15 @@ DSC07195.jpg
 
 Title Common Lionfish
 Location Egypt
-Tags 2015 scorpionfish lionfish
+Tags 2015 scorpionfish lionfish fish
 Latin Pterois miles
 Description
-
-//Senere til en Red Lionfish:
-//Description The red lionfish is the only known species to blow water at prey in effort to disorient them, or get attention, and then devour it by a swift move using their extremely quick reflexes.
 
 DSC07252.jpg
 
 Title Moon Jellyfish
 Location Egypt
-Tags 2015
+Tags 2015 jellyfish
 Latin Aurelia aurita
 Description The short tentacles around the bell of the moon jelly are poisonous to small marine animals, which the jelly sometimes eat. A complete meal is ensured by using a layer of mucus covering the creature to catch plankton.
 
@@ -420,7 +417,7 @@ DSC07289.jpg
 
 Title Crescent-tail Bigeye
 Location Egypt
-Tags 2015
+Tags 2015 portrait fish
 Latin Priacanthus hamrur
 Description
 
@@ -428,7 +425,7 @@ DSC07389.jpg
 
 Title Titan Triggerfish
 Location Egypt
-Tags triggerfish 2015
+Tags triggerfish 2015 fish portrait
 Latin Balistoides viridescens
 Description Scattered throughout the world's seas, the triggerfish is usually a solitary fish. It's territorial and can be nasty to intruders if there are eggs to protect. Be respectful and watch its signals, an erect dorsal spine (on top of the fish) means stay away.
 
@@ -436,7 +433,7 @@ DSC07475.jpg
 
 Title Red Sea Corals
 Location Egypt
-Tags 2015
+Tags 2015 coral
 Latin
 Description Water temperatures in the Red Sea peaks at 35 degrees celcius. Most reefs bleach and die off in such conditions while the Red Sea corals linger on. They are remarkably resilient to high temperatures. Scientists are trying to figure out the key to this crucial ability, with hope of some day be able to salvage reefs currently suffering from rising sea temperatures in other parts of the world.
 
@@ -444,7 +441,7 @@ DSC07567.jpg
 
 Title Blackfin Barracuda
 Location Egypt
-Tags 2015
+Tags 2015 fish school
 Latin Sphyraena genie
 Description Barracudas aggregate in schools as protection against larger predators.
 
@@ -452,7 +449,7 @@ DSC07673.jpg
 
 Title Two-banded Anemonefish
 Location Egypt
-Tags 2015
+Tags 2015 fish
 Latin Amphiprion bicinctus
 Description
 
@@ -460,7 +457,7 @@ DSC07724.jpg
 
 Title Bluecheek Butterflyfish
 Location Egypt
-Tags 2015
+Tags 2015 fish
 Latin Chaetodon semilarvatus
 Description
 
@@ -476,7 +473,7 @@ DSC07841.jpg
 
 Title Bluecheek Butterflyfish
 Location Egypt
-Tags 2015
+Tags 2015 fish
 Latin Chaetodon semilarvatus
 Description Endemic to the Red Sea and Gulf of Aden, the bluecheek butterflyfish is one of the few species of fish that have long-term mates.
 
@@ -507,7 +504,7 @@ DSC09129.jpg
 
 Title Juvenile Blacktip Reef Shark
 Location Perhentian Besar, Malaysia
-Tags 2015
+Tags 2015 shark
 Latin Carcharhinus melanopterus
 Description Patrolling the shallows, half a dozen or so juvenile blacktips are using the safe nursing grounds outside a small beach on the island Perhentian Besar to practice the skill of hunting.
 
@@ -538,7 +535,7 @@ Kris Krister 412.jpg
 
 Title Potato Cod
 Location Cod Hole, Great Barrier Reef, Australia
-Tags 2013 cod
+Tags 2013 cod portrait fish
 Latin Epinephelus tukula
 Description A large, friendly and curious fellow. The potato cods are rare but territorial, thus quite easy to find once located. They seem to chill out at the same place, getting cleaned by wrasses. One of the potato cods on the barrier reef was so large it was nicknamed VW Beetle.
 
@@ -546,7 +543,7 @@ Kris Krister 453.jpg
 
 Title Potato Cod
 Location Cod Hole, Great Barrier Reef, Australia
-Tags 2013 cod
+Tags 2013 cod portrait fish
 Latin Epinephelus tukula
 Description This fish is bold. It may come really close and will sometimes tamper with your dive gear. It's latin name tukula means "man-eater" due to its large size, but it means no harm - it's just a curious and social fish.
 
@@ -577,7 +574,7 @@ DSC00366.jpg
 
 Title Lumpsucker
 Location Gulen, Norway
-Tags 2016
+Tags 2016 portrait fish
 Latin Cyclopterus lumpus
 Description Instead of having the normal type of pelvic fins (below), this fish has evolved disc-like fins and use them to adhere to the substrate.
 
@@ -585,7 +582,7 @@ DSC00564.jpg
 
 Title Spotted Moray Eel
 Location Bonaire, The Netherlands
-Tags 2016 eel
+Tags 2016 eel portrait
 Latin Gymnothorax moringa
 Description Unlike most fish who use suction to capture their prey, moray eels use two sets of jaws in their throats to drag prey inside their mouths.
 
@@ -593,7 +590,7 @@ DSC00591.jpg
 
 Title Green Turtle
 Location Bonaire, The Netherlands
-Tags 2016 turtle
+Tags 2016 turtle portrait
 Latin Chelonia mydas
 Description Surprisingly curious, this young turtle swam around us in the shallows during our way out to the Salt Pier, a gorgeous dive site on Bonaire.
 
@@ -601,7 +598,7 @@ DSC00598.jpg
 
 Title Green Turtle
 Location Bonaire, The Netherlands
-Tags 2016 turtle
+Tags 2016 turtle portrait
 Latin Chelonia mydas
 Description The green turtles inhabit coastal areas of as many as 140 countries. The Caribbean Islands have one of the largest populations of green turtles in the world.
 
@@ -609,7 +606,7 @@ DSC00631.jpg
 
 Title French Angelfish
 Location Bonaire, The Netherlands
-Tags 2016
+Tags 2016 fish portrait
 Latin Pomacanthus paru
 Description
 
@@ -617,7 +614,7 @@ DSC00696.jpg
 
 Title French Grunt
 Location Bonaire, The Netherlands
-Tags 2016 school
+Tags 2016 school fish
 Latin Haemulon flavolineatum
 Description
 
@@ -625,7 +622,7 @@ DSC00946.jpg
 
 Title Green Turtle
 Location Bonaire, The Netherlands
-Tags 2016 turtle
+Tags 2016 turtle portrait
 Latin Chelonia mydas
 Description The fat beneath the carapace of a C. Mydas is green, which is why it's common name is "green turtle".
 
@@ -633,7 +630,7 @@ DSC01136.jpg
 
 Title Atlantic Tarpon
 Location Bonaire, The Netherlands
-Tags 2016
+Tags 2016 fish
 Latin Megalops atlanticus
 Description A group of tarpons accompanied us during our night dives on Bonaire. These nocturnal hunters exploited the light from our torches to find prey.
 
@@ -641,7 +638,7 @@ DSC01178.jpg
 
 Title Shore Diving Bonaire
 Location Bonaire, The Netherlands
-Tags 2016
+Tags 2016 diver
 Latin
 Description The entire coastline of Bonaire's leeside is fringed by a beautiful coral reef, most of it accessible from shore. The reef starts at about two meter depth, so you could easily stay the entire dive at only a few meters depth if you want.
 
@@ -649,7 +646,7 @@ DSC01316.jpg
 
 Title The Hilma Hooker Wreck
 Location Bonaire, The Netherlands
-Tags 2016 wreck
+Tags 2016 wreck diver
 Latin
 Description After losing power off the coast of Bonaire, The Hilma Hooker was towed to the island's main pier. As this ship already was suspected by the DEA, a search was quickly conducted and 11.000 kg of marijuana was found. The owner of the ship however, was not. Hilma Hooker was starting to wear down and the hull was in dire need of maintenance. It was towed a couple of kilometers south in fear of disrupting boat traffic in case it sunk, which it promtly did. Now it's a great dive site, easily accessible on the western coast of Bonaire.
 
@@ -657,22 +654,22 @@ DSC01534.jpg
 
 Title The Hilma Hooker Wreck
 Location Bonaire, The Netherlands
-Tags 2016 wreck
+Tags 2016 wreck diver
 Latin
 
 DSC01646.jpg
 
 Title Spotted Scorpionfish
 Location Bonaire, The Netherlands
-Tags 2016
+Tags 2016 portrait
 Latin Scorpaena plumieri
-Description The scorpionfish is commonly found motionless blending in with the environment, virtually invisible. Do not touch.
+Description The scorpionfish is commonly found virtually invisible, blending in with the environment. Do not touch.
 
 DSC01682.jpg
 
 Title Banded Coral Shrimp
 Location Bonaire, The Netherlands
-Tags 2016 shrimp
+Tags 2016 shrimp portrait
 Latin Stenopus hispidus
 Description Prefers to live in caves, often seen upside down. Cleans parasites from fish cruising by.
 
@@ -688,7 +685,7 @@ DSC02162.jpg
 
 Title Chain Moray Eel
 Location Bonaire, The Netherlands
-Tags 2016 eel
+Tags 2016 eel portrait
 Latin Echidna catenata
 Description
 
@@ -696,7 +693,7 @@ DSC02188.jpg
 
 Title Christmas Tree Worm
 Location Bonaire, The Netherlands
-Tags 2016 worm
+Tags 2016 worm portrait
 Latin Spirobranchus giganteus
 Description This pair of feather-like tentacles, called radioles, is used for respiration and to catch floating plankton and microscopic plants. Each worm has one pair of these radioles.
 
@@ -752,7 +749,7 @@ DSC02949.jpg
 
 Title Starry Grouper
 Location Cocos Island, Costa Rica
-Tags 2017
+Tags 2017 portrait fish
 Latin Epinephelus labriformis
 Description Groupers typically have large mouths, fat lips and stout bodies. The starry grouper is relatively small, but still fearless enough to stay still and stare back when I was snapping a shot.
 
@@ -760,7 +757,7 @@ DSC02987.jpg
 
 Title Pronghorn Spiny Lobster
 Location Cocos Island, Costa Rica
-Tags 2017 lobster
+Tags 2017 lobster potrait
 Latin Panulirus penicillatus
 Description
 
@@ -816,7 +813,7 @@ DSC03216.jpg
 
 Title Chestnut Moray Eel
 Location Cocos Island, Costa Rica
-Tags 2017 eel
+Tags 2017 eel portrait
 Latin Gymtothorax castaneus
 Description
 
@@ -830,9 +827,9 @@ Description The gorgeous eagle rays can grow up to five meters, including a whip
 
 DSC03276.jpg
 
-Title Spotted Scorpion Fish
+Title Spotted Scorpionfish
 Location Cocos Island, Costa Rica
-Tags 2017
+Tags 2017 portrait
 Latin Scorpaena plumieri
 Description Skin flaps and feathery fins help this fish to camouflage against the surrounding coral.
 
@@ -848,7 +845,7 @@ DSC03543.jpg
 
 Title Giant Frogfish
 Location Cocos Island, Costa Rica
-Tags 2017 frogfish
+Tags 2017 frogfish potrait
 Latin Antennarius commerson
 Description Frogfish don't have swim bladders. Instead they walk on the ocean floor using their non-traditional fins.
 
@@ -856,7 +853,7 @@ DSC03470.jpg
 
 Title Mexican Hogfish
 Location Cocos Island, Costa Rica
-Tags 2017 fish
+Tags 2017 fish portrait
 Latin Bodianus diplotaenia
 Description All Bodianus d. start life as female and later become males.
 
@@ -896,7 +893,7 @@ DSC04037.jpg
 
 Title Southern Stingray
 Location Caño Island, Costa Rica
-Tags 2017 ray
+Tags 2017 ray portrait
 Latin Dasyatis americana
 Description The flat body has sharp corners and allows the stingray to efficiently bury itself in the sand to avoid predators.
 
@@ -912,6 +909,109 @@ DSC06038.jpg
 
 Title Dead Man's Fingers
 Location Sandefjord, Norway
-Tags soft-coral coral polyps
+Tags soft-coral coral polyps 2017
 Latin Alcyonium digitatum
 Description Colonies of these soft corals are known to live for over 20 years in the cold northern Atlantic Ocean.
+
+DSC07308.jpg
+
+Title Reef Stonefish
+Location The Barge wreck, Egypt
+Tags potrait stonefish 2018
+Latin Synanceia verrucosa
+Description Motionless, this fish sometimes stay at the same site for several months. Not agressive, but will inject a venom if stepped on. It's the world's most venomous fish.
+
+DSC07517.jpg
+
+Title Norton 16H Motorcycles
+Location SS Thistlegorm Wreck, Egypt
+Tags wreck motorcycle 2018
+Latin
+Description More than 100 motorcycles were aboard the SS Thistlegorm before it sunk. Many of them are still there.
+
+DSC07393.jpg
+
+Title Locomotive Engine
+Location SS Thistlegorm Wreck, Egypt
+Tags diver wreck locomotive 2018
+Latin
+Description Two Stanier 8F locomotive engines were part of the SS Thistlegorm's cargo and sunk with the ship. They are now both separated from the ship, either from the blast of the bomb that hit Thistlegorm, or as a result of the sinking. Their planned destination was Alexandria, Egypt.
+
+DSC07959.jpg
+
+Title Indian Lionfish
+Location Shaab El Erg, Egypt
+Tags lionfish scorpionfish portrait 2018
+Latin Pterois miles
+Description Active at night, this fish will follow you and exploit the light from your dive light to find prey.
+
+DSC08097.jpg
+
+Title The Bow of Chrisoula K
+Location Sha'ab Abu Nuhas Reef, Egypt
+Tags wreck 2018
+Latin
+Description This cargo ship was heading for Jeddah packed with Italian tiles, but never made it.
+
+DSC08605.jpg
+
+Title Pyjama Nudibranch
+Location El Minya Wreck, Egypt
+Tags nudibranch sponge 2018
+Latin Chromodoris quadricolor
+Description Sponges are popular food source for nudibranchs. The slugs incorporate the color from what they eat to their tissue color as camouflage. This beautiful pair have found a toxic finger-sponge (Negombata magnifica) to feed on. They won't be harmed, and instead use the chemicals to reduce the chance of being eaten.
+
+DSC08266.jpg
+
+Title SS Carnatic
+Location SS Carnatic wreck, Egypt
+Tags diver wreck 2018
+Latin
+Description A diver explores the wreck of SS Carnatic, which broke in half after hitting the reef near Shadwan Island. 31 people drowned.
+
+DSC08044.jpg
+
+Title Pygmy Sweepers
+Location Egypt
+Tags diver school 2018
+Latin Parapriacanthus ransonneti
+Description These fish feed on zooplankton at night. Usually found in shaded areas during the day, suck as inside wrecks, caves and under overhangs. They often form dense schools in these shelters.
+
+DSC07758.jpg
+
+Title Crocodilefish
+Location Yolanda Lagoon, Egypt
+Tags portrait 2018
+Latin Papilloculiceps longiceps
+Description
+
+DSC07615.jpg
+
+Title Giant Moray
+Location Egypt
+Tags eel 2018 portrait
+Latin Gymnothorax javanicus
+Description
+
+DSC08473.jpg
+
+Title Indian Lionfish
+Location Shaab El Erg, Egypt
+Tags portrait 2018 lionfish scorpionfish
+Latin Pterois miles
+Description
+
+DSC08524.jpg
+
+Title Hermit Crabs
+Location Shaab El Erg, Egypt
+Tags portrait 2018 crab hermit-crab
+Latin
+Description
+
+DSC07445.jpg
+
+Title SS Thistlegorm
+Location Egypt
+Tags wreck 2018 bow gun
+Description Sunk during a surprise attack by a pair of German Heinkel He-111 bomber planes in World War II. The ship is over 400 feet long, and most of its cargo is still present in, or around the wreck.
