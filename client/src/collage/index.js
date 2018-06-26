@@ -79,7 +79,11 @@ class Collage extends Component {
     const setDimensions = getIsCollage()
     const style = setDimensions ? { height: `${photoGroup.height}px` } : {}
     return (
-      <div key={`photo-group-${photoGroup.key}`} style={style}>
+      <div
+        class="photo-group"
+        key={`photo-group-${photoGroup.key}`}
+        style={style}
+      >
         {photoGroup.photos.map(photo => (
           <Photo
             key={photo.key}

@@ -16,14 +16,13 @@
 }
 
 #collage #mid-water {
+  margin: 100px auto;
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
 }
 
 @media (min-width: 1100px) {
   /* group */
-  #collage > div {
+  #collage .photo-group {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
@@ -33,7 +32,7 @@
   }
 
   /* single photo */
-  #collage > div > div {
+  #collage .photo {
     display: inline-block;
     flex: 1 1 auto;
     margin-right: var(--margin);
@@ -51,8 +50,8 @@
     color: var(--color-white);
   }
 
-  #collage > div > div a:hover .overlay-title-wrapper,
-  #collage > div > div a:focus .overlay-title-wrapper {
+  #collage .photo a:hover .overlay-title-wrapper,
+  #collage .photo a:focus .overlay-title-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;

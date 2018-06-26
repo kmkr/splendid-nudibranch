@@ -20,7 +20,7 @@ class Photo extends Component {
     }
 
     return (
-      <div data-photo-key={photo.key} style={style}>
+      <div class="photo" data-photo-key={photo.key} style={style}>
         <a href={`/photos/${photo.key}`} onClick={this.onClick}>
           <div class="overlay-title-wrapper">
             <p class="title">{photo.title}</p>
