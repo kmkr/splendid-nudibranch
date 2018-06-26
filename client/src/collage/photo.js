@@ -3,6 +3,7 @@ import { h, Component } from 'preact'
 
 import TransitionImage from '../transition-image'
 import PhotoText from '../photos/photo-text'
+import decorateLink from '../feature/decorate-link'
 
 class Photo extends Component {
   constructor() {
@@ -21,7 +22,7 @@ class Photo extends Component {
 
     return (
       <div class="photo" data-photo-key={photo.key} style={style}>
-        <a href={`/photos/${photo.key}`} onClick={this.onClick}>
+        <a href={decorateLink(`/photos/${photo.key}`)} onClick={this.onClick}>
           <div class="overlay-title-wrapper">
             <p class="title">{photo.title}</p>
             <p class="location">{photo.location}</p>

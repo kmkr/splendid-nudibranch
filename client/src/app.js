@@ -7,6 +7,7 @@ import DeepWater from './deep-water'
 import PhotosWrapper from './photos'
 import { addAction, beaconStats } from './statistics'
 import { setTimeout } from 'timers'
+import decorateLink from './feature/decorate-link'
 
 function getPhotoWithKey(photos, key) {
   return photos.filter(p => p.key === key)[0]
@@ -16,7 +17,7 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    const selectedPhotoKey = (window.location.href.match(/photos\/([^/]+)/) ||
+    const selectedPhotoKey = (window.location.href.match(/photos\/([^/?]+)/) ||
       [])[1]
     this.state = {
       selectedPhoto: selectedPhotoKey
@@ -59,7 +60,11 @@ class App extends Component {
       selectedPhoto: photo
     })
 
-    window.history.pushState(photo.key, '', `/photos/${photo.key}`)
+    window.history.pushState(
+      photo.key,
+      '',
+      decorateLink(`/photos/${photo.key}`)
+    )
     addAction()
     setTimeout(() => {
       window.scroll({ top: 0, behavior: 'smooth' })
@@ -68,7 +73,6 @@ class App extends Component {
 
   scrollToPhoto(key, retryNum) {
     setTimeout(() => {
-      console.log(key)
       const elem = document.querySelector(`[data-photo-key="${key}"]`)
       if (!elem) {
         if (retryNum < 3) {
@@ -91,7 +95,7 @@ class App extends Component {
       selectedPhoto: null
     })
 
-    window.history.pushState('frontpage', '', '/')
+    window.history.pushState('frontpage', '', decorateLink('/'))
     addAction()
     this.scrollToPhoto(selectedPhotoKey, 0)
   }
@@ -117,12 +121,14 @@ class App extends Component {
   render() {
     const { photos } = this.props
     const { selectedPhoto } = this.state
+    const featuredPhotos = photos.filter(photo => photo.featured)
+    const nonFeaturedPhotos = photos.filter(photo => !photo.featured)
     return selectedPhoto ? (
       <div id="container">
         <PhotosWrapper
           onHome={this.onHome}
           onChangePhoto={this.onSelectPhoto}
-          photos={photos}
+          photos={featuredPhotos.concat(nonFeaturedPhotos)}
           selectedPhoto={selectedPhoto}
         />
       </div>
@@ -130,7 +136,11 @@ class App extends Component {
       <div>
         <TopLogo onGoToPhotos={this.onGoToPhotos} />
         <div id="container">
-          <Collage photos={photos} onSelectPhoto={this.onSelectPhoto} />
+          <Collage
+            featuredPhotos={featuredPhotos}
+            nonFeaturedPhotos={nonFeaturedPhotos}
+            onSelectPhoto={this.onSelectPhoto}
+          />
           <DeepWater onClick={e => this.onGoToPhotos(e, -100)} />
         </div>
       </div>

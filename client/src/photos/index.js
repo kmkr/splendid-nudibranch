@@ -4,6 +4,7 @@ import { h, Component } from 'preact'
 import Photo from './photo'
 import Navigation from './navigation'
 import Sidebar from './sidebar'
+import decorateLink from '../feature/decorate-link'
 
 import KeyboardEventHandler from './keyboard-event-handler'
 
@@ -67,14 +68,14 @@ class PhotosWrapper extends Component {
           preloadPhotos={[nextPhoto, previousPhoto]}
           next={
             <a
-              href={`/photos/${nextPhoto.key}`}
+              href={decorateLink(`/photos/${nextPhoto.key}`)}
               class="click-next"
               onClick={this.onNextPhoto}
             />
           }
           previous={
             <a
-              href={`/photos/${this.getPreviousPhoto().key}`}
+              href={decorateLink(`/photos/${this.getPreviousPhoto().key}`)}
               class="click-previous"
               onClick={this.onPreviousPhoto}
             />

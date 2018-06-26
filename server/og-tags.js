@@ -25,9 +25,7 @@ module.exports = (photos, { selectedPhotoKey, feature, featureName }) => {
     return {
       'og:type': 'article',
       'og:site_name': name,
-      'og:title': [filterTitle || selectedPhoto.title, name]
-        .filter(e => e)
-        .join(' :: '),
+      'og:title': [selectedPhoto.title, name].filter(e => e).join(' :: '),
       'og:url': buildUrl({ selectedPhotoKey }),
       'og:description': selectedPhoto.description,
       'og:image': selectedPhotoSize.url,

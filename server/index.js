@@ -108,6 +108,7 @@ app.get('/photos/:key', (req, res) => {
     res,
     {
       photoKey: req.params.key,
+      feature: req.query.feature,
       id
     },
     '/static/scripts/bundle.js',

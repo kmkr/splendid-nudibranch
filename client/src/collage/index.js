@@ -25,6 +25,9 @@ class Collage extends Component {
     this.updateLoadedPhotos = this.updateLoadedPhotos.bind(this)
     this.renderPhotoGroup = this.renderPhotoGroup.bind(this)
 
+    const numPhotos =
+      props.featuredPhotos.length + props.nonFeaturedPhotos.length
+
     if (!isCollage) {
       throttle('scroll', 'optimizedScroll')
       window.addEventListener('optimizedScroll', this.updateLoadedPhotos)
@@ -32,7 +35,7 @@ class Collage extends Component {
     this.state = {
       width: getWidth(),
       // Old devices (at least old iPads) breaks if all photos are loaded at once. Load only 8 photos at a time.
-      loadPhotos: isCollage ? props.photos.length : Math.max(3, getNumLoaded())
+      loadPhotos: isCollage ? numPhotos : Math.max(3, getNumLoaded())
     }
   }
 
@@ -48,9 +51,11 @@ class Collage extends Component {
     const scrollPos = window.scrollY
     if (scrollPos >= totalHeight - window.innerHeight - threshold) {
       const additionalLoad = getIsCollage() ? 4 : 2
+      const numPhotos =
+        this.props.featuredPhotos.length + this.props.nonFeaturedPhotos.length
       const newNumLoadedPhotos = Math.min(
         this.state.loadPhotos + additionalLoad,
-        this.props.photos.length
+        numPhotos
       )
       setNumLoaded(newNumLoadedPhotos)
       this.setState({
@@ -96,9 +101,7 @@ class Collage extends Component {
     )
   }
 
-  render({ photos }, { loadPhotos }) {
-    const featuredPhotos = photos.filter(photo => photo.featured)
-    const nonFeaturedPhotos = photos.filter(photo => !photo.featured)
+  render({ featuredPhotos, nonFeaturedPhotos }, { loadPhotos }) {
     const featuredPhotoGroups = setPhotoWidth(
       featuredPhotos.slice(0, loadPhotos)
     )
