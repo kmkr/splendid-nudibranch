@@ -951,19 +951,11 @@ Title The Bow of Chrisoula K
 Location Sha'ab Abu Nuhas Reef, Egypt
 Tags wreck 2018
 Latin
-<<<<<<< HEAD
 Description This cargo ship was heading for Jeddah packed with Italian tiles, but never made it.
 
 DSC08605.jpg
 
 Title Pyjama Nudibranch
-=======
-Description This cargo ship was heading for Jeddah but never made it.
-
-DSC08605.jpg
-
-Title Pyjama Nudibranchs
->>>>>>> Update content
 Location El Minya Wreck, Egypt
 Tags nudibranch sponge 2018
 Latin Chromodoris quadricolor
@@ -990,16 +982,12 @@ DSC07758.jpg
 Title Crocodilefish
 Location Yolanda Lagoon, Egypt
 Tags portrait 2018
-<<<<<<< HEAD
 Latin Papilloculiceps longiceps
-=======
-Latin Papilloculiceps longiceps'
->>>>>>> Update content
 Description
 
 DSC07615.jpg
 
-Title Giant Moray
+Title Giant Moray Eel
 Location Egypt
 Tags eel 2018 portrait
 Latin Gymnothorax javanicus
