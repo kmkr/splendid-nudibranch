@@ -916,7 +916,7 @@ Description Colonies of these soft corals are known to live for over 20 years in
 DSC07308.jpg
 
 Title Reef Stonefish
-Location The Barge wreck, Egypt
+Location The Barge Wreck, Egypt
 Tags potrait stonefish 2018
 Latin Synanceia verrucosa
 Description Motionless, this fish sometimes stay at the same site for several months. Not agressive, but will inject a venom if stepped on. It's the world's most venomous fish.
@@ -935,7 +935,7 @@ Title Locomotive Engine
 Location SS Thistlegorm Wreck, Egypt
 Tags diver wreck locomotive 2018
 Latin
-Description Two Stanier 8F locomotive engines were part of the SS Thistlegorm's cargo and sunk with the ship. They are now both separated from the ship, either from the blast of the bomb that hit Thistlegorm, or as a result of the sinking. Their planned destination was Alexandria, Egypt.
+Description Two Stanier 8F locomotive engines, part of the SS Thistlegorm's cargo, sunk together with the ship. Both locomotives are separated from the wreck.
 
 DSC07959.jpg
 
@@ -943,7 +943,7 @@ Title Indian Lionfish
 Location Shaab El Erg, Egypt
 Tags lionfish scorpionfish portrait 2018
 Latin Pterois miles
-Description Active at night, this fish will follow you and exploit the light from your dive light to find prey.
+Description Active at night, this fish will follow you and exploit your dive light to find prey.
 
 DSC08097.jpg
 
@@ -975,7 +975,7 @@ Title Pygmy Sweepers
 Location Egypt
 Tags diver school 2018
 Latin Parapriacanthus ransonneti
-Description These fish feed on zooplankton at night. Usually found in shaded areas during the day, suck as inside wrecks, caves and under overhangs. They often form dense schools in these shelters.
+Description These fish feed on zooplankton at night. During daytime, they are usually found in shaded areas, suck as inside wrecks, caves and under overhangs. They often form dense schools in these shelters.
 
 DSC07758.jpg
 
