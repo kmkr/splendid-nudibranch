@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+#collage #mid-water p {
+  margin: 0 8%; /* same as .photo-text-wrapper */
+}
+
 @media (min-width: 1100px) {
   /* group */
   #collage .photo-group {
