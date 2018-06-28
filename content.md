@@ -951,7 +951,7 @@ Title The Bow of Chrisoula K
 Location Sha'ab Abu Nuhas Reef, Egypt
 Tags wreck 2018
 Latin
-Description This cargo ship was heading for Jeddah packed with Italian tiles, but never made it.
+Description This cargo ship was headed for Jeddah packed with Italian tiles, but never made it.
 
 DSC08605.jpg
 
@@ -964,7 +964,7 @@ Description Sponges are popular food source for nudibranchs. The slugs incorpora
 DSC08266.jpg
 
 Title SS Carnatic
-Location SS Carnatic wreck, Egypt
+Location SS Carnatic Wreck, Egypt
 Tags diver wreck 2018
 Latin
 Description A diver explores the wreck of SS Carnatic, which broke in half after hitting the reef near Shadwan Island. 31 people drowned.
@@ -975,7 +975,7 @@ Title Pygmy Sweepers
 Location Egypt
 Tags diver school 2018
 Latin Parapriacanthus ransonneti
-Description These fish feed on zooplankton at night. During daytime, they are usually found in shaded areas, suck as inside wrecks, caves and under overhangs. They often form dense schools in these shelters.
+Description These fish feed on zooplankton at night. During daytime, they are usually found in shaded areas, such as inside wrecks, caves and under overhangs. They often form dense schools in these shelters.
 
 DSC07758.jpg
 
