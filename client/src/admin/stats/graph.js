@@ -21,6 +21,14 @@ function parseData(data) {
 
 class Graph extends Component {
   componentDidMount() {
+    this.updateGraph()
+  }
+
+  componentDidUpdate() {
+    this.updateGraph()
+  }
+
+  updateGraph() {
     const data = parseData(this.props.data)
 
     const labels = Object.keys(data)

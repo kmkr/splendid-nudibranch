@@ -12,7 +12,9 @@ router.post('/', (req, res) => {
 })
 
 router.get('/', (req, res) => {
-  listStatsHandler()
+  const fromDate = new Date(Number(req.query.fromDate)) || undefined
+  const toDate = new Date(Number(req.query.toDate)) || undefined
+  listStatsHandler(fromDate, toDate)
     .then(data => res.status(200).send(data))
     .catch(err => res.status(500).json({ err }))
 })
