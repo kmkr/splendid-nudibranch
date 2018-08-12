@@ -16,7 +16,10 @@ function buildUrl({ selectedPhotoKey, feature }) {
   return url
 }
 
-module.exports = (photos, { selectedPhotoKey, feature, featureName }) => {
+module.exports = (
+  photos,
+  { selectedPhotoKey, feature, featureName, hasFeaturedPhoto = false }
+) => {
   const selectedPhoto = photos.filter(p => p.key === selectedPhotoKey)[0]
 
   if (selectedPhoto) {
@@ -25,9 +28,13 @@ module.exports = (photos, { selectedPhotoKey, feature, featureName }) => {
     return {
       'og:type': 'article',
       'og:site_name': name,
-      'og:title': [selectedPhoto.title, name].filter(e => e).join(' :: '),
-      'og:url': buildUrl({ selectedPhotoKey }),
-      'og:description': selectedPhoto.description,
+      'og:title': [feature ? featureName : selectedPhoto.title, name]
+        .filter(Boolean)
+        .join(' :: '),
+      'og:url': buildUrl({ selectedPhotoKey, feature }),
+      'og:description': hasFeaturedPhoto
+        ? description
+        : selectedPhoto.description,
       'og:image': selectedPhotoSize.url,
       'og:image:width': selectedPhotoSize.width,
       'og:image:height': selectedPhotoSize.height

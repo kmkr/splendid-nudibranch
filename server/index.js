@@ -54,7 +54,12 @@ app.use(
 
 const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
-function photoIndex(res, { id, photoKey, feature } = {}, jsFile, cssFile) {
+function photoIndex(
+  res,
+  { id, photoKey, feature, hasFeaturedPhoto } = {},
+  jsFile,
+  cssFile
+) {
   return Promise.all([
     viewDataService.getPhotoData(),
     viewDataService.getKeywords()
@@ -82,7 +87,8 @@ function photoIndex(res, { id, photoKey, feature } = {}, jsFile, cssFile) {
       ogTags: ogTags(photos, {
         selectedPhotoKey: photoKey,
         feature,
-        featureName
+        featureName,
+        hasFeaturedPhoto
       }),
       selectedPhotoKey: photoKey,
       keywords
@@ -95,7 +101,12 @@ app.get('/', (req, res) => {
   newStatsItem(req, { id, path: req.path }, true)
   photoIndex(
     res,
-    { feature: req.query.feature, id },
+    {
+      feature: req.query.feature,
+      hasFeaturedPhoto: true,
+      id,
+      photoKey: req.query.fp
+    },
     '/static/scripts/bundle.js',
     indexCssFile
   )
@@ -107,9 +118,9 @@ app.get('/photos/:key', (req, res) => {
   photoIndex(
     res,
     {
-      photoKey: req.params.key,
       feature: req.query.feature,
-      id
+      id,
+      photoKey: req.params.key
     },
     '/static/scripts/bundle.js',
     indexCssFile
