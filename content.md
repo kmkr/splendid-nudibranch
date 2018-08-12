@@ -1014,4 +1014,45 @@ DSC07445.jpg
 Title SS Thistlegorm
 Location Egypt
 Tags wreck 2018 bow gun
+Latin
 Description Sunk during a surprise attack by a pair of German Heinkel He-111 bomber planes in World War II. The ship is over 400 feet long, and most of its cargo is still present in, or around the wreck.
+
+DSC00054.jpg
+
+Title Tufted gray langur
+Location Sri Lanka
+Tags monkey 2018
+Latin Semnopithecus priam
+Description A female langur and her baby. The offspring stay attached to their mother for the first three months of their lives.
+
+DSC08936.jpg
+
+Title Reef Manta Ray
+Location Baa Atoll, The Maldives
+Tags ray manta 2018
+Latin Manta alfredi
+Description The Maldivies is home to around 5000 manta rays - the largest group of manta rays in the world.
+
+DSC09082.jpg
+
+Title Hermit Crab
+Location Baa Atoll, The Maldives
+Tags crab 2018 hermit-crab
+Latin
+Description
+
+DSC09167.jpg
+
+Title Reef Manta Ray
+Location Baa Atoll, The Maldives
+Tags ray manta 2018
+Latin Manta alfredi
+Description By swimming against the tidal current, mantas sieves zooplankton from the water. They are the only type of ray evolved to filter feed.
+
+DSC09197.jpg
+
+Title Gracile Lizardfish
+Location Baa Atoll, The Maldives
+Tags fish 2018 lizardfish
+Latin Saurida gracilis
+Description Lizardfish are frequent visitors of sandy or muddy areas, and sometimes lie partly buried on the sea floor.
