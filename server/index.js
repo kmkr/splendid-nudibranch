@@ -56,7 +56,7 @@ const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
 function photoIndex(
   res,
-  { id, photoKey, feature, hasFeaturedPhoto } = {},
+  { id, photoKey, feature, featuredPhoto } = {},
   jsFile,
   cssFile
 ) {
@@ -88,7 +88,7 @@ function photoIndex(
         selectedPhotoKey: photoKey,
         feature,
         featureName,
-        hasFeaturedPhoto
+        featuredPhoto
       }),
       selectedPhotoKey: photoKey,
       keywords
@@ -103,9 +103,8 @@ app.get('/', (req, res) => {
     res,
     {
       feature: req.query.feature,
-      hasFeaturedPhoto: true,
-      id,
-      photoKey: req.query.fp
+      featuredPhoto: req.query.fp,
+      id
     },
     '/static/scripts/bundle.js',
     indexCssFile

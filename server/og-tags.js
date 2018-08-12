@@ -2,7 +2,7 @@ const { description } = require('./photos/constants')
 
 const name = 'The Splendid Nudibranch'
 
-function buildUrl({ selectedPhotoKey, feature }) {
+function buildUrl({ selectedPhotoKey, feature, featuredPhoto }) {
   let url = 'http://www.thesplendidnudibranch.pink'
 
   if (selectedPhotoKey) {
@@ -10,7 +10,10 @@ function buildUrl({ selectedPhotoKey, feature }) {
   }
 
   if (feature) {
-    return url + `/?feature=${feature.join('&feature=')}`
+    url += `/?feature=${feature.join('&feature=')}`
+    if (featuredPhoto) {
+      return url + `&fp=${featuredPhoto}`
+    }
   }
 
   return url
@@ -18,9 +21,11 @@ function buildUrl({ selectedPhotoKey, feature }) {
 
 module.exports = (
   photos,
-  { selectedPhotoKey, feature, featureName, hasFeaturedPhoto = false }
+  { selectedPhotoKey, feature, featureName, featuredPhoto }
 ) => {
-  const selectedPhoto = photos.filter(p => p.key === selectedPhotoKey)[0]
+  const selectedPhoto = photos.filter(
+    p => p.key === (selectedPhotoKey || featuredPhoto)
+  )[0]
 
   if (selectedPhoto) {
     const selectedPhotoSize = selectedPhoto.sizes.medium
@@ -31,10 +36,8 @@ module.exports = (
       'og:title': [feature ? featureName : selectedPhoto.title, name]
         .filter(Boolean)
         .join(' :: '),
-      'og:url': buildUrl({ selectedPhotoKey, feature }),
-      'og:description': hasFeaturedPhoto
-        ? description
-        : selectedPhoto.description,
+      'og:url': buildUrl({ selectedPhotoKey, feature, featuredPhoto }),
+      'og:description': featuredPhoto ? description : selectedPhoto.description,
       'og:image': selectedPhotoSize.url,
       'og:image:width': selectedPhotoSize.width,
       'og:image:height': selectedPhotoSize.height
