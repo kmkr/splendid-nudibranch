@@ -1031,7 +1031,7 @@ Title Reef Manta Ray
 Location Baa Atoll, The Maldives
 Tags ray manta 2018
 Latin Manta alfredi
-Description The Maldivies is home to around 5000 manta rays - the largest group of manta rays in the world.
+Description The Maldives is home to around 5000 manta rays - the largest group of manta rays in the world.
 
 DSC09082.jpg
 
