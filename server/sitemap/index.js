@@ -1,28 +1,31 @@
 const express = require('express')
 const sm = require('sitemap')
+const { getPhotoData } = require('../view-data-service')
 
 const router = express.Router()
 
-const sitemap = sm.createSitemap({
-  hostname: 'http://thesplendidnudibranch.pink',
-  cacheTime: 600000,
-  urls: [
-    {
-      url: '//',
-      changefreq: 'daily',
-      priority: 0.3
-    }
-  ]
-})
-
 router.get('/', (req, res) => {
-  sitemap.toXML(function(err, xml) {
-    if (err) {
-      return res.status(500).end()
-    }
+  getPhotoData().then(({ photos }) => {
+    const sitemap = sm.createSitemap({
+      hostname: 'http://www.thesplendidnudibranch.pink',
+      cacheTime: 600000,
+      urls: [
+        {
+          url: '//'
+        },
+        ...photos.map(photo => ({
+          url: `/photos/${photo.key}`
+        }))
+      ]
+    })
+    sitemap.toXML(function(err, xml) {
+      if (err) {
+        return res.status(500).end()
+      }
 
-    res.header('Content-Type', 'application/xml')
-    res.send(xml)
+      res.header('Content-Type', 'application/xml')
+      res.send(xml)
+    })
   })
 })
 
