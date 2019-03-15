@@ -1,3 +1,5 @@
 node_modules
 npm-debug.log
 *.map
+server/static/css/app.min.css
+server/static/scripts

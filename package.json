@@ -10,12 +10,15 @@
     "start:server": "node server/index.js",
     "start:client": "webpack --watch --config client/webpack.config.js",
     "build": "npm run lint && npm run test && npm run package",
-    "build:css": "postcss -o server/static/css/app.min.css server/static/css/app.css",
-    "package": "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
+    "build:css":
+      "postcss -o server/static/css/app.min.css server/static/css/app.css",
+    "package":
+      "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
     "lint": "eslint .",
     "test": "jest",
     "test:watch": "npm run test -- --watch"
   },
+  "heroku-run-build-script": true,
   "dependencies": {
     "aws-sdk": "^2.7.7",
     "body-parser": "^1.15.2",
@@ -59,21 +62,14 @@
     "webpack": "^3.10.0"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
+    "moduleFileExtensions": ["js", "jsx"],
+    "moduleDirectories": ["node_modules"],
     "moduleNameMapper": {
       "\\.(scss)$": "<rootDir>/__mocks__/style-mock.js"
     },
     "testRegex": "<rootDir>/(client|server|common)/.*_test\\.js"
   },
   "standard": {
-    "ignore": [
-      "server/static/"
-    ]
+    "ignore": ["server/static/"]
   }
 }
