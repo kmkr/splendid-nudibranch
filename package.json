@@ -10,10 +10,8 @@
     "start:server": "node server/index.js",
     "start:client": "webpack --watch --config client/webpack.config.js",
     "build": "npm run lint && npm run test && npm run package",
-    "build:css":
-      "postcss -o server/static/css/app.min.css server/static/css/app.css",
-    "package":
-      "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
+    "build:css": "postcss -o server/static/css/app.min.css server/static/css/app.css",
+    "package": "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
     "lint": "eslint .",
     "test": "jest",
     "test:watch": "npm run test -- --watch"
@@ -51,7 +49,7 @@
     "eslint-plugin-prettier": "^2.5.0",
     "jest": "^24.5.0",
     "picturefill": "^3.0.2",
-    "postcss-cli": "^4.1.1",
+    "postcss-cli": "^6.1.2",
     "postcss-css-variables": "^0.8.0",
     "postcss-import": "^11.0.0",
     "preact": "^8.4.2",
@@ -69,6 +67,8 @@
     ]
   },
   "standard": {
-    "ignore": ["server/static/"]
+    "ignore": [
+      "server/static/"
+    ]
   }
 }
