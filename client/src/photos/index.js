@@ -52,13 +52,13 @@ class PhotosWrapper extends Component {
   }
 
   render() {
-    const { selectedPhoto } = this.props
+    const { onHome, selectedPhoto } = this.props
     const nextPhoto = this.getNextPhoto()
     const previousPhoto = this.getPreviousPhoto()
     return (
       <div>
         <KeyboardEventHandler
-          onHome={this.props.onHome}
+          onHome={onHome}
           onNext={this.onNextPhoto}
           onPrevious={this.onPreviousPhoto}
           onToggleSidebar={this.onToggleExpandSidebar}
@@ -86,7 +86,7 @@ class PhotosWrapper extends Component {
           onToggleExpanded={this.onToggleExpandSidebar}
           photo={selectedPhoto}
         />
-        <Navigation onHome={this.props.onHome} />
+        <Navigation onHome={onHome} />
       </div>
     )
   }
