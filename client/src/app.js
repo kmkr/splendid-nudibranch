@@ -103,8 +103,10 @@ class App extends Component {
   onGoToPhotos(e, offset) {
     e && e.preventDefault()
 
-    const y = document.querySelector('#top-logo').offsetHeight + (offset || 0)
-    window.scroll({ top: y, behavior: 'smooth' })
+    setTimeout(() => {
+      const y = document.querySelector('#top-logo').offsetHeight + (offset || 0)
+      window.scroll({ top: y, behavior: 'smooth' })
+    })
   }
 
   getCurrentPhotoIndex() {
