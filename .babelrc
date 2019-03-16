@@ -1,17 +1,12 @@
 {
-    "presets": [
-        "env",
-        "react"
-    ],
-    "plugins": [
-        ["transform-react-jsx", { "pragma":"h" }],
-        "transform-object-rest-spread"
-    ],
-    "env": {
-        "test": {
-            "plugins": [
-                "transform-es2015-modules-commonjs"
-            ]
-        }
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    ["@babel/plugin-transform-react-jsx", { "pragma": "h" }],
+    "@babel/plugin-proposal-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
     }
+  }
 }

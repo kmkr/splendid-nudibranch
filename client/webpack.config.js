@@ -13,6 +13,7 @@ module.exports = {
     path: `${__dirname}/../server/static/scripts`,
     filename: '[name].js'
   },
+  mode: env !== 'production' ? 'development' : 'production',
   module: {
     rules: [
       {
