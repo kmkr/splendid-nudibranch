@@ -1,14 +1,14 @@
 DSC00259.jpg
 
-Title Western Clown Anemonefish
+Title False Clown Anemonefish
 Latin Amphiprion ocellaris
 Location Dumaguete, The Philippines
 Tags anemonefish clownfish 2013 anemone fish
-Description Sea anemones are to most fish poisonous. The clownfish however is immune to their stinging tentacles and form a symbiotic relationship with the anemone where the clownfish receive protection from predators, and the anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
+Description Sea anemones are poisonous to most fish. The clownfish however is immune to their stinging tentacles and form a symbiotic relationship with the anemone where the clownfish receive protection from predators, and the anemone benefits from the clownfish' natural activity. For example, the wedging swimming movements from the clownfish stimulate water sirculation around its tentacles, increasing metabolism and growth.
 
 DSC00266.jpg
 
-Title Western Clown Anemonefish
+Title False Clown Anemonefish
 Location Dumaguete, The Philippines
 Tags anemonefish clownfish 2013 anemone fish
 Latin Amphiprion ocellaris
@@ -155,7 +155,7 @@ Title Bobbit Worm
 Location Anilao, The Philippines
 Latin Eunice aphroditois
 Tags worm 2014 portrait
-Description The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Most of the body is covered in sand, just enough is exposed to ambush surprised fish. This worm is quite rare, shy, and mysterious. Little is known about its behaviour. It's theorized that the worm doesn’t see at all but uses its excellent receptors to detect movement in the water to sense nearby fish.
+Description The bobbit is my favorite worm. It can grow up to a meter, has a stunning purple iridescence, five antennae to sense passing fish and a scissor-like mouth to split prey in half. Most of the body is covered in sand, just enough is exposed to ambush surprised fish. This worm is quite rare, shy, and mysterious.
 
 DSC03448.jpg
 
@@ -1055,7 +1055,7 @@ Title Gracile Lizardfish
 Location Baa Atoll, The Maldives
 Tags fish 2018 lizardfish portrait
 Latin Saurida gracilis
-Description Lizardfish are frequent visitors of sandy or muddy areas, and sometimes lie partly buried on the sea floor.
+Description Lizardfish are frequent visitors of sandy or muddy areas and lie sometimes partly buried on the sea floor.
 
 2019-indo-DSC09757.jpg
 
@@ -1063,15 +1063,23 @@ Title Nudibranch
 Location Misool, Raja Ampat, Indonesia
 Tags nudibranch 2019 portrait
 Latin Ardeadoris egretta
-Description
+Description The term nudibranch is derived from the Greek words nudus and brankhia, meaning 'naked' and 'gill' respectively. The flower-like protrusions on the back are the exposed (naked) gills.
+
+2019-indo-DSC00010.jpg
+
+Title Mushroom Coral Reticuludia
+Location Misool, Raja Ampat, Indonesia
+Tags nudibranch 2019 portrait
+Latin Reticuludia Fungia
+Description There are over 3000 species of nudibranchs, and new ones are regularly found!
 
 2019-indo-DSC00158.jpg
 
-Title
+Title Gorgonian Coral
 Location Misool, Raja Ampat, Indonesia
-Tags reefscape reef 2019
-Latin
-Description
+Tags reefscape reef 2019 coral
+Latin Alcyonacea (order)
+Description Raja Ampat's biodiversity is the richest in the world and 75% of all known coral species can be found there.
 
 2019-indo-DSC00763.jpg
 
@@ -1079,7 +1087,7 @@ Title Ornate Ghost Pipefish
 Location Penemu, Raja Ampat, Indonesia
 Tags fish pipefish 2019 portrait
 Latin Solenostomus paradoxus
-Description
+Description Ornates adopt the coloration of the environment it settles in after its larval stage.
 
 2019-indo-DSC00808.jpg
 
@@ -1087,24 +1095,15 @@ Title Fluted Giant Clam
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags clam 2019
 Latin Tridacna squamosa
-Description
+Description The giant clam produces its hard shell with help from zooxanthellae, an algea that grows within the shell valve.
 
-2019-indo-DSC00825-Edit.jpg
-
-Title Tasselled Wobbegong
-Location Dampier Strait, Raja Ampat, Indonesia
-Tags shark 2019
-Latin Eucrossorhinus dasypogon
-Description
-2019-indo-DSC00808.jpg
-
-2019-indo-DSC01009.jpg
+2019-indo-DSC01009-Edit.jpg
 
 Title Hawksbill Sea Turtle
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags turtle 2019 portrait
 Latin Eretmochelys imbricata
-Description
+Description The tapered head of a hawksbill ends in a sharp point resembling a bird's beak, hence its name.
 
 2019-indo-DSC01059.jpg
 
@@ -1112,7 +1111,7 @@ Title Broadclub Cuttlefish
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags cuttlefish 2019 cephalopod
 Latin Sepia latimanus
-Description
+Description Cuttlefish are able to change the color of their skin in an instant using a set of astonishing ten million individually controlled color cells.
 
 2019-indo-DSC01139.jpg
 
@@ -1120,7 +1119,7 @@ Title Ribboned Sweetlips
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags fish 2019 school
 Latin Plectorhinchus polytaenia
-Description
+Description Groups of sweetlips often hang tucked between layers of coral, which allowed me to experiment a bit with lighting.
 
 2019-indo-DSC01148.jpg
 
@@ -1128,15 +1127,7 @@ Title Ribboned Sweetlips
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags fish 2019 school
 Latin Plectorhinchus polytaenia
-Description
-
-2019-indo-DSC01182.jpg
-
-Title Ribboned Sweetlips
-Location Dampier Strait, Raja Ampat, Indonesia
-Tags fish 2019 school
-Latin Plectorhinchus polytaenia
-Description
+Description This species is certainly named after their protruding fat sweet lips.
 
 2019-indo-DSC01182.jpg
 
@@ -1144,7 +1135,7 @@ Title Clown Anemonefish
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags fish 2019 anemone
 Latin Amphiprion percula
-Description
+Description When anemonefish leaves it host for a long time, they need to re-adapt to the host stinging cells. To do so, the fish goes through a dance-like ritual taking several hours. Clownfish rarely move more than 30 cm from their host anemone, though.
 
 2019-indo-DSC01287.jpg
 
@@ -1154,13 +1145,13 @@ Tags crab 2019 portrait
 Latin Portunus convexus
 Description
 
-2019-indo-DSC01396.jpg
+2019-indo-DSC01395.jpg
 
-Title Brassy Trevally
+Title Bigeye Trevally
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags fish 2019 school
-Latin Caranx papuensis
-Description
+Latin Caranx sexfasciatus
+Description This fast-swimming predator can grow up to 120 cm long and form schools numbering more than 1500 individuals.
 
 2019-indo-DSC01413.jpg
 
@@ -1168,7 +1159,7 @@ Title Oceanic Manta Ray
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags ray 2019
 Latin Manta birostris
-Description
+Description The majestic oceanic manta is a pelagic species, using the ocean currents to travel. Sites with high availability of zooplankton, such as the nutrient-rich waters of Raja Ampat, attracts them closer to the reefs to feed.
 
 2019-indo-DSC01548.jpg
 
@@ -1176,15 +1167,15 @@ Title Bluestripe and Golden-lined Snappers
 Location Dampier Strait, Raja Ampat, Indonesia
 Tags fish school 2019
 Latin Lutjanus kasmira and Lutjanus lutjanus
-Description
+Description The goatfish (Mulloidichthys mimicus) is part of a weird relationship with the bluestripe snapper where it mimics its colors to look almost exactly the same. The reason for that is not entirely clear, but the goatfish is presumably a more preferred prey than the bluestrip snapper. So there may be some goatfish in the fish ball as well.
 
 2019-indo-DSC01908-Edit.jpg
 
 Title Juvenile Longhorn Cowfish
 Location Lembeh Strait, Indonesia
-Tags fish juvenile 2019 portrait
+Tags fish boxfish juvenile 2019 portrait
 Latin Lactoria cornuta
-Description
+Description This fish moves by oscillating its tail fin very rapidly, creating a hover-like appearance when swimming.
 
 2019-indo-DSC01953.jpg
 
@@ -1192,7 +1183,7 @@ Title Balloonfish
 Location Lembeh Strait, Indonesia
 Tags fish 2019
 Latin Lophodiodon calori
-Description
+Description The large dragon-like eyes help this nocturnal hunter forage for food during the night-hours. Their eye pattern is a mesmerizing sight. A friend once compared it to a reflection of the universe.
 
 2019-indo-DSC01956.jpg
 
@@ -1200,15 +1191,23 @@ Title Balloonfish
 Location Lembeh Strait, Indonesia
 Tags fish 2019 portrait
 Latin Lophodiodon calori
-Description
+Description The balloonfish can inflate its body three times the normal size to make attacks more difficult for predators.
+
+2019-indo-DSC02068.jpg
+
+Title Ornate Ghost Pipefish
+Location Lembeh Strait, Indonesia
+Tags fish 2019 portrait
+Latin Solenostomus paradoxus
+Description The ghost pipefish camouflages very well in coral reefs, and spend a lot of time floating - almost like a slow moving leaf - with its mouth pointed downwards.
 
 2019-indo-DSC02121.jpg
 
-Title Nudibranch
+Title Red-Lined Jorunna
 Location Lembeh Strait, Indonesia
 Tags nudibranch 2019 portrait
-Latin
-Description
+Latin Jorunna rubescens
+Description A key feature for the Red-Lined Jorunna is its length of up to 20 cm. That's an enormous size for a nudibranch.
 
 2019-indo-DSC02160.jpg
 
@@ -1216,7 +1215,7 @@ Title Bullock's Hypselodoris
 Location Lembeh Strait, Indonesia
 Tags nudibranch 2019
 Latin Hypselodoris bullocki
-Description
+Description Nudibranchs are hermaphrodites - simultaneously both male and female. Reproducing still takes two to tango!
 
 2019-indo-DSC02184.jpg
 
@@ -1228,27 +1227,27 @@ Description
 
 2019-indo-DSC02196.jpg
 
-Title Nudibranch
+Title Purple-Edged Ceratosoma
 Location Lembeh Strait, Indonesia
 Tags nudibranch 2019 portrait
 Latin Ceratosoma tenue
-Description
+Description Identification of sea slugs are often difficult. The keys to identification in this case is the broken purple rigde together with the placement of the three mantle lobes on both sides of the body. One lobe on either side of the head, one on the side of the gills, and one between those two.
 
 2019-indo-DSC02231.jpg
 
-Title
+Title Striped Poison-Fang Blenny Mimic
 Location Lembeh Strait, Indonesia
-Tags 2019 portrait
-Latin
-Description
+Tags 2019 portrait fish
+Latin Petroscirtes breviceps
+Description The strait of Lembeh is littered with garbage, but not all discarded stuff is bad for the creatures living there. An old bottle can be the safest place for a blenny to live.
 
 2019-indo-DSC02240.jpg
 
-Title Bobbit worm
+Title Bobbit Worm
 Location Lembeh Strait, Indonesia
 Tags worm 2019 portrait
 Latin Eunice aphroditois
-Description
+Description Little is known about the behaviour of bobbit worms. It's theorized that the worm doesn’t see at all but uses its excellent receptors to detect movement in the water to sense nearby fish.
 
 2019-indo-DSC02312.jpg
 
@@ -1256,15 +1255,7 @@ Title Nudibranch
 Location Lembeh Strait, Indonesia
 Tags nudibranch 2019 portrait
 Latin Tritonia sp.
-Description
-
-2019-indo-DSC02394-Edit.jpg
-
-Title Frogfish
-Location Lembeh Strait, Indonesia
-Tags frogfish fish 2019 portrait
-Latin
-Description
+Description Some nudibranchs are adapted to resemble small pieces of soft coral.
 
 2019-indo-DSC02413.jpg
 
@@ -1272,15 +1263,15 @@ Title Striated Frogfish
 Location Lembeh Strait, Indonesia
 Tags frogfish fish 2019 portrait
 Latin Antennarius striatus
-Description
+Description Frogfish can inhale their prey in six thousands of a second. That's one of the fastest eating methods known in the animal kingdom.
 
 2019-indo-DSC02438.jpg
 
 Title Nudibranch
 Location Lembeh Strait, Indonesia
 Tags 2019 portrait nudibranch
-Latin Halgerda?
-Description
+Latin Halgerda batangas
+Description A distinguishing feature of H. batangas is the fine network of lines on its dorsum. What a beauty!
 
 2019-indo-DSC02545-Edit.jpg
 
@@ -1292,11 +1283,19 @@ Description
 
 2019-indo-DSC02650.jpg
 
+Title Harlequin Swimming Crab
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait crab
+Latin Lissocarcinus laevis
+Description This crab lives in symbiosis with tube dwelling anemones where it takes cover to hide from predators.
+
+2019-indo-DSC02717-Edit.jpg
+
 Title Blue-Ringed Octopus
 Location Lembeh Strait, Indonesia
 Tags 2019 portrait octopus cephalopod
 Latin Hapalochlaena sp.
-Description
+Description The blue-ringed octopus flashes its 50-60 rings within a third of a second as a warning display to predators. Being one of the world's most venomous marine animals, its poison causes total body paralysis - also to humans.
 
 2019-indo-DSC02861-Edit.jpg
 
@@ -1304,7 +1303,7 @@ Title Spiny Devilfish
 Location Lembeh Strait, Indonesia
 Tags 2019 portrait scorpionfish fish
 Latin Inimicus didactylus
-Description
+Description While this genus is typically buried in the sand or perfectly camouflaged in coral rubble, they can sometimes be found crawling on the seabed using their pectoral fins as legs.
 
 2019-indo-DSC02932-Edit-2.jpg
 
@@ -1312,7 +1311,7 @@ Title Flamboyant Cuttlefish
 Location Lembeh Strait, Indonesia
 Tags 2019 portrait scorpionfish fish
 Latin Metasepia pfefferi
-Description
+Description The flambouyant cuttlefish flashes its hypnotic color scheme and pulses its fins when approached, possibly to signal its toxicity to potential predators.
 
 2019-indo-DSC02981.jpg
 
@@ -1320,7 +1319,7 @@ Title Skeleton Shrimp
 Location Lembeh Strait, Indonesia
 Tags 2019 portrait shrimp
 Latin Caprellid sp.
-Description
+Description The rear legs are used to hook itself to plants where it lives, in this case a bryozoan. Front claws are used for hunting and moving around.
 
 2019-indo-DSC03105.jpg
 
@@ -1328,7 +1327,7 @@ Title Broadclub Cuttlefish
 Location Lembeh Strait, Indonesia
 Tags 2019 portrait shrimp
 Latin Sepia latimanus
-Description
+Description Cuttlefish have three hearts! One that pumps blood around the body and two pumping blood to the gills.
 
 2019-indo-DSC03116.jpg
 
@@ -1338,7 +1337,7 @@ Tags 2019 portrait scorpionfish
 Latin Dendrochirus brachypterus
 Description
 
-2019-indo-DSC03232-Edit.jpg
+2019-indo-DSC03230-Edit.jpg
 
 Title Apolegma's Hypselodoris
 Location Lembeh Strait, Indonesia
