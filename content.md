@@ -16,7 +16,7 @@ Description Clownfish hatch near the surface and travel deeper to search for a h
 
 DSC00571.jpg
 
-Title Nudibranch
+Title Anna's Chromodoris
 Location Dumaguete, The Philippines
 Tags nudibranch 2013
 Latin Chromodoris annae
@@ -95,7 +95,7 @@ Description The members of the boxfish family display a unique behavior of blowi
 
 DSC02648.jpg
 
-Title Nudibranch
+Title Chamberlain's Nembrotha
 Location Anilao, The Philippines
 Latin Nembrotha chamberlaini
 Tags nudibranch 2014
@@ -111,7 +111,7 @@ Description Lives exclusively on the black coral whip, usually in pairs. I found
 
 DSC02955.jpg
 
-Title Nudibranch
+Title Anna's Chromodoris
 Location Anilao, The Philippines
 Latin Chromodoris annae
 Tags 2014 nudibranch
@@ -135,7 +135,7 @@ Description The social activity of this fish is rather limited, and the male wil
 
 DSC03281.jpg
 
-Title Nudibranch
+Title Kunie's Goniobranchus
 Location Anilao, The Philippines
 Latin Goniobranchus kuniei
 Tags 2014 nudibranch
@@ -167,7 +167,7 @@ Description Night dives at the Anilao pier feel like something from another worl
 
 DSC03660.jpg
 
-Title Nudibranch
+Title Chamberlain's Nembrotha
 Location Anilao, The Philippines
 Latin Nembrotha chamberlaini
 Tags nudibranch 2014
@@ -175,7 +175,7 @@ Description Nudibranch's eyes are located inside the body and measure about a qu
 
 DSC03699.jpg
 
-Title Nudibranch
+Title Magnificent Chromodoris
 Location Anilao, The Philippines
 Latin Chromodoris magnifica
 Tags nudibranch 2014
@@ -207,7 +207,7 @@ Description Many nudibranchs use their brightly colored bodies to warn potential
 
 DSC04006.jpg
 
-Title Nudibranch
+Title Bullock's Hypselodoris
 Location Anilao, The Philippines
 Latin Hypselodoris bullocki
 Tags nudibranch 2014
@@ -215,9 +215,9 @@ Description Nudibranchs have external gills (the yellow rosette on the back), he
 
 DSC04020.jpg
 
-Title Nudibranch
+Title Gloomy Tambja
 Location Anilao, The Philippines
-Latin Tambja marosa
+Latin Tambja morosa
 Tags nudibranch 2014
 Description
 
@@ -227,7 +227,7 @@ Title Leopard Anemone Shrimp
 Location Anilao, The Philippines
 Latin Izucaris masudai
 Tags shrimp 2014
-Description A rare, beautiful shrimp described as recently as 1999. It's name is derived from where it was found - the Izu Peninsula in Japan.
+Description A rare, beautiful shrimp. It's name is derived from where it was found - the Izu Peninsula in Japan.
 
 DSC04078.jpg
 
@@ -247,9 +247,9 @@ Description
 
 DSC04214.jpg
 
-Title Nudibranch
+Title Reticulated Chromodoris
 Location Anilao, The Philippines
-Latin Chromodoris tinctoria
+Latin Chromodoris reticulata
 Tags nudibranch 2014
 Description
 
@@ -263,7 +263,7 @@ Description The sea cucumbers are scavengers, crawling mostly around the sea flo
 
 DSC04244.jpg
 
-Title Longhorn Cowfish
+Title Juvenile Longhorn Cowfish
 Location Anilao, The Philippines
 Tags 2014 boxfish cowfish portrait
 Latin Lactoria cornuta
@@ -295,7 +295,7 @@ Description
 
 DSC04854.jpg
 
-Title Nudibranch
+Title Arminid Nudibranch
 Location Anilao, The Philippines
 Latin Janolus sp.
 Tags nudibranch 2014
@@ -319,7 +319,7 @@ Description
 
 DSC05075.jpg
 
-Title Nudibranch
+Title Emma's Hypselodoris
 Location Anilao, The Philippines
 Tags 2014 nudibranch
 Latin Hypselodoris emma
