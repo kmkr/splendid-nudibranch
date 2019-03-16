@@ -1053,6 +1053,295 @@ DSC09197.jpg
 
 Title Gracile Lizardfish
 Location Baa Atoll, The Maldives
-Tags fish 2018 lizardfish
+Tags fish 2018 lizardfish portrait
 Latin Saurida gracilis
 Description Lizardfish are frequent visitors of sandy or muddy areas, and sometimes lie partly buried on the sea floor.
+
+2019-indo-DSC09757.jpg
+
+Title Nudibranch
+Location Misool, Raja Ampat, Indonesia
+Tags nudibranch 2019 portrait
+Latin Ardeadoris egretta
+Description
+
+2019-indo-DSC00158.jpg
+
+Title
+Location Misool, Raja Ampat, Indonesia
+Tags reefscape reef 2019
+Latin
+Description
+
+2019-indo-DSC00763.jpg
+
+Title Ornate Ghost Pipefish
+Location Penemu, Raja Ampat, Indonesia
+Tags fish pipefish 2019 portrait
+Latin Solenostomus paradoxus
+Description
+
+2019-indo-DSC00808.jpg
+
+Title Fluted Giant Clam
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags clam 2019
+Latin Tridacna squamosa
+Description
+
+2019-indo-DSC00825-Edit.jpg
+
+Title Tasselled Wobbegong
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags shark 2019
+Latin Eucrossorhinus dasypogon
+Description
+2019-indo-DSC00808.jpg
+
+2019-indo-DSC01009.jpg
+
+Title Hawksbill Sea Turtle
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags turtle 2019 portrait
+Latin Eretmochelys imbricata
+Description
+
+2019-indo-DSC01059.jpg
+
+Title Broadclub Cuttlefish
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags cuttlefish 2019 cephalopod
+Latin Sepia latimanus
+Description
+
+2019-indo-DSC01139.jpg
+
+Title Ribboned Sweetlips
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags fish 2019 school
+Latin Plectorhinchus polytaenia
+Description
+
+2019-indo-DSC01148.jpg
+
+Title Ribboned Sweetlips
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags fish 2019 school
+Latin Plectorhinchus polytaenia
+Description
+
+2019-indo-DSC01182.jpg
+
+Title Ribboned Sweetlips
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags fish 2019 school
+Latin Plectorhinchus polytaenia
+Description
+
+2019-indo-DSC01182.jpg
+
+Title Clown Anemonefish
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags fish 2019 anemone
+Latin Amphiprion percula
+Description
+
+2019-indo-DSC01287.jpg
+
+Title Red-legged Swimming Crab
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags crab 2019 portrait
+Latin Portunus convexus
+Description
+
+2019-indo-DSC01396.jpg
+
+Title Brassy Trevally
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags fish 2019 school
+Latin Caranx papuensis
+Description
+
+2019-indo-DSC01413.jpg
+
+Title Oceanic Manta Ray
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags ray 2019
+Latin Manta birostris
+Description
+
+2019-indo-DSC01548.jpg
+
+Title Bluestripe and Golden-lined Snappers
+Location Dampier Strait, Raja Ampat, Indonesia
+Tags fish school 2019
+Latin Lutjanus kasmira and Lutjanus lutjanus
+Description
+
+2019-indo-DSC01908-Edit.jpg
+
+Title Juvenile Longhorn Cowfish
+Location Lembeh Strait, Indonesia
+Tags fish juvenile 2019 portrait
+Latin Lactoria cornuta
+Description
+
+2019-indo-DSC01953.jpg
+
+Title Balloonfish
+Location Lembeh Strait, Indonesia
+Tags fish 2019
+Latin Lophodiodon calori
+Description
+
+2019-indo-DSC01956.jpg
+
+Title Balloonfish
+Location Lembeh Strait, Indonesia
+Tags fish 2019 portrait
+Latin Lophodiodon calori
+Description
+
+2019-indo-DSC02121.jpg
+
+Title Nudibranch
+Location Lembeh Strait, Indonesia
+Tags nudibranch 2019 portrait
+Latin
+Description
+
+2019-indo-DSC02160.jpg
+
+Title Bullock's Hypselodoris
+Location Lembeh Strait, Indonesia
+Tags nudibranch 2019
+Latin Hypselodoris bullocki
+Description
+
+2019-indo-DSC02184.jpg
+
+Title Giant Frogfish
+Location Lembeh Strait, Indonesia
+Tags frogfish 2019 portrait fish
+Latin Antennarius commerson
+Description
+
+2019-indo-DSC02196.jpg
+
+Title Nudibranch
+Location Lembeh Strait, Indonesia
+Tags nudibranch 2019 portrait
+Latin Ceratosoma tenue
+Description
+
+2019-indo-DSC02231.jpg
+
+Title
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait
+Latin
+Description
+
+2019-indo-DSC02240.jpg
+
+Title Bobbit worm
+Location Lembeh Strait, Indonesia
+Tags worm 2019 portrait
+Latin Eunice aphroditois
+Description
+
+2019-indo-DSC02312.jpg
+
+Title Nudibranch
+Location Lembeh Strait, Indonesia
+Tags nudibranch 2019 portrait
+Latin Tritonia sp.
+Description
+
+2019-indo-DSC02394-Edit.jpg
+
+Title Frogfish
+Location Lembeh Strait, Indonesia
+Tags frogfish fish 2019 portrait
+Latin
+Description
+
+2019-indo-DSC02413.jpg
+
+Title Striated Frogfish
+Location Lembeh Strait, Indonesia
+Tags frogfish fish 2019 portrait
+Latin Antennarius striatus
+Description
+
+2019-indo-DSC02438.jpg
+
+Title Nudibranch
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait nudibranch
+Latin Halgerda?
+Description
+
+2019-indo-DSC02545-Edit.jpg
+
+Title Ornate Ghost Pipefish
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait fish pipefish
+Latin Solenostomus paradoxus
+Description
+
+2019-indo-DSC02650.jpg
+
+Title Blue-Ringed Octopus
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait octopus cephalopod
+Latin Hapalochlaena sp.
+Description
+
+2019-indo-DSC02861-Edit.jpg
+
+Title Spiny Devilfish
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait scorpionfish fish
+Latin Inimicus didactylus
+Description
+
+2019-indo-DSC02932-Edit-2.jpg
+
+Title Flamboyant Cuttlefish
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait scorpionfish fish
+Latin Metasepia pfefferi
+Description
+
+2019-indo-DSC02981.jpg
+
+Title Skeleton Shrimp
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait shrimp
+Latin Caprellid sp.
+Description
+
+2019-indo-DSC03105.jpg
+
+Title Broadclub Cuttlefish
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait shrimp
+Latin Sepia latimanus
+Description
+
+2019-indo-DSC03116.jpg
+
+Title Shortfin Lionfish
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait scorpionfish
+Latin Dendrochirus brachypterus
+Description
+
+2019-indo-DSC03232-Edit.jpg
+
+Title Apolegma's Hypselodoris
+Location Lembeh Strait, Indonesia
+Tags 2019 portrait nudibranch
+Latin Hypselodoris apolegma
+Description
