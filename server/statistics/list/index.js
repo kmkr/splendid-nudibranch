@@ -23,6 +23,6 @@ module.exports = (fromDate = new Date(), toDate = oneMonthAgo()) =>
         createdAt: s.created_at,
         numActions: s.numActions,
         path: s.path,
-        isBot: isBot(s.ua)
+        isBot: isBot(s.ua || '')
       }))
     )
