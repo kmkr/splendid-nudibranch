@@ -1307,7 +1307,7 @@ Description While this genus is typically buried in the sand or perfectly camouf
 
 2019-indo-DSC02932-Edit-2.jpg
 
-Title Flamboyant Cuttlefish
+Title Flambouyant Cuttlefish
 Location Lembeh Strait, Indonesia
 Tags 2019 portrait scorpionfish fish
 Latin Metasepia pfefferi
