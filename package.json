@@ -48,7 +48,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.5.0",
     "jest": "^24.5.0",
-    "picturefill": "^3.0.2",
+    "picturefill": "^3.0.3",
     "postcss-cli": "^6.1.2",
     "postcss-css-variables": "^0.8.0",
     "postcss-import": "^11.0.0",
