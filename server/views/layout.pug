@@ -35,4 +35,12 @@ html
     each metaValue, metaKey in ogTags
         meta(property=metaKey content=metaValue)
   body
+    div(id='app')
+    script(type='text/javascript').
+         window.snClientId = '#{id}';
+         window.snPhotos = !{JSON.stringify(photos)};
+         window.snFeatureName = '#{featureName}';
+
+    script(type='text/javascript' src=js async charset='utf-8')
+
     block content

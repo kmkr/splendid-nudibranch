@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  article(style='display:none;')
+    a(href='/') Home
+    header
+      p #{selectedPhoto.title}
+    img(src=selectedPhoto.sizes.medium.url, alt=selectedPhoto.title)
+    p #{selectedPhoto.description}
+

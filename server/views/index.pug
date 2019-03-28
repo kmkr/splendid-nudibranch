@@ -1,10 +1,12 @@
 extends layout.pug
 
 block content
-    div(id='app')
-    script(type='text/javascript').
-         window.snClientId = '#{id}';
-         window.snPhotos = !{photos};
-         window.snFeatureName = '#{featureName}';
+  div(style='display:none;')
+  each photo in photos
+    article
+      header
+        p #{photo.title}
+      a(href=`/photos/${photo.key}`)
+        img(src=photo.sizes.medium.url, alt=photo.title)
+      p #{photo.description}
 
-    script(type='text/javascript' src=js async charset='utf-8')

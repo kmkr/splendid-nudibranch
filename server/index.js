@@ -54,7 +54,7 @@ app.use(
 
 const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
-function photoIndex(
+function render(
   res,
   { id, photoKey, feature, featuredPhoto } = {},
   jsFile,
@@ -74,7 +74,15 @@ function photoIndex(
       ? groupByFeature(mappedPhotos, feature)
       : mappedPhotos
     const featureName = getFeatureName(feature)
-    return res.render('index', {
+    let template = 'index'
+    let selectedPhoto
+    if (photoKey) {
+      selectedPhoto = photos.find(p => p.key === photoKey)
+      if (selectedPhoto) {
+        template = 'photo'
+      }
+    }
+    return res.render(template, {
       id,
       description,
       favico100: hashStore.withHash('/static/images/favicon-100.png'),
@@ -83,7 +91,8 @@ function photoIndex(
       featureName,
       js: hashStore.withHash(jsFile),
       css: hashStore.withHash(cssFile),
-      photos: JSON.stringify(photos),
+      photos: photos,
+      selectedPhoto,
       ogTags: ogTags(photos, {
         selectedPhotoKey: photoKey,
         feature,
@@ -99,7 +108,7 @@ function photoIndex(
 app.get('/', (req, res) => {
   const id = uid()
   newStatsItem(req, { id, path: req.path }, true)
-  photoIndex(
+  render(
     res,
     {
       feature: req.query.feature,
@@ -114,7 +123,7 @@ app.get('/', (req, res) => {
 app.get('/photos/:key', (req, res) => {
   const id = uid()
   newStatsItem(req, { path: req.path }, true)
-  photoIndex(
+  render(
     res,
     {
       feature: req.query.feature,
@@ -127,7 +136,7 @@ app.get('/photos/:key', (req, res) => {
 })
 
 app.get('/admin', (req, res) => {
-  photoIndex(
+  render(
     res,
     {},
     '/static/scripts/admin-bundle.js',
@@ -136,7 +145,7 @@ app.get('/admin', (req, res) => {
 })
 
 app.get('/admin/stats', (req, res) => {
-  photoIndex(
+  render(
     res,
     {},
     '/static/scripts/admin-stats-bundle.js',
