@@ -41,5 +41,5 @@ module.exports.resizeTo = [
   }
 ]
 
-module.exports.description =
+module.exports.generalSiteDescription =
   'Photos of sea critters, slender sharks, beautiful shrimps, lots of fish and splendid nudibranchs.'

@@ -16,7 +16,7 @@ const viewDataService = require('./view-data-service')
 const { groupByFeature, getFeatureName } = require('./feature-group-service')
 const { serverToClient } = require('./photos/photo-data-conversion')
 const ogTags = require('./og-tags')
-const { description } = require('./photos/constants')
+const { generalSiteDescription } = require('./photos/constants')
 const hashStore = require('./hash-store')
 const newStatsItem = require('./statistics/new')
 const { uid } = require('./id-generator')
@@ -57,16 +57,11 @@ app.use(
 
 const indexCssFile = isProd ? '/static/css/app.min.css' : '/static/css/app.css'
 
-function render(
-  res,
-  { id, photoKey, feature, featuredPhoto } = {},
-  jsFile,
-  cssFile
-) {
+function render(res, { id, photoKey, feature } = {}, jsFile, cssFile) {
   return Promise.all([
     viewDataService.getPhotoData(),
-    viewDataService.getKeywords()
-  ]).then(([photoData, keywords]) => {
+    viewDataService.getAllKeywords()
+  ]).then(([photoData, allKeywords]) => {
     const mappedPhotos = photoData.photos.map(p =>
       serverToClient(p, photoData.base)
     )
@@ -78,11 +73,15 @@ function render(
       : mappedPhotos
     const featureName = getFeatureName(feature)
     let template = 'index'
+    let description = generalSiteDescription
     let selectedPhoto
     let title = baseTitle()
+    let keywords = allKeywords
     if (photoKey) {
       selectedPhoto = photos.find(p => p.key === photoKey)
       if (selectedPhoto) {
+        description = selectedPhoto.description
+        keywords = viewDataService.getKeywordsForPhoto(selectedPhoto)
         template = 'photo'
         title = photoTitle(selectedPhoto)
       }
@@ -100,12 +99,10 @@ function render(
       selectedPhoto,
       title,
       ogTags: ogTags(photos, {
-        selectedPhotoKey: photoKey,
+        selectedPhoto,
         feature,
-        featureName,
-        featuredPhoto
+        featureName
       }),
-      selectedPhotoKey: photoKey,
       keywords
     })
   })
@@ -118,7 +115,6 @@ app.get('/', (req, res) => {
     res,
     {
       feature: req.query.feature,
-      featuredPhoto: req.query.fp,
       id
     },
     '/static/scripts/bundle.js',

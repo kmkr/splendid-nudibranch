@@ -26,7 +26,14 @@ function reduceFlatten(a, b) {
   return a.concat(b)
 }
 
-module.exports.getKeywords = function() {
+module.exports.getKeywordsForPhoto = function(photo) {
+  return [photo.title, ...(photo.location || '').split(', '), ...photo.tags]
+    .filter(noStopWords)
+    .filter(t => t)
+    .join(', ')
+}
+
+module.exports.getAllKeywords = function() {
   return getPhotoData().then(({ photos }) =>
     [
       'diving',

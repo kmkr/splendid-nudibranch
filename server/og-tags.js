@@ -1,43 +1,34 @@
-const { description } = require('./photos/constants')
+const { generalSiteDescription } = require('./photos/constants')
+const { photoTitle, featureTitle } = require('../common/title-service')
 
 const name = 'The Splendid Nudibranch'
 
-function buildUrl({ selectedPhotoKey, feature, featuredPhoto }) {
+function buildUrl({ selectedPhoto, feature }) {
   let url = 'http://www.thesplendidnudibranch.pink'
 
-  if (selectedPhotoKey) {
-    return url + `/photos/${selectedPhotoKey}`
+  if (selectedPhoto) {
+    return url + `/photos/${selectedPhoto.key}`
   }
 
   if (feature) {
     url += `/?feature=${feature.join('&feature=')}`
-    if (featuredPhoto) {
-      return url + `&fp=${featuredPhoto}`
-    }
   }
 
   return url
 }
 
-module.exports = (
-  photos,
-  { selectedPhotoKey, feature, featureName, featuredPhoto }
-) => {
-  const selectedPhoto = photos.filter(
-    p => p.key === (selectedPhotoKey || featuredPhoto)
-  )[0]
-
+module.exports = (photos, { selectedPhoto, feature, featureName }) => {
   if (selectedPhoto) {
     const selectedPhotoSize = selectedPhoto.sizes.medium
 
     return {
       'og:type': 'article',
       'og:site_name': name,
-      'og:title': [feature ? featureName : selectedPhoto.title, name]
-        .filter(Boolean)
-        .join(' :: '),
-      'og:url': buildUrl({ selectedPhotoKey, feature, featuredPhoto }),
-      'og:description': featuredPhoto ? description : selectedPhoto.description,
+      'og:title': feature
+        ? featureTitle(featureName)
+        : photoTitle(selectedPhoto),
+      'og:url': buildUrl({ selectedPhoto, feature }),
+      'og:description': selectedPhoto.description,
       'og:image': selectedPhotoSize.url,
       'og:image:width': selectedPhotoSize.width,
       'og:image:height': selectedPhotoSize.height
@@ -47,9 +38,9 @@ module.exports = (
   return {
     'og:type': 'article',
     'og:site_name': name,
-    'og:title': [featureName, name].filter(Boolean).join(' :: '),
+    'og:title': featureTitle(featureName),
     'og:url': buildUrl({ feature }),
-    'og:description': description,
+    'og:description': generalSiteDescription,
     'og:image': 'http://www.thesplendidnudibranch.pink/static/images/logo.png',
     'og:image:width': 1300,
     'og:image:height': 616
