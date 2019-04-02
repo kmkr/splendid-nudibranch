@@ -1,6 +1,8 @@
 /** @jsx h */
 import { h, Component } from 'preact'
 
+import { photoTitle, baseTitle } from '../../common/title-service'
+
 import TopLogo from './top-logo'
 import Collage from './collage'
 import DeepWater from './deep-water'
@@ -68,6 +70,7 @@ class App extends Component {
     addAction()
     setTimeout(() => {
       window.scroll({ top: 0, behavior: 'smooth' })
+      document.title = photoTitle(photo)
     })
   }
 
@@ -98,6 +101,7 @@ class App extends Component {
     window.history.pushState('frontpage', '', decorateLink('/'))
     addAction()
     this.scrollToPhoto(selectedPhotoKey, 0)
+    document.title = baseTitle()
   }
 
   onGoToPhotos(e, offset) {
@@ -106,6 +110,7 @@ class App extends Component {
     setTimeout(() => {
       const y = document.querySelector('#top-logo').offsetHeight + (offset || 0)
       window.scroll({ top: y, behavior: 'smooth' })
+      document.title = baseTitle()
     })
   }
 

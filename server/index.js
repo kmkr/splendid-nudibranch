@@ -1,8 +1,11 @@
 require('./polyfills')
+
 const bodyParser = require('body-parser')
 const express = require('express')
 const logger = require('morgan')
 const compression = require('compression')
+
+const { baseTitle, photoTitle } = require('../common/title-service')
 
 const { auth } = require('./auth')
 const photoRouter = require('./photos')
@@ -76,10 +79,12 @@ function render(
     const featureName = getFeatureName(feature)
     let template = 'index'
     let selectedPhoto
+    let title = baseTitle()
     if (photoKey) {
       selectedPhoto = photos.find(p => p.key === photoKey)
       if (selectedPhoto) {
         template = 'photo'
+        title = photoTitle(selectedPhoto)
       }
     }
     return res.render(template, {
@@ -93,6 +98,7 @@ function render(
       css: hashStore.withHash(cssFile),
       photos: photos,
       selectedPhoto,
+      title,
       ogTags: ogTags(photos, {
         selectedPhotoKey: photoKey,
         feature,
