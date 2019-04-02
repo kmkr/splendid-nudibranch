@@ -15,7 +15,7 @@ module.exports.getPhotoData = getPhotoData
 const stopWords = [/\d{4}/]
 
 function noStopWords(elem) {
-  return stopWords.some(sw => sw.test(elem))
+  return !stopWords.some(sw => sw.test(elem))
 }
 
 function onlyUnique(value, index, ary) {
