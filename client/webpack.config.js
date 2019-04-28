@@ -11,6 +11,7 @@ module.exports = {
   devtool: env !== 'production' ? 'source-map' : false,
   output: {
     path: `${__dirname}/../server/static/scripts`,
+    publicPath: '/static/scripts/',
     filename: '[name].js'
   },
   mode: env !== 'production' ? 'development' : 'production',

@@ -6,7 +6,6 @@ import setPhotoWidth from './set-width-helper'
 import throttle from './throttle'
 import getWidth from './get-width'
 import MidWater from './mid-water'
-import { getNumLoaded, setNumLoaded } from './num-loaded-photos'
 
 function hasScrollbar() {
   return document.body.offsetHeight >= window.innerHeight
@@ -20,22 +19,11 @@ class Collage extends Component {
   constructor(props) {
     super()
 
-    const isCollage = getIsCollage()
     this.updateWidth = this.updateWidth.bind(this)
-    this.updateLoadedPhotos = this.updateLoadedPhotos.bind(this)
     this.renderPhotoGroup = this.renderPhotoGroup.bind(this)
 
-    const numPhotos =
-      props.featuredPhotos.length + props.nonFeaturedPhotos.length
-
-    if (!isCollage) {
-      throttle('scroll', 'optimizedScroll')
-      window.addEventListener('optimizedScroll', this.updateLoadedPhotos)
-    }
     this.state = {
-      width: getWidth(),
-      // Old devices (at least old iPads) breaks if all photos are loaded at once. Load only 8 photos at a time.
-      loadPhotos: isCollage ? numPhotos : Math.max(3, getNumLoaded())
+      width: getWidth()
     }
   }
 
@@ -43,25 +31,6 @@ class Collage extends Component {
     this.setState({
       width: getWidth()
     })
-  }
-
-  updateLoadedPhotos() {
-    const threshold = 2000
-    const totalHeight = document.body.offsetHeight
-    const scrollPos = window.scrollY
-    if (scrollPos >= totalHeight - window.innerHeight - threshold) {
-      const additionalLoad = getIsCollage() ? 4 : 2
-      const numPhotos =
-        this.props.featuredPhotos.length + this.props.nonFeaturedPhotos.length
-      const newNumLoadedPhotos = Math.min(
-        this.state.loadPhotos + additionalLoad,
-        numPhotos
-      )
-      setNumLoaded(newNumLoadedPhotos)
-      this.setState({
-        loadPhotos: newNumLoadedPhotos
-      })
-    }
   }
 
   componentDidMount() {
@@ -76,7 +45,6 @@ class Collage extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('optimizedResize', this.updateWidth)
-    window.removeEventListener('optimizedScroll', this.updateLoadedPhotos)
   }
 
   renderPhotoGroup(photoGroup) {
@@ -101,16 +69,9 @@ class Collage extends Component {
     )
   }
 
-  render({ featuredPhotos, nonFeaturedPhotos }, { loadPhotos }) {
-    const featuredPhotoGroups = setPhotoWidth(
-      featuredPhotos.slice(0, loadPhotos)
-    )
-    const nonFeaturedPhotoGroups = setPhotoWidth(
-      nonFeaturedPhotos.slice(
-        0,
-        Math.max(0, loadPhotos - featuredPhotos.length)
-      )
-    )
+  render({ featuredPhotos, nonFeaturedPhotos }) {
+    const featuredPhotoGroups = setPhotoWidth(featuredPhotos)
+    const nonFeaturedPhotoGroups = setPhotoWidth(nonFeaturedPhotos)
     return (
       <div id="collage">
         {featuredPhotoGroups.map(this.renderPhotoGroup)}

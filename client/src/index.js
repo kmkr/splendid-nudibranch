@@ -10,4 +10,14 @@ const photos = window.snPhotos.map(photo => {
   return photo
 })
 
-render(<App photos={photos} />, document.getElementById('app'))
+function renderApp() {
+  render(<App photos={photos} />, document.getElementById('app'))
+}
+
+if (!window.IntersectionObserver) {
+  import('intersection-observer').then(() => {
+    renderApp()
+  })
+} else {
+  renderApp()
+}
