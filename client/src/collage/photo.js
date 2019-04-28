@@ -17,7 +17,7 @@ class Photo extends Component {
   componentDidMount() {
     const options = {
       root: null,
-      rootMargin: '150px'
+      rootMargin: '300px'
     }
 
     const observer = new IntersectionObserver((entries, observer) => {
