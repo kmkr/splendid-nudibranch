@@ -28,6 +28,10 @@ html
         href=favico
         sizes='32x32'
     )
+    style(type='text/css').
+      body {
+        font-display: swap;
+      }
 
     each metaValue, metaKey in ogTags
         meta(property=metaKey content=metaValue)
