@@ -7,12 +7,13 @@ const updateOneInCollection = require('./update')
 
 const url = process.env.SN_DB_URL
 const getDb = new Promise((resolve, reject) => {
-  MongoClient.connect(url, (err, db) => {
+  client = new MongoClient(url, { useNewUrlParser: true })
+  client.connect(err => {
     if (err) {
       return reject(err)
     }
 
-    return resolve(db)
+    return resolve(client.db('splendid-nudibranch'))
   })
 })
 
