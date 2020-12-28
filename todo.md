@@ -7,9 +7,9 @@ preload prev/next photo
 browser back
 sitemap
 jest
+redirect heroku
 
 stats
-vercel analytics
 upload bilde
 
 toppmeny
