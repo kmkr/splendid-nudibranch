@@ -3,9 +3,6 @@
 - Pluss og vis alle bilder-knappen må komme nærmere bildet.
 - Illustrasjoner for skjermer større enn 2560
 
-preload prev/next photo
-browser back
-sitemap
 jest
 redirect heroku
 
@@ -14,3 +11,5 @@ upload bilde
 
 toppmeny
 features
+bedre 404
+bedre error

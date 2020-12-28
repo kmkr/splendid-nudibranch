@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import {
   getPhotoData,
@@ -11,13 +11,16 @@ import buildSrcSet from "../../client/photos/src-set-builder";
 import PhotoWrapper from "../../client/photos";
 import { photoTitle } from "../../src/title-service";
 
-function PhotoPage({ keywords, photo }) {
-  let availWidth = 400;
+function PhotoPage({ keywords, photo, nextPhoto, prevPhoto }) {
+  const [availWidth, setAvailWidth] = useState(400);
+
   useEffect(() => {
-    availWidth = screen.availWidth;
+    setAvailWidth(screen.availWidth);
   });
 
   photo.srcSet = buildSrcSet(photo.sizes, availWidth);
+  nextPhoto.srcSet = buildSrcSet(nextPhoto.sizes, availWidth);
+  prevPhoto.srcSet = buildSrcSet(prevPhoto.sizes, availWidth);
 
   return (
     <>
@@ -30,7 +33,10 @@ function PhotoPage({ keywords, photo }) {
       </Head>
 
       <div id="container">
-        <PhotoWrapper selectedPhoto={photo} />
+        <PhotoWrapper
+          nextPhoto={nextPhoto}
+          prevPhoto={prevPhoto}
+          selectedPhoto={photo}
         />
       </div>
     </>
@@ -50,11 +56,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const photoData = await getPhotoData();
+  const { photos, base } = await getPhotoData();
 
-  const selectedPhoto = photoData.photos.find(
+  const selectedPhotoIndex = photos.findIndex(
     (photo) => photo.key === context.params.id
   );
+  const selectedPhoto = photos[selectedPhotoIndex];
+
   if (!selectedPhoto) {
     return {
       notFound: true,
@@ -62,12 +70,21 @@ export async function getStaticProps(context) {
   }
 
   const photoKeywords = getKeywordsForPhoto(selectedPhoto);
-  const mappedPhoto = serverToClient(selectedPhoto, photoData.base);
+
+  const nextPhotoIndex =
+    selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1;
+  const prevPhotoIndex =
+    selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1;
+
+  const nextPhoto = photos[nextPhotoIndex];
+  const prevPhoto = photos[prevPhotoIndex];
 
   return {
     props: {
       keywords: photoKeywords,
-      photo: mappedPhoto,
+      photo: serverToClient(selectedPhoto, base),
+      nextPhoto: serverToClient(nextPhoto, base),
+      prevPhoto: serverToClient(prevPhoto, base),
     },
   };
 }
