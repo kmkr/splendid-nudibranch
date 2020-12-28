@@ -42,13 +42,13 @@
   .photo-wrapper .click-previous {
     left: 0;
     right: 50%;
-    cursor: url('/static/images/cursor-previous.png?v2'), auto;
+    cursor: url("/images/cursor-previous.png"), auto;
   }
 
   .photo-wrapper .click-next {
     right: 0;
     left: 50%;
-    cursor: url('/static/images/cursor-next.png?v2'), auto;
+    cursor: url("/images/cursor-next.png"), auto;
   }
 }
 
