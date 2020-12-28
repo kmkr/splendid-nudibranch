@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Collage from "../client/collage";
 import { getPhotoData, getAllKeywords } from "../server/view-data-service";
@@ -9,9 +9,9 @@ import buildSrcSet from "../client/photos/src-set-builder";
 import { baseTitle } from "../src/title-service";
 
 function HomePage({ keywords, photos }) {
-  let availWidth = 400;
+  const [availWidth, setAvailWidth] = useState(400);
   useEffect(() => {
-    availWidth = screen.availWidth;
+    setAvailWidth(screen.availWidth);
   });
 
   const photosWidthSrcSet = photos.map((photo) => {
