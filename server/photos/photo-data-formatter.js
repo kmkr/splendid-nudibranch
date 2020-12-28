@@ -10,8 +10,8 @@ function mapOne(photoFromDb) {
     shot_at,
     created_at,
     updated_at,
-    tags
-  } = photoFromDb
+    tags,
+  } = photoFromDb;
   return {
     title,
     description,
@@ -23,13 +23,13 @@ function mapOne(photoFromDb) {
     shotAt: shot_at,
     createdAt: created_at,
     updatedAt: updated_at,
-    tags: tags || []
-  }
+    tags: tags || [],
+  };
 }
-module.exports.dbToClient = function(photoArg) {
+module.exports.dbToClient = function (photoArg) {
   if (Array.isArray(photoArg)) {
-    return photoArg.map(mapOne)
+    return photoArg.map(mapOne);
   }
 
-  return mapOne(photoArg)
-}
+  return mapOne(photoArg);
+};

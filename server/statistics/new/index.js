@@ -1,35 +1,35 @@
-const db = require('../../db')
+const db = require("../../db");
 
-let queue = []
+let queue = [];
 
 setInterval(() => {
-  console.log(`Inserting ${queue.length} items`)
-  queue.forEach(func => func())
-  queue = []
-}, 1000 * 60 * 5)
+  console.log(`Inserting ${queue.length} items`);
+  queue.forEach((func) => func());
+  queue = [];
+}, 1000 * 60 * 5);
 
 module.exports = (req, data, isAsync = false) => {
-  const origin = req.ip
-  const ua = req.get('User-Agent')
-  const referrer = req.get('Referer')
-  const id = data.id
+  const origin = req.ip;
+  const ua = req.get("User-Agent");
+  const referrer = req.get("Referer");
+  const id = data.id;
 
   const func = () =>
     db.updateWithInsertFallback(
-      'statistics',
+      "statistics",
       { id },
       {
         origin,
         ua,
         referrer,
-        ...data
+        ...data,
       }
-    )
+    );
 
   if (isAsync) {
-    queue.push(func)
-    return Promise.resolve()
+    queue.push(func);
+    return Promise.resolve();
   } else {
-    return func()
+    return func();
   }
-}
+};
