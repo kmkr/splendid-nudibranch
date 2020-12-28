@@ -1,10 +1,14 @@
 {
   "name": "splendid-nudibranch",
   "version": "1.0.0",
-  "main": "server/index.js",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=12.16.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmkr/splendid-nudibranch"
+  },
+  "license": "GPL-3",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
