@@ -3,7 +3,6 @@
 - Pluss og vis alle bilder-knappen må komme nærmere bildet.
 - Illustrasjoner for skjermer større enn 2560
 
-jest
 redirect heroku
 
 stats
