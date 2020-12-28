@@ -2,7 +2,7 @@ import { getPhotoData } from "../server/view-data-service";
 
 const Sitemap = () => null;
 
-const BASE_URL = "http://www.thesplendidnudibranch.pink";
+const BASE_URL = "https://www.thesplendidnudibranch.pink";
 
 function generateSitemap(photoKeys) {
   let str = `

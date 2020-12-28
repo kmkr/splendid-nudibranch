@@ -4,7 +4,7 @@ import { photoTitle, featureTitle } from "../src/title-service";
 const name = "The Splendid Nudibranch";
 
 function buildUrl({ selectedPhoto, feature }) {
-  let url = "http://www.thesplendidnudibranch.pink";
+  let url = "https://www.thesplendidnudibranch.pink";
 
   if (selectedPhoto) {
     return url + `/photos/${selectedPhoto.key}`;
@@ -43,7 +43,7 @@ export function forAll(selectedPhoto) {
     "og:title": featureTitle(featureName),
     "og:url": buildUrl({ feature }),
     "og:description": generalSiteDescription,
-    "og:image": "http://www.thesplendidnudibranch.pink/static/images/logo.png",
+    "og:image": "https://www.thesplendidnudibranch.pink/static/images/logo.png",
     "og:image:width": 1300,
     "og:image:height": 616,
   };
