@@ -36,7 +36,6 @@ function HomePage({ keywords, photos }) {
         <Collage
           featuredPhotos={featuredPhotos}
           nonFeaturedPhotos={nonFeaturedPhotos}
-          onSelectPhoto={() => {}}
         />
       </div>
     </>

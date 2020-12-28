@@ -52,7 +52,6 @@ class Collage extends PureComponent {
   }
 
   renderPhotoGroup(photoGroup) {
-    const { onSelectPhoto } = this.props;
     const setDimensions = this.getIsCollage();
     const style = setDimensions ? { height: `${photoGroup.height}px` } : {};
     return (
@@ -62,12 +61,7 @@ class Collage extends PureComponent {
         style={style}
       >
         {photoGroup.photos.map((photo) => (
-          <Photo
-            key={photo.key}
-            setWidth={setDimensions}
-            photo={photo}
-            onSelect={onSelectPhoto}
-          />
+          <Photo key={photo.key} setWidth={setDimensions} photo={photo} />
         ))}
       </div>
     );
