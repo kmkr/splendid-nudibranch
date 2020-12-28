@@ -7,6 +7,8 @@ import { getPhotoData, getAllKeywords } from "../server/view-data-service";
 import { serverToClient } from "../server/photos/photo-data-conversion";
 import { forAll } from "../server/og-tags";
 import buildSrcSet from "../client/photos/src-set-builder";
+import TopLogo from "../client/top-logo";
+import DeepWater from "../client/deep-water";
 import { baseTitle } from "../src/title-service";
 
 function scrollToPhoto(key, retryNum) {
@@ -20,6 +22,15 @@ function scrollToPhoto(key, retryNum) {
 
     window.scroll({ top: elem.offsetTop - 50 });
   }, 50);
+}
+
+function onGoToPhotos(e, offset) {
+  e && e.preventDefault();
+
+  setTimeout(() => {
+    const y = document.querySelector("#top-logo").offsetHeight + (offset || 0);
+    window.scroll({ top: y, behavior: "smooth" });
+  });
 }
 
 function HomePage({ keywords, photos }) {
@@ -57,11 +68,14 @@ function HomePage({ keywords, photos }) {
         ))}
       </Head>
 
+      <TopLogo onGoToPhotos={onGoToPhotos} />
+
       <div id="container">
         <Collage
           featuredPhotos={featuredPhotos}
           nonFeaturedPhotos={nonFeaturedPhotos}
         />
+        <DeepWater onClick={(e) => onGoToPhotos(e, -100)} />
       </div>
     </>
   );

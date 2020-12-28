@@ -1,9 +1,8 @@
-/** @jsx h */
-import { h, Component } from "../admin/preact";
+import Link from "next";
 
 const TopLogo = ({ onGoToPhotos }) => (
   <div id="top-logo" onClick={onGoToPhotos}>
-    <img src="/static/images/logo.svg" />
+    <img src="/images/logo.svg" />
     <a href="#collage" className="arrow" />
   </div>
 );

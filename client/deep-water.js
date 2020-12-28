@@ -1,15 +1,12 @@
-/** @jsx h */
-import { h } from "../admin/preact";
-
 const DeepWater = ({ onClick }) => (
   <div id="deep-water">
     <div id="license">
-      <p xmlnsDct="http://purl.org/dc/terms/" property="dct:title">
+      <p xmlnsdct="http://purl.org/dc/terms/" property="dct:title">
         The Splendid Nudibranch
       </p>
       <p>
         <a
-          xmlnsCc="http://creativecommons.org/ns#"
+          xmlnscc="http://creativecommons.org/ns#"
           href="mailto:krismikael-insertathere-protonmail-insertdothere-com"
           property="cc:attributionName"
           rel="cc:attributionURL"
