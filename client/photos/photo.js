@@ -38,7 +38,9 @@ const Photo = ({ next, previous, photo, preloadPhotos }) => {
   useEffect(() => {
     // Clean up to avoid having images "hanging" when navigating to a new image.
     return function cleanup() {
-      wrapperRef.current.removeChild(wrapperRef.current.querySelector("img"));
+      if (wrapperRef && wrapperRef.current) {
+        wrapperRef.current.removeChild(wrapperRef.current.querySelector("img"));
+      }
     };
   }, []);
 

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 import Collage from "../client/collage";
@@ -8,11 +9,35 @@ import { forAll } from "../server/og-tags";
 import buildSrcSet from "../client/photos/src-set-builder";
 import { baseTitle } from "../src/title-service";
 
+function scrollToPhoto(key, retryNum) {
+  setTimeout(() => {
+    const elem = document.querySelector(`[data-photo-key="${key}"]`);
+    if (!elem) {
+      if (retryNum < 3) {
+        return this.scrollToPhoto(key, retryNum + 1);
+      }
+    }
+
+    window.scroll({ top: elem.offsetTop - 50 });
+  }, 50);
+}
+
 function HomePage({ keywords, photos }) {
+  const router = useRouter();
   const [availWidth, setAvailWidth] = useState(400);
   useEffect(() => {
     setAvailWidth(screen.availWidth);
   });
+
+  useEffect(() => {
+    const { asPath } = router;
+    if (!/\?.*from=/.test(asPath)) {
+      return;
+    }
+
+    const key = asPath.split("from=")[1].split("&")[0];
+    scrollToPhoto(key, 0);
+  }, []);
 
   const photosWidthSrcSet = photos.map((photo) => {
     photo.srcSet = buildSrcSet(photo.sizes, availWidth);

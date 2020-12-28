@@ -17,11 +17,13 @@ const PhotosWrapper = ({ selectedPhoto, nextPhoto, prevPhoto }) => {
     setSidebarExpanded((prevState) => !prevState);
   }
 
+  const homePath = `/?from=${selectedPhoto.key}`;
+
   return (
     <div>
       <KeyboardEventHandler
         onHome={() => {
-          router.push("/");
+          router.push(homePath);
         }}
         onNext={() => {
           router.push(`/photos/${nextPhoto.key}`);
@@ -50,7 +52,7 @@ const PhotosWrapper = ({ selectedPhoto, nextPhoto, prevPhoto }) => {
         onToggleExpanded={toggleSidebar}
         photo={selectedPhoto}
       />
-      <Navigation />
+      <Navigation homePath={homePath} />
     </div>
   );
 };

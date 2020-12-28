@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const Navigation = () => (
+const Navigation = ({ homePath }) => (
   <div id="navigation">
-    <Link href="/">
+    <Link href={homePath}>
       <a className="home" title="All photos">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.04 54.67">
           <rect
@@ -48,8 +48,8 @@ const Navigation = () => (
       </a>
     </Link>
     <div className="link-wrapper">
-      <Link href="/">
-        <a href="/">More photos</a>
+      <Link href={homePath}>
+        <a>More photos</a>
       </Link>
     </div>
   </div>

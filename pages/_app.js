@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import "../client/polyfills";
 import "../server/static/css/app.css";
 
 function MyApp({ Component, pageProps }) {
