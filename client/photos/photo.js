@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import PhotoText from "./photo-text";
 import TransitionImage from "../transition-image";
@@ -29,14 +29,23 @@ function preload(photos) {
 }
 
 const Photo = ({ next, previous, photo, preloadPhotos }) => {
+  const wrapperRef = useRef();
+
   useEffect(() => {
     preload(preloadPhotos);
   }, [preloadPhotos]);
+
+  useEffect(() => {
+    // Clean up to avoid having images "hanging" when navigating to a new image.
+    return function cleanup() {
+      wrapperRef.current.removeChild(wrapperRef.current.querySelector("img"));
+    };
+  }, []);
+
   return (
     <div className={photo.mode}>
       <div className="photo-and-text">
-        {/* <div className="photo-wrapper" ref={(el) => (this.el = el)}> */}
-        <div className="photo-wrapper">
+        <div className="photo-wrapper" ref={wrapperRef}>
           {previous}
           {next}
           <img alt={photo.title} srcSet={photo.srcSet} sizes={sizes(photo)} />
@@ -46,11 +55,5 @@ const Photo = ({ next, previous, photo, preloadPhotos }) => {
     </div>
   );
 };
-
-// componentWillUnmount() {
-//   if (this.el) {
-//     this.el.removeChild(this.el.querySelector("img"));
-//   }
-// }
 
 export default Photo;
