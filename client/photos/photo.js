@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import PhotoText from "./photo-text";
 import TransitionImage from "../transition-image";
@@ -30,6 +30,11 @@ function preload(photos) {
 
 const Photo = ({ next, previous, photo, preloadPhotos }) => {
   const wrapperRef = useRef();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     preload(preloadPhotos);
@@ -50,7 +55,12 @@ const Photo = ({ next, previous, photo, preloadPhotos }) => {
         <div className="photo-wrapper" ref={wrapperRef}>
           {previous}
           {next}
-          <img alt={photo.title} srcSet={photo.srcSet} sizes={sizes(photo)} />
+          <img
+            className={mounted ? "" : "sn-dn"}
+            alt={photo.title}
+            srcSet={photo.srcSet}
+            sizes={sizes(photo)}
+          />
         </div>
         <PhotoText photo={photo} />
       </div>
