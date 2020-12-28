@@ -17,9 +17,7 @@
   "dependencies": {
     "aws-sdk": "^2.422.0",
     "gm": "^1.23.0",
-    "md5-file": "^3.2.3",
     "mongodb": "^3.6.3",
-    "morgan": "^1.9.1",
     "multer": "^1.2.0",
     "next": "^10.0.4",
     "react": "^17.0.1",
