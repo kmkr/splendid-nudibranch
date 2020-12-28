@@ -1,0 +1,1 @@
+{"ast":null,"code":"var DEFAULT_WIDTH = 500;\nexport default function () {\n  if (typeof document !== \"undefined\") {\n    return document.scrollWidth || document.body.clientWidth || window.innerWidth;\n  }\n\n  return DEFAULT_WIDTH;\n}","map":null,"metadata":{},"sourceType":"module"}

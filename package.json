@@ -6,12 +6,9 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node server/index.js",
-    "start:server": "node server/index.js",
-    "start:client": "webpack --watch --config client/webpack.config.js",
-    "build": "npm run lint && npm run test && npm run package",
-    "build:css": "postcss -o server/static/css/app.min.css server/static/css/app.css",
-    "package": "NODE_ENV=production webpack -p --config client/webpack.config.js && npm run build:css",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint .",
     "test": "jest",
     "test:watch": "npm run test -- --watch"
@@ -19,54 +16,28 @@
   "heroku-run-build-script": true,
   "dependencies": {
     "aws-sdk": "^2.422.0",
-    "body-parser": "^1.15.2",
-    "compression": "^1.6.2",
-    "core-js": "^2.4.1",
-    "express": "^4.16.4",
     "gm": "^1.23.0",
     "md5-file": "^3.2.3",
     "mongodb": "^3.6.3",
     "morgan": "^1.9.1",
     "multer": "^1.2.0",
-    "pug": "^2.0.3",
+    "next": "^10.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "sitemap": "^1.8.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
-    "autoprefixer": "^6.5.3",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.5.0",
-    "babel-loader": "^8.0.5",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-eslint": "^10.1.0",
     "chartist": "^0.11.0",
-    "cssnano": "^4.1.10",
     "debounce": "^1.1.0",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.5.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
     "intersection-observer": "^0.6.0",
     "jest": "^24.5.0",
     "picturefill": "^3.0.3",
-    "postcss-cli": "^6.1.2",
-    "postcss-css-variables": "^0.8.0",
-    "postcss-import": "^11.0.0",
-    "preact": "^8.4.2",
-    "prettier": "^1.10.2",
+    "prettier": "^2.2.1",
     "smoothscroll-polyfill": "^0.4.0",
-    "throttleit": "^1.0.0",
-    "webpack": "^4.28.4",
-    "webpack-cli": "^3.3.0"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/client",
-      "<rootDir>/server",
-      "<rootDir>/common"
-    ]
+    "throttleit": "^1.0.0"
   }
 }

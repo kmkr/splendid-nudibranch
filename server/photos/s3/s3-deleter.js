@@ -1,17 +1,17 @@
-const { s3, generateParams } = require('./s3-wrapper')
+const { s3, generateParams } = require("./s3-wrapper");
 
-const { listItems } = require('./s3-lister')
-const { resizeTo } = require('../constants')
+const { listItems } = require("./s3-lister");
+const { resizeTo } = require("../constants");
 
 function expectNumberOfKeys() {
-  const numOriginalUpload = 0
+  const numOriginalUpload = 0;
 
-  return resizeTo.length + numOriginalUpload
+  return resizeTo.length + numOriginalUpload;
 }
 
-module.exports.deletePhoto = function(key) {
+module.exports.deletePhoto = function (key) {
   return new Promise((resolve, reject) => {
-    return listItems(key).then(data => {
+    return listItems(key).then((data) => {
       if (data.length > expectNumberOfKeys()) {
         return reject(
           new Error(
@@ -19,29 +19,29 @@ module.exports.deletePhoto = function(key) {
               data.length
             }. Aborting deletion`
           )
-        )
+        );
       }
 
-      const keys = data.map(elem => ({
-        Key: elem.Key
-      }))
+      const keys = data.map((elem) => ({
+        Key: elem.Key,
+      }));
 
-      console.log('[s3-deleter] Deleting %s keys', keys.length)
+      console.log("[s3-deleter] Deleting %s keys", keys.length);
 
       s3.deleteObjects(
         generateParams({
           Delete: {
-            Objects: keys
-          }
+            Objects: keys,
+          },
         }),
         (err, data) => {
           if (err) {
-            return reject(err)
+            return reject(err);
           }
 
-          return resolve(data)
+          return resolve(data);
         }
-      )
-    })
-  })
-}
+      );
+    });
+  });
+};

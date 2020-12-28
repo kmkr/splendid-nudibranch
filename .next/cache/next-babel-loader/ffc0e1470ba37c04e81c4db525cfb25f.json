@@ -1,0 +1,1 @@
+{"ast":null,"code":"const loaded = [];\nexport function setLoaded(url) {\n  loaded.push(url);\n}\nexport function isLoaded(url) {\n  return loaded.indexOf(url) !== -1;\n}","map":null,"metadata":{},"sourceType":"module"}

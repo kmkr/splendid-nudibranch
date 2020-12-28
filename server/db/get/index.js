@@ -5,10 +5,10 @@ module.exports = (db, collectionName, filter) => {
       .find(filter)
       .toArray((err, result) => {
         if (err) {
-          return reject(err)
+          return reject(err);
         }
 
-        return resolve(result)
-      })
-  })
-}
+        return resolve(result);
+      });
+  });
+};
