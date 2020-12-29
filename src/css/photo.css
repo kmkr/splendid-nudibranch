@@ -69,7 +69,6 @@
 }
 
 .photo-text-wrapper .title {
-  text-transform: uppercase;
   font-size: var(--font-size-large);
   font-weight: 600;
   letter-spacing: 3px;

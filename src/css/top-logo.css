@@ -1,9 +1,32 @@
 #top-logo {
   padding: 30px 0;
-  background-color: var(--color-pink);
   text-align: center;
+  font-size: var(--font-size-large);
+}
+
+@media (min-width: 1100px) {
+  #top-logo .haiku-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  #top-logo .haiku {
+    text-align: left;
+  }
+
+  #top-logo img {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  #top-logo .haiku-wrapper {
+    align-items: center;
+  }
 }
 
 #top-logo img {
-  width: 150px;
+  width: 140px;
 }
