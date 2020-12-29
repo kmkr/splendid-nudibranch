@@ -19,20 +19,19 @@
   },
   "heroku-run-build-script": true,
   "dependencies": {
-    "aws-sdk": "^2.422.0",
-    "gm": "^1.23.0",
     "mongodb": "^3.6.3",
-    "multer": "^1.2.0",
     "next": "^10.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "aws-sdk": "^2.818.0",
     "babel-eslint": "^10.1.0",
     "debounce": "^1.1.0",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
+    "gm": "^1.23.1",
     "intersection-observer": "^0.6.0",
     "jest": "^26.6.3",
     "picturefill": "^3.0.3",

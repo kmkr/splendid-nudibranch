@@ -1,7 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 
-const photoUploadHandler = require("./upload");
+const photoUploadHandler = require("../../photo-management/upload/upload");
 const deletePhotoHandler = require("./delete");
 const updatePhotoHandler = require("./update");
 

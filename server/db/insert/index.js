@@ -7,7 +7,7 @@ module.exports = (db, collectionName, _item) => {
   };
 
   return new Promise((resolve, reject) => {
-    return db.collection(collectionName).insert(item, (err, result) => {
+    return db.collection(collectionName).insertOne(item, (err, result) => {
       if (err) {
         return reject(err);
       }

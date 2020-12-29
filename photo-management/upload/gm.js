@@ -55,7 +55,7 @@ module.exports.metadata = function (filePath) {
         return reject(err);
       }
 
-      console.log(value);
+      console.log("[gm] metadata for %s is %o", filePath, value);
       return resolve(
         Object.assign(
           {

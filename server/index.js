@@ -7,9 +7,6 @@ const { baseTitle, photoTitle } = require("../src/title-service");
 
 const { auth } = require("./auth");
 const photoRouter = require("./photos");
-const sitemapRouter = require("./sitemap");
-const statsRouter = require("./statistics");
-const robotsRouter = require("./robots");
 const viewDataService = require("./view-data-service");
 const { groupByFeature, getFeatureName } = require("./feature-group-service");
 const { serverToClient } = require("./photos/photo-data-conversion");
@@ -154,9 +151,6 @@ app.get("/admin/stats", (req, res) => {
 });
 
 app.use("/photos", photoRouter);
-app.use("/stats", statsRouter);
-app.use("/sitemap.xml", sitemapRouter);
-app.use("/robots.txt", robotsRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
