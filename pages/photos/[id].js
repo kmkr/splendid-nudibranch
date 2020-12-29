@@ -10,12 +10,14 @@ import { forOne } from "../../server/og-tags";
 import buildSrcSet from "../../client/photos/src-set-builder";
 import PhotoWrapper from "../../client/photos";
 import { photoTitle } from "../../src/title-service";
+import { setLastShownPhotoKey } from "../../src/last-shown-photo-service";
 
 function PhotoPage({ keywords, photo, nextPhoto, prevPhoto }) {
   const [availWidth, setAvailWidth] = useState(400);
 
   useEffect(() => {
     setAvailWidth(screen.availWidth);
+    setLastShownPhotoKey(photo.key);
   });
 
   photo.srcSet = buildSrcSet(photo.sizes, availWidth);

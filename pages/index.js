@@ -10,6 +10,7 @@ import buildSrcSet from "../client/photos/src-set-builder";
 import TopLogo from "../client/top-logo";
 import DeepWater from "../client/deep-water";
 import { baseTitle } from "../src/title-service";
+import { getLastShownPhotoKey } from "../src/last-shown-photo-service";
 
 function scrollToPhoto(key, retryNum) {
   setTimeout(() => {
@@ -42,11 +43,18 @@ function HomePage({ keywords, photos }) {
 
   useEffect(() => {
     const { asPath } = router;
-    if (!/\?.*from=/.test(asPath)) {
+    const lastShownPhotoKey = getLastShownPhotoKey();
+    const hasKeyInUrl = /\?.*from=/.test(asPath);
+
+    if (!lastShownPhotoKey && !hasKeyInUrl) {
       return;
     }
 
-    const key = asPath.split("from=")[1].split("&")[0];
+    const key = asPath.split("from=")[1].split("&")[0] || lastShownPhotoKey;
+    if (!key) {
+      // shoudn't happen
+      return;
+    }
     scrollToPhoto(key, 0);
   }, []);
 
