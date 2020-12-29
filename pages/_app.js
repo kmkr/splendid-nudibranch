@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import "../server/static/css/app.css";
+import "../src/css/app.css";
 
 function MyApp({ Component, pageProps }) {
   return (
