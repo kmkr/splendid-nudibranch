@@ -31,4 +31,8 @@ node photo-management/dumpPhotos.js
 
 ## Update based on changes in content.json
 
-NYI
+Update server based on local content:
+
+```
+node photo-management/updatePhotos.js
+```
