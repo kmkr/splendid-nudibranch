@@ -36,3 +36,9 @@ Update server based on local content:
 ```
 node photo-management/updatePhotos.js
 ```
+
+Add "--delete" to delete from server based on local content.
+
+```
+node photo-management/updatePhotos.js --delete
+```

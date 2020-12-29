@@ -54,15 +54,15 @@ function isChanged(server, local) {
   );
 
   if (deletedPhotos.length) {
-    console.log(
-      "These photos are deleted locally. Deleting on server (NYI)..."
-    );
+    const dryRun = !process.argv.some((a) => a === "--delete");
 
+    console.log("These photos are deleted locally. Deleting on server ...");
     console.log(deletedPhotos);
-    deletedPhotos.forEach(async (p) => {
-      // await deletePhotoHandler(p.key);
-      // delete also S3
-    });
+    if (dryRun) {
+      console.log("dry run, won't delete");
+    } else {
+      await Promise.all(deletedPhotos.map((p) => deletePhotoHandler(p.key)));
+    }
   }
 
   process.exit();

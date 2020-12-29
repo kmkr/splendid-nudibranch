@@ -28,6 +28,7 @@ module.exports = {
     return getDb.then((db) => getCollection(db, collectionName, filter));
   },
   delete(collectionName, filter) {
+    console.log("Deleting from %s %o", collectionName, filter);
     return getDb.then((db) =>
       destroyFromCollection(db, collectionName, filter)
     );
