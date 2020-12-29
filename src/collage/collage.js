@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Photo from "./photo";
 import setPhotoWidth from "./set-width-helper";
 import throttle from "./throttle";
-import getWidth from "./get-width";
+import getViewportWidth from "./get-width";
 import MidWater from "./mid-water";
 
 function hasScrollbar() {
@@ -10,8 +10,7 @@ function hasScrollbar() {
 }
 
 function isCollage() {
-  // Will return false until document is present (client render). Requires a re-render!
-  return getWidth() > 1100;
+  return getViewportWidth() > 1100;
 }
 
 const PhotoGroup = ({ group }) => {
@@ -27,10 +26,12 @@ const PhotoGroup = ({ group }) => {
 };
 
 const Collage = ({ featuredPhotos, nonFeaturedPhotos }) => {
-  const [width, setWidth] = useState(null);
+  // "null" as default state because the viewport width isn't known until the
+  // code is rendered on the client.
+  const [viewportWidth, setViewportWidth] = useState(null);
 
   function updateWidth() {
-    setWidth(getWidth());
+    setViewportWidth(getViewportWidth());
   }
 
   useEffect(() => {
@@ -43,6 +44,10 @@ const Collage = ({ featuredPhotos, nonFeaturedPhotos }) => {
       window.removeEventListener("optimizedResize", updateWidth);
     };
   }, []);
+
+  if (!viewportWidth) {
+    return null;
+  }
 
   const featuredPhotoGroups = setPhotoWidth(featuredPhotos);
   const nonFeaturedPhotoGroups = setPhotoWidth(nonFeaturedPhotos);
