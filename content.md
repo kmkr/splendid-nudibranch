@@ -36,7 +36,7 @@ Title Fuchsia Flatworm
 Location Dumaguete, The Philippines
 Latin Pseudoceros ferrugineus
 Tags 2013 worm
-Description Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, that they generally move faster and are flat - obviously.
+Description Flatworms lack circulatory and respiratory organs (such as gills), and respiration is performed by diffusion through the worm's entire surface. They are somewhat similar to nudibranchs in appearance, but the similarity is only superficial. It's easy to distinguish them by the lack of antennas/rhinophores, that they generally move faster. And they are also flat.
 
 DSC00974.jpg
 
@@ -227,7 +227,7 @@ Title Leopard Anemone Shrimp
 Location Anilao, The Philippines
 Latin Izucaris masudai
 Tags shrimp 2014
-Description A rare, beautiful shrimp. It's name is derived from where it was found - the Izu Peninsula in Japan.
+Description A rare, beautiful shrimp. It's name is derived from where it was found: the Izu Peninsula in Japan.
 
 DSC04078.jpg
 
@@ -259,7 +259,7 @@ Title Graeffe's Sea Cucumber
 Location Anilao, The Philippines
 Latin Pearsonothuria graeffei
 Tags sea-cucumber 2014 portrait
-Description The sea cucumbers are scavengers, crawling mostly around the sea floor. Not always though - since their gametes float around in the water column a vertical positioning is thought to increase the chance of successful reproduction for both male and female.
+Description The sea cucumbers are scavengers, crawling mostly around the sea floor. Not always though: since their gametes float around in the water column a vertical positioning is thought to increase the chance of successful reproduction for both male and female.
 
 DSC04244.jpg
 
@@ -275,7 +275,7 @@ Title Magnificent Sea Anemone
 Location Anilao, The Philippines
 Tags 2014 anemone fish
 Latin Heteractis magnifica with Amphiprion perideraion
-Description The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the first dull name. The anemone can entirely retract it's tentacles. It's column, here in purple color, will then be exposed. On the matter of reproducing this anemone can do it both sexually and asexually - it can actually clone itself.
+Description The previous name for this anemone was the Ritteri Anemone, updated to Heteractis magnifica, or "Magnificent Sea Anemone". Perhaps so because it's too beautiful for the first dull name. The anemone can entirely retract it's tentacles. It's column, here in purple color, will then be exposed. On the matter of reproducing this anemone can do it both sexually and asexually—it can actually clone itself.
 
 DSC04665.jpg
 
@@ -395,7 +395,7 @@ Title Green Turtle
 Location Marsa Alam, Egypt
 Tags 2014 turtle
 Latin Chelonia mydas
-Description It's believed that green turtles need between 20 - 50 years to reach sexual maturity, and a turtle's life is not easy so very few reach adulthood. Once, the estimate was one percent. It dropped to one thousandth. Previously suffering from unrestricted exploitation by humans, turtles are now having more like a global protection status. However, their slow reproductive rate, combined with increased development in coastal areas make the species very vulnerable. Many turtles are also lost due to accidental catch by fishermen.
+Description It's believed that green turtles need between 20–50 years to reach sexual maturity, and a turtle's life is not easy so very few reach adulthood. Once, the estimate was one percent. It dropped to one thousandth. Previously suffering from unrestricted exploitation by humans, turtles are now having more like a global protection status. However, their slow reproductive rate, combined with increased development in coastal areas make the species very vulnerable. Many turtles are also lost due to accidental catch by fishermen.
 
 DSC07195.jpg
 
@@ -545,7 +545,7 @@ Title Potato Cod
 Location Cod Hole, Great Barrier Reef, Australia
 Tags 2013 cod portrait fish
 Latin Epinephelus tukula
-Description This fish is bold. It may come really close and will sometimes tamper with your dive gear. It's latin name tukula means "man-eater" due to its large size, but it means no harm - it's just a curious and social fish.
+Description This fish is bold. It may come really close and will sometimes tamper with your dive gear. It's latin name tukula means "man-eater" due to its large size, but it means no harm; it's just a curious and social fish.
 
 DSC00157.jpg
 
@@ -1031,7 +1031,7 @@ Title Reef Manta Ray
 Location Baa Atoll, The Maldives
 Tags ray manta 2018
 Latin Manta alfredi
-Description The Maldives is home to around 5000 manta rays - the largest group of manta rays in the world.
+Description The Maldives is home to around 5000 manta rays—the largest group of manta rays in the world.
 
 DSC09082.jpg
 
@@ -1199,7 +1199,7 @@ Title Ornate Ghost Pipefish
 Location Lembeh Strait, Indonesia
 Tags fish 2019 portrait
 Latin Solenostomus paradoxus
-Description The ghost pipefish camouflages very well in coral reefs, and spend a lot of time floating - almost like a slow moving leaf - with its mouth pointed downwards.
+Description The ghost pipefish camouflages very well in coral reefs, and spend a lot of time floating, almost like a slow moving leaf, with its mouth pointed downwards.
 
 2019-indo-DSC02121.jpg
 
@@ -1215,7 +1215,7 @@ Title Bullock's Hypselodoris
 Location Lembeh Strait, Indonesia
 Tags nudibranch 2019
 Latin Hypselodoris bullocki
-Description Nudibranchs are hermaphrodites - simultaneously both male and female. Reproducing still takes two to tango!
+Description Nudibranchs are hermaphrodites; simultaneously both male and female. They are still reproducing sexually, so two individuals must hook up.
 
 2019-indo-DSC02184.jpg
 
@@ -1295,7 +1295,7 @@ Title Blue-Ringed Octopus
 Location Lembeh Strait, Indonesia
 Tags 2019 portrait octopus cephalopod
 Latin Hapalochlaena sp.
-Description The blue-ringed octopus flashes its 50-60 rings within a third of a second as a warning display to predators. Being one of the world's most venomous marine animals, its poison causes total body paralysis - also to humans.
+Description The blue-ringed octopus flashes its 50-60 rings within a third of a second as a warning display to predators. Being one of the world's most venomous marine animals, its poison causes total body paralysis—also to humans.
 
 2019-indo-DSC02861-Edit.jpg
 
