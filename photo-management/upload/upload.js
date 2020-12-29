@@ -77,9 +77,14 @@ async function processFile(filePath) {
 }
 
 (async function () {
-  const filePath = process.argv[2];
-  console.log("Processing", filePath);
-  const photo = await processFile(filePath);
-  console.log("Processing complete");
+  const filePaths = process.argv.filter((a) =>
+    a.toLowerCase().endsWith(".jpg")
+  );
+
+  for (let filePath of filePaths) {
+    console.log("Processing", filePath);
+    const photo = await processFile(filePath);
+    console.log("Processing complete");
+  }
   process.exit();
 })();

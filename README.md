@@ -18,7 +18,7 @@ suco apt install graphicsmagick
 3. Upload with
 
 ```
-node photo-management/upload/upload.js <file path>
+node photo-management/upload/upload.js <file path 1> <file path 2> <...>
 ```
 
 ## Dump content
