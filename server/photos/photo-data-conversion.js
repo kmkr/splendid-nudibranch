@@ -14,12 +14,10 @@ module.exports.serverToClient = function (photo, base) {
   return {
     name: photo.name,
     key: photo.key,
-    title: photo.title,
-    description: photo.description,
+    title: photo.title || null,
+    description: photo.description || null,
     latin: photo.latin || null,
-    location: photo.location,
-    // todo: remove tags requirement (only required for admin)
-    tags: photo.tags,
+    location: photo.location || null,
     mode: getMode(photo.resize),
     sizes: resizeTo.reduce((prev, current) => {
       if (!photo.resize[current.name]) {
