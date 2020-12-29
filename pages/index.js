@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 import Collage from "../client/collage";
@@ -35,27 +34,18 @@ function onGoToPhotos(e, offset) {
 }
 
 function HomePage({ keywords, photos }) {
-  const router = useRouter();
   const [availWidth, setAvailWidth] = useState(400);
   useEffect(() => {
     setAvailWidth(screen.availWidth);
   });
 
   useEffect(() => {
-    const { asPath } = router;
     const lastShownPhotoKey = getLastShownPhotoKey();
-    const hasKeyInUrl = /\?.*from=/.test(asPath);
-
-    if (!lastShownPhotoKey && !hasKeyInUrl) {
+    if (!lastShownPhotoKey) {
       return;
     }
 
-    const key = asPath.split("from=")[1].split("&")[0] || lastShownPhotoKey;
-    if (!key) {
-      // shoudn't happen
-      return;
-    }
-    scrollToPhoto(key, 0);
+    scrollToPhoto(lastShownPhotoKey, 0);
   }, []);
 
   const photosWidthSrcSet = photos.map((photo) => {
