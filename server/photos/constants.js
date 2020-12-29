@@ -1,4 +1,6 @@
-module.exports.base = `${process.env.SN_S3_BASE}/${process.env.SN_S3_BUCKET_NAME}`;
+const BASE = "https://s3.eu-central-1.amazonaws.com";
+const BUCKET = "splendid-nudibranch";
+module.exports.base = `${BASE}/${BUCKET}`;
 
 module.exports.resizeTo = [
   {

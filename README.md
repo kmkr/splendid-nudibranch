@@ -1,43 +1,41 @@
 [![Build Status](https://travis-ci.org/kmkr/splendid-nudibranch.svg?branch=master)](https://travis-ci.org/kmkr/splendid-nudibranch)
 
-## Upload
+## Upload photos
 
-1. Set these env variables
+Set env variables:
 
 export AWS_ACCESS_KEY_ID=...
 export AWS_SECRET_ACCESS_KEY=...
-export SN_S3_BASE=https://s3.eu-central-1.amazonaws.com
-export SN_S3_BUCKET_NAME=splendid-nudibranch
 
-2. Install graphics magick
+Install graphics magick:
 
 ```
 suco apt install graphicsmagick
 ```
 
-3. Upload with
+Upload by running:
 
 ```
 node photo-management/upload/upload.js <file path 1> <file path 2> <...>
 ```
 
-## Dump content
+## Update content
 
-Dump from db by running:
+The content on the page is fetched from the db, but a copy in the repository exists too. The db will perhaps be removed in the future.
 
-```
-node photo-management/dumpPhotos.js
-```
-
-## Update based on changes in content.json
-
-Update server based on local content:
+Ensure the local copy is up to date by running:
 
 ```
-node photo-management/updatePhotos.js
+node photo-management/pull-content.js
 ```
 
-Add "--delete" to delete from server based on local content.
+Update content at will. If you want to sync to the db, run:
+
+```
+node photo-management/update-content.js
+```
+
+To delete a photo, remove the entry in `content.json` and run the same command with "--delete" appended:
 
 ```
 node photo-management/updatePhotos.js --delete
