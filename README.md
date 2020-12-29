@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/kmkr/splendid-nudibranch.svg?branch=master)](https://travis-ci.org/kmkr/splendid-nudibranch)
 
-How to upload:
+## Upload
 
 1. Set these env variables
 
@@ -20,3 +20,15 @@ suco apt install graphicsmagick
 ```
 node photo-management/upload/upload.js <file path>
 ```
+
+## Dump content
+
+Dump from db by running:
+
+```
+node photo-management/dumpPhotos.js
+```
+
+## Update based on changes in content.json
+
+NYI
