@@ -66,7 +66,7 @@ function HomePage({ keywords, photos }) {
         ))}
       </Head>
 
-      <TopLogo onGoToPhotos={onGoToPhotos} />
+      <TopLogo />
 
       <div id="container">
         <Collage

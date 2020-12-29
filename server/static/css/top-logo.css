@@ -1,27 +1,9 @@
 #top-logo {
-  height: 100vh;
-  max-height: 1600px;
+  padding: 30px 0;
   background-color: var(--color-pink);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  position: relative;
-  cursor: pointer;
 }
 
 #top-logo img {
-  width: 500px;
-}
-
-@media (max-width: 1100px) {
-  #top-logo img {
-    max-width: 60%;
-  }
-}
-
-@media (min-width: 1100px) {
-  #top-logo img {
-    max-width: 30%;
-  }
+  width: 150px;
 }

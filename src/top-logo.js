@@ -1,9 +1,10 @@
 import Link from "next";
+import ContactInfo from "./contact-info";
 
-const TopLogo = ({ onGoToPhotos }) => (
-  <div id="top-logo" onClick={onGoToPhotos}>
+const TopLogo = () => (
+  <div id="top-logo">
     <img src="/images/logo.svg" />
-    <a href="#collage" className="arrow" />
+    <ContactInfo />
   </div>
 );
 

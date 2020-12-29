@@ -1,11 +1,3 @@
 #deep-water {
   margin-top: 100px;
 }
-
-#license {
-  text-align: center;
-  margin: 0 auto;
-  font-size: var(--font-size-small);
-  max-width: 100ch;
-  margin-bottom: 80px;
-}
