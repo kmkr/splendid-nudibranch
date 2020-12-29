@@ -18,10 +18,6 @@ class Collage extends PureComponent {
     this.renderPhotoGroup = this.renderPhotoGroup.bind(this);
 
     this.state = {};
-
-    // this.state = {
-    //   width: getWidth(),
-    // };
   }
 
   getIsCollage() {
@@ -41,10 +37,7 @@ class Collage extends PureComponent {
     throttle("resize", "optimizedResize");
     window.addEventListener("optimizedResize", this.updateWidth);
 
-    // Force re-calculation of photo height/width if scrollbar is present
-    // if (hasScrollbar()) {
     this.updateWidth();
-    // }
   }
 
   componentWillUnmount() {

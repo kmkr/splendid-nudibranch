@@ -5,7 +5,7 @@ module.exports = {
       const entries = await originalEntry();
 
       if (entries["main.js"]) {
-        entries["main.js"].unshift("./client/polyfills/index.js");
+        entries["main.js"].unshift("./src/polyfills/index.js");
       }
 
       return entries;

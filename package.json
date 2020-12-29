@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "chartist": "^0.11.0",
     "debounce": "^1.1.0",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",

@@ -1,4 +1,4 @@
-export default function (sizes, availWidth) {
+export default function srcSetBuilder(sizes, availWidth) {
   let passedAvail = false;
 
   return Object.keys(sizes)

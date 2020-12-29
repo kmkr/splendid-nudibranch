@@ -4,7 +4,7 @@ function getNumPortrait(photos) {
   return photos.filter((photo) => photo.mode === "portrait").length;
 }
 
-export default function (_photos) {
+export default function setWidthHelper(_photos) {
   const photos = [..._photos];
   const totalWidth = Math.min(getWidth(), 2560);
   const groups = [];

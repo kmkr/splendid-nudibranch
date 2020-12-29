@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
+import Link from "../../src/collage/next/link";
 
 import Photo from "./photo";
 import Navigation from "./navigation";
@@ -8,7 +8,7 @@ import Sidebar from "./sidebar";
 
 import KeyboardEventHandler from "./keyboard-event-handler";
 
-const PhotosWrapper = ({ selectedPhoto, nextPhoto, prevPhoto }) => {
+const PhotoWrapper = ({ selectedPhoto, nextPhoto, prevPhoto }) => {
   const [sidebarExpanded, setSidebarExpanded] = useState(true);
   const router = useRouter();
 
@@ -57,4 +57,4 @@ const PhotosWrapper = ({ selectedPhoto, nextPhoto, prevPhoto }) => {
   );
 };
 
-export default PhotosWrapper;
+export default PhotoWrapper;

@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 
-import Collage from "../client/collage";
+import Collage from "../src/collage/collage";
 import { getPhotoData, getAllKeywords } from "../server/view-data-service";
 import { serverToClient } from "../server/photos/photo-data-conversion";
 import { forAll } from "../server/og-tags";
-import buildSrcSet from "../client/photos/src-set-builder";
-import TopLogo from "../client/top-logo";
-import DeepWater from "../client/deep-water";
+import buildSrcSet from "../src/photos/src-set-builder";
+import TopLogo from "../src/top-logo";
+import DeepWater from "../src/deep-water";
 import { baseTitle } from "../src/title-service";
 import { getLastShownPhotoKey } from "../src/last-shown-photo-service";
 

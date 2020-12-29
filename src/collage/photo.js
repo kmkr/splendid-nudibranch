@@ -1,7 +1,7 @@
 import { PureComponent } from "react";
 import Link from "next/link";
 
-import TransitionImage from "../transition-image";
+import TransitionImage from "../transition-image/transition-image";
 import PhotoText from "../photos/photo-text";
 // import decorateLink from "../feature/decorate-link";
 // todo: fix inkludering av search params på lenker

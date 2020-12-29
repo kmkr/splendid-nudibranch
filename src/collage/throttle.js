@@ -1,6 +1,6 @@
 import throttleit from "throttleit";
 
-export default (type, name, obj) => {
+export default function throttle(type, name, obj) {
   obj = obj || window;
   let running = false;
   const func = throttleit(() => {
@@ -14,4 +14,4 @@ export default (type, name, obj) => {
     });
   }, 200);
   obj.addEventListener(type, func);
-};
+}

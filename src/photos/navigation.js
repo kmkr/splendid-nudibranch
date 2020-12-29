@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "../../src/collage/next/link";
 
 const Navigation = ({ homePath }) => (
   <div id="navigation">
