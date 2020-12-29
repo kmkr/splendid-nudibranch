@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Link from "../../src/collage/next/link";
+import Link from "next/link";
 
 import Photo from "./photo";
 import Navigation from "./navigation";
@@ -17,7 +17,7 @@ const PhotoWrapper = ({ selectedPhoto, nextPhoto, prevPhoto }) => {
     setSidebarExpanded((prevState) => !prevState);
   }
 
-  const homePath = `/?from=${selectedPhoto.key}`;
+  const homePath = "/";
 
   return (
     <div>
@@ -35,7 +35,7 @@ const PhotoWrapper = ({ selectedPhoto, nextPhoto, prevPhoto }) => {
       />
       <Photo
         photo={selectedPhoto}
-        preloadPhotos={[nextPhoto, prevPhoto]}
+        preload={[nextPhoto, prevPhoto]}
         next={
           <Link href={`/photos/${nextPhoto.key}`}>
             <a className="click-next" />

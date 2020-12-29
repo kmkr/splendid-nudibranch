@@ -1,4 +1,4 @@
-import { PureComponent } from "react";
+import { useEffect } from "react";
 
 const LEFT_KEYS = [
   33, // pgup
@@ -16,23 +16,14 @@ const HOME_KEYS = [
   27, // ESC
 ];
 
-class KeyboardEventHandler extends PureComponent {
-  constructor() {
-    super();
-    this.handleKeyUp = this.handleKeyUp.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener("keyup", this.handleKeyUp);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("keyup", this.handleKeyUp);
-  }
-
-  handleKeyUp(e) {
+const KeyboardEventHandler = ({
+  onHome,
+  onPrevious,
+  onNext,
+  onToggleSidebar,
+}) => {
+  function handleKeyUp(e) {
     const keyCode = e.keyCode || e.detail.keyCode;
-    const { onHome, onPrevious, onNext, onToggleSidebar } = this.props;
 
     if (e.altKey) {
       return;
@@ -52,10 +43,14 @@ class KeyboardEventHandler extends PureComponent {
       onHome();
     }
   }
+  useEffect(() => {
+    window.addEventListener("keyup", handleKeyUp);
+    return function cleanup() {
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, []);
 
-  render() {
-    return null;
-  }
-}
+  return null;
+};
 
 export default KeyboardEventHandler;

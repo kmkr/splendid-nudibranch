@@ -8,7 +8,7 @@ import {
 import { serverToClient } from "../../server/photos/photo-data-conversion";
 import { forOne } from "../../server/og-tags";
 import buildSrcSet from "../../src/photos/src-set-builder";
-import PhotoWrapper from "../../src/photos";
+import PhotoWrapper from "../../src/photos/photo-wrapper";
 import { photoTitle } from "../../src/title-service";
 import { setLastShownPhotoKey } from "../../src/last-shown-photo-service";
 

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import PhotoText from "./photo-text";
-import TransitionImage from "../transition-image";
+import TransitionImage from "../transition-image/transition-image";
 
 function sizes(photo) {
   return photo.mode === "portrait"
@@ -11,7 +11,7 @@ function sizes(photo) {
 
 let timeout;
 
-function preload(photos) {
+function doPreload(photos) {
   if (timeout) {
     window.clearTimeout(timeout);
   }
@@ -28,7 +28,7 @@ function preload(photos) {
   }, 1000);
 }
 
-const Photo = ({ next, previous, photo, preloadPhotos }) => {
+const Photo = ({ next, previous, photo, preload }) => {
   const wrapperRef = useRef();
   const [mounted, setMounted] = useState(false);
 
@@ -37,14 +37,15 @@ const Photo = ({ next, previous, photo, preloadPhotos }) => {
   }, []);
 
   useEffect(() => {
-    preload(preloadPhotos);
-  }, [preloadPhotos]);
+    doPreload(preload);
+  }, [preload]);
 
   useEffect(() => {
     // Clean up to avoid having images "hanging" when navigating to a new image.
     return function cleanup() {
       if (wrapperRef && wrapperRef.current) {
-        wrapperRef.current.removeChild(wrapperRef.current.querySelector("img"));
+        const { current: elem } = wrapperRef;
+        elem.removeChild(elem.querySelector("img"));
       }
     };
   }, []);
