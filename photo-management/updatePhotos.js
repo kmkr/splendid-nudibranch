@@ -23,6 +23,11 @@ function isChanged(server, local) {
 (async function () {
   const photosOnServer = await db.list("photos");
 
+  // Update order for local photo entries first
+  localPhotoContent.forEach((localPhotoEntry, index) => {
+    localPhotoEntry.order = index;
+  });
+
   await Promise.all(
     localPhotoContent.map((localPhotoEntry) => {
       const serverPhotoEntry = photosOnServer.find(
@@ -64,6 +69,9 @@ function isChanged(server, local) {
       await Promise.all(deletedPhotos.map((p) => deletePhotoHandler(p.key)));
     }
   }
+
+  // Save content.json in case order is updated
+  fs.writeFileSync("content.json", JSON.stringify(localPhotoContent, null, 2));
 
   process.exit();
 })();
