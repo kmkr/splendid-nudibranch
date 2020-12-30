@@ -24,10 +24,21 @@ function MyApp({ Component, pageProps }) {
           sizes="100x100"
         />
         <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/apple-touch-icon.png"
+        />
+        <link
           rel="icon"
           type="image/png"
           href="/images/favicon-192.png"
           sizes="192x192"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/images/favicon-512.png"
+          sizes="512x512"
         />
         <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
       </Head>
