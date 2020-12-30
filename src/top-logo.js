@@ -32,7 +32,7 @@ const TopLogo = () => {
             href="mailto:krismikael-insertathere-protonmail-insertdothere-com"
             ref={hoverRef}
           >
-            Kris Mikael Krister
+            Kris-Mikael Krister
           </a>
         </p>
       </div>
