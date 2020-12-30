@@ -28,6 +28,10 @@
   #top-logo .haiku-wrapper {
     align-items: center;
   }
+
+  #top-logo .haiku {
+    margin: 50px 0;
+  }
 }
 
 #top-logo img {
