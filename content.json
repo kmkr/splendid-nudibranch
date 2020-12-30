@@ -175,7 +175,7 @@
   {
     "key": "806b-cd40",
     "name": "DSC05559.jpg",
-    "title": "Chief Goat",
+    "title": "Goat",
     "description": "",
     "order": 14,
     "location": "Trollheimen, Norway",
@@ -198,8 +198,13 @@
   {
     "key": "3504-cae4",
     "name": "DSC06693.jpg",
+    "title": "One of Sognefjorden's Arms",
     "description": "",
-    "order": 16
+    "order": 16,
+    "location": "Bøyaøyra, Norway",
+    "tags": [
+      "2020"
+    ]
   },
   {
     "key": "eee5-c9ac",
@@ -241,7 +246,7 @@
     "title": "Lurøyfjellet",
     "description": "",
     "order": 20,
-    "location": "Lurøy, Norway",
+    "location": "Lurøya, Norway",
     "tags": [
       "2020"
     ]
@@ -249,8 +254,8 @@
   {
     "key": "8874-221d",
     "name": "DSC08691.jpg",
-    "title": "Sheep",
-    "description": "",
+    "title": "Old Norwegian Sheep",
+    "description": "There are at least 19 types of sheep in Norway. They're bred for various qualities; softness of the wool, or color, tameness and taste of the meat. The Old Norwegian Sheep is also called wild sheep, and stone age sheep. It's one of the the oldest sheep types we have, and forage outdoors all year. It's almost as hardcore as the Icelandic sheep.",
     "order": 21,
     "location": "Brønnøy, Norway",
     "tags": [
@@ -274,7 +279,7 @@
     "key": "eca6-3171",
     "name": "20200824-DSC00599.jpg",
     "title": "Purple Coneflower",
-    "description": "",
+    "description": "These flowers are rich in nectar and very popular with both bees and butterflies.",
     "order": 24,
     "location": "Oslo, Norway",
     "tags": [
