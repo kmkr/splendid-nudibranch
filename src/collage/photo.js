@@ -39,9 +39,7 @@ const Photo = ({ photo, setWidth }) => {
         <a>
           {!!photo.title && (
             <div className="overlay-title-wrapper">
-              <p className="title">
-                <span>{photo.title}</span>
-              </p>
+              <p className="title">{photo.title}</p>
             </div>
           )}
           {inViewport && (

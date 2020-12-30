@@ -59,17 +59,14 @@
 
   #collage a p {
     margin: 0;
-    transition: opacity 0.2s ease-in;
     opacity: 0;
+    transition: opacity 0.2s ease-in;
+    padding: 10px;
+    background-color: var(--color-pink);
   }
 
   #collage a:hover p {
     opacity: 1;
-  }
-
-  #collage .overlay-title-wrapper p span {
-    padding: 10px;
-    background-color: var(--color-pink);
   }
 
   #collage .overlay-title-wrapper p.title {
