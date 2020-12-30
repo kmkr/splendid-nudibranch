@@ -52,19 +52,24 @@
     right: 0;
     z-index: 5;
     color: var(--color-white);
-  }
-
-  #collage .photo a:hover .overlay-title-wrapper,
-  #collage .photo a:focus .overlay-title-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  #collage .overlay-title-wrapper p {
+  #collage a p {
     margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+  }
+
+  #collage a:hover p {
+    opacity: 1;
+  }
+
+  #collage .overlay-title-wrapper p span {
+    padding: 10px;
+    background-color: var(--color-pink);
   }
 
   #collage .overlay-title-wrapper p.title {
@@ -77,23 +82,5 @@
     #collage .overlay-title-wrapper p.title {
       font-size: var(--font-size-xlarge);
     }
-  }
-
-  #collage a:after {
-    transition: opacity 0.2s ease-in;
-    position: absolute;
-    content: "";
-    background: var(--color-pink);
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  #collage a:hover:after,
-  #collage a:focus:after {
-    opacity: 0.8;
   }
 }

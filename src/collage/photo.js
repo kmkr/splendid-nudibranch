@@ -38,8 +38,9 @@ const Photo = ({ photo, setWidth }) => {
       <Link href={`/photos/${photo.key}`}>
         <a>
           <div className="overlay-title-wrapper">
-            <p className="title">{photo.title}</p>
-            <p className="location">{photo.location}</p>
+            <p className="title">
+              <span>{photo.title}</span>
+            </p>
           </div>
           {inViewport && (
             <TransitionImage
