@@ -1,5 +1,6 @@
 const BASE = "https://s3.eu-central-1.amazonaws.com";
 const BUCKET = "splendid-nudibranch";
+module.exports.BUCKET = BUCKET;
 module.exports.base = `${BASE}/${BUCKET}`;
 
 module.exports.resizeTo = [
@@ -42,4 +43,4 @@ module.exports.resizeTo = [
 ];
 
 module.exports.generalSiteDescription =
-  "Photos of sea critters, slender sharks, beautiful shrimps, lots of fish and splendid nudibranchs.";
+  "Photos of mostly animals, and the occasional tree.";

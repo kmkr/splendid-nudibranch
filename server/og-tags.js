@@ -1,10 +1,10 @@
 import { generalSiteDescription } from "./photos/constants";
 import { photoTitle, featureTitle } from "../src/title-service";
 
-const name = "The Splendid Nudibranch";
+const name = "Mostly Animals";
 
 function buildUrl({ selectedPhoto, feature }) {
-  let url = "https://www.thesplendidnudibranch.pink";
+  let url = "https://www.mostlyanimals.net";
 
   if (selectedPhoto) {
     return url + `/photos/${selectedPhoto.key}`;
@@ -43,7 +43,7 @@ export function forAll(selectedPhoto) {
     "og:title": featureTitle(featureName),
     "og:url": buildUrl({ feature }),
     "og:description": generalSiteDescription,
-    "og:image": "https://www.thesplendidnudibranch.pink/static/images/logo.png",
+    "og:image": "https://www.mostlyanimals.net/static/images/logo.png",
     "og:image:width": 1300,
     "og:image:height": 616,
   };

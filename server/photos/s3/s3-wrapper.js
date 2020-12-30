@@ -1,5 +1,5 @@
 const AWS = require("aws-sdk");
-const bucket = process.env.SN_S3_BUCKET_NAME;
+const { BUCKET } = require("../constants");
 
 module.exports.s3 = new AWS.S3({
   signatureVersion: "v4",
@@ -7,7 +7,7 @@ module.exports.s3 = new AWS.S3({
 
 module.exports.generateParams = function (opts) {
   return {
-    Bucket: bucket,
+    Bucket: BUCKET,
     ...opts,
   };
 };

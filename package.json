@@ -1,12 +1,12 @@
 {
-  "name": "splendid-nudibranch",
+  "name": "mostlyanimals",
   "version": "1.0.0",
   "engines": {
     "node": ">=12.16.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kmkr/splendid-nudibranch"
+    "url": "https://github.com/kmkr/mostlyanimals"
   },
   "license": "GPL-3",
   "scripts": {

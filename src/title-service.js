@@ -1,4 +1,4 @@
-const BASE_TITLE = "The Splendid Nudibranch";
+const BASE_TITLE = "Mostly Animals";
 
 module.exports.photoTitle = function (photo) {
   return [photo.title, BASE_TITLE].filter(Boolean).join(" :: ");
