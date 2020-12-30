@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="author" content="Kris-Mikael Krister" />
+        <meta name="illustrator" content="Hilde Dybdahl Johannessen" />
         <meta
           name="google-site-verification"
           content="GV2uFZR4en6znRvzODbQEjF4vuUK9J2kAmGw7BwAbnE"
