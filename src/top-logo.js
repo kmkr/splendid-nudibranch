@@ -1,18 +1,43 @@
+import useHover from "./useHover";
 import Link from "next";
-import ContactInfo from "./contact-info";
 
-const TopLogo = () => (
-  <div id="top-logo">
-    <div className="haiku-wrapper">
-      <img src="/images/logo_plain.svg" />
-      <div className="haiku">
-        <p>Mostly animals</p>
-        <p>Plus the occasional tree</p>
-        <p>The slug welcomes you</p>
+const TopLogo = () => {
+  const [hoverRef, isHovered] = useHover();
+  return (
+    <div id="top-logo">
+      <div className="haiku-wrapper">
+        <div class="img-wrapper">
+          <img src="/images/logo_plain.svg" />
+        </div>
+        <div className="haiku">
+          {isHovered ? (
+            <>
+              <p>A photo you like</p>
+              <p>Rules, and what about download?</p>
+              <p>I'll gladly explain</p>
+            </>
+          ) : (
+            <>
+              <p>Mostly animals</p>
+              <p>Plus the occasional tree</p>
+              <p>The slug welcomes you</p>
+            </>
+          )}
+        </div>
+      </div>
+      <div id="contact-info">
+        <p>
+          by{" "}
+          <a
+            href="mailto:krismikael-insertathere-protonmail-insertdothere-com"
+            ref={hoverRef}
+          >
+            Kris Mikael Krister
+          </a>
+        </p>
       </div>
     </div>
-    <ContactInfo />
-  </div>
-);
+  );
+};
 
 export default TopLogo;

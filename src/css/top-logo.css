@@ -12,12 +12,15 @@
     margin-bottom: 50px;
   }
 
-  #top-logo .haiku {
-    text-align: left;
+  #top-logo .img-wrapper {
+    width: calc(50vw - 25px);
+    text-align: right;
+    padding-right: 50px;
   }
 
-  #top-logo img {
-    margin-right: 50px;
+  #top-logo .haiku {
+    text-align: left;
+    width: calc(50vw - 25px);
   }
 }
 
@@ -29,4 +32,10 @@
 
 #top-logo img {
   width: 140px;
+}
+
+#top-logo #contact-info {
+  text-align: center;
+  margin: 0 auto;
+  font-size: var(--font-size-small);
 }
