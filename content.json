@@ -64,7 +64,7 @@
     "key": "7f0a-a872",
     "name": "DSC02854.jpg",
     "title": "Dwarf Poodle",
-    "description": "",
+    "description": "This is Leo. Also known as The Prince.",
     "order": 5,
     "location": "Oslo, Norway",
     "tags": [
@@ -88,7 +88,7 @@
     "key": "7c77-1bff",
     "name": "DSC03413.jpg",
     "title": "Mallard",
-    "description": "",
+    "description": "Blue is a rare color in animals living above-water. Some birds are blue, though; the male mallard, for example.",
     "order": 7,
     "location": "Oslo, Norway",
     "tags": [
@@ -99,9 +99,9 @@
   {
     "key": "d671-7d7c",
     "name": "DSC03416.jpg",
-    "title": "Moor Frog",
-    "description": "",
-    "latin": "Rana arvalis",
+    "title": "Common Frog",
+    "description": "Frogs form large choruses when it's breeding time. They do that in a competition to attract females; the loudest and longest calls win.",
+    "latin": "Rana temporaria",
     "order": 8,
     "location": "Lillomarka, Oslo, Norway",
     "tags": [
@@ -113,7 +113,7 @@
     "key": "68df-5a2a",
     "name": "DSC03595.jpg",
     "title": "Slow-worm",
-    "description": "",
+    "description": "You'll find this worm basking in the sun. And it's harmless (unless you're a snail or an insect); it's only superficially similar to a snake.",
     "latin": "Anguis fragilis",
     "order": 9,
     "location": "Nordmarka, Oslo, Norway",
@@ -128,7 +128,7 @@
     "key": "3c8c-c348",
     "name": "DSC04477.jpg",
     "title": "Scottish Fold",
-    "description": "",
+    "description": "This queen is named Aprikos (Apricot) and has a slave human, named Nikolai, that cares for her and grows catnip for her. They are good friends.",
     "order": 10,
     "tags": [
       "cat",
@@ -152,7 +152,7 @@
     "key": "3eb3-80d2",
     "name": "DSC05087.jpg",
     "title": "Krokvann",
-    "description": "",
+    "description": "Red skies at night, sailors delight.",
     "order": 12,
     "location": "Siljanskogen, Norway",
     "tags": [
@@ -164,7 +164,7 @@
     "key": "efb9-7d11",
     "name": "DSC05370.jpg",
     "title": "Damvann",
-    "description": "",
+    "description": "We camped at this beautiful spot after an unsuccessful search for another legendary lake. We were alone at first, and got some company from the local ATV/biker gang during the evening.",
     "order": 13,
     "location": "Kvelde, Norway",
     "tags": [
