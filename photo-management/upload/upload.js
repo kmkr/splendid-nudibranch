@@ -78,7 +78,7 @@ async function processFile(filePath) {
         path: generateFilePath(
           id,
           fileExtension,
-          getShortNameFromName(sizeLabel)
+          getShortNameFromName(nextVal.sizeLabel)
         ),
       };
 
