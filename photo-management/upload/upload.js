@@ -39,7 +39,6 @@ function upload(id, file, resizedResults) {
 
 function insertToDb(id, file, additionalData) {
   const photo = {
-    base,
     key: id,
     name: file.originalname,
     ...additionalData,
