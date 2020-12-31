@@ -25,7 +25,7 @@ export function getKeywordsForPhoto(photo) {
 }
 
 export function getAllKeywords() {
-  return getPhotoData().then(({ photos }) =>
+  return getPhotoData().then((photos) =>
     [
       "diving",
       "scuba",

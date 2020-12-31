@@ -15,12 +15,21 @@ function resizeToMultiple(path) {
   return resizeTo.map((r) => resize(path, r.width, r.name));
 }
 
+function getShortNameFromName(name) {
+  return resizeTo.find((r) => r.name === name).shortName;
+}
+
+function generateFilePath(id, extension, resizeKey) {
+  return `${id}/mostlyanimals_${id}_${resizeKey}${extension}`;
+}
+
 function upload(id, file, resizedResults) {
   const mimetype = file.mimetype;
 
-  function upl(prefix, buffer) {
-    const name = `${id}/${prefix}_${file.originalname}`;
-    return s3Uploader(buffer, name, mimetype);
+  function upl(resizeKey, buffer) {
+    const extension = path.parse(file.originalname).ext;
+    const fileNameWithPath = generateFilePath(id, extension, resizeKey);
+    return s3Uploader(buffer, fileNameWithPath, mimetype);
   }
 
   return resizeTo.map((r, index) =>
@@ -46,8 +55,9 @@ async function processFile(filePath) {
   const file = {
     buffer,
     originalname: path.parse(filePath).base,
-    mimetype: "image/jpeg",
+    mimetype: "image/jpeg", // Watch out!
   };
+  const fileExtension = path.parse(filePath).ext;
   const id = idGenerator.id();
   let tempFilePath;
   const resizedResults = await tempFileWriter(file).then(({ path }) => {
@@ -55,6 +65,7 @@ async function processFile(filePath) {
     return Promise.all(resizeToMultiple(tempFilePath));
   });
   await Promise.all(upload(id, file, resizedResults));
+
   const resize = resizedResults
     .map(({ sizeLabel, width, height }) => ({
       sizeLabel,
@@ -65,6 +76,11 @@ async function processFile(filePath) {
       prevVal[nextVal.sizeLabel] = {
         height: nextVal.height,
         width: nextVal.width,
+        path: generateFilePath(
+          id,
+          fileExtension,
+          getShortNameFromName(sizeLabel)
+        ),
       };
 
       return prevVal;

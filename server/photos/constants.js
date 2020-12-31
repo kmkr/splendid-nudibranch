@@ -1,7 +1,7 @@
 const BASE = "https://s3.eu-central-1.amazonaws.com";
 const BUCKET = "splendid-nudibranch";
 module.exports.BUCKET = BUCKET;
-module.exports.base = `${BASE}/${BUCKET}`;
+module.exports.BASE = `${BASE}/${BUCKET}`;
 
 module.exports.resizeTo = [
   {
@@ -33,11 +33,5 @@ module.exports.resizeTo = [
     name: "xlarge",
     shortName: "xl",
     width: 2560,
-  },
-  {
-    name: "xxlarge",
-    shortName: "xxl",
-    skipPayload: true,
-    width: 3200,
   },
 ];

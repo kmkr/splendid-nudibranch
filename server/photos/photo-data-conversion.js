@@ -1,8 +1,4 @@
-const { resizeTo } = require("./constants");
-
-function buildUrl(base, key, name, size) {
-  return `${base}/${key}/${size}_${encodeURIComponent(name)}`;
-}
+const { BASE, resizeTo } = require("./constants");
 
 function getMode(resizeData) {
   const { width, height } = resizeData[Object.keys(resizeData)[0]];
@@ -10,7 +6,7 @@ function getMode(resizeData) {
   return width > height ? "landscape" : "portrait";
 }
 
-module.exports.serverToClient = function (photo, base) {
+module.exports.serverToClient = function (photo) {
   return {
     name: photo.name,
     key: photo.key,
@@ -19,23 +15,7 @@ module.exports.serverToClient = function (photo, base) {
     latin: photo.latin || null,
     location: photo.location || null,
     mode: getMode(photo.resize),
-    sizes: resizeTo.reduce((prev, current) => {
-      if (!photo.resize[current.name]) {
-        console.log(`Warning: missing size ${current.name} for ${photo.name}`);
-        return prev;
-      }
-
-      if (current.skipPayload) {
-        return prev;
-      }
-      return {
-        ...prev,
-        [current.name]: {
-          url: buildUrl(base, photo.key, photo.name, current.shortName),
-          width: photo.resize[current.name].width,
-          height: photo.resize[current.name].height,
-        },
-      };
-    }, {}),
+    baseUrl: BASE,
+    resize: photo.resize,
   };
 };

@@ -56,7 +56,7 @@ export default function setWidthHelper(_photos, viewportWidth) {
       subGroup.photos.push(photoToAdd);
       subGroup.key += photoToAdd.key;
       const ratio =
-        photoToAdd.sizes.small.height / photoToAdd.sizes.small.width;
+        photoToAdd.resize.small.height / photoToAdd.resize.small.width;
       const height = photoToAdd.displayedWidth * ratio;
       subGroup.height = subGroup.height
         ? Math.min(subGroup.height, height)

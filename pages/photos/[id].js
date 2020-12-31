@@ -1,6 +1,6 @@
-import Head from "next/head";
 import { useEffect, useState } from "react";
 
+import MAHead from "../../src/ma-head";
 import { getPhotoData, getKeywordsForPhoto } from "../../src/view-data-service";
 import { serverToClient } from "../../server/photos/photo-data-conversion";
 import { forOne } from "../../src/og-tags";
@@ -18,19 +18,25 @@ function PhotoPage({ keywords, photo, nextPhoto, prevPhoto }) {
     setLastShownPhotoKey(photo.key);
   });
 
-  photo.srcSet = buildSrcSet(photo.sizes, availWidth);
-  nextPhoto.srcSet = buildSrcSet(nextPhoto.sizes, availWidth);
-  prevPhoto.srcSet = buildSrcSet(prevPhoto.sizes, availWidth);
+  photo.srcSet = buildSrcSet(photo.baseUrl, photo.resize, availWidth);
+  nextPhoto.srcSet = buildSrcSet(
+    nextPhoto.baseUrl,
+    nextPhoto.resize,
+    availWidth
+  );
+  prevPhoto.srcSet = buildSrcSet(
+    prevPhoto.baseUrl,
+    prevPhoto.resize,
+    availWidth
+  );
 
   return (
     <>
-      <Head>
-        <title>{photoTitle(photo)}</title>
-        <meta name="keywords" content={keywords.join(", ")} />
-        {Object.entries(forOne(photo)).map(([key, value]) => (
-          <meta key={key} property={key} content={value} />
-        ))}
-      </Head>
+      <MAHead
+        title={photoTitle(photo)}
+        keywords={keywords}
+        meta={forOne(photo)}
+      />
 
       <div id="container">
         <PhotoWrapper
@@ -46,7 +52,7 @@ function PhotoPage({ keywords, photo, nextPhoto, prevPhoto }) {
 export async function getStaticPaths() {
   const allPhotos = await getPhotoData();
   return {
-    paths: allPhotos.photos.map((photo) => ({
+    paths: allPhotos.map((photo) => ({
       params: {
         id: photo.key,
       },
@@ -56,7 +62,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const { photos, base } = await getPhotoData();
+  const photos = await getPhotoData();
 
   const selectedPhotoIndex = photos.findIndex(
     (photo) => photo.key === context.params.id
@@ -82,9 +88,9 @@ export async function getStaticProps(context) {
   return {
     props: {
       keywords: photoKeywords,
-      photo: serverToClient(selectedPhoto, base),
-      nextPhoto: serverToClient(nextPhoto, base),
-      prevPhoto: serverToClient(prevPhoto, base),
+      photo: serverToClient(selectedPhoto),
+      nextPhoto: serverToClient(nextPhoto),
+      prevPhoto: serverToClient(prevPhoto),
     },
   };
 }

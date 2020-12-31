@@ -45,7 +45,7 @@ const Photo = ({ photo, setWidth }) => {
           {inViewport && (
             <TransitionImage
               alt={photo.title}
-              src={photo.sizes.xsmall.url}
+              src={`${photo.baseUrl}/${photo.resize.xsmall.path}`}
               srcSet={photo.srcSet}
               sizes="(min-width: 1100px) 30vw, 100vw"
             />

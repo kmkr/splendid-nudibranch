@@ -20,7 +20,7 @@ function generateSitemap(photoKeys) {
 
 export const getServerSideProps = async function getServerSideProps(context) {
   const { res } = context;
-  const { photos } = await getPhotoData();
+  const photos = await getPhotoData();
   res.setHeader("Content-Type", "application/xml");
   res.write(generateSitemap(photos.map((p) => p.key)));
   res.end();

@@ -1,6 +1,6 @@
-import Head from "next/head";
 import { useState, useEffect } from "react";
 
+import MAHead from "../src/ma-head";
 import Collage from "../src/collage/collage";
 import { getPhotoData, getAllKeywords } from "../src/view-data-service";
 import { serverToClient } from "../server/photos/photo-data-conversion";
@@ -50,7 +50,7 @@ function HomePage({ keywords, photos }) {
   }, []);
 
   const photosWithSrcSet = photos.map((photo) => {
-    photo.srcSet = buildSrcSet(photo.sizes, availWidth);
+    photo.srcSet = buildSrcSet(photo.baseUrl, photo.resize, availWidth);
     return photo;
   });
 
@@ -59,13 +59,7 @@ function HomePage({ keywords, photos }) {
 
   return (
     <>
-      <Head>
-        <title>{baseTitle()}</title>
-        <meta name="keywords" content={keywords.join(", ")} />
-        {Object.entries(forAll()).map(([key, value]) => (
-          <meta key={key} property={key} content={value} />
-        ))}
-      </Head>
+      <MAHead title={baseTitle()} keywords={keywords} meta={forAll()} />
 
       <TopLogo />
 
@@ -82,10 +76,8 @@ function HomePage({ keywords, photos }) {
 
 export async function getStaticProps(context) {
   return Promise.all([getPhotoData(), getAllKeywords()]).then(
-    ([photoData, allKeywords]) => {
-      const mappedPhotos = photoData.photos.map((p) =>
-        serverToClient(p, photoData.base)
-      );
+    ([photos, allKeywords]) => {
+      const mappedPhotos = photos.map(serverToClient);
       return {
         props: {
           keywords: allKeywords,

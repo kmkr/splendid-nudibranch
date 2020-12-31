@@ -1,4 +1,4 @@
-export default function srcSetBuilder(sizes, availWidth) {
+export default function srcSetBuilder(baseUrl, sizes, availWidth) {
   let passedAvail = false;
 
   return Object.keys(sizes)
@@ -17,7 +17,7 @@ export default function srcSetBuilder(sizes, availWidth) {
     })
     .map((key) => {
       const size = sizes[key];
-      return `${size.url} ${size.width}w`;
+      return `${baseUrl}/${size.path} ${size.width}w`;
     })
     .join(", ");
 }

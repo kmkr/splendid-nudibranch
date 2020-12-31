@@ -19,7 +19,7 @@ function doPreload(photos) {
   timeout = setTimeout(() => {
     photos.forEach((photo, index) => {
       const image = new Image();
-      image.src = photo.sizes.large.url;
+      image.src = photo.resize.large.url;
       image.setAttribute("srcset", photo.srcSet);
       image.setAttribute("sizes", sizes(photo));
       const key = `snPreloadedPhoto${index}`;

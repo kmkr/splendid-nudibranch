@@ -22,7 +22,7 @@ const feature = null;
 const featureName = null;
 
 export function forOne(selectedPhoto) {
-  const selectedPhotoSize = selectedPhoto.sizes.medium;
+  const selectedPhotoSize = selectedPhoto.resize.medium;
 
   return {
     "og:type": "article",
@@ -36,7 +36,7 @@ export function forOne(selectedPhoto) {
   };
 }
 
-export function forAll(selectedPhoto) {
+export function forAll() {
   return {
     "og:type": "article",
     "og:site_name": name,
