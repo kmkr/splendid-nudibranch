@@ -41,6 +41,3 @@ module.exports.resizeTo = [
     width: 3200,
   },
 ];
-
-module.exports.generalSiteDescription =
-  "Photos of mostly animals, and the occasional tree.";

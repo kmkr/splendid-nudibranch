@@ -1,4 +1,4 @@
-import listPhotos from "./photos/list";
+import listPhotos from "../server/photos/list";
 
 export function getPhotoData() {
   return listPhotos();

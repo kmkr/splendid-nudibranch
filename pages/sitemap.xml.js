@@ -1,4 +1,4 @@
-import { getPhotoData } from "../server/view-data-service";
+import { getPhotoData } from "../src/view-data-service";
 
 const Sitemap = () => null;
 

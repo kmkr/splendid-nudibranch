@@ -4,6 +4,7 @@ import setPhotoWidth from "./set-width-helper";
 import throttle from "./throttle";
 import getViewportWidth from "./get-width";
 import MidWater from "./mid-water";
+import { DEFAULT_VIEWPORT_WIDTH } from "../constants";
 
 function hasScrollbar() {
   return document.body.offsetHeight >= window.innerHeight;
@@ -24,8 +25,6 @@ const PhotoGroup = ({ group, viewportWidth }) => {
     </div>
   );
 };
-
-const DEFAULT_VIEWPORT_WIDTH = 500;
 
 const Collage = ({ featuredPhotos, nonFeaturedPhotos }) => {
   const [viewportWidth, setViewportWidth] = useState(DEFAULT_VIEWPORT_WIDTH);

@@ -1,19 +1,17 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
-import {
-  getPhotoData,
-  getKeywordsForPhoto,
-} from "../../server/view-data-service";
+import { getPhotoData, getKeywordsForPhoto } from "../../src/view-data-service";
 import { serverToClient } from "../../server/photos/photo-data-conversion";
-import { forOne } from "../../server/og-tags";
+import { forOne } from "../../src/og-tags";
 import buildSrcSet from "../../src/photos/src-set-builder";
 import PhotoWrapper from "../../src/photos/photo-wrapper";
 import { photoTitle } from "../../src/title-service";
 import { setLastShownPhotoKey } from "../../src/last-shown-photo-service";
+import { DEFAULT_VIEWPORT_WIDTH } from "../../src/constants";
 
 function PhotoPage({ keywords, photo, nextPhoto, prevPhoto }) {
-  const [availWidth, setAvailWidth] = useState(400);
+  const [availWidth, setAvailWidth] = useState(DEFAULT_VIEWPORT_WIDTH);
 
   useEffect(() => {
     setAvailWidth(screen.availWidth);

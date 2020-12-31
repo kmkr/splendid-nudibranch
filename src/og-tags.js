@@ -1,5 +1,5 @@
-import { generalSiteDescription } from "./photos/constants";
-import { photoTitle, featureTitle } from "../src/title-service";
+import { BASE_SITE_DESCRIPTION } from "./constants";
+import { photoTitle, featureTitle } from "./title-service";
 
 const name = "Mostly Animals";
 
@@ -42,7 +42,7 @@ export function forAll(selectedPhoto) {
     "og:site_name": name,
     "og:title": featureTitle(featureName),
     "og:url": buildUrl({ feature }),
-    "og:description": generalSiteDescription,
+    "og:description": BASE_SITE_DESCRIPTION,
     "og:image": "https://www.mostlyanimals.net/static/images/logo.png",
     "og:image:width": 1300,
     "og:image:height": 616,
