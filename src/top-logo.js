@@ -6,7 +6,7 @@ const TopLogo = () => {
   return (
     <div id="top-logo">
       <div className="haiku-wrapper">
-        <div class="img-wrapper">
+        <div className="img-wrapper">
           <img src="/images/logo_plain.svg" />
         </div>
         <div className="haiku">

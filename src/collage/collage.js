@@ -9,12 +9,12 @@ function hasScrollbar() {
   return document.body.offsetHeight >= window.innerHeight;
 }
 
-function isCollage() {
-  return getViewportWidth() > 1100;
+function isCollage(viewportWidth) {
+  return viewportWidth > 1100;
 }
 
-const PhotoGroup = ({ group }) => {
-  const setDimensions = isCollage();
+const PhotoGroup = ({ group, viewportWidth }) => {
+  const setDimensions = isCollage(viewportWidth);
   const style = setDimensions ? { height: `${group.height}px` } : {};
   return (
     <div className="photo-group" key={`photo-group-${group.key}`} style={style}>
@@ -25,10 +25,10 @@ const PhotoGroup = ({ group }) => {
   );
 };
 
+const DEFAULT_VIEWPORT_WIDTH = 500;
+
 const Collage = ({ featuredPhotos, nonFeaturedPhotos }) => {
-  // "null" as default state because the viewport width isn't known until the
-  // code is rendered on the client.
-  const [viewportWidth, setViewportWidth] = useState(null);
+  const [viewportWidth, setViewportWidth] = useState(DEFAULT_VIEWPORT_WIDTH);
 
   function updateWidth() {
     setViewportWidth(getViewportWidth());
@@ -45,20 +45,27 @@ const Collage = ({ featuredPhotos, nonFeaturedPhotos }) => {
     };
   }, []);
 
-  if (!viewportWidth) {
-    return null;
-  }
-
-  const featuredPhotoGroups = setPhotoWidth(featuredPhotos);
-  const nonFeaturedPhotoGroups = setPhotoWidth(nonFeaturedPhotos);
+  const featuredPhotoGroups = setPhotoWidth(featuredPhotos, viewportWidth);
+  const nonFeaturedPhotoGroups = setPhotoWidth(
+    nonFeaturedPhotos,
+    viewportWidth
+  );
   return (
     <div id="collage">
       {featuredPhotoGroups.map((group) => (
-        <PhotoGroup key={group.key} group={group} />
+        <PhotoGroup
+          key={group.key}
+          group={group}
+          viewportWidth={viewportWidth}
+        />
       ))}
       {!!featuredPhotoGroups.length && <MidWater />}
       {nonFeaturedPhotoGroups.map((group) => (
-        <PhotoGroup key={group.key} group={group} />
+        <PhotoGroup
+          key={group.key}
+          group={group}
+          viewportWidth={viewportWidth}
+        />
       ))}
     </div>
   );

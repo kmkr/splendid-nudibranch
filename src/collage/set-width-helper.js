@@ -1,12 +1,10 @@
-import getWidth from "./get-width";
-
 function getNumPortrait(photos) {
   return photos.filter((photo) => photo.mode === "portrait").length;
 }
 
-export default function setWidthHelper(_photos) {
+export default function setWidthHelper(_photos, viewportWidth) {
   const photos = [..._photos];
-  const totalWidth = Math.min(getWidth(), 2560);
+  const totalWidth = Math.min(viewportWidth, 2560);
   const groups = [];
 
   while (photos.length) {
