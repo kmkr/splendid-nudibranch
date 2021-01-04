@@ -23,6 +23,7 @@ const featureName = null;
 
 export function forOne(selectedPhoto) {
   const selectedPhotoSize = selectedPhoto.resize.medium;
+  const photoUrl = [selectedPhoto.baseUrl, selectedPhotoSize.path].join("/");
 
   return {
     "og:type": "article",
@@ -30,7 +31,7 @@ export function forOne(selectedPhoto) {
     "og:title": feature ? featureTitle(featureName) : photoTitle(selectedPhoto),
     "og:url": buildUrl({ selectedPhoto, feature }),
     "og:description": selectedPhoto.description,
-    "og:image": selectedPhotoSize.url,
+    "og:image": photoUrl,
     "og:image:width": selectedPhotoSize.width,
     "og:image:height": selectedPhotoSize.height,
   };
