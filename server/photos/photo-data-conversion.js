@@ -1,4 +1,5 @@
 const { BASE, resizeTo } = require("./constants");
+import buildSrcSet from "./src-set-builder";
 
 function getMode(resizeData) {
   const { width, height } = resizeData[Object.keys(resizeData)[0]];
@@ -17,5 +18,6 @@ module.exports.serverToClient = function (photo) {
     mode: getMode(photo.resize),
     baseUrl: BASE,
     resize: photo.resize,
+    srcSet: buildSrcSet(BASE, photo.resize),
   };
 };

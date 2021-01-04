@@ -4,31 +4,15 @@ import MAHead from "../../src/ma-head";
 import { getPhotoData, getKeywordsForPhoto } from "../../src/view-data-service";
 import { serverToClient } from "../../server/photos/photo-data-conversion";
 import { forOne } from "../../src/og-tags";
-import buildSrcSet from "../../src/photos/src-set-builder";
 import PhotoWrapper from "../../src/photos/photo-wrapper";
 import { photoTitle } from "../../src/title-service";
 import { setLastShownPhotoKey } from "../../src/last-shown-photo-service";
 import { DEFAULT_VIEWPORT_WIDTH } from "../../src/constants";
 
 function PhotoPage({ keywords, photo, nextPhoto, prevPhoto }) {
-  const [availWidth, setAvailWidth] = useState(DEFAULT_VIEWPORT_WIDTH);
-
   useEffect(() => {
-    setAvailWidth(screen.availWidth);
     setLastShownPhotoKey(photo.key);
   });
-
-  photo.srcSet = buildSrcSet(photo.baseUrl, photo.resize, availWidth);
-  nextPhoto.srcSet = buildSrcSet(
-    nextPhoto.baseUrl,
-    nextPhoto.resize,
-    availWidth
-  );
-  prevPhoto.srcSet = buildSrcSet(
-    prevPhoto.baseUrl,
-    prevPhoto.resize,
-    availWidth
-  );
 
   return (
     <>

@@ -5,7 +5,6 @@ import Collage from "../src/collage/collage";
 import { getPhotoData, getAllKeywords } from "../src/view-data-service";
 import { serverToClient } from "../server/photos/photo-data-conversion";
 import { forAll } from "../src/og-tags";
-import buildSrcSet from "../src/photos/src-set-builder";
 import TopLogo from "../src/top-logo";
 import DeepWater from "../src/deep-water";
 import { baseTitle } from "../src/title-service";
@@ -35,11 +34,6 @@ function onGoToPhotos(e, offset) {
 }
 
 function HomePage({ keywords, photos }) {
-  const [availWidth, setAvailWidth] = useState(DEFAULT_VIEWPORT_WIDTH);
-  useEffect(() => {
-    setAvailWidth(screen.availWidth);
-  });
-
   useEffect(() => {
     const lastShownPhotoKey = getLastShownPhotoKey();
     if (!lastShownPhotoKey) {
@@ -49,13 +43,8 @@ function HomePage({ keywords, photos }) {
     scrollToPhoto(lastShownPhotoKey, 0);
   }, []);
 
-  const photosWithSrcSet = photos.map((photo) => {
-    photo.srcSet = buildSrcSet(photo.baseUrl, photo.resize, availWidth);
-    return photo;
-  });
-
-  const featuredPhotos = photosWithSrcSet.filter((photo) => photo.featured);
-  const nonFeaturedPhotos = photosWithSrcSet.filter((photo) => !photo.featured);
+  const featuredPhotos = photos.filter((photo) => photo.featured);
+  const nonFeaturedPhotos = photos.filter((photo) => !photo.featured);
 
   return (
     <>
