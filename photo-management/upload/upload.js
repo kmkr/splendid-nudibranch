@@ -1,9 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const minimist = require("minimist");
 
 const idGenerator = require("./id-generator");
 const s3Uploader = require("../../server/photos/s3/s3-uploader");
-const { resize, metadata: getMetadata } = require("./gm");
+const { resize, metadata: getMetadata, metadata } = require("./gm");
 const tempFileWriter = require("./temp-file-writer");
 const db = require("../../server/db");
 const { base } = require("../../server/photos/constants");
@@ -23,6 +24,11 @@ function generateFilePath(id, extension, resizeKey) {
   return `${id}/mostlyanimals_${id}_${resizeKey}${extension}`;
 }
 
+function withTs(filePath) {
+  const ts = new Date().getTime();
+  return `${filePath}?ts=${ts}`;
+}
+
 function upload(id, file, resizedResults) {
   const mimetype = file.mimetype;
 
@@ -37,19 +43,19 @@ function upload(id, file, resizedResults) {
   );
 }
 
-function insertToDb(id, file, additionalData) {
-  const photo = {
-    key: id,
-    name: file.originalname,
-    ...additionalData,
-  };
+async function toDb({ id, file, additionalData, replace }) {
+  if (replace) {
+    console.log("Replacing photo %o", photo);
+    await db.update("photos", { key: id }, photo);
+  } else {
+    console.log("Inserting photo %o", photo);
+    await db.insert("photos", photo);
+  }
 
-  console.log("Inserting photo:");
-  console.log(photo);
-  return db.insert("photos", photo).then(() => photo);
+  return photo;
 }
 
-async function processFile(filePath) {
+async function processAndUploadFile(filePath, id) {
   const buffer = fs.readFileSync(filePath);
   const file = {
     buffer,
@@ -57,7 +63,6 @@ async function processFile(filePath) {
     mimetype: "image/jpeg", // Watch out!
   };
   const fileExtension = path.parse(filePath).ext;
-  const id = idGenerator.id();
   let tempFilePath;
   const resizedResults = await tempFileWriter(file).then(({ path }) => {
     tempFilePath = path;
@@ -75,31 +80,65 @@ async function processFile(filePath) {
       prevVal[nextVal.sizeLabel] = {
         height: nextVal.height,
         width: nextVal.width,
-        path: generateFilePath(
-          id,
-          fileExtension,
-          getShortNameFromName(nextVal.sizeLabel)
+        path: withTs(
+          generateFilePath(
+            id,
+            fileExtension,
+            getShortNameFromName(nextVal.sizeLabel)
+          )
         ),
       };
 
       return prevVal;
     }, {});
+
   const metadata = await getMetadata(tempFilePath).then((md) => ({
     resize,
     ...md,
   }));
-  return insertToDb(id, file, metadata);
+
+  return {
+    key: id,
+    name: file.originalname,
+    ...metadata,
+  };
+}
+
+async function replaceKeyWithFile(id, filePath) {
+  console.log("Processing", filePath);
+  const photo = await processAndUploadFile(filePath, id);
+  console.log("Replacing photo %o with %s", photo, filePath);
+  await db.update("photos", { key: id }, photo);
+  console.log("Processing complete");
+}
+
+async function insertFileWithKey(id, filePath) {
+  console.log("Processing", filePath);
+  const photo = await processAndUploadFile(filePath, id);
+  console.log("Inserting photo %o", photo);
+  await db.insert("photos", photo);
+  console.log("Processing complete");
 }
 
 (async function () {
-  const filePaths = process.argv.filter((a) =>
-    a.toLowerCase().endsWith(".jpg")
-  );
+  const argv = minimist(process.argv.slice(2));
 
-  for (let filePath of filePaths) {
-    console.log("Processing", filePath);
-    const photo = await processFile(filePath);
-    console.log("Processing complete");
+  const replaceKey = argv["replace"];
+  const filePaths = argv["_"];
+
+  if (replaceKey) {
+    if (filePaths.length !== 1) {
+      throw new Error(
+        `Unable to replace one key with more than file. Found ${filePaths.length} files`
+      );
+    }
+    await replaceKeyWithFile(replaceKey, filePaths[0]);
+  } else {
+    for (let filePath of filePaths) {
+      const id = idGenerator.id();
+      await insertFileWithKey(id, filePath);
+    }
   }
+
   process.exit();
 })();
