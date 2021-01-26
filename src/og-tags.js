@@ -44,7 +44,7 @@ export function forAll() {
     "og:title": featureTitle(featureName),
     "og:url": buildUrl({ feature }),
     "og:description": BASE_SITE_DESCRIPTION,
-    "og:image": "https://www.mostlyanimals.net/static/images/logo.png",
+    "og:image": "https://www.mostlyanimals.net/images/logo.png",
     "og:image:width": 1300,
     "og:image:height": 616,
   };
