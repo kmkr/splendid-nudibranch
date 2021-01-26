@@ -1,9 +1,101 @@
 [
   {
+    "key": "131f-f4a2",
+    "name": "DSC05062-Pano.jpg",
+    "title": "Muskox",
+    "description": "These hoofed mammals have adapted to cold, harsh weather. Their wool (qiviut) is eight times warmer than sheep's wool. It's the golden fleece of the Arctic.",
+    "order": 0,
+    "location": "Dovrefjell, Norway",
+    "tags": [
+      "2021",
+      "muskox",
+      "dovrefjell"
+    ]
+  },
+  {
+    "key": "5862-5c81",
+    "name": "DSC05550_AuroraHDR-edit_0.jpg",
+    "title": "Sunrise in Stroplsjødalen",
+    "description": "We got up early to start our trek in the darkness. The sunrise that day was one of the most beautiful I've seen.",
+    "order": 0,
+    "location": "Dovrefjell, Norway",
+    "tags": [
+      "2021",
+      "dovrefjell",
+      "ski",
+      "landscape"
+    ]
+  },
+  {
+    "key": "fe6b-4232",
+    "name": "DSC05902.jpg",
+    "title": "Muskox",
+    "description": "",
+    "order": 0,
+    "location": "Dovrefjell, Norway",
+    "tags": [
+      "2021",
+      "muskox",
+      "dovrefjell"
+    ]
+  },
+  {
+    "key": "3afb-1f14",
+    "name": "DSC05560_AuroraHDR-edit.jpg",
+    "title": "Sunrise in Stroplsjødalen",
+    "description": "",
+    "order": 0,
+    "location": "Dovrefjell, Norway",
+    "tags": [
+      "2021",
+      "ski",
+      "dovrefjell"
+    ]
+  },
+  {
+    "key": "1287-da99",
+    "name": "DSC05667.jpg",
+    "title": "The way back from Reinheim",
+    "description": "The sun was a delight after two days of struggling with snow, wind and low visibility.",
+    "order": 0,
+    "location": "Dovrefjell, Norway",
+    "tags": [
+      "2021",
+      "ski",
+      "dovrefjell"
+    ]
+  },
+  {
+    "key": "0e40-20d9",
+    "name": "DSC05852.jpg",
+    "title": "Muskox",
+    "description": "",
+    "order": 0,
+    "location": "Dovrefjell, Norway",
+    "tags": [
+      "2021",
+      "muskox",
+      "dovrefjell"
+    ]
+  },
+  {
+    "key": "9016-c7d5",
+    "name": "DSC05922.jpg",
+    "title": "Muskox Herd",
+    "description": "Muskoxen are herd animals, and infants are able to keep up with their mother and group within a few hours after birth.",
+    "order": 0,
+    "location": "Dovrefjell, Norway",
+    "tags": [
+      "2021",
+      "muskox",
+      "dovrefjell"
+    ]
+  },
+  {
     "key": "51d1-1890",
     "name": "DSC00121.jpg",
     "title": "Katnosdammen",
-    "description": "Katnosdammen",
+    "description": "",
     "order": 0,
     "location": "Nordmarka, Oslo, Norway",
     "tags": [
