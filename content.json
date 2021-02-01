@@ -182,7 +182,7 @@
     "title": "Mallard",
     "description": "Blue is a rare color in animals living above water. Some birds are blue, though; the male mallard, for example.",
     "order": 14,
-    "location": "Oslo, Norway",
+    "location": "Nordmarka, Oslo, Norway",
     "tags": [
       "bird",
       "2020"
@@ -192,7 +192,7 @@
     "key": "d671-7d7c",
     "name": "DSC03416.jpg",
     "title": "Common Frog",
-    "description": "Frogs form large choruses in a competition to attract females. Stamina is important, probably because it indicates good genes; The loudest, and longest, calls win.",
+    "description": "Frogs form large choruses in a competition to attract females. Stamina is important: The loudest, and longest, calls win, probably because it indicates good genes.",
     "latin": "Rana temporaria",
     "order": 15,
     "location": "Lillomarka, Oslo, Norway",
@@ -205,7 +205,7 @@
     "key": "68df-5a2a",
     "name": "DSC03595.jpg",
     "title": "Slow-worm",
-    "description": "You'll find this worm basking in the sun. It's only superficially similar to a snake, and harmless (unless for snails and insects).",
+    "description": "You'll find this worm basking in the sun. It's only superficially similar to a snake, and harmless (unless you're a snail or an insect).",
     "latin": "Anguis fragilis",
     "order": 16,
     "location": "Nordmarka, Oslo, Norway",
@@ -220,7 +220,7 @@
     "key": "3c8c-c348",
     "name": "DSC04477.jpg",
     "title": "Scottish Fold",
-    "description": "This queen is named Aprikos (Apricot) and her human Nikolai grows catnip for her and give her regular grooming. They are good friends.",
+    "description": "This queen is named Aprikos (Apricot) and her human Nikolai grows catnip for her and gives her regular grooming. They are good friends.",
     "order": 17,
     "tags": [
       "cat",
@@ -256,7 +256,7 @@
     "key": "efb9-7d11",
     "name": "DSC05370.jpg",
     "title": "Damvann",
-    "description": "We camped at this beautiful spot after an unsuccessful search for another legendary lake. We were alone at first, but got company from the local ATV/biker gang in the evening.",
+    "description": "We camped at this beautiful spot after an unsuccessful search for another legendary lake in the area. We got company from the local ATV/biker gang in the evening. They left when the rain came, and we fell asleep to the sound of rain on our tarps.",
     "order": 20,
     "location": "Kvelde, Norway",
     "tags": [
@@ -313,7 +313,7 @@
     "key": "6213-cdf4",
     "name": "DSC07522.jpg",
     "title": "Kirkhelleren",
-    "description": "This cave has been used by humans as far back as 9000 years ago. It's on the small island of Sanna, one of the most westernly points on the Helgeland coast. The cave is used as a concert venue on Trænafestivalen, one of Norway's most legendary festivals",
+    "description": "This cave has been used by humans for over 9000 years. It's located on the small island of Sanna, one of the most westernly points on the Helgeland coast. The cave is used as a concert venue on Trænafestivalen, one of Norway's most legendary festivals",
     "order": 25,
     "location": "Sanna, Træna, Norway",
     "tags": [
